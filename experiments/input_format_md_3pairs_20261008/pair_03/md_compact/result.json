@@ -1,0 +1,25 @@
+{
+  "pair": 3,
+  "format": "md",
+  "levels": {
+    "trust": "높음",
+    "disclosure": "높음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "response": "- **taxonomy**: [1] (이해받음)\n- **판단 이유**: 상담자가 \"그렇게 느끼셨군요\"라며 앞선 내담자의 발화(준비 부족함과 교수님의 평가에 대한 걱정이 공존한다는 점)를 수용해주었습니다. 또한, 성급하게 안심시키려 했던 이전의 실수를 인정하고 내담자의 속도에 맞춰 구체적인 내면의 생각(답이 막혔던 순간의 생각)을 묻고 있어, 내담자는 자신의 상태가 충분히 이해받고 있다고 느낍니다. 현재 신뢰(trust)와 자기개방 의향(disclosure)이 모두 '높음' 상태이므로, 상담자의 요청에 따라 자신의 부끄러움이나 당혹감을 더 구체적으로 드러낼 준비가 되어 있습니다.\n- **실제 발화**: \"음... 처음엔 그냥 머릿속이 하얘졌어요. '아, 이걸 왜 대답 못 하고 있지?'라는 생각만 계속 났고, 동시에 교수님이 저를 쳐다보고 계시니까 제가 너무 무능해 보일 것 같아서 정말 쥐구멍에라도 숨고 싶었어요.\"",
+  "finish_reason": "stop",
+  "error": null,
+  "tool_calls": [],
+  "tool_errors": 0,
+  "model_calls": 1,
+  "first_input_tokens": 3038,
+  "inspection_tokens": 3038,
+  "usage": {
+    "prompt_tokens": 3038,
+    "completion_tokens": 251,
+    "total_tokens": 3289
+  },
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_03/md_compact/sessions/179252471dbc4f7fb7aa156a8ff5bc2d/20261007T153733_764947Z_61f6839e.json",
+  "format_only_verified": true
+}

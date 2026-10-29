@@ -1,0 +1,62 @@
+{
+  "condition": "required",
+  "case_id": "007_h2",
+  "profile": "007",
+  "history_title": "제주 워크숍을 포기한 일",
+  "states": {
+    "trust": "높음",
+    "disclosure": "높음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 21.9,
+  "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 상담자에 대한 신뢰와 개방 의향은 높지만, 내담자는 '위험/질병 취약성' 스키마가 강해 병원에서 멀어지는 것에 극심한 공포를 느낍니다. 방금 전까지도 제주도 워크숍을 포기하며 \"나가서 무슨 일이 생기면 제가 책임져야 한다\"며 외출에 대한 심리적 부담감을 토로한 직후입니다. 이러한 상태에서 구체적인 안전 계획이나 단계적 접근 없이 바로 '외출 시도'라는 행동 변화를 제안받자, 머리로는 필요성을 알면서도 몸과 마음이 느끼는 압박감이 앞선 상황입니다.\n- 실제 발화: (잠시 침묵하다가 한숨을 쉬며) ...네, 저도 그래야 한다는 건 정말 잘 알아요. 그런데 막상 하려고 하면... 그냥 집 앞 편의점 가는 것도 갑자기 심장이 뛰면 어쩌나 싶어서 망설여지거든요. 아주 짧은 거리라도, 제가 정말 괜찮을 수 있을까요?",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 6392,
+    "completion_tokens": 360,
+    "total_tokens": 6752
+  },
+  "main_usage": {
+    "prompt_tokens": 5392,
+    "completion_tokens": 352,
+    "total_tokens": 5744
+  },
+  "subagent_usage": {
+    "prompt_tokens": 1000,
+    "completion_tokens": 8,
+    "total_tokens": 1008
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_situation",
+      "is_error": false,
+      "result": {
+        "status": "no_match",
+        "agent_id": "agent_24c1eb28f6b2",
+        "profile_id": "gold_007",
+        "database": "situations",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json",
+        "record": null
+      },
+      "model_content": "{\"status\": \"no_match\", \"agent_id\": \"agent_24c1eb28f6b2\", \"profile_id\": \"gold_007\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json\", \"record\": null}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_24c1eb28f6b2",
+      "name": "상황 기록 조회 담당",
+      "response": "{\"record_id\": null}",
+      "usage": {
+        "prompt_tokens": 1000,
+        "completion_tokens": 8,
+        "total_tokens": 1008
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/d21aac59044f46aa9396092628bf8ed1/20261008T101353_225736Z_f383988c.json",
+  "error": null
+}

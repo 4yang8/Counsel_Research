@@ -1,0 +1,38 @@
+{
+  "hypothesis": "Initial-data serialization alone may affect state appraisal, tool selection, and utterances.",
+  "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_required_5_20261008",
+  "pairs": [
+    1,
+    4,
+    2
+  ],
+  "pair_order": [
+    [
+      "json",
+      "md"
+    ],
+    [
+      "md",
+      "json"
+    ],
+    [
+      "json",
+      "md"
+    ]
+  ],
+  "system_prompt": "주어진 툴을 적절히 활용하세요.",
+  "seed": 731,
+  "scope": "Three independent continuations, one matched sample per format and state combination.",
+  "changed": "Only initial dialogue/profile/states/taxonomy/source_notes serialization; keys, values and order retained.",
+  "unchanged": "Task, system prompt, tools, tool result format, generation parameters and counselor utterance.",
+  "limitations": "Small exploratory probe; no repeated seeds, causal verdict or broader generalization.",
+  "production_hashes_before": {
+    "runtime.py": "33e1d285df632cc78da241678719c11c2fa59659eb4a5810c3402e310352b271",
+    "tools.json": "90856d76a4c33f8b0b1c5f557bbefcbe5e055e7915407d842df8ffdec1c38299",
+    "config.json": "b6b3fa4b0f72444de9e045fbcb59a9cf8132e9955e3a4fdbd59523aef66c86ff",
+    "cases/lab_meeting.json": "e9af83ac9df7fd1c077c9ee11eca4952fd7096e952b6ef44c28b5bec12e0ff77"
+  },
+  "harness": "Direct invocation of the same runtime/build/tool-loop/logging functions; no listening server.",
+  "completed": 6,
+  "production_files_unchanged": true
+}

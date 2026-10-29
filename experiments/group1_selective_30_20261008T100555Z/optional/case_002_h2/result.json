@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "002_h2",
+  "profile": "002",
+  "history_title": "가족이 당연하게 기대하는 역할",
+  "states": {
+    "trust": "중간",
+    "disclosure": "높음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 16.41,
+  "response": "- **느낌**: 1(이해받음), 2(선택권을 존중받음)\n- **판단 이유**: 상담자가 현재 내담자가 느끼는 '미안함'이라는 감정을 정확히 짚어주며 그 배경을 탐색하려 하기에 이해받고 있다고 느낍니다(Taxonomy 1). 또한, \"떠오르는 만큼만 말해주셔도 된다\"는 표현이 '내 욕구를 앞세우는 것은 이기적'이라고 믿으며 늘 타인의 기준에 맞추려 노력하는 내담자에게 심리적 안전감을 주어, 자신의 속도대로 이야기해도 된다는 존중으로 다가옵니다(Taxonomy 2). 현재 자기개방 의향(disclosure)이 높은 상태이므로, 과거의 경험을 조심스럽게 되짚어보려는 시도를 긍정적으로 받아들일 것입니다.\n- **내담자 발화**: (잠시 생각에 잠겼다가 낮은 목소리로) ...글쎄요. 생각해보면 아주 어릴 때부터 그랬던 것 같아요. 제가 장녀라서 그런지, 부모님은 항상 제가 동생들을 잘 챙기고 이해심이 많다고 말씀하셨거든요. 그게 저한테는 칭찬이었지만, 한편으로는 제가 떼를 쓰거나 힘들다고 하면 부모님이 실망하실 것 같다는 생각이 들었어요. 그래서 그냥... 제가 조금 참으면 다 편해지니까, 그렇게 하는 게 당연하다고 믿고 살았던 것 같아요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2389,
+    "completion_tokens": 323,
+    "total_tokens": 2712
+  },
+  "main_usage": {
+    "prompt_tokens": 2389,
+    "completion_tokens": 323,
+    "total_tokens": 2712
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/447f8e5c6a2a4c33838b5485f95aa7b9/20261008T101014_539448Z_cd21a078.json",
+  "error": null
+}

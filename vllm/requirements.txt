@@ -1,0 +1,40 @@
+# Qwen/Qwen3.8-Flash-Next and Qwen/Qwen3.8-Flash-Next-FP8
+# Fresh Linux + NVIDIA GPU environment; Python 3.12 recommended.
+# Activate the new environment, then run:
+#   python -m pip install --upgrade pip
+#   python -m pip install -r requirements.txt
+#   python -m pip check
+#
+# Sources:
+# https://github.com/vllm-project/recipes/blob/main/models/Qwen/Qwen3.8-Flash-Next.yaml
+# https://pypi.org/pypi/vllm/0.30.0/json
+# https://huggingface.co/Qwen/Qwen3.8-Flash-Next
+#
+# Stable vLLM >=0.30.0 is supported; the official recipe recommends nightly.
+# This selects stable PyPI releases and is not a tested environment lockfile.
+# GPU drivers must be installed separately and support the selected CUDA runtime.
+
+# Serving engine. pip also installs all dependencies declared by vLLM.
+vllm>=0.30.0
+
+# GPU runtime and kernels. Keep versions under vLLM's dependency constraints;
+# do not copy the PyTorch/CUDA versions from another virtual environment.
+torch
+torchvision
+flashinfer-python
+
+# Model configuration, tokenization, checkpoint loading, and downloads.
+# These lower bounds match vLLM 0.30.0's published dependency metadata.
+transformers>=5.10.4
+tokenizers>=0.21.1
+safetensors>=0.6.2
+huggingface-hub>=1.31.0
+
+# Image processing for this multimodal model.
+Pillow
+
+# Python client for the local vLLM API (also a vLLM dependency).
+openai>=2.25.0
+
+# For direct Transformers loading with device_map="auto"; optional for serving.
+accelerate

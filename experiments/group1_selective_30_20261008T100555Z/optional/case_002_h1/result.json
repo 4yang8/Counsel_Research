@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "002_h1",
+  "profile": "002",
+  "history_title": "아픈데도 근무를 대신한 날",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "중간",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 13.69,
+  "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 상담자가 구체적인 행동 변화(답변 전 시간 갖기)를 제안했습니다. 내담자는 변화에 대한 자신감(change_confidence)은 높지만, 상담자에 대한 신뢰(trust)가 낮은 상태입니다. 또한 '부탁을 받으면 들어줘야 하고 거절하면 안 된다'는 강한 규칙(intermediate_beliefs)과 '나를 앞세우는 것은 이기적'이라는 핵심 신념(core_belief)을 가지고 있어, 상담자의 제안이 이론적으로는 가능해 보일지라도 실제 상황에서 이를 실행하는 것이 상대에게 이기적으로 비춰질까 봐 심리적 부담과 압박을 느낍니다.\n- 실제 발화: (잠시 망설이다가) ...그게 말은 쉽지만, 실제로는 좀 어려울 것 같아요. 후배가 바로 앞에서 부탁하는데 \"잠깐 생각 좀 해볼게\"라고 하면, 그 친구가 제가 거절하려고 시간을 끄는 거라고 생각해서 더 당황해하지 않을까요? 그냥 바로 해준다고 하는 게 서로 마음 편할 것 같아서요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2390,
+    "completion_tokens": 250,
+    "total_tokens": 2640
+  },
+  "main_usage": {
+    "prompt_tokens": 2390,
+    "completion_tokens": 250,
+    "total_tokens": 2640
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/68f59a06048f4c01b3af10a3534dc74c/20261008T100940_051301Z_7ada8900.json",
+  "error": null
+}

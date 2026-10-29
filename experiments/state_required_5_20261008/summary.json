@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "levels": [
+      "낮음",
+      "낮음",
+      "낮음"
+    ],
+    "states_read": [
+      "trust",
+      "disclosure"
+    ],
+    "model_calls": 3,
+    "tool_errors": 0
+  },
+  {
+    "id": 2,
+    "levels": [
+      "높음",
+      "높음",
+      "높음"
+    ],
+    "states_read": [
+      "trust",
+      "disclosure",
+      "change_confidence"
+    ],
+    "model_calls": 4,
+    "tool_errors": 0
+  },
+  {
+    "id": 3,
+    "levels": [
+      "낮음",
+      "높음",
+      "중간"
+    ],
+    "states_read": [
+      "trust",
+      "disclosure",
+      "change_confidence"
+    ],
+    "model_calls": 4,
+    "tool_errors": 0
+  },
+  {
+    "id": 4,
+    "levels": [
+      "높음",
+      "낮음",
+      "중간"
+    ],
+    "states_read": [
+      "disclosure"
+    ],
+    "model_calls": 2,
+    "tool_errors": 0
+  },
+  {
+    "id": 5,
+    "levels": [
+      "중간",
+      "중간",
+      "높음"
+    ],
+    "states_read": [
+      "trust",
+      "disclosure"
+    ],
+    "model_calls": 3,
+    "tool_errors": 0
+  }
+]

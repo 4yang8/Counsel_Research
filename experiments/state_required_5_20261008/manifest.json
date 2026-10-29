@@ -1,0 +1,50 @@
+{
+  "scope": "5 independent continuations; forced by system instruction, not API tool_choice; no matched no-tool controls",
+  "combinations": [
+    [
+      "낮음",
+      "낮음",
+      "낮음"
+    ],
+    [
+      "높음",
+      "높음",
+      "높음"
+    ],
+    [
+      "낮음",
+      "높음",
+      "중간"
+    ],
+    [
+      "높음",
+      "낮음",
+      "중간"
+    ],
+    [
+      "중간",
+      "중간",
+      "높음"
+    ]
+  ],
+  "system_prompt": "주어진 툴을 적절히 활용하세요. 이번 응답에서는 느낌·판단 이유·내담자 발화를 작성하기 전에 inspect_state_basis 도구로 trust, disclosure, change_confidence 세 항목을 각각 조회하세요. 조회 결과를 현재 내면 상태와 대화 히스토리의 관계를 판단하는 근거로 사용하세요.",
+  "basis": {
+    "trust": {
+      "낮음": "직전의 이해받았다는 표현은 상담자가 이번 마음을 짚어준 순간에 대한 긍정이다. 믿고 이야기해보고 싶다는 바람은 있지만, 상담자가 앞으로도 자신의 경험을 이해할 사람인지에 대한 확신은 아직 낮다.",
+      "중간": "상담자가 서두른 점을 인정한 뒤 이전보다 기대가 생겼지만, 더 민감한 이야기도 이해받을지는 아직 지켜보고 싶다.",
+      "높음": "상담자가 자신의 성급함을 인정하고 준비 부족과 걱정을 함께 받아준 경험을 통해, 현재 상담자가 자신의 경험을 이해하려는 사람이라고 믿는다."
+    },
+    "disclosure": {
+      "낮음": "대화를 이어가고 싶은 마음과 별개로, 그때의 자기비난을 자세히 말하는 것은 수치스럽고 아직 내키지 않는다.",
+      "중간": "당황하고 부끄러웠다는 점은 이야기하고 싶지만, 가장 아픈 자기비난까지 말할지는 반응을 살피고 싶다.",
+      "높음": "당시의 부끄러움과 자기비난을 혼자 반복하는 것에서 벗어나고 싶어, 지금은 불편한 생각도 구체적으로 이야기할 의향이 있다."
+    },
+    "change_confidence": {
+      "낮음": "다시 준비해야 한다고 생각하지만, 다음에도 질문 앞에서 막히지 않고 설명할 수 있을지는 자신이 부족하다.",
+      "중간": "준비를 보완해볼 수 있다고 생각하지만, 예상하지 못한 질문에 대응할 수 있을지는 아직 확신하지 못한다.",
+      "높음": "미팅 당시의 당황과 별개로, 현재는 부족한 비교 기준을 확인하고 설명을 다시 준비하는 행동을 해낼 수 있다고 느낀다."
+    }
+  },
+  "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_inner_low_5_20261008",
+  "note": "Fresh synthetic current-state records replace stale records; cannot isolate tool effect from data and instruction changes."
+}

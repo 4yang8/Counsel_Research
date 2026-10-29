@@ -1,0 +1,13 @@
+{
+  "experiment_version": "state_summary",
+  "session_id": null,
+  "enabled_tools": [
+    "retrieve_inner_state"
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "괜찮다면 오늘 이야기를 조금 더 이어가 볼까요? 부담이 되면 천천히 해도 괜찮아요."
+    }
+  ]
+}

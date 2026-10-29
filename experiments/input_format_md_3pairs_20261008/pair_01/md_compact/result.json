@@ -1,0 +1,25 @@
+{
+  "pair": 1,
+  "format": "md",
+  "levels": {
+    "trust": "낮음",
+    "disclosure": "낮음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 이전 턴(9번 발화)에서 성급하게 안심시키려 했던 점을 인정하고 내담자의 복합적인 마음(준비 부족에 대한 인정 + 평가에 대한 걱정)을 정확히 짚어주었습니다. 이에 내담자는 10번 발화에서 \"선생님이 제 마음을 이해해주시는 것 같다\"며 신뢰를 보이기 시작했습니다. 이번 발화에서도 내담자의 감정을 수용(\"그렇게 느끼셨군요\")하며, 구체적인 경험의 순간으로 조심스럽게 안내하고 있어 이해받고 있다는 느낌을 유지하게 됩니다.\n- 실제 발화: 음... 우선은 정말 당황스러웠어요. 교수님이 질문하신 순간에 '아, 이걸 당연히 설명할 수 있어야 하는데 왜 말이 안 나오지?' 하는 생각부터 들더라고요. 그리고 주변에 같이 있던 동료들이 저를 쳐다보는 게 느껴져서, 제가 너무 무능해 보일 것 같다는 생각에 얼굴이 확 뜨거워졌어요.",
+  "finish_reason": "stop",
+  "error": null,
+  "tool_calls": [],
+  "tool_errors": 0,
+  "model_calls": 1,
+  "first_input_tokens": 3039,
+  "inspection_tokens": 3039,
+  "usage": {
+    "prompt_tokens": 3039,
+    "completion_tokens": 234,
+    "total_tokens": 3273
+  },
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_01/md_compact/sessions/bb22ae71f48449958f9bd9f86c897664/20261007T153710_401713Z_9345056e.json",
+  "format_only_verified": true
+}

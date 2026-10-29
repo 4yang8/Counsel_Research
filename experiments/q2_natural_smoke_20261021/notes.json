@@ -1,0 +1,19 @@
+{
+  "version": "Q2",
+  "available": true,
+  "content": "# 현재 심리상태\n\n## 상담 목표에 대한 합의\n현재 판단할 정보가 부족함.\n\n## 상담 방식과 활동에 대한 합의\n현재 판단할 정보가 부족함.\n\n## 상담사와의 관계적 유대\n현재 판단할 정보가 부족함.\n\n## 자기개방 의향\n현재 판단할 정보가 부족함.\n\n## 변화 자기효능감\n현재 판단할 정보가 부족함.\n\n## 자율적 변화 동기\n현재 판단할 정보가 부족함.\n\n## 문제와 패턴에 대한 명료성\n현재 판단할 정보가 부족함.\n\n## 상담에 대한 기대\n현재 판단할 정보가 부족함.\n\n## 상담 과정에서의 주체성\n현재 판단할 정보가 부족함.\n\n## 정서를 견디고 조절하는 역량\n현재 판단할 정보가 부족함.\n",
+  "states": {
+    "goal_alignment": "현재 판단할 정보가 부족함.",
+    "task_alignment": "현재 판단할 정보가 부족함.",
+    "bond": "현재 판단할 정보가 부족함.",
+    "disclosure_willingness": "현재 판단할 정보가 부족함.",
+    "change_self_efficacy": "현재 판단할 정보가 부족함.",
+    "autonomous_change_motivation": "현재 판단할 정보가 부족함.",
+    "problem_clarity": "현재 판단할 정보가 부족함.",
+    "treatment_expectancy": "현재 판단할 정보가 부족함.",
+    "therapeutic_agency": "현재 판단할 정보가 부족함.",
+    "emotion_regulation_capacity": "현재 판단할 정보가 부족함."
+  },
+  "records": [],
+  "path": null
+}

@@ -1,0 +1,69 @@
+{
+  "condition": "required",
+  "case_id": "007_h1",
+  "profile": "007",
+  "history_title": "정상 검사 뒤 다시 불안해짐",
+  "states": {
+    "trust": "중간",
+    "disclosure": "중간",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 19.7,
+  "response": "- 느낌: 1(이해받음)\n- 판단 이유: 상담자가 \"지금 당장 확인을 그만두라는 뜻은 아니에요\"라고 말하며, 내담자가 느끼는 확인 행동의 절실함(중요한 신호를 놓칠 것 같은 공포)을 부정하거나 강요하지 않고 수용해 주었습니다. 이로 인해 자신의 불안한 상태를 존중받았다고 느껴 '이해받음'을 선택했습니다.\n- 실제 발화: (조금 안심한 듯한 한숨을 내쉬며) ...네, 그렇게 말씀해 주시니까 좀 낫네요. 사실... 갑자기 심장이 좀 빨리 뛰는 게 느껴지면, '아, 또 시작이다. 이러다 그때 새벽처럼 되는 거 아냐?' 하는 생각이 먼저 들어요. 지금 당장 병원까지 얼마나 걸리는지, 길이 막히지는 않을지... 그런 생각들이 꼬리에 꼬리를 물고 나면, 일단 맥박부터 재봐야 마음이 좀 놓이더라고요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 6588,
+    "completion_tokens": 358,
+    "total_tokens": 6946
+  },
+  "main_usage": {
+    "prompt_tokens": 5574,
+    "completion_tokens": 342,
+    "total_tokens": 5916
+  },
+  "subagent_usage": {
+    "prompt_tokens": 1014,
+    "completion_tokens": 16,
+    "total_tokens": 1030
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_situation",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_316cff0439b4",
+        "profile_id": "gold_007",
+        "database": "situations",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json",
+        "record": {
+          "id": "situation_1",
+          "situation": "마감 작업 중 커피 대신 마신 홍차 탓인지 심장이 살짝 빨리 뛰는 것이 느껴짐.",
+          "automatic_thought": "또 시작이다. 홍차에도 카페인이 있었지. 이러다 그날 새벽처럼 되는 거 아냐? 지금 병원까지 15분... 새벽이라 길은 안 막히겠지.",
+          "emotion": "공포, 후회",
+          "physiological_response": "심장 박동이 더 빨라지고 손발이 차가워지며 호흡이 얕아짐",
+          "behavior": "작업을 중단하고 30분 동안 맥박을 재며 응급실 갈 채비를 해두었다가, 증상이 가라앉자 마시던 홍차를 버리고 '카페인 없는 음료' 목록을 검색함"
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_316cff0439b4\", \"profile_id\": \"gold_007\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json\", \"record\": {\"id\": \"situation_1\", \"situation\": \"마감 작업 중 커피 대신 마신 홍차 탓인지 심장이 살짝 빨리 뛰는 것이 느껴짐.\", \"automatic_thought\": \"또 시작이다. 홍차에도 카페인이 있었지. 이러다 그날 새벽처럼 되는 거 아냐? 지금 병원까지 15분... 새벽이라 길은 안 막히겠지.\", \"emotion\": \"공포, 후회\", \"physiological_response\": \"심장 박동이 더 빨라지고 손발이 차가워지며 호흡이 얕아짐\", \"behavior\": \"작업을 중단하고 30분 동안 맥박을 재며 응급실 갈 채비를 해두었다가, 증상이 가라앉자 마시던 홍차를 버리고 '카페인 없는 음료' 목록을 검색함\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_316cff0439b4",
+      "name": "상황 기록 조회 담당",
+      "response": "```json\n{\"record_id\": \"situation_1\"}\n```",
+      "usage": {
+        "prompt_tokens": 1014,
+        "completion_tokens": 16,
+        "total_tokens": 1030
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/75dcf07a00ea484f8b7fd895e49d0c9c/20261008T101320_997637Z_4d28d3f2.json",
+  "error": null
+}

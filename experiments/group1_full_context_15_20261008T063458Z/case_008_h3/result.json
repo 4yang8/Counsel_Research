@@ -1,0 +1,26 @@
+{
+  "case_id": "008_h3",
+  "profile": "008",
+  "history_title": "딸을 돕고 싶은데 말이 어긋남",
+  "states": {
+    "trust": "중간",
+    "disclosure": "높음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 13.62,
+  "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 '어색한 마음을 없애려고 서두르지 않아도 괜찮다'고 말하며, 내담자가 느끼는 어색함과 서툰 감정 표현의 어려움을 그대로 인정해 주었습니다. 평생 감정을 억제하며 '장남답게', '부장답게' 완벽한 모습만 보여야 했던 내담자에게, 서툴러도 괜찮다는 허용적인 태도는 자신의 상태를 이해받고 있다는 느낌을 줍니다. 또한, 정답(방법)을 빨리 내놓으라는 압박 대신 '천천히 살펴보자'고 제안한 점이 내담자의 심리적 부담을 덜어주었습니다.\n- 실제 발화: (잠시 침묵하다가 낮은 목소리로) ...서두르지 않아도 된다니, 좀 그렇네요. 사실은... 그때 딸애가 울고 있는데, 그냥 거기 서 있는 게 너무 바보 같았거든요. 뭘 해야 할지 모르겠는데, 그렇다고 가만히 있자니 아빠로서 아무것도 안 해주는 것 같고... 그냥 마음이 좀 복잡했습니다.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 4012,
+    "completion_tokens": 254,
+    "total_tokens": 4266
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/f77844998787454294a8bb7f110ccf79/20261008T064017_297455Z_1dbcbf70.json",
+  "error": null,
+  "reference_client_not_sent": "안쓰러운 마음은 있었어요. 그걸 표현하려고 하면 너무 낯간지러워서, 또 무슨 해결책부터 말하게 될 것 같습니다."
+}

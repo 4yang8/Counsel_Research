@@ -1,0 +1,65 @@
+{
+  "condition": "required",
+  "case_id": "001_h2",
+  "profile": "001",
+  "history_title": "연인에게 마음을 숨기는 이유",
+  "states": {
+    "trust": "중간",
+    "disclosure": "중간",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 21.14,
+  "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 내담자를 '시험하는 사람'으로 단정 짓지 않고, 그 이면의 '두려움'을 먼저 이해하려 노력한다는 점(상담자 발화)에서 안도감을 느꼈습니다. 이는 내담자가 가진 '결함/수치심' 스키마와 '진짜 모습을 보이면 떠날 것'이라는 핵심 신념(profile) 때문에 가졌던 경계심을 낮춰주었으며, 현재의 중간 수준의 신뢰(trust)와 자기개방 의향(disclosure) 상태에서 조금 더 깊은 이야기를 꺼낼 수 있는 동기가 되었습니다.\n- 실제 발화: (조금 안심한 듯 한숨을 내쉬며) ...그렇게 말씀해 주시니까 좀 마음이 놓이네요. 음, 떠오르는 게 있긴 해요. 어릴 때부터 부모님이 제가 힘들어하거나 실수하는 걸 별로 안 좋아하셨거든요. 밖에서는 항상 괜찮은 모습이어야 한다고, 남들 앞에서 그런 모습 보이지 말라고 하셨어요. 그래서인지... 제 안의 힘든 마음을 말하는 게 당연한 게 아니라, 숨겨야 하는 잘못된 행동처럼 느껴졌던 것 같아요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 5323,
+    "completion_tokens": 388,
+    "total_tokens": 5711
+  },
+  "main_usage": {
+    "prompt_tokens": 4928,
+    "completion_tokens": 376,
+    "total_tokens": 5304
+  },
+  "subagent_usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 12,
+    "total_tokens": 407
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_childhood",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_022b5967016d",
+        "profile_id": "gold_001",
+        "database": "childhood_data",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json",
+        "record": {
+          "id": "childhood_1",
+          "text": "내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다."
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_022b5967016d\", \"profile_id\": \"gold_001\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json\", \"record\": {\"id\": \"childhood_1\", \"text\": \"내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다.\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_022b5967016d",
+      "name": "성장 경험 조회 담당",
+      "response": "{\"record_id\": \"childhood_1\"}",
+      "usage": {
+        "prompt_tokens": 395,
+        "completion_tokens": 12,
+        "total_tokens": 407
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/cb1b80f782d74e9b85a48a00d98dae98/20261008T100844_387941Z_5ed7a7a9.json",
+  "error": null
+}

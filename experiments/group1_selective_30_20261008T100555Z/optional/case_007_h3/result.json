@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "007_h3",
+  "profile": "007",
+  "history_title": "몸의 신호를 놓칠까 두려움",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "낮음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 10.18,
+  "response": "- 느낌: [1, 2]\n- 판단 이유: 상담자가 내담자가 느끼는 불안의 근원(과거 기억)과 현재의 고통(오늘의 신체 확인) 모두를 유효한 대화 주제로 인정해주었습니다. 특히 \"어느 쪽이 편하세요?\"라고 물으며 대화의 주도권을 내담자에게 넘겨주었기에, 자신의 속도와 선택을 존중받는다고 느꼈을 것입니다(taxonomy 2). 또한, 자신의 과도한 걱정을 '이상한 것'이 아니라 '이유가 있는 것'으로 수용해준 앞선 흐름과 이어져 이해받고 있다는 느낌을 받았습니다(taxonomy 1).\n- 실제 발화: 음... 오늘은 그냥 지금 상태에 대해서 좀 더 이야기하고 싶어요. 아까 말씀드린 것처럼, 그냥 넘기기엔 너무 불안해서요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2595,
+    "completion_tokens": 189,
+    "total_tokens": 2784
+  },
+  "main_usage": {
+    "prompt_tokens": 2595,
+    "completion_tokens": 189,
+    "total_tokens": 2784
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/31d1fb1bc70c4c48ada336c3f3200f00/20261008T101415_144167Z_0712dc81.json",
+  "error": null
+}

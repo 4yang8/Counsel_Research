@@ -1,0 +1,21 @@
+{
+  "version": "state_summary",
+  "summary_mode": "integrated_trajectory",
+  "protocol": "8 autonomous + 2 system-directed; counselor utterances only",
+  "model": "google/gemma-4-31B-it",
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_tokens": 1024,
+    "seed": null
+  },
+  "attempts_planned": 10,
+  "source_sha256": {
+    "state_summary.py": "7b9074c2d000bd162da8175315d73e9ecdf7ef54c75f0568f5e00ccd0c9139d9",
+    "runtime.py": "6b3eb1e95ca9e5880026cfc8fdaec6052702e0865e39cd2cf80f08992af71a2f",
+    "tool_loop.py": "d3e4969fdcc973faabf9641f21fd67e367aedcd49a88767b063b55a641b0e972",
+    "experiment_versions.py": "7c95c63fb5e8d6f7649719f5e7b2c465dc4c0ff3ca0e40c775ed484a4275ddc9",
+    "versions/state_summary/system.md": "8034324804b8961a6f4792e8908aa6d7e021a7054d73180fbd003e5e96a91bd8",
+    "versions/state_summary/summary.md": "1a84c2876e4541e5f3900cdf347a8d10727c63944a13cdb4f6b714642b37ccd2"
+  }
+}

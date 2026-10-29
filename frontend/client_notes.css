@@ -1,0 +1,19 @@
+.lab-shell[data-view=client_notes] .workspace {display:none}
+.client-notes-view {max-width:960px;padding:12px;min-width:0}
+.note-view-heading,.note-view-controls {display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.note-view-heading h2 {font-size:17px;margin:4px 0}
+.note-view-controls label {display:flex;align-items:center;gap:8px}
+#client-notes-body pre {white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45;font-size:13px;padding:12px;background:#f3f6fa;border:1px solid #d6e0ea;border-radius:8px;max-height:none}
+.note-view-change {padding:8px 0;border-bottom:1px solid #d6e0ea}
+.note-view-change p {margin:4px 0;font-size:13px;overflow-wrap:anywhere}
+#client-notes-path,.note-view-speech {overflow-wrap:anywhere}
+#client-notes-body .note-added,#client-notes-body .note-deleted,#client-notes-body .note-diff-context {white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}
+@media(max-width:700px){.client-notes-view {padding:8px}.note-view-controls select {max-width:190px}}
+.lab-shell[data-view=session_notes] .workspace,.lab-shell[data-view=session_notes] .journey{display:none}
+.session-notes-view{min-width:0;padding:10px;max-width:1000px}
+#session-notes-status{font-size:11px;color:#617384;line-height:1.45}
+.session-notes-group{margin:10px 0 15px;min-width:0}.session-notes-group h3{font-size:14px;margin:6px 0}
+.session-note-box{border:1px solid #cad9e4;background:#f5f9fc;border-radius:6px;padding:8px;margin:6px 0;min-width:0}
+.session-note-box>strong{font-size:12px;color:#456073}
+.session-note-box pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.5 ui-monospace,GemmaKorean,monospace;max-height:420px;overflow:auto;overscroll-behavior:contain;margin:6px 0 0}
+.session-notes-group[data-actor=client] .session-note-box{background:#f5f2fa;border-color:#d8cde8}

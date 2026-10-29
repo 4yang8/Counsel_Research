@@ -1,0 +1,26 @@
+{
+  "case_id": "007_h3",
+  "profile": "007",
+  "history_title": "몸의 신호를 놓칠까 두려움",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "낮음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 8.2,
+  "response": "- 느낌: 1, 2\n- 판단 이유: 상담자가 내담자가 겪은 과거의 트라우마(아버지의 죽음)와 현재의 강박적 확인 행동(맥박 측정) 두 가지 경로를 모두 열어두고, 내담자가 편한 쪽을 선택하게 함으로써 현재의 심리적 고통을 이해하고 내담자의 속도를 존중하고 있다고 느꼈습니다. (상담자 발화: \"더 이야기해볼 수도 있고... 어느 쪽이 편하세요?\")\n- 실제 발화: 음... 지금은 그냥, 아까 몸 상태 확인했던 얘기부터 하는 게 좀 더 편할 것 같아요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 4064,
+    "completion_tokens": 140,
+    "total_tokens": 4204
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/d594a759d8654243974f59c987a3ce62/20261008T063941_739092Z_86b888c7.json",
+  "error": null,
+  "reference_client_not_sent": "오늘 얘기부터 하고 싶어요. 아버지 얘기는 꺼내면 너무 생생해져서, 조금 천천히 하고 싶습니다."
+}

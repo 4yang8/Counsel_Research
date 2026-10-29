@@ -1,0 +1,69 @@
+{
+  "condition": "required",
+  "case_id": "005_h2",
+  "profile": "005",
+  "history_title": "아내의 별거 통보",
+  "states": {
+    "trust": "중간",
+    "disclosure": "낮음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 20.4,
+  "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 내담자는 현재 자기개방 의향이 낮으며(disclosure: 낮음), 자신의 취약함이나 불안을 드러내는 것을 꺼리는 특성이 있습니다. 상황 DB(situation_3)에 따르면, 아이 사진을 볼 때 '불안과 공허함'을 느끼고 명치가 뻐근한 신체 반응을 보였지만, 겉으로는 \"걱정이라고 할 정도인지는 모르겠다\"며 감정을 방어하고 있습니다. 상담자가 그 구체적인 '마음'을 묻는 것은 내담자가 숨기고 싶어 하는 내면의 취약성(불안, 공허함)을 직접적으로 건드리는 요청이기에 부담스럽게 느낄 가능성이 큽니다.\n\n- 실제 발화: \"글쎄요... 그냥, 애가 없으니까 집이 너무 넓게 느껴진다는 생각 정도였어요. 딱히 특별한 마음이 있었다기보다는 그냥 좀 허전하더라고요.\"",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 6456,
+    "completion_tokens": 375,
+    "total_tokens": 6831
+  },
+  "main_usage": {
+    "prompt_tokens": 5412,
+    "completion_tokens": 359,
+    "total_tokens": 5771
+  },
+  "subagent_usage": {
+    "prompt_tokens": 1044,
+    "completion_tokens": 16,
+    "total_tokens": 1060
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_situation",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_f7baa00cf6e0",
+        "profile_id": "gold_005",
+        "database": "situations",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json",
+        "record": {
+          "id": "situation_3",
+          "situation": "아내가 전화로 '당신은 늘 당신이 옳고 우리는 당신 들러리였어. 당분간 떨어져 지내자'고 말하고 끊음.",
+          "automatic_thought": "내가 벌어다 준 걸로 그만큼 누리고 살았으면서 이제 와서 뭐가 불만이야. ...근데 애까지 데리고 갔다는 건, 정말 끝을 생각한다는 건가.",
+          "emotion": "분노, 억울함, 그 밑의 불안과 공허함",
+          "physiological_response": "명치가 뻐근하고 밤에 잠이 오지 않아 몇 번씩 깸",
+          "behavior": "곧바로 장모에게 전화해 '제가 뭘 그렇게 잘못했습니까'라고 따지다 언쟁이 되고, 그날 밤 혼자 거실에서 술을 마시며 아들 사진을 오래 들여다봄"
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_f7baa00cf6e0\", \"profile_id\": \"gold_005\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json\", \"record\": {\"id\": \"situation_3\", \"situation\": \"아내가 전화로 '당신은 늘 당신이 옳고 우리는 당신 들러리였어. 당분간 떨어져 지내자'고 말하고 끊음.\", \"automatic_thought\": \"내가 벌어다 준 걸로 그만큼 누리고 살았으면서 이제 와서 뭐가 불만이야. ...근데 애까지 데리고 갔다는 건, 정말 끝을 생각한다는 건가.\", \"emotion\": \"분노, 억울함, 그 밑의 불안과 공허함\", \"physiological_response\": \"명치가 뻐근하고 밤에 잠이 오지 않아 몇 번씩 깸\", \"behavior\": \"곧바로 장모에게 전화해 '제가 뭘 그렇게 잘못했습니까'라고 따지다 언쟁이 되고, 그날 밤 혼자 거실에서 술을 마시며 아들 사진을 오래 들여다봄\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_f7baa00cf6e0",
+      "name": "상황 기록 조회 담당",
+      "response": "```json\n{\"record_id\": \"situation_3\"}\n```",
+      "usage": {
+        "prompt_tokens": 1044,
+        "completion_tokens": 16,
+        "total_tokens": 1060
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/57470e55003740d69bfd2a416ac70997/20261008T101216_970559Z_3f22797a.json",
+  "error": null
+}

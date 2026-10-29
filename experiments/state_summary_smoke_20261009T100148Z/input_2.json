@@ -1,0 +1,21 @@
+{
+  "experiment_version": "state_summary",
+  "session_id": "1ef170b06b1a472e802646140bd4d27d",
+  "enabled_tools": [
+    "retrieve_inner_state"
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "괜찮다면 오늘 이야기를 조금 더 이어가 볼까요? 부담이 되면 천천히 해도 괜찮아요."
+    },
+    {
+      "role": "assistant",
+      "content": "네... 그렇게 말씀해 주시니까 좀 낫네요. 계속 이야기해 볼게요."
+    },
+    {
+      "role": "user",
+      "content": "방금 이야기하기를 조금 망설였다면, 어떤 걱정 때문인지 말해 주실 수 있나요?"
+    }
+  ]
+}

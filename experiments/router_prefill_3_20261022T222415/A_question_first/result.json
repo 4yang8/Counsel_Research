@@ -1,0 +1,26 @@
+{
+  "id": "A_question_first",
+  "label": "현재 질문에서 출발",
+  "hypothesis": "현재 질문·제안의 성격을 먼저 고정하면 관련성 기준을 다시 정의하는 왕복이 줄고 선택 근거가 현재 장면에 연결될 수 있다.",
+  "prefill": "I will first identify what the counselor is asking and how the client is being invited to participate. I will then select personal traits relevant to understanding that situation, connect any supporting background, and explain each selection using the current context. Once these evidence links are clear, I can return the selections as JSON.",
+  "status": "complete",
+  "error": null,
+  "elapsed_seconds": 17.66,
+  "usage": {
+    "prompt_tokens": 3015,
+    "total_tokens": 3709,
+    "completion_tokens": 694
+  },
+  "segment_token_counts": {
+    "reasoning": 1,
+    "final_json": 691,
+    "prefill": 60
+  },
+  "segment_count_note": "Each text segment is tokenized independently; these are not API reasoning-token accounting.",
+  "reasoning_chars": 1,
+  "selected_traits": [
+    "/coping_strategies/1",
+    "/intermediate_beliefs/attitude",
+    "/coping_strategies/0"
+  ]
+}

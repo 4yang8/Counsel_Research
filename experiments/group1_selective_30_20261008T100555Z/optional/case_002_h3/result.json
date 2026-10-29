@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "002_h3",
+  "profile": "002",
+  "history_title": "내가 원하는 것을 묻는 질문",
+  "states": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 11.36,
+  "response": "- 느낌: 1(이해받음), 2(선택권을 존중받음)\n- 판단 이유: 내담자는 평소 타인의 욕구를 우선시하고 거절하지 못하는 '자기희생' 스키마가 강하며, 상담 과정에서도 '잘 말씀드려야 할 것 같다'는 압박감을 느끼고 있었습니다. 상담자가 \"아무것도 결정하지 않고\", \"잠깐 머물러 보자\"고 제안한 것은 정답을 내놓아야 한다는 내담자의 심리적 부담을 덜어주는 동시에, 쉬고 싶다는 내담자의 작은 욕구를 인정하고 수용해 준 것이기에 이해받고 존중받는다고 느낍니다.\n- 실제 발화: (조금 안심한 듯한 숨을 내쉬며) ...네. 그냥 이렇게 가만히 있어도 된다고 하시니까, 정말 조금은 마음이 놓이는 것 같아요. 사실 계속 뭘 찾아내서 말씀드려야 한다는 생각에 조금 긴장했었거든요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2383,
+    "completion_tokens": 217,
+    "total_tokens": 2600
+  },
+  "main_usage": {
+    "prompt_tokens": 2383,
+    "completion_tokens": 217,
+    "total_tokens": 2600
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/da0266b8af44439285eb35fe573f68af/20261008T101052_408255Z_2e6149c3.json",
+  "error": null
+}

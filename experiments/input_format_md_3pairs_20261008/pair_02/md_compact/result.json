@@ -1,0 +1,25 @@
+{
+  "pair": 2,
+  "format": "md",
+  "levels": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 이전 턴에서 성급하게 안심시키려 했던 것을 사과하고, 내담자가 느낀 '준비 부족'과 '평가에 대한 걱정'을 정확히 짚어주었습니다(대화 9번). 이에 내담자는 \"마음을 이해해주시는 것 같다\"며 신뢰를 표현한 상태입니다(대화 10번, trust: 높음). 이번 발화에서도 내담자의 감정을 수용하며 자연스럽게 구체적인 경험으로 안내하고 있어 이해받고 있다고 느낍니다.\n- 실제 발화: (잠시 생각하다가) 음... 처음에는 그냥 당황스러웠어요. 그런데 곧바로 '아, 내가 이걸 왜 설명 못 하고 있지? 정말 기본이 안 되어 있구나'라는 생각이 들더라고요. 교수님 표정은 안 보였지만, 분명히 속으로는 '얘가 이걸 제대로 알고 하는 건가'라고 생각하셨을 것 같아서 너무 막막했어요.",
+  "finish_reason": "stop",
+  "error": null,
+  "tool_calls": [],
+  "tool_errors": 0,
+  "model_calls": 1,
+  "first_input_tokens": 3042,
+  "inspection_tokens": 3042,
+  "usage": {
+    "prompt_tokens": 3042,
+    "completion_tokens": 223,
+    "total_tokens": 3265
+  },
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_02/md_compact/sessions/bdee0335f5584203bb8082251e81641b/20261007T153722_546230Z_564422a0.json",
+  "format_only_verified": true
+}

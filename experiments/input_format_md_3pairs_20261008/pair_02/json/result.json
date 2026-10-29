@@ -1,0 +1,25 @@
+{
+  "pair": 2,
+  "format": "json",
+  "levels": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "response": "- **선택한 느낌**: 이해받음\n- **판단 이유**: 상담자가 이전 턴에서 성급하게 안심시키려 했던 것을 인정하고 내담자의 마음을 다시 정리해준 덕분에, 내담자는 \"선생님이 제 마음을 이해해주시는 것 같다\"며 신뢰(trust: 높음)를 보였습니다. 이번 발화에서도 내담자의 감정을 먼저 수용(\"그렇게 느끼셨군요\")하고 구체적인 경험을 묻고 있어, 내담자는 자신의 상태를 알아준다고 느끼며 대화를 이어갈 준비가 되었습니다.\n- **내담자 발화**: \"음... 처음엔 그냥 '아, 왜 이게 바로 안 나오지?' 싶었어요. 그런데 바로 다음에 '아, 교수님이 지금 나를 한심하게 보시겠다'는 생각이 확 들더라고요. 제가 당연히 알아야 할 건데 그걸 못 하는 모습이 너무 바보같이 느껴졌어요.\"",
+  "finish_reason": "stop",
+  "error": null,
+  "tool_calls": [],
+  "tool_errors": 0,
+  "model_calls": 1,
+  "first_input_tokens": 3198,
+  "inspection_tokens": 3198,
+  "usage": {
+    "prompt_tokens": 3198,
+    "completion_tokens": 200,
+    "total_tokens": 3398
+  },
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_02/json/sessions/9bdcce3e139542d4b4beaec77528a44c/20261007T153538_988459Z_fe124077.json",
+  "format_only_verified": true
+}

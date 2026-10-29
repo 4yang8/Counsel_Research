@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "001_h1",
+  "profile": "001",
+  "history_title": "회의에서 드러난 실수",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "낮음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 11.22,
+  "response": "- taxonomy: [1, 2]\n- 판단 이유: 상담자가 내담자가 방금 표현한 '상담자에게도 별로인 사람으로 보일까 봐 신경 쓰인다'는 불안을 정확히 짚어주어 이해받았다고 느낍니다(taxonomy 1). 또한, 억지로 다 털어놓으라고 강요하지 않고 '편한 범위까지만 이야기해도 괜찮다'며 내담자의 속도와 경계를 존중해주었기에 선택권을 존중받았다고 느낍니다(taxonomy 2). 다만, 현재 신뢰도(trust)와 자기개방 의향(disclosure)이 낮기 때문에 갑자기 마음을 활짝 열기보다는 조심스럽게 안도하는 반응을 보일 것입니다.\n- 실제 발화: (잠시 침묵하다가 작은 목소리로) ...네. 그렇게 말씀해 주시니까 조금 낫네요. 사실 좀 망설여졌거든요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2276,
+    "completion_tokens": 205,
+    "total_tokens": 2481
+  },
+  "main_usage": {
+    "prompt_tokens": 2276,
+    "completion_tokens": 205,
+    "total_tokens": 2481
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/7d9e2b21bdf24f108c9494b9d2f0a1a9/20261008T100801_429875Z_edcfb49a.json",
+  "error": null
+}

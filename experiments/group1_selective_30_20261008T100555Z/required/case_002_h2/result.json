@@ -1,0 +1,65 @@
+{
+  "condition": "required",
+  "case_id": "002_h2",
+  "profile": "002",
+  "history_title": "가족이 당연하게 기대하는 역할",
+  "states": {
+    "trust": "중간",
+    "disclosure": "높음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 21.35,
+  "response": "- taxonomy: [1]\n- 판단 이유: 상담자가 내담자가 느끼는 '미안함'이라는 감정에 주목해주었고, 그 배경을 탐색하려 하면서도 \"떠오르는 만큼만 말해달라\"며 내담자의 속도를 존중해주었습니다. 이에 내담자는 자신의 내면을 이해받고 있다고 느끼며, 현재 높은 자기개방 의향(disclosure: 높음)과 조회된 성장 경험(누나로서의 양보 강요, 이기적이라는 핀잔)을 바탕으로 과거의 기억을 조심스럽게 꺼내놓으려 합니다.\n- 실제 발화: (잠시 생각하다가 낮은 목소리로) 글쎄요... 생각해보면 아주 어릴 때부터 그랬던 것 같아요. 제가 누나니까 동생한테 양보하는 게 당연하다고 늘 들었거든요. 가끔은 제 마음을 이야기하고 싶을 때도 있었는데, 그럴 때마다 엄마가 '너는 왜 그렇게 이기적이니'라거나 '엄마 힘든 거 안 보이니'라고 말씀하셨어요. 그래서... 제가 뭔가를 바라는 게 정말 이기적인 행동이라고 믿게 된 것 같아요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 5636,
+    "completion_tokens": 403,
+    "total_tokens": 6039
+  },
+  "main_usage": {
+    "prompt_tokens": 5154,
+    "completion_tokens": 386,
+    "total_tokens": 5540
+  },
+  "subagent_usage": {
+    "prompt_tokens": 482,
+    "completion_tokens": 17,
+    "total_tokens": 499
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_childhood",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_e47a4744c191",
+        "profile_id": "gold_002",
+        "database": "childhood_data",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json",
+        "record": {
+          "id": "childhood_2",
+          "text": "부모는 '네가 누나니까 양보해야지', '엄마 힘든 거 안 보이니'라는 말을 자주 했고, 내담자가 자기 것을 요구하면 '이기적이다'라는 핀잔이 돌아왔습니다."
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_e47a4744c191\", \"profile_id\": \"gold_002\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json\", \"record\": {\"id\": \"childhood_2\", \"text\": \"부모는 '네가 누나니까 양보해야지', '엄마 힘든 거 안 보이니'라는 말을 자주 했고, 내담자가 자기 것을 요구하면 '이기적이다'라는 핀잔이 돌아왔습니다.\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_e47a4744c191",
+      "name": "성장 경험 조회 담당",
+      "response": "```json\n{\"record_id\": \"childhood_2\"}\n```",
+      "usage": {
+        "prompt_tokens": 482,
+        "completion_tokens": 17,
+        "total_tokens": 499
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/1c99f49d53de468fa1ef7a8beed04dcb/20261008T101030_974341Z_e9902b3b.json",
+  "error": null
+}

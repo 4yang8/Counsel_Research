@@ -1,0 +1,79 @@
+{
+  "run_id": "group1_selective_30_20261008T100555Z",
+  "baseline": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z",
+  "started_at": "2026-10-08T10:08:01.178409+00:00",
+  "expected_generations": 30,
+  "sets": {
+    "optional": {
+      "expected": 15,
+      "system_prompt": "주어진 툴을 적절히 활용하세요."
+    },
+    "required": {
+      "expected": 15,
+      "system_prompt": "주어진 툴을 적절히 활용하세요.\n최종 내담자 발화를 생성하기 전에 제공된 도구를 적어도 한 번 호출하세요."
+    }
+  },
+  "model": "google/gemma-4-31B-it",
+  "vllm_url": "http://127.0.0.1:18001/v1",
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_tokens": 1024,
+    "seed": null
+  },
+  "enabled_tools": [
+    "retrieve_childhood",
+    "retrieve_situation"
+  ],
+  "source_sha256": {
+    "app_server.py": "cfe6a14768f3716a08864bc6f31e41328ebaeffd1ac0a863a9bde5df931dc68d",
+    "history_cases.py": "33673cf572c19b3b41d67ca00569e1c1a3ee3ac9c34fc71fc773fc0c9bb2316b",
+    "profile_retrieval.py": "6cc3f4b0c83e83a3162cd85c3d1288507ac6dd8441fb3425ecdc7ca591f0336f",
+    "runtime.py": "5ce2a1e2906263fa28a48fc029379b58b3542f35889355a2a6a01fd0d99b6f37",
+    "server.py": "e6688cb63df8e88244692f91bc44b94a4fe5fdfb976840926096edd1fdd82916",
+    "tool_loop.py": "d3e4969fdcc973faabf9641f21fd67e367aedcd49a88767b063b55a641b0e972",
+    "mcp_client.py": "f9fbf5e64923b7975bce702f258616ecb8b7ac7a831fa24144a4821570cda471",
+    "config.json": "e8a58c8941515c8d9033cb3036d92811139883e91cdf8c5f79dad4c59159f0d3",
+    "tools.json": "9c87fa6ca3f2685f6b69ff6769e9f8692fae28582c70a526c7257713b5c68f04",
+    "cases/lab_meeting.json": "e9af83ac9df7fd1c077c9ee11eca4952fd7096e952b6ef44c28b5bec12e0ff77",
+    "cases/group1/histories.json": "b8ea63cf4873ba2ed0b7ebbd9b135cfce85e8e353c407891269364ce4996a995",
+    "cases/lab_meeting_experiences.json": "25015a562fd89e72ba21bb394977ba0b9b1f540db6e11528393087b9e402f2b6",
+    "cases/lab_meeting_current_event.json": "96452170f9ab23185393867cbe02295e4301e897d33d674a03b87ec1eaa30055",
+    "cases/lab_meeting_constraints.json": "bac3a89f0ed324ef9501b09a8ab8c7ea3178e532c98d024e38ae81b6b1865995",
+    "cases/lab_meeting_state_basis.json": "60c7efa88fe771ed351e915cfef356f108f4b64a7fd8035f421f9016acaf628a",
+    "profiles/gold_ccd_profile_001.json": "4833f96cd823c32b2b802db581a4008a42b21a5e870844057c55a71dc6cb2ff0",
+    "profiles/gold_ccd_profile_002.json": "a4ae347e24592587ddb9c41d70a22b05d9fec0e340994baa773d68b6a4cb4535",
+    "profiles/gold_ccd_profile_005.json": "ae2d5c700444f331bcd6392e7020fb1e92e29fcc0d6203688d83faae046ac336",
+    "profiles/gold_ccd_profile_007.json": "f94d85c7d8aceb7249dec30f72c42ccaa4df7926d3d4be3ac62c16fb18403f1a",
+    "profiles/gold_ccd_profile_008.json": "160bf2b7667ca000dd38e8c9a178804da969a201357bafb6558527e073dc4a83"
+  },
+  "matched_inputs": "Exact baseline histories, counselor target, states, state meanings, task, taxonomy; initial profile reduced identically in both sets.",
+  "initial_fields": [
+    "profile_id",
+    "demographic_context",
+    "presenting_problem",
+    "core_belief",
+    "intermediate_beliefs",
+    "coping_strategies"
+  ],
+  "external_fields": [
+    "childhood_data",
+    "situations"
+  ],
+  "retrieval": "Same Gemma model selects one record ID in independent context, no tools, max_tokens=128; Python returns exact single source unit, no summary generation.",
+  "units": {
+    "childhood_data": "One original sentence",
+    "situations": "One original event with its five fields"
+  },
+  "prompt_only_requirement": true,
+  "repeats_per_input": 1,
+  "execution_order": "Matched pairs interleaved optional then required",
+  "limitations": [
+    "One stochastic run per input; no statistical causal claim.",
+    "Basic background and histories already overlap with some external facts.",
+    "Full-context baseline used a different tool catalog; total-token differences include removed information and tool schema changes."
+  ],
+  "analysis_method": "Artifact audit by Codex, no extra model judge.",
+  "finished_at": "2026-10-08T10:16:24.890689+00:00",
+  "completed": 30
+}

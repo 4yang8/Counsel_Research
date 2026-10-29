@@ -1,0 +1,53 @@
+const puppeteer=require(process.env.PUPPETEER_MODULE || '/home2/sjyang114/.npm/_npx/d62b6517736c1e35/node_modules/puppeteer');
+const {spawn}=require('child_process'),path=require('path'),assert=require('node:assert/strict');
+(async()=>{
+ const fixture=spawn(process.env.GEMMA_TEST_PYTHON || (process.env.COUNSELING_PYTHON || process.env.GEMMA_TEST_PYTHON || 'python3'),[path.join(__dirname,'test_lab.py'),'--serve','--p1-slow','--prompt-editing']);let browser;
+ try{
+  const url=await new Promise((resolve,reject)=>{fixture.stdout.once('data',d=>resolve(d.toString().trim()));fixture.once('exit',c=>reject(Error('fixture '+c)));});
+  browser=await puppeteer.launch({headless:true,timeout:60000,args:['--no-sandbox','--disable-dev-shm-usage']});const page=await browser.newPage(),errors=[];
+  page.on('pageerror',e=>{errors.push(e.message);console.error('PAGE ERROR',e.stack);});await page.setViewport({width:1500,height:1000});await page.goto(url+'/lab');
+  await page.waitForSelector('#experiment-version option[value=Q2]');await page.waitForFunction(()=>!document.querySelector('#experiment-version').disabled);await page.select('#experiment-version','Q2');
+  await page.waitForFunction(()=>document.querySelector('#tool-enabled-stage_client_update') && document.querySelector('#client-subagent-select').options.length===3).catch(async error=>{console.error(await page.evaluate(()=>({notice:document.querySelector('#notice').textContent,version:document.querySelector('#experiment-version').value,tools:document.querySelector('#tool-options').textContent,subagents:document.querySelector('#client-subagent-select')?.innerHTML})));throw error;});
+  assert(await page.$eval('#tool-enabled-stage_client_update',e=>e.checked && e.disabled));
+  const originalUrl=await page.evaluate(()=>TurnConnection.value());
+  await page.select('#turn-endpoint-mode','lan');
+  await page.$eval('#turn-endpoint-octet',e=>{e.value='42';e.dispatchEvent(new Event('input',{bubbles:true}));});
+  assert.equal(await page.evaluate(()=>TurnConnection.value()),'http://192.168.0.42:8001/v1');
+  await page.$eval('#turn-endpoint-port',e=>{e.value='8123';e.dispatchEvent(new Event('input',{bubbles:true}));});
+  assert.equal(await page.evaluate(()=>TurnConnection.value()),'http://192.168.0.42:8123/v1');
+  await page.select('#turn-endpoint-mode','local');assert.equal(await page.evaluate(()=>TurnConnection.value()),originalUrl);
+  const stepUrls=[];page.on('request',request=>{if(request.url().endsWith('/api/paired/step'))stepUrls.push(JSON.parse(request.postData()).vllm_url);});
+
+  assert(await page.$eval('#block-state',e=>e.hidden));
+  await page.select('#client-subagent-select','state_updater');
+  await page.waitForFunction(()=>document.querySelector('#client-subagent-prompt-file-status').textContent.includes('/Q2/state_updater.md'));
+  await page.$eval('#client-subagent-prompt',e=>{e.value+='\nQ2_UI_UPDATE_PROMPT';e.dispatchEvent(new Event('input',{bubbles:true}));});
+  await page.click('#client-subagent-prompt-save');await page.waitForFunction(()=>document.querySelector('#client-subagent-prompt-file-status').textContent.includes('파일 저장 완료'));
+  await page.click('#client-notes-tab');await page.waitForFunction(()=>document.querySelector('#client-notes-body').textContent.includes('현재 판단할 정보가 부족함'));
+  assert.equal((await page.$eval('#client-notes-body',e=>e.textContent)).split('## ').length-1,10);
+  await page.evaluate(()=>{document.querySelector('#manual-counselor').checked=true;document.querySelector('#manual-counselor').dispatchEvent(new Event('change'));});
+  await page.click('#paired-next');await page.waitForFunction(()=>document.querySelector('#paired-dialogue-count').textContent.includes('새로 생성 1개') && !document.querySelector('#paired-manual-send').disabled,{timeout:30000});
+  assert.deepEqual(stepUrls,[originalUrl]);
+  assert.equal(await page.$eval('#turn-endpoint-mode',e=>e.disabled),false);
+  const transcript=await page.$eval('#paired-transcript',e=>e.textContent);
+  assert(transcript.includes('Q2_STATE_ROUTER_REASON'));assert(transcript.includes('Q2_STATE_UPDATER_REASON'));
+  const speech=await page.$$eval('#paired-transcript .speech-text',els=>els.map(e=>e.textContent).join('\n'));
+  assert(speech.includes('조금 안심되지만'));assert(!speech.includes('현재 심리상태'));
+  await page.click('#client-notes-tab');await page.waitForFunction(()=>document.querySelector('#client-notes-turn').options.length===2);
+  assert((await page.$eval('#client-notes-body',e=>e.textContent)).includes('선택을 존중받았다고'));
+  await page.select('#client-notes-mode','diff');assert((await page.$eval('#client-notes-body',e=>e.textContent)).includes('변경 근거:'));
+  await page.select('#client-notes-mode','before');assert(!(await page.$eval('#client-notes-body',e=>e.textContent)).includes('선택을 존중받았다고'));
+  await page.select('#client-notes-mode','after');await page.screenshot({path:'/tmp/q2_notes.png'});
+  const saved=await page.evaluate(()=>api('/api/paired/session?session_id='+Paired.sessionId));assert.equal(saved.client_version,'Q2');
+  await page.$$eval('#paired-transcript .paired-speech-button',els=>els.findLast(e=>e.textContent.includes(' · 생성 ')).click());
+  await page.click('#raw-tab');const agent=await page.$$eval('#agent-picker option',els=>els.find(e=>e.value.startsWith('state_updater_')).value);await page.select('#agent-picker',agent);
+  const raw=JSON.parse(await page.$eval('#raw-json',e=>e.textContent));assert(raw.messages[0].content.endsWith('Q2_UI_UPDATE_PROMPT'));assert(raw.messages.some(m=>m.content.includes('완성된 내담자 발화')));
+  await page.click('#workflow-tab');assert((await page.$$('.wf-node')).length>3);
+  await page.reload();await page.waitForFunction(()=>document.querySelector('#paired-status').textContent.includes('불러옴'));
+  assert.equal(await page.evaluate(()=>TurnConnection.value()),originalUrl);
+  await page.click('#client-notes-tab');await page.waitForFunction(()=>document.querySelector('#client-notes-turn').options.length===2);
+  assert((await page.$eval('#client-notes-body',e=>e.textContent)).includes('선택을 존중받았다고'));
+  await page.setViewport({width:390,height:900});assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2)));
+  assert.deepEqual(errors,[]);console.log('PASS: Q2 settings, three subagent prompts, post-speech streams, dedicated notes/diff, raw, workflow, reload, mobile');
+ }finally{if(browser)await browser.close();fixture.kill();}
+})().catch(error=>{console.error(error);process.exit(1);});

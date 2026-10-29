@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "007_h1",
+  "profile": "007",
+  "history_title": "정상 검사 뒤 다시 불안해짐",
+  "states": {
+    "trust": "중간",
+    "disclosure": "중간",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 12.62,
+  "response": "- 느낌: 1(이해받음), 2(선택권을 존중받음)\n- 판단 이유: 내담자는 \"안 봐도 된다고 하면 중요한 신호를 놓치는 것 같다\"며 확인 행동에 강한 집착과 두려움을 보였습니다. 상담자가 \"당장 그만두라는 뜻은 아니다\"라고 말함으로써 내담자의 생존 전략(확인 행동)을 무작정 부정하지 않고 수용해주었기에 '선택권을 존중받음'을 느낍니다. 또한, 무작정 행동을 수정하라고 압박하기보다 그 전의 '생각'부터 살펴보자고 제안한 점이 내담자의 조심스러운 상태를 배려한 것으로 느껴져 '이해받음'을 느꼈습니다.\n- 실제 발화: (조금 안심한 표정으로) ...네. 무조건 하지 말라고 하실 줄 알았는데, 다행이네요. 음, 확인하기 직전에는... 그냥 '지금 이 느낌이 진짜 위험한 신호면 어떡하지?' 하는 생각이 먼저 드는 것 같아요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2548,
+    "completion_tokens": 237,
+    "total_tokens": 2785
+  },
+  "main_usage": {
+    "prompt_tokens": 2548,
+    "completion_tokens": 237,
+    "total_tokens": 2785
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/368730abd7134585b88171626c1a0c39/20261008T101308_372809Z_9be32ab1.json",
+  "error": null
+}

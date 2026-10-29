@@ -1,0 +1,69 @@
+{
+  "condition": "required",
+  "case_id": "005_h3",
+  "profile": "005",
+  "history_title": "승진에서 밀린 뒤",
+  "states": {
+    "trust": "높음",
+    "disclosure": "중간",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 19.32,
+  "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 내담자가 겪고 있는 '동의하지 않지만 계속 생각나는' 모순적인 심리 상태를 정확히 짚어주었고, 성급하게 이직 결정을 내리기보다 내면의 불편함을 먼저 다루자고 제안했습니다. 내담자는 현재 상담자에 대한 신뢰도가 높고(trust: 높음), 자신의 상황을 이해받고 있다고 느끼기에 이러한 제안을 거부감 없이 받아들일 가능성이 큽니다. 다만, 자기개방 의향이 중간 수준이므로 처음부터 모든 것을 털어놓기보다는 약간의 망설임과 함께 동의하는 모습을 보일 것입니다.\n- 실제 발화: (잠시 침묵하다가 한숨을 쉬며) ...뭐, 틀린 말은 아니네요. 사실 그 말이 계속 머릿속에서 맴도는 게 저 스스로도 좀 짜증 나거든요. 제가 왜 그런 말에 이렇게까지 신경을 쓰는지... 한번 얘기해 보죠.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 6394,
+    "completion_tokens": 360,
+    "total_tokens": 6754
+  },
+  "main_usage": {
+    "prompt_tokens": 5368,
+    "completion_tokens": 344,
+    "total_tokens": 5712
+  },
+  "subagent_usage": {
+    "prompt_tokens": 1026,
+    "completion_tokens": 16,
+    "total_tokens": 1042
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_situation",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_70b80816594c",
+        "profile_id": "gold_005",
+        "database": "situations",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json",
+        "record": {
+          "id": "situation_4",
+          "situation": "임원 인사에서 자신이 아니라 실적이 낮은 동기가 본부장으로 승진했다는 발표가 남. 사석에서 '자네는 실적은 좋은데 사람들이 안 따른다는 평이 있다'는 말을 들음.",
+          "automatic_thought": "결국 정치질에서 밀린 거지. 능력이 아니라 줄 잘 선 놈이 올라가는 회사라면 여기가 썩은 거야. ...사람들이 안 따른다는 건 대체 누가 한 소리야.",
+          "emotion": "분노, 굴욕감, 인정하고 싶지 않은 동요",
+          "physiological_response": "술자리 내내 속이 쓰리고 관자놀이가 지끈거림",
+          "behavior": "동기 승진 축하 자리에 불참하고, 후배들에게 '이 회사 인사가 얼마나 엉터리인지' 성토하며 늦게까지 술을 마심. 다음 날 헤드헌터에게 먼저 연락해 이직 자리를 알아봄"
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_70b80816594c\", \"profile_id\": \"gold_005\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json\", \"record\": {\"id\": \"situation_4\", \"situation\": \"임원 인사에서 자신이 아니라 실적이 낮은 동기가 본부장으로 승진했다는 발표가 남. 사석에서 '자네는 실적은 좋은데 사람들이 안 따른다는 평이 있다'는 말을 들음.\", \"automatic_thought\": \"결국 정치질에서 밀린 거지. 능력이 아니라 줄 잘 선 놈이 올라가는 회사라면 여기가 썩은 거야. ...사람들이 안 따른다는 건 대체 누가 한 소리야.\", \"emotion\": \"분노, 굴욕감, 인정하고 싶지 않은 동요\", \"physiological_response\": \"술자리 내내 속이 쓰리고 관자놀이가 지끈거림\", \"behavior\": \"동기 승진 축하 자리에 불참하고, 후배들에게 '이 회사 인사가 얼마나 엉터리인지' 성토하며 늦게까지 술을 마심. 다음 날 헤드헌터에게 먼저 연락해 이직 자리를 알아봄\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_70b80816594c",
+      "name": "상황 기록 조회 담당",
+      "response": "```json\n{\"record_id\": \"situation_4\"}\n```",
+      "usage": {
+        "prompt_tokens": 1026,
+        "completion_tokens": 16,
+        "total_tokens": 1042
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/4565dfcafb4f4c529970c5f8b0fc6106/20261008T101248_834553Z_36a3bc43.json",
+  "error": null
+}

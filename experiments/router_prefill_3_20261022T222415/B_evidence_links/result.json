@@ -1,0 +1,28 @@
+{
+  "id": "B_evidence_links",
+  "label": "근거와 해석 구분",
+  "hypothesis": "현재 대화·기존 내면·프로필 원문을 구분하며 연결하면 라우팅이 이번 감정과 행동을 확정하는 단계로 확장되는 현상을 줄일 수 있다.",
+  "prefill": "I will build each selection from an evidence link: a detail in the current conversation or existing inner note, a relevant trait in the profile, and any background that helps explain the connection. I will distinguish what the supplied records establish from my interpretation of their relevance. My conclusion will explain which personal information is useful for understanding this moment and why.",
+  "status": "complete",
+  "error": null,
+  "elapsed_seconds": 25.16,
+  "usage": {
+    "prompt_tokens": 3023,
+    "total_tokens": 4033,
+    "completion_tokens": 1010
+  },
+  "segment_token_counts": {
+    "reasoning": 1,
+    "final_json": 1007,
+    "prefill": 68
+  },
+  "segment_count_note": "Each text segment is tokenized independently; these are not API reasoning-token accounting.",
+  "reasoning_chars": 1,
+  "selected_traits": [
+    "/core_belief/young_domain",
+    "/intermediate_beliefs/rule",
+    "/coping_strategies/1",
+    "/coping_strategies/0",
+    "/intermediate_beliefs/assumption_negative"
+  ]
+}

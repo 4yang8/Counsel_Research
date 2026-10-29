@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "008_h2",
+  "profile": "008",
+  "history_title": "아내가 속마음을 물을 때",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "중간",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 12.32,
+  "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 내담자는 평생 감정을 억제하며 '흔들림 없는 모습'을 유지해 온 사람이며(profile), 현재 상담자에 대한 신뢰가 낮은 상태(states)입니다. 아내에게 \"대답을 못 한다고 해서 중요하지 않은 건 아니다\"라는 속마음을 전하는 것은 내담자의 핵심 신념인 '감정 표현은 위험하고 수치스럽다'는 생각과 정면으로 충돌하는 행동입니다. 또한, 자기개방 의향이 중간 수준인 상태에서 상담실 밖(실제 관계)으로의 즉각적인 적용을 제안받자, 준비되지 않은 변화를 요구받는다는 압박감을 느꼈을 가능성이 큽니다.\n- 실제 발화: (잠시 침묵하다가 헛기침을 하며) ... 그걸 지금 바로 하라고 하시니 좀 당황스럽네요. 여기서는 어떻게든 말이 나왔지만, 아내 앞에서는 또 말이 안 나올 것 같습니다. 갑자기 그런 말을 하면 아내가 오히려 더 이상하게 생각하지 않을까요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2479,
+    "completion_tokens": 239,
+    "total_tokens": 2718
+  },
+  "main_usage": {
+    "prompt_tokens": 2479,
+    "completion_tokens": 239,
+    "total_tokens": 2718
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/86f4896344644e65b5005fd506bbaaec/20261008T101520_739916Z_52e3777a.json",
+  "error": null
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "A_question_first",
+    "label": "현재 질문에서 출발",
+    "hypothesis": "현재 질문·제안의 성격을 먼저 고정하면 관련성 기준을 다시 정의하는 왕복이 줄고 선택 근거가 현재 장면에 연결될 수 있다.",
+    "prefill": "I will first identify what the counselor is asking and how the client is being invited to participate. I will then select personal traits relevant to understanding that situation, connect any supporting background, and explain each selection using the current context. Once these evidence links are clear, I can return the selections as JSON.",
+    "status": "complete",
+    "error": null,
+    "elapsed_seconds": 17.66,
+    "usage": {
+      "prompt_tokens": 3015,
+      "total_tokens": 3709,
+      "completion_tokens": 694
+    },
+    "segment_token_counts": {
+      "reasoning": 1,
+      "final_json": 691,
+      "prefill": 60
+    },
+    "segment_count_note": "Each text segment is tokenized independently; these are not API reasoning-token accounting.",
+    "reasoning_chars": 1,
+    "selected_traits": [
+      "/coping_strategies/1",
+      "/intermediate_beliefs/attitude",
+      "/coping_strategies/0"
+    ]
+  },
+  {
+    "id": "B_evidence_links",
+    "label": "근거와 해석 구분",
+    "hypothesis": "현재 대화·기존 내면·프로필 원문을 구분하며 연결하면 라우팅이 이번 감정과 행동을 확정하는 단계로 확장되는 현상을 줄일 수 있다.",
+    "prefill": "I will build each selection from an evidence link: a detail in the current conversation or existing inner note, a relevant trait in the profile, and any background that helps explain the connection. I will distinguish what the supplied records establish from my interpretation of their relevance. My conclusion will explain which personal information is useful for understanding this moment and why.",
+    "status": "complete",
+    "error": null,
+    "elapsed_seconds": 25.16,
+    "usage": {
+      "prompt_tokens": 3023,
+      "total_tokens": 4033,
+      "completion_tokens": 1010
+    },
+    "segment_token_counts": {
+      "reasoning": 1,
+      "final_json": 1007,
+      "prefill": 68
+    },
+    "segment_count_note": "Each text segment is tokenized independently; these are not API reasoning-token accounting.",
+    "reasoning_chars": 1,
+    "selected_traits": [
+      "/core_belief/young_domain",
+      "/intermediate_beliefs/rule",
+      "/coping_strategies/1",
+      "/coping_strategies/0",
+      "/intermediate_beliefs/assumption_negative"
+    ]
+  },
+  {
+    "id": "C_information_contribution",
+    "label": "정보의 기여도 검토",
+    "hypothesis": "각 특성의 구체적인 기여도를 따지면 단순 주제 유사성으로 모두 선택하거나 배경 중복을 없애려고 불필요하게 조합을 바꾸는 현상이 줄어들 수 있다.",
+    "prefill": "I will consider what each candidate contributes to understanding the client's perspective on this exchange. For each relevant trait, I will identify the specific belief, expectation, or coping tendency it clarifies and the supplied evidence for that connection. Related traits may contribute different aspects, and a shared background may support several connections. I will resolve uncertain links, then return the supported selections.",
+    "status": "complete",
+    "error": null,
+    "elapsed_seconds": 27.72,
+    "usage": {
+      "prompt_tokens": 3028,
+      "total_tokens": 4143,
+      "completion_tokens": 1115
+    },
+    "segment_token_counts": {
+      "reasoning": 1,
+      "final_json": 1112,
+      "prefill": 73
+    },
+    "segment_count_note": "Each text segment is tokenized independently; these are not API reasoning-token accounting.",
+    "reasoning_chars": 1,
+    "selected_traits": [
+      "/core_belief/core_belief_statement",
+      "/intermediate_beliefs/attitude",
+      "/coping_strategies/1",
+      "/coping_strategies/0"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "pair": 2,
+  "format": "md",
+  "levels": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "중간"
+  },
+  "status": "failed",
+  "response": "",
+  "finish_reason": null,
+  "error": "<urlopen error [Errno 1] Operation not permitted>",
+  "tool_calls": [],
+  "tool_errors": 0,
+  "model_calls": 1,
+  "first_input_tokens": null,
+  "inspection_tokens": null,
+  "usage": null,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_02/md/sessions/0905d35f1e714199903d8440bb9b2bf2/20261007T153438_898261Z_0a786b6f.json",
+  "format_only_verified": true
+}

@@ -1,0 +1,22 @@
+{
+  "version": "Q2a_prefill_test",
+  "source_log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/sessions/paired/logs/261022_183930/20261022T095131_512304Z_8b0af988.json",
+  "checkpoint": "profile gold_001, second client turn before appraisal",
+  "system_source": "versions/Q2a_prefill_test/trait_router.md (current snapshot in input.json)",
+  "input_sha256": "4541b4d8feab9d38f573d6d928da421f7d61b802a37c5d0ed34c2d90fe7a2393",
+  "production_prefill_sha256": "bfd18aadf1fac1c72c14dda8059a6ec3484ab09977b9eff4842208317181bb00",
+  "design": "3 prefill conditions, one router call each, same input, current system/schema, fixed seed 42, temperature 0.7, top_p 0.95, max_tokens 8192, no thinking_token_budget. No main agent or note writes.",
+  "criteria": [
+    "current question and existing inner experience identified",
+    "concrete supplied trait/background evidence for selections",
+    "routing relevance distinguished from deciding new appraisal/behavior",
+    "new evidence or unresolved issue motivates reconsideration",
+    "supported final choices, no invented facts or unjustified certainty",
+    "schema validation and complete response"
+  ],
+  "limitations": [
+    "single checkpoint with prior generated inner note retained, including its uncertainty/inconsistency",
+    "one sample per wording, fixed seed is not a causal guarantee",
+    "downstream response quality not tested"
+  ]
+}

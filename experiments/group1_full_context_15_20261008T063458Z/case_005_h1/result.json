@@ -1,0 +1,26 @@
+{
+  "case_id": "005_h1",
+  "profile": "005",
+  "history_title": "회사에서 권한 상담",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "높음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 16.24,
+  "response": "- 느낌: [3: 부담·압박을 느낌, 4: 오해받음]\n- 판단 이유: 내담자는 '결과로 모든 것을 증명하면 된다'는 강한 신념과 특권의식을 가지고 있으며, 실적을 최우선 가치로 둡니다(profile). 상담자가 실적의 중요성을 언급하며 공감하는 척했지만, 결국 다시 '팀원이 문제를 제기한 이유'를 살펴보자고 제안한 것은 내담자 입장에서 자신의 정당성을 부정하고 잘못을 캐내려는 압박(taxonomy 3)으로 느껴집니다. 또한, 내담자는 팀원을 '기강 잡아야 할 나약한 대상'으로 보는데, 그들의 이유를 살피자는 제안은 상담자가 여전히 자신의 입장을 충분히 이해하지 못하고 상대방의 관점에 치우쳐 있다고 느껴 오해받고 있다는 기분(taxonomy 4)이 듭니다. trust 레벨이 낮아 상담자의 제안을 경계하는 상태가 반영되었습니다.\n- 실제 발화: 아니, 결국 또 그쪽 이야기로 돌아가시네요. 실적이 중요하다는 건 그냥 입에 발린 소리였습니까? 팀원들이 왜 문제를 제기했는지가 중요한 게 아니라, 그들이 내놓은 결과물이 얼마나 형편없었는지를 먼저 보셔야죠. 제가 여기서 그 나약한 애들 변명까지 들어줘야 합니까?",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3930,
+    "completion_tokens": 306,
+    "total_tokens": 4236
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/315c47abbbf64c2fadc5747d1a9b4e08/20261008T063828_312622Z_579768fa.json",
+  "error": null,
+  "reference_client_not_sent": "그걸 듣는 게 도움이 된다면 듣죠. 다만 여기서도 제 입장은 빼고 직원 쪽 이야기만 하지는 않았으면 합니다."
+}

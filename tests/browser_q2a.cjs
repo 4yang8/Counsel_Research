@@ -1,0 +1,47 @@
+const puppeteer=require(process.env.PUPPETEER_MODULE || '/home2/sjyang114/.npm/_npx/d62b6517736c1e35/node_modules/puppeteer');
+const {spawn}=require('child_process'),path=require('path'),assert=require('node:assert/strict');
+(async()=>{
+ const fixture=spawn(process.env.GEMMA_TEST_PYTHON || (process.env.COUNSELING_PYTHON || process.env.GEMMA_TEST_PYTHON || 'python3'),[path.join(__dirname,'test_lab.py'),'--serve','--p1-slow','--prompt-editing']);let browser;fixture.stderr.on('data',()=>{});
+ try{
+  const url=await new Promise((resolve,reject)=>{fixture.stdout.once('data',d=>resolve(d.toString().trim()));fixture.once('exit',c=>reject(Error('fixture '+c)));});
+  browser=await puppeteer.launch({headless:true,timeout:60000,args:['--no-sandbox','--disable-dev-shm-usage']});const page=await browser.newPage(),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));await page.setViewport({width:1500,height:1000});await page.goto(url+'/lab');
+  await page.waitForFunction(()=>document.querySelector('#experiment-version option[value=Q2a]') && !document.querySelector('#experiment-version').disabled);
+  await page.select('#experiment-version','Q2a');
+  await page.waitForFunction(()=>document.querySelector('#tool-enabled-update_client_states') && document.querySelector('#client-subagent-select').options.length===1);
+  for(const name of ['stage_client_update','commit_client_utterance','select_client_states','update_client_states'])assert(await page.$eval('#tool-enabled-'+name,e=>e.checked && e.disabled));
+  assert.equal(await page.$eval('#client-subagent-select',e=>e.options[0].value),'trait_router');
+  await page.click('#client-notes-tab');await page.waitForFunction(()=>document.querySelector('#client-notes-body').textContent.includes('(내용 없음)'));
+  await page.evaluate(()=>{document.querySelector('#manual-counselor').checked=true;document.querySelector('#manual-counselor').dispatchEvent(new Event('change'));});
+  await page.click('#paired-next');
+  await page.waitForFunction(()=>document.querySelector('#paired-dialogue-count').textContent.includes('새로 생성 1개') && !document.querySelector('#paired-manual-send').disabled,{timeout:30000});
+  const transcript=await page.$eval('#paired-transcript',e=>e.textContent);
+  for(const text of ['Q2a_REASON_0','Q2a_REASON_1','Q2a_REASON_2','Q2a_REASON_3','commit_client_utterance','select_client_states','update_client_states'])assert(transcript.includes(text),text);
+  assert(!transcript.includes('Q2_STATE_ROUTER_REASON'));assert(!transcript.includes('Q2_STATE_UPDATER_REASON'));
+  const speech=await page.$$eval('#paired-transcript .speech-text',els=>els.map(e=>e.textContent));assert.equal(speech.at(-1),'조금 안심되지만 자세한 이야기는 아직 부담스러워요.');
+  await page.click('#client-notes-tab');await page.waitForFunction(()=>document.querySelector('#client-notes-turn').options.length===2);
+  assert((await page.$eval('#client-notes-path',e=>e.textContent)).includes('/Q2a/'));
+  assert((await page.$eval('#client-notes-body',e=>e.textContent)).includes('## 현재 내면'));
+  assert((await page.$eval('#client-notes-body',e=>e.textContent)).includes('지금은 자세한 이야기를 보류하고 싶다'));
+  await page.select('#client-notes-mode','diff');assert((await page.$eval('#client-notes-body',e=>e.textContent)).includes('변경 근거:'));
+  assert((await page.$eval('#client-notes-body',e=>e.textContent)).includes('현재 내면 · 말하지 않은 속마음과 현재 바라는 것'));
+  await page.screenshot({path:'/tmp/q2a_notes.png'});
+  await page.$$eval('#paired-transcript .paired-speech-button',els=>els.findLast(e=>e.textContent.includes(' · 생성 ')).click());
+  await page.click('#raw-tab');await page.select('#agent-picker','main');
+  const raw=JSON.parse(await page.$eval('#raw-json',e=>e.textContent));
+  assert.equal(raw.messages.at(-1).role,'tool');
+  assert.equal(raw.messages.filter(m=>m.role==='assistant').length,4);
+  assert.equal(raw.messages.filter(m=>m.role==='tool').length,4);
+  assert.equal(raw.messages.filter(m=>m.reasoning).length,4);
+  await page.click('#workflow-tab');assert((await page.$$('.wf-node')).length>4);
+  const saved=await page.evaluate(()=>api('/api/paired/session?session_id='+Paired.sessionId));assert.equal(saved.client_version,'Q2a');
+  await page.reload();await page.waitForFunction(()=>document.querySelector('#paired-status').textContent.includes('불러옴'));
+  await page.click('#client-notes-tab');await page.waitForFunction(()=>document.querySelector('#client-notes-turn').options.length===2);
+  assert((await page.$eval('#client-notes-body',e=>e.textContent)).includes('선택을 존중받았다고'));
+  await page.click('#session-notes-tab');await page.waitForFunction(()=>document.querySelector('#session-notes-body').textContent.includes('## 현재 내면'));
+  assert((await page.$eval('#session-notes-body',e=>e.textContent)).includes('지금은 자세한 이야기를 보류하고 싶다'));
+  await page.screenshot({path:'/tmp/q2a_unified_notes.png'});
+  await page.setViewport({width:390,height:900});assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2)));
+  assert.deepEqual(errors,[]);console.log('PASS: Q2a tools, same-main reasoning, no state subagents, raw tool-ending context, notes/diff, workflow, reload, mobile');
+ }finally{if(browser)await browser.close();fixture.kill();}
+})().catch(error=>{console.error(error);process.exit(1);});

@@ -1,0 +1,26 @@
+{
+  "case_id": "002_h3",
+  "profile": "002",
+  "history_title": "내가 원하는 것을 묻는 질문",
+  "states": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 16.89,
+  "response": "- **선택한 느낌**: 1(이해받음), 2(선택권을 존중받음)\n\n- **판단 이유**: \n  - 내담자는 평생 '장녀'이자 '책임간호사'로서 타인의 욕구를 우선시하며 살아왔고, 상담 상황에서도 \"잘 말씀드려야 할 것 같았다\"며 무의식적으로 상담자의 기대에 부응하려는 압박감을 느끼고 있었습니다(profile, dialogue). \n  - 상담자가 \"아무것도 결정하지 않고\", \"잠깐 머물러 보자\"고 제안한 것은, 정답을 내놓아야 한다는 강박과 해야 할 일들의 목록에 짓눌려 있던 내담자의 상태를 정확히 짚어준 것입니다(dialogue). \n  - 이는 내담자가 느끼는 심리적 부담을 덜어주어 '이해받았다'고 느끼게 하며, 억지로 답을 찾지 않아도 된다는 '선택권과 속도의 존중'으로 다가옵니다. \n  - 상담자에 대한 신뢰(trust)가 높은 상태이기에, 이러한 제안을 안전하게 받아들이고 안도감을 느낍니다(states).\n\n- **내담자 발화**: \"...그렇게 말씀해 주시니까 마음이 좀 놓이네요. 사실 계속 '빨리 답을 찾아야 한다'고 생각해서 마음이 조급했거든요. 그냥... 잠시만 이렇게 있어도 괜찮은 거겠죠?\"",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3748,
+    "completion_tokens": 322,
+    "total_tokens": 4070
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/1029a4e2f2634c66b26a1c2c319e9628/20261008T063811_398151Z_d984fb36.json",
+  "error": null,
+  "reference_client_not_sent": "그러고 싶어요. 다만 말로 쉬고 싶다고 하는 것부터 괜히 핑계 대는 기분이 들어서, 조금 어색하네요."
+}

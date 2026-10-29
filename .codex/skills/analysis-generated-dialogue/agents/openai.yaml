@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generated Dialogue Analysis"
+  short_description: "버전별 생성 대화 batch를 진단하고 원인을 추적합니다"
+  default_prompt: "Use $analysis-generated-dialogue to analyze the requested version generated-dialogue batch and trace anomalies to logs, prompts, configs, and code."

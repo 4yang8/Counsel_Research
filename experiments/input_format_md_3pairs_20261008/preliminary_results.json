@@ -1,0 +1,152 @@
+[
+  {
+    "pair": 1,
+    "format": "json",
+    "levels": {
+      "trust": "낮음",
+      "disclosure": "낮음",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "response": "- **선택한 느낌**: [이해받음]\n- **판단 이유**: 이전 턴에서 상담자가 성급하게 안심시키려 했던 점을 인정하고 사과하며 내담자의 복합적인 마음(준비 부족에 대한 인정 + 평가에 대한 걱정)을 정확히 짚어주었습니다. 이에 내담자는 \"선생님이 제 마음을 이해해주시는 것 같다\"며 신뢰와 개방 의향이 상승한 상태입니다. 이번 발화에서도 내담자의 감정을 수용(\"그렇게 느끼셨군요\")하며, 구체적인 내면의 생각으로 조심스럽게 안내하고 있어 내담자는 자신의 경험이 존중받고 이해받고 있다고 느낍니다.\n- **내담자 발화**: \"음... 처음에는 그냥 당황스러웠는데, 곧바로 '아, 망했다'라는 생각이 들었어요. 제가 당연히 알아야 할 건데 그걸 대답 못 하는 제 모습이 너무 한심해 보였거든요. 교수님이 저를 보실 때 '얘가 이걸 제대로 하고 있긴 한 건가'라고 생각하셨을 것 같아서... 그 생각만 계속 맴돌아요.\"",
+    "finish_reason": "stop",
+    "error": null,
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": 3194,
+    "inspection_tokens": 3194,
+    "usage": {
+      "prompt_tokens": 3194,
+      "completion_tokens": 251,
+      "total_tokens": 3445
+    },
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_01/json/sessions/b632ff5771b1439e905a94107c85f6b7/20261007T153501_903733Z_4021164e.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 1,
+    "format": "md",
+    "levels": {
+      "trust": "낮음",
+      "disclosure": "낮음",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "response": "- **느낌**: 이해받음\n- **판단 이유**: 상담자가 이전 턴(9번 발화)에서 성급하게 안심시키려 했던 점을 인정하고 내담자의 복합적인 마음(준비 부족에 대한 인정 + 평가에 대한 걱정)을 정확히 짚어주었습니다. 이에 내담자는 \"선생님이 제 마음을 이해해주시는 것 같다\"며 신뢰감을 보였고(10번 발화), 이어지는 이번 발화에서도 내담자의 감정을 수용하며 구체적인 경험을 천천히 탐색하려 하기에 '이해받음'을 느낍니다.\n- **실제 발화**: (조금 더 편안해진 목소리로) 음... 우선은 너무 당황스러웠어요. 제가 당연히 알아야 하는 건데, 머릿속이 갑자기 하얘지면서 '아, 여기서 막히면 안 되는데'라는 생각부터 들더라고요. 그러면서 동시에 교수님이 저를 한심하게 보고 계실 것 같다는 생각에 얼굴이 확 뜨거워졌어요.",
+    "finish_reason": "stop",
+    "error": null,
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": 2979,
+    "inspection_tokens": 2979,
+    "usage": {
+      "prompt_tokens": 2979,
+      "completion_tokens": 235,
+      "total_tokens": 3214
+    },
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_01/md/sessions/a4ee3ca1d6a34ec78681b42e26674bc5/20261007T153515_275406Z_cadca60a.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 2,
+    "format": "md",
+    "levels": {
+      "trust": "높음",
+      "disclosure": "낮음",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "response": "- **느낌**: 이해받음\n- **판단 이유**: 상담자가 이전 턴에서 성급하게 안심시키려 했던 것을 사과하고, 내담자가 느낀 '준비 부족'과 '평가에 대한 걱정'을 정확히 짚어주었습니다(대화 9번). 이에 내담자는 \"마음을 이해해주시는 것 같다\"며 신뢰를 표현한 상태입니다(대화 10번). 이번 발화에서도 내담자의 감정을 수용(\"그렇게 느끼셨군요\")하며, 구체적인 생각의 흐름을 조심스럽게 묻고 있어 내담자는 자신의 상황과 감정을 충분히 알아준다고 느낍니다.\n- **실제 발화**: \"음... 우선은 너무 당황스러웠어요. 교수님이 질문하셨을 때 바로 답이 안 나오는 그 짧은 정적이 정말 길게 느껴졌거든요. '아, 내가 이걸 왜 생각 못 했지?' 하는 생각과 동시에, 교수님이 저를 한심하게 보고 계실 것 같다는 생각이 제일 먼저 들었던 것 같아요.\"",
+    "finish_reason": "stop",
+    "error": null,
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": 2982,
+    "inspection_tokens": 2982,
+    "usage": {
+      "prompt_tokens": 2982,
+      "completion_tokens": 232,
+      "total_tokens": 3214
+    },
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_02/md/sessions/f4ffa02eada74eedbde40e8795327561/20261007T153527_381752Z_94bd74fc.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 2,
+    "format": "json",
+    "levels": {
+      "trust": "높음",
+      "disclosure": "낮음",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "response": "- **선택한 느낌**: 이해받음\n- **판단 이유**: 상담자가 이전 턴에서 성급하게 안심시키려 했던 것을 인정하고 내담자의 마음을 다시 정리해준 덕분에, 내담자는 \"선생님이 제 마음을 이해해주시는 것 같다\"며 신뢰(trust: 높음)를 보였습니다. 이번 발화에서도 내담자의 감정을 먼저 수용(\"그렇게 느끼셨군요\")하고 구체적인 경험을 묻고 있어, 내담자는 자신의 상태를 알아준다고 느끼며 대화를 이어갈 준비가 되었습니다.\n- **내담자 발화**: \"음... 처음엔 그냥 '아, 왜 이게 바로 안 나오지?' 싶었어요. 그런데 바로 다음에 '아, 교수님이 지금 나를 한심하게 보시겠다'는 생각이 확 들더라고요. 제가 당연히 알아야 할 건데 그걸 못 하는 모습이 너무 바보같이 느껴졌어요.\"",
+    "finish_reason": "stop",
+    "error": null,
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": 3198,
+    "inspection_tokens": 3198,
+    "usage": {
+      "prompt_tokens": 3198,
+      "completion_tokens": 200,
+      "total_tokens": 3398
+    },
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_02/json/sessions/9bdcce3e139542d4b4beaec77528a44c/20261007T153538_988459Z_fe124077.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 3,
+    "format": "json",
+    "levels": {
+      "trust": "높음",
+      "disclosure": "높음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "response": "- **선택한 느낌**: [이해받음]\n- **판단 이유**: 상담자가 \"그렇게 느끼셨군요\"라며 내담자의 이전 발화(준비 부족에 대한 인정과 걱정)를 수용해 주었고, 내담자가 신뢰와 개방 의향이 높아진 상태(trust: 높음, disclosure: 높음)에서 자신의 구체적인 경험을 더 깊이 탐색하도록 유도했기 때문에 이해받고 있다고 느낍니다.\n- **내담자 발화**: \"음... 처음에는 그냥 당황스러웠는데, 바로 다음에 '아, 내가 이걸 왜 설명 못 하고 있지?'라는 생각이 들었어요. 제가 제일 잘 알아야 하는 부분인데 거기서 막히니까, 갑자기 제가 너무 한심하게 느껴졌거든요. 교수님이 저를 보시는 시선이 순식간에 바뀌었을 것 같다는 생각도 들었고요.\"",
+    "finish_reason": "stop",
+    "error": null,
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": 3193,
+    "inspection_tokens": 3193,
+    "usage": {
+      "prompt_tokens": 3193,
+      "completion_tokens": 196,
+      "total_tokens": 3389
+    },
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_03/json/sessions/9b352f39cec5443682d22259b2a80207/20261007T153549_139778Z_d8d14513.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 3,
+    "format": "md",
+    "levels": {
+      "trust": "높음",
+      "disclosure": "높음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "response": "- **느낌**: 이해받음\n- **판단 이유**: 상담자가 이전 턴에서 성급하게 안심시키려 했던 점을 인정하고 내 마음을 다시 정리해준 것에 대해 \"믿고 더 이야기하고 싶다\"고 말한 상태입니다(Dialogue 10). 이번 발화에서도 \"그렇게 느끼셨군요\"라며 내 감정을 수용해주었고, 내가 계속 되짚고 있는 '답이 막혔던 순간'에 대해 구체적으로 묻고 있어 내 상황과 고민의 핵심을 이해하고 있다고 느낍니다.\n- **실제 발화**: 음... 처음엔 그냥 당황스러웠어요. 그런데 바로 그다음에 '아, 내가 이걸 왜 설명 못 하고 있지?'라는 생각이 들더라고요. 제가 직접 설계하고 진행한 실험인데, 정작 가장 기본적인 기준조차 제대로 말 못 하는 제 모습이 너무 한심하게 느껴졌어요.",
+    "finish_reason": "stop",
+    "error": null,
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": 2978,
+    "inspection_tokens": 2978,
+    "usage": {
+      "prompt_tokens": 2978,
+      "completion_tokens": 191,
+      "total_tokens": 3169
+    },
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_03/md/sessions/c13648e3402647c4b39fc97685bbfb92/20261007T153559_024454Z_6e1f7e04.json",
+    "format_only_verified": true
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "traits": [
+    {
+      "trait_id": "/core_belief/young_domain",
+      "content": "단절/거절"
+    },
+    {
+      "trait_id": "/core_belief/young_schema",
+      "content": "결함/수치심"
+    },
+    {
+      "trait_id": "/core_belief/core_belief_statement",
+      "content": "사람들이 진짜 나를 알면 결국 떠날 것이다."
+    },
+    {
+      "trait_id": "/core_belief/schema_definition",
+      "content": "자신이 근본적으로 결함이 있고 나쁘며, 드러나면 사랑받지 못할 것이라는 느낌."
+    },
+    {
+      "trait_id": "/intermediate_beliefs/attitude",
+      "content": "약점이나 부족한 모습, 진짜 감정을 들키는 것은 끔찍한 일이다"
+    },
+    {
+      "trait_id": "/intermediate_beliefs/rule",
+      "content": "나는 언제나 괜찮고 문제없는 모습만 보여줘야 하며, 절대 약한 모습을 드러내면 안 된다"
+    },
+    {
+      "trait_id": "/intermediate_beliefs/assumption_positive",
+      "content": "만약 내가 흠 없고 완벽하게 괜찮은 모습만 유지한다면, 사람들은 계속 나를 곁에 둘 것이다"
+    },
+    {
+      "trait_id": "/intermediate_beliefs/assumption_negative",
+      "content": "만약 내가 부족하거나 힘든 모습을 보인다면, 사람들은 실망해서 결국 나를 떠날 것이다"
+    },
+    {
+      "trait_id": "/coping_strategies/0",
+      "content": "관계에서 갈등이나 실수가 생긴 직후, 상대가 먼저 실망하거나 떠나기 전에 스스로 연락을 줄이거나 약속을 미루며 거리를 둠"
+    },
+    {
+      "trait_id": "/coping_strategies/1",
+      "content": "사람들 앞에서는 항상 밝고 문제없는 모습을 유지하려 애쓰며, 힘든 감정이나 고민은 누구에게도 털어놓지 않고 혼자 삭힘"
+    },
+    {
+      "trait_id": "/coping_strategies/2",
+      "content": "관계가 가까워져 진짜 모습을 보여줘야 할 상황이 다가오면, 대화 주제를 가볍게 돌리거나 바쁘다는 핑계로 만남 자체를 줄임"
+    },
+    {
+      "trait_id": "/coping_strategies/3",
+      "content": "실수나 갈등이 있으면 상대가 지적하기 전에 먼저 과도하게 사과하고 자신을 깎아내려, 상대의 실망을 미리 차단하려 함"
+    }
+  ],
+  "backgrounds": [
+    {
+      "background_id": "/childhood_data",
+      "kind": "성장 경험",
+      "content": "내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다. 형제와 비교당하는 일이 잦았고, 있는 그대로의 모습보다 '괜찮아 보이는 모습'을 보여야만 관심과 인정을 받을 수 있다는 경험이 반복되면서 '진짜 나'는 결함이 있고 감춰야 하는 존재라는 핵심 신념이 형성되었습니다."
+    },
+    {
+      "background_id": "/situations/0",
+      "kind": "상황 사례",
+      "content": {
+        "situation": "팀 회의 중 본인이 작성한 보고서에서 사실관계 오류가 발견되어 팀장이 지적함.",
+        "automatic_thought": "이제 팀장은 내가 무능하다는 걸 알아챘어. 내 진짜 실력, 진짜 부족한 모습이 들통난 거야.",
+        "emotion": "수치심, 불안",
+        "physiological_response": "얼굴과 귀가 화끈거리고 손끝이 차가워지며 목소리가 미세하게 떨림",
+        "behavior": "곧바로 필요 이상으로 사과하며 자신의 능력 부족을 스스로 강조하는 말을 반복하고, 회의가 끝난 뒤 자리로 돌아와 아무와도 대화하지 않고 모니터만 응시함"
+      }
+    },
+    {
+      "background_id": "/situations/1",
+      "kind": "상황 사례",
+      "content": {
+        "situation": "연인이 '요즘 네가 무슨 생각을 하는지 잘 모르겠다'며 서운함을 표현함.",
+        "automatic_thought": "결국 내 진짜 속마음, 부족한 부분을 눈치챈 거야. 이제 실망해서 헤어지자고 할 것이다.",
+        "emotion": "두려움, 외로움, 조급함",
+        "physiological_response": "명치 부근이 조여오고 속이 울렁거림",
+        "behavior": "대화를 서둘러 마무리하려 하고, 그날 밤 먼저 이별을 암시하는 말을 흘리며 상대의 반응을 시험함"
+      }
+    },
+    {
+      "background_id": "/situations/2",
+      "kind": "상황 사례",
+      "content": {
+        "situation": "친한 친구들끼리 모인 술자리 사진을 SNS에서 우연히 보게 됨. 본인은 그 모임에 초대받지 못함.",
+        "automatic_thought": "역시 다들 내 진짜 모습을 알고는 슬슬 멀어지려는 거야.",
+        "emotion": "소외감, 수치심",
+        "physiological_response": "명치가 답답하고 손에 힘이 풀림",
+        "behavior": "해당 게시물을 반복해서 들여다보지만 친구에게 직접 이유를 묻지 않고, 이후 그 친구들이 모임을 제안해도 선약이 있다는 핑계로 거절함"
+      }
+    },
+    {
+      "background_id": "/situations/3",
+      "kind": "상황 사례",
+      "content": {
+        "situation": "밤에 혼자 누워 있다가 예전에 사람들 앞에서 실수했던 순간들이 갑자기 떠오름.",
+        "automatic_thought": "그때 그 모습이 진짜 나였어. 사람들이 그 모습을 다 봤다면 지금처럼 나를 대하지 않았을 거야.",
+        "emotion": "수치심, 우울감",
+        "physiological_response": "몸이 무겁게 가라앉는 느낌과 함께 두통이 옴",
+        "behavior": "잠을 미루며 의미 없이 휴대폰 화면을 넘겨보고, 다음 날은 평소보다 더 밝고 괜찮은 척 행동함"
+      }
+    }
+  ]
+}

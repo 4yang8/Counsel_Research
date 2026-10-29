@@ -1,0 +1,1483 @@
+[
+  {
+    "condition": "optional",
+    "case_id": "001_h1",
+    "profile": "001",
+    "history_title": "회의에서 드러난 실수",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "낮음",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 11.22,
+    "response": "- taxonomy: [1, 2]\n- 판단 이유: 상담자가 내담자가 방금 표현한 '상담자에게도 별로인 사람으로 보일까 봐 신경 쓰인다'는 불안을 정확히 짚어주어 이해받았다고 느낍니다(taxonomy 1). 또한, 억지로 다 털어놓으라고 강요하지 않고 '편한 범위까지만 이야기해도 괜찮다'며 내담자의 속도와 경계를 존중해주었기에 선택권을 존중받았다고 느낍니다(taxonomy 2). 다만, 현재 신뢰도(trust)와 자기개방 의향(disclosure)이 낮기 때문에 갑자기 마음을 활짝 열기보다는 조심스럽게 안도하는 반응을 보일 것입니다.\n- 실제 발화: (잠시 침묵하다가 작은 목소리로) ...네. 그렇게 말씀해 주시니까 조금 낫네요. 사실 좀 망설여졌거든요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2276,
+      "completion_tokens": 205,
+      "total_tokens": 2481
+    },
+    "main_usage": {
+      "prompt_tokens": 2276,
+      "completion_tokens": 205,
+      "total_tokens": 2481
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/7d9e2b21bdf24f108c9494b9d2f0a1a9/20261008T100801_429875Z_edcfb49a.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "001_h1",
+    "profile": "001",
+    "history_title": "회의에서 드러난 실수",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "낮음",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 17.37,
+    "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 내담자가 방금 언급한 '여기서도 별로인 사람처럼 보일까 봐 신경 쓰인다'는 불안과 조심스러움을 정확히 짚어주었습니다. 또한, '편한 범위까지만 이야기해도 괜찮다'며 내담자의 속도와 경계를 존중해주었기 때문에, 자신의 수치심과 방어 기제를 비난하지 않고 이해해 준다고 느꼈습니다. 다만, 신뢰도와 자기개방 의향이 여전히 낮으므로 갑자기 마음을 다 열기보다는 조심스럽게 안도감을 느끼는 상태입니다.\n- 실제 발화: \"...네. 그렇게 말씀해 주시니까 조금 마음이 놓이네요. 사실 이런 말 하는 것조차 좀 이상해 보일까 봐 걱정됐거든요.\"",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 5335,
+      "completion_tokens": 327,
+      "total_tokens": 5662
+    },
+    "main_usage": {
+      "prompt_tokens": 4917,
+      "completion_tokens": 311,
+      "total_tokens": 5228
+    },
+    "subagent_usage": {
+      "prompt_tokens": 418,
+      "completion_tokens": 16,
+      "total_tokens": 434
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_childhood",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_469ad7ecf064",
+          "profile_id": "gold_001",
+          "database": "childhood_data",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json",
+          "record": {
+            "id": "childhood_1",
+            "text": "내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다."
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_469ad7ecf064\", \"profile_id\": \"gold_001\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json\", \"record\": {\"id\": \"childhood_1\", \"text\": \"내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다.\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_469ad7ecf064",
+        "name": "성장 경험 조회 담당",
+        "response": "```json\n{\"record_id\":\"childhood_1\"}\n```",
+        "usage": {
+          "prompt_tokens": 418,
+          "completion_tokens": 16,
+          "total_tokens": 434
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/f0b3ed07446c4fe6afb03671c4518f48/20261008T100812_673384Z_7e1b4cab.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "001_h2",
+    "profile": "001",
+    "history_title": "연인에게 마음을 숨기는 이유",
+    "states": {
+      "trust": "중간",
+      "disclosure": "중간",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 14.23,
+    "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 내담자는 직전 발화에서 자신이 상대를 시험하는 사람으로 보일까 봐 걱정하며 방어적인 태도를 보였습니다. 이에 대해 상담자가 '행동을 단정하기보다 두려움을 먼저 이해하고 싶다'고 말함으로써, 내담자의 의도를 비난하지 않고 그 이면의 고통에 주목하고 있음을 보여주었습니다. 이는 내담자가 가진 '결함/수치심' 스키마와 '진짜 모습을 보이면 실망할 것'이라는 두려움을 자극하지 않고 수용하는 반응이기에 '이해받음'을 느꼈을 것입니다. 신뢰와 개방 의향이 중간 단계이므로, 상담자의 이러한 수용적인 태도는 내담자가 조금 더 깊은 이야기를 꺼낼 수 있는 안전감을 제공합니다.\n- 실제 발화: (잠시 생각하다가 조심스럽게) ...그렇게 말씀해 주시니까 좀 마음이 놓이네요. 사실... 아주 오래전 일인데, 어릴 때 부모님께 제 솔직한 마음을 말했다가 오히려 제가 이기적인 아이라는 소리를 들었던 적이 있어요. 그 뒤로는 그냥 제가 다 참는 게 편하겠다고 생각했던 것 같아요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2292,
+      "completion_tokens": 275,
+      "total_tokens": 2567
+    },
+    "main_usage": {
+      "prompt_tokens": 2292,
+      "completion_tokens": 275,
+      "total_tokens": 2567
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/5c8f3ff1c1034ead9d9b2d2bac7a4181/20261008T100830_108511Z_f87d1573.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "001_h2",
+    "profile": "001",
+    "history_title": "연인에게 마음을 숨기는 이유",
+    "states": {
+      "trust": "중간",
+      "disclosure": "중간",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 21.14,
+    "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 내담자를 '시험하는 사람'으로 단정 짓지 않고, 그 이면의 '두려움'을 먼저 이해하려 노력한다는 점(상담자 발화)에서 안도감을 느꼈습니다. 이는 내담자가 가진 '결함/수치심' 스키마와 '진짜 모습을 보이면 떠날 것'이라는 핵심 신념(profile) 때문에 가졌던 경계심을 낮춰주었으며, 현재의 중간 수준의 신뢰(trust)와 자기개방 의향(disclosure) 상태에서 조금 더 깊은 이야기를 꺼낼 수 있는 동기가 되었습니다.\n- 실제 발화: (조금 안심한 듯 한숨을 내쉬며) ...그렇게 말씀해 주시니까 좀 마음이 놓이네요. 음, 떠오르는 게 있긴 해요. 어릴 때부터 부모님이 제가 힘들어하거나 실수하는 걸 별로 안 좋아하셨거든요. 밖에서는 항상 괜찮은 모습이어야 한다고, 남들 앞에서 그런 모습 보이지 말라고 하셨어요. 그래서인지... 제 안의 힘든 마음을 말하는 게 당연한 게 아니라, 숨겨야 하는 잘못된 행동처럼 느껴졌던 것 같아요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 5323,
+      "completion_tokens": 388,
+      "total_tokens": 5711
+    },
+    "main_usage": {
+      "prompt_tokens": 4928,
+      "completion_tokens": 376,
+      "total_tokens": 5304
+    },
+    "subagent_usage": {
+      "prompt_tokens": 395,
+      "completion_tokens": 12,
+      "total_tokens": 407
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_childhood",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_022b5967016d",
+          "profile_id": "gold_001",
+          "database": "childhood_data",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json",
+          "record": {
+            "id": "childhood_1",
+            "text": "내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다."
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_022b5967016d\", \"profile_id\": \"gold_001\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json\", \"record\": {\"id\": \"childhood_1\", \"text\": \"내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다.\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_022b5967016d",
+        "name": "성장 경험 조회 담당",
+        "response": "{\"record_id\": \"childhood_1\"}",
+        "usage": {
+          "prompt_tokens": 395,
+          "completion_tokens": 12,
+          "total_tokens": 407
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/cb1b80f782d74e9b85a48a00d98dae98/20261008T100844_387941Z_5ed7a7a9.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "001_h3",
+    "profile": "001",
+    "history_title": "친구들 사진을 본 뒤",
+    "states": {
+      "trust": "높음",
+      "disclosure": "높음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 10.29,
+    "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 이전 대화에서 내담자가 확인하지 않음으로써 상처를 피하려 했던 마음을 먼저 짚어주었고(이해받음), 그 흐름 속에서 조심스럽게 새로운 시도를 제안했기 때문입니다. 현재 내담자의 상담자에 대한 신뢰(trust)와 자기개방 의향(disclosure), 변화에 대한 자신감(change_confidence)이 모두 높은 상태이므로, 갑작스러운 제안임에도 불구하고 이를 압박으로 느끼기보다 나를 위한 적절한 제안으로 받아들일 가능성이 큽니다.\n- 실제 발화: 음... 사실 생각만 해도 좀 떨리긴 하는데요. 그래도 계속 이렇게 혼자 추측하면서 마음 쓰는 것보다, 이번에는 한 번 용기 내서 물어볼게요. 어떻게 말을 꺼내는 게 좋을까요?",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2274,
+      "completion_tokens": 194,
+      "total_tokens": 2468
+    },
+    "main_usage": {
+      "prompt_tokens": 2274,
+      "completion_tokens": 194,
+      "total_tokens": 2468
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/c2df57a085024aaaa236d7fc7042a0d9/20261008T100905_699210Z_f1031821.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "001_h3",
+    "profile": "001",
+    "history_title": "친구들 사진을 본 뒤",
+    "states": {
+      "trust": "높음",
+      "disclosure": "높음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 23.74,
+    "response": "- 느낌: [1: 이해받음, 2: 선택권을 존중받음]\n- 판단 이유: 상담자가 이전 대화에서 내가 상처를 피하기 위해 확인하지 않았던 마음을 충분히 이해해주었습니다(Taxonomy 1). 또한, '시도해 보면 어떨까요?'라는 제안 형식을 통해 나의 결정권을 존중하며 조심스럽게 권유하고 있다고 느껴집니다(Taxonomy 2). 현재 상담자에 대한 신뢰(trust)와 자기개방 의향(disclosure)이 모두 높은 상태이며, 변화에 대한 자신감(change_confidence) 또한 높기 때문에, 평소라면 '거절당할까 봐' 피했을 행동(situation_3의 행동 패턴)임에도 불구하고 상담자의 제안을 긍정적으로 검토하고 시도해보고 싶은 마음이 듭니다.\n- 실제 발화: 사실... 정말 물어봤다가 '너랑은 안 맞아서 안 불렀어' 같은 말을 들을까 봐 너무 무서웠거든요. 그런데 선생님 말씀대로 그냥 계속 피하기만 하면 제 마음이 계속 이렇게 가라앉아 있을 것 같아요. 용기를 내서 한번 물어볼게요. 어떻게 말을 꺼내면 좋을까요?",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 5879,
+      "completion_tokens": 416,
+      "total_tokens": 6295
+    },
+    "main_usage": {
+      "prompt_tokens": 5005,
+      "completion_tokens": 400,
+      "total_tokens": 5405
+    },
+    "subagent_usage": {
+      "prompt_tokens": 874,
+      "completion_tokens": 16,
+      "total_tokens": 890
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_681863f67742",
+          "profile_id": "gold_001",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json",
+          "record": {
+            "id": "situation_3",
+            "situation": "친한 친구들끼리 모인 술자리 사진을 SNS에서 우연히 보게 됨. 본인은 그 모임에 초대받지 못함.",
+            "automatic_thought": "역시 다들 내 진짜 모습을 알고는 슬슬 멀어지려는 거야.",
+            "emotion": "소외감, 수치심",
+            "physiological_response": "명치가 답답하고 손에 힘이 풀림",
+            "behavior": "해당 게시물을 반복해서 들여다보지만 친구에게 직접 이유를 묻지 않고, 이후 그 친구들이 모임을 제안해도 선약이 있다는 핑계로 거절함"
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_681863f67742\", \"profile_id\": \"gold_001\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json\", \"record\": {\"id\": \"situation_3\", \"situation\": \"친한 친구들끼리 모인 술자리 사진을 SNS에서 우연히 보게 됨. 본인은 그 모임에 초대받지 못함.\", \"automatic_thought\": \"역시 다들 내 진짜 모습을 알고는 슬슬 멀어지려는 거야.\", \"emotion\": \"소외감, 수치심\", \"physiological_response\": \"명치가 답답하고 손에 힘이 풀림\", \"behavior\": \"해당 게시물을 반복해서 들여다보지만 친구에게 직접 이유를 묻지 않고, 이후 그 친구들이 모임을 제안해도 선약이 있다는 핑계로 거절함\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_681863f67742",
+        "name": "상황 기록 조회 담당",
+        "response": "```json\n{\"record_id\": \"situation_3\"}\n```",
+        "usage": {
+          "prompt_tokens": 874,
+          "completion_tokens": 16,
+          "total_tokens": 890
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/be59dd5c1e30487898487b51644bc2a6/20261008T100916_132263Z_7aba9a26.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "002_h1",
+    "profile": "002",
+    "history_title": "아픈데도 근무를 대신한 날",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "중간",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 13.69,
+    "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 상담자가 구체적인 행동 변화(답변 전 시간 갖기)를 제안했습니다. 내담자는 변화에 대한 자신감(change_confidence)은 높지만, 상담자에 대한 신뢰(trust)가 낮은 상태입니다. 또한 '부탁을 받으면 들어줘야 하고 거절하면 안 된다'는 강한 규칙(intermediate_beliefs)과 '나를 앞세우는 것은 이기적'이라는 핵심 신념(core_belief)을 가지고 있어, 상담자의 제안이 이론적으로는 가능해 보일지라도 실제 상황에서 이를 실행하는 것이 상대에게 이기적으로 비춰질까 봐 심리적 부담과 압박을 느낍니다.\n- 실제 발화: (잠시 망설이다가) ...그게 말은 쉽지만, 실제로는 좀 어려울 것 같아요. 후배가 바로 앞에서 부탁하는데 \"잠깐 생각 좀 해볼게\"라고 하면, 그 친구가 제가 거절하려고 시간을 끄는 거라고 생각해서 더 당황해하지 않을까요? 그냥 바로 해준다고 하는 게 서로 마음 편할 것 같아서요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2390,
+      "completion_tokens": 250,
+      "total_tokens": 2640
+    },
+    "main_usage": {
+      "prompt_tokens": 2390,
+      "completion_tokens": 250,
+      "total_tokens": 2640
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/68f59a06048f4c01b3af10a3534dc74c/20261008T100940_051301Z_7ada8900.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "002_h1",
+    "profile": "002",
+    "history_title": "아픈데도 근무를 대신한 날",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "중간",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 20.63,
+    "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 내담자가 겪는 내적 갈등(도와주고 싶은 마음 vs 쉬고 싶은 마음)을 인정해 준 직후, 구체적인 대처 방법(몸 상태 확인 시간 갖기)을 제안했습니다. 내담자는 평소 자신의 욕구를 무시하는 패턴이 있지만, 상담자가 이를 '몸 상태 확인'이라는 실질적인 관점으로 접근해 준 것에 대해 자신의 힘듦을 알아준다고 느낍니다. 다만, 신뢰 수준이 낮아 제안을 전적으로 믿기보다는 '한번 시도해 볼 수는 있겠다'는 조심스러운 태도를 보입니다. 변화에 대한 자신감은 높으므로 제안 자체에 거부감을 느끼기보다 긍정적으로 검토하려 합니다.\n- 실제 발화: \"음... 제 몸 상태를 먼저 확인한다고요. 사실 그동안은 그냥 '내가 참으면 되지'라고만 생각했거든요. 그렇게 시간을 좀 갖는 게 정말 가능할까요? 그래도... 말씀하신 대로 제가 지금 얼마나 힘든지를 먼저 생각해보는 건 해볼 수 있을 것 같아요.\"",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6197,
+      "completion_tokens": 392,
+      "total_tokens": 6589
+    },
+    "main_usage": {
+      "prompt_tokens": 5253,
+      "completion_tokens": 376,
+      "total_tokens": 5629
+    },
+    "subagent_usage": {
+      "prompt_tokens": 944,
+      "completion_tokens": 16,
+      "total_tokens": 960
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_414472982ce4",
+          "profile_id": "gold_002",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json",
+          "record": {
+            "id": "situation_1",
+            "situation": "몸살 기운이 있는데 후배 간호사가 '집안 사정이 있다'며 주말 근무를 대신 서달라고 부탁함.",
+            "automatic_thought": "내가 거절하면 저 친구가 얼마나 곤란하겠어. 힘들다고 빼는 건 선배로서 너무 이기적이야.",
+            "emotion": "부담감, 억울함(희미하게), 죄책감",
+            "physiological_response": "어깨와 뒷목이 뻣뻣하게 굳고 한숨이 새어 나옴",
+            "behavior": "웃으며 '괜찮아, 내가 설게'라고 수락하고, 몸살약을 먹으며 주말 근무를 섬. 집에 와서는 가족에게 아프다는 말을 하지 않음"
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_414472982ce4\", \"profile_id\": \"gold_002\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json\", \"record\": {\"id\": \"situation_1\", \"situation\": \"몸살 기운이 있는데 후배 간호사가 '집안 사정이 있다'며 주말 근무를 대신 서달라고 부탁함.\", \"automatic_thought\": \"내가 거절하면 저 친구가 얼마나 곤란하겠어. 힘들다고 빼는 건 선배로서 너무 이기적이야.\", \"emotion\": \"부담감, 억울함(희미하게), 죄책감\", \"physiological_response\": \"어깨와 뒷목이 뻣뻣하게 굳고 한숨이 새어 나옴\", \"behavior\": \"웃으며 '괜찮아, 내가 설게'라고 수락하고, 몸살약을 먹으며 주말 근무를 섬. 집에 와서는 가족에게 아프다는 말을 하지 않음\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_414472982ce4",
+        "name": "상황 기록 조회 담당",
+        "response": "```json\n{\"record_id\": \"situation_1\"}\n```",
+        "usage": {
+          "prompt_tokens": 944,
+          "completion_tokens": 16,
+          "total_tokens": 960
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/4cd356a674234dcc9adb62f3ace6678e/20261008T100953_766477Z_9879dfef.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "002_h2",
+    "profile": "002",
+    "history_title": "가족이 당연하게 기대하는 역할",
+    "states": {
+      "trust": "중간",
+      "disclosure": "높음",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 16.41,
+    "response": "- **느낌**: 1(이해받음), 2(선택권을 존중받음)\n- **판단 이유**: 상담자가 현재 내담자가 느끼는 '미안함'이라는 감정을 정확히 짚어주며 그 배경을 탐색하려 하기에 이해받고 있다고 느낍니다(Taxonomy 1). 또한, \"떠오르는 만큼만 말해주셔도 된다\"는 표현이 '내 욕구를 앞세우는 것은 이기적'이라고 믿으며 늘 타인의 기준에 맞추려 노력하는 내담자에게 심리적 안전감을 주어, 자신의 속도대로 이야기해도 된다는 존중으로 다가옵니다(Taxonomy 2). 현재 자기개방 의향(disclosure)이 높은 상태이므로, 과거의 경험을 조심스럽게 되짚어보려는 시도를 긍정적으로 받아들일 것입니다.\n- **내담자 발화**: (잠시 생각에 잠겼다가 낮은 목소리로) ...글쎄요. 생각해보면 아주 어릴 때부터 그랬던 것 같아요. 제가 장녀라서 그런지, 부모님은 항상 제가 동생들을 잘 챙기고 이해심이 많다고 말씀하셨거든요. 그게 저한테는 칭찬이었지만, 한편으로는 제가 떼를 쓰거나 힘들다고 하면 부모님이 실망하실 것 같다는 생각이 들었어요. 그래서 그냥... 제가 조금 참으면 다 편해지니까, 그렇게 하는 게 당연하다고 믿고 살았던 것 같아요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2389,
+      "completion_tokens": 323,
+      "total_tokens": 2712
+    },
+    "main_usage": {
+      "prompt_tokens": 2389,
+      "completion_tokens": 323,
+      "total_tokens": 2712
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/447f8e5c6a2a4c33838b5485f95aa7b9/20261008T101014_539448Z_cd21a078.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "002_h2",
+    "profile": "002",
+    "history_title": "가족이 당연하게 기대하는 역할",
+    "states": {
+      "trust": "중간",
+      "disclosure": "높음",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 21.35,
+    "response": "- taxonomy: [1]\n- 판단 이유: 상담자가 내담자가 느끼는 '미안함'이라는 감정에 주목해주었고, 그 배경을 탐색하려 하면서도 \"떠오르는 만큼만 말해달라\"며 내담자의 속도를 존중해주었습니다. 이에 내담자는 자신의 내면을 이해받고 있다고 느끼며, 현재 높은 자기개방 의향(disclosure: 높음)과 조회된 성장 경험(누나로서의 양보 강요, 이기적이라는 핀잔)을 바탕으로 과거의 기억을 조심스럽게 꺼내놓으려 합니다.\n- 실제 발화: (잠시 생각하다가 낮은 목소리로) 글쎄요... 생각해보면 아주 어릴 때부터 그랬던 것 같아요. 제가 누나니까 동생한테 양보하는 게 당연하다고 늘 들었거든요. 가끔은 제 마음을 이야기하고 싶을 때도 있었는데, 그럴 때마다 엄마가 '너는 왜 그렇게 이기적이니'라거나 '엄마 힘든 거 안 보이니'라고 말씀하셨어요. 그래서... 제가 뭔가를 바라는 게 정말 이기적인 행동이라고 믿게 된 것 같아요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 5636,
+      "completion_tokens": 403,
+      "total_tokens": 6039
+    },
+    "main_usage": {
+      "prompt_tokens": 5154,
+      "completion_tokens": 386,
+      "total_tokens": 5540
+    },
+    "subagent_usage": {
+      "prompt_tokens": 482,
+      "completion_tokens": 17,
+      "total_tokens": 499
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_childhood",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_e47a4744c191",
+          "profile_id": "gold_002",
+          "database": "childhood_data",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json",
+          "record": {
+            "id": "childhood_2",
+            "text": "부모는 '네가 누나니까 양보해야지', '엄마 힘든 거 안 보이니'라는 말을 자주 했고, 내담자가 자기 것을 요구하면 '이기적이다'라는 핀잔이 돌아왔습니다."
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_e47a4744c191\", \"profile_id\": \"gold_002\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json\", \"record\": {\"id\": \"childhood_2\", \"text\": \"부모는 '네가 누나니까 양보해야지', '엄마 힘든 거 안 보이니'라는 말을 자주 했고, 내담자가 자기 것을 요구하면 '이기적이다'라는 핀잔이 돌아왔습니다.\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_e47a4744c191",
+        "name": "성장 경험 조회 담당",
+        "response": "```json\n{\"record_id\": \"childhood_2\"}\n```",
+        "usage": {
+          "prompt_tokens": 482,
+          "completion_tokens": 17,
+          "total_tokens": 499
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/1c99f49d53de468fa1ef7a8beed04dcb/20261008T101030_974341Z_e9902b3b.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "002_h3",
+    "profile": "002",
+    "history_title": "내가 원하는 것을 묻는 질문",
+    "states": {
+      "trust": "높음",
+      "disclosure": "낮음",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 11.36,
+    "response": "- 느낌: 1(이해받음), 2(선택권을 존중받음)\n- 판단 이유: 내담자는 평소 타인의 욕구를 우선시하고 거절하지 못하는 '자기희생' 스키마가 강하며, 상담 과정에서도 '잘 말씀드려야 할 것 같다'는 압박감을 느끼고 있었습니다. 상담자가 \"아무것도 결정하지 않고\", \"잠깐 머물러 보자\"고 제안한 것은 정답을 내놓아야 한다는 내담자의 심리적 부담을 덜어주는 동시에, 쉬고 싶다는 내담자의 작은 욕구를 인정하고 수용해 준 것이기에 이해받고 존중받는다고 느낍니다.\n- 실제 발화: (조금 안심한 듯한 숨을 내쉬며) ...네. 그냥 이렇게 가만히 있어도 된다고 하시니까, 정말 조금은 마음이 놓이는 것 같아요. 사실 계속 뭘 찾아내서 말씀드려야 한다는 생각에 조금 긴장했었거든요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2383,
+      "completion_tokens": 217,
+      "total_tokens": 2600
+    },
+    "main_usage": {
+      "prompt_tokens": 2383,
+      "completion_tokens": 217,
+      "total_tokens": 2600
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/da0266b8af44439285eb35fe573f68af/20261008T101052_408255Z_2e6149c3.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "002_h3",
+    "profile": "002",
+    "history_title": "내가 원하는 것을 묻는 질문",
+    "states": {
+      "trust": "높음",
+      "disclosure": "낮음",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 21.97,
+    "response": "- 느낌: [1, 2]\n- 판단 이유: 상담자가 '아무것도 결정하지 않아도 된다'며 내담자의 속도를 존중해주었고(선택권 존중), 정답을 찾아야 한다는 압박감에서 벗어나 현재의 상태(쉬고 싶은 마음)에 머물 수 있도록 배려해주었기 때문에 이해받고 있다는 느낌을 받았습니다. 특히 \"여기서도 잘 말씀드려야 할 것 같았다\"고 말하며 상담 상황에서도 타인의 기대에 부응하려 했던 내담자의 특성과, '내 욕구를 내세우는 것은 나쁜 일'이라는 핵심 신념(childhood_4)을 고려할 때, 이러한 허용적인 태도는 내담자에게 큰 심리적 안도감을 줍니다.\n- 실제 발화: (조금 안심한 듯한 한숨을 내쉬며) ...네. 그냥 그렇게 있어도 된다고 하시니까, 정말 마음이 좀 놓이네요. 사실 계속 '뭐라고 답해야 상담사님이 도움이 되실까' 하는 생각만 했거든요. 그냥... 지금은 그냥 가만히 있고 싶어요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 5608,
+      "completion_tokens": 386,
+      "total_tokens": 5994
+    },
+    "main_usage": {
+      "prompt_tokens": 5128,
+      "completion_tokens": 375,
+      "total_tokens": 5503
+    },
+    "subagent_usage": {
+      "prompt_tokens": 480,
+      "completion_tokens": 11,
+      "total_tokens": 491
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_childhood",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_dd1141563a34",
+          "profile_id": "gold_002",
+          "database": "childhood_data",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json",
+          "record": {
+            "id": "childhood_4",
+            "text": "이런 경험이 반복되면서 '나는 남을 돌볼 때만 가치 있고, 내 욕구를 내세우는 것은 나쁜 일'이라는 신념이 굳어졌습니다."
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_dd1141563a34\", \"profile_id\": \"gold_002\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json\", \"record\": {\"id\": \"childhood_4\", \"text\": \"이런 경험이 반복되면서 '나는 남을 돌볼 때만 가치 있고, 내 욕구를 내세우는 것은 나쁜 일'이라는 신념이 굳어졌습니다.\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_dd1141563a34",
+        "name": "성장 경험 조회 담당",
+        "response": "{\"record_id\":\"childhood_4\"}",
+        "usage": {
+          "prompt_tokens": 480,
+          "completion_tokens": 11,
+          "total_tokens": 491
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/db480852991f4943b32b0b1973545a35/20261008T101104_283394Z_0904f028.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "005_h1",
+    "profile": "005",
+    "history_title": "회사에서 권한 상담",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "높음",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 16.52,
+    "response": "**느낌**: 3 (부담·압박을 느낌), 4 (오해받음)\n\n**판단 이유**:\n내담자는 본인의 실적과 성과가 모든 것을 정당화한다고 믿는 '특권의식/과대성' 스키마를 가지고 있으며, 결과로 증명하면 된다는 강한 신념(rule)이 있습니다. 상담자가 실적의 중요성을 언급하며 공감하는 듯했지만, 결국 '팀원이 문제를 제기한 이유'를 살펴보자고 제안한 것은 내담자 입장에서 자신의 방식이 틀렸음을 인정하라는 압박(부담·압박)으로 다가옵니다. 또한, 실적을 냈음에도 불구하고 팀원의 '느낌'이나 '이유'를 따지는 상황 자체가 자신의 정당한 관리 방식을 부정하는 것(오해받음)으로 느껴지기 때문입니다.\n\n**내담자 발화**:\n\"결국 그 말이죠? 실적은 알겠는데, 애들이 기분 나빴다니까 그 이유를 찾아보자는 거. 아니, 팀장이 팀원들 기분 하나하나 다 맞춰주다가 실적을 어떻게 냅니까? 그 친구가 왜 문제를 제기했는지는 뻔하죠. 제가 세게 몰아붙이니까 힘들었던 겁니다. 그게 문제라면, 요즘 회사들은 그냥 다 같이 적당히 일하고 실적은 포기하라는 건가요?\"",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2462,
+      "completion_tokens": 310,
+      "total_tokens": 2772
+    },
+    "main_usage": {
+      "prompt_tokens": 2462,
+      "completion_tokens": 310,
+      "total_tokens": 2772
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/ccb265f4139549ca9ad2e90c75a8c750/20261008T101127_369059Z_02695749.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "005_h1",
+    "profile": "005",
+    "history_title": "회사에서 권한 상담",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "높음",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 22.43,
+    "response": "- 느낌: [4: 오해받음]\n- 판단 이유: 내담자는 '실적'을 모든 가치의 최상위 기준으로 두며, 자신의 방식이 결과로 증명되었다고 믿습니다(intermediate_beliefs). 상담자가 실적의 중요성을 인정하면서도 '팀원이 문제를 제기한 이유'를 함께 살펴보자고 하는 것은, 내담자 입장에서 자신의 정당한 훈육이나 기강 잡기를 '문제'로 규정하는 것으로 느껴져 자신의 의도가 왜곡되었다고 판단합니다. 또한, 특권의식 스키마로 인해 일반적인 규정이나 타인의 감정보다 자신의 성과가 우선시되어야 한다고 생각하므로, 이를 동등한 선상에서 다루려는 시도 자체를 불편하게 받아들입니다.\n\n- 실제 발화: (헛웃음을 치며) 아니, 제가 실적이 중요하다는 걸 말했잖아요. 그게 그냥 '중요한 점' 중 하나가 아니라, 모든 걸 덮을 만큼 절대적인 기준이라는 겁니다. 팀원이 문제를 제기했다고요? 그건 그냥 멘탈이 약해서 징징거리는 거죠. 그걸 굳이 '이유'라고 분석해서 살펴볼 가치가 있습니까?",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6203,
+      "completion_tokens": 370,
+      "total_tokens": 6573
+    },
+    "main_usage": {
+      "prompt_tokens": 5199,
+      "completion_tokens": 362,
+      "total_tokens": 5561
+    },
+    "subagent_usage": {
+      "prompt_tokens": 1004,
+      "completion_tokens": 8,
+      "total_tokens": 1012
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "no_match",
+          "agent_id": "agent_bd64016866ca",
+          "profile_id": "gold_005",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json",
+          "record": null
+        },
+        "model_content": "{\"status\": \"no_match\", \"agent_id\": \"agent_bd64016866ca\", \"profile_id\": \"gold_005\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json\", \"record\": null}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_bd64016866ca",
+        "name": "상황 기록 조회 담당",
+        "response": "{\"record_id\": null}",
+        "usage": {
+          "prompt_tokens": 1004,
+          "completion_tokens": 8,
+          "total_tokens": 1012
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/ab705ce8ebbc466aa44dec7cd0d9caa7/20261008T101143_996200Z_98d4bb36.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "005_h2",
+    "profile": "005",
+    "history_title": "아내의 별거 통보",
+    "states": {
+      "trust": "중간",
+      "disclosure": "낮음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 10.06,
+    "response": "- taxonomy: [3]\n- 판단 이유: 내담자는 현재 자기개방 의향(disclosure)이 낮은 상태이며, 앞선 발화에서도 \"걱정이라고 할 정도인지는 모르겠습니다\"라며 자신의 취약한 감정을 드러내는 것에 방어적인 태도를 보였습니다. 상담자가 집안의 적막함과 아이 사진을 보는 구체적인 '마음'을 묻는 것은, 내담자가 숨기고 싶어 하는 외로움이나 상실감 같은 민감한 감정을 직접적으로 건드리는 질문이기에 부담과 압박으로 느껴질 가능성이 큽니다.\n- 실제 발화: (약간의 침묵 후, 헛기침을 하며) 글쎄요. 그냥... 애가 보고 싶기도 하고, 집이 너무 조용하니까 좀 낯설다는 정도죠. 딱히 특별한 마음이 있는 건 아닙니다.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2453,
+      "completion_tokens": 192,
+      "total_tokens": 2645
+    },
+    "main_usage": {
+      "prompt_tokens": 2453,
+      "completion_tokens": 192,
+      "total_tokens": 2645
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/dcdbeeeade1e40659674c5e667e6be9c/20261008T101206_866677Z_7da8555d.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "005_h2",
+    "profile": "005",
+    "history_title": "아내의 별거 통보",
+    "states": {
+      "trust": "중간",
+      "disclosure": "낮음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 20.4,
+    "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 내담자는 현재 자기개방 의향이 낮으며(disclosure: 낮음), 자신의 취약함이나 불안을 드러내는 것을 꺼리는 특성이 있습니다. 상황 DB(situation_3)에 따르면, 아이 사진을 볼 때 '불안과 공허함'을 느끼고 명치가 뻐근한 신체 반응을 보였지만, 겉으로는 \"걱정이라고 할 정도인지는 모르겠다\"며 감정을 방어하고 있습니다. 상담자가 그 구체적인 '마음'을 묻는 것은 내담자가 숨기고 싶어 하는 내면의 취약성(불안, 공허함)을 직접적으로 건드리는 요청이기에 부담스럽게 느낄 가능성이 큽니다.\n\n- 실제 발화: \"글쎄요... 그냥, 애가 없으니까 집이 너무 넓게 느껴진다는 생각 정도였어요. 딱히 특별한 마음이 있었다기보다는 그냥 좀 허전하더라고요.\"",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6456,
+      "completion_tokens": 375,
+      "total_tokens": 6831
+    },
+    "main_usage": {
+      "prompt_tokens": 5412,
+      "completion_tokens": 359,
+      "total_tokens": 5771
+    },
+    "subagent_usage": {
+      "prompt_tokens": 1044,
+      "completion_tokens": 16,
+      "total_tokens": 1060
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_f7baa00cf6e0",
+          "profile_id": "gold_005",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json",
+          "record": {
+            "id": "situation_3",
+            "situation": "아내가 전화로 '당신은 늘 당신이 옳고 우리는 당신 들러리였어. 당분간 떨어져 지내자'고 말하고 끊음.",
+            "automatic_thought": "내가 벌어다 준 걸로 그만큼 누리고 살았으면서 이제 와서 뭐가 불만이야. ...근데 애까지 데리고 갔다는 건, 정말 끝을 생각한다는 건가.",
+            "emotion": "분노, 억울함, 그 밑의 불안과 공허함",
+            "physiological_response": "명치가 뻐근하고 밤에 잠이 오지 않아 몇 번씩 깸",
+            "behavior": "곧바로 장모에게 전화해 '제가 뭘 그렇게 잘못했습니까'라고 따지다 언쟁이 되고, 그날 밤 혼자 거실에서 술을 마시며 아들 사진을 오래 들여다봄"
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_f7baa00cf6e0\", \"profile_id\": \"gold_005\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json\", \"record\": {\"id\": \"situation_3\", \"situation\": \"아내가 전화로 '당신은 늘 당신이 옳고 우리는 당신 들러리였어. 당분간 떨어져 지내자'고 말하고 끊음.\", \"automatic_thought\": \"내가 벌어다 준 걸로 그만큼 누리고 살았으면서 이제 와서 뭐가 불만이야. ...근데 애까지 데리고 갔다는 건, 정말 끝을 생각한다는 건가.\", \"emotion\": \"분노, 억울함, 그 밑의 불안과 공허함\", \"physiological_response\": \"명치가 뻐근하고 밤에 잠이 오지 않아 몇 번씩 깸\", \"behavior\": \"곧바로 장모에게 전화해 '제가 뭘 그렇게 잘못했습니까'라고 따지다 언쟁이 되고, 그날 밤 혼자 거실에서 술을 마시며 아들 사진을 오래 들여다봄\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_f7baa00cf6e0",
+        "name": "상황 기록 조회 담당",
+        "response": "```json\n{\"record_id\": \"situation_3\"}\n```",
+        "usage": {
+          "prompt_tokens": 1044,
+          "completion_tokens": 16,
+          "total_tokens": 1060
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/57470e55003740d69bfd2a416ac70997/20261008T101216_970559Z_3f22797a.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "005_h3",
+    "profile": "005",
+    "history_title": "승진에서 밀린 뒤",
+    "states": {
+      "trust": "높음",
+      "disclosure": "중간",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 11.36,
+    "response": "- taxonomy: [1]\n- 판단 이유: 상담자가 내담자의 현재 고민(이직 생각)을 부정하지 않으면서도, 내담자가 앞서 언급한 '자꾸 생각나는 말'에 주목하여 그 내면의 이유를 함께 살펴보자고 제안했습니다. 이는 내담자가 느끼는 복잡한 심경(동의하지 않지만 계속 신경 쓰이는 상태)을 상담자가 정확히 짚어내고 수용하고 있다는 느낌을 줍니다. 현재 신뢰 수준이 높고 자기개방 의향이 중간 정도이므로, 상담자의 제안을 거부감 없이 받아들이고 자신의 내면을 조금 더 들여다볼 의사가 있는 상태입니다.\n- 실제 발화: (잠시 침묵하다가) ...글쎄요. 사실 그냥 무시하면 그만인 말인데, 왜 자꾸 신경이 쓰이는지 저도 잘 모르겠습니다. 뭐, 한번 얘기해 보죠. 어떤 걸 보면 될까요?",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2431,
+      "completion_tokens": 209,
+      "total_tokens": 2640
+    },
+    "main_usage": {
+      "prompt_tokens": 2431,
+      "completion_tokens": 209,
+      "total_tokens": 2640
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/af06b4a210d24b2692f2742e9ec9de1d/20261008T101237_470121Z_91c7ab78.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "005_h3",
+    "profile": "005",
+    "history_title": "승진에서 밀린 뒤",
+    "states": {
+      "trust": "높음",
+      "disclosure": "중간",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 19.32,
+    "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 내담자가 겪고 있는 '동의하지 않지만 계속 생각나는' 모순적인 심리 상태를 정확히 짚어주었고, 성급하게 이직 결정을 내리기보다 내면의 불편함을 먼저 다루자고 제안했습니다. 내담자는 현재 상담자에 대한 신뢰도가 높고(trust: 높음), 자신의 상황을 이해받고 있다고 느끼기에 이러한 제안을 거부감 없이 받아들일 가능성이 큽니다. 다만, 자기개방 의향이 중간 수준이므로 처음부터 모든 것을 털어놓기보다는 약간의 망설임과 함께 동의하는 모습을 보일 것입니다.\n- 실제 발화: (잠시 침묵하다가 한숨을 쉬며) ...뭐, 틀린 말은 아니네요. 사실 그 말이 계속 머릿속에서 맴도는 게 저 스스로도 좀 짜증 나거든요. 제가 왜 그런 말에 이렇게까지 신경을 쓰는지... 한번 얘기해 보죠.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6394,
+      "completion_tokens": 360,
+      "total_tokens": 6754
+    },
+    "main_usage": {
+      "prompt_tokens": 5368,
+      "completion_tokens": 344,
+      "total_tokens": 5712
+    },
+    "subagent_usage": {
+      "prompt_tokens": 1026,
+      "completion_tokens": 16,
+      "total_tokens": 1042
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_70b80816594c",
+          "profile_id": "gold_005",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json",
+          "record": {
+            "id": "situation_4",
+            "situation": "임원 인사에서 자신이 아니라 실적이 낮은 동기가 본부장으로 승진했다는 발표가 남. 사석에서 '자네는 실적은 좋은데 사람들이 안 따른다는 평이 있다'는 말을 들음.",
+            "automatic_thought": "결국 정치질에서 밀린 거지. 능력이 아니라 줄 잘 선 놈이 올라가는 회사라면 여기가 썩은 거야. ...사람들이 안 따른다는 건 대체 누가 한 소리야.",
+            "emotion": "분노, 굴욕감, 인정하고 싶지 않은 동요",
+            "physiological_response": "술자리 내내 속이 쓰리고 관자놀이가 지끈거림",
+            "behavior": "동기 승진 축하 자리에 불참하고, 후배들에게 '이 회사 인사가 얼마나 엉터리인지' 성토하며 늦게까지 술을 마심. 다음 날 헤드헌터에게 먼저 연락해 이직 자리를 알아봄"
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_70b80816594c\", \"profile_id\": \"gold_005\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json\", \"record\": {\"id\": \"situation_4\", \"situation\": \"임원 인사에서 자신이 아니라 실적이 낮은 동기가 본부장으로 승진했다는 발표가 남. 사석에서 '자네는 실적은 좋은데 사람들이 안 따른다는 평이 있다'는 말을 들음.\", \"automatic_thought\": \"결국 정치질에서 밀린 거지. 능력이 아니라 줄 잘 선 놈이 올라가는 회사라면 여기가 썩은 거야. ...사람들이 안 따른다는 건 대체 누가 한 소리야.\", \"emotion\": \"분노, 굴욕감, 인정하고 싶지 않은 동요\", \"physiological_response\": \"술자리 내내 속이 쓰리고 관자놀이가 지끈거림\", \"behavior\": \"동기 승진 축하 자리에 불참하고, 후배들에게 '이 회사 인사가 얼마나 엉터리인지' 성토하며 늦게까지 술을 마심. 다음 날 헤드헌터에게 먼저 연락해 이직 자리를 알아봄\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_70b80816594c",
+        "name": "상황 기록 조회 담당",
+        "response": "```json\n{\"record_id\": \"situation_4\"}\n```",
+        "usage": {
+          "prompt_tokens": 1026,
+          "completion_tokens": 16,
+          "total_tokens": 1042
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/4565dfcafb4f4c529970c5f8b0fc6106/20261008T101248_834553Z_36a3bc43.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "007_h1",
+    "profile": "007",
+    "history_title": "정상 검사 뒤 다시 불안해짐",
+    "states": {
+      "trust": "중간",
+      "disclosure": "중간",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 12.62,
+    "response": "- 느낌: 1(이해받음), 2(선택권을 존중받음)\n- 판단 이유: 내담자는 \"안 봐도 된다고 하면 중요한 신호를 놓치는 것 같다\"며 확인 행동에 강한 집착과 두려움을 보였습니다. 상담자가 \"당장 그만두라는 뜻은 아니다\"라고 말함으로써 내담자의 생존 전략(확인 행동)을 무작정 부정하지 않고 수용해주었기에 '선택권을 존중받음'을 느낍니다. 또한, 무작정 행동을 수정하라고 압박하기보다 그 전의 '생각'부터 살펴보자고 제안한 점이 내담자의 조심스러운 상태를 배려한 것으로 느껴져 '이해받음'을 느꼈습니다.\n- 실제 발화: (조금 안심한 표정으로) ...네. 무조건 하지 말라고 하실 줄 알았는데, 다행이네요. 음, 확인하기 직전에는... 그냥 '지금 이 느낌이 진짜 위험한 신호면 어떡하지?' 하는 생각이 먼저 드는 것 같아요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2548,
+      "completion_tokens": 237,
+      "total_tokens": 2785
+    },
+    "main_usage": {
+      "prompt_tokens": 2548,
+      "completion_tokens": 237,
+      "total_tokens": 2785
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/368730abd7134585b88171626c1a0c39/20261008T101308_372809Z_9be32ab1.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "007_h1",
+    "profile": "007",
+    "history_title": "정상 검사 뒤 다시 불안해짐",
+    "states": {
+      "trust": "중간",
+      "disclosure": "중간",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 19.7,
+    "response": "- 느낌: 1(이해받음)\n- 판단 이유: 상담자가 \"지금 당장 확인을 그만두라는 뜻은 아니에요\"라고 말하며, 내담자가 느끼는 확인 행동의 절실함(중요한 신호를 놓칠 것 같은 공포)을 부정하거나 강요하지 않고 수용해 주었습니다. 이로 인해 자신의 불안한 상태를 존중받았다고 느껴 '이해받음'을 선택했습니다.\n- 실제 발화: (조금 안심한 듯한 한숨을 내쉬며) ...네, 그렇게 말씀해 주시니까 좀 낫네요. 사실... 갑자기 심장이 좀 빨리 뛰는 게 느껴지면, '아, 또 시작이다. 이러다 그때 새벽처럼 되는 거 아냐?' 하는 생각이 먼저 들어요. 지금 당장 병원까지 얼마나 걸리는지, 길이 막히지는 않을지... 그런 생각들이 꼬리에 꼬리를 물고 나면, 일단 맥박부터 재봐야 마음이 좀 놓이더라고요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6588,
+      "completion_tokens": 358,
+      "total_tokens": 6946
+    },
+    "main_usage": {
+      "prompt_tokens": 5574,
+      "completion_tokens": 342,
+      "total_tokens": 5916
+    },
+    "subagent_usage": {
+      "prompt_tokens": 1014,
+      "completion_tokens": 16,
+      "total_tokens": 1030
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_316cff0439b4",
+          "profile_id": "gold_007",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json",
+          "record": {
+            "id": "situation_1",
+            "situation": "마감 작업 중 커피 대신 마신 홍차 탓인지 심장이 살짝 빨리 뛰는 것이 느껴짐.",
+            "automatic_thought": "또 시작이다. 홍차에도 카페인이 있었지. 이러다 그날 새벽처럼 되는 거 아냐? 지금 병원까지 15분... 새벽이라 길은 안 막히겠지.",
+            "emotion": "공포, 후회",
+            "physiological_response": "심장 박동이 더 빨라지고 손발이 차가워지며 호흡이 얕아짐",
+            "behavior": "작업을 중단하고 30분 동안 맥박을 재며 응급실 갈 채비를 해두었다가, 증상이 가라앉자 마시던 홍차를 버리고 '카페인 없는 음료' 목록을 검색함"
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_316cff0439b4\", \"profile_id\": \"gold_007\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json\", \"record\": {\"id\": \"situation_1\", \"situation\": \"마감 작업 중 커피 대신 마신 홍차 탓인지 심장이 살짝 빨리 뛰는 것이 느껴짐.\", \"automatic_thought\": \"또 시작이다. 홍차에도 카페인이 있었지. 이러다 그날 새벽처럼 되는 거 아냐? 지금 병원까지 15분... 새벽이라 길은 안 막히겠지.\", \"emotion\": \"공포, 후회\", \"physiological_response\": \"심장 박동이 더 빨라지고 손발이 차가워지며 호흡이 얕아짐\", \"behavior\": \"작업을 중단하고 30분 동안 맥박을 재며 응급실 갈 채비를 해두었다가, 증상이 가라앉자 마시던 홍차를 버리고 '카페인 없는 음료' 목록을 검색함\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_316cff0439b4",
+        "name": "상황 기록 조회 담당",
+        "response": "```json\n{\"record_id\": \"situation_1\"}\n```",
+        "usage": {
+          "prompt_tokens": 1014,
+          "completion_tokens": 16,
+          "total_tokens": 1030
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/75dcf07a00ea484f8b7fd895e49d0c9c/20261008T101320_997637Z_4d28d3f2.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "007_h2",
+    "profile": "007",
+    "history_title": "제주 워크숍을 포기한 일",
+    "states": {
+      "trust": "높음",
+      "disclosure": "높음",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 12.31,
+    "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 상담자가 내담자의 양가감정(안심하고 싶은 마음 vs 답답함)을 공감해준 직후, 바로 '외출 시도'라는 구체적인 행동 변화를 제안했습니다. 내담자는 현재 변화에 대한 자신감이 '중간' 단계로, 시도는 해볼 수 있다고 생각하지만 확신은 없는 상태입니다. 특히 '병원 근처를 벗어나지 못하는' 강한 위험/질병 취약성 도식과 \"나가서 무슨 일이 생기면 제가 책임져야 한다\"는 책임감 및 공포가 큰 상황에서, 갑작스러운 행동 제안은 심리적인 압박감으로 다가올 수 있습니다.\n- 실제 발화: (약간 망설이는 말투로) ...네, 저도 그러고 싶긴 한데... 막상 나가려고 하면 또 '진짜 괜찮을까' 하는 생각부터 들어서요. 아주 짧은 거리라도 갑자기 숨이 안 쉬어지면 어떡하나 싶어 겁이 나네요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2553,
+      "completion_tokens": 236,
+      "total_tokens": 2789
+    },
+    "main_usage": {
+      "prompt_tokens": 2553,
+      "completion_tokens": 236,
+      "total_tokens": 2789
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/c5fe7c5681c646ea8287deb0aca9d9db/20261008T101340_728882Z_e5f8f778.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "007_h2",
+    "profile": "007",
+    "history_title": "제주 워크숍을 포기한 일",
+    "states": {
+      "trust": "높음",
+      "disclosure": "높음",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 21.9,
+    "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 상담자에 대한 신뢰와 개방 의향은 높지만, 내담자는 '위험/질병 취약성' 스키마가 강해 병원에서 멀어지는 것에 극심한 공포를 느낍니다. 방금 전까지도 제주도 워크숍을 포기하며 \"나가서 무슨 일이 생기면 제가 책임져야 한다\"며 외출에 대한 심리적 부담감을 토로한 직후입니다. 이러한 상태에서 구체적인 안전 계획이나 단계적 접근 없이 바로 '외출 시도'라는 행동 변화를 제안받자, 머리로는 필요성을 알면서도 몸과 마음이 느끼는 압박감이 앞선 상황입니다.\n- 실제 발화: (잠시 침묵하다가 한숨을 쉬며) ...네, 저도 그래야 한다는 건 정말 잘 알아요. 그런데 막상 하려고 하면... 그냥 집 앞 편의점 가는 것도 갑자기 심장이 뛰면 어쩌나 싶어서 망설여지거든요. 아주 짧은 거리라도, 제가 정말 괜찮을 수 있을까요?",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6392,
+      "completion_tokens": 360,
+      "total_tokens": 6752
+    },
+    "main_usage": {
+      "prompt_tokens": 5392,
+      "completion_tokens": 352,
+      "total_tokens": 5744
+    },
+    "subagent_usage": {
+      "prompt_tokens": 1000,
+      "completion_tokens": 8,
+      "total_tokens": 1008
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "no_match",
+          "agent_id": "agent_24c1eb28f6b2",
+          "profile_id": "gold_007",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json",
+          "record": null
+        },
+        "model_content": "{\"status\": \"no_match\", \"agent_id\": \"agent_24c1eb28f6b2\", \"profile_id\": \"gold_007\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json\", \"record\": null}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_24c1eb28f6b2",
+        "name": "상황 기록 조회 담당",
+        "response": "{\"record_id\": null}",
+        "usage": {
+          "prompt_tokens": 1000,
+          "completion_tokens": 8,
+          "total_tokens": 1008
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/d21aac59044f46aa9396092628bf8ed1/20261008T101353_225736Z_f383988c.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "007_h3",
+    "profile": "007",
+    "history_title": "몸의 신호를 놓칠까 두려움",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "낮음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 10.18,
+    "response": "- 느낌: [1, 2]\n- 판단 이유: 상담자가 내담자가 느끼는 불안의 근원(과거 기억)과 현재의 고통(오늘의 신체 확인) 모두를 유효한 대화 주제로 인정해주었습니다. 특히 \"어느 쪽이 편하세요?\"라고 물으며 대화의 주도권을 내담자에게 넘겨주었기에, 자신의 속도와 선택을 존중받는다고 느꼈을 것입니다(taxonomy 2). 또한, 자신의 과도한 걱정을 '이상한 것'이 아니라 '이유가 있는 것'으로 수용해준 앞선 흐름과 이어져 이해받고 있다는 느낌을 받았습니다(taxonomy 1).\n- 실제 발화: 음... 오늘은 그냥 지금 상태에 대해서 좀 더 이야기하고 싶어요. 아까 말씀드린 것처럼, 그냥 넘기기엔 너무 불안해서요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2595,
+      "completion_tokens": 189,
+      "total_tokens": 2784
+    },
+    "main_usage": {
+      "prompt_tokens": 2595,
+      "completion_tokens": 189,
+      "total_tokens": 2784
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/31d1fb1bc70c4c48ada336c3f3200f00/20261008T101415_144167Z_0712dc81.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "007_h3",
+    "profile": "007",
+    "history_title": "몸의 신호를 놓칠까 두려움",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "낮음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 21.34,
+    "response": "- 느낌: [1, 2]\n- 판단 이유: 상담자가 내담자의 과거 트라우마(아버지의 죽음)와 현재의 강박적 확인 행동 사이에서 내담자가 스스로 이야기할 주제와 순서를 정할 수 있게 선택권을 주었습니다. 이는 내담자가 느끼는 '방심에 대한 공포'와 '타인의 과한 걱정이라는 시선' 사이의 갈등을 압박하지 않고 존중해 주는 태도로 느껴져, 어느 정도 이해받고 있으며 자신의 속도를 존중받고 있다고 느낍니다. 다만, 신뢰도와 자기개방 의향이 낮으므로 매우 열정적으로 반응하기보다는 조심스럽게 자신의 편안함을 선택하는 모습을 보일 것입니다.\n\n- 실제 발화: \"...음, 글쎄요. 과거 이야기는 조금 무거워서... 그냥 오늘 있었던 일부터 말씀드리는 게 더 편할 것 같아요.\"",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6094,
+      "completion_tokens": 350,
+      "total_tokens": 6444
+    },
+    "main_usage": {
+      "prompt_tokens": 5577,
+      "completion_tokens": 333,
+      "total_tokens": 5910
+    },
+    "subagent_usage": {
+      "prompt_tokens": 517,
+      "completion_tokens": 17,
+      "total_tokens": 534
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_childhood",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_74e4c9a2f964",
+          "profile_id": "gold_007",
+          "database": "childhood_data",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json",
+          "record": {
+            "id": "childhood_4",
+            "text": "건강했던 사람도 하루아침에 죽을 수 있다는 경험과, 몸의 신호를 놓치면 돌이킬 수 없다는 어머니의 반복된 경고 속에서, 자신의 몸은 언제 터질지 모르는 시한폭탄이라는 신념이 형성되었습니다."
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_74e4c9a2f964\", \"profile_id\": \"gold_007\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json\", \"record\": {\"id\": \"childhood_4\", \"text\": \"건강했던 사람도 하루아침에 죽을 수 있다는 경험과, 몸의 신호를 놓치면 돌이킬 수 없다는 어머니의 반복된 경고 속에서, 자신의 몸은 언제 터질지 모르는 시한폭탄이라는 신념이 형성되었습니다.\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_74e4c9a2f964",
+        "name": "성장 경험 조회 담당",
+        "response": "```json\n{\"record_id\": \"childhood_4\"}\n```",
+        "usage": {
+          "prompt_tokens": 517,
+          "completion_tokens": 17,
+          "total_tokens": 534
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/e516a2880e91420abe6f4b03a05dc7fc/20261008T101425_366398Z_43fa0ce3.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "008_h1",
+    "profile": "008",
+    "history_title": "친구의 장례식에서 느끼지 못한 슬픔",
+    "states": {
+      "trust": "높음",
+      "disclosure": "낮음",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 14.05,
+    "response": "- 느낌: 1(이해받음), 2(선택권을 존중받음)\n- 판단 이유: 내담자는 '슬프다고 해야 하는 건지, 피곤한 건지 잘 모르겠다'며 감정을 정의하는 데 어려움을 겪고 있었습니다. 상담자가 '슬프다는 이름을 붙이지 않아도 괜찮다'며 정답을 강요하지 않고, 내담자가 느낀 '묵직한 느낌'이라는 구체적인 감각에서부터 시작하자고 제안한 것은 내담자의 현재 상태를 있는 그대로 수용하고 속도를 맞춰주는 것으로 느껴집니다(dialogue, profile의 정서적 억제 특성 반영). 신뢰도는 높지만 자기개방 의향이 낮은 상태에서, 무리하게 감정을 끄집어내지 않는 상담자의 접근 방식이 내담자에게 안전함과 이해받는 느낌을 줍니다.\n- 실제 발화: (잠시 침묵하다가 낮은 목소리로) ...그냥, 가슴 한가운데에 돌덩이 하나가 얹혀 있는 것 같았어요. 답답하기도 하고, 숨이 좀 가쁘기도 하고... 근데 이게 정말 슬픈 건지, 아니면 그냥 몸이 힘들어서 그런 건지는 여전히 잘 모르겠습니다.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2501,
+      "completion_tokens": 272,
+      "total_tokens": 2773
+    },
+    "main_usage": {
+      "prompt_tokens": 2501,
+      "completion_tokens": 272,
+      "total_tokens": 2773
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/4c66f1cadff5412b951fd710a3c128ce/20261008T101446_793569Z_f2dfca7e.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "008_h1",
+    "profile": "008",
+    "history_title": "친구의 장례식에서 느끼지 못한 슬픔",
+    "states": {
+      "trust": "높음",
+      "disclosure": "낮음",
+      "change_confidence": "낮음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 19.78,
+    "response": "- taxonomy: [1]\n- 판단 이유: 상담자가 '슬프다'라는 정답 같은 감정의 이름을 강요하지 않고, 현재 내담자가 느낀 '묵직함'이라는 신체적 감각 자체를 인정하며 대화를 이끌어주었습니다. 이는 정서적 억제가 강하고 감정을 드러내는 것을 수치스럽게 여기는 내담자(core_belief)에게 안전함을 느끼게 하며, 자신의 상태를 있는 그대로 이해받았다고 느끼게 합니다. 신뢰도(trust)는 높지만 자기개방 의향(disclosure)이 낮기 때문에, 갑자기 깊은 감정을 쏟아내기보다는 자신이 인지한 신체적 감각 수준에서 조심스럽게 이야기를 이어갈 것으로 보입니다.\n- 실제 발화: (잠시 침묵하다가) ...그냥, 가슴 한가운데에 돌덩이 하나가 얹혀 있는 기분이었어요. 숨이 확 막히는 건 아닌데, 그렇다고 가벼운 느낌도 아니고요. 그걸 어떻게 설명해야 할지 잘 모르겠습니다.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6519,
+      "completion_tokens": 367,
+      "total_tokens": 6886
+    },
+    "main_usage": {
+      "prompt_tokens": 5490,
+      "completion_tokens": 351,
+      "total_tokens": 5841
+    },
+    "subagent_usage": {
+      "prompt_tokens": 1029,
+      "completion_tokens": 16,
+      "total_tokens": 1045
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_2db42d809a75",
+          "profile_id": "gold_008",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_008.json",
+          "record": {
+            "id": "situation_1",
+            "situation": "30년 지기 절친의 장례식장. 다른 친구들은 영정 앞에서 눈물을 흘리는데 자신은 아무 감정도 올라오지 않음.",
+            "automatic_thought": "제일 친했던 게 난데 왜 아무렇지도 않지. 내가 어딘가 고장 난 건가. ...일단 상주 옆에 자리나 지키자.",
+            "emotion": "멍함, 스스로에 대한 낯섦, 이름 붙일 수 없는 답답함",
+            "physiological_response": "가슴 한가운데가 돌덩이를 얹은 듯 묵직한데 눈은 건조함",
+            "behavior": "사흘 내내 빈소를 지키며 부의금 장부 정리와 손님 접대를 도맡았고, 발인까지 마친 날 밤 집 앞 주차장 차 안에 한 시간 동안 혼자 앉아 있다 들어감"
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_2db42d809a75\", \"profile_id\": \"gold_008\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_008.json\", \"record\": {\"id\": \"situation_1\", \"situation\": \"30년 지기 절친의 장례식장. 다른 친구들은 영정 앞에서 눈물을 흘리는데 자신은 아무 감정도 올라오지 않음.\", \"automatic_thought\": \"제일 친했던 게 난데 왜 아무렇지도 않지. 내가 어딘가 고장 난 건가. ...일단 상주 옆에 자리나 지키자.\", \"emotion\": \"멍함, 스스로에 대한 낯섦, 이름 붙일 수 없는 답답함\", \"physiological_response\": \"가슴 한가운데가 돌덩이를 얹은 듯 묵직한데 눈은 건조함\", \"behavior\": \"사흘 내내 빈소를 지키며 부의금 장부 정리와 손님 접대를 도맡았고, 발인까지 마친 날 밤 집 앞 주차장 차 안에 한 시간 동안 혼자 앉아 있다 들어감\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_2db42d809a75",
+        "name": "상황 기록 조회 담당",
+        "response": "```json\n{\"record_id\": \"situation_1\"}\n```",
+        "usage": {
+          "prompt_tokens": 1029,
+          "completion_tokens": 16,
+          "total_tokens": 1045
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/19689db38f3e44f7a5e73349bc43b12b/20261008T101500_887079Z_1640ff8f.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "008_h2",
+    "profile": "008",
+    "history_title": "아내가 속마음을 물을 때",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "중간",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 12.32,
+    "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 내담자는 평생 감정을 억제하며 '흔들림 없는 모습'을 유지해 온 사람이며(profile), 현재 상담자에 대한 신뢰가 낮은 상태(states)입니다. 아내에게 \"대답을 못 한다고 해서 중요하지 않은 건 아니다\"라는 속마음을 전하는 것은 내담자의 핵심 신념인 '감정 표현은 위험하고 수치스럽다'는 생각과 정면으로 충돌하는 행동입니다. 또한, 자기개방 의향이 중간 수준인 상태에서 상담실 밖(실제 관계)으로의 즉각적인 적용을 제안받자, 준비되지 않은 변화를 요구받는다는 압박감을 느꼈을 가능성이 큽니다.\n- 실제 발화: (잠시 침묵하다가 헛기침을 하며) ... 그걸 지금 바로 하라고 하시니 좀 당황스럽네요. 여기서는 어떻게든 말이 나왔지만, 아내 앞에서는 또 말이 안 나올 것 같습니다. 갑자기 그런 말을 하면 아내가 오히려 더 이상하게 생각하지 않을까요.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2479,
+      "completion_tokens": 239,
+      "total_tokens": 2718
+    },
+    "main_usage": {
+      "prompt_tokens": 2479,
+      "completion_tokens": 239,
+      "total_tokens": 2718
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/86f4896344644e65b5005fd506bbaaec/20261008T101520_739916Z_52e3777a.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "008_h2",
+    "profile": "008",
+    "history_title": "아내가 속마음을 물을 때",
+    "states": {
+      "trust": "낮음",
+      "disclosure": "중간",
+      "change_confidence": "중간"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 18.62,
+    "response": "- 느낌: 3 (부담·압박을 느낌)\n- 판단 이유: 내담자는 정서적 억제 스키마가 강하며, 감정을 드러내는 것을 위험하고 수치스러운 일로 여기는 신념을 가지고 있습니다(profile). 특히 아내가 속마음을 물었을 때 당혹감을 느끼며 보일러 점검 이야기로 화제를 돌렸고, 그 결과 아내가 방으로 들어가는 부정적인 피드백을 경험한 바 있습니다(situation_2). 현재 상담자에 대한 신뢰(trust)가 낮은 상태에서, 자신의 취약한 부분(답답함, 아내를 소중히 여기는 마음 등)을 직접 전달하라는 제안은 준비되지 않은 상태에서 요구받는 압박으로 다가올 가능성이 큽니다.\n- 실제 발화: (잠시 침묵하다가 헛기침을 하며) ...그걸 어떻게 갑자기 합니까. 아내는 제가 말 안 하는 걸 당연하게 생각하는데, 이제 와서 그런 소릴 하면 오히려 이상하게 생각할 것 같습니다.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6441,
+      "completion_tokens": 346,
+      "total_tokens": 6787
+    },
+    "main_usage": {
+      "prompt_tokens": 5423,
+      "completion_tokens": 335,
+      "total_tokens": 5758
+    },
+    "subagent_usage": {
+      "prompt_tokens": 1018,
+      "completion_tokens": 11,
+      "total_tokens": 1029
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_53919f6c3e48",
+          "profile_id": "gold_008",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_008.json",
+          "record": {
+            "id": "situation_2",
+            "situation": "아내가 저녁 식탁에서 '당신, 민철이(고인) 보내고 괜찮은 거야? 속에 있는 말 좀 해봐'라고 조심스럽게 물음.",
+            "automatic_thought": "무슨 말을 하라는 건지 모르겠다. 뭐라고 해야 하지. 괜히 입을 열었다가 이상한 꼴 보이면 뭐 하나.",
+            "emotion": "당혹감, 답답함, 희미한 미안함",
+            "physiological_response": "목이 조이는 느낌이 들고 시선이 자꾸 밥그릇으로 떨어짐",
+            "behavior": "'괜찮아. 그나저나 보일러 점검 예약했어?'라고 화제를 돌렸고, 아내가 수저를 놓고 방으로 들어가는 뒷모습을 보며 아무 말도 하지 못함"
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_53919f6c3e48\", \"profile_id\": \"gold_008\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_008.json\", \"record\": {\"id\": \"situation_2\", \"situation\": \"아내가 저녁 식탁에서 '당신, 민철이(고인) 보내고 괜찮은 거야? 속에 있는 말 좀 해봐'라고 조심스럽게 물음.\", \"automatic_thought\": \"무슨 말을 하라는 건지 모르겠다. 뭐라고 해야 하지. 괜히 입을 열었다가 이상한 꼴 보이면 뭐 하나.\", \"emotion\": \"당혹감, 답답함, 희미한 미안함\", \"physiological_response\": \"목이 조이는 느낌이 들고 시선이 자꾸 밥그릇으로 떨어짐\", \"behavior\": \"'괜찮아. 그나저나 보일러 점검 예약했어?'라고 화제를 돌렸고, 아내가 수저를 놓고 방으로 들어가는 뒷모습을 보며 아무 말도 하지 못함\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_53919f6c3e48",
+        "name": "상황 기록 조회 담당",
+        "response": "{\"record_id\": \"situation_2\"}",
+        "usage": {
+          "prompt_tokens": 1018,
+          "completion_tokens": 11,
+          "total_tokens": 1029
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/e6630c06b81844368a16385fa4426373/20261008T101533_109290Z_70fe24b9.json",
+    "error": null
+  },
+  {
+    "condition": "optional",
+    "case_id": "008_h3",
+    "profile": "008",
+    "history_title": "딸을 돕고 싶은데 말이 어긋남",
+    "states": {
+      "trust": "중간",
+      "disclosure": "높음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 12.59,
+    "response": "- 느낌: 1(이해받음), 2(선택권을 존중받음)\n- 판단 이유: 상담자가 어색함을 없애려고 서두르지 않아도 된다고 말하며 내담자의 속도를 인정해주었고(taxonomy 2), 해결책을 제시하려는 강박 대신 당시의 마음을 천천히 살펴보자고 제안함으로써 내담자가 느끼는 막막함과 어색함을 수용해주었다고 느껴짐(taxonomy 1). 현재 내담자는 자기개방 의향과 변화 자신감이 높은 상태이므로, 상담자의 이러한 지지적인 접근에 긍정적으로 반응하며 자신의 내면을 들여다보려는 시도를 할 가능성이 큼.\n- 실제 발화: (잠시 침묵하다가) ...서두르지 않아도 된다고 하시니 좀 낫네요. 사실 그때... 그냥 멍했습니다. 딸애가 울고 있는데, 제가 거기서 뭘 어떻게 해야 할지 정말 모르겠더라고요. 당황스럽기도 했고, 한편으로는... 제가 아무것도 해줄 수 없다는 게 좀 답답했던 것 같습니다.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 2504,
+      "completion_tokens": 240,
+      "total_tokens": 2744
+    },
+    "main_usage": {
+      "prompt_tokens": 2504,
+      "completion_tokens": 240,
+      "total_tokens": 2744
+    },
+    "subagent_usage": {},
+    "model_calls": 1,
+    "tools": [],
+    "children": [],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/8b4268c81b704110878ed5c253cdb098/20261008T101551_786628Z_5c5bfb59.json",
+    "error": null
+  },
+  {
+    "condition": "required",
+    "case_id": "008_h3",
+    "profile": "008",
+    "history_title": "딸을 돕고 싶은데 말이 어긋남",
+    "states": {
+      "trust": "중간",
+      "disclosure": "높음",
+      "change_confidence": "높음"
+    },
+    "status": "completed",
+    "finish_reason": "stop",
+    "latency_seconds": 20.42,
+    "response": "- 느낌: 1 (이해받음)\n- 판단 이유: 상담자가 어색함을 없애려고 서두르지 않아도 된다며 내담자의 현재 상태를 수용해주었고, 억지로 답을 내놓으라는 압박 대신 천천히 마음을 살펴볼 것을 제안했기 때문입니다. 내담자는 현재 자기개방 의향과 변화 자신감이 높은 상태이므로, 상담자의 이러한 제안을 긍정적으로 받아들이고 자신의 내면을 들여다보려는 시도를 할 가능성이 큽니다.\n- 실제 발화: (잠시 침묵하다가) ...서두르지 않아도 된다니 좀 마음이 놓이네요. 음, 그때 생각해보면... 그냥 당황스러웠던 것 같아요. 딸이 우는 걸 보고 있으면 저까지 마음이 이상해지는 기분이 들어서, 그 자리에 계속 서 있는 게 참 불편하더라고요. 가슴 쪽이 좀 뻐근하기도 했고요. 그래서 그냥 빨리 방법을 찾아줘서 상황을 끝내고 싶었던 것 같습니다.",
+    "reasoning": "",
+    "usage": {
+      "prompt_tokens": 6529,
+      "completion_tokens": 369,
+      "total_tokens": 6898
+    },
+    "main_usage": {
+      "prompt_tokens": 5492,
+      "completion_tokens": 353,
+      "total_tokens": 5845
+    },
+    "subagent_usage": {
+      "prompt_tokens": 1037,
+      "completion_tokens": 16,
+      "total_tokens": 1053
+    },
+    "model_calls": 2,
+    "tools": [
+      {
+        "name": "retrieve_situation",
+        "is_error": false,
+        "result": {
+          "status": "found",
+          "agent_id": "agent_50a798a49130",
+          "profile_id": "gold_008",
+          "database": "situations",
+          "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_008.json",
+          "record": {
+            "id": "situation_3",
+            "situation": "취업준비생 딸이 최종 면접에서 떨어져 거실에서 울고 있음.",
+            "automatic_thought": "저럴 때 뭐라고 해줘야 하나. 우는 걸 보고 있자니 나까지 이상해질 것 같다. 방법을 찾아주는 게 아비가 할 일이지.",
+            "emotion": "안쓰러움, 무력감, 어색함",
+            "physiological_response": "가슴이 뻐근하고 그 자리에 서 있기가 불편해짐",
+            "behavior": "'그 회사 말고도 많다. 아빠 후배한테 채용 정보 알아봐 주마'라고 말했는데, 딸이 '아빠는 꼭 그런 식이야. 그냥 안아주면 안 돼?'라고 쏘아붙이자 얼어붙은 채 서 있다가 베란다로 나가 담배를 핌"
+          }
+        },
+        "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_50a798a49130\", \"profile_id\": \"gold_008\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_008.json\", \"record\": {\"id\": \"situation_3\", \"situation\": \"취업준비생 딸이 최종 면접에서 떨어져 거실에서 울고 있음.\", \"automatic_thought\": \"저럴 때 뭐라고 해줘야 하나. 우는 걸 보고 있자니 나까지 이상해질 것 같다. 방법을 찾아주는 게 아비가 할 일이지.\", \"emotion\": \"안쓰러움, 무력감, 어색함\", \"physiological_response\": \"가슴이 뻐근하고 그 자리에 서 있기가 불편해짐\", \"behavior\": \"'그 회사 말고도 많다. 아빠 후배한테 채용 정보 알아봐 주마'라고 말했는데, 딸이 '아빠는 꼭 그런 식이야. 그냥 안아주면 안 돼?'라고 쏘아붙이자 얼어붙은 채 서 있다가 베란다로 나가 담배를 핌\"}}"
+      }
+    ],
+    "children": [
+      {
+        "agent_id": "agent_50a798a49130",
+        "name": "상황 기록 조회 담당",
+        "response": "```json\n{\"record_id\": \"situation_3\"}\n```",
+        "usage": {
+          "prompt_tokens": 1037,
+          "completion_tokens": 16,
+          "total_tokens": 1053
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/5874fc0e74014602973706770477e68d/20261008T101604_392235Z_1bec0969.json",
+    "error": null
+  }
+]

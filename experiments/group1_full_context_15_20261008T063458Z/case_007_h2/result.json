@@ -1,0 +1,26 @@
+{
+  "case_id": "007_h2",
+  "profile": "007",
+  "history_title": "제주 워크숍을 포기한 일",
+  "states": {
+    "trust": "높음",
+    "disclosure": "높음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 16.51,
+  "response": "**느낌:** 3 (부담·압박을 느낌)\n\n**판단 이유:** \n상담자가 내담자의 양가감정(안심하고 싶은 마음 vs 답답함)을 짚어준 직후, 바로 '짧은 외출 시도'라는 행동 변화를 제안했습니다. 내담자는 현재 신뢰도와 자기개방 의향이 높지만, 변화에 대한 자신감은 '중간' 수준으로 실제 해낼 수 있을지에 대해 확신이 없는 상태입니다(states 참고). 특히 내담자의 핵심 신념은 '내 몸은 언제든 무너질 수 있다'는 강한 취약성(core_belief)과 '위험 상황은 미리 피해야 한다'는 규칙(intermediate_beliefs)에 기반하고 있습니다. 따라서 충분한 심리적 준비나 구체적인 대처 방안 없이 제시된 외출 제안은 내담자에게 실제적인 위협이자 압박으로 다가올 가능성이 큽니다.\n\n**내담자 발화:**\n(잠시 망설이다가 낮은 목소리로) ...음, 짧은 외출이라도... 사실 지금은 그것조차 좀 겁이 나요. 그냥 집 앞 편의점 가는 것도 '가다가 갑자기 그러면 어쩌지' 하는 생각이 먼저 들어서요. 마음으로는 나가야 한다는 걸 알겠는데, 막상 하려고 하면 몸이 먼저 굳어버리는 기분이에요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 4022,
+    "completion_tokens": 309,
+    "total_tokens": 4331
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/440dd87cf96b4a2c80975d0ed2da1816/20261008T063925_196156Z_4925e191.json",
+  "error": null,
+  "reference_client_not_sent": "외출부터 하라는 말을 들으니 벌써 긴장돼요. 제가 왜 못 가는지 좀 더 얘기하고 나서 정하면 안 될까요?"
+}

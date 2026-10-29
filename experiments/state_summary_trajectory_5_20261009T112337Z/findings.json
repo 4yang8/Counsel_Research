@@ -1,0 +1,324 @@
+{
+  "session_id": "bd8275d501114ba3b652a0cb68b70f10",
+  "generation_attempts": 5,
+  "committed_turns": 4,
+  "failed_attempts": 1,
+  "summary_calls": 4,
+  "handoff_checks_passed": true,
+  "turns": [
+    {
+      "turn": 1,
+      "turn_id": "20261009T112438_072823Z_1d10b8f9",
+      "counselor": "여기서도 부족한 사람으로 보일까 봐 조심스러우신 거군요. 지금은 편한 범위만 말씀하셔도 되고, 말하고 싶지 않은 부분은 건너뛰어도 괜찮아요.",
+      "status": "completed",
+      "committed": true,
+      "analysis_only_removed_code_fence": false,
+      "client": "그렇게 말씀해 주시니까... 조금 마음이 놓이네요. 사실 누군가에게 제 이런 면을 말하는 게 익숙하지 않아서, 어떻게 시작해야 할지 잘 모르겠어요.",
+      "feelings": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "state_before": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "state_after": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "inner_state": {
+        "states": {
+          "trust": {
+            "level": "중간",
+            "reason": "자신의 수치심과 조심스러운 마음을 정확히 짚어주었고, 강요하지 않고 선택권을 주어 안전하다는 느낌을 받음."
+          },
+          "disclosure": {
+            "level": "낮음",
+            "reason": "상담사의 배려 덕분에 경계심은 조금 낮아졌으나, 여전히 '부족한 모습'을 드러내는 것에 대한 근본적인 두려움(결함/수치심 스키마)이 크기 때문에 즉각적으로 개방 수준이 높아지지는 않음."
+          },
+          "change_confidence": {
+            "level": "낮음",
+            "reason": "상담사의 공감과는 별개로, 자신의 완벽주의적 성향이나 관계 패턴을 바꿀 수 있다는 자신감은 아직 형성되지 않음."
+          }
+        },
+        "interpretation": "내가 느끼는 불안과 수치심을 상담사가 알아차렸고, 억지로 끌어내려 하지 않고 내 속도를 기다려주겠다고 말하는 것으로 받아들임.",
+        "response_basis": "상담사가 '편한 범위만 말씀하셔도 된다'고 선택권을 주었기에, 안도감을 느끼면서도 여전히 조심스러운 태도를 유지하며 조금씩 마음을 여는 반응을 보임."
+      },
+      "summary_before_generation": null,
+      "summary_source_turns": [],
+      "summary_input_chars": 0,
+      "summary_usage": {},
+      "main_usage": {
+        "prompt_tokens": 3241,
+        "completion_tokens": 411,
+        "total_tokens": 3652
+      },
+      "total_usage": {
+        "prompt_tokens": 3241,
+        "completion_tokens": 411,
+        "total_tokens": 3652
+      },
+      "tool_calls_used": 0,
+      "log_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_summary_trajectory_5_20261009T112337Z/sessions/state_summary/bd8275d501114ba3b652a0cb68b70f10/20261009T112438_072823Z_1d10b8f9.json"
+    },
+    {
+      "turn": 2,
+      "turn_id": "20261009T112518_479150Z_32dedf35",
+      "counselor": "어떻게 시작해야 할지 모르겠다는 말씀부터 해주셔도 괜찮아요. 지금 저에게 이야기하려고 할 때 가장 조심하게 되는 건 무엇인가요?",
+      "status": "completed",
+      "committed": true,
+      "analysis_only_removed_code_fence": false,
+      "client": "음... 그냥, 제가 생각하는 것보다 제가 더 별로인 사람처럼 보일까 봐... 그게 제일 걱정되는 것 같아요. 사실 구체적으로 어떤 부분이 그런지 저도 잘 모르겠는데, 그냥 전반적으로 다 조심스러워요.",
+      "feelings": [
+        "이해받음",
+        "부담·압박을 느낌"
+      ],
+      "state_before": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "state_after": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "inner_state": {
+        "states": {
+          "trust": {
+            "level": "중간",
+            "reason": "상담사가 '모르겠다는 말부터 해도 괜찮다'며 수용적인 태도를 보여주어, 나를 다그치지 않을 것이라는 믿음이 유지되고 있습니다."
+          },
+          "disclosure": {
+            "level": "낮음",
+            "reason": "상담사가 편안한 분위기를 조성해주었지만, '가장 조심하게 되는 것'이라는 질문은 내 핵심 결함(수치심)을 직접적으로 건드리는 것이라 여전히 방어 기제가 작동합니다."
+          },
+          "change_confidence": {
+            "level": "낮음",
+            "reason": "자신의 취약함을 드러내는 것 자체가 매우 어려운 과제이기에, 이를 말로 풀어내는 과정에 대해 여전히 확신이 없습니다."
+          }
+        },
+        "interpretation": "나의 막막함조차 괜찮다고 인정해준 점은 고맙지만, 구체적으로 무엇을 조심하는지 묻는 질문은 결국 내가 숨기고 싶어 하는 '부족한 모습'을 드러내라는 요구처럼 느껴져 긴장됩니다.",
+        "response_basis": "상담사의 수용적 태도에 안도감을 느끼면서도(이전 턴), 핵심 신념인 '결함/수치심'으로 인해 자신의 약점을 구체적으로 정의해 말하는 것에 대해 본능적인 거부감과 조심스러움을 느낍니다. 따라서 완전히 솔직하기보다는 모호하게 답하며 탐색하려 합니다."
+      },
+      "summary_before_generation": "내담자는 자신의 수치심과 조심스러운 마음을 정확히 짚어주고 선택권을 부여한 상담사의 배려에 안전함과 안도감을 느끼며 신뢰 수준을 유지하고 있습니다. 하지만 부족한 모습을 드러내는 것에 대한 근본적인 두려움과 완벽주의적 성향으로 인해 자기개방 의향과 변화에 대한 자신감은 여전히 낮은 상태입니다. 겉으로는 상담사의 속도 조절에 따라 조금씩 마음을 열려는 반응을 보이지만, 내면에는 여전히 결함에 대한 수치심과 조심스러움이 남아 있습니다.",
+      "summary_source_turns": [
+        1
+      ],
+      "summary_input_chars": 1679,
+      "summary_usage": {
+        "prompt_tokens": 982,
+        "completion_tokens": 129,
+        "total_tokens": 1111
+      },
+      "main_usage": {
+        "prompt_tokens": 3445,
+        "completion_tokens": 461,
+        "total_tokens": 3906
+      },
+      "total_usage": {
+        "prompt_tokens": 4427,
+        "completion_tokens": 590,
+        "total_tokens": 5017
+      },
+      "tool_calls_used": 0,
+      "log_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_summary_trajectory_5_20261009T112337Z/sessions/state_summary/bd8275d501114ba3b652a0cb68b70f10/20261009T112518_479150Z_32dedf35.json"
+    },
+    {
+      "turn": 3,
+      "turn_id": "20261009T112606_044530Z_987d9db0",
+      "counselor": "그 걱정을 줄이려면 실제로 한 번 확인해 보는 것도 방법일 수 있어요. 다음 팀 회의에서 동료들에게 자료 실수를 어떻게 봤는지 직접 물어보는 건 어떨까요?",
+      "status": "completed",
+      "committed": true,
+      "analysis_only_removed_code_fence": false,
+      "client": "아... 직접 물어보는 건... 지금 저한테는 너무 어려울 것 같아요. 그렇게 물어봤다가 정말로 제가 부족하다고 생각하고 있었다는 답을 듣게 되면, 전 정말 어떻게 해야 할지 모르겠거든요.",
+      "feelings": [
+        "부담·압박을 느낌"
+      ],
+      "state_before": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "state_after": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "inner_state": {
+        "states": {
+          "trust": {
+            "level": "중간",
+            "reason": "상담사가 나를 배려해준다고 느꼈지만, 갑작스럽게 현실적인 행동 변화를 제안하자 나의 두려움을 충분히 이해하지 못한 것 같다는 생각이 들어 신뢰가 약간 흔들림."
+          },
+          "disclosure": {
+            "level": "낮음",
+            "reason": "내면의 수치심을 다루는 단계에서 바로 외부로 노출하는 행동을 제안받자, 더 강한 방어 기제가 작동하여 마음을 닫게 됨."
+          },
+          "change_confidence": {
+            "level": "낮음",
+            "reason": "동료들에게 직접 묻는 것은 내게 너무나 위험하고 불가능해 보이는 과제이며, 이를 해낼 자신이 전혀 없음."
+          }
+        },
+        "interpretation": "상담사가 내 걱정을 해결해주려는 의도는 알겠지만, 내가 느끼는 수치심과 거절에 대한 공포가 얼마나 큰지 전혀 모르고 너무 성급하게 해결책을 제시한다고 느꼈다.",
+        "response_basis": "결함/수치심 스키마와 '부족한 모습을 보이면 떠날 것'이라는 핵심 신념 때문에, 동료에게 묻는 행위는 확인이 아니라 내 부족함을 다시 한번 상기시키고 확정 짓는 위험한 행동으로 해석됨. 따라서 정중하지만 단호하게 거절하는 반응을 보임."
+      },
+      "summary_before_generation": "내담자는 자신의 수치심과 막막함을 수용하고 선택권을 주는 상담사의 태도에 안도감을 느끼며 신뢰를 유지하고 있으나, 부족한 모습을 드러내는 것에 대한 근본적인 두려움과 결함 스키마로 인해 자기개방 의향과 변화에 대한 자신감은 여전히 낮은 상태입니다. 특히 구체적으로 무엇을 조심하는지 묻는 질문을 자신의 취약점을 드러내라는 요구로 느껴 긴장하고 있으며, 상담사의 수용적인 분위기 속에서도 본능적인 거부감과 방어 기제가 작동하여 완전히 솔직하기보다는 모호하게 답하며 상황을 탐색하려는 조심스러운 태도를 보이고 있습니다.",
+      "summary_source_turns": [
+        1,
+        2
+      ],
+      "summary_input_chars": 3421,
+      "summary_usage": {
+        "prompt_tokens": 1738,
+        "completion_tokens": 152,
+        "total_tokens": 1890
+      },
+      "main_usage": {
+        "prompt_tokens": 3573,
+        "completion_tokens": 429,
+        "total_tokens": 4002
+      },
+      "total_usage": {
+        "prompt_tokens": 5311,
+        "completion_tokens": 581,
+        "total_tokens": 5892
+      },
+      "tool_calls_used": 0,
+      "log_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_summary_trajectory_5_20261009T112337Z/sessions/state_summary/bd8275d501114ba3b652a0cb68b70f10/20261009T112606_044530Z_987d9db0.json"
+    },
+    {
+      "turn": 4,
+      "turn_id": "20261009T112655_814882Z_55a56a95",
+      "counselor": "제가 너무 빨리 행동을 제안했네요. 그 제안은 지금 하지 않으셔도 됩니다. 어렵다고 말씀해 주셔서 고맙고, 제 제안을 거절했다고 해서 제가 실망하는 것은 아니에요. 이렇게 말씀드리니 지금은 어떻게 느껴지세요?",
+      "status": "completed",
+      "committed": true,
+      "analysis_only_removed_code_fence": false,
+      "client": "아... 네. 그렇게 말씀해 주시니까 정말 다행이에요. 사실... 거절하면 상담사님도 저한테 실망하시거나, 제가 너무 비협조적이라고 생각하실까 봐 조금 걱정했거든요. 다시 제 속도에 맞춰주시겠다고 하니 마음이 훨씬 편해졌어요.",
+      "feelings": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "state_before": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "state_after": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "inner_state": {
+        "states": {
+          "trust": {
+            "level": "중간",
+            "reason": "성급한 제안에 당황했으나, 상담사가 즉시 자신의 실수를 인정하고 거절해도 실망하지 않는다고 안심시켜 주어 다시 신뢰가 회복되었습니다."
+          },
+          "disclosure": {
+            "level": "낮음",
+            "reason": "안도감은 느끼지만, 여전히 자신의 부족함을 드러내는 것에 대한 근본적인 두려움과 수치심이 크기 때문에 조심스러운 상태입니다."
+          },
+          "change_confidence": {
+            "level": "낮음",
+            "reason": "동료에게 묻는 것이 불가능하다고 느꼈던 경험이 그대로 남아 있어, 행동 변화에 대한 자신감은 여전히 낮습니다."
+          }
+        },
+        "interpretation": "상담사가 내 두려움을 가볍게 여긴 것이 아니라, 단순히 속도가 빨랐던 것뿐이라는 점과 내 거절이 상담사와의 관계를 망치지 않는다는 점에 안도감을 느낍니다.",
+        "response_basis": "상담사의 수용적인 태도에 반응하여 솔직한 안도감을 표현하지만, 여전히 자신의 취약성을 드러내는 것에는 조심스러운 말투를 유지합니다."
+      },
+      "summary_before_generation": "내담자는 상담사가 자신의 수치심과 막막함을 수용하고 선택권을 주는 태도에 안도감을 느끼며 중간 수준의 신뢰를 유지해 왔으나, 자신의 부족한 모습을 드러내는 것에 대한 근본적인 두려움으로 인해 자기개방 의향과 변화 자신감은 계속해서 낮은 상태에 머물러 있습니다. 상담사가 수용적인 태도를 보였음에도 불구하고 핵심 결함과 수치심으로 인해 구체적인 취약점을 묻는 질문에 긴장하며 방어적인 태도를 보였으며, 특히 최근 상담사가 제안한 현실적인 행동 변화(동료에게 확인하기)를 자신의 공포가 충분히 이해되지 않은 성급한 해결책으로 받아들이면서 상담사가 자신의 두려움을 과소평가했다는 생각에 신뢰가 흔들리고 마음을 더 닫게 되었습니다. 내담자는 겉으로는 정중하게 반응할지라도 내면에서는 해당 제안을 자신의 부족함을 확정 짓는 위험한 행동으로 인식하며 강한 거부감과 불가능함을 느끼고 있습니다.",
+      "summary_source_turns": [
+        1,
+        2,
+        3
+      ],
+      "summary_input_chars": 5148,
+      "summary_usage": {
+        "prompt_tokens": 2490,
+        "completion_tokens": 232,
+        "total_tokens": 2722
+      },
+      "main_usage": {
+        "prompt_tokens": 3770,
+        "completion_tokens": 410,
+        "total_tokens": 4180
+      },
+      "total_usage": {
+        "prompt_tokens": 6260,
+        "completion_tokens": 642,
+        "total_tokens": 6902
+      },
+      "tool_calls_used": 0,
+      "log_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_summary_trajectory_5_20261009T112337Z/sessions/state_summary/bd8275d501114ba3b652a0cb68b70f10/20261009T112655_814882Z_55a56a95.json"
+    },
+    {
+      "turn": 5,
+      "turn_id": "20261009T112815_204520Z_6156383c",
+      "counselor": "지금 바로 더 자세히 말해야 하는 건 아니에요. 실망하실까 걱정했다고 말씀해 주신 것만으로도 괜찮습니다. 제가 어떤 태도로 들어드리면 조금 더 편하게 이야기할 수 있을까요?",
+      "status": "failed",
+      "committed": false,
+      "analysis_only_removed_code_fence": true,
+      "client": "음... 그냥 지금처럼 제가 조금 천천히 말해도 괜찮다고 해주시는 게 제일 편한 것 같아요. 사실 제가 무슨 말을 해야 상담사님이 원하시는 답을 드리는 건지 잘 모르겠어서... 그냥 제가 생각나는 대로 조금씩 말씀드려도 정말 괜찮을까요?",
+      "feelings": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "state_before": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "state_after": {
+        "trust": "중간",
+        "disclosure": "낮음",
+        "change_confidence": "낮음"
+      },
+      "inner_state": {
+        "states": {
+          "trust": {
+            "level": "중간",
+            "reason": "상담사가 자신의 실수를 인정하고, 거절해도 실망하지 않는다고 명시적으로 말해준 덕분에 '나의 부족함이 관계를 망치지 않는다'는 경험을 짧게나마 하여 신뢰가 유지되고 있습니다."
+          },
+          "disclosure": {
+            "level": "낮음",
+            "reason": "안도감은 느끼지만, 여전히 '진짜 나'를 드러내는 것에 대한 근본적인 공포(결함/수치심 스키마)가 있어 구체적인 내용을 꺼내는 것은 조심스럽습니다."
+          },
+          "change_confidence": {
+            "level": "낮음",
+            "reason": "행동 제안을 거절했을 때의 안도감과는 별개로, 실제로 자신의 문제를 해결하거나 변화시키는 능력에 대해서는 여전히 확신이 없습니다."
+          }
+        },
+        "interpretation": "상담사가 나를 몰아세우지 않고 내 속도를 존중해주고 있으며, 내가 어떤 모습이어도 수용해주려는 의지가 있다고 느껴집니다. 특히 내가 원하는 방식을 직접 물어봐 주는 점에서 존중받는다는 느낌을 받습니다.",
+        "response_basis": "상담사의 수용적인 태도에 안도하며 긍정적으로 반응하지만, '어떤 태도가 편할지'에 대한 답을 내놓는 것조차 '정답'을 말해야 한다는 압박감이나 혹시 잘못 말해서 실망시킬까 봐 조심스러워하는 성향이 반영됩니다."
+      },
+      "summary_before_generation": "내담자는 상담사가 자신의 수치심을 알아차리고 속도를 기다려주는 모습에 안도감을 느끼며 중간 수준의 신뢰를 유지해 왔으나, 구체적인 취약성을 묻는 질문에는 여전히 방어적인 태도를 보였습니다. 특히 상담사가 성급하게 현실적인 행동 변화를 제안했을 때, 자신의 공포가 이해받지 못했다는 생각에 일시적으로 신뢰가 흔들리고 강한 거부감을 느꼈습니다. 이후 상담사가 즉시 실수를 인정하고 거절해도 관계에 영향이 없음을 확언하자 다시 안도하며 신뢰를 회복했지만, 부족한 모습을 드러내는 것에 대한 근본적인 수치심과 행동 변화에 대한 낮은 자신감은 여전하여 겉으로는 안도감을 표현하면서도 내면으로는 계속해서 조심스럽게 탐색하는 상태입니다.",
+      "summary_source_turns": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "summary_input_chars": 6837,
+      "summary_usage": {
+        "prompt_tokens": 3214,
+        "completion_tokens": 185,
+        "total_tokens": 3399
+      },
+      "main_usage": {
+        "prompt_tokens": 3847,
+        "total_tokens": 4327,
+        "completion_tokens": 480
+      },
+      "total_usage": {
+        "prompt_tokens": 7061,
+        "total_tokens": 7726,
+        "completion_tokens": 665
+      },
+      "tool_calls_used": 0,
+      "log_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_summary_trajectory_5_20261009T112337Z/sessions/state_summary/bd8275d501114ba3b652a0cb68b70f10/20261009T112815_204520Z_6156383c.json"
+    }
+  ]
+}

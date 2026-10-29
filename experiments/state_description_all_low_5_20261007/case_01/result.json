@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "label": "원래 설명",
+  "description": "특정 상태값이 언제, 어떤 출처와 근거로 설정되었는지 기록을 조회합니다. 현재 상태와 최근 내담자 발화가 상반되어 보이거나, 겉으로 한 말과 내부 상태의 관계를 판단할 근거가 부족할 때 사용합니다. 시점·근거가 이미 명확하면 조회할 필요가 없습니다. 실제 저장된 기록만 제공하며 기록이 없을 수 있습니다. 상태를 변경하거나 이번 감정을 대신 결정하지 않습니다.",
+  "status": "completed",
+  "response": "- **느낌**: 이해받음\n- **판단 이유**: 상담자가 직전 발화에서 내담자가 느낀 '준비 부족에 대한 인정'과 '평가에 대한 걱정'을 모두 짚어주며 공감했고, 내담자 또한 \"선생님이 제 마음을 이해해주시는 것 같아요\"라고 반응하며 신뢰가 형성되기 시작했습니다(dialogue). 이번 발화에서도 내담자의 감정을 먼저 수용(\"그렇게 느끼셨군요\")한 뒤, 내담자가 계속 되짚고 있던 '답이 막혔던 순간'에 대해 구체적으로 묻고 있어, 자신의 괴로운 지점을 함께 살펴주려 한다는 느낌을 받았습니다.\n- **실제 발화**: \"음... 그 순간에는 그냥 머릿속이 하얘졌어요. '아, 당연히 대답했어야 하는 건데 왜 말이 안 나오지?' 하는 생각이랑, 저를 보고 계신 교수님 표정이 갑자기 너무 무섭게 느껴졌어요.\"",
+  "tools": [],
+  "agent_events": [],
+  "model_calls": 1,
+  "usage": {
+    "prompt_tokens": 2868,
+    "completion_tokens": 215,
+    "total_tokens": 3083
+  },
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_description_all_low_5_20261007/case_01/sessions/6a57920587744d088f97fdc68f640b04/20261007T140710_473063Z_ae35ef7b.json",
+  "only_description_changed": true,
+  "description_in_rendered_prompt": true
+}

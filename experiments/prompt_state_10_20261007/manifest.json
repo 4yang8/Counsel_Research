@@ -1,0 +1,22 @@
+{
+  "scope": "10 independent continuations of the same 5-pair counseling history; no generated counselor; exploratory not causal estimate",
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_tokens": 1024,
+    "seed": 731
+  },
+  "hypothesis": "Explicit evidence boundaries improve optional retrieval and abstention; state changes should affect disclosure and appraisal without changing biographical facts.",
+  "sha256": {
+    "config.json": "6fbfc0509194ca906abdb7404ec5c68afcbce821c3d7e0906e1e09e1eb86b5b4",
+    "runtime.py": "45366cc661fa08a247cf23d094b06c05ddfe2e7fe823ff6e967e283ff704d17d",
+    "server.py": "01831ca9ea7f14471aabe8a45355ebd4e61b4f76702c424f0e6a55950342b9ef",
+    "tool_loop.py": "d3e4969fdcc973faabf9641f21fd67e367aedcd49a88767b063b55a641b0e972",
+    "tools.json": "40f918e4a054f4f4c46f8693c19657ab65bdbcfa503462d0b6e49be21a500b32",
+    "app_server.py": "8313ea1fd41699a96bda04da544e8924d93b3ed0fa61dcd312c5802107365583",
+    "cases/lab_meeting.json": "2589ae1c00135c2827649356305dfaa4ad12bb3382d26e935613b08b0ec28462",
+    "cases/lab_meeting_experiences.json": "25015a562fd89e72ba21bb394977ba0b9b1f540db6e11528393087b9e402f2b6",
+    "cases/lab_meeting_current_event.json": "96452170f9ab23185393867cbe02295e4301e897d33d674a03b87ec1eaa30055",
+    "cases/lab_meeting_constraints.json": "bac3a89f0ed324ef9501b09a8ab8c7ea3178e532c98d024e38ae81b6b1865995"
+  }
+}

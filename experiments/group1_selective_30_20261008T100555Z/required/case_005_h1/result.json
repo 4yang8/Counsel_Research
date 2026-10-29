@@ -1,0 +1,62 @@
+{
+  "condition": "required",
+  "case_id": "005_h1",
+  "profile": "005",
+  "history_title": "회사에서 권한 상담",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "높음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 22.43,
+  "response": "- 느낌: [4: 오해받음]\n- 판단 이유: 내담자는 '실적'을 모든 가치의 최상위 기준으로 두며, 자신의 방식이 결과로 증명되었다고 믿습니다(intermediate_beliefs). 상담자가 실적의 중요성을 인정하면서도 '팀원이 문제를 제기한 이유'를 함께 살펴보자고 하는 것은, 내담자 입장에서 자신의 정당한 훈육이나 기강 잡기를 '문제'로 규정하는 것으로 느껴져 자신의 의도가 왜곡되었다고 판단합니다. 또한, 특권의식 스키마로 인해 일반적인 규정이나 타인의 감정보다 자신의 성과가 우선시되어야 한다고 생각하므로, 이를 동등한 선상에서 다루려는 시도 자체를 불편하게 받아들입니다.\n\n- 실제 발화: (헛웃음을 치며) 아니, 제가 실적이 중요하다는 걸 말했잖아요. 그게 그냥 '중요한 점' 중 하나가 아니라, 모든 걸 덮을 만큼 절대적인 기준이라는 겁니다. 팀원이 문제를 제기했다고요? 그건 그냥 멘탈이 약해서 징징거리는 거죠. 그걸 굳이 '이유'라고 분석해서 살펴볼 가치가 있습니까?",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 6203,
+    "completion_tokens": 370,
+    "total_tokens": 6573
+  },
+  "main_usage": {
+    "prompt_tokens": 5199,
+    "completion_tokens": 362,
+    "total_tokens": 5561
+  },
+  "subagent_usage": {
+    "prompt_tokens": 1004,
+    "completion_tokens": 8,
+    "total_tokens": 1012
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_situation",
+      "is_error": false,
+      "result": {
+        "status": "no_match",
+        "agent_id": "agent_bd64016866ca",
+        "profile_id": "gold_005",
+        "database": "situations",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json",
+        "record": null
+      },
+      "model_content": "{\"status\": \"no_match\", \"agent_id\": \"agent_bd64016866ca\", \"profile_id\": \"gold_005\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_005.json\", \"record\": null}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_bd64016866ca",
+      "name": "상황 기록 조회 담당",
+      "response": "{\"record_id\": null}",
+      "usage": {
+        "prompt_tokens": 1004,
+        "completion_tokens": 8,
+        "total_tokens": 1012
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/ab705ce8ebbc466aa44dec7cd0d9caa7/20261008T101143_996200Z_98d4bb36.json",
+  "error": null
+}

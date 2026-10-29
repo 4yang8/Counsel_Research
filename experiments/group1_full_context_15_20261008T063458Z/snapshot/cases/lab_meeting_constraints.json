@@ -1,0 +1,24 @@
+{
+  "scenario_id": "lab_meeting_handover",
+  "provenance": "실습을 위해 설정한 가상 여건. 실제 사용자 일정이 아님.",
+  "record": {
+    "id": "constraints_01",
+    "as_of": "현재 상담 시점",
+    "next_meeting": "이틀 뒤",
+    "available_time_today": "약 30분",
+    "available_materials": [
+      "실험 결과",
+      "기존 발표 자료"
+    ],
+    "dependencies": [
+      "비교 기준 일부는 공동 작업자에게 확인해야 한다."
+    ],
+    "already_done": [
+      "보완할 항목을 메모했다."
+    ],
+    "unknown": [
+      "공동 작업자의 답변 가능 시점"
+    ],
+    "note": "제안이나 실행 의향은 완료 사실이 아니다. 이 자료는 실습 동안 고정된다."
+  }
+}

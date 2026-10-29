@@ -1,0 +1,69 @@
+{
+  "condition": "required",
+  "case_id": "008_h1",
+  "profile": "008",
+  "history_title": "친구의 장례식에서 느끼지 못한 슬픔",
+  "states": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 19.78,
+  "response": "- taxonomy: [1]\n- 판단 이유: 상담자가 '슬프다'라는 정답 같은 감정의 이름을 강요하지 않고, 현재 내담자가 느낀 '묵직함'이라는 신체적 감각 자체를 인정하며 대화를 이끌어주었습니다. 이는 정서적 억제가 강하고 감정을 드러내는 것을 수치스럽게 여기는 내담자(core_belief)에게 안전함을 느끼게 하며, 자신의 상태를 있는 그대로 이해받았다고 느끼게 합니다. 신뢰도(trust)는 높지만 자기개방 의향(disclosure)이 낮기 때문에, 갑자기 깊은 감정을 쏟아내기보다는 자신이 인지한 신체적 감각 수준에서 조심스럽게 이야기를 이어갈 것으로 보입니다.\n- 실제 발화: (잠시 침묵하다가) ...그냥, 가슴 한가운데에 돌덩이 하나가 얹혀 있는 기분이었어요. 숨이 확 막히는 건 아닌데, 그렇다고 가벼운 느낌도 아니고요. 그걸 어떻게 설명해야 할지 잘 모르겠습니다.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 6519,
+    "completion_tokens": 367,
+    "total_tokens": 6886
+  },
+  "main_usage": {
+    "prompt_tokens": 5490,
+    "completion_tokens": 351,
+    "total_tokens": 5841
+  },
+  "subagent_usage": {
+    "prompt_tokens": 1029,
+    "completion_tokens": 16,
+    "total_tokens": 1045
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_situation",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_2db42d809a75",
+        "profile_id": "gold_008",
+        "database": "situations",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_008.json",
+        "record": {
+          "id": "situation_1",
+          "situation": "30년 지기 절친의 장례식장. 다른 친구들은 영정 앞에서 눈물을 흘리는데 자신은 아무 감정도 올라오지 않음.",
+          "automatic_thought": "제일 친했던 게 난데 왜 아무렇지도 않지. 내가 어딘가 고장 난 건가. ...일단 상주 옆에 자리나 지키자.",
+          "emotion": "멍함, 스스로에 대한 낯섦, 이름 붙일 수 없는 답답함",
+          "physiological_response": "가슴 한가운데가 돌덩이를 얹은 듯 묵직한데 눈은 건조함",
+          "behavior": "사흘 내내 빈소를 지키며 부의금 장부 정리와 손님 접대를 도맡았고, 발인까지 마친 날 밤 집 앞 주차장 차 안에 한 시간 동안 혼자 앉아 있다 들어감"
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_2db42d809a75\", \"profile_id\": \"gold_008\", \"database\": \"situations\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_008.json\", \"record\": {\"id\": \"situation_1\", \"situation\": \"30년 지기 절친의 장례식장. 다른 친구들은 영정 앞에서 눈물을 흘리는데 자신은 아무 감정도 올라오지 않음.\", \"automatic_thought\": \"제일 친했던 게 난데 왜 아무렇지도 않지. 내가 어딘가 고장 난 건가. ...일단 상주 옆에 자리나 지키자.\", \"emotion\": \"멍함, 스스로에 대한 낯섦, 이름 붙일 수 없는 답답함\", \"physiological_response\": \"가슴 한가운데가 돌덩이를 얹은 듯 묵직한데 눈은 건조함\", \"behavior\": \"사흘 내내 빈소를 지키며 부의금 장부 정리와 손님 접대를 도맡았고, 발인까지 마친 날 밤 집 앞 주차장 차 안에 한 시간 동안 혼자 앉아 있다 들어감\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_2db42d809a75",
+      "name": "상황 기록 조회 담당",
+      "response": "```json\n{\"record_id\": \"situation_1\"}\n```",
+      "usage": {
+        "prompt_tokens": 1029,
+        "completion_tokens": 16,
+        "total_tokens": 1045
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/19689db38f3e44f7a5e73349bc43b12b/20261008T101500_887079Z_1640ff8f.json",
+  "error": null
+}

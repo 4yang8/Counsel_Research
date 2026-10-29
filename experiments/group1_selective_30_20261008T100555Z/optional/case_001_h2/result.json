@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "001_h2",
+  "profile": "001",
+  "history_title": "연인에게 마음을 숨기는 이유",
+  "states": {
+    "trust": "중간",
+    "disclosure": "중간",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 14.23,
+  "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 내담자는 직전 발화에서 자신이 상대를 시험하는 사람으로 보일까 봐 걱정하며 방어적인 태도를 보였습니다. 이에 대해 상담자가 '행동을 단정하기보다 두려움을 먼저 이해하고 싶다'고 말함으로써, 내담자의 의도를 비난하지 않고 그 이면의 고통에 주목하고 있음을 보여주었습니다. 이는 내담자가 가진 '결함/수치심' 스키마와 '진짜 모습을 보이면 실망할 것'이라는 두려움을 자극하지 않고 수용하는 반응이기에 '이해받음'을 느꼈을 것입니다. 신뢰와 개방 의향이 중간 단계이므로, 상담자의 이러한 수용적인 태도는 내담자가 조금 더 깊은 이야기를 꺼낼 수 있는 안전감을 제공합니다.\n- 실제 발화: (잠시 생각하다가 조심스럽게) ...그렇게 말씀해 주시니까 좀 마음이 놓이네요. 사실... 아주 오래전 일인데, 어릴 때 부모님께 제 솔직한 마음을 말했다가 오히려 제가 이기적인 아이라는 소리를 들었던 적이 있어요. 그 뒤로는 그냥 제가 다 참는 게 편하겠다고 생각했던 것 같아요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2292,
+    "completion_tokens": 275,
+    "total_tokens": 2567
+  },
+  "main_usage": {
+    "prompt_tokens": 2292,
+    "completion_tokens": 275,
+    "total_tokens": 2567
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/5c8f3ff1c1034ead9d9b2d2bac7a4181/20261008T100830_108511Z_f87d1573.json",
+  "error": null
+}

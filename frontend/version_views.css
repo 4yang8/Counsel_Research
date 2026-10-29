@@ -1,0 +1,56 @@
+.version-monitor{flex:none;max-height:38%;min-height:0;overflow:auto;background:#fafbff;border-top:1px solid #dce4ed;padding:7px 11px;overscroll-behavior:contain}
+.version-monitor details>summary{font-size:11px;color:#596b83;padding:3px 0}.version-monitor pre{font-size:11px;line-height:1.6;max-height:160px;overflow:auto;margin:5px 0;padding:7px;white-space:pre-wrap;overflow-wrap:anywhere}
+.version-monitor small{display:block;font-size:9px;overflow-wrap:anywhere}.version-specific-content{padding:3px 0 7px}.reasoning-call{border-top:1px solid #e8e6f2;padding:4px 0}.reasoning-call strong,.note-changes strong{font-size:10px;color:#6b548e}.reasoning-call pre{background:#f4f0fa;border-left:3px solid #a58bc4}.note-changes{font:10px/1.6 ui-monospace,GemmaKorean,"Noto Sans KR",monospace;max-height:160px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}.note-added{background:#c7e8cc;color:#174f2c;border-left:2px solid #428957}.note-deleted{background:#f5cbd0;color:#872736;border-left:2px solid #ab4654}.note-diff-context{color:#7d8393}
+.paired-mode .conversation-column{min-height:0}.paired-chat #paired-transcript{min-height:100px}
+.p2-note{min-width:0;padding:5px 0}.p2-note+.p2-note{border-top:1px solid #dce4de;margin-top:7px}.p2-note>strong,.p2-note>small{display:block}.p2-note>strong{font-size:11px;color:#405f54}
+@media(max-width:700px){.version-monitor{max-height:32%;padding:5px 8px}.version-monitor pre{max-height:120px}}
+/* One chronological stream inside each chat response. */
+.turn-process{font-size:12px;min-width:0;white-space:normal}
+.turn-process>summary{font-size:10px;color:#78838d;cursor:pointer;padding:2px 0}
+.turn-process-list{display:flex;flex-direction:column;gap:4px;margin:1px 0 3px}
+.turn-model-call,.turn-tool-call{min-width:0;padding:0;border:0;background:transparent}
+.turn-event-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 7px}
+.turn-event-heading strong{font-size:13px;font-weight:700;margin:0;line-height:1.25;white-space:normal;color:#756184}
+.turn-tool-call .turn-event-heading strong{color:#866b3b}
+.turn-event-heading .turn-tool-status{font-size:10px;line-height:1.2;color:#8a7348;white-space:nowrap}
+.turn-tool-call[data-status=completed] .turn-tool-status{color:#39725b}
+.turn-tool-call[data-status=error] .turn-tool-status{color:#b74f57}
+.turn-process pre{font:11px/1.28 ui-monospace,GemmaKorean,"Noto Sans KR",monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:240px;overflow:auto;padding:6px;margin:3px 0;background:#f8fafc}
+.turn-process .turn-reasoning-text{font-family:inherit;font-size:12px;line-height:1.28;color:#686274;background:#f7f5fa;border:1px solid #e5dfed;border-radius:4px;box-shadow:none;padding:5px 7px;margin:2px 0;max-height:200px;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.turn-process .turn-agent-output{font-family:inherit;font-size:12px;line-height:1.28;white-space:pre-wrap;overflow-wrap:anywhere;color:#24556a;background:#eef7fa;border:0;border-left:2px solid #85b7c8;border-radius:0;padding:3px 6px;margin:2px 0;max-height:none;overflow:visible}
+.turn-process .turn-subagent-call{background:#e9f2ff;border-left:2px solid #82a8d7;border-radius:4px;padding:3px 6px}
+.turn-subagent-call .turn-event-heading strong{color:#365d8b}
+.turn-process .turn-subagent-call .turn-reasoning-text{color:#48607c}
+.turn-process .turn-subagent-call .turn-agent-output{color:#244e7b;background:#d9e8fb;border-left-color:#709acc}
+.turn-subagent-call>small{display:block;font-size:10px;line-height:1.28;color:#365d8b;margin-top:3px}
+.turn-tool-changes{font:11px/1.28 ui-monospace,GemmaKorean,"Noto Sans KR",monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:1px 0}
+.turn-tool-changes>div{padding:0 4px}
+.turn-process details>summary{font-size:10px;color:#7a838e;padding:1px 0;cursor:pointer}
+.turn-tool-details{margin-top:0}
+.turn-tool-details>small,.turn-tool-details>div>small{display:block;font-size:10px;color:#7a838e;margin-top:5px}
+.turn-inspect{border:0;background:transparent;padding:3px 0;font-size:10px;color:#567587;cursor:pointer}
+.turn-version-record{padding:1px 0;border:0;background:transparent}
+.turn-version-content small{font-size:9px;overflow-wrap:anywhere}
+.turn-process-list:empty{display:none}
+.paired-turn-process:has(.turn-process-list:not(:empty)){padding-bottom:2px;border-bottom:1px solid #dce3e8}
+
+.turn-tool-call[data-status=drafting] .turn-tool-status{color:#8a7348}
+.turn-tool-call[data-status=interrupted] .turn-tool-status{color:#94634d}
+.turn-tool-preview-label{display:block;font-size:10px;line-height:1.25;color:#82764c;margin:2px 0}
+.turn-tool-changes[data-preview=true]{border:1px dashed #b8bca6;border-radius:3px}
+.turn-process .turn-subagent-call .turn-reasoning-text{background:#f2f7ff;border-color:#cbdcf1}
+
+.turn-process .turn-draft-text{font-family:inherit;color:#425864;background:#f0f6f8;border-left:2px solid #8baab8;padding:4px 7px;max-height:160px}
+.client-draft-record{margin:4px 0;border:1px solid #d6e1e9;border-radius:4px;padding:3px 6px}
+.client-draft-record>summary{font-weight:700}.turn-review-record{background:#eef4fc;color:#365d8b}
+
+/* Each generated request/tool region is selectable without expanding raw details. */
+.turn-process-list>.turn-model-call,.turn-process-list>.turn-tool-call{border-top:3px dashed #99aabd;padding-top:6px;margin-top:3px;cursor:pointer}
+.turn-process-list>:first-child{margin-top:0}
+.turn-context-select{margin-left:auto;padding:1px 7px;font-size:10px;line-height:1.5;border:1px solid #aebdca;border-radius:4px;background:#f8fafc;color:#486477;cursor:pointer}
+.turn-event-heading{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.turn-process-list>.context-region-selected{box-shadow:inset 3px 0 #287762;background:#e6f3ef;padding-left:7px;border-radius:3px}
+.turn-context-select[aria-pressed=true]{background:#287762;color:white;border-color:#287762}
+.turn-context-select:focus-visible{outline:2px solid #287762;outline-offset:2px}
+.paired-speech>.turn-selectable-utterance{border-top:3px dashed #99aabd;padding-top:6px;margin-top:4px}
+.paired-speech>.turn-selectable-utterance.context-region-selected{background:#e6f3ef;box-shadow:inset 3px 0 #287762;padding-left:7px}

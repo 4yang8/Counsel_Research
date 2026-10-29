@@ -1,0 +1,109 @@
+{
+  "session_id": "77f9c92e90e0488d9cd88138c2700baf",
+  "attempts": 10,
+  "committed_turns": 5,
+  "all_checks_passed": true,
+  "verified_tool_result_messages": 3,
+  "attempts_checked": [
+    {
+      "attempt": 1,
+      "summary_source_turns": [],
+      "committed": true,
+      "tool_calls": 0,
+      "checks_passed": true
+    },
+    {
+      "attempt": 2,
+      "summary_source_turns": [
+        1
+      ],
+      "committed": false,
+      "tool_calls": 1,
+      "checks_passed": true
+    },
+    {
+      "attempt": 3,
+      "summary_source_turns": [
+        1
+      ],
+      "committed": true,
+      "tool_calls": 0,
+      "checks_passed": true
+    },
+    {
+      "attempt": 4,
+      "summary_source_turns": [
+        1,
+        2
+      ],
+      "committed": false,
+      "tool_calls": 0,
+      "checks_passed": true
+    },
+    {
+      "attempt": 5,
+      "summary_source_turns": [
+        1,
+        2
+      ],
+      "committed": false,
+      "tool_calls": 0,
+      "checks_passed": true
+    },
+    {
+      "attempt": 6,
+      "summary_source_turns": [
+        1,
+        2
+      ],
+      "committed": true,
+      "tool_calls": 0,
+      "checks_passed": true
+    },
+    {
+      "attempt": 7,
+      "summary_source_turns": [
+        1,
+        2,
+        3
+      ],
+      "committed": false,
+      "tool_calls": 0,
+      "checks_passed": true
+    },
+    {
+      "attempt": 8,
+      "summary_source_turns": [
+        1,
+        2,
+        3
+      ],
+      "committed": false,
+      "tool_calls": 0,
+      "checks_passed": true
+    },
+    {
+      "attempt": 9,
+      "summary_source_turns": [
+        1,
+        2,
+        3
+      ],
+      "committed": true,
+      "tool_calls": 1,
+      "checks_passed": true
+    },
+    {
+      "attempt": 10,
+      "summary_source_turns": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "committed": true,
+      "tool_calls": 1,
+      "checks_passed": true
+    }
+  ]
+}

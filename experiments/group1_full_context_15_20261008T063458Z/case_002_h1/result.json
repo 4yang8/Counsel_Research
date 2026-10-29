@@ -1,0 +1,26 @@
+{
+  "case_id": "002_h1",
+  "profile": "002",
+  "history_title": "아픈데도 근무를 대신한 날",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "중간",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 17.02,
+  "response": "- **선택한 느낌**: 3 (부담·압박을 느낌)\n\n- **판단 이유**: \n  - 내담자는 '부탁을 받으면 들어줘야 하고 절대 거절하면 안 된다'는 강한 규칙(intermediate_beliefs)과 '자기 욕구를 주장하면 이기적인 사람으로 여겨질 것'이라는 부정적 가정(assumption_negative)을 가지고 있습니다.\n  - 상담자의 제안은 내담자가 평생 유지해 온 '자기희생'의 패턴을 깨고 자신의 상태를 먼저 살피라는 변화를 요구하는 것입니다.\n  - 현재 상담자에 대한 신뢰(trust)가 낮은 상태에서, 자신의 핵심 신념과 배치되는 행동 지침을 제안받자 이를 심리적인 압박이나 부담으로 느끼게 되었습니다.\n  - 또한, 변화에 대한 자신감(change_confidence)은 높게 설정되어 있으나, 이는 '내가 노력하면 할 수 있다'는 책임감의 발현에 가깝지, 자신의 욕구를 우선시하는 생소한 행동에 대한 편안함은 아닙니다.\n\n- **실제 내담자 발화**:\n  (약간 당황하며 망설이다가) \"...아, 그게... 말은 쉽지만 실제로 그러기는 좀 어려울 것 같아요. 제가 제 상태를 먼저 생각하느라 대답이 늦어지면, 상대방은 제가 고민하고 있다는 걸 알 텐데... 그러면 오히려 더 미안해질 것 같아서요.\"",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3755,
+    "completion_tokens": 321,
+    "total_tokens": 4076
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/ae59446ddd334b1ab0054c3e358e0a30/20261008T063738_587076Z_28e8f667.json",
+  "error": null,
+  "reference_client_not_sent": "생각할 시간 달라는 말 정도는 할 수 있을까요. 그런데 그 사이에 상대가 얼마나 난처할지부터 생각날 것 같아요."
+}

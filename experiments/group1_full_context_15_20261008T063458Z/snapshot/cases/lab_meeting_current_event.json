@@ -1,0 +1,27 @@
+{
+  "scenario_id": "lab_meeting_handover",
+  "provenance": "실습을 위해 새로 작성한 가상 사건 기록. 실제 사용자 이력이 아님.",
+  "record": {
+    "id": "current_event_01",
+    "when": "현재 상담 당일 오전",
+    "sequence": [
+      {
+        "observed": "교수님이 이 비교 조건을 고른 이유가 무엇인지 물었다.",
+        "client_action": "기존 실험에서 사용했던 조건이라고 답했지만 선정 이유를 충분히 설명하지 못했다."
+      },
+      {
+        "observed": "교수님이 비교 기준을 다시 확인해서 알려달라고 말했다.",
+        "client_action": "확인해서 다시 설명하겠다고 답했다."
+      }
+    ],
+    "observed_evaluation": "기록에는 내담자를 무능하다고 평가한 발언이 없다.",
+    "client_interpretation_then": "연구를 맡겨도 되는지 의심하실까 걱정했다.",
+    "unknown": [
+      "교수님의 속마음",
+      "기록되지 않은 표정과 말투"
+    ],
+    "already_done": [
+      "미팅 후 보완할 항목을 메모했다."
+    ]
+  }
+}

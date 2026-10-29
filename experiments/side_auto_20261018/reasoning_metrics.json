@@ -1,0 +1,1173 @@
+[
+  {
+    "run": "baseline_r1_lab",
+    "roles": {
+      "client_main_tool": {
+        "calls": 2,
+        "total": 1123,
+        "mean": 561.5,
+        "max": 743
+      },
+      "client_main_final": {
+        "calls": 2,
+        "total": 156,
+        "mean": 78.0,
+        "max": 123
+      },
+      "trait_router": {
+        "calls": 2,
+        "total": 1594,
+        "mean": 797.0,
+        "max": 1147
+      },
+      "counselor_main_tool": {
+        "calls": 11,
+        "total": 2550,
+        "mean": 231.8,
+        "max": 511
+      },
+      "counselor_main_final": {
+        "calls": 2,
+        "total": 114,
+        "mean": 57.0,
+        "max": 65
+      },
+      "counseling_guide": {
+        "calls": 2,
+        "total": 1022,
+        "mean": 511.0,
+        "max": 511
+      }
+    },
+    "calls": [
+      {
+        "step": 1,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 380,
+        "completion_tokens": 850
+      },
+      {
+        "step": 1,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 33,
+        "completion_tokens": 91
+      },
+      {
+        "step": 1,
+        "role": "trait_router",
+        "reasoning_tokens": 447,
+        "completion_tokens": 455
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 221,
+        "completion_tokens": 509
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 32,
+        "completion_tokens": 167
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 114,
+        "completion_tokens": 336
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 65,
+        "completion_tokens": 131
+      },
+      {
+        "step": 2,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 736
+      },
+      {
+        "step": 3,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 743,
+        "completion_tokens": 1439
+      },
+      {
+        "step": 3,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 123,
+        "completion_tokens": 296
+      },
+      {
+        "step": 3,
+        "role": "trait_router",
+        "reasoning_tokens": 1147,
+        "completion_tokens": 1378
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 675
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 300,
+        "completion_tokens": 509
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 275,
+        "completion_tokens": 867
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 4,
+        "reasoning_tokens": 244,
+        "completion_tokens": 812
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 5,
+        "reasoning_tokens": 243,
+        "completion_tokens": 795
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 6,
+        "reasoning_tokens": 461,
+        "completion_tokens": 688
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 7,
+        "reasoning_tokens": 66,
+        "completion_tokens": 587
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 8,
+        "reasoning_tokens": 83,
+        "completion_tokens": 199
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_final",
+        "iteration": 9,
+        "reasoning_tokens": 49,
+        "completion_tokens": 498
+      },
+      {
+        "step": 4,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 800
+      }
+    ]
+  },
+  {
+    "run": "s1_budget512_005",
+    "roles": {
+      "client_main_tool": {
+        "calls": 5,
+        "total": 2555,
+        "mean": 511.0,
+        "max": 511
+      },
+      "client_main_final": {
+        "calls": 5,
+        "total": 765,
+        "mean": 153.0,
+        "max": 278
+      },
+      "trait_router": {
+        "calls": 5,
+        "total": 2555,
+        "mean": 511.0,
+        "max": 511
+      },
+      "counselor_main_tool": {
+        "calls": 15,
+        "total": 3457,
+        "mean": 230.5,
+        "max": 511
+      },
+      "counselor_main_final": {
+        "calls": 5,
+        "total": 743,
+        "mean": 148.6,
+        "max": 260
+      },
+      "counseling_guide": {
+        "calls": 5,
+        "total": 2555,
+        "mean": 511.0,
+        "max": 511
+      }
+    },
+    "calls": [
+      {
+        "step": 1,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1022
+      },
+      {
+        "step": 1,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 205,
+        "completion_tokens": 304
+      },
+      {
+        "step": 1,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 523
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 292,
+        "completion_tokens": 612
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 48,
+        "completion_tokens": 202
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 164,
+        "completion_tokens": 467
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 62,
+        "completion_tokens": 121
+      },
+      {
+        "step": 2,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 859
+      },
+      {
+        "step": 3,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1056
+      },
+      {
+        "step": 3,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 97,
+        "completion_tokens": 256
+      },
+      {
+        "step": 3,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 609
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 325,
+        "completion_tokens": 517
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 510,
+        "completion_tokens": 815
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 25,
+        "completion_tokens": 300
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 142,
+        "completion_tokens": 195
+      },
+      {
+        "step": 4,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 808
+      },
+      {
+        "step": 5,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1000
+      },
+      {
+        "step": 5,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 51,
+        "completion_tokens": 203
+      },
+      {
+        "step": 5,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 778
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 473,
+        "completion_tokens": 663
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 220,
+        "completion_tokens": 751
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 17,
+        "completion_tokens": 433
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 260,
+        "completion_tokens": 314
+      },
+      {
+        "step": 6,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 725
+      },
+      {
+        "step": 7,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1244
+      },
+      {
+        "step": 7,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 134,
+        "completion_tokens": 339
+      },
+      {
+        "step": 7,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 751
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 739
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 17,
+        "completion_tokens": 455
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 24,
+        "completion_tokens": 212
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 148,
+        "completion_tokens": 233
+      },
+      {
+        "step": 8,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 799
+      },
+      {
+        "step": 9,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1253
+      },
+      {
+        "step": 9,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 278,
+        "completion_tokens": 522
+      },
+      {
+        "step": 9,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 690
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 747
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 303,
+        "completion_tokens": 1143
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 17,
+        "completion_tokens": 723
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 131,
+        "completion_tokens": 252
+      },
+      {
+        "step": 10,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 796
+      }
+    ]
+  },
+  {
+    "run": "s1_r1_lab",
+    "roles": {
+      "client_main_tool": {
+        "calls": 6,
+        "total": 4260,
+        "mean": 710.0,
+        "max": 1158
+      },
+      "client_main_final": {
+        "calls": 6,
+        "total": 500,
+        "mean": 83.3,
+        "max": 115
+      },
+      "trait_router": {
+        "calls": 6,
+        "total": 6176,
+        "mean": 1029.3,
+        "max": 1333
+      },
+      "counselor_main_tool": {
+        "calls": 17,
+        "total": 4135,
+        "mean": 243.2,
+        "max": 511
+      },
+      "counselor_main_final": {
+        "calls": 6,
+        "total": 1083,
+        "mean": 180.5,
+        "max": 501
+      },
+      "counseling_guide": {
+        "calls": 7,
+        "total": 3577,
+        "mean": 511.0,
+        "max": 511
+      }
+    },
+    "calls": [
+      {
+        "step": 1,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 282,
+        "completion_tokens": 720
+      },
+      {
+        "step": 1,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 54,
+        "completion_tokens": 183
+      },
+      {
+        "step": 1,
+        "role": "trait_router",
+        "reasoning_tokens": 471,
+        "completion_tokens": 479
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 670
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 36,
+        "completion_tokens": 214
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 131,
+        "completion_tokens": 397
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 93,
+        "completion_tokens": 196
+      },
+      {
+        "step": 2,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 809
+      },
+      {
+        "step": 3,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 518,
+        "completion_tokens": 1069
+      },
+      {
+        "step": 3,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 75,
+        "completion_tokens": 223
+      },
+      {
+        "step": 3,
+        "role": "trait_router",
+        "reasoning_tokens": 971,
+        "completion_tokens": 1133
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 279,
+        "completion_tokens": 749
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 16,
+        "completion_tokens": 349
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 18,
+        "completion_tokens": 161
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 111,
+        "completion_tokens": 160
+      },
+      {
+        "step": 4,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 768
+      },
+      {
+        "step": 5,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 520,
+        "completion_tokens": 1186
+      },
+      {
+        "step": 5,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 110,
+        "completion_tokens": 279
+      },
+      {
+        "step": 5,
+        "role": "trait_router",
+        "reasoning_tokens": 1333,
+        "completion_tokens": 1523
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 672
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 501,
+        "completion_tokens": 614
+      },
+      {
+        "step": 6,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 748
+      },
+      {
+        "step": 7,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 1158,
+        "completion_tokens": 1981
+      },
+      {
+        "step": 7,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 77,
+        "completion_tokens": 311
+      },
+      {
+        "step": 7,
+        "role": "trait_router",
+        "reasoning_tokens": 989,
+        "completion_tokens": 1236
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 798
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 353,
+        "completion_tokens": 1455
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 9,
+        "completion_tokens": 700
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 125,
+        "completion_tokens": 341
+      },
+      {
+        "step": 8,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 788
+      },
+      {
+        "step": 9,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 895,
+        "completion_tokens": 1637
+      },
+      {
+        "step": 9,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 69,
+        "completion_tokens": 219
+      },
+      {
+        "step": 9,
+        "role": "trait_router",
+        "reasoning_tokens": 1259,
+        "completion_tokens": 1478
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 726
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 220,
+        "completion_tokens": 727
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 14,
+        "completion_tokens": 330
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 126,
+        "completion_tokens": 298
+      },
+      {
+        "step": 10,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 773
+      },
+      {
+        "step": 11,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 887,
+        "completion_tokens": 1552
+      },
+      {
+        "step": 11,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 115,
+        "completion_tokens": 305
+      },
+      {
+        "step": 11,
+        "role": "trait_router",
+        "reasoning_tokens": 1153,
+        "completion_tokens": 1384
+      },
+      {
+        "step": 12,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 814
+      },
+      {
+        "step": 12,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 142,
+        "completion_tokens": 383
+      },
+      {
+        "step": 12,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 231,
+        "completion_tokens": 461
+      },
+      {
+        "step": 12,
+        "role": "counselor_main_tool",
+        "iteration": 4,
+        "reasoning_tokens": 131,
+        "completion_tokens": 492
+      },
+      {
+        "step": 12,
+        "role": "counselor_main_final",
+        "iteration": 5,
+        "reasoning_tokens": 127,
+        "completion_tokens": 224
+      },
+      {
+        "step": 12,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 853
+      },
+      {
+        "step": 12,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 779
+      }
+    ]
+  },
+  {
+    "run": "s1_r2_replace512_lab",
+    "roles": {
+      "client_main_tool": {
+        "calls": 5,
+        "total": 2326,
+        "mean": 465.2,
+        "max": 511
+      },
+      "client_main_final": {
+        "calls": 5,
+        "total": 572,
+        "mean": 114.4,
+        "max": 184
+      },
+      "trait_router": {
+        "calls": 5,
+        "total": 2515,
+        "mean": 503.0,
+        "max": 511
+      },
+      "counselor_main_tool": {
+        "calls": 14,
+        "total": 4047,
+        "mean": 289.1,
+        "max": 511
+      },
+      "counselor_main_final": {
+        "calls": 5,
+        "total": 1200,
+        "mean": 240.0,
+        "max": 484
+      },
+      "counseling_guide": {
+        "calls": 5,
+        "total": 2555,
+        "mean": 511.0,
+        "max": 511
+      }
+    },
+    "calls": [
+      {
+        "step": 1,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 282,
+        "completion_tokens": 659
+      },
+      {
+        "step": 1,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 50,
+        "completion_tokens": 109
+      },
+      {
+        "step": 1,
+        "role": "trait_router",
+        "reasoning_tokens": 471,
+        "completion_tokens": 479
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 259,
+        "completion_tokens": 529
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 16,
+        "completion_tokens": 142
+      },
+      {
+        "step": 2,
+        "role": "counselor_main_final",
+        "iteration": 3,
+        "reasoning_tokens": 131,
+        "completion_tokens": 171
+      },
+      {
+        "step": 2,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 802
+      },
+      {
+        "step": 3,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1051
+      },
+      {
+        "step": 3,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 127,
+        "completion_tokens": 267
+      },
+      {
+        "step": 3,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 604
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 913
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 146,
+        "completion_tokens": 315
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 511,
+        "completion_tokens": 838
+      },
+      {
+        "step": 4,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 88,
+        "completion_tokens": 195
+      },
+      {
+        "step": 4,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 789
+      },
+      {
+        "step": 5,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1257
+      },
+      {
+        "step": 5,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 107,
+        "completion_tokens": 283
+      },
+      {
+        "step": 5,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 603
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 730
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 220,
+        "completion_tokens": 982
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 29,
+        "completion_tokens": 536
+      },
+      {
+        "step": 6,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 484,
+        "completion_tokens": 647
+      },
+      {
+        "step": 6,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 813
+      },
+      {
+        "step": 7,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1242
+      },
+      {
+        "step": 7,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 104,
+        "completion_tokens": 366
+      },
+      {
+        "step": 7,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 746
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 822
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1393
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 28,
+        "completion_tokens": 650
+      },
+      {
+        "step": 8,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 78,
+        "completion_tokens": 286
+      },
+      {
+        "step": 8,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 774
+      },
+      {
+        "step": 9,
+        "role": "client_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 1300
+      },
+      {
+        "step": 9,
+        "role": "client_main_final",
+        "iteration": 2,
+        "reasoning_tokens": 184,
+        "completion_tokens": 473
+      },
+      {
+        "step": 9,
+        "role": "trait_router",
+        "reasoning_tokens": 511,
+        "completion_tokens": 784
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 1,
+        "reasoning_tokens": 511,
+        "completion_tokens": 740
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 2,
+        "reasoning_tokens": 266,
+        "completion_tokens": 1400
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_tool",
+        "iteration": 3,
+        "reasoning_tokens": 17,
+        "completion_tokens": 826
+      },
+      {
+        "step": 10,
+        "role": "counselor_main_final",
+        "iteration": 4,
+        "reasoning_tokens": 419,
+        "completion_tokens": 604
+      },
+      {
+        "step": 10,
+        "role": "counseling_guide",
+        "reasoning_tokens": 511,
+        "completion_tokens": 803
+      }
+    ]
+  }
+]

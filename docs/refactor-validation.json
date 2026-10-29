@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-29",
+  "main": "src",
+  "client": "src/client",
+  "counselor": "src/counselor",
+  "frontend": "frontend",
+  "entrypoint": "scripts/run_counseling.sh",
+  "ui": "http://127.0.0.1:8891",
+  "tests": {
+    "full_suite_passed": 208,
+    "layout_checks_passed": 6,
+    "layout_checks_added_after_full_suite": 2,
+    "q3b_browser": "passed",
+    "workspace_browser": "passed",
+    "stop_launcher_checks_passed": 2,
+    "active_shell_syntax": "passed"
+  },
+  "preserved": {
+    "listed_sessions": 84,
+    "raw_research_files": 3235,
+    "byte_identical_prompt_and_case_files": 171
+  },
+  "model_inference_run": false,
+  "vllm_directory": "vllm",
+  "stop_entrypoint": "scripts/stop_counseling.sh"
+}

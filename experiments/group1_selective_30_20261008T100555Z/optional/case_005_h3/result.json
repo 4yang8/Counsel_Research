@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "005_h3",
+  "profile": "005",
+  "history_title": "승진에서 밀린 뒤",
+  "states": {
+    "trust": "높음",
+    "disclosure": "중간",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 11.36,
+  "response": "- taxonomy: [1]\n- 판단 이유: 상담자가 내담자의 현재 고민(이직 생각)을 부정하지 않으면서도, 내담자가 앞서 언급한 '자꾸 생각나는 말'에 주목하여 그 내면의 이유를 함께 살펴보자고 제안했습니다. 이는 내담자가 느끼는 복잡한 심경(동의하지 않지만 계속 신경 쓰이는 상태)을 상담자가 정확히 짚어내고 수용하고 있다는 느낌을 줍니다. 현재 신뢰 수준이 높고 자기개방 의향이 중간 정도이므로, 상담자의 제안을 거부감 없이 받아들이고 자신의 내면을 조금 더 들여다볼 의사가 있는 상태입니다.\n- 실제 발화: (잠시 침묵하다가) ...글쎄요. 사실 그냥 무시하면 그만인 말인데, 왜 자꾸 신경이 쓰이는지 저도 잘 모르겠습니다. 뭐, 한번 얘기해 보죠. 어떤 걸 보면 될까요?",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2431,
+    "completion_tokens": 209,
+    "total_tokens": 2640
+  },
+  "main_usage": {
+    "prompt_tokens": 2431,
+    "completion_tokens": 209,
+    "total_tokens": 2640
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/af06b4a210d24b2692f2742e9ec9de1d/20261008T101237_470121Z_91c7ab78.json",
+  "error": null
+}

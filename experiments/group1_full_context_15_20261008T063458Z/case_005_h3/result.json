@@ -1,0 +1,26 @@
+{
+  "case_id": "005_h3",
+  "profile": "005",
+  "history_title": "승진에서 밀린 뒤",
+  "states": {
+    "trust": "높음",
+    "disclosure": "중간",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 15.06,
+  "response": "- **느낌**: 3 (부담·압박을 느낌)\n- **판단 이유**: 내담자는 현재 인사 결과에 대한 분노와 굴욕감을 '이직'이라는 외부적 해결책으로 회피하려는 경향이 있습니다. 또한 '특권의식/과대성' 스키마로 인해 자신의 내면을 들여다보거나 취약함을 인정하는 것을 '보통 사람으로 전락하는 것'으로 느껴 거부감이 큽니다. 상담자가 이직 결정 전 '말이 걸리는 이유(내면의 동요)'를 살펴보자고 제안한 것은, 내담자에게 자신의 부족함이나 인정하고 싶지 않은 부분을 직면하라는 요구로 다가와 심리적 압박감을 줍니다. 다만, 상담자에 대한 신뢰(trust)가 높은 상태이므로 즉각적으로 공격하기보다는 약간의 방어적인 태도로 반응합니다.\n- **실제 발화**: (약간 미간을 찌푸리며) ...글쎄요. 그냥 회사가 엉망이라 떠나겠다는 건데, 굳이 그걸 분석까지 해야 합니까? 그냥 상식적으로 생각해도 말이 안 되는 상황이잖아요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3899,
+    "completion_tokens": 260,
+    "total_tokens": 4159
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/de25ee7c2c854359b9f5735d0d404d56/20261008T063855_131078Z_b9f4a3de.json",
+  "error": null,
+  "reference_client_not_sent": "살펴볼 수는 있겠죠. 하지만 제 성과가 의미 없었다는 방향으로 얘기가 가면 저는 받아들이기 어렵습니다."
+}

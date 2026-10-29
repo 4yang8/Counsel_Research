@@ -1,0 +1,25 @@
+{
+  "pair": 3,
+  "format": "md",
+  "levels": {
+    "trust": "높음",
+    "disclosure": "높음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "response": "- **느낌**: 이해받음\n- **판단 이유**: 상담자가 이전 턴에서 성급하게 안심시키려 했던 점을 인정하고 내 마음을 다시 정리해준 것에 대해 \"믿고 더 이야기하고 싶다\"고 말한 상태입니다(Dialogue 10). 이번 발화에서도 \"그렇게 느끼셨군요\"라며 내 감정을 수용해주었고, 내가 계속 되짚고 있는 '답이 막혔던 순간'에 대해 구체적으로 묻고 있어 내 상황과 고민의 핵심을 이해하고 있다고 느낍니다.\n- **실제 발화**: 음... 처음엔 그냥 당황스러웠어요. 그런데 바로 그다음에 '아, 내가 이걸 왜 설명 못 하고 있지?'라는 생각이 들더라고요. 제가 직접 설계하고 진행한 실험인데, 정작 가장 기본적인 기준조차 제대로 말 못 하는 제 모습이 너무 한심하게 느껴졌어요.",
+  "finish_reason": "stop",
+  "error": null,
+  "tool_calls": [],
+  "tool_errors": 0,
+  "model_calls": 1,
+  "first_input_tokens": 2978,
+  "inspection_tokens": 2978,
+  "usage": {
+    "prompt_tokens": 2978,
+    "completion_tokens": 191,
+    "total_tokens": 3169
+  },
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_03/md/sessions/c13648e3402647c4b39fc97685bbfb92/20261007T153559_024454Z_6e1f7e04.json",
+  "format_only_verified": true
+}

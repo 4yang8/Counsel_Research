@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "008_h1",
+  "profile": "008",
+  "history_title": "친구의 장례식에서 느끼지 못한 슬픔",
+  "states": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 14.05,
+  "response": "- 느낌: 1(이해받음), 2(선택권을 존중받음)\n- 판단 이유: 내담자는 '슬프다고 해야 하는 건지, 피곤한 건지 잘 모르겠다'며 감정을 정의하는 데 어려움을 겪고 있었습니다. 상담자가 '슬프다는 이름을 붙이지 않아도 괜찮다'며 정답을 강요하지 않고, 내담자가 느낀 '묵직한 느낌'이라는 구체적인 감각에서부터 시작하자고 제안한 것은 내담자의 현재 상태를 있는 그대로 수용하고 속도를 맞춰주는 것으로 느껴집니다(dialogue, profile의 정서적 억제 특성 반영). 신뢰도는 높지만 자기개방 의향이 낮은 상태에서, 무리하게 감정을 끄집어내지 않는 상담자의 접근 방식이 내담자에게 안전함과 이해받는 느낌을 줍니다.\n- 실제 발화: (잠시 침묵하다가 낮은 목소리로) ...그냥, 가슴 한가운데에 돌덩이 하나가 얹혀 있는 것 같았어요. 답답하기도 하고, 숨이 좀 가쁘기도 하고... 근데 이게 정말 슬픈 건지, 아니면 그냥 몸이 힘들어서 그런 건지는 여전히 잘 모르겠습니다.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2501,
+    "completion_tokens": 272,
+    "total_tokens": 2773
+  },
+  "main_usage": {
+    "prompt_tokens": 2501,
+    "completion_tokens": 272,
+    "total_tokens": 2773
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/4c66f1cadff5412b951fd710a3c128ce/20261008T101446_793569Z_f2dfca7e.json",
+  "error": null
+}

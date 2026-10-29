@@ -1,0 +1,20 @@
+/* Separate scroll areas keep settings available above a growing chat list. */
+.lab-shell{grid-template-columns:208px minmax(0,1fr)}
+.config-sidebar{padding:8px;overflow:hidden;gap:0}
+.sidebar-top{flex:none;max-height:48%;overflow:auto;overscroll-behavior:contain;padding-bottom:10px;display:flex;flex-direction:column;gap:6px}
+.sidebar-top .config-tabs,.sidebar-top .context-tabs{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.session-sidebar{border-top:1px solid #dce4ed;padding-top:10px;display:flex;flex-direction:column;flex:1;min-height:0;gap:6px}
+.session-heading{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#285c4d}
+.session-heading button{padding:3px 8px;font-size:15px}
+.session-sidebar input{width:100%;min-width:0;font-size:11px;padding:7px;flex:none}
+#sessions-new{font-size:11px;padding:7px;background:#edf6f1}
+#sessions-status{font-size:10px;margin:0;overflow-wrap:anywhere;color:#64798c;flex:none}
+#sessions-list{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:5px;scrollbar-gutter:stable}
+.config-sidebar .session-item{text-align:left;padding:8px;border:1px solid transparent;background:transparent;min-width:0}
+.session-item span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:11px;line-height:1.5}
+.session-item small{display:block;font-size:9px;color:#64798c;margin-top:3px;overflow-wrap:anywhere}
+.session-item[aria-current=true]{background:#e4f2eb;border-color:#9ac5ac}
+.session-item:hover{background:#edf3f1}.session-item:disabled{opacity:.6;cursor:wait}
+.sidebar-top #status{display:block;margin:0;padding:2px 4px;font-size:10px;overflow-wrap:anywhere}.sidebar-top #conversation-toggle{background:#edf6f1}.lab-shell{min-height:0}
+@media(max-width:900px){.lab-shell{grid-template-columns:158px minmax(0,1fr)}}
+@media(max-width:700px){.lab-shell{grid-template-columns:112px minmax(0,1fr)}.config-sidebar{padding:5px}.sidebar-top .config-tabs,.sidebar-top .context-tabs{grid-template-columns:1fr}.sidebar-top{max-height:42%}.config-sidebar .session-item{padding:6px 3px}.session-item span{font-size:10px}.session-heading{font-size:11px}.config-sidebar #sessions-new{font-size:10px}.lab-shell{min-height:100dvh}.paired-composer-options{grid-template-columns:1fr}.paired-composer{max-height:65%}}

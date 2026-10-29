@@ -1,0 +1,26 @@
+{
+  "case_id": "007_h1",
+  "profile": "007",
+  "history_title": "정상 검사 뒤 다시 불안해짐",
+  "states": {
+    "trust": "중간",
+    "disclosure": "중간",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 14.81,
+  "response": "- **선택한 느낌**: 1(이해받음), 2(선택권을 존중받음)\n- **판단 이유**: 상담자가 \"당장 확인을 그만두라는 뜻은 아니다\"라고 말하며, 내담자가 느끼는 확인 행위의 절박함과 불안을 부정하지 않고 인정해주었습니다. 이는 '몸의 신호를 놓치면 안 된다'는 내담자의 강한 신념과 규칙(intermediate_beliefs)을 존중하는 태도로 느껴져, 압박감 대신 이해받고 있다는 느낌을 줍니다. 또한, 무조건적인 중단이 아니라 \"무슨 생각이 드는지부터 함께 보자\"며 단계적인 접근을 제안했기에 자신의 속도를 존중받는다고 느낍니다.\n- **내담자 발화**: \"아... 네. 무작정 하지 말라고 하시면 정말 불안했을 텐데, 다행이네요. 음... 생각이 어떤 거냐면... 그냥, 지금 안 보면 나중에 정말 큰일 났을 때 제가 아무것도 모른 채로 쓰러질 것 같다는 생각이 들어요. '지금 이 느낌이 그냥 불안함인지, 아니면 진짜 위험한 신호인지' 그걸 꼭 확인해야만 살 수 있을 것 같은 기분이요.\"",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 4017,
+    "completion_tokens": 269,
+    "total_tokens": 4286
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/fcf619c8be2b4b339f0df1cd421d4994/20261008T063910_213315Z_f6c30316.json",
+  "error": null,
+  "reference_client_not_sent": "그 정도면 얘기해볼 수 있을 것 같아요. 다만 몸에서 느끼는 것까지 다 제 생각 탓이라고 하지는 않으셨으면 해요."
+}

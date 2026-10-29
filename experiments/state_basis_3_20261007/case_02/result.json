@@ -1,0 +1,12 @@
+{
+  "id": 2,
+  "label": "높은 개방 의향과 주제별 경계",
+  "target_state": "disclosure",
+  "question": "연구 이야기는 이어가도 괜찮고, 가족 이야기는 지금 다루고 싶지 않다는 말씀이군요. 그 경계를 지키면서 교수님 평가가 걱정되는 마음을 더 들어봐도 될까요?",
+  "config": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_basis_3_20261007/case_02/config.json",
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_basis_3_20261007/case_02/sessions/6cf75b5fc7f146b2bcd3aaf9bdfc1536/20261007T134537_741290Z_ce319a5c.json",
+  "response": "- **느낌**: 이해받음, 선택권을 존중받음\n- **판단 이유**: 내담자가 방금 \"연구 이야기는 자세히 해도 괜찮지만, 가족 이야기는 하고 싶지 않다\"고 명확한 경계를 설정했는데, 상담자가 이를 그대로 수용하며 \"그 경계를 지키면서\"라고 언급했습니다. 이는 내담자의 선택권을 존중하는 태도로 느껴지며(taxonomy: 선택권을 존중받음), 동시에 내담자가 현재 가장 괴로워하는 '교수님의 평가에 대한 걱정'에 다시 집중하려 하기에 자신의 상태를 정확히 이해하고 있다고 느낍니다(taxonomy: 이해받음, profile: 원하는 도움).\n- **내담자 발화**: \"네... 그렇게 해주시면 좋겠어요. 사실 교수님이 겉으로는 괜찮다고 하셨지만, 제가 그 질문에 제대로 답하지 못한 게 계속 머릿속에서 재생돼요. 단순히 한 번의 실수라고 하기엔, 제가 제 연구를 제대로 파악하지 못하고 있었다는 증거 같아서 더 불안해요.\"",
+  "status": "completed",
+  "tools": [],
+  "calls": 1
+}

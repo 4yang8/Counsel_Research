@@ -1,0 +1,26 @@
+{
+  "case_id": "005_h2",
+  "profile": "005",
+  "history_title": "아내의 별거 통보",
+  "states": {
+    "trust": "중간",
+    "disclosure": "낮음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 10.44,
+  "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 내담자는 현재 자기개방 의향(disclosure)이 '낮음' 상태이며, 특히 자신의 취약한 감정이나 민감한 내용을 드러내는 것을 망설이는 경향이 있습니다. 이전 발화에서 \"걱정이라고 할 정도인지는 모르겠다\"며 감정을 절제하고 방어적인 태도를 보였음에도 불구하고, 상담자가 '조용한 집에서 사진을 볼 때의 마음'이라는 매우 사적이고 정서적인 영역을 구체적으로 묻자, 이를 자신의 내면을 파고드는 압박으로 느꼈을 가능성이 큽니다.\n- 실제 발화: (잠시 침묵하다가 헛기침을 하며) ...글쎄요. 그냥, 애가 보고 싶으니까 본 거죠. 특별히 무슨 마음이 더 있겠습니까.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3921,
+    "completion_tokens": 190,
+    "total_tokens": 4111
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/92536d2d47724a18977d241240941605/20261008T063844_600064Z_cd0f11c9.json",
+  "error": null,
+  "reference_client_not_sent": "딱 뭐라고 말하기는 어렵네요. 보고 싶다는 건 맞겠죠. 그렇다고 제가 전부 잘못했다고 하는 건 아닙니다."
+}

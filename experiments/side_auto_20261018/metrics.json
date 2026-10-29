@@ -1,0 +1,225 @@
+{
+  "original_files_changed": [],
+  "runs": [
+    {
+      "run": "baseline_r1_lab",
+      "session_id": "261018_230222",
+      "versions": [
+        "Q1",
+        "P3a"
+      ],
+      "planned_pairs": 6,
+      "completed_speeches": {
+        "client": 2,
+        "counselor": 2
+      },
+      "usable_speeches": {
+        "client": 2,
+        "counselor": 1
+      },
+      "invalid_public_from_step": 4,
+      "counts": {
+        "attempts_client": 2,
+        "client_main": 4,
+        "trait_router": 2,
+        "tool_stage_client_update": 2,
+        "attempts_counselor": 2,
+        "counselor_main": 13,
+        "counseling_guide": 2,
+        "tool_update_notes": 9,
+        "tool_consult_counseling_guide": 2,
+        "tool_errors": 5
+      },
+      "output_tokens_including_reasoning": {
+        "client_main": 2676,
+        "trait_router": 1833,
+        "counselor_main": 6773,
+        "counseling_guide": 1536
+      },
+      "reasoning_characters": {
+        "client_main": 5530,
+        "trait_router": 6835,
+        "counselor_main": 10232,
+        "counseling_guide": 4713
+      },
+      "errors": [],
+      "generation_retries": []
+    },
+    {
+      "run": "s1_budget512_005",
+      "session_id": "261018_231112",
+      "versions": [
+        "Q1_s1",
+        "P3a_s1"
+      ],
+      "planned_pairs": 5,
+      "completed_speeches": {
+        "client": 5,
+        "counselor": 5
+      },
+      "usable_speeches": {
+        "client": 5,
+        "counselor": 5
+      },
+      "invalid_public_from_step": null,
+      "counts": {
+        "attempts_client": 5,
+        "client_main": 10,
+        "trait_router": 5,
+        "tool_stage_client_update": 5,
+        "attempts_counselor": 5,
+        "counselor_main": 20,
+        "counseling_guide": 5,
+        "tool_update_notes": 10,
+        "tool_consult_counseling_guide": 5
+      },
+      "output_tokens_including_reasoning": {
+        "client_main": 7199,
+        "trait_router": 3351,
+        "counselor_main": 9894,
+        "counseling_guide": 3987
+      },
+      "reasoning_characters": {
+        "client_main": 13553,
+        "trait_router": 9932,
+        "counselor_main": 17505,
+        "counseling_guide": 11241
+      },
+      "errors": [],
+      "generation_retries": []
+    },
+    {
+      "run": "s1_r1_lab",
+      "session_id": "261018_230202",
+      "versions": [
+        "Q1_s1",
+        "P3a_s1"
+      ],
+      "planned_pairs": 6,
+      "completed_speeches": {
+        "client": 6,
+        "counselor": 6
+      },
+      "usable_speeches": {
+        "client": 6,
+        "counselor": 6
+      },
+      "invalid_public_from_step": null,
+      "counts": {
+        "attempts_client": 6,
+        "client_main": 12,
+        "trait_router": 6,
+        "tool_stage_client_update": 6,
+        "attempts_counselor": 6,
+        "counselor_main": 23,
+        "counseling_guide": 7,
+        "tool_update_notes": 10,
+        "tool_consult_counseling_guide": 7
+      },
+      "output_tokens_including_reasoning": {
+        "client_main": 9665,
+        "trait_router": 7233,
+        "counselor_main": 11931,
+        "counseling_guide": 5518
+      },
+      "reasoning_characters": {
+        "client_main": 19326,
+        "trait_router": 25319,
+        "counselor_main": 22062,
+        "counseling_guide": 15657
+      },
+      "errors": [],
+      "generation_retries": []
+    },
+    {
+      "run": "s1_r2_replace512_lab",
+      "session_id": "261018_232051",
+      "versions": [
+        "Q1_s1",
+        "P3a_s1"
+      ],
+      "planned_pairs": 5,
+      "completed_speeches": {
+        "client": 5,
+        "counselor": 5
+      },
+      "usable_speeches": {
+        "client": 5,
+        "counselor": 5
+      },
+      "invalid_public_from_step": null,
+      "counts": {
+        "attempts_client": 5,
+        "client_main": 10,
+        "trait_router": 5,
+        "tool_stage_client_update": 5,
+        "attempts_counselor": 5,
+        "counselor_main": 19,
+        "counseling_guide": 5,
+        "tool_update_notes": 9,
+        "tool_consult_counseling_guide": 5
+      },
+      "output_tokens_including_reasoning": {
+        "client_main": 7007,
+        "trait_router": 3216,
+        "counselor_main": 12719,
+        "counseling_guide": 3981
+      },
+      "reasoning_characters": {
+        "client_main": 13117,
+        "trait_router": 10751,
+        "counselor_main": 20342,
+        "counseling_guide": 11393
+      },
+      "errors": [],
+      "generation_retries": []
+    },
+    {
+      "run": "s1_r3_semantic_005",
+      "session_id": "261018_234017",
+      "versions": [
+        "Q1_s1",
+        "P3a_s1"
+      ],
+      "planned_pairs": 5,
+      "completed_speeches": {
+        "client": 2,
+        "counselor": 2
+      },
+      "usable_speeches": {
+        "client": 2,
+        "counselor": 2
+      },
+      "invalid_public_from_step": null,
+      "counts": {
+        "attempts_client": 2,
+        "client_main": 4,
+        "trait_router": 2,
+        "tool_stage_client_update": 2,
+        "attempts_counselor": 2,
+        "counselor_main": 8,
+        "counseling_guide": 2,
+        "tool_update_notes": 4,
+        "tool_consult_counseling_guide": 2
+      },
+      "output_tokens_including_reasoning": {
+        "client_main": 2733,
+        "trait_router": 1038,
+        "counselor_main": 4043,
+        "counseling_guide": 1545
+      },
+      "reasoning_characters": {
+        "client_main": 5032,
+        "trait_router": 4119,
+        "counselor_main": 7244,
+        "counseling_guide": 4446
+      },
+      "errors": [],
+      "generation_retries": []
+    },
+    {
+      "run": "s1_r4_source_only_lab",
+      "status": "starting"
+    }
+  ]
+}

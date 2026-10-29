@@ -1,0 +1,23 @@
+{
+  "scenario_id": "lab_meeting_handover",
+  "provenance": "실습용 가상 상태 기록. 실제 사용자에 대한 관찰이 아니다.",
+  "states": {
+    "disclosure": {
+      "source": "가상 사례 상태 설정",
+      "as_of": "직전 내담자 발화 이후",
+      "level_at_recording": "높음",
+      "updated_after_dialogue": true,
+      "basis": "연구실 경험과 평가 불안을 구체적으로 이야기할 의향이 높다. 가족 관련 내용의 공개는 원하지 않는다.",
+      "scope": "연구실 사건과 평가 불안",
+      "history": [
+        {
+          "after_turn": 5,
+          "before": "중간",
+          "after": "높음",
+          "basis": "연구 이야기는 자세히 해도 괜찮다는 공개 의향을 반영함."
+        }
+      ],
+      "note": "높음은 모든 주제에 대한 무제한 공개 동의가 아니다."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "005_h1",
+  "profile": "005",
+  "history_title": "회사에서 권한 상담",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "높음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 16.52,
+  "response": "**느낌**: 3 (부담·압박을 느낌), 4 (오해받음)\n\n**판단 이유**:\n내담자는 본인의 실적과 성과가 모든 것을 정당화한다고 믿는 '특권의식/과대성' 스키마를 가지고 있으며, 결과로 증명하면 된다는 강한 신념(rule)이 있습니다. 상담자가 실적의 중요성을 언급하며 공감하는 듯했지만, 결국 '팀원이 문제를 제기한 이유'를 살펴보자고 제안한 것은 내담자 입장에서 자신의 방식이 틀렸음을 인정하라는 압박(부담·압박)으로 다가옵니다. 또한, 실적을 냈음에도 불구하고 팀원의 '느낌'이나 '이유'를 따지는 상황 자체가 자신의 정당한 관리 방식을 부정하는 것(오해받음)으로 느껴지기 때문입니다.\n\n**내담자 발화**:\n\"결국 그 말이죠? 실적은 알겠는데, 애들이 기분 나빴다니까 그 이유를 찾아보자는 거. 아니, 팀장이 팀원들 기분 하나하나 다 맞춰주다가 실적을 어떻게 냅니까? 그 친구가 왜 문제를 제기했는지는 뻔하죠. 제가 세게 몰아붙이니까 힘들었던 겁니다. 그게 문제라면, 요즘 회사들은 그냥 다 같이 적당히 일하고 실적은 포기하라는 건가요?\"",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2462,
+    "completion_tokens": 310,
+    "total_tokens": 2772
+  },
+  "main_usage": {
+    "prompt_tokens": 2462,
+    "completion_tokens": 310,
+    "total_tokens": 2772
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/ccb265f4139549ca9ad2e90c75a8c750/20261008T101127_369059Z_02695749.json",
+  "error": null
+}

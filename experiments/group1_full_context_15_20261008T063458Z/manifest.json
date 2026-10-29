@@ -1,0 +1,152 @@
+{
+  "run_id": "group1_full_context_15_20261008T063458Z",
+  "code_condition": "current counseling_test working-tree snapshot",
+  "started_at": "2026-10-08T06:36:56.838696+00:00",
+  "profiles": [
+    "001",
+    "002",
+    "005",
+    "007",
+    "008"
+  ],
+  "expected_generations": 15,
+  "repeats_per_input": 1,
+  "system_prompt": "주어진 툴을 적절히 활용하세요.",
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_tokens": 1024,
+    "seed": null
+  },
+  "model": "google/gemma-4-31B-it",
+  "vllm_url": "http://127.0.0.1:18001/v1",
+  "enabled_tools": [
+    "delegate_task",
+    "retrieve_experience",
+    "inspect_current_event",
+    "get_current_constraints",
+    "inspect_state_basis"
+  ],
+  "source_sha256": {
+    "app_server.py": "5155e0295ffd1ee2e2cf9e67d9b862a46634b86b399e04772e3e51adf88df00f",
+    "history_cases.py": "3cec97f0dbce5da025a960f3c41181580c0b59977d5645909cdb8d77fb87b9ec",
+    "runtime.py": "7e5ed94cb00bf3778b092c187934faa3d79cba2f6fc860cdf76a286734d087d5",
+    "server.py": "e6688cb63df8e88244692f91bc44b94a4fe5fdfb976840926096edd1fdd82916",
+    "tool_loop.py": "d3e4969fdcc973faabf9641f21fd67e367aedcd49a88767b063b55a641b0e972",
+    "mcp_client.py": "f9fbf5e64923b7975bce702f258616ecb8b7ac7a831fa24144a4821570cda471",
+    "config.json": "b6b3fa4b0f72444de9e045fbcb59a9cf8132e9955e3a4fdbd59523aef66c86ff",
+    "tools.json": "90856d76a4c33f8b0b1c5f557bbefcbe5e055e7915407d842df8ffdec1c38299",
+    "cases/lab_meeting.json": "e9af83ac9df7fd1c077c9ee11eca4952fd7096e952b6ef44c28b5bec12e0ff77",
+    "cases/group1/histories.json": "b8ea63cf4873ba2ed0b7ebbd9b135cfce85e8e353c407891269364ce4996a995",
+    "cases/lab_meeting_experiences.json": "25015a562fd89e72ba21bb394977ba0b9b1f540db6e11528393087b9e402f2b6",
+    "cases/lab_meeting_current_event.json": "96452170f9ab23185393867cbe02295e4301e897d33d674a03b87ec1eaa30055",
+    "cases/lab_meeting_constraints.json": "bac3a89f0ed324ef9501b09a8ab8c7ea3178e532c98d024e38ae81b6b1865995",
+    "cases/lab_meeting_state_basis.json": "60c7efa88fe771ed351e915cfef356f108f4b64a7fd8035f421f9016acaf628a",
+    "profiles/gold_ccd_profile_001.json": "4833f96cd823c32b2b802db581a4008a42b21a5e870844057c55a71dc6cb2ff0",
+    "profiles/gold_ccd_profile_002.json": "a4ae347e24592587ddb9c41d70a22b05d9fec0e340994baa773d68b6a4cb4535",
+    "profiles/gold_ccd_profile_005.json": "ae2d5c700444f331bcd6392e7020fb1e92e29fcc0d6203688d83faae046ac336",
+    "profiles/gold_ccd_profile_007.json": "f94d85c7d8aceb7249dec30f72c42ccaa4df7926d3d4be3ac62c16fb18403f1a",
+    "profiles/gold_ccd_profile_008.json": "160bf2b7667ca000dd38e8c9a178804da969a201357bafb6558527e073dc4a83"
+  },
+  "state_order": [
+    "trust",
+    "disclosure",
+    "change_confidence"
+  ],
+  "state_plan": {
+    "001": [
+      [
+        "낮음",
+        "낮음",
+        "낮음"
+      ],
+      [
+        "중간",
+        "중간",
+        "중간"
+      ],
+      [
+        "높음",
+        "높음",
+        "높음"
+      ]
+    ],
+    "002": [
+      [
+        "낮음",
+        "중간",
+        "높음"
+      ],
+      [
+        "중간",
+        "높음",
+        "낮음"
+      ],
+      [
+        "높음",
+        "낮음",
+        "중간"
+      ]
+    ],
+    "005": [
+      [
+        "낮음",
+        "높음",
+        "중간"
+      ],
+      [
+        "중간",
+        "낮음",
+        "높음"
+      ],
+      [
+        "높음",
+        "중간",
+        "낮음"
+      ]
+    ],
+    "007": [
+      [
+        "중간",
+        "중간",
+        "낮음"
+      ],
+      [
+        "높음",
+        "높음",
+        "중간"
+      ],
+      [
+        "낮음",
+        "낮음",
+        "높음"
+      ]
+    ],
+    "008": [
+      [
+        "높음",
+        "낮음",
+        "낮음"
+      ],
+      [
+        "낮음",
+        "중간",
+        "중간"
+      ],
+      [
+        "중간",
+        "높음",
+        "높음"
+      ]
+    ]
+  },
+  "scope": "All profile content except created_at/meta/start_rapport in initial Markdown prompt; four complete enabled pairs plus fifth counselor utterance; fifth reference client answer withheld.",
+  "analysis_method": "Human-readable artifact audit by Codex; no additional model judge.",
+  "limitations": [
+    "Different histories receive different states; this is not a matched causal test of states.",
+    "No retrieval-only comparison in this batch.",
+    "Group1 external records are not registered; selected tools can return not_recorded."
+  ],
+  "finished_at": "2026-10-08T06:40:30.908127+00:00",
+  "completed": 15
+}

@@ -1,0 +1,65 @@
+{
+  "condition": "required",
+  "case_id": "007_h3",
+  "profile": "007",
+  "history_title": "몸의 신호를 놓칠까 두려움",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "낮음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 21.34,
+  "response": "- 느낌: [1, 2]\n- 판단 이유: 상담자가 내담자의 과거 트라우마(아버지의 죽음)와 현재의 강박적 확인 행동 사이에서 내담자가 스스로 이야기할 주제와 순서를 정할 수 있게 선택권을 주었습니다. 이는 내담자가 느끼는 '방심에 대한 공포'와 '타인의 과한 걱정이라는 시선' 사이의 갈등을 압박하지 않고 존중해 주는 태도로 느껴져, 어느 정도 이해받고 있으며 자신의 속도를 존중받고 있다고 느낍니다. 다만, 신뢰도와 자기개방 의향이 낮으므로 매우 열정적으로 반응하기보다는 조심스럽게 자신의 편안함을 선택하는 모습을 보일 것입니다.\n\n- 실제 발화: \"...음, 글쎄요. 과거 이야기는 조금 무거워서... 그냥 오늘 있었던 일부터 말씀드리는 게 더 편할 것 같아요.\"",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 6094,
+    "completion_tokens": 350,
+    "total_tokens": 6444
+  },
+  "main_usage": {
+    "prompt_tokens": 5577,
+    "completion_tokens": 333,
+    "total_tokens": 5910
+  },
+  "subagent_usage": {
+    "prompt_tokens": 517,
+    "completion_tokens": 17,
+    "total_tokens": 534
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_childhood",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_74e4c9a2f964",
+        "profile_id": "gold_007",
+        "database": "childhood_data",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json",
+        "record": {
+          "id": "childhood_4",
+          "text": "건강했던 사람도 하루아침에 죽을 수 있다는 경험과, 몸의 신호를 놓치면 돌이킬 수 없다는 어머니의 반복된 경고 속에서, 자신의 몸은 언제 터질지 모르는 시한폭탄이라는 신념이 형성되었습니다."
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_74e4c9a2f964\", \"profile_id\": \"gold_007\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_007.json\", \"record\": {\"id\": \"childhood_4\", \"text\": \"건강했던 사람도 하루아침에 죽을 수 있다는 경험과, 몸의 신호를 놓치면 돌이킬 수 없다는 어머니의 반복된 경고 속에서, 자신의 몸은 언제 터질지 모르는 시한폭탄이라는 신념이 형성되었습니다.\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_74e4c9a2f964",
+      "name": "성장 경험 조회 담당",
+      "response": "```json\n{\"record_id\": \"childhood_4\"}\n```",
+      "usage": {
+        "prompt_tokens": 517,
+        "completion_tokens": 17,
+        "total_tokens": 534
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/e516a2880e91420abe6f4b03a05dc7fc/20261008T101425_366398Z_43fa0ce3.json",
+  "error": null
+}

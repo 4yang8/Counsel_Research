@@ -1,0 +1,26 @@
+{
+  "case_id": "001_h2",
+  "profile": "001",
+  "history_title": "연인에게 마음을 숨기는 이유",
+  "states": {
+    "trust": "중간",
+    "disclosure": "중간",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 14.14,
+  "response": "- **선택한 느낌**: 1 (이해받음)\n- **판단 이유**: 상담자가 앞선 발화에서 내담자가 걱정했던 '상대를 시험하는 사람'이라는 부정적 낙인(오해)을 찍지 않고, 오히려 그 이면의 '두려움'을 먼저 이해하겠다고 명시적으로 표현했습니다. 이는 결함/수치심 도식을 가진 내담자에게 자신의 취약함이 수용될 수 있다는 안전감을 주어 '이해받음'의 느낌을 줍니다. 다만, 신뢰와 자기개방 의향이 '중간' 단계이므로 갑자기 모든 것을 털어놓기보다는 조심스럽게 과거의 기억을 떠올려 보려는 태도를 보일 것입니다.\n- **실제 발화**: (잠시 생각에 잠겼다가 낮은 목소리로) ...그렇게 말씀해 주시니까 조금 마음이 놓이네요. 음, 기억나는 게 있을까요... 아주 오래전 일이라 가물가물하긴 한데, 어릴 때 제가 실수해서 울거나 떼를 쓰면 부모님이 남들이 보는데 왜 그러냐고, 빨리 그만하고 괜찮은 척하라고 하셨던 게 생각나요. 그때 그냥... 제가 울면 정말 큰일이 나는 줄 알았어요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3547,
+    "completion_tokens": 282,
+    "total_tokens": 3829
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/e6139f35490043dfb278a1da8d8f5d33/20261008T063709_706607Z_3220fb38.json",
+  "error": null,
+  "reference_client_not_sent": "오래된 일도 좀 떠오르는데, 지금 어디까지 말씀드려야 할지 모르겠어요. 우선 최근에 연인과 있었던 얘기부터 하고 싶어요."
+}

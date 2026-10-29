@@ -1,0 +1,128 @@
+[
+  {
+    "pair": 1,
+    "format": "json",
+    "levels": {
+      "trust": "낮음",
+      "disclosure": "낮음",
+      "change_confidence": "낮음"
+    },
+    "status": "failed",
+    "response": "",
+    "finish_reason": null,
+    "error": "<urlopen error [Errno 1] Operation not permitted>",
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": null,
+    "inspection_tokens": null,
+    "usage": null,
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_01/json/sessions/e6283984e1d04a90b11e55e596a73d46/20261007T153438_872160Z_0ff362cb.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 1,
+    "format": "md",
+    "levels": {
+      "trust": "낮음",
+      "disclosure": "낮음",
+      "change_confidence": "낮음"
+    },
+    "status": "failed",
+    "response": "",
+    "finish_reason": null,
+    "error": "<urlopen error [Errno 1] Operation not permitted>",
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": null,
+    "inspection_tokens": null,
+    "usage": null,
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_01/md/sessions/bb60254eb5154c5d9daa9a44feb0bcff/20261007T153438_890846Z_a64ddf8f.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 2,
+    "format": "md",
+    "levels": {
+      "trust": "높음",
+      "disclosure": "낮음",
+      "change_confidence": "중간"
+    },
+    "status": "failed",
+    "response": "",
+    "finish_reason": null,
+    "error": "<urlopen error [Errno 1] Operation not permitted>",
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": null,
+    "inspection_tokens": null,
+    "usage": null,
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_02/md/sessions/0905d35f1e714199903d8440bb9b2bf2/20261007T153438_898261Z_0a786b6f.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 2,
+    "format": "json",
+    "levels": {
+      "trust": "높음",
+      "disclosure": "낮음",
+      "change_confidence": "중간"
+    },
+    "status": "failed",
+    "response": "",
+    "finish_reason": null,
+    "error": "<urlopen error [Errno 1] Operation not permitted>",
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": null,
+    "inspection_tokens": null,
+    "usage": null,
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_02/json/sessions/32785d2614da475984457bc90a7f3d19/20261007T153438_902936Z_fa16c134.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 3,
+    "format": "json",
+    "levels": {
+      "trust": "높음",
+      "disclosure": "높음",
+      "change_confidence": "높음"
+    },
+    "status": "failed",
+    "response": "",
+    "finish_reason": null,
+    "error": "<urlopen error [Errno 1] Operation not permitted>",
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": null,
+    "inspection_tokens": null,
+    "usage": null,
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_03/json/sessions/f77b391af8f94ab49d295b9c431d9b76/20261007T153438_908917Z_1ef623d4.json",
+    "format_only_verified": true
+  },
+  {
+    "pair": 3,
+    "format": "md",
+    "levels": {
+      "trust": "높음",
+      "disclosure": "높음",
+      "change_confidence": "높음"
+    },
+    "status": "failed",
+    "response": "",
+    "finish_reason": null,
+    "error": "<urlopen error [Errno 1] Operation not permitted>",
+    "tool_calls": [],
+    "tool_errors": 0,
+    "model_calls": 1,
+    "first_input_tokens": null,
+    "inspection_tokens": null,
+    "usage": null,
+    "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_03/md/sessions/d1a59781c6b44b59a2a34e0760f0cfa2/20261007T153438_913250Z_9886a41d.json",
+    "format_only_verified": true
+  }
+]

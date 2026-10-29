@@ -1,0 +1,275 @@
+{
+  "experiment_version": "state_summary",
+  "run_id": "state_summary_tool_probes_10_20261009T114000Z",
+  "session_id": "ea890c1323e947ff9528cc99a3f72f04",
+  "attempts": 10,
+  "committed_turns": 7,
+  "failed_attempts": [
+    5,
+    6,
+    8
+  ],
+  "model_generation_calls": {
+    "main": 13,
+    "retrieval_agents": 2,
+    "automatic_summary": 9,
+    "total": 24
+  },
+  "tool_calls": {
+    "retrieve_childhood": 1,
+    "retrieve_inner_state": 1,
+    "retrieve_situation": 1
+  },
+  "appraisals_committed": {
+    "부담·압박을 느낌": 7,
+    "이해받음": 1
+  },
+  "appraisals_all_raw": {
+    "부담·압박을 느낌": 9,
+    "이해받음": 2,
+    "선택권을 존중받음": 1
+  },
+  "usage_by_attempt": [
+    {
+      "attempt": 1,
+      "main_usage": {
+        "prompt_tokens": 3243,
+        "completion_tokens": 443,
+        "total_tokens": 3686
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "summary_usage": {},
+      "all_generation_usage": {
+        "prompt_tokens": 3243,
+        "completion_tokens": 443,
+        "total_tokens": 3686
+      },
+      "elapsed_seconds": 24.74
+    },
+    {
+      "attempt": 2,
+      "main_usage": {
+        "prompt_tokens": 7307,
+        "completion_tokens": 609,
+        "total_tokens": 7916
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 396,
+        "completion_tokens": 12,
+        "total_tokens": 408
+      },
+      "summary_usage": {
+        "prompt_tokens": 989,
+        "completion_tokens": 134,
+        "total_tokens": 1123
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 8692,
+        "completion_tokens": 755,
+        "total_tokens": 9447
+      },
+      "elapsed_seconds": 38.89
+    },
+    {
+      "attempt": 3,
+      "main_usage": {
+        "prompt_tokens": 3732,
+        "completion_tokens": 521,
+        "total_tokens": 4253
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "summary_usage": {
+        "prompt_tokens": 1788,
+        "completion_tokens": 188,
+        "total_tokens": 1976
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 5520,
+        "completion_tokens": 709,
+        "total_tokens": 6229
+      },
+      "elapsed_seconds": 35.84
+    },
+    {
+      "attempt": 4,
+      "main_usage": {
+        "prompt_tokens": 3893,
+        "completion_tokens": 494,
+        "total_tokens": 4387
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "summary_usage": {
+        "prompt_tokens": 2584,
+        "completion_tokens": 178,
+        "total_tokens": 2762
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 6477,
+        "completion_tokens": 672,
+        "total_tokens": 7149
+      },
+      "elapsed_seconds": 34.48
+    },
+    {
+      "attempt": 5,
+      "main_usage": {
+        "prompt_tokens": 4076,
+        "completion_tokens": 505,
+        "total_tokens": 4581
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "summary_usage": {
+        "prompt_tokens": 3387,
+        "completion_tokens": 203,
+        "total_tokens": 3590
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 7463,
+        "completion_tokens": 708,
+        "total_tokens": 8171
+      },
+      "elapsed_seconds": 35.97
+    },
+    {
+      "attempt": 6,
+      "main_usage": {
+        "prompt_tokens": 4070,
+        "completion_tokens": 474,
+        "total_tokens": 4544
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "summary_usage": {
+        "prompt_tokens": 3387,
+        "completion_tokens": 189,
+        "total_tokens": 3576
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 7457,
+        "completion_tokens": 663,
+        "total_tokens": 8120
+      },
+      "elapsed_seconds": 33.0
+    },
+    {
+      "attempt": 7,
+      "main_usage": {
+        "prompt_tokens": 4071,
+        "completion_tokens": 512,
+        "total_tokens": 4583
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "summary_usage": {
+        "prompt_tokens": 3387,
+        "completion_tokens": 192,
+        "total_tokens": 3579
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 7458,
+        "completion_tokens": 704,
+        "total_tokens": 8162
+      },
+      "elapsed_seconds": 35.04
+    },
+    {
+      "attempt": 8,
+      "main_usage": {
+        "prompt_tokens": 4298,
+        "completion_tokens": 433,
+        "total_tokens": 4731
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "summary_usage": {
+        "prompt_tokens": 4202,
+        "completion_tokens": 220,
+        "total_tokens": 4422
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 8500,
+        "completion_tokens": 653,
+        "total_tokens": 9153
+      },
+      "elapsed_seconds": 33.36
+    },
+    {
+      "attempt": 9,
+      "main_usage": {
+        "prompt_tokens": 9220,
+        "completion_tokens": 546,
+        "total_tokens": 9766
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "summary_usage": {
+        "prompt_tokens": 4202,
+        "completion_tokens": 208,
+        "total_tokens": 4410
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 13422,
+        "completion_tokens": 754,
+        "total_tokens": 14176
+      },
+      "elapsed_seconds": 38.1
+    },
+    {
+      "attempt": 10,
+      "main_usage": {
+        "prompt_tokens": 9157,
+        "completion_tokens": 590,
+        "total_tokens": 9747
+      },
+      "retrieval_usage": {
+        "prompt_tokens": 823,
+        "completion_tokens": 16,
+        "total_tokens": 839
+      },
+      "summary_usage": {
+        "prompt_tokens": 4971,
+        "completion_tokens": 177,
+        "total_tokens": 5148
+      },
+      "all_generation_usage": {
+        "prompt_tokens": 14951,
+        "completion_tokens": 783,
+        "total_tokens": 15734
+      },
+      "elapsed_seconds": 40.45
+    }
+  ],
+  "total_usage": {
+    "prompt_tokens": 83183,
+    "completion_tokens": 6844,
+    "total_tokens": 90027
+  }
+}

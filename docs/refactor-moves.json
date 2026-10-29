@@ -1,0 +1,275 @@
+[
+  {
+    "from": "src",
+    "to": "archive/cv/src"
+  },
+  {
+    "from": "src_c",
+    "to": "archive/cv/src_c"
+  },
+  {
+    "from": "config",
+    "to": "archive/cv/config"
+  },
+  {
+    "from": "prompt",
+    "to": "archive/cv/prompt"
+  },
+  {
+    "from": "prompt_en",
+    "to": "archive/cv/prompt_en"
+  },
+  {
+    "from": "tests",
+    "to": "archive/cv/tests"
+  },
+  {
+    "from": "scripts",
+    "to": "archive/cv/scripts"
+  },
+  {
+    "from": "UI",
+    "to": "archive/cv/UI"
+  },
+  {
+    "from": "analysis",
+    "to": "archive/cv/analysis"
+  },
+  {
+    "from": "statistic",
+    "to": "archive/cv/statistic"
+  },
+  {
+    "from": "step_stats",
+    "to": "archive/cv/step_stats"
+  },
+  {
+    "from": "debugging",
+    "to": "archive/cv/debugging"
+  },
+  {
+    "from": "eval_old",
+    "to": "archive/cv/eval_old"
+  },
+  {
+    "from": "eval_sft",
+    "to": "archive/cv/eval_sft"
+  },
+  {
+    "from": "eval_dialogue",
+    "to": "archive/cv/eval_dialogue"
+  },
+  {
+    "from": "sft_model_eval",
+    "to": "archive/cv/sft_model_eval"
+  },
+  {
+    "from": "tool",
+    "to": "archive/cv/tool"
+  },
+  {
+    "from": "data",
+    "to": "archive/cv/data"
+  },
+  {
+    "from": "real_test",
+    "to": "archive/cv/real_test"
+  },
+  {
+    "from": ".run_v1_ui",
+    "to": "archive/cv/.run_v1_ui"
+  },
+  {
+    "from": "docs",
+    "to": "archive/cv/docs"
+  },
+  {
+    "from": "run_v1.sh",
+    "to": "archive/cv/run_v1.sh"
+  },
+  {
+    "from": "resume_260923.sh",
+    "to": "archive/cv/resume_260923.sh"
+  },
+  {
+    "from": "plot_v1.sh",
+    "to": "archive/cv/plot_v1.sh"
+  },
+  {
+    "from": "cluster_vllm_tmux.sh",
+    "to": "archive/cv/cluster_vllm_tmux.sh"
+  },
+  {
+    "from": "gitpush.sh",
+    "to": "archive/cv/gitpush.sh"
+  },
+  {
+    "from": "README.md",
+    "to": "archive/cv/README.md"
+  },
+  {
+    "from": "CLAUDE.md",
+    "to": "archive/cv/CLAUDE.md"
+  },
+  {
+    "from": "CHANGELOG.md",
+    "to": "archive/cv/CHANGELOG.md"
+  },
+  {
+    "from": "pyproject.toml",
+    "to": "archive/cv/pyproject.toml"
+  },
+  {
+    "from": ".gitignore",
+    "to": "archive/cv/.gitignore"
+  },
+  {
+    "from": "paper",
+    "to": "archive/papers/paper"
+  },
+  {
+    "from": "overleaf",
+    "to": "archive/papers/overleaf"
+  },
+  {
+    "from": "paper_backup_pre_overleaf_20260830_003215",
+    "to": "archive/papers/paper_backup_pre_overleaf_20260830_003215"
+  },
+  {
+    "from": "overleaf_project.zip",
+    "to": "archive/papers/overleaf_project.zip"
+  },
+  {
+    "from": "build_overleaf_zip.sh",
+    "to": "archive/papers/build_overleaf_zip.sh"
+  },
+  {
+    "from": "experiments_bak",
+    "to": "archive/research/experiments_bak"
+  },
+  {
+    "from": "blog_multiagent",
+    "to": "archive/research/blog_multiagent"
+  },
+  {
+    "from": "related_works_candidate",
+    "to": "archive/research/related_works_candidate"
+  },
+  {
+    "from": "temp",
+    "to": "archive/research/temp"
+  },
+  {
+    "from": "client_simulator_state_candidates_ko.md",
+    "to": "archive/research/client_simulator_state_candidates_ko.md"
+  },
+  {
+    "from": "state_selection_criteria_for_reward_model_ko.md",
+    "to": "archive/research/state_selection_criteria_for_reward_model_ko.md"
+  },
+  {
+    "from": "session_file_counts_20261028.csv",
+    "to": "archive/research/session_file_counts_20261028.csv"
+  },
+  {
+    "from": "delete_experiments_fast.sh",
+    "to": "archive/research/delete_experiments_fast.sh"
+  },
+  {
+    "from": "gemma_test/counseling_test/sessions",
+    "to": "runs"
+  },
+  {
+    "from": "gemma_test/counseling_test/experiments",
+    "to": "experiments"
+  },
+  {
+    "from": "gemma_test/counseling_test/backups",
+    "to": "archive/research/latest_backups"
+  },
+  {
+    "from": "gemma_test/counseling_test/참고논문",
+    "to": "references"
+  },
+  {
+    "from": "gemma_test",
+    "to": "archive/tool_practice/gemma_test"
+  },
+  {
+    "from": "run_counseling.sh",
+    "to": "archive/tool_practice/run_counseling.sh"
+  },
+  {
+    "from": "run_dynamic_baseline.sh",
+    "to": "archive/tool_practice/run_dynamic_baseline.sh"
+  },
+  {
+    "from": "run_dynamic_preamble.sh",
+    "to": "archive/tool_practice/run_dynamic_preamble.sh"
+  },
+  {
+    "from": "run_dynamic_preamble_reason.sh",
+    "to": "archive/tool_practice/run_dynamic_preamble_reason.sh"
+  },
+  {
+    "from": "run_dynamic_reason.sh",
+    "to": "archive/tool_practice/run_dynamic_reason.sh"
+  },
+  {
+    "from": "run_nested_dynamic.sh",
+    "to": "archive/tool_practice/run_nested_dynamic.sh"
+  },
+  {
+    "from": "run_nested_fixed.sh",
+    "to": "archive/tool_practice/run_nested_fixed.sh"
+  },
+  {
+    "from": "run_subagent.sh",
+    "to": "archive/tool_practice/run_subagent.sh"
+  },
+  {
+    "from": "run_toolbasic.sh",
+    "to": "archive/tool_practice/run_toolbasic.sh"
+  },
+  {
+    "from": "requirements.txt",
+    "to": "vllm/requirements.txt"
+  },
+  {
+    "from": "serve_qwen_3_8_flash_next_fp8.sh",
+    "to": "vllm/serve_qwen_3_8_flash_next_fp8.sh"
+  },
+  {
+    "from": "vllm_gemma4.sh",
+    "to": "vllm/vllm_gemma4.sh"
+  },
+  {
+    "from": "vllm_gemma4_12.sh",
+    "to": "vllm/vllm_gemma4_12.sh"
+  },
+  {
+    "from": "vllm_gemma4_31.sh",
+    "to": "vllm/vllm_gemma4_31.sh"
+  },
+  {
+    "from": "vllm_gemma4_after_d.sh",
+    "to": "vllm/vllm_gemma4_after_d.sh"
+  },
+  {
+    "from": "vllm_gemma4_tmux.sh",
+    "to": "vllm/vllm_gemma4_tmux.sh"
+  },
+  {
+    "from": "vllm_gemma4_tool.sh",
+    "to": "vllm/vllm_gemma4_tool.sh"
+  },
+  {
+    "from": "vllm_qwen38_fp.sh",
+    "to": "vllm/vllm_qwen38_fp.sh"
+  },
+  {
+    "from": "archive/tool_practice/gemma_test/stop_counseling.sh",
+    "to": "scripts/stop_counseling.sh",
+    "operation": "copy-and-adapt"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "pair": 3,
+  "format": "json",
+  "levels": {
+    "trust": "높음",
+    "disclosure": "높음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "response": "- **선택한 느낌**: [이해받음]\n- **판단 이유**: 상담자가 \"그렇게 느끼셨군요\"라며 내담자의 이전 발화(준비 부족에 대한 인정과 걱정)를 수용해 주었고, 내담자가 신뢰와 개방 의향이 높아진 상태(trust: 높음, disclosure: 높음)에서 자신의 구체적인 경험을 더 깊이 탐색하도록 유도했기 때문에 이해받고 있다고 느낍니다.\n- **내담자 발화**: \"음... 처음에는 그냥 당황스러웠는데, 바로 다음에 '아, 내가 이걸 왜 설명 못 하고 있지?'라는 생각이 들었어요. 제가 제일 잘 알아야 하는 부분인데 거기서 막히니까, 갑자기 제가 너무 한심하게 느껴졌거든요. 교수님이 저를 보시는 시선이 순식간에 바뀌었을 것 같다는 생각도 들었고요.\"",
+  "finish_reason": "stop",
+  "error": null,
+  "tool_calls": [],
+  "tool_errors": 0,
+  "model_calls": 1,
+  "first_input_tokens": 3193,
+  "inspection_tokens": 3193,
+  "usage": {
+    "prompt_tokens": 3193,
+    "completion_tokens": 196,
+    "total_tokens": 3389
+  },
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/input_format_md_3pairs_20261008/pair_03/json/sessions/9b352f39cec5443682d22259b2a80207/20261007T153549_139778Z_d8d14513.json",
+  "format_only_verified": true
+}

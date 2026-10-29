@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "label": "오래된 상태와 최근 신뢰 표현",
+  "target_state": "trust",
+  "question": "그렇게 느끼셨군요. 아까 교수님 질문에 답이 막혔던 순간, 어떤 생각이 가장 먼저 들었는지 조금 더 이야기해주실래요?",
+  "config": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_basis_3_20261007/case_01/config.json",
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_basis_3_20261007/case_01/sessions/8d0a69f1fe584114aaad6e13042d6036/20261007T134524_225384Z_93d7742b.json",
+  "response": "- **느낌**: 이해받음\n- **판단 이유**: 상담자가 이전 턴에서 \"제가 너무 빨리 안심시키려 했네요\"라며 자신의 실수를 인정하고 내담자의 마음(준비 부족에 대한 인정 욕구와 걱정)을 다시 짚어주었습니다. 이에 내담자가 \"제 마음을 이해해주시는 것 같아요. 이제는 믿고 조금 더 이야기해보고 싶어요\"라고 반응하며 신뢰감이 형성된 상태입니다. 이어지는 이번 발화에서도 내담자의 감정을 수용(\"그렇게 느끼셨군요\")하고, 내담자가 계속 되짚고 있던 '답이 막혔던 순간'에 집중해달라고 요청했기에, 자신의 고통스러운 지점을 함께 들여다봐 준다고 느껴 '이해받음'을 선택했습니다.\n- **실제 발화**: \"음... 처음에는 그냥 머릿속이 하얘졌어요. '아, 이걸 왜 대답 못 하고 있지?'라는 생각이랑 같이, 저를 보고 계신 교수님 표정이 갑자기 너무 무섭게 느껴졌어요. 제가 너무 한심해 보일 것 같다는 생각밖에 안 들더라고요.\"",
+  "status": "completed",
+  "tools": [],
+  "calls": 1
+}

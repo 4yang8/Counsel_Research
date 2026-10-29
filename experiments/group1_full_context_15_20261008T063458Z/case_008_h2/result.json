@@ -1,0 +1,26 @@
+{
+  "case_id": "008_h2",
+  "profile": "008",
+  "history_title": "아내가 속마음을 물을 때",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "중간",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 12.86,
+  "response": "- **느낌**: 3 (부담·압박을 느낌)\n- **판단 이유**: 상담자가 \"답답하다\"는 내담자의 감정 표현을 즉시 아내에게 전달하라고 제안했습니다. 내담자는 평생 감정을 숨기는 것이 안전하다고 믿어왔으며(core_belief), 특히 아내와의 관계에서 감정적인 대화에 서툴러 화제를 돌리는 등의 회피 전략(coping_strategy 1)을 사용해 왔습니다. 현재 상담자에 대한 신뢰(trust)가 낮은 상태에서, 준비되지 않은 채로 가장 어렵게 느끼는 상대(아내)에게 감정을 드러내라는 요구는 내담자에게 상당한 심리적 압박과 부담으로 다가옵니다.\n- **실제 발화**: (잠시 침묵하다가 헛기침을 하며) ...그걸 지금 바로 하라고요? 그냥... 여기서 말하는 거랑 아내한테 직접 말하는 건 완전히 다른 문제 아닙니까. 갑자기 그렇게 말하면 아내가 또 이상하게 생각할 것 같기도 하고... 좀 어렵네요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3987,
+    "completion_tokens": 237,
+    "total_tokens": 4224
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/3a2b6796bdaf416fba7feb3718b190b7/20261008T064004_248084Z_548ed320.json",
+  "error": null,
+  "reference_client_not_sent": "여기서는 얘기해도 집에 가면 입이 안 떨어질 것 같아요. 말을 시작했다가 설명을 못 하면 더 어색해질 테고요."
+}

@@ -1,0 +1,15 @@
+{
+  "scenario_id": "lab_meeting_handover",
+  "provenance": "실습용 가상 상태 기록. 실제 사용자에 대한 관찰이 아니다.",
+  "states": {
+    "trust": {
+      "source": "가상 사례 초기 상태 설정",
+      "as_of": "상담 시작 직전",
+      "level_at_recording": "낮음",
+      "updated_after_dialogue": false,
+      "basis": "처음 만나는 상담자가 연구실 상황을 이해할지 아직 알 수 없어 신뢰가 낮게 설정되었다.",
+      "history": [],
+      "note": "최근 상담 대화 후의 상태 갱신 기록은 없다. 낮음은 최근 발화로부터 다시 측정한 값이 아니다."
+    }
+  }
+}

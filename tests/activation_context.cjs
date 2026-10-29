@@ -1,0 +1,48 @@
+const assert=require('node:assert/strict'),trace=require('../static/paired_trace.js'),view=require('../static/activation.js');
+const a=trace.create('counselor','test',1,'P3a','Q2a');
+const tool={type:'function',function:{name:'read_notes',description:'read',parameters:{type:'object'}}};
+const payload={model:'example',messages:[{role:'system',content:'MAIN_SYSTEM'},{role:'user',content:'## 공개 대화\n\nMAIN_USER'}],tools:[tool]};
+trace.accept(a,{type:'request',iteration:1,payload});
+trace.accept(a,{type:'chunk',data:{choices:[{delta:{reasoning:'THOUGHT',tool_calls:[{index:0,id:'a',function:{name:'read_',arguments:'{'}}]}}]}});
+trace.accept(a,{type:'chunk',data:{choices:[{delta:{tool_calls:[{index:0,function:{name:'notes',arguments:'}'}}]}}]}});
+let data=view.project(a.steps.at(-1),a.steps);assert.deepEqual(data.rows.map(r=>r.role),['system','user','tools']);
+assert.equal(data.drafts[0].name,'read_notes');assert.equal(data.drafts[0].arguments,'{}');assert.equal(data.reasoning,'THOUGHT');
+const assistant={role:'assistant',content:'',reasoning:'THOUGHT',tool_calls:[{id:'a',type:'function',function:{name:'read_notes',arguments:'{}'}}]};
+trace.accept(a,{type:'tool_start',call_id:'a',name:'read_notes',arguments:'{}',assistant_message:assistant});
+trace.accept(a,{type:'tool_result',call_id:'a',name:'read_notes',model_content:'NOTE_RESULT'});
+data=view.project(a.steps.at(-1),a.steps);
+assert.deepEqual(data.rows.map(r=>r.role),['system','user','tools']);
+assert.equal(data.calls.length,1);assert.equal(data.results[0].content,'NOTE_RESULT');assert.equal(data.drafts.length,0);
+assert(!JSON.stringify(data.rows).includes('NOTE_RESULT'));
+const second={...payload,messages:structuredClone(a.steps.at(-1).messages)};
+trace.accept(a,{type:'request',iteration:2,payload:second});data=view.project(a.steps.at(-1),a.steps);
+assert.deepEqual(data.rows.map(r=>r.role),['system','user','assistant','tool','tools']);
+assert.equal(data.rows[2].value.reasoning,'THOUGHT');assert.deepEqual(data.rows[3].tags,['read_notes']);
+assert.deepEqual(data.rows.filter(r=>r.changed).map(r=>r.role),['assistant','tool']);assert.equal(data.results.length,0);assert.equal(data.drafts.length,0);
+const wrap=event=>({type:'agent_event',agent_id:'guide',agent_name:'가이드 담당',parent_agent_id:'main',depth:1,event});
+trace.accept(a,wrap({type:'request',iteration:1,payload:{messages:[{role:'system',content:'CHILD_SYSTEM'},{role:'user',content:'CHILD_REQUEST'}]}}));
+trace.accept(a,wrap({type:'done',response:'CHILD_RESULT'}));data=view.project(a.steps.at(-1),a.steps);
+assert.equal(data.depth,1);assert.equal(data.output,'CHILD_RESULT');assert(!JSON.stringify(data.rows).includes('MAIN_SYSTEM'));assert(!JSON.stringify(data.rows).includes('NOTE_RESULT'));
+// A late child must not affect the old main call's input.
+assert.deepEqual(view.project(a.steps[0],a.steps).rows.map(r=>r.role),['system','user','tools']);
+// Q2a commits its public speech before the final state-update call. Do not
+// present that earlier speech as output produced by the last call's context.
+trace.accept(a,{type:'chunk',data:{choices:[{delta:{reasoning:'LAST_CALL_REASON'}}]}});
+trace.accept(a,{type:'tool_start',call_id:'b',name:'update_client_states',arguments:'{"updates":[]}',assistant_message:{role:'assistant',content:'',tool_calls:[{id:'b',type:'function',function:{name:'update_client_states',arguments:'{"updates":[]}'}}]}});
+trace.accept(a,{type:'tool_result',call_id:'b',name:'update_client_states',model_content:'saved'});
+trace.accept(a,{type:'client_record',response:'EARLIER_PUBLIC_SPEECH',response_source:'committed_utterance'});
+trace.accept(a,{type:'done',response:'EARLIER_PUBLIC_SPEECH',response_source:'committed_utterance'});
+data=view.project(a.steps.at(-1),a.steps);assert.equal(data.output,'');assert.equal(data.calls[0].function.name,'update_client_states');
+assert(!JSON.stringify(data.rows).includes('CHILD_REQUEST'));assert.equal(data.iteration,2);
+assert.equal(view.project({messages:payload.messages}).available,false);
+const drafts=[];view.mergeDrafts(drafts,[{index:0,function:{name:'read',arguments:'{'}}]);view.mergeDrafts(drafts,[{index:0,function:{name:'_notes',arguments:'}'}}]);assert.equal(drafts[0].name,'read_notes');
+console.log('PASS: request-only inputs, pending results, reasoning/tool history, subagent isolation, partial tools, terminal committed speech, no request');
+const old=view.project(a.steps[0],a.steps);
+assert(old.allRows.some(r=>!r.active && r.agent==='guide' && r.value.content==='CHILD_REQUEST'));
+assert(old.allRows.some(r=>!r.active && r.role==='tool' && r.value.content==='NOTE_RESULT'));
+assert.deepEqual(old.allRows.filter(r=>r.active).map(r=>r.role),['system','user','tools']);
+const child=view.project(a.steps.find(s=>s.agentId==='guide' && s.phase==='model'),a.steps);
+assert(child.allRows.filter(r=>r.active).every(r=>r.agent==='guide'));
+assert(child.allRows.some(r=>!r.active && r.value.content==='MAIN_SYSTEM'));
+assert.equal(old.allRows.length,new Set(old.allRows.map(r=>r.id)).size);
+console.log('PASS: full turn block inventory, inactive future/tool/child blocks, actual-input coloring and deduplication');

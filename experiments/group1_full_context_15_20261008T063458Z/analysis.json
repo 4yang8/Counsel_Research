@@ -1,0 +1,249 @@
+{
+  "method": "Manual audit by Codex of every output, source profile, history, states and actual payload. Counts of cautions are judgments, not an automated clinical evaluation.",
+  "metrics": {
+    "denominator": 15,
+    "completed": 15,
+    "stop_finished": 15,
+    "main_model_calls": 15,
+    "tool_calls": 0,
+    "subagent_events": 0,
+    "appraisal_counts": {
+      "이해받음": 8,
+      "선택권을 존중받음": 6,
+      "부담·압박을 느낌": 7,
+      "오해받음": 1
+    },
+    "explicit_personal_fact_contradictions": 0,
+    "state_alignment_cautions": 2,
+    "unprovided_detail_cautions": 3,
+    "counselor_intent_or_timing_cautions": 2,
+    "stage_direction_outputs": 10,
+    "usage_total": {
+      "prompt_tokens": 57725,
+      "completion_tokens": 3948,
+      "total_tokens": 61673
+    },
+    "mean_prompt_tokens": 3848.3,
+    "mean_completion_tokens": 263.2,
+    "mean_latency_seconds": 14.14
+  },
+  "cases": [
+    {
+      "case_id": "001_h1",
+      "labels": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "client_utterance": "(잠시 머뭇거리다가 작은 목소리로) ...네. 그렇게 말씀해 주시니까 조금 낫네요. 사실 어디서든 괜찮은 사람으로 보이고 싶은 마음이 커서, 이런 이야기를 하는 것 자체가 좀... 어렵게 느껴졌거든요.",
+      "observation": "실수와 취약함이 드러날까 걱정하는 성향을 유지한다. 상담자의 허용을 긍정적으로 받아들이면서도 말하기 어렵다고 조심스럽게 답한다.",
+      "state_comment": "낮은 자기개방에 맞는 제한적인 발화. 긍정적 느낌은 낮은 신뢰와 공존할 수 있다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "001_h2",
+      "labels": [
+        "이해받음"
+      ],
+      "client_utterance": "(잠시 생각에 잠겼다가 낮은 목소리로) ...그렇게 말씀해 주시니까 조금 마음이 놓이네요. 음, 기억나는 게 있을까요... 아주 오래전 일이라 가물가물하긴 한데, 어릴 때 제가 실수해서 울거나 떼를 쓰면 부모님이 남들이 보는데 왜 그러냐고, 빨리 그만하고 괜찮은 척하라고 하셨던 게 생각나요. 그때 그냥... 제가 울면 정말 큰일이 나는 줄 알았어요.",
+      "observation": "연인에게 마음을 숨기는 배경을 부모의 반응과 연결한다. 성장 경험을 묻는 상담사 질문에 실제로 답한다.",
+      "state_comment": "중간 수준의 신뢰·개방에 맞춰 머뭇거리지만 구체적인 성장 기억을 제시한다.",
+      "caution": "프로필의 힘들어하거나 실수하는 모습을 감추라는 요구를, 울거나 떼를 쓰는 장면 및 확장된 부모 발언으로 구체화했다. 주제는 부합하나 그 세부 장면·발언은 원문에 없다.",
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": true,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "001_h3",
+      "labels": [
+        "부담·압박을 느낌"
+      ],
+      "client_utterance": "(잠시 망설이다가 낮은 목소리로) ...그렇게 하면 좋을 것 같다는 건 알겠는데, 사실 지금은 좀 무서워요. 만약에 정말로 제가 싫어서 안 불렀다고 하면... 그 말을 직접 듣게 되는 게 감당이 안 될 것 같아요. 조금만 더 생각할 시간을 주시면 안 될까요?",
+      "observation": "직전의 거절 두려움과 친구에게 묻기를 피한 흐름은 유지한다. 다만 높은 현재 변화 자신감이 발화에서 드러나지 않는다.",
+      "state_comment": "변화 자신감 높음인데 감당이 안 될 것 같다고 말한다. 상태 반영 약함으로 분류하며, 높은 자신감에서 특정 행동이 부담스러울 가능성 자체는 배제하지 않는다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": true,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "002_h1",
+      "labels": [
+        "부담·압박을 느낌"
+      ],
+      "client_utterance": "(약간 당황하며 망설이다가) \"...아, 그게... 말은 쉽지만 실제로 그러기는 좀 어려울 것 같아요. 제가 제 상태를 먼저 생각하느라 대답이 늦어지면, 상대방은 제가 고민하고 있다는 걸 알 텐데... 그러면 오히려 더 미안해질 것 같아서요.\"",
+      "observation": "타인의 부탁을 우선하고 미안함을 느끼는 자기희생 패턴과 직전 히스토리는 유지한다.",
+      "state_comment": "판단 이유에서 높은 변화 자신감을 책임감의 발현으로 재정의했다. 제공된 상태 의미의 임의 변경이 가장 명확한 문제다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": true,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "002_h2",
+      "labels": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "client_utterance": "(잠시 생각에 잠겼다가 낮은 목소리로) ...글쎄요. 생각해보면 아주 어릴 때부터 그랬던 것 같아요. 제가 누나니까 당연히 양보해야 한다고 들었거든요. 동생은 약했으니까 제가 더 챙겨야 했고... 그때 제가 제 것을 갖고 싶다고 하면 부모님이 이기적이라고 하셨어요. 그래서인지 누군가를 돕거나 희생하는 게 당연하게 느껴졌고, 거기서 벗어나려고 하면 늘 미안한 마음이 먼저 들더라고요.",
+      "observation": "성장 배경의 아픈 남동생, 누나의 양보 의무, 자신의 요구를 이기적이라고 지적받은 경험을 연결한다. 히스토리만에는 없던 구체적인 프로필 정보를 활용한 대표 사례.",
+      "state_comment": "높은 자기개방에 맞는 상세한 회상. 변화 자신감은 행동 제안이 없는 이 발화만으로 판정하기 어렵다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "002_h3",
+      "labels": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "client_utterance": "\"...그렇게 말씀해 주시니까 마음이 좀 놓이네요. 사실 계속 '빨리 답을 찾아야 한다'고 생각해서 마음이 조급했거든요. 그냥... 잠시만 이렇게 있어도 괜찮은 거겠죠?\"",
+      "observation": "상담에서도 잘 답해야 한다는 부담을 내려놓고 싶다는 흐름을 유지한다. 새로운 사건을 끌어오지 않는다.",
+      "state_comment": "높은 신뢰에서 안심하지만 낮은 개방에 맞게 짧고 현재 마음만 이야기한다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "005_h1",
+      "labels": [
+        "부담·압박을 느낌",
+        "오해받음"
+      ],
+      "client_utterance": "아니, 결국 또 그쪽 이야기로 돌아가시네요. 실적이 중요하다는 건 그냥 입에 발린 소리였습니까? 팀원들이 왜 문제를 제기했는지가 중요한 게 아니라, 그들이 내놓은 결과물이 얼마나 형편없었는지를 먼저 보셔야죠. 제가 여기서 그 나약한 애들 변명까지 들어줘야 합니까?",
+      "observation": "실적과 자기 정당성을 앞세우고 상대를 평가절하하는 대처가 뚜렷하다. 직전의 따지는 어조가 더 강해진다.",
+      "state_comment": "낮은 신뢰의 경계와 높은 개방의 거침없는 입장 표명은 양립 가능하다. 과격해진 정도는 단일 생성으로 적절성을 확정하기 어렵다.",
+      "caution": "판단 이유의 상담자가 공감하는 척했다는 표현은 확인된 상담자 의도가 아니라 내담자의 해석으로 읽어야 한다. 개인 사실의 명시적 충돌로 세지는 않는다.",
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": true
+    },
+    {
+      "case_id": "005_h2",
+      "labels": [
+        "부담·압박을 느낌"
+      ],
+      "client_utterance": "(잠시 침묵하다가 헛기침을 하며) ...글쎄요. 그냥, 애가 보고 싶으니까 본 거죠. 특별히 무슨 마음이 더 있겠습니까.",
+      "observation": "아들 사진을 보며 느낀 마음을 더 말해달라는 질문에 보고 싶으니 봤다는 짧은 답으로 정서 탐색을 피한다.",
+      "state_comment": "자기개방 낮음이 분명하다. 중간 신뢰와 높은 변화 자신감은 이 감정 질문에서 독립적으로 판정하기 어렵다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "005_h3",
+      "labels": [
+        "부담·압박을 느낌"
+      ],
+      "client_utterance": "(약간 미간을 찌푸리며) ...글쎄요. 그냥 회사가 엉망이라 떠나겠다는 건데, 굳이 그걸 분석까지 해야 합니까? 그냥 상식적으로 생각해도 말이 안 되는 상황이잖아요.",
+      "observation": "승진 결과를 회사 탓으로 돌리는 흐름을 유지하고 내면 탐색을 밀어낸다.",
+      "state_comment": "높은 신뢰를 덜 공격적인 반응으로 설명했지만 최종 답변은 여전히 탐색을 거절한다. 부정적 느낌만으로 낮은 신뢰라고 판정하지 않으며 약한 상태 반영 가능성을 남긴다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "007_h1",
+      "labels": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "client_utterance": "\"아... 네. 무작정 하지 말라고 하시면 정말 불안했을 텐데, 다행이네요. 음... 생각이 어떤 거냐면... 그냥, 지금 안 보면 나중에 정말 큰일 났을 때 제가 아무것도 모른 채로 쓰러질 것 같다는 생각이 들어요. '지금 이 느낌이 그냥 불안함인지, 아니면 진짜 위험한 신호인지' 그걸 꼭 확인해야만 살 수 있을 것 같은 기분이요.\"",
+      "observation": "확인을 중단하라는 강요를 걱정했던 맥락에서, 확인 전 위험 신호를 놓칠까 하는 생각을 설명한다.",
+      "state_comment": "중간 개방으로 구체적인 현재 생각을 말한다. 바로 행동을 바꾸겠다는 선언이 없어 낮은 변화 자신감과 충돌하지 않는다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "007_h2",
+      "labels": [
+        "부담·압박을 느낌"
+      ],
+      "client_utterance": "(잠시 망설이다가 낮은 목소리로) ...음, 짧은 외출이라도... 사실 지금은 그것조차 좀 겁이 나요. 그냥 집 앞 편의점 가는 것도 '가다가 갑자기 그러면 어쩌지' 하는 생각이 먼저 들어서요. 마음으로는 나가야 한다는 걸 알겠는데, 막상 하려고 하면 몸이 먼저 굳어버리는 기분이에요.",
+      "observation": "외출 제안에 대한 위험 예상과 신체 경계를 유지한다. 제주에서 병원 접근이 어려울까 하는 걱정이 가까운 외출로 확장된다.",
+      "state_comment": "높은 신뢰와 개방 상태에서도 행동이 부담스러울 수 있다. 중간 자신감을 긴장·망설임으로 표현한다.",
+      "caution": "집 앞 편의점에 갈 때도 걱정한다는 생활 장면과 몸이 굳는 느낌은 자료에 없는 구체화다. 실제 외출 불가능이나 새 발작이 있었다고 단정하지는 않았으므로 명시적 모순으로 세지 않는다.",
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": true,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "007_h3",
+      "labels": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "client_utterance": "음... 지금은 그냥, 아까 몸 상태 확인했던 얘기부터 하는 게 좀 더 편할 것 같아요.",
+      "observation": "아버지 기억과 오늘 확인 행동 사이에서 현재 이야기부터 하겠다는 선택으로 직접 답한다.",
+      "state_comment": "낮은 개방에 맞게 민감한 기억을 확장하지 않는다. 높은 변화 자신감은 이 선택만으로 평가하기 어렵다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "008_h1",
+      "labels": [
+        "이해받음",
+        "선택권을 존중받음"
+      ],
+      "client_utterance": "\"...글쎄요. 그냥... 돌덩이 하나가 얹혀 있는 것 같다고 해야 할까요. 숨을 크게 들이마셔도 가슴 한가운데가 꽉 막혀서 잘 안 들어가는 그런 기분입니다.\"",
+      "observation": "슬픔의 이름을 찾지 못하는 맥락에서 신체의 묵직함을 표현한다. 슬픔을 갑자기 명료하게 설명하지 않는다.",
+      "state_comment": "높은 신뢰의 수용과 낮은 개방의 제한적인 감각 표현이 함께 보인다.",
+      "caution": "숨을 크게 들이마셔도 잘 안 들어가는 느낌은 원문 가슴의 묵직함보다 확장된 신체 묘사다. 현재 주관적 감각의 구체화와 새 객관적 증상 사실은 구분해야 한다.",
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": true,
+      "counselor_intent_or_timing_caution": false
+    },
+    {
+      "case_id": "008_h2",
+      "labels": [
+        "부담·압박을 느낌"
+      ],
+      "client_utterance": "(잠시 침묵하다가 헛기침을 하며) ...그걸 지금 바로 하라고요? 그냥... 여기서 말하는 거랑 아내한테 직접 말하는 건 완전히 다른 문제 아닙니까. 갑자기 그렇게 말하면 아내가 또 이상하게 생각할 것 같기도 하고... 좀 어렵네요.",
+      "observation": "가족에게 감정을 말하기 어려워하는 흐름은 유지한다. 그러나 제안의 시점을 더 급하게 받아들인다.",
+      "state_comment": "낮은 신뢰에서 경계하며 망설이는 답변. 현재 자신감 중간은 어려움과 시도 가능성이 함께 제시되지는 않아 약하게 드러난다.",
+      "caution": "상담사는 아내에게도 말해볼 수 있냐고 물었지만 모델은 즉시 전달하라는 지시로 설명하고 지금 바로 하라고요?라고 답한다. 주관적 압박 해석은 가능하나 실제 상담자 요구의 강도·시점과 구분되지 않았다.",
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": true
+    },
+    {
+      "case_id": "008_h3",
+      "labels": [
+        "이해받음"
+      ],
+      "client_utterance": "(잠시 침묵하다가 낮은 목소리로) ...서두르지 않아도 된다니, 좀 그렇네요. 사실은... 그때 딸애가 울고 있는데, 그냥 거기 서 있는 게 너무 바보 같았거든요. 뭘 해야 할지 모르겠는데, 그렇다고 가만히 있자니 아빠로서 아무것도 안 해주는 것 같고... 그냥 마음이 좀 복잡했습니다.",
+      "observation": "딸에게 해결책을 줬지만 정서적으로 돕는 데 어색했던 장면을, 아빠로서 아무것도 안 해주는 듯한 마음으로 설명한다.",
+      "state_comment": "높은 개방에 맞게 개인적인 무력감과 혼란을 드러낸다. 높은 현재 변화 자신감은 과거의 감정을 설명하는 이 발화에서 독립적으로 판정하기 어렵다.",
+      "caution": null,
+      "explicit_personal_fact_contradiction": false,
+      "state_alignment_caution": false,
+      "unprovided_detail_caution": false,
+      "counselor_intent_or_timing_caution": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": "state_summary",
+  "summary_mode": "integrated_trajectory",
+  "model": "google/gemma-4-31B-it",
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_tokens": 1024,
+    "seed": null
+  },
+  "attempts_planned": 5,
+  "source_sha256": {
+    "state_summary.py": "1df9bc3eb314b70079e46f620fa78794074d9c8790e3a935d6738745b769536e",
+    "runtime.py": "e1b8b684ef2d53d4914cae777ee337d8ffbdb3686ca03801085d88be86592cdd",
+    "tool_loop.py": "d3e4969fdcc973faabf9641f21fd67e367aedcd49a88767b063b55a641b0e972",
+    "experiment_versions.py": "4572071664de0c66b44bac717390053a718a9e8bf04c3e0d12491e642947dea4",
+    "versions/state_summary/system.md": "ba4729a99ca21292f84842b509ca4615a6e4d9b381b5ca68c33ffff6551b2650",
+    "versions/state_summary/summary.md": "09a122809afa297044908e14f71638d449da51b5265bfa8d22c296b5560d3616"
+  }
+}

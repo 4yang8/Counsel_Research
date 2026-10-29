@@ -1,0 +1,26 @@
+{
+  "scenario_id": "lab_meeting_handover",
+  "states": {
+    "trust": {
+      "source": "실험자 설정",
+      "as_of": "이번 상담사 발화를 듣기 직전",
+      "basis": null,
+      "history": [],
+      "note": "설정 이유와 이전 변화 이력이 제공되지 않았습니다."
+    },
+    "disclosure": {
+      "source": "실험자 설정",
+      "as_of": "이번 상담사 발화를 듣기 직전",
+      "basis": null,
+      "history": [],
+      "note": "설정 이유와 이전 변화 이력이 제공되지 않았습니다."
+    },
+    "change_confidence": {
+      "source": "실험자 설정",
+      "as_of": "이번 상담사 발화를 듣기 직전",
+      "basis": null,
+      "history": [],
+      "note": "설정 이유와 이전 변화 이력이 제공되지 않았습니다."
+    }
+  }
+}

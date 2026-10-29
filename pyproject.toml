@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "counseling-research"
+version = "0.1.0"
+description = "Interactive counseling research with versioned client and counselor agents"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+legacy-c4 = ["requests>=2.28"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["project_paths"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["app*", "client*", "counselor*", "runtime*", "storage*", "resources*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.json", "*.txt", "guides/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests", "experiments"]
+addopts = ["--import-mode=importlib", "-p", "no:cacheprovider"]

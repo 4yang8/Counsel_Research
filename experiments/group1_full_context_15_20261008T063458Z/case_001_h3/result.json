@@ -1,0 +1,26 @@
+{
+  "case_id": "001_h3",
+  "profile": "001",
+  "history_title": "친구들 사진을 본 뒤",
+  "states": {
+    "trust": "높음",
+    "disclosure": "높음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 14.65,
+  "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 상담자에 대한 신뢰와 개방 의향이 높고 변화 자신감도 있는 상태지만, 내담자의 핵심 신념(사람들이 진짜 나를 알면 떠날 것)과 대처 전략(상대가 실망하기 전에 먼저 거리를 둠)이 매우 강하게 작동하는 상황입니다. 특히 이번 사건(상황 3)에서 \"이유를 확인하면 정말 저를 빼고 싶었다는 얘기를 들을 수도 있다\"며 거절에 대한 극심한 두려움을 보였고, \"묻는 건 더 싫다\"고 명확히 표현했습니다. 이러한 내면의 공포가 해결되지 않은 상태에서 바로 '직접 물어보는 시도'를 제안받았기에, 상담자를 믿음과는 별개로 행동 자체에 대해 심리적 압박감과 부담을 느끼게 됩니다.\n- 실제 발화: (잠시 망설이다가 낮은 목소리로) ...그렇게 하면 좋을 것 같다는 건 알겠는데, 사실 지금은 좀 무서워요. 만약에 정말로 제가 싫어서 안 불렀다고 하면... 그 말을 직접 듣게 되는 게 감당이 안 될 것 같아요. 조금만 더 생각할 시간을 주시면 안 될까요?",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3529,
+    "completion_tokens": 279,
+    "total_tokens": 3808
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/0d1b7ac1307f445ea10bc681a3a8e4e9/20261008T063723_907225Z_19c74678.json",
+  "error": null,
+  "reference_client_not_sent": "맞는 방법일 수는 있는데, 당장 하라고 하면 좀 막막해요. 그 대답을 제가 감당할 수 있을지도 모르겠고요."
+}

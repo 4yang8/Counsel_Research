@@ -1,0 +1,47 @@
+{
+  "session_id": "261016_140310",
+  "session_path": "gemma_test/counseling_test/sessions/paired/261016_140310/session.json",
+  "question": "고정 노트 제목과 기록 기준이 정정 일관성·작업 전환 기록에 미치는 국소적 영향",
+  "condition": "P3 고정 제목 초기 양식 + 시스템 지침. 도구/강제 검증 추가 없음.",
+  "comparison": "기존 세션 0fa12c3674024627a3c1bbbcdf98eff7은 참고 사례이며 동일 입력의 통제 대조 실험은 아님.",
+  "model": {
+    "model": "Qwen/Qwen3.8-27B-FP8",
+    "vllm_url": "http://127.0.0.1:18001/v1",
+    "timeout_seconds": 180,
+    "inspect_prompt": true,
+    "inspection_timeout_seconds": 10,
+    "api_key_env": "VLLM_API_KEY",
+    "chat_template_kwargs": {
+      "enable_thinking": true
+    }
+  },
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_tokens": 1536,
+    "seed": null
+  },
+  "client_author": "Codex가 상담사 응답에 맞춰 작성한 내담자 발화",
+  "expected_counselor_turns": 5,
+  "checks": [
+    "고정 제목·순서 유지",
+    "정정된 사실과 관련 해석의 갱신",
+    "방향 전환과 목표 달성 구분",
+    "발송 결정 미정이라는 경계",
+    "가이드 조회·노트 갱신·실제 발화 연계",
+    "반복 탐색과 실제 대화 진전"
+  ],
+  "source_sha256": {
+    "runtime.py": "f0e52dabb1c56382b8063acbc589c8ce67810ef0d532f0f9ff1521b8a84d75bd",
+    "system.md": "478ea6e5a5356cd78f7954a2bd3c16668d3eb48e35d9c3fcd95edc2ec1dd2148",
+    "notes_template.md": "34c2584852cfa7a08a326f07c8b503e22401d38d3d48ca5d822193e470740fba",
+    "counselor_notes_template.md": "c92a6aa07aedcdaf05e1cd49b1ee4cbf82aa183cb3fa81f4888ad5eb43d2166f"
+  },
+  "completed_counselor_turns": 5,
+  "attempts": 7,
+  "failed_attempts": 2,
+  "successful_note_writes": 12,
+  "headings_preserved_writes": 12,
+  "tool_error_count": 2,
+  "fixed_max_tokens": 1536
+}

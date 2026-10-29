@@ -1,0 +1,34 @@
+{
+  "selected_outputs": 6,
+  "completed": 6,
+  "json_outputs": 3,
+  "md_outputs": 3,
+  "json_tool_calls": 0,
+  "md_tool_calls": 0,
+  "json_first_input_tokens_total": 9585,
+  "md_first_input_tokens_total": 9119,
+  "input_tokens_saved": 466,
+  "input_token_reduction_percent": 4.861763171622327,
+  "validation": [
+    {
+      "pair": 1,
+      "equal_leaf_paths_values_and_order": true,
+      "leaf_count": 50,
+      "all_other_request_fields_equal": true
+    },
+    {
+      "pair": 2,
+      "equal_leaf_paths_values_and_order": true,
+      "leaf_count": 50,
+      "all_other_request_fields_equal": true
+    },
+    {
+      "pair": 3,
+      "equal_leaf_paths_values_and_order": true,
+      "leaf_count": 50,
+      "all_other_request_fields_equal": true
+    }
+  ],
+  "qualitative_method": "Direct reading of all six outputs; no model judge or inferred psychological score.",
+  "excluded": "Three preliminary Markdown generations before the hierarchy refinement; six sandbox connection attempts produced no outputs."
+}

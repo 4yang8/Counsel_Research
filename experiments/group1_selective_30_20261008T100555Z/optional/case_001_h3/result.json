@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "001_h3",
+  "profile": "001",
+  "history_title": "친구들 사진을 본 뒤",
+  "states": {
+    "trust": "높음",
+    "disclosure": "높음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 10.29,
+  "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 이전 대화에서 내담자가 확인하지 않음으로써 상처를 피하려 했던 마음을 먼저 짚어주었고(이해받음), 그 흐름 속에서 조심스럽게 새로운 시도를 제안했기 때문입니다. 현재 내담자의 상담자에 대한 신뢰(trust)와 자기개방 의향(disclosure), 변화에 대한 자신감(change_confidence)이 모두 높은 상태이므로, 갑작스러운 제안임에도 불구하고 이를 압박으로 느끼기보다 나를 위한 적절한 제안으로 받아들일 가능성이 큽니다.\n- 실제 발화: 음... 사실 생각만 해도 좀 떨리긴 하는데요. 그래도 계속 이렇게 혼자 추측하면서 마음 쓰는 것보다, 이번에는 한 번 용기 내서 물어볼게요. 어떻게 말을 꺼내는 게 좋을까요?",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2274,
+    "completion_tokens": 194,
+    "total_tokens": 2468
+  },
+  "main_usage": {
+    "prompt_tokens": 2274,
+    "completion_tokens": 194,
+    "total_tokens": 2468
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/c2df57a085024aaaa236d7fc7042a0d9/20261008T100905_699210Z_f1031821.json",
+  "error": null
+}

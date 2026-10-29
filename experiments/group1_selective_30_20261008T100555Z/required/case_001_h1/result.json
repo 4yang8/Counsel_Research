@@ -1,0 +1,65 @@
+{
+  "condition": "required",
+  "case_id": "001_h1",
+  "profile": "001",
+  "history_title": "회의에서 드러난 실수",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "낮음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 17.37,
+  "response": "- 느낌: [1: 이해받음]\n- 판단 이유: 상담자가 내담자가 방금 언급한 '여기서도 별로인 사람처럼 보일까 봐 신경 쓰인다'는 불안과 조심스러움을 정확히 짚어주었습니다. 또한, '편한 범위까지만 이야기해도 괜찮다'며 내담자의 속도와 경계를 존중해주었기 때문에, 자신의 수치심과 방어 기제를 비난하지 않고 이해해 준다고 느꼈습니다. 다만, 신뢰도와 자기개방 의향이 여전히 낮으므로 갑자기 마음을 다 열기보다는 조심스럽게 안도감을 느끼는 상태입니다.\n- 실제 발화: \"...네. 그렇게 말씀해 주시니까 조금 마음이 놓이네요. 사실 이런 말 하는 것조차 좀 이상해 보일까 봐 걱정됐거든요.\"",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 5335,
+    "completion_tokens": 327,
+    "total_tokens": 5662
+  },
+  "main_usage": {
+    "prompt_tokens": 4917,
+    "completion_tokens": 311,
+    "total_tokens": 5228
+  },
+  "subagent_usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 16,
+    "total_tokens": 434
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_childhood",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_469ad7ecf064",
+        "profile_id": "gold_001",
+        "database": "childhood_data",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json",
+        "record": {
+          "id": "childhood_1",
+          "text": "내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다."
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_469ad7ecf064\", \"profile_id\": \"gold_001\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_001.json\", \"record\": {\"id\": \"childhood_1\", \"text\": \"내담자는 어릴 적 부모가 성취나 겉으로 보이는 모습에 대해서만 칭찬하고, 힘들어하거나 실수하는 모습을 보이면 '남들 앞에서 그러지 말라'며 감추도록 요구받았습니다.\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_469ad7ecf064",
+      "name": "성장 경험 조회 담당",
+      "response": "```json\n{\"record_id\":\"childhood_1\"}\n```",
+      "usage": {
+        "prompt_tokens": 418,
+        "completion_tokens": 16,
+        "total_tokens": 434
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/f0b3ed07446c4fe6afb03671c4518f48/20261008T100812_673384Z_7e1b4cab.json",
+  "error": null
+}

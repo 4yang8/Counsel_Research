@@ -1,0 +1,133 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "delegate_task",
+      "description": "역할과 작업 지시를 작성하여 별도 컨텍스트의 서브에이전트에게 작업을 맡기고 최종 결과를 받습니다. 호출 이유를 일반 응답 텍스트에 먼저 작성하고, 같은 응답에서 이 도구를 호출하세요.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "이 작업을 위임하는 이유를 한국어 한 문장으로 설명하세요."
+          },
+          "role": {
+            "type": "string",
+            "description": "서브에이전트의 역할. 자식의 시스템 프롬프트로 전달됩니다."
+          },
+          "task": {
+            "type": "string",
+            "description": "서브에이전트에게 전달할 작업 지시와 필요한 정보."
+          }
+        },
+        "required": [
+          "reason",
+          "role",
+          "task"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "retrieve_experience",
+      "description": "과거 개인 경험을 키워드로 검색합니다. 과거 사실을 묻는 질문뿐 아니라 현재 상담자의 말·제안이 내담자에게 어떤 의미인지 이해하는 데 관련 경험이 필요할 때 사용할 수 있습니다. 현재 정보가 충분하면 조회할 필요가 없습니다. 사건과 당시의 주관적 해석은 구분하세요. 빈 결과는 경험의 부재나 기억 실패를 뜻하지 않습니다. 현재 사건 상세는 inspect_current_event, 현재 실행 여건은 get_current_constraints를 사용하세요. 조회한 내용을 모두 공개할 필요는 없습니다. 호출 이유를 일반 텍스트로 먼저 밝히고 reason에도 작성하세요.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "현재 입력만으로 부족한 정보와 과거 경험을 조회하려는 이유."
+          },
+          "query": {
+            "type": "string",
+            "maxLength": 300,
+            "description": "찾으려는 과거 경험의 핵심어. 예: 교수님 이전 피드백, 발표 준비 연습, 동료 실수. 키워드 기반 검색이므로 결과가 없으면 표현을 바꿔 조회할 수 있습니다."
+          }
+        },
+        "required": [
+          "reason",
+          "query"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "inspect_current_event",
+      "description": "현재 상담에서 다루는 사건의 상세 기록을 확인합니다. 현재 대화에 없는 실제 질문·응답·진행 순서·요청 내용을 알아야 할 때 사용합니다. 관찰된 사실과 내담자의 당시 해석을 구분하며 타인의 속마음을 제공하지 않습니다. 현재 정보로 충분하면 조회할 필요가 없습니다. 호출 이유를 일반 텍스트로 먼저 밝히고 reason에도 작성하세요.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "현재 판단에 필요한 정보와 조회 이유."
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_current_constraints",
+      "description": "현재 상담 시점의 일정·가용 시간·접근 가능한 자료·선행 조건·이미 완료한 일을 확인합니다. 상담자의 행동 제안이 현실적으로 가능한지 판단할 정보가 부족할 때 사용합니다. 심리 상태나 감정을 판정하지 않으며 계획을 실제 완료로 변경하지 않습니다. 현재 정보로 충분하면 조회할 필요가 없습니다. 호출 이유를 일반 텍스트로 먼저 밝히고 reason에도 작성하세요.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "현재 판단에 필요한 정보와 조회 이유."
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "inspect_state_basis",
+      "description": "특정 상태값이 언제, 어떤 출처와 근거로 설정되었는지 기록을 조회합니다. 현재 상태와 최근 내담자 발화가 상반되어 보이거나, 겉으로 한 말과 내부 상태의 관계를 판단할 근거가 부족할 때 사용합니다. 시점·근거가 이미 명확하면 조회할 필요가 없습니다. 실제 저장된 기록만 제공하며 기록이 없을 수 있습니다. 상태를 변경하거나 이번 감정을 대신 결정하지 않습니다.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "enum": [
+              "trust",
+              "disclosure",
+              "change_confidence"
+            ],
+            "description": "관계를 확인할 상태 항목."
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "어떤 발화와 상태의 관계가 불분명하며 무엇을 확인하려는지 설명하세요."
+          }
+        },
+        "required": [
+          "state",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+]

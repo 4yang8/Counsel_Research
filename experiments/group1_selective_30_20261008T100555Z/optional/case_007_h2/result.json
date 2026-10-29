@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "007_h2",
+  "profile": "007",
+  "history_title": "제주 워크숍을 포기한 일",
+  "states": {
+    "trust": "높음",
+    "disclosure": "높음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 12.31,
+  "response": "- 느낌: [3: 부담·압박을 느낌]\n- 판단 이유: 상담자가 내담자의 양가감정(안심하고 싶은 마음 vs 답답함)을 공감해준 직후, 바로 '외출 시도'라는 구체적인 행동 변화를 제안했습니다. 내담자는 현재 변화에 대한 자신감이 '중간' 단계로, 시도는 해볼 수 있다고 생각하지만 확신은 없는 상태입니다. 특히 '병원 근처를 벗어나지 못하는' 강한 위험/질병 취약성 도식과 \"나가서 무슨 일이 생기면 제가 책임져야 한다\"는 책임감 및 공포가 큰 상황에서, 갑작스러운 행동 제안은 심리적인 압박감으로 다가올 수 있습니다.\n- 실제 발화: (약간 망설이는 말투로) ...네, 저도 그러고 싶긴 한데... 막상 나가려고 하면 또 '진짜 괜찮을까' 하는 생각부터 들어서요. 아주 짧은 거리라도 갑자기 숨이 안 쉬어지면 어떡하나 싶어 겁이 나네요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2553,
+    "completion_tokens": 236,
+    "total_tokens": 2789
+  },
+  "main_usage": {
+    "prompt_tokens": 2553,
+    "completion_tokens": 236,
+    "total_tokens": 2789
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/c5fe7c5681c646ea8287deb0aca9d9db/20261008T101340_728882Z_e5f8f778.json",
+  "error": null
+}

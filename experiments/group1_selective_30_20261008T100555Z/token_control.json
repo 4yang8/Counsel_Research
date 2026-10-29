@@ -1,0 +1,95 @@
+{
+  "note": "Same model template and same two retrieval tool schemas, only initial profile content differs. Tokenization only; not a third generation set.",
+  "cases": [
+    {
+      "case_id": "001_h1",
+      "full_same_two_tools": 2978,
+      "selective_same_two_tools": 2276,
+      "saved_tokens": 702
+    },
+    {
+      "case_id": "001_h2",
+      "full_same_two_tools": 2994,
+      "selective_same_two_tools": 2292,
+      "saved_tokens": 702
+    },
+    {
+      "case_id": "001_h3",
+      "full_same_two_tools": 2976,
+      "selective_same_two_tools": 2274,
+      "saved_tokens": 702
+    },
+    {
+      "case_id": "002_h1",
+      "full_same_two_tools": 3202,
+      "selective_same_two_tools": 2390,
+      "saved_tokens": 812
+    },
+    {
+      "case_id": "002_h2",
+      "full_same_two_tools": 3201,
+      "selective_same_two_tools": 2389,
+      "saved_tokens": 812
+    },
+    {
+      "case_id": "002_h3",
+      "full_same_two_tools": 3195,
+      "selective_same_two_tools": 2383,
+      "saved_tokens": 812
+    },
+    {
+      "case_id": "005_h1",
+      "full_same_two_tools": 3377,
+      "selective_same_two_tools": 2462,
+      "saved_tokens": 915
+    },
+    {
+      "case_id": "005_h2",
+      "full_same_two_tools": 3368,
+      "selective_same_two_tools": 2453,
+      "saved_tokens": 915
+    },
+    {
+      "case_id": "005_h3",
+      "full_same_two_tools": 3346,
+      "selective_same_two_tools": 2431,
+      "saved_tokens": 915
+    },
+    {
+      "case_id": "007_h1",
+      "full_same_two_tools": 3464,
+      "selective_same_two_tools": 2548,
+      "saved_tokens": 916
+    },
+    {
+      "case_id": "007_h2",
+      "full_same_two_tools": 3469,
+      "selective_same_two_tools": 2553,
+      "saved_tokens": 916
+    },
+    {
+      "case_id": "007_h3",
+      "full_same_two_tools": 3511,
+      "selective_same_two_tools": 2595,
+      "saved_tokens": 916
+    },
+    {
+      "case_id": "008_h1",
+      "full_same_two_tools": 3456,
+      "selective_same_two_tools": 2501,
+      "saved_tokens": 955
+    },
+    {
+      "case_id": "008_h2",
+      "full_same_two_tools": 3434,
+      "selective_same_two_tools": 2479,
+      "saved_tokens": 955
+    },
+    {
+      "case_id": "008_h3",
+      "full_same_two_tools": 3459,
+      "selective_same_two_tools": 2504,
+      "saved_tokens": 955
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "C_information_contribution",
+  "label": "정보의 기여도 검토",
+  "hypothesis": "각 특성의 구체적인 기여도를 따지면 단순 주제 유사성으로 모두 선택하거나 배경 중복을 없애려고 불필요하게 조합을 바꾸는 현상이 줄어들 수 있다.",
+  "prefill": "I will consider what each candidate contributes to understanding the client's perspective on this exchange. For each relevant trait, I will identify the specific belief, expectation, or coping tendency it clarifies and the supplied evidence for that connection. Related traits may contribute different aspects, and a shared background may support several connections. I will resolve uncertain links, then return the supported selections.",
+  "status": "complete",
+  "error": null,
+  "elapsed_seconds": 27.72,
+  "usage": {
+    "prompt_tokens": 3028,
+    "total_tokens": 4143,
+    "completion_tokens": 1115
+  },
+  "segment_token_counts": {
+    "reasoning": 1,
+    "final_json": 1112,
+    "prefill": 73
+  },
+  "segment_count_note": "Each text segment is tokenized independently; these are not API reasoning-token accounting.",
+  "reasoning_chars": 1,
+  "selected_traits": [
+    "/core_belief/core_belief_statement",
+    "/intermediate_beliefs/attitude",
+    "/coping_strategies/1",
+    "/coping_strategies/0"
+  ]
+}

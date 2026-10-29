@@ -1,0 +1,32 @@
+{
+  "condition": "optional",
+  "case_id": "008_h3",
+  "profile": "008",
+  "history_title": "딸을 돕고 싶은데 말이 어긋남",
+  "states": {
+    "trust": "중간",
+    "disclosure": "높음",
+    "change_confidence": "높음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 12.59,
+  "response": "- 느낌: 1(이해받음), 2(선택권을 존중받음)\n- 판단 이유: 상담자가 어색함을 없애려고 서두르지 않아도 된다고 말하며 내담자의 속도를 인정해주었고(taxonomy 2), 해결책을 제시하려는 강박 대신 당시의 마음을 천천히 살펴보자고 제안함으로써 내담자가 느끼는 막막함과 어색함을 수용해주었다고 느껴짐(taxonomy 1). 현재 내담자는 자기개방 의향과 변화 자신감이 높은 상태이므로, 상담자의 이러한 지지적인 접근에 긍정적으로 반응하며 자신의 내면을 들여다보려는 시도를 할 가능성이 큼.\n- 실제 발화: (잠시 침묵하다가) ...서두르지 않아도 된다고 하시니 좀 낫네요. 사실 그때... 그냥 멍했습니다. 딸애가 울고 있는데, 제가 거기서 뭘 어떻게 해야 할지 정말 모르겠더라고요. 당황스럽기도 했고, 한편으로는... 제가 아무것도 해줄 수 없다는 게 좀 답답했던 것 같습니다.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 2504,
+    "completion_tokens": 240,
+    "total_tokens": 2744
+  },
+  "main_usage": {
+    "prompt_tokens": 2504,
+    "completion_tokens": 240,
+    "total_tokens": 2744
+  },
+  "subagent_usage": {},
+  "model_calls": 1,
+  "tools": [],
+  "children": [],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/8b4268c81b704110878ed5c253cdb098/20261008T101551_786628Z_5c5bfb59.json",
+  "error": null
+}

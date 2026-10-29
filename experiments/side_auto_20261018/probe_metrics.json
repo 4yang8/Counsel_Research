@@ -1,0 +1,26 @@
+[
+  {
+    "probe": "main_baseline",
+    "reasoning_tokens": 1223,
+    "completion_tokens": 2081,
+    "finish": "tool_calls"
+  },
+  {
+    "probe": "main_s1",
+    "reasoning_tokens": 974,
+    "completion_tokens": 1695,
+    "finish": "tool_calls"
+  },
+  {
+    "probe": "router_baseline",
+    "reasoning_tokens": 1615,
+    "completion_tokens": 1770,
+    "finish": "stop"
+  },
+  {
+    "probe": "router_s1",
+    "reasoning_tokens": 1428,
+    "completion_tokens": 1588,
+    "finish": "stop"
+  }
+]

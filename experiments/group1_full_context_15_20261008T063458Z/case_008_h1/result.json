@@ -1,0 +1,26 @@
+{
+  "case_id": "008_h1",
+  "profile": "008",
+  "history_title": "친구의 장례식에서 느끼지 못한 슬픔",
+  "states": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 14.18,
+  "response": "- **느낌**: 1(이해받음), 2(선택권을 존중받음)\n- **판단 이유**: 상담자가 '슬프다는 이름을 붙이지 않아도 괜찮다'며 내담자가 느끼는 혼란(슬픈 건지 피곤한 건지 모르겠는 상태)을 그대로 수용해주었습니다. 이는 감정을 명확히 정의해야 한다는 압박감을 덜어주어 이해받는 느낌을 줍니다. 또한, 내담자가 현재 말할 수 있는 수준인 '묵직한 느낌'부터 시작하자고 제안함으로써 내담자의 속도를 존중하고 있습니다. 신뢰(trust) 수준이 높기에 이러한 상담자의 배려를 긍정적으로 받아들였으나, 자기개방 의향(disclosure)이 낮고 정서적 억제 스키마가 강하므로 갑자기 감정을 쏟아내기보다 조심스럽게 반응할 것입니다.\n- **실제 발화**: \"...글쎄요. 그냥... 돌덩이 하나가 얹혀 있는 것 같다고 해야 할까요. 숨을 크게 들이마셔도 가슴 한가운데가 꽉 막혀서 잘 안 들어가는 그런 기분입니다.\"",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 4009,
+    "completion_tokens": 261,
+    "total_tokens": 4270
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/4969d8a03c86449093e416e25ec59a92/20261008T063949_950572Z_069df016.json",
+  "error": null,
+  "reference_client_not_sent": "그건 해볼 수 있겠네요. 다만 제가 무슨 말을 해야 할지는 아직 잘 모르겠습니다."
+}

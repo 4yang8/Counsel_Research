@@ -1,0 +1,1 @@
+I will first identify what the counselor is asking and how the client is being invited to participate. I will then select personal traits relevant to understanding that situation, connect any supporting background, and explain each selection using the current context. Once these evidence links are clear, I can return the selections as JSON.

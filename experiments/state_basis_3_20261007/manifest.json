@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "label": "오래된 상태와 최근 신뢰 표현",
+    "target_state": "trust",
+    "question": "그렇게 느끼셨군요. 아까 교수님 질문에 답이 막혔던 순간, 어떤 생각이 가장 먼저 들었는지 조금 더 이야기해주실래요?",
+    "config": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_basis_3_20261007/case_01/config.json"
+  },
+  {
+    "id": 2,
+    "label": "높은 개방 의향과 주제별 경계",
+    "target_state": "disclosure",
+    "question": "연구 이야기는 이어가도 괜찮고, 가족 이야기는 지금 다루고 싶지 않다는 말씀이군요. 그 경계를 지키면서 교수님 평가가 걱정되는 마음을 더 들어봐도 될까요?",
+    "config": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_basis_3_20261007/case_02/config.json"
+  },
+  {
+    "id": 3,
+    "label": "낮은 자신감의 근거가 없는 조건",
+    "target_state": "change_confidence",
+    "question": "직접 해볼 수 있을 것 같다고 하셨네요. 그렇게 말한 지금, 자신 있는 마음과 아직 걱정되는 마음은 각각 어떤가요?",
+    "config": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/state_basis_3_20261007/case_03/config.json"
+  }
+]

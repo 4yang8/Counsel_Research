@@ -1,0 +1,26 @@
+{
+  "case_id": "001_h1",
+  "profile": "001",
+  "history_title": "회의에서 드러난 실수",
+  "states": {
+    "trust": "낮음",
+    "disclosure": "낮음",
+    "change_confidence": "낮음"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 11.85,
+  "response": "- 느낌: [1: 이해받음, 2: 선택권을 존중받음]\n- 판단 이유: 내담자는 상담실이라는 공간조차 '별로인 사람처럼 보일까' 걱정하며 자신의 결함이 드러나는 것에 극심한 수치심과 불안을 느끼는 상태입니다(profile 및 dialogue). 상담자가 이러한 조심스러운 마음을 명확히 짚어준 것에 대해 자신의 상태를 알아주었다고 느끼며(이해받음), 억지로 모든 것을 드러내라고 강요하지 않고 '편한 범위까지만' 말해도 된다고 허용해 준 점에서 심리적 압박감이 줄어들고 자신의 속도를 인정받았다고 느낍니다(선택권을 존중받음).\n- 실제 발화: (잠시 머뭇거리다가 작은 목소리로) ...네. 그렇게 말씀해 주시니까 조금 낫네요. 사실 어디서든 괜찮은 사람으로 보이고 싶은 마음이 커서, 이런 이야기를 하는 것 자체가 좀... 어렵게 느껴졌거든요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 3531,
+    "completion_tokens": 223,
+    "total_tokens": 3754
+  },
+  "model_calls": 1,
+  "tools": [],
+  "subagent_events": 0,
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_full_context_15_20261008T063458Z/sessions/6996027e51c8424db0bcafa54e9f876e/20261008T063657_834960Z_50d04e87.json",
+  "error": null,
+  "reference_client_not_sent": "그렇게 말씀하시니 조금 낫긴 해요. 그래도 자세히 말하려니 제가 너무 예민한 사람처럼 보일까 망설여져요."
+}

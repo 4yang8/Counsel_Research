@@ -1,0 +1,65 @@
+{
+  "condition": "required",
+  "case_id": "002_h3",
+  "profile": "002",
+  "history_title": "내가 원하는 것을 묻는 질문",
+  "states": {
+    "trust": "높음",
+    "disclosure": "낮음",
+    "change_confidence": "중간"
+  },
+  "status": "completed",
+  "finish_reason": "stop",
+  "latency_seconds": 21.97,
+  "response": "- 느낌: [1, 2]\n- 판단 이유: 상담자가 '아무것도 결정하지 않아도 된다'며 내담자의 속도를 존중해주었고(선택권 존중), 정답을 찾아야 한다는 압박감에서 벗어나 현재의 상태(쉬고 싶은 마음)에 머물 수 있도록 배려해주었기 때문에 이해받고 있다는 느낌을 받았습니다. 특히 \"여기서도 잘 말씀드려야 할 것 같았다\"고 말하며 상담 상황에서도 타인의 기대에 부응하려 했던 내담자의 특성과, '내 욕구를 내세우는 것은 나쁜 일'이라는 핵심 신념(childhood_4)을 고려할 때, 이러한 허용적인 태도는 내담자에게 큰 심리적 안도감을 줍니다.\n- 실제 발화: (조금 안심한 듯한 한숨을 내쉬며) ...네. 그냥 그렇게 있어도 된다고 하시니까, 정말 마음이 좀 놓이네요. 사실 계속 '뭐라고 답해야 상담사님이 도움이 되실까' 하는 생각만 했거든요. 그냥... 지금은 그냥 가만히 있고 싶어요.",
+  "reasoning": "",
+  "usage": {
+    "prompt_tokens": 5608,
+    "completion_tokens": 386,
+    "total_tokens": 5994
+  },
+  "main_usage": {
+    "prompt_tokens": 5128,
+    "completion_tokens": 375,
+    "total_tokens": 5503
+  },
+  "subagent_usage": {
+    "prompt_tokens": 480,
+    "completion_tokens": 11,
+    "total_tokens": 491
+  },
+  "model_calls": 2,
+  "tools": [
+    {
+      "name": "retrieve_childhood",
+      "is_error": false,
+      "result": {
+        "status": "found",
+        "agent_id": "agent_dd1141563a34",
+        "profile_id": "gold_002",
+        "database": "childhood_data",
+        "source": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json",
+        "record": {
+          "id": "childhood_4",
+          "text": "이런 경험이 반복되면서 '나는 남을 돌볼 때만 가치 있고, 내 욕구를 내세우는 것은 나쁜 일'이라는 신념이 굳어졌습니다."
+        }
+      },
+      "model_content": "{\"status\": \"found\", \"agent_id\": \"agent_dd1141563a34\", \"profile_id\": \"gold_002\", \"database\": \"childhood_data\", \"source\": \"/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/snapshot/profiles/gold_ccd_profile_002.json\", \"record\": {\"id\": \"childhood_4\", \"text\": \"이런 경험이 반복되면서 '나는 남을 돌볼 때만 가치 있고, 내 욕구를 내세우는 것은 나쁜 일'이라는 신념이 굳어졌습니다.\"}}"
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "agent_dd1141563a34",
+      "name": "성장 경험 조회 담당",
+      "response": "{\"record_id\":\"childhood_4\"}",
+      "usage": {
+        "prompt_tokens": 480,
+        "completion_tokens": 11,
+        "total_tokens": 491
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "log": "/home2/sjyang114/Counsel_Research_dynamic_client_new/gemma_test/counseling_test/experiments/group1_selective_30_20261008T100555Z/sessions/db480852991f4943b32b0b1973545a35/20261008T101104_283394Z_0904f028.json",
+  "error": null
+}
