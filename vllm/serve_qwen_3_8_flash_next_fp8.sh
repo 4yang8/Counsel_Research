@@ -15,7 +15,10 @@ exec > >(tee -a -- "$log_file") 2>&1
 export PYTHONUNBUFFERED=1
 printf 'Started: %s\nLog file: %s\n' "$(date --iso-8601=seconds)" "$log_file"
 
-# Activate the qwen38-flash-next conda environment before running this script.
+# Prefer a verified node-local cache, falling back to the original Conda env.
+source "$(dirname -- "${BASH_SOURCE[0]}")/_activate_env.sh" || exit 1
+activate_vllm_environment next || exit 1
+
 # Official recipe: https://recipes.vllm.ai/Qwen/Qwen3.8-Flash-Next
 # Requires vLLM >=0.30.0; the official recipe recommends nightly.
 # FP8 weights are detected from the checkpoint's quantization_config.

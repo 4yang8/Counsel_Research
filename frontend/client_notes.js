@@ -10,6 +10,25 @@
     const target=$('client-notes-body');target.replaceChildren();if(!data?.available)return;
     const turn=$('client-notes-turn').value,record=turn==='latest'?data.records.at(-1):data.records.find(r=>r.turn_id===turn),mode=$('client-notes-mode').value;
     $('client-notes-path').textContent=data.path || '새 대화 초기 노트 · 아직 저장된 발화 없음';
+    if(['Q3n','Q3sb','Q3x'].includes(data.version)){
+      const label={Q3n:'원문 선택 · Python 복사',Q3sb:'요약 서브에이전트',Q3x:'Python 확정 필드 스냅샷'}[data.version];
+      target.append(el('strong','기록 방식 · '+label),el('p','현재 진행 판단은 발화 전 stage에서 생성합니다. 실제 공개 발화는 별도로 보존하며 지난 기록은 저장 시점에서 조회합니다.','hint'));
+      if(record){
+        const detail=(title,value)=>{const box=el('details');box.append(el('summary',title),el('pre',JSON.stringify(value,null,2)));target.append(box);};
+        detail('발화 전 궤적 판단 원문 · 표현 계획과 구분',record.trajectory_assessment);
+        target.append(el('strong','실제 공개 발화 원문'),el('pre',record.trajectory_actual_utterance));
+        if(record.recording_mode==='raw')detail('선택한 원문 · 출처 ID·줄 범위',record.raw_selections);
+        if(record.recording_mode==='summary')detail('요약 담당 반환 원문 · 메인 재가공 없음',record.summary_output);
+        detail('판단·발화 reasoning과 출력 쌍 전체',record.recording_sources);
+      }
+    }
+    if(data.version==='Q3sk'){
+      target.append(el('strong','노트 작성 스킬 · 해당 턴에 실제 사용한 원문'));
+      for(const skill of record?.skill_loads || []){
+        const box=el('details');box.append(el('summary',skill.name+' · 호출 '+skill.iteration+' · '+skill.sha256.slice(0,12)),el('pre',skill.content));target.append(box);
+      }
+      if(!record?.skill_loads?.length)target.append(el('p',record?.skill_mode==='disabled'?'System 입력 비활성화로 스킬을 제공하지 않았습니다.':'아직 완료된 스킬 사용 기록이 없습니다.','hint'));
+    }
     if(['Q3a','Q3b'].includes(data.version)){
       const plan=record?.local_plan;
       target.append(el('strong','로컬 작업 계획 · 해당 턴의 수행 기록 / 다음 턴에는 새로 작성'));
@@ -25,7 +44,7 @@
         }
       }else target.append(el('p','(내용 없음)'));
     }
-    if(['Q3','Q3a','Q3b'].includes(data.version)){
+    if(['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(data.version)){
       const progress=mode==='before'?record?.trajectory_before:turn==='latest'?data.trajectory_progress:record?.trajectory_progress;
       const text=p=>p?Object.entries(p).map(([k,v])=>({position:'현재 위치',movement:'변화',current_experience:'현재 신뢰와 경계',grounds:'판단 근거',next_condition:'다음에 살필 조건'}[k] || k)+': '+({maintain:'유지·정체',advance:'진행',retreat:'후퇴'}[v] || v || '(내용 없음)')).join('\n'):'(내용 없음)';
       target.append(el('strong','사전 궤적 · '+(turn==='latest'?'다음 생성에 사용할 파일':'해당 턴 입력 원문')),el('pre',turn==='latest'?data.trajectory:record?.trajectory_source || '(내용 없음)'));
@@ -71,7 +90,7 @@
     const params=new URLSearchParams({version:currentVersion});if(sid)params.set('session_id',sid);if(paired)params.set('paired','1');if(!paired && restoredSessionKey)params.set('key',restoredSessionKey);
     $('client-notes-status').textContent='조회 중…';
     try{
-      const result=await api('/api/client_notes?'+params);if(rev!==revision)return;data=result;panel.querySelector('h2').textContent=['Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(result.version)?'내담자 노트 · 자유 글머리':['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(result.version)?'내담자 노트 · 현재 내면 / 심리상태':'내담자 심리상태 노트';
+      const result=await api('/api/client_notes?'+params);if(rev!==revision)return;data=result;panel.querySelector('h2').textContent=['Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(result.version)?'내담자 노트 · 자유 글머리':['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(result.version)?'내담자 노트 · 현재 내면 / 심리상태':'내담자 심리상태 노트';
       const choice=$('client-notes-turn').value;const picker=$('client-notes-turn');picker.replaceChildren(new Option('최신 파일','latest'));
       for(const row of result.records || [])picker.add(new Option('내담자 턴 '+row.turn,row.turn_id));
       if([...picker.options].some(o=>o.value===choice))picker.value=choice;
@@ -106,7 +125,7 @@
       const next=JSON.stringify(result.notes);if(next===stamp)return;stamp=next;
       const target=$('session-notes-body'),scrolls=[...target.querySelectorAll('pre')].map(e=>e.scrollTop);target.replaceChildren();
       for(const [actor,title] of [['client','내담자가 작성한 노트'],['counselor','상담사가 작성한 노트']]){
-        const group=node('section','','session-notes-group');group.dataset.actor=actor;group.append(node('h3',actor==='client' && result.notes.some(n=>['Q3','Q3a','Q3b'].includes(n.version))?'내담자 노트 · 궤적':title));
+        const group=node('section','','session-notes-group');group.dataset.actor=actor;group.append(node('h3',actor==='client' && result.notes.some(n=>['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(n.version))?'내담자 노트 · 궤적':title));
         const notes=result.notes.filter(note=>note.actor===actor);
         for(const note of notes){const box=node('section','','session-note-box');box.append(node('strong',note.version+' · '+note.label),node('pre',note.content || '(빈 노트)'));group.append(box);}
         if(!notes.length)group.append(node('p','현재 저장된 노트가 없습니다.','hint'));target.append(group);

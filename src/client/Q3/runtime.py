@@ -152,7 +152,7 @@ TOOLS = [TOOL,
         '앞서 기록한 내면 판단과 반응 방향에 맞는 공개 발화를 확정합니다. 이후 노트 갱신 중에는 발화를 바꾸지 않습니다. 이 도구만 성공한 경우 전체 턴 저장은 아직 완료되지 않습니다.',
         {'type':'object','properties':{'utterance':{'type':'string','description':'상담사에게 말할 내담자 발화 원문'}},'required':['utterance'],'additionalProperties':False}),
     function_tool('update_client_notes',
-        '이전 전체 노트와 이번 appraisal·turn_goal·response_plan·확정 발화를 비교하여, 앞서 형성한 현재 마음과 조건을 노트에 반영합니다. 기본 정보·프로필에 더해 다음 반응에 이어 줄 마음을 기록하며, 판단의 대상·구체성·확실성 수준을 유지하세요. operations에는 필요한 변경만 전달하세요. 같은 대상의 마음이 달라지면 기존 ID를 update하고, 별개의 새 마음은 add하며, 해소·정정·중복으로 유효하지 않은 내용은 delete합니다. 유지할 항목은 생략합니다. content에는 현재 마음을, reason에는 이전 기록과 이번 자료를 비교한 변경 근거를 적으세요. reason은 실행 이력에 보존되며 노트 본문에는 자동 추가되지 않습니다. 다음으로 update_trajectory_progress에서 이번 진행을 기록합니다. 모든 기록 검증 후 발화와 함께 저장합니다.',
+        '앞서 생성된 appraisal·turn_goal·response_plan·확정 발화에서 다음 반응에 필요한 마음과 조건을 선별하여 이전 전체 노트에 반영합니다. 주관적 내면, 의도·표현 선택, 실제 공개한 내용을 구분하고 대상·의미·시점·확실성을 보존합니다. 기록 과정에서 새로운 해석·인과관계·상대의 의도·상호작용 결과를 추가하지 않습니다. 필요한 add/update/delete만 operations에 전달하고 유지할 항목은 생략합니다. content에는 현재 마음을, reason에는 이전 항목과 이번 자료의 어떤 차이가 변경을 뒷받침하는지 적습니다. 다음으로 update_trajectory_progress에서 진행을 정리하고 모든 기록 검증 후 함께 저장합니다.',
         note_update_schema())]
 
 
@@ -183,7 +183,7 @@ TOOLS[0]['function']['parameters']['properties']['trajectory_plan']=copy.deepcop
 TOOLS[0]['function']['parameters']['required'].append('trajectory_plan')
 TOOLS[0]['function']['description']='이번 상담사 발화의 주관적 해석·감정(appraisal), 사전 궤적과 특성·현재 마음에 근거한 가능한 변화(trajectory_plan), 대화 의도(turn_goal), 표현 계획(response_plan)을 잠정 기록합니다. 필요한 과거 근거는 retrieve_client_memory로 확인하고, 판단이 바뀌면 다시 기록한 뒤 발화를 확정하세요.'
 TOOLS.append(function_tool('update_trajectory_progress',
-    '확정 발화와 이번 내면 판단·표현 선택을 이전 진행 기록 및 잠정 계획과 비교하여 현재 궤적 진행을 기록합니다. 현재 위치·신뢰와 경계·유지/진행/후퇴 근거와 다음에 살필 조건을 간결하게 남깁니다. 계획은 실제 변화와 구분합니다. 사전 궤적은 수정하지 않습니다. 이 기록까지 검증한 후 발화·내면 노트·진행 기록을 함께 저장합니다.',copy.deepcopy(trajectory.PROGRESS)))
+    '앞서 생성된 내면 판단·표현 선택과 확정 발화를 이전 기록과 비교하여 궤적 진행을 요약합니다. 내면의 변화와 실제 공개 범위를 구분하고 각각의 근거·시점·확실성을 보존합니다. 계획을 결과로 바꾸거나 새로운 심리 해석·상호작용 결과를 덧붙이지 않습니다. 남은 불확실성과 보류 조건을 함께 기록합니다. 사전 궤적은 유지하며 기록 검증 후 발화·노트와 함께 저장합니다.',copy.deepcopy(trajectory.PROGRESS)))
 
 
 def selected_note(items,ids):

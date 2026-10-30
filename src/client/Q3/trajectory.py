@@ -9,11 +9,11 @@ PLAN={'type':'object','properties':{
     'grounds':{'type':'string','description':'개인 특성·현재 appraisal·실제 상호작용과 필요한 경우 조회 결과를 연결하여, 이번에 이 정도의 변화 또는 유지가 가능한 이유'}},
     'required':['position','movement','grounds'],'additionalProperties':False}
 PROGRESS={'type':'object','properties':{
-    'position':{'type':'string','description':'이번 반응을 마친 현재의 궤적상 위치. 사전 궤적의 표현을 활용하되 혼재와 불확실성을 보존합니다.'},
+    'position':{'type':'string','description':'이전 기록과 앞서 생성된 현재 내면·표현 선택을 근거로 정리한 궤적상 위치. 대상·시점·확실성을 보존합니다.'},
     'movement':copy.deepcopy(MOVEMENT),
-    'current_experience':{'type':'string','description':'이번 appraisal과 표현 선택에 나타난 현재 신뢰·경계의 핵심. 실제 공개한 범위와 속마음을 구분하여 간결하게 기록합니다.'},
-    'grounds':{'type':'string','description':'이전 진행 기록과 이번 계획·내면 판단·확정 발화를 비교한 유지·진행·후퇴 근거. 계획한 것과 실제 형성된 것을 구분합니다.'},
-    'next_condition':{'type':'string','description':'이후 진행을 판단할 때 확인할 아직 불분명한 조건. 정해진 다음 행동이 아니라 관찰할 조건이며, 없으면 빈 문자열'}},
+    'current_experience':{'type':'string','description':'appraisal·대화 의도·표현 선택에 이미 드러난 현재 마음을 요약합니다. 주관적 느낌과 실제 공개 범위를 구분하고 새로운 해석·상호작용 결과를 추가하지 않습니다.'},
+    'grounds':{'type':'string','description':'이전 기록과 이번 내면 판단·표현 선택·실제 발화의 어떤 차이가 유지·진행·후퇴를 뒷받침하는지 설명합니다. 각 자료의 의미·시점·확실성을 유지하고 계획을 결과로 바꾸지 않습니다.'},
+    'next_condition':{'type':'string','description':'앞선 판단과 표현 선택에 남아 있는 불확실성·보류 조건. 이후 확인이 필요한 내용으로 기록하고, 없으면 빈 문자열을 사용합니다.'}},
     'required':['position','movement','current_experience','grounds','next_condition'],'additionalProperties':False}
 
 def validate(value,schema):

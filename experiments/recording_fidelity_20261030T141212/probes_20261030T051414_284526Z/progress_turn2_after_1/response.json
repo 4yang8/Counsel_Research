@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-994b1c23dc3a1c95",
+  "object": "chat.completion",
+  "created": 1793337301,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-9bc60c998f321b4f",
+            "type": "function",
+            "function": {
+              "name": "update_trajectory_progress",
+              "arguments": "{\"position\": \"초반 단계에서 초반-중간 전환의 초입. 상담사의 해석에 대해 자신의 경험과 다른 부분을 수정하고, 자책이 교수님 걱정보다 우선한다는 계층을 표현했다. '그 정도도 설명을 못 하나' 수준의 자책은 말했지만, 역량 전체와의 연결은 아직 보류 중이다.\", \"movement\": \"advance\", \"current_experience\": \"상담사가 가볍게 넘기지도 과하게 심각하지도 않은 반응을 보여 안도감이 생겼다. 자신의 되짚기 패턴을 '미완결'이 아닌 '대안을 만들며 반복'으로 스스로 구분하여 표현할 수 있었다. 자책이 더 무겁다는 것을 인정했으나, 그 자책의 뿌리(역량 전체)까지 말할 준비는 아직 되지 않았다.\", \"grounds\": \"이전 진행 기록에서 '상담사의 반응을 경험하지 못해 신뢰가 초기 그대로'였으나, 이번 상담사 발화에 대해 내담자가 (1) 맞지 않는 해석을 수정하고, (2) 질문에 계층을 나누어 답하고, (3) 자책의 일부를 표현했다. 이는 상담사와의 상호작용을 시작했다는 신호로, 이전의 일방적 노출과 구별된다. 다만 깊은 자기비판(n4c1d52597991)은 여전히 보류하므로 경계도 함께 유지된다.\", \"next_condition\": \"상담사가 자책의 우선순위에 대해 어떻게 반응하는지. '왜 자책하나요' 또는 '그 자책이 무엇을 의미하나요' 식으로 더 파고들 경우, 역량 전체와의 연결을 말할지 여부를 판단해야 한다.\"}"
+            }
+          }
+        ],
+        "reasoning": "Now I need to update the trajectory progress. Let me summarize what happened:\n\nPrevious position: Early stage. Shared the meeting event and emotions (shame, worry). Deeper self-criticism still held back.\n\nThis turn: \n- The client engaged with the counselor's interpretations, correcting one (\"unfinished scene\" → \"replaying with alternative answers\")\n- Answered the question by identifying self-blame as primary over worry about the professor\n- Expressed a layer of self-blame (\"그 정도도 설명을 못 하나\") without going to the deepest level (\"역량 전체\")\n- The fear about the counselor's response was partially eased\n\nMovement: Advance - the client is now interacting WITH the counselor's formulations (correcting, answering with nuance), which shows a slight increase in engagement. They also expressed a layer of self-blame that they hadn't previously articulated.\n\nHowever, the deepest self-criticism is still held back, so it's a small advance, not a dramatic one.\n\nLet me write the trajectory progress update.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp4-ep-98685464",
+  "usage": {
+    "prompt_tokens": 10105,
+    "total_tokens": 10715,
+    "completion_tokens": 610,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 217
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

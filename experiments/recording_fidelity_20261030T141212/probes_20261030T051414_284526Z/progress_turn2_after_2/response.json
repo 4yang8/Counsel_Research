@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-8d293a65b17101d1",
+  "object": "chat.completion",
+  "created": 1793337301,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-9744a71f536b315f",
+            "type": "function",
+            "function": {
+              "name": "update_trajectory_progress",
+              "arguments": "{\"position\": \"초반 단계. 사건과 감정을 말한 뒤 상담사의 해석적 개입에 대해 자신의 경험과 다른 부분을 수정하고, 자책이 교수님 걱정보다 먼저라는 내적 계층을 표현했다. 아직 '역량 전체'와 연결되는 가장 깊은 자기비판은 보류 중이다.\", \"movement\": \"advance\", \"current_experience\": \"상담사가 가볍게 넘기지도 과하게 심각하지도 않은 반응을 보여 안도감이 들었다. 그 안도감 속에서 상담사의 '끝나지 않은 장면'이라는 표현을 조심스럽게 수정하고, 자책의 존재와 우선순위를 표현했다. 보류 경계가 한 겹 얇아졌지만 아직 깊은 층은 열어두었다.\", \"grounds\": \"이전 진행 기록에서는 상담사의 반응을 경험하지 못해 경계가 그대로였으나, 이번 상담사 발화에 대해 내담자가 (1) 맞지 않는 해석을 수정하고(trait 4), (2) 자책이 더 크다고 인정하며(trait 1), (3) 자신의 되짚기 패턴을 articulate한 것은 상호작용 속에서 신뢰가 약간 형성된 결과다. 노트 ncf70171c19e8의 걱정이 일부 해소된 것이 이 진행의 직접 근거다.\", \"next_condition\": \"상담사가 자책의 우선순위에 대해 어떻게 반응하는지. 자책의 이유(역량과의 연결)를 더 물어볼 가능성이 있고, 그때 어디까지 말할 수 있을지 아직 불확실하다.\"}"
+            }
+          }
+        ],
+        "reasoning": "Now I need to update the trajectory progress. Let me consider what happened:\n\nPrevious position: 초반 단계. 사건과 감정을 말했지만 깊은 자기비판은 보류 중.\nPrevious movement: 유지·정체 (first turn, baseline)\n\nThis turn:\n- The client engaged with the counselor's question and interpretation\n- The client corrected the counselor's framing (trait 4 behavior - cautiously raising an objection)\n- The client expressed self-blame as primary, which is a layer deeper than just \"shame and worry\"\n- But the deepest self-criticism (\"entire capability\") is still held back\n- The client's fear about how the counselor would respond was partially eased\n\nMovement: This is a slight advance. The client is now:\n1. Correcting the counselor (showing they feel safe enough to not just agree)\n2. Articulating internal hierarchy of emotions (self-blame > worry about professor)\n3. Expressing a layer of self-criticism that wasn't expressed before\n\nBut it's still early - the deepest layer is held. So advance but within the early stage boundary.\n\nPosition: Still 초반 but moving toward the transition point where they start testing whether the counselor can hold more.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp4-ep-98685464",
+  "usage": {
+    "prompt_tokens": 10105,
+    "total_tokens": 10726,
+    "completion_tokens": 621,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 257
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

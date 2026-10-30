@@ -163,9 +163,21 @@ def public_client_response(response):
     raise ValueError('basic 응답에서 공개 내담자 발화를 분리할 수 없습니다. utterance JSON 또는 실제 발화:/내담자 발화: 구획 하나가 필요합니다.')
 
 
+def comparison_metadata(value):
+    """Research grouping only; never changes model input or generation settings."""
+    if (not isinstance(value, dict) or set(value) != {'batch_id', 'schedule', 'requested_utterances'}
+            or not isinstance(value['batch_id'], str) or not re.fullmatch(r'[a-zA-Z0-9_-]{1,80}', value['batch_id'])
+            or value['schedule'] not in ('sequential', 'parallel')
+            or type(value['requested_utterances']) is not int or not 1 <= value['requested_utterances'] <= 100):
+        raise ValueError('대조실험 ID·실행 방식·발화 수를 확인하세요.')
+    return copy.deepcopy(value)
+
+
 def create(server, config, body, runtime, base_build):
     connection_settings.apply(config, body)
     request = copy.deepcopy(body)
+    if 'comparison' in request:
+        request['comparison'] = comparison_metadata(request['comparison'])
     request.pop('request_id', None)
     request['session_id'] = None
     counselor = request.get('counselor_version', 'C4')
@@ -373,6 +385,8 @@ def handle_post(handler, backend, runtime, base_build):
         if not 0 < size <= 4 * 1024 * 1024:
             raise ValueError('요청 크기를 확인하세요.')
         body = json.loads(handler.rfile.read(size))
+        if 'comparison' in body:
+            body['comparison'] = comparison_metadata(body['comparison'])
         config = backend.read_config(handler.server.config_path)
         if handler.path.endswith('/create'):
             handler.json_response(create(handler.server, config, body, runtime, base_build))
@@ -453,12 +467,14 @@ def handle_post(handler, backend, runtime, base_build):
         connection_settings.apply(connection, body)
         log = backend.PairedTurnLog(root(handler.server, sid).parent.parent / 'paired/logs', {'session_id': sid, 'actor': role,
                               'step': len(session['steps']) + 1, 'experiment_version': session['client_version'],
+                              **({'comparison': body['comparison']} if 'comparison' in body else {}),
                               'vllm_url': connection.get('vllm_url')})
         # Persist the frozen settings actually used, not edits made during a running pair.
         config['generation'] = session['settings']['generation']
         session['connection'] = connection
         config.update(connection)
         session['attempts'].append({'turn_id': log.state['turn_id'], 'actor': role,
+                                    **({'comparison': body['comparison']} if 'comparison' in body else {}),
                                     'step': len(session['steps']) + 1, 'saved_path': str(log.path),
                                     'vllm_url': config.get('vllm_url')})
         save_session(handler.server, session)
@@ -479,6 +495,7 @@ def handle_post(handler, backend, runtime, base_build):
             session['client_storage_dir'] = storage
         session['public_dialogue'].append({'role': role, 'content': utterance})
         step = {'number': len(session['steps']) + 1, 'actor': role, 'utterance': utterance,
+                **({'comparison': body['comparison']} if 'comparison' in body else {}),
                 'turn_id': log.state['turn_id'], 'usage': usage, 'saved_path': str(log.path),
                 'vllm_url': config.get('vllm_url')}
         session['steps'].append(step)

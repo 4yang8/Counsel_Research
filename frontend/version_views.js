@@ -10,7 +10,7 @@ window.LabVersionViews=(()=>{
   reasoning.append(reasonTitle,calls);region.append(versionBox,reasoning);
   let specs=[],version='basic',attempt=null,mode='ready',noteKey='',reasonKey='',currentData={};
   function install(){region.remove();}
-  function standalone(){if(['Q1','Q1_s1','Q1_s2','Q1a','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(currentVersion)){region.remove();return;}document.querySelector('.conversation-column .composer-dock').before(region);version='basic';mode='ready';attempt=null;draw();}
+  function standalone(){if(['Q1','Q1_s1','Q1_s2','Q1a','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(currentVersion)){region.remove();return;}document.querySelector('.conversation-column .composer-dock').before(region);version='basic';mode='ready';attempt=null;draw();}
   function metadata(){return specs.find(row=>row.id===version) || {id:version,view:'generic'};}
   function draw(){
     const spec=metadata(),versions=attempt?.extras?.versions || {},data=versions[version] || currentData[version] || {};
@@ -88,6 +88,16 @@ window.LabVersionViews=(()=>{
   }
   register('client_states',(target,data)=>{
     drawTurnPlan(target,data.turn_plan?.current);
+    if(data.skills?.current){
+      const value=data.skills.current;
+      target.append(node('strong','노트 작성 스킬 · '+(value.discarded?'미완료 · 미저장':value.pending?'로딩 완료 · 기록 중':'사용 기록')));
+      for(const skill of value.skills || []){
+        const box=node('details');box.append(node('summary',skill.name+' · '+(skill.sha256?skill.sha256.slice(0,12):'발화 확정 후 로딩')),
+          node('p',skill.description));
+        if(skill.content)box.append(node('pre',skill.content));target.append(box);
+      }
+      if(value.enabled===false)target.append(node('p','System 입력 비활성화로 스킬을 제공하지 않습니다.','hint'));
+    }
     if(data.traits?.current?.background_routing){
       target.append(node('strong','이번 관련 특성 · 연결된 배경 원문 · 선정 이유'));
       const selected=data.traits.current.selected || [];
@@ -95,9 +105,17 @@ window.LabVersionViews=(()=>{
       if(!data.traits.current.background_candidate_count)target.append(node('p','현재 프로필에는 성장 경험·상황 사례 후보가 없습니다.','hint'));
     }
     target.append(node('strong','이번 appraisal · 반응 방향'),node('pre',JSON.stringify({appraisal:data.appraisal?.current,response_plan:data.response_plan?.current},null,2)));
-    for(const [key,label] of [['note_selection','발화 생성에 선택한 노트 항목'],['turn_goal','이번 대화 의도'],['trajectory_plan','이번 궤적 계획'],['trajectory_progress','궤적 진행 기록'],['evidence_decision','근거 확인 종료 판단']]){
+    for(const [key,label] of [['note_selection','발화 생성에 선택한 노트 항목'],['turn_goal','이번 대화 의도'],['trajectory_assessment','발화 전 현재 궤적 판단'],['trajectory_plan','이번 궤적 계획'],['trajectory_progress','궤적 진행 기록'],['evidence_decision','근거 확인 종료 판단']]){
       const value=data[key]?.current;
       if(value)target.append(node('strong',label),node('pre',JSON.stringify(key==='note_selection'?{selected_ids:value.selected_ids,scope:value.scope}:value,null,2)));
+    }
+    if(data.recording?.current){
+      const record=data.recording.current;
+      target.append(node('strong','기록 방식 · '+({raw:'원문 선택',summary:'요약 서브에이전트',snapshot:'Python 스냅샷'}[record.mode] || record.mode)+(record.discarded?' · 미저장':record.pending?' · 저장 대기':' · 저장 완료')));
+      const box=node('details');box.append(node('summary','기록 결과 · 원문 선택 / 요약 / 고정 필드'),node('pre',JSON.stringify(record,null,2)));target.append(box);
+    }
+    if(data.recording_sources?.current){
+      const box=node('details');box.append(node('summary','이번 턴 reasoning·출력 원문 전체 · 출처 구분'),node('pre',JSON.stringify(data.recording_sources.current,null,2)));target.append(box);
     }
     const lookups=data.memory_retrieval?.history || [];
     if(lookups.length){
@@ -200,8 +218,8 @@ window.LabVersionViews=(()=>{
           entry.pre.textContent=reason;entry.pre.scrollTop=follow?entry.pre.scrollHeight:top;
         }
         entry.pre.tabIndex=0;entry.pre.setAttribute('aria-label',entry.label.textContent+' 원문');
-        const guidance=(value.actor==='client' && ['Q1','Q1_s1','Q1_s2','Q1a','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(value.clientVersion) || value.actor==='counselor' && ['P3a','P3a_s1'].includes(value.counselorVersion)) && item.call.agent!=='main'?item.call.output || '':'';
-        entry.outputLabel.textContent=value.actor==='client'?(({draft_reviewer:'초안 검토 결과',state_router:'상태 검토 대상',state_updater:'상태 설명 변경안'})[value.steps[item.call.stepIndex]?.agentMeta.kind] || '특성 선정 결과'):'상담 진행 제안';
+        const guidance=(value.actor==='client' && ['Q1','Q1_s1','Q1_s2','Q1a','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(value.clientVersion) || value.actor==='counselor' && ['P3a','P3a_s1'].includes(value.counselorVersion)) && item.call.agent!=='main'?item.call.output || '':'';
+        entry.outputLabel.textContent=value.actor==='client'?(({draft_reviewer:'초안 검토 결과',state_router:'상태 검토 대상',state_updater:'상태 설명 변경안',note_summarizer:'기록 요약 결과'})[value.steps[item.call.stepIndex]?.agentMeta.kind] || '특성 선정 결과'):'상담 진행 제안';
         entry.outputLabel.hidden=entry.output.hidden=!guidance;
         if(entry.output.textContent!==guidance)entry.output.textContent=guidance;
         if(guidance){entry.box.hidden=false;if(!reason)entry.label.textContent=(item.call.name || item.call.agent)+' 응답';}
@@ -221,8 +239,8 @@ window.LabVersionViews=(()=>{
           }else entry.status.textContent=value.status==='done'?'✓ 발화 성공 · 기록 확정':value.status==='failed'?'변경안 폐기':'변경안 접수 · 확정 대기';
         }
         if(value.clientVersion==='Q1a' && t.name==='finalize_client_draft' && t.status==='completed')entry.status.textContent=value.status==='done'?'✓ 발화·내면 기록 확정':value.status==='failed'?'확정 미완료':'선택 완료 · 기록 확정 중';
-        if(['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(value.clientVersion) && ['commit_client_utterance','update_client_states','update_client_notes','update_trajectory_progress'].includes(t.name) && t.status==='completed')entry.status.textContent=value.status==='failed'?'턴 미완료 · 미저장':value.status==='done'?'✓ 턴 저장 완료':t.name==='commit_client_utterance'?'발화 고정 · 노트 기록 대기':'노트 변경안 접수 · 저장 중';
-        const draft=['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(value.clientVersion) && t.name==='commit_client_utterance'?PairedTrace.notePreview(t.arguments).utterance || '':value.clientVersion==='Q1a' && t.name==='stage_client_update'?PairedTrace.notePreview(t.arguments).utterance || '':'';
+        if(['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(value.clientVersion) && ['commit_client_utterance','update_client_states','update_client_notes','update_trajectory_progress','select_client_note_sources'].includes(t.name) && t.status==='completed')entry.status.textContent=value.status==='failed'?'턴 미완료 · 미저장':value.status==='done'?'✓ 턴 저장 완료':t.name==='commit_client_utterance'?'발화 고정 · 노트 기록 대기':'노트 변경안 접수 · 저장 중';
+        const draft=['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(value.clientVersion) && t.name==='commit_client_utterance'?PairedTrace.notePreview(t.arguments).utterance || '':value.clientVersion==='Q1a' && t.name==='stage_client_update'?PairedTrace.notePreview(t.arguments).utterance || '':'';
         entry.draftText.hidden=!draft;if(entry.draftText.textContent!==draft)entry.draftText.textContent=draft;
         const changes=t.noteChanges || [];
         entry.previewLabel.hidden=!provisional;
@@ -261,8 +279,8 @@ window.LabVersionViews=(()=>{
     const keep=new Set(wanted);for(const box of [...ui.list.children])if(!keep.has(box))box.remove();
     const selectedVersion=value.actor==='client'?value.clientVersion:value.counselorVersion;
     const spec=value.actor==='client'?versionCatalog?.versions.find(s=>s.id===selectedVersion):specs.find(s=>s.id===selectedVersion),data=value.extras.versions?.[selectedVersion] || {};
-    ui.extra.hidden=(value.actor==='client' && !['Q1','Q1_s1','Q1_s2','Q1a','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(selectedVersion)) || !spec || spec.view==='none';
-    ui.extraTitle.textContent=['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(selectedVersion)?'appraisal · 반응 방향 · 내담자 노트':['Q2'].includes(selectedVersion)?'appraisal · 반응 방향 · 심리상태 노트':selectedVersion==='Q1a'?'후보 · 검토 · 선택 · 내면 기록':['Q1','Q1_s1','Q1_s2'].includes(selectedVersion)?'관련 특성 · appraisal · 내면 노트':['notes','dual_notes'].includes(spec?.view)?'전체 노트 보기':selectedVersion+' · 저장 기록';
+    ui.extra.hidden=(value.actor==='client' && !['Q1','Q1_s1','Q1_s2','Q1a','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(selectedVersion)) || !spec || spec.view==='none';
+    ui.extraTitle.textContent=['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(selectedVersion)?'appraisal · 반응 방향 · 내담자 노트':['Q2'].includes(selectedVersion)?'appraisal · 반응 방향 · 심리상태 노트':selectedVersion==='Q1a'?'후보 · 검토 · 선택 · 내면 기록':['Q1','Q1_s1','Q1_s2'].includes(selectedVersion)?'관련 특성 · appraisal · 내면 노트':['notes','dual_notes'].includes(spec?.view)?'전체 노트 보기':selectedVersion+' · 저장 기록';
     const k=JSON.stringify([data,value.extras.c4]);
     if(k!==ui.versionKey){ui.versionKey=k;ui.extraBody.replaceChildren();const renderer=renderers.get(spec?.view);if(renderer)renderer(ui.extraBody,{...data,hideChanges:true},value,spec);else ui.extraBody.append(node('pre',JSON.stringify(data,null,2)));}
     return ui;

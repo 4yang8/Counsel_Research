@@ -27,8 +27,9 @@ if ! [[ "$PORT" =~ ^[0-9]+$ ]] || (( PORT < 1 || PORT > 65535 )); then
   exit 2
 fi
 
-source /home2/sjyang114/miniconda3/etc/profile.d/conda.sh
-conda activate gemma4
+# Prefer a verified node-local cache, falling back to the original Conda env.
+source "$(dirname -- "${BASH_SOURCE[0]}")/_activate_env.sh" || exit 1
+activate_vllm_environment gemma4 || exit 1
 export HF_HOME=/home2/sjyang114/.cache/huggingface
 
 NODE="$(hostname -s)"

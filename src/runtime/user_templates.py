@@ -224,3 +224,14 @@ REGISTRY[('client','Q3a','user')]['variables'].update(trajectory='사전 변화 
 # Q3b has independent user/trajectory sources.
 REGISTRY[('client','Q3b','user')]['variables'].pop('state_definitions', None)
 REGISTRY[('client','Q3b','user')]['variables'].update(trajectory='사전 변화 궤적 원문', trajectory_progress='이전 턴까지 저장된 궤적 진행 기록')
+
+# Q3sk owns the Q3 template and trajectory variables.
+REGISTRY[('client','Q3sk','user')]['variables'] = dict(REGISTRY[('client','Q3','user')]['variables'])
+
+# Recording variants own editable sources, with the same precommit variables as Q3.
+for _version in ('Q3n','Q3sb','Q3x'):
+    REGISTRY[('client',_version,'user')]['variables']=dict(REGISTRY[('client','Q3','user')]['variables'])
+REGISTRY[('client','Q3sb','note_summarizer_user')]={
+    'path':'src/client/Q3sb/note_summarizer_user.md',
+    'variables':{'source_bundle':'이번 턴 판단·발화의 전체 reasoning·출력 쌍과 확정 출처 JSON',
+                 'previous_notes':'이전 턴까지의 현재 노트 원문'}}

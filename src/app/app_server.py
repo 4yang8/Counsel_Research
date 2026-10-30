@@ -147,6 +147,7 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
                 return
             assets={'/':('workspace.html','text/html; charset=utf-8'),
                     '/lab':('index.html','text/html; charset=utf-8'),
+                    '/master_controller.js':('master_controller.js','text/javascript'),
                     '/workspace.js':('workspace.js','text/javascript'),'/workspace.css':('workspace.css','text/css'),
                     '/pane_storage.js':('pane_storage.js','text/javascript'),
                     '/pane.js':('pane.js','text/javascript'),'/pane.css':('pane.css','text/css'),

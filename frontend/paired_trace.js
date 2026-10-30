@@ -29,10 +29,15 @@
       const versions=attempt.extras.versions ||= {},version=versions[versionId] ||= {};
       const section=version[item.section] ||= {history:[]};
       section.current=clone(item.data);section.history.push(clone(item));
+      if(item.section==='recording' && ['Q3n','Q3sb','Q3x'].includes(versionId)){
+        snapshot('recording','Python 기록 · '+(item.data.discarded?'미저장':item.data.pending?'검증·저장 대기':'저장 완료'));
+        state.recording=clone(item.data);
+        state.description='모델 호출을 추가하지 않고 기록 방식에 따른 결과를 검증·저장합니다. 발화 전 궤적 판단과 실제 공개 발화를 구분해 보존합니다.';
+      }
       // Note writes arrive between tool_start and tool_result. Associate the
       // actual saved diff with that call without altering an earlier snapshot.
-      if(['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'].includes(versionId) && item.section==='state_notes' && item.action==='updated'){
-        const tool=state?.trace.findLast(t=>['update_client_states','update_client_notes'].includes(t.name) && t.status==='completed');
+      if(['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(versionId) && item.section==='state_notes' && item.action==='updated'){
+        const tool=state?.trace.findLast(t=>['update_client_states','update_client_notes','select_client_note_sources','commit_client_utterance'].includes(t.name) && t.status==='completed');
         if(tool)tool.noteChanges=[clone(item.data)];
       }
       if(item.action==='updated' || item.action==='staged' && item.section==='inner_notes'){

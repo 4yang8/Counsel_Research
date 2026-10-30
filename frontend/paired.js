@@ -7,6 +7,7 @@
   let counselorSpecs=[],counselorDrafts={},previousCounselor='basic',counselorReady=Promise.resolve();
   let session=null,running=false,auto=false,pause=false,halt=false,remaining=0,requestId=null,abort=null,paint=null,restoring=false,sending=false;
   let followTranscript=true,activationFollow=true;
+  let comparison=null;
   const transcriptEntries=new Map();
   const attempts=[],selection={attempt:null,index:null,activationIndex:null,initial:null,manual:null};
   const toolbar=node('section','paired-controls');toolbar.setAttribute('aria-label','양방향 대화 실행');
@@ -288,7 +289,7 @@
     if(activationFollow && shell.dataset.view==='activation' && selection.attempt===attempt.id)selection.activationIndex=Math.max(0,attempt.steps.length-1);
     if(attempt.extras.versions?.[attempt.counselorVersion])LabVersionViews.setCurrent(attempt.counselorVersion,attempt.extras.versions[attempt.counselorVersion]);
     LabVersionViews.refresh(attempt);
-    if(event.type==='done')session=event.session;
+    if(event.type==='done'){session=event.session;document.dispatchEvent(new CustomEvent('lab-session-status',{detail:{busy:running,sessionId:session?.session_id}}));}
     if(!paint && !restoring)paint=requestAnimationFrame(()=>{paint=null;transcript();if(['visual','raw','activation','workflow'].includes(shell.dataset.view) && source==='paired')inspect();});
   }
   function freeze(){if(config)syncConditions();controls();}
@@ -298,14 +299,14 @@
     const request=body();request.session_id=null;request.counselor_version=counselorSelect.value;
     request.counselor_reasoning_budgets=readCounselorBudgets();
     if(counselorSpecs.find(row=>row.id===request.counselor_version)?.system_prompt!==undefined)request.counselor_system_prompt=$('counselor-system-prompt').value;
-    request.speaker_modes=chosenModes();
+    request.speaker_modes=chosenModes();if(comparison)request.comparison=structuredClone(comparison);
     session=await api('/api/paired/create',request);LabStorage.setItem('counseling-paired-session',session.session_id);transcript();freeze();document.dispatchEvent(new Event('lab-sessions-changed'));
   }
   async function one(){
     await ensureSession();if(halt)throw Error('생성 시작 전에 중단했습니다.');requestId=crypto.randomUUID();abort=new AbortController();const actor=session.next_actor;
     let attempt=null,completed=false,failure=null;
     $('paired-status').textContent=names[actor]+' 생성 중'+(auto?' · 남은 발화 '+remaining:'');$('status').textContent=names[actor]+' 생성 중';
-    const response=await fetch('/api/paired/step',{method:'POST',headers:{'Content-Type':'application/json','X-Gemma-Request':'1'},body:JSON.stringify({session_id:session.session_id,expected_step:session.steps.length,request_id:requestId,vllm_url:endpointValue()}),signal:abort.signal});
+    const response=await fetch('/api/paired/step',{method:'POST',headers:{'Content-Type':'application/json','X-Gemma-Request':'1'},body:JSON.stringify({session_id:session.session_id,expected_step:session.steps.length,request_id:requestId,vllm_url:endpointValue(),...(comparison?{comparison}: {})}),signal:abort.signal});
     await LabHTTP.requireStream(response,'/api/paired/step');
     const handle=message=>{const event=message.event;if(!attempt){attempt=newAttempt(actor,event.turn_id || 'live-'+Date.now(),session.steps.length+1);LabVersionViews.live(attempt);transcript();}
       accept(attempt,event);if(event.type==='done')completed=true;if(['error','cancelled'].includes(event.type))failure=event.error;};
@@ -314,24 +315,31 @@
     if(pending.trim())handle(JSON.parse(pending));if(!completed)throw Error(failure || '발화가 완료되기 전에 연결이 종료되었습니다.');
   }
   async function run(automatic){
-    if(running || restoring || !config || !editorScenario)return;running=true;auto=automatic;pause=false;halt=false;remaining=automatic?Number($('paired-limit').value):1;
+    if(running || restoring || sending || !config || !editorScenario)return {status:'error',generated:0,error:'탭이 다른 작업을 처리 중입니다.'};running=true;auto=automatic;pause=false;halt=false;remaining=automatic?Number($('paired-limit').value):1;
+    let generated=0,failure=null;
     followTranscript=true;if(shell.dataset.view==='activation')activationFollow=true;
-    if(!Number.isInteger(remaining) || remaining<1 || remaining>100){running=false;notice('자동 생성 발화 수는 1~100 정수로 입력하세요.');controls();return;}
-    try{endpointValue();}catch(error){running=false;notice(error.message);controls();return;}
+    if(!Number.isInteger(remaining) || remaining<1 || remaining>100){running=false;notice('자동 생성 발화 수는 1~100 정수로 입력하세요.');controls();return {status:'error',generated:0,error:'자동 생성 발화 수는 1~100 정수로 입력하세요.'};}
+    try{endpointValue();}catch(error){running=false;notice(error.message);controls();return {status:'error',generated:0,error:error.message};}
     setBusy(true);controls();notice();
     if(['settings','library'].includes(shell.dataset.view))window.showLabResult('visual');
-    try{while(remaining>0 && !pause && !manualTurn()){await one();remaining--;if(remaining>0 && !pause && !manualTurn())await new Promise(resolve=>setTimeout(resolve,300));}
+    try{while(remaining>0 && !pause && !manualTurn()){await one();remaining--;generated++;if(remaining>0 && !pause && !manualTurn())await new Promise(resolve=>setTimeout(resolve,300));}
       $('paired-status').textContent=(manualTurn()?'직접 입력 대기 · ':pause?'일시정지 · ':'완료 · ')+'다음 차례: '+names[nextActor()];$('status').textContent=manualTurn()?'직접 입력 대기':pause?'일시정지':'완료';
-    }catch(error){pause=true;$('status').textContent='미완료';$('paired-status').textContent='중단 / 오류 · 같은 발화부터 다시 시도 가능';notice(error.message);
+    }catch(error){failure=error.message;pause=true;$('status').textContent='미완료';$('paired-status').textContent='중단 / 오류 · 같은 발화부터 다시 시도 가능';notice(error.message);
       if(session)try{session=await api('/api/paired/session?session_id='+encodeURIComponent(session.session_id));}catch{}
       if(retryInput()){$('paired-manual-text').value=retryInput().content;}
       const attempt=attempts.at(-1);if(attempt?.status==='running')accept(attempt,{type:'error',error:error.message});
     }finally{running=false;auto=false;requestId=null;abort=null;setBusy(false);freeze();resizeInput();transcript();if(['visual','raw','activation','workflow'].includes(shell.dataset.view) && source==='paired')inspect();document.dispatchEvent(new Event('lab-sessions-changed'));}
+    return {status:halt?'stopped':failure?'error':pause?'paused':manualTurn()?'manual':'completed',generated,error:failure};
+  }
+  async function stopRun(){
+    pause=true;halt=true;
+    if(requestId)try{const result=await api('/api/cancel',{request_id:requestId});if(!result.cancelled)abort?.abort();}catch(error){abort?.abort();notice(error.message);}
+    controls();
   }
   function reset(resetVersion=true){
     if(running || sending || (resetVersion!==false && (restoring || settingsLoading || !counselorSpecs.length)))return;const hadSession=!!session;if(!hadSession)rememberCounselorDraft();session=null;followTranscript=true;activationFollow=true;attempts.length=0;transcriptEntries.clear();selection.attempt=null;selection.index=null;selection.activationIndex=null;selection.initial=null;selection.manual=null;
     if(paint){cancelAnimationFrame(paint);paint=null;}LabStorage.removeItem('counseling-paired-session');
-    if(config)clearConversation(false);else Journey.clearExternal();
+    comparison=null;if(config)clearConversation(false);else Journey.clearExternal();
     if(resetVersion!==false){
       versionPreferences.set('counselor',counselorSelect.value);
     }
@@ -345,7 +353,6 @@
       if(hadSession || currentVersion!==preferred){$('experiment-version').value=preferred;$('experiment-version').dispatchEvent(new Event('change'));}
     }
     if(resetVersion!==false){
-      if(hadSession || source==='standalone')selectModel(config.model);
       source='paired';document.body.classList.add('paired-mode');LabVersionViews.install();$('settings-tab').click();window.selectSettingsRole('client');
       counselorReady=refreshCounselorCatalog().then(()=>window.PromptEditors?.sync(true));counselorReady.catch(error=>notice('상담사 기본 지침을 불러오지 못했습니다: '+error.message));
     }updateSummary();
@@ -380,6 +387,12 @@
     }finally{restoring=false;freeze();resizeInput();}
   }
   window.Paired={get hasSession(){return !!session;},get sessionId(){return session?.session_id || null;},get running(){return running || restoring || sending;},reset,load,
+    progress(){return {steps:session?.steps.length || 0,nextActor:nextActor(),manual:Object.values(modes()).includes('manual')};},
+    async startControlled(count,metadata){
+      if(Object.values(modes()).includes('manual'))throw Error('일괄 실행에는 상담사와 내담자 모두 모델 모드가 필요합니다.');
+      comparison=metadata;try{$('paired-limit').value=count;$('paired-mode').checked=true;controls();return await run(true);}finally{comparison=null;}
+    },
+    pause(){pause=true;controls();},stop:stopRun,
     get counselorSpec(){return counselorSpecs.find(row=>row.id===mode());},
     showStandalone(){source='standalone';document.body.classList.remove('paired-mode');LabVersionViews.standalone();window.showLabResult('visual');}
   };
@@ -398,7 +411,7 @@
   $('manual-client').onchange=changeModes;$('manual-counselor').onchange=changeModes;
   $('experiment-version').addEventListener('change',updateSummary);document.addEventListener('lab-settings-ready',()=>{if(!endpointTouched)restoreEndpoint(config.vllm_url);controls();transcript();});
   $('paired-pause').onclick=()=>{pause=true;controls();};
-  $('paired-stop').onclick=async()=>{pause=true;halt=true;if(requestId)try{const result=await api('/api/cancel',{request_id:requestId});if(!result.cancelled)abort?.abort();}catch(error){abort?.abort();notice(error.message);}controls();};
+  $('paired-stop').onclick=stopRun;
   $('reset').addEventListener('click',()=>{if(document.body.classList.contains('paired-mode'))reset();});$('reload').addEventListener('click',reset);
   counselorReady=refreshCounselorCatalog(true);counselorReady.catch(error=>notice(error.message));
   $('counselor-system-prompt').oninput=()=>{rememberCounselorDraft(mode());updateCounselor();};

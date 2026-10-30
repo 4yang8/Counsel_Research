@@ -31,8 +31,8 @@
       pane.tab.classList.toggle('selected',active);pane.tab.dataset.busy=String(!!info?.busy);
       pane.button.textContent=tab.label;pane.button.title=info?.title || tab.label;
       pane.button.setAttribute('aria-selected',String(active));pane.button.tabIndex=active?0:-1;
-      pane.close.disabled=!!info?.busy || state.tabs.length===1;
-      pane.close.title=info?.busy?'생성 또는 불러오기 중에는 탭을 닫을 수 없습니다.':'탭 닫기 · 저장된 대화는 채팅 내역에 남습니다.';
+      pane.close.disabled=!!info?.busy || !!info?.reserved || state.tabs.length===1;
+      pane.close.title=info?.reserved?'대조실험 제어 중에는 탭을 닫을 수 없습니다.':info?.busy?'생성 또는 불러오기 중에는 탭을 닫을 수 없습니다.':'탭 닫기 · 저장된 대화는 채팅 내역에 남습니다.';
       pane.frame.hidden=!active;
     }
     $('active-experiment-label').textContent=state.tabs.find(t=>t.id===state.active)?.label || '';
@@ -63,7 +63,7 @@
     };
   }
   function remove(id){
-    if(state.tabs.length===1 || status(id)?.busy)return;
+    if(state.tabs.length===1 || status(id)?.busy || status(id)?.reserved)return;
     const index=state.tabs.findIndex(t=>t.id===id),pane=panes.get(id);
     state.tabs.splice(index,1);
     if(state.active===id)state.active=state.tabs[Math.min(index,state.tabs.length-1)].id;
@@ -90,5 +90,6 @@
     for(const pane of panes.values())pane.frame.contentWindow?.LabPane?.save();
     if(state.tabs.some(t=>status(t.id)?.busy)){event.preventDefault();event.returnValue='';}
   });
+  window.ExperimentWorkspace={tabs:()=>state.tabs.map(tab=>({...tab,status:status(tab.id),api:panes.get(tab.id)?.frame.contentWindow?.LabPane})),activeId:()=>state.active,activate,refresh:render};
   for(const tab of state.tabs)mount(tab);render();save();$('add-experiment').disabled=true;
 })();

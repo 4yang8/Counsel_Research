@@ -16,13 +16,18 @@ def source(server, role, version, kind):
     if kind == 'user' or isinstance(kind, str) and kind.endswith('_user'):
         return HERE / user_templates.descriptor(role, version, kind)['path'], None
     if role == 'client':
-        if version in ('Q3','Q3a','Q3b') and kind == 'trajectory':
+        if version == 'Q3sb' and kind == 'note_summarizer':
+            return HERE / 'src/client/Q3sb/note_summarizer.md', None
+        if version == 'Q3sk' and kind == 'skill_notes':
+            from client.Q3sk.skills_runtime import path
+            return path(HERE / 'src/client/Q3sk'), None
+        if version in ('Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x') and kind == 'trajectory':
             return HERE / 'src/client' / version / 'trajectory.md', None
         if version == 'basic' and kind == 'system':
             return Path(server.config_path), 'system_prompt'
         if version == 'state_summary' and kind in ('system', 'summary'):
             return HERE / 'src/client/state_summary' / (kind + '.md'), None
-        if version in ('Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b') and kind in ('system', 'trait_router'):
+        if version in ('Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x') and kind in ('system', 'trait_router'):
             return HERE / 'src/client' / version / (kind + '.md'), None
         if version == 'Q2' and kind in ('system', 'trait_router', 'state_router', 'state_updater'):
             return HERE / 'src/client/Q2' / (kind + '.md'), None
@@ -94,6 +99,9 @@ def handle_post(handler):
                 return True
             if tuple(keys) in user_templates.REGISTRY:
                 user_templates.validate(content, user_templates.descriptor(*keys)['variables'])
+            if keys == ['client', 'Q3sk', 'skill_notes']:
+                from client.Q3sk.skills_runtime import validate
+                validate(content)
             path, field = source(handler.server, *keys)
             if field:
                 data = json.loads(path.read_text(encoding='utf-8'))

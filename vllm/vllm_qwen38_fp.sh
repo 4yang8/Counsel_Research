@@ -8,11 +8,9 @@ set -euo pipefail
 # --reasoning-parser qwen3 separates thinking content from the final answer;
 # it does not disable thinking mode.
 # Use every GPU visible to CUDA, honoring the caller's GPU selection.
-# conda activate를 shell script에서 사용할 수 있도록 설정 
-source /home2/sjyang114/miniconda3/etc/profile.d/conda.sh || exit 1
-
-# 기존 `gemma4` alias와 동일 
-conda activate gemma4 || exit 1
+# Prefer a verified node-local cache, falling back to the original Conda env.
+source "$(dirname -- "${BASH_SOURCE[0]}")/_activate_env.sh" || exit 1
+activate_vllm_environment gemma4 || exit 1
 
 # 기존 `HF` alias와 동일 
 export HF_HOME=/home2/sjyang114/.cache/huggingface

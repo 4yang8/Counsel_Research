@@ -2,7 +2,7 @@
   "host": "127.0.0.1",
   "port": 8891,
   "vllm_url": "http://127.0.0.1:18001/v1",
-  "model": "Qwen/Qwen3.8-27B-FP8",
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
   "api_key_env": "VLLM_API_KEY",
   "timeout_seconds": 180,
   "inspect_prompt": true,
@@ -12,7 +12,7 @@
   "generation": {
     "temperature": 0.7,
     "top_p": 0.95,
-    "max_tokens": 1024,
+    "max_tokens": 4096,
     "seed": null
   },
   "chat_template_kwargs": {},

@@ -12,7 +12,7 @@
     young_domain:'영역',young_schema:'스키마',core_belief_statement:'핵심 신념',schema_definition:'스키마 설명',
     attitude:'태도',rule:'규칙',assumption_positive:'긍정적 조건부 믿음',assumption_negative:'부정적 조건부 믿음',
     situation:'상황',automatic_thought:'자동사고',emotion:'감정',physiological_response:'신체 반응',behavior:'행동'};
-  let profiles=[], selected='001';
+  let profiles=[], selected='011_guarded';
   function text(value, depth=0) {
     if(Array.isArray(value)) return value.map((item,i)=>`${i+1}. ${text(item,depth+1)}`).join('\n\n');
     if(value && typeof value==='object') return Object.entries(value).map(([key,item])=>

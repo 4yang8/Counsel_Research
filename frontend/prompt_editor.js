@@ -31,7 +31,8 @@
   }
   function target(editor){
     const version=selected(editor.role);
-    if(editor.kind==='trajectory')return ['Q3','Q3a','Q3b'].includes(version)?{role:'client',version,kind:'trajectory'}:null;
+    if(editor.skill)return version==='Q3sk'?{role:'client',version,kind:'skill_notes'}:null;
+    if(editor.kind==='trajectory')return ['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(version)?{role:'client',version,kind:'trajectory'}:null;
     if(editor.subagent){
       const kind=$(editor.role+'-subagent-select').value;
       return (editor.role==='client'?clientSubagents():subagents()).some(item=>item.kind===kind)?{role:editor.role,version,kind:editor.userTemplate?kind+'_user':kind}:null;
@@ -53,7 +54,7 @@
     if(editor.error){editor.status.textContent=editor.error;editor.status.dataset.error='true';return;}
     editor.status.dataset.error='false';
     editor.status.textContent=editor.meta?
-      `${editor.meta.path}${editor.meta.field?' · '+editor.meta.field:''} · ${changed?(editor.touched?'미저장 변경':!editor.subagent && !editor.userTemplate && frozen()?'저장된 세션의 지침 · 현재 파일과 다름':'표시 내용이 원본과 다름'):editor.saved?'파일 저장 완료':'파일과 일치'} · ${editor.kind==='trajectory'?'저장은 다음 내담자 생성부터 적용':editor.userTemplate?'저장은 다음 생성부터 적용 · 변수는 호출 시 최신 데이터로 대체':editor.subagent?'저장은 다음 서브에이전트 호출부터 적용':'저장은 새 대화부터 적용'}`:
+      `${editor.meta.path}${editor.meta.field?' · '+editor.meta.field:''} · ${changed?(editor.touched?'미저장 변경':!editor.subagent && !editor.userTemplate && frozen()?'저장된 세션의 지침 · 현재 파일과 다름':'표시 내용이 원본과 다름'):editor.saved?'파일 저장 완료':'파일과 일치'} · ${editor.skill?'저장은 다음 내담자 생성부터 적용 · 실제 사용한 원문은 턴 기록에 보존':editor.kind==='trajectory'?'저장은 다음 내담자 생성부터 적용':editor.userTemplate?'저장은 다음 생성부터 적용 · 변수는 호출 시 최신 데이터로 대체':editor.subagent?'저장은 다음 서브에이전트 호출부터 적용':'저장은 새 대화부터 적용'}`:
       '원본 파일을 불러오는 중…';
   }
   async function load(editor,value){
@@ -157,6 +158,14 @@
   const trajectoryHint=document.createElement('p');trajectoryHint.className='hint';trajectoryHint.textContent='신뢰 형성의 방향과 단계별 의미입니다. 저장하면 다음 내담자 생성부터 적용됩니다. 모델은 이 파일을 자동 수정하지 않습니다. 실제 사용한 원문은 각 턴 기록에 남습니다.';
   trajectoryWrapper.append(trajectoryLabel,trajectoryHint);document.querySelector('#system_prompt-user-template').closest('section').after(trajectoryWrapper);
   install('client','trajectory',trajectoryInput.id,'client-trajectory-actions','client-trajectory-undo',{userTemplate:true,wrapper:trajectoryWrapper});
+  const skillWrapper=document.createElement('section'),skillLabel=document.createElement('label'),skillInput=document.createElement('textarea');
+  skillWrapper.id='q3sk-skill-editor';skillWrapper.className='user-template-editor';skillWrapper.hidden=true;
+  skillInput.id='client-note-skill';skillInput.rows=12;skillInput.spellcheck=false;
+  skillInput.setAttribute('aria-label','내담자 노트 작성 스킬');
+  skillLabel.append(document.createTextNode('내담자 노트 작성 스킬 · SKILL.md'),skillInput);
+  const skillHint=document.createElement('p');skillHint.className='hint';skillHint.textContent='반응 생성 중에는 이름·설명만 제공하고, 발화 확정 후 상세 지침을 읽습니다. 한 턴 안에서는 같은 원문을 사용합니다.';
+  skillWrapper.append(skillLabel,skillHint);trajectoryWrapper.after(skillWrapper);
+  install('client','skill_notes',skillInput.id,'client-note-skill-actions','client-note-skill-undo',{skill:true,userTemplate:true,wrapper:skillWrapper});
   installTemplate('counselor','user','counselor-system-prompt');
   installTemplate('client','summary_user','summary_system_prompt');
   installTemplate('client',null,'client-subagent-prompt',true);

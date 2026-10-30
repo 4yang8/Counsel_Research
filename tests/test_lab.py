@@ -36,6 +36,8 @@ class Model(BaseHTTPRequestHandler):
     p3a_child_finish = 'stop'
     dual_notes_finish = 'stop'
     q1_router_response = None
+    q3_summary_response = None
+    q3_summary_finish = 'stop'
     q1_router_finish = 'stop'
     q1_main_finish = 'stop'
     q1_update = None
@@ -77,6 +79,16 @@ class Model(BaseHTTPRequestHandler):
                    'usage':{'prompt_tokens':130,'completion_tokens':30,'total_tokens':160}}
             self.wfile.write(('data: '+json.dumps(chunk)+'\n\ndata: [DONE]\n\n').encode());return
         messages = data['messages']
+        if not data.get('tools') and 'notes' in data.get('structured_outputs',{}).get('json',{}).get('properties',{}) and 'trajectory' in data['structured_outputs']['json']['properties']:
+            value=self.q3_summary_response if self.q3_summary_response is not None else {
+                'notes':['선택을 존중받아 조금 안심되지만 공개 범위를 지키고 싶다.'],
+                'trajectory':{'current_experience':'안도와 경계가 함께 있다.','grounds':'마지막 내면 판단에 근거한다.','next_condition':'아직 평가가 걱정된다.'}}
+            self.send_response(200);self.send_header('Content-Type','text/event-stream');self.end_headers()
+            for delta,finish in [({'reasoning_content':'Q3_SUMMARY_REASON'},None),({'content':value if isinstance(value,str) else json.dumps(value,ensure_ascii=False)},self.q3_summary_finish)]:
+                chunk={'choices':[{'index':0,'delta':delta,'finish_reason':finish}]}
+                if finish:chunk['usage']={'prompt_tokens':100,'completion_tokens':30,'total_tokens':130}
+                self.wfile.write(('data: '+json.dumps(chunk,ensure_ascii=False)+'\n\n').encode());self.wfile.flush()
+            self.wfile.write(b'data: [DONE]\n\n');return
         is_q1a_main = any(tool.get('function', {}).get('name')=='finalize_client_draft' for tool in data.get('tools', []))
         is_q1a_reviewer = not data.get('tools') and '# 검토할 내담자 초안\n' in messages[-1]['content']
         if is_q1a_main or is_q1a_reviewer:
@@ -110,7 +122,7 @@ class Model(BaseHTTPRequestHandler):
             if self.p1_delay:time.sleep(self.p1_delay)
             chunk={'choices':[{'index':0,'delta':delta,'finish_reason':finish}], 'usage':{'prompt_tokens':100,'completion_tokens':30,'total_tokens':130}}
             self.wfile.write(('data: '+json.dumps(chunk,ensure_ascii=False)+'\n\ndata: [DONE]\n\n').encode());return
-        if any(t.get('function',{}).get('name')in ('commit_client_utterance','update_client_states','update_client_notes','retrieve_client_memory','update_trajectory_progress','update_turn_plan') for t in data.get('tools',[])) or (data.get('tools') and messages[0]['content'].startswith('# 내담자 반응과 심리상태 기록 지침')):
+        if any(t.get('function',{}).get('name')in ('commit_client_utterance','update_client_states','update_client_notes','retrieve_client_memory','update_trajectory_progress','update_turn_plan','select_client_note_sources') for t in data.get('tools',[])) or (data.get('tools') and messages[0]['content'].startswith('# 내담자 반응과 심리상태 기록 지침')):
             completed=[m for m in messages if m['role']=='tool']
             actions=getattr(self,'q2a_actions',None)
             if actions is None:
@@ -153,6 +165,14 @@ class Model(BaseHTTPRequestHandler):
                         {'name':'update_turn_plan','arguments':{'goal':'','reason':'제공된 자료를 비교한다','operations':[{'action':'start','step_id':'s1'}]}},
                         {'name':'update_turn_plan','arguments':{'goal':'','reason':'자료 비교 결과를 기록한다','operations':[{'action':'complete','step_id':'s1','result':'속도를 존중받아 안도하나 자세한 이야기는 보류하고 싶다','sources':['이번 상담사 발화: 원하는 만큼 말해도 된다는 제안']} ]}}]
                 actions=prefix+actions
+            if getattr(self,'q2a_actions',None) is None and '## 내면 판단·현재 진행·표현 계획' in messages[0]['content']:
+                actions=actions[:2]
+                actions[0]['arguments']['turn_goal']={'intention':'말할 범위를 지키고 싶다.','grounds':'조심스러운 마음','uncertainty':''}
+                actions[0]['arguments']['trajectory_plan']={'position':'초반','movement':'maintain','grounds':'현재의 조심스러운 마음'}
+                actions[0]['arguments']['trajectory_assessment']={'position':'초반','movement':'maintain','current_experience':'조심스럽다.','grounds':'선택을 존중하지만 아직 공개가 부담스럽다.','next_condition':'평가에 대한 걱정'}
+                actions[1]['arguments']['evidence_decision']={'status':'sufficient','reason':'현재 정보로 판단한다.','remaining_gap':''}
+                if '## 원문 선택 기록' in messages[0]['content']:
+                    actions.append({'name':'select_client_note_sources','arguments':{'selections':[{'source_id':'judgment:appraisal.immediate_feeling','first_line':1,'last_line':1}]}})
             idx=len(completed)
             if idx<len(actions):
                 action=actions[idx]
@@ -410,6 +430,9 @@ def fixture(experiment_version='basic', prompt_editing=False):
                          'src/client/state_summary/summary.md',
                          'src/client/Q2a_prefill_test/trait_router_prefill.txt',
                          'src/client/Q3/trajectory.md','src/client/Q3a/trajectory.md','src/client/Q3b/trajectory.md',
+                         'src/client/Q3sk/trajectory.md',
+                         'src/client/Q3n/trajectory.md','src/client/Q3sb/trajectory.md','src/client/Q3x/trajectory.md',
+                         'src/client/Q3sb/note_summarizer.md','src/client/Q3sk/skills/client-note-update/SKILL.md',
                          *(f'src/client/{v}/{n}.md' for v in app.experiment_versions.MEMORY_EXPERIMENTS for n in ('system','trait_router','state_notes_template')),
                          *(f'src/client/Q2a_prefill_test/{name}.md' for name in ('system','trait_router','state_notes_template')),
                          *(f'src/client/Q2a_trait_background/{name}.md' for name in ('system','trait_router','state_notes_template')),

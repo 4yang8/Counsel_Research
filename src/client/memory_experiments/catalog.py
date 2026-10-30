@@ -10,6 +10,10 @@ SPECS = {
     'Q2a_turn_goal': {'condition':'D','label':'D · 대화 의도 / 표현 계획','select_notes':False,'retrieve':False,'turn_goal':True},
     'Q2a_agentic_memory': {'condition':'E','label':'E · 노트 선택 + 조회 + 대화 의도','select_notes':True,'retrieve':True,'turn_goal':True},
     'Q2a_agentic_memory_F': dict(F_OPTIONS),
+    'Q3n': {'condition':'Q3n','label':'Q3n · 원문 선택 기록','select_notes':True,'retrieve':True,'turn_goal':True},
+    'Q3sb': {'condition':'Q3sb','label':'Q3sb · 요약 서브에이전트 기록','select_notes':True,'retrieve':True,'turn_goal':True},
+    'Q3x': {'condition':'Q3x','label':'Q3x · Python 판단 스냅샷','select_notes':True,'retrieve':True,'turn_goal':True},
+    'Q3sk': {'condition':'Q3sk','label':'Q3sk · 단계별 노트 스킬','select_notes':True,'retrieve':True,'turn_goal':True},
     'Q3b': {'condition':'Q3b','label':'Q3b · 선택적 계획·기록 최적화','select_notes':True,'retrieve':True,'turn_goal':True},
     'Q3a': {'condition':'Q3a','label':'Q3a · 턴별 로컬 플래닝','select_notes':True,'retrieve':True,'turn_goal':True},
     'Q3': {'condition':'Q3','label':'Q3 · 신뢰 형성 궤적','select_notes':True,'retrieve':True,'turn_goal':True},
@@ -24,6 +28,12 @@ def get_runtime(version):
         return _RUNTIMES[version]
 
 def _create_runtime(version):
+    if version in ('Q3n','Q3sb','Q3x'):
+        from importlib import import_module
+        return import_module('client.'+version+'.runtime')._runtime
+    if version=='Q3sk':
+        from client.Q3sk import runtime
+        return runtime
     if version=='Q3b':
         from client.Q3b import runtime
         return runtime

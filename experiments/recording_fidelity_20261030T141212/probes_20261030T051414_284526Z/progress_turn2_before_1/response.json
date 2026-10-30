@@ -1,0 +1,52 @@
+{
+  "id": "chatcmpl-b723eca48e106307",
+  "object": "chat.completion",
+  "created": 1793337254,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-abbc183aa23df676",
+            "type": "function",
+            "function": {
+              "name": "update_trajectory_progress",
+              "arguments": "{\"current_experience\": \"상담사의 해석에 대해 '끝나지 않은 장면'이 아니라 '대안을 만들며 되돌려 본다'고 수정했고, 자책이 교수님 걱정보다 먼저라는 계층을 스스로 구분해 표현했다. '역량 전체' 수준의 자기비판은 여전히 말하지 않았다. 상담사가 가볍게 넘기지 않은 것에 안도감이 들지만, 다음에 더 깊은 내용을 말할 때의 반응은 아직 확인되지 않았다.\", \"grounds\": \"이전 진행 기록에서는 상담사의 반응을 경험하지 못해 정체 상태였다. 이번 상담사 발화는 내담자의 걱정(ncf70171c19e8)에 부합하는 방식으로, 가볍게 넘기지도 과하게 심각하지도 않았다. 이에 내담자는 상담사의 해석을 조심스럽게 수정하고(trait 4), 질문에 답하며 자책의 우선순위를 표현했다. 이는 수동적 보고에서 능동적 상호작용으로의 전환이며, 신뢰의 작은 진전이다. 다만 깊은 자기비판은 보류(n4c1d52597991)하므로 경계도 유지된다.\", \"movement\": \"advance\", \"next_condition\": \"상담사가 자책의 우선순위를 들은 뒤 어떤 반응을 보이는지. '왜 그렇게 생각하나요'로 더 파고들면 어디까지 말할 수 있을지, 혹은 내담자의 표현을 따라와 주는지.\", \"position\": \"초반 단계에서 초기 진행으로 이동 중. 사건과 감정을 보고한 데 이어, 상담사의 해석을 수정하고 감정의 계층(자책이 먼저, 교수님 걱정이 그 다음)을 스스로 구분해 표현했다. '역량 전체' 수준의 자기비판은 아직 보류 중이다.\"}"
+            }
+          }
+        ],
+        "reasoning": "Now I need to update the trajectory progress. Let me compare:\n\nPrevious trajectory progress:\n- Position: 초반 단계. 상담사에게 미팅 사건과 그때의 감정(부끄러움, 걱정)을 말했지만, 실수를 역량 전반과 연결하는 깊은 자기비판은 아직 보류하고 있다.\n- Movement: 유지·정체\n- Current trust/boundary: 상담사가 주제를 스스로 고르게 한 것에 약간의 안도감을 느꼈지만, 아직 상담사의 반응을 경험하지 못해 신뢰 수준은 초기 그대로다.\n\nThis turn:\n- The counselor responded seriously without dismissing or catastrophizing → eased the specific fear (ncf70171c19e8)\n- The client was able to gently correct the counselor's interpretation (trait 4 in action) → shows engagement\n- The client answered the question by identifying self-blame as primary → shared more than before\n- The client still holds back the \"entire capability\" layer → boundary maintained\n- Movement: advance (slight) - the client engaged with the counselor's interpretation, corrected it, and answered the question revealing a hierarchy of emotions. This is more active engagement than just reporting the event.\n\nLet me write the trajectory progress.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp4-ep-98685464",
+  "usage": {
+    "prompt_tokens": 9995,
+    "total_tokens": 10668,
+    "completion_tokens": 673,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 260
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

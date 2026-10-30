@@ -23,8 +23,8 @@ def handle_get(handler):
         elif args.get('key'):
             import storage.session_browser as session_browser
             storage,kind,found=session_browser.resolve(handler.server,args['key'][0])
-            if found!=sid or kind!=version or kind not in ('Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'):raise ValueError('선택한 심리상태 세션이 일치하지 않습니다.')
-        if version not in ('Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'):
+            if found!=sid or kind!=version or kind not in ('Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'):raise ValueError('선택한 심리상태 세션이 일치하지 않습니다.')
+        if version not in ('Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'):
             handler.json_response({'version':version,'available':False,'message':'이 노트 화면은 자연어 심리상태를 사용하는 Q2·Q2a용입니다.'});return True
         # No successful generated client turn means no committed private state yet.
         q2=client_runtime(version)
@@ -60,11 +60,11 @@ def session_notes(handler, args):
         import storage.session_browser as session_browser
         storage,kind,found=session_browser.resolve(handler.server,args['key'][0])
         if found!=sid or kind!=version:raise ValueError('선택한 세션 정보가 일치하지 않습니다.')
-    if version in ('Q1','Q1a','Q1_s1','Q1_s2','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b'):
+    if version in ('Q1','Q1a','Q1_s1','Q1_s2','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'):
         module=client_runtime(version)
         with module.LOCK:
             note=module.load({'_storage_dir':str(storage)},sid if storage else None)
-        if version in ('Q3','Q3a','Q3b'):
+        if version in ('Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'):
             notes.extend([
                 {'actor':'client','version':version,'label':'사전 궤적 · 다음 생성에 사용할 파일','content':note['trajectory'],'path':str(module.HERE/'trajectory.md')},
                 {'actor':'client','version':version,'label':'현재 궤적 진행 · 마지막 완료 턴','content':note['trajectory_progress_text'],'path':None},
@@ -72,6 +72,6 @@ def session_notes(handler, args):
         if version in ('Q3a','Q3b'):
             notes.append({'actor':'client','version':version,'label':'로컬 작업 계획 · 마지막 완료 턴 / 다음 턴에는 새로 작성','content':note['local_plan_text'],'path':None})
         notes.insert(0,{'actor':'client','version':version,
-                        'label':'내담자 노트 · 자유 글머리' if version in ('Q2a_agentic_memory_F','Q3','Q3a','Q3b') else '내담자 노트 · 현재 내면 / 심리상태' if version in ('Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b') else '심리상태 노트' if version=='Q2' else '비공개 내면 노트',
+                        'label':'내담자 노트 · 자유 글머리' if version in ('Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x') else '내담자 노트 · 현재 내면 / 심리상태' if version in ('Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x') else '심리상태 노트' if version=='Q2' else '비공개 내면 노트',
                         'content':note['content'],'path':note.get('path')})
     return {'session_id':sid,'notes':notes,'message':'현재 저장된 노트 원문 · 내담자 변경안은 턴 저장 완료 후 반영'}

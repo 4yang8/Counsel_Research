@@ -1,0 +1,130 @@
+{
+  "objective": "기록 단계가 이미 생성된 내면·선택·발화를 보존하며 새로운 해석·미관찰 결과를 추가하지 않도록 역할과 근거 범위를 명확히 한다.",
+  "versions": [
+    "Q3",
+    "Q3a",
+    "Q3sk"
+  ],
+  "source_sessions": {
+    "Q3": "261030_131934",
+    "Q3a": "261030_132412",
+    "Q3sk": "261030_132004"
+  },
+  "before": [
+    {
+      "path": "src/client/Q3/system.md",
+      "sha256": "b69f89152264b44ebc8be1dc08834614316c4e8acca543452fe932423e86ecc1"
+    },
+    {
+      "path": "src/client/Q3/runtime.py",
+      "sha256": "7bb636b0af6294ff33b33aafe9a4382cc8ba1ae06b47bde0d3737ca3d0b6c9c7"
+    },
+    {
+      "path": "src/client/Q3/trajectory.py",
+      "sha256": "27dc50b28e01dbbc43eb7698e02a55105b2caa5906caddcef7445d40ddc3f732"
+    },
+    {
+      "path": "src/client/Q3/note_items.py",
+      "sha256": "2ad4291ee737764e5108a44e7a4a76c25689577cb33cce75dee30b43bfed2c16"
+    },
+    {
+      "path": "src/client/Q3a/system.md",
+      "sha256": "7c1e0589f632144839b544f74f00fc99ab17eeed84b445a61a80f341a0caa7ac"
+    },
+    {
+      "path": "src/client/Q3a/runtime.py",
+      "sha256": "d479bb3329b1382de52a67900e8d932bf2d0d56ea981535d50ae3365d978ad18"
+    },
+    {
+      "path": "src/client/Q3a/trajectory.py",
+      "sha256": "27dc50b28e01dbbc43eb7698e02a55105b2caa5906caddcef7445d40ddc3f732"
+    },
+    {
+      "path": "src/client/Q3a/note_items.py",
+      "sha256": "2ad4291ee737764e5108a44e7a4a76c25689577cb33cce75dee30b43bfed2c16"
+    },
+    {
+      "path": "src/client/Q3sk/system.md",
+      "sha256": "ca81e0cae019ff0c073e151c1a02a4f351316c7446b4a5e5d77adbcefe7277a9"
+    },
+    {
+      "path": "src/client/Q3sk/runtime.py",
+      "sha256": "dded34350c15aca864d84115064bbe49af54967bcd3e928c7a9f850efb0a38eb"
+    },
+    {
+      "path": "src/client/Q3sk/trajectory.py",
+      "sha256": "27dc50b28e01dbbc43eb7698e02a55105b2caa5906caddcef7445d40ddc3f732"
+    },
+    {
+      "path": "src/client/Q3sk/note_items.py",
+      "sha256": "2ad4291ee737764e5108a44e7a4a76c25689577cb33cce75dee30b43bfed2c16"
+    },
+    {
+      "path": "src/client/Q3sk/skills/client-note-update/SKILL.md",
+      "sha256": "a356e3f00f891b8981090f96255ae0944e9e51ec5a356c9c2e9c7f862268b70a"
+    },
+    {
+      "path": "docs/RESEARCH_GUIDELINES.md",
+      "sha256": "b9340d8f8493dd85adf5cceaf179cb20aabccc22058cfd4d67fd7d28a381e393"
+    }
+  ],
+  "after": [
+    {
+      "path": "src/client/Q3/note_items.py",
+      "sha256": "d681668b5eccc07554aa4360e634daac3f8cd2ee01b91d98fbe501155fbfe686"
+    },
+    {
+      "path": "src/client/Q3/runtime.py",
+      "sha256": "01ee731f1cfa3007f11a1f381b261a03f1b8134a785b22fa59c8c4f7d6032690"
+    },
+    {
+      "path": "src/client/Q3/system.md",
+      "sha256": "0171663dbefab111c9e28ebae2c69a45a3e08db097aea3a75d2e07f6fbae7752"
+    },
+    {
+      "path": "src/client/Q3/trajectory.py",
+      "sha256": "d5ebd1bf03858462195e96c986a6f87167b4daef2fff6f366943288fd985d0b5"
+    },
+    {
+      "path": "src/client/Q3a/note_items.py",
+      "sha256": "d681668b5eccc07554aa4360e634daac3f8cd2ee01b91d98fbe501155fbfe686"
+    },
+    {
+      "path": "src/client/Q3a/runtime.py",
+      "sha256": "35004da2237f840d1df0c6844aab595f07be188db902c82dede8d31b3c20b06a"
+    },
+    {
+      "path": "src/client/Q3a/system.md",
+      "sha256": "157da44de6fd295e3f74c73f13fa053d318433e6906b1a0b1c24fcbcd46c0d04"
+    },
+    {
+      "path": "src/client/Q3a/trajectory.py",
+      "sha256": "d5ebd1bf03858462195e96c986a6f87167b4daef2fff6f366943288fd985d0b5"
+    },
+    {
+      "path": "src/client/Q3sk/note_items.py",
+      "sha256": "d681668b5eccc07554aa4360e634daac3f8cd2ee01b91d98fbe501155fbfe686"
+    },
+    {
+      "path": "src/client/Q3sk/runtime.py",
+      "sha256": "da69292214b33c29fec6727c406c165f2079ee3f7b30b61c0ced6d92f8f5a3e6"
+    },
+    {
+      "path": "src/client/Q3sk/skills/client-note-update/SKILL.md",
+      "sha256": "12dfdb5bf0f0cbd3b7dff868b66f5c496e8f4df69b543a758c89c543b0488c9a"
+    },
+    {
+      "path": "src/client/Q3sk/system.md",
+      "sha256": "7fa5605e03369f107f7056e07a362ae8c0042eee3ffbbd0327456bb94425bf23"
+    },
+    {
+      "path": "src/client/Q3sk/trajectory.py",
+      "sha256": "d5ebd1bf03858462195e96c986a6f87167b4daef2fff6f366943288fd985d0b5"
+    }
+  ],
+  "tests": {
+    "related_unittest": 21,
+    "result": "passed",
+    "skill_format": "valid"
+  }
+}

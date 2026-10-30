@@ -48,8 +48,8 @@ def schema():
     fields = {
         'action': {'type':'string','enum':['add','update','delete'], 'description':'add: 새 내용 추가, update: 기존 항목 내용 수정, delete: 더 이상 유효하지 않은 항목 삭제. 유지할 항목은 보내지 않습니다.'},
         'item_id': {'type':'string','description':'update/delete는 입력 노트의 [n...] ID. add는 빈 문자열이며 Python이 새 ID를 부여합니다.'},
-        'content': {'type':'string','description':'add/update는 다음 반응에 이어 줄 현재 마음이나 조건 하나를 간결하게 기록합니다. 기본 정보·프로필에 더해 이번 내면 판단과 표현 선택에서 확인되는 내용을 담고, 그 판단의 대상·구체성·확실성을 유지합니다. 배경은 현재 마음을 이해하는 데 필요한 부분만 함께 적습니다. 항목의 새 본문만 한 줄로 쓰고 ID·글머리는 제외합니다. delete는 빈 문자열입니다.'},
-        'reason': {'type':'string','description':'이전 항목과 이번 appraisal·turn_goal·response_plan·확정 발화를 비교하여, 어느 자료의 어떤 내용이 추가·수정·삭제를 뒷받침하는지 짧게 설명합니다. 처음 기록하는 경우 새 마음을 파악한 근거를 적습니다. 실행 이력에 저장되며 다음 턴의 현재 노트에는 자동 추가되지 않습니다.'},
+        'content': {'type':'string','description':'add/update는 앞서 생성된 appraisal·의도·표현 선택·발화에 근거한 현재 마음이나 조건 하나를 기록합니다. 내면과 실제 공개 범위를 구분하며 대상·의미·시점·확실성을 보존하고, 기록하면서 새로운 해석이나 상호작용 결과를 추가하지 않습니다. 항목의 새 본문만 한 줄로 쓰고 ID·글머리는 제외합니다. delete는 빈 문자열입니다.'},
+        'reason': {'type':'string','description':'이전 항목과 이번 appraisal·turn_goal·response_plan·확정 발화의 어떤 내용 차이가 변경을 뒷받침하는지 설명합니다. 각 자료의 의미와 시점·확실성을 보존하여 설명하고, 새로운 심리 해석·인과관계·상대의 의도·상호작용 결과를 추가하지 않습니다. 실행 이력에 보존되며 노트 본문에는 자동 추가되지 않습니다.'},
     }
     return {'type':'object','properties':{'operations':{'type':'array',
         'description':'필요한 글머리 항목 변경만 전달합니다. 유지할 항목은 생략하고, 변경이 없으면 빈 배열입니다.',

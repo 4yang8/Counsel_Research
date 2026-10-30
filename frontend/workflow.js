@@ -18,9 +18,18 @@ window.Workflow = (() => {
     return {status,heading,preview:String(preview),toolName:s.phase==='tool'?tool?.name || '':''};
   }
   function build(steps,index){
-    const nodes=[],edges=[],latest=new Map(),tools=new Map(),models=new Map();let row=0;
+    const nodes=[],edges=[],latest=new Map(),tools=new Map(),models=new Map(),recordings=new Map();let row=0;
     const addEdge=(from,to,kind,step)=>{if(from && to)edges.push({from:from.id,to:to.id,kind,step,active:step===index});};
     steps.slice(0,index+1).forEach((s,i)=>{
+      if(s.phase==='recording'){
+        const agent=s.agentId || 'main';let record=recordings.get(agent);
+        if(!record){
+          record={id:'recording:'+agent,kind:'recording',agent,first:i,step:i,state:s,x:20,y:20+row++*140};
+          recordings.set(agent,record);nodes.push(record);
+          for(const list of models.values())if(list[0].state.agentMeta?.kind==='note_summarizer')addEdge(list.at(-1),record,'summary',i);
+        }
+        record.state=s;record.step=i;return;
+      }
       const agent=s.agentId || 'main';let model=latest.get(agent);
       if(s.phase==='model' || !model){
         const previous=model;
@@ -56,10 +65,15 @@ window.Workflow = (() => {
       if(parentTool && ['completed','error'].includes(parentTool.tool.status))addEdge(list.at(-1),parentTool,'return',parentTool.step);
       if(meta?.kind==='summary' && !parentTool){const parent=models.get(meta.parentId)?.find(n=>n.first>list.at(-1).first);if(parent)addEdge(list.at(-1),parent,'summary',parent.first);}
       if(meta?.kind==='trait_router' && !parentTool){const parent=models.get(meta.parentId)?.find(n=>n.first>list.at(-1).first);if(parent)addEdge(list.at(-1),parent,'routing',parent.first);}
+      if(meta?.kind==='note_summarizer' && !parentTool){
+        const trigger=[...tools.values()].findLast(t=>t.agent===meta.parentId && t.tool.name==='commit_client_utterance' && t.first<list[0].first);
+        addEdge(trigger,list[0],'automatic_summary',list[0].first);
+      }
     }
     const waiting=new Map();
     for(const tool of tools.values())if(tool.resultStep!==undefined){
       let next=models.get(tool.agent)?.find(n=>n.first>tool.resultStep);
+      if(!next)next=recordings.get(tool.agent);
       if(!next){
         next=waiting.get(tool.agent);
         if(!next){next={id:'context:'+tool.agent,kind:'context',agent:tool.agent,first:tool.resultStep,step:tool.resultStep,state:tool.state,x:tool.source.x,y:20+row++*140};waiting.set(tool.agent,next);nodes.push(next);}
@@ -70,9 +84,10 @@ window.Workflow = (() => {
     return {nodes,edges};
   }
   function svgNode(tag,attrs){const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;}
-  const edgeLabels={call:'도구 호출',feedback:'결과 반환',flow:'다음 모델 호출',delegate:'서브에이전트 위임',return:'조사 결과 반환',summary:'요약 전달',routing:'자동 선정 특성 전달'};
+  const edgeLabels={call:'도구 호출',feedback:'결과 반환',flow:'다음 모델 호출',delegate:'서브에이전트 위임',return:'조사 결과 반환',summary:'요약 전달',routing:'자동 선정 특성 전달',automatic_summary:'발화 확정 후 자동 요약'};
   let paintedSteps=null,paintedIndex=-1,graph=null;
   function nodeInfo(n){
+    if(n.kind==='recording')return {status:n.state.recording.discarded?'미저장':n.state.recording.pending?'검증·저장 대기':'저장 완료',preview:'Python 기록 · '+({raw:'선택 원문 복사',summary:'반환 요약 직접 저장',snapshot:'확정 필드 스냅샷'}[n.state.recording.mode] || '')};
     if(n.kind==='context')return {status:'결과 수신 · 다음 호출 대기',preview:'tool 메시지가 추가됐습니다. 아직 후속 모델 호출 전입니다.'};
     if(n.kind!=='tool')return describe(n.state);
     const t=n.tool;let args;try{args=JSON.parse(t.arguments);}catch{}
@@ -109,11 +124,11 @@ window.Workflow = (() => {
       }
       nodes.forEach(n=>{
         const s=n.state,isTool=n.kind==='tool',selected=isTool?['tool','result'].includes(steps[index]?.phase)&&n.step===index:n.step===index&&!['tool','result'].includes(steps[index]?.phase);
-          const color=isTool?(n.tool.status==='error'?'error':'tool'):s.problem?'error':n.kind==='context'?'result':n.kind==='user'?'user':'model';
+          const color=isTool?(n.tool.status==='error'?'error':'tool'):s.problem?'error':['context','recording'].includes(n.kind)?'result':n.kind==='user'?'user':'model';
         const box=text('article','',`wf-node wf-${color}${selected?' selected':''}`);box.dataset.kind=n.kind;box.dataset.step=n.step;box.dataset.agent=n.agent;box.dataset.phase=s.phase;
         if(isTool)box.dataset.call=n.tool.id;box.style.left=n.x+'px';box.style.top=n.y+'px';
         const button=text('button','','wf-agent-button');button.type='button';button.setAttribute('aria-current',selected?'step':'false');
-        button.append(text('strong',isTool?n.tool.name:n.kind==='context'?'결과 → 누적 컨텍스트':(n.kind==='user'?'입력':`LLM ${s.iteration || 1}`)+' · '+s.agentName),text('span','','wf-status'),text('span','','wf-node-preview'),text('small',isTool?n.tool.id:`${n.first+1}단계 · ${s.agentMeta?.depth?`깊이 ${s.agentMeta.depth}`:'메인'}`));
+        button.append(text('strong',isTool?n.tool.name:n.kind==='recording'?'Python 기록 · 자동 저장':n.kind==='context'?'결과 → 누적 컨텍스트':(n.kind==='user'?'입력':`LLM ${s.iteration || 1}`)+' · '+s.agentName),text('span','','wf-status'),text('span','','wf-node-preview'),text('small',isTool?n.tool.id:`${n.first+1}단계 · ${s.agentMeta?.depth?`깊이 ${s.agentMeta.depth}`:'메인'}`));
         button.title=s.title;button.onclick=()=>select(isTool?n.step:n.first);box.append(button);canvas.append(box);n.element=box;
       });scroll.scrollTop=top;scroll.scrollLeft=left;
     }

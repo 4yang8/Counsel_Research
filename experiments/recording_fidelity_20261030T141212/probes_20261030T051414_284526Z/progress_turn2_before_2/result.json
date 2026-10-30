@@ -1,0 +1,27 @@
+{
+  "case": "progress_turn2",
+  "condition": "before",
+  "repeat": 2,
+  "source_turn_id": "20261030T042123_757764Z_35079d3a",
+  "tool": "update_trajectory_progress",
+  "status": "completed",
+  "arguments": {
+    "position": "초반 단계에서 초반-중간 경계 쪽으로 미세한 이동. 상담사의 해석을 수정하고 자책의 우선순위를 표현하면서 수동적 노출에서 능동적 상호작용으로 넘어가는 시작점. 깊은 자기비판(역량 전체)은 여전히 보류.",
+    "movement": "advance",
+    "current_experience": "상담사가 가볍게 넘기지도 과하게 심각하지도 않게 반응한 것에 안도하며, 맞지 않는 해석을 조심스럽게 수정할 수 있다는 것을 확인했다. 자책이 교수님 걱정보다 먼저라는 계층을 스스로 인식하고 표현했지만, '역량 전체'라는 문장은 아직 말하지 않았다.",
+    "grounds": "이전 진행 기록에서는 상담사의 반응을 경험하지 못해 신뢰가 초기 그대로였으나, 이번 상담사 발화에 대해 내담자가 (1) 안도감을 느끼고, (2) 해석을 수정하고, (3) 질문에 답하며 자기 경험의 구조를 언어화했다. 이는 이전의 '말하기'에서 '상호작용하기'로 전환된 것으로, 사전 궤적의 초반→중간 이동의 초기 신호다. 다만 보류 경계가 유지되므로 본격적 중간 단계는 아니다.",
+    "next_condition": "상담사가 자책의 우선순위에 대해 어떻게 반응하는지. 자책의 이유(강한 기준, 역량에 대한 의심)를 더 물어볼 때 어디까지 말할 수 있을지, 그리고 상담사의 다음 해석이 또 맞지 않을 때 내담자가 다시 수정할 수 있을지."
+  },
+  "usage": {
+    "prompt_tokens": 9995,
+    "total_tokens": 10640,
+    "completion_tokens": 645,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 274
+    }
+  },
+  "finish_reason": "stop",
+  "seconds": 46.514,
+  "request_sha256": "056ed0ea83d513b90e007d6c581771c362cabfda5bae840e471a413c58068182"
+}

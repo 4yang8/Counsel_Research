@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>상담 실험</title><link rel="stylesheet" href="/workspace.css"><script defer src="/workspace.js"></script></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>상담 실험</title><link rel="stylesheet" href="/workspace.css"><script defer src="/workspace.js"></script><script defer src="/master_controller.js"></script></head>
 <body>
   <header id="experiment-tabs-header">
     <div class="workspace-bar">
@@ -11,6 +11,7 @@
     </div>
     <div id="experiment-tabs-row" hidden><div id="experiment-tabs" role="tablist" aria-label="실험 탭"></div></div>
   </header>
+  <details id="master-controller"><summary>대조실험 컨트롤러 <span id="master-summary"></span></summary><div id="master-body"></div></details>
   <div id="workspace-error" role="status" hidden></div>
   <main id="experiment-panes"></main>
 </body></html>

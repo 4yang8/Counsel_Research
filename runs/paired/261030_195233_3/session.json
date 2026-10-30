@@ -1,0 +1,893 @@
+{
+  "session_id": "261030_195233_3",
+  "client_version": "Q3x",
+  "counselor_version": "basic",
+  "speaker_modes": {
+    "client": "model",
+    "counselor": "model"
+  },
+  "connection": {
+    "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+    "vllm_url": "http://192.168.0.90:8002/v1",
+    "timeout_seconds": 180,
+    "inspect_prompt": true,
+    "inspection_timeout_seconds": 10,
+    "api_key_env": "VLLM_API_KEY",
+    "chat_template_kwargs": {
+      "enable_thinking": true
+    }
+  },
+  "settings": {
+    "scenario": {
+      "id": "trust_011_guarded",
+      "task": "## 역할과 과제\n- 당신은 아래 자료의 가상 내담자입니다.\n- 이번 상담자 발화를 어떻게 받아들였는지 taxonomy에서 느낌을 0개 이상 선택하고, 판단 이유와 상담자에게 직접 하는 실제 내담자 발화를 작성하세요.\n\n## 감정과 반응 구성\n- 현재 감정·주관적인 해석·공개할 내용·말투는 프로필, 대화, 현재 상태에 맞게 구성하세요.\n- 특성은 경향이며 특정 감정을 강제하는 규칙이 아닙니다.\n- 긍정적 느낌이나 부정적 느낌을 과장하지 마세요.\n\n## 내면 심리 상태의 의미와 반영\n- states는 이번 상담자 발화를 듣기 직전 내담자의 내면 심리 상태입니다. 각 항목의 level과 meaning을 함께 읽고 현재 내담자의 마음 상태를 이해하세요.\n- 상담자에 대한 신뢰(trust)는 내담자가 상담자를 얼마나 믿고, 자신의 경험을 이해하고 도와줄 사람으로 느끼는지입니다.\n- 자기개방 의향(disclosure)은 내담자가 자신의 감정·생각·경험을 상담자에게 얼마나 드러내고 싶은지입니다.\n- 변화에 대한 자신감(change_confidence)은 내담자가 자신의 문제를 다루기 위해 필요한 변화나 행동을 실제로 해낼 수 있다고 얼마나 느끼는지입니다.\n- 이 내면 심리 상태를 반영해 이번 상담자 발화를 어떻게 받아들이는지 판단하고, 실제 내담자 발화를 작성하세요. 상담자의 말에 대한 믿음과 경계, 드러내는 내용의 범위와 구체성, 자신의 변화 가능성을 말하는 방식에 해당 상태가 반영되도록 하세요.\n- 과거 경험에서의 반응은 당시 반응입니다.\n\n## 사실과 해석의 구분\n- 구체적인 과거 사건, 실제 행동, 타인의 발언·반응, 현재 실행 여건은 제공된 자료 또는 조회 결과에 근거하세요.\n- 자료에 없는 사실·진단·관계·타인의 속마음을 만들거나 확정하지 마세요.\n- 관찰된 사실과 당시 내담자의 해석을 구분하세요.\n\n## 도구 조회와 정보 활용\n- 개인 경험, 이번 사건의 상세 기록, 현재 실행 여건은 도구로 확인할 수 있습니다.\n- 현재 상담자 발화의 의미를 이해하거나 사실을 답하는 데 필요한 경우 조회하세요.\n- 현재 자료로 충분하면 바로 답할 수 있습니다.\n- 조회한 정보를 전부 공개할 필요는 없습니다.\n\n## 자료가 부족할 때의 처리\n- 조회 실패나 자료 부재를 내담자의 기억 상실·공개 거부·압박감으로 바꾸어 설명하지 마세요.\n- 필요한 사실을 확인하지 못했다면 판단 이유에 사례 정보 부족이라고 밝히고 사실을 지어내지 마세요.\n\n## 판단 이유와 실제 발화 작성\n- 판단 이유에는 사용한 대화·자료·도구 결과의 출처와 근거를 간단히 연결해서 적으세요.\n- 실제 발화는 분석 보고서가 아니라 앞선 내담자의 말투와 자기개방 의향에 맞는 말로 작성하세요.",
+      "profile": {
+        "profile_id": "gold_011",
+        "demographic_context": {
+          "age": "36세",
+          "occupation": "중견 물류회사 회계팀 과장 (12년차)",
+          "life_stage": "미혼, 자취. 최근 팀 개편으로 새로운 팀원들과 일하게 된 지 4개월째",
+          "background": "아버지는 술만 마시면 약속을 뒤집고 가족 몰래 어머니 명의로 빚을 지는 사람이었음. 회사에서는 '일은 완벽한데 곁을 안 주는 사람'으로 통함. 연애는 몇 번 있었지만 1년을 넘긴 적이 없음."
+        },
+        "presenting_problem": "석 달 전 유일하게 마음을 열었던 입사동기에게 사석에서 한 팀장 험담이 그대로 팀장 귀에 들어간 일이 있었음. 이후 회사에서 누가 말을 걸어도 '뭘 캐내려는 건가'부터 떠올라 온몸에 힘이 들어가고, 퇴근 후에도 낮의 대화를 되짚느라 잠을 설침. 비슷한 시기 1년 만난 연인이 '너는 나를 단 한 번도 믿은 적이 없어'라며 떠났고, '이렇게 아무도 못 믿고 사는 게 맞나' 싶어 상담을 신청했지만, 신청서에 개인정보를 적으면서도 '이 기록이 어디로 가는 건지'부터 확인했다고 함.",
+        "core_belief": {
+          "young_domain": "단절/거절",
+          "young_schema": "불신/학대",
+          "core_belief_statement": "방심하고 곁을 내주면 사람들은 결국 나를 이용하거나 상처 입힐 것이다.",
+          "schema_definition": "타인이 의도적으로 자신을 학대·모욕·기만·이용할 것이라는 예상. 상처는 고의적이거나 부당한 방치의 결과로 지각됨."
+        },
+        "childhood_data": "내담자의 아버지는 술이 들어가면 '이번 주말엔 놀이공원 가자'던 약속을 없던 일로 만들고, 화가 나면 전날 내담자가 털어놓은 속마음을 조롱거리로 꺼내 드는 사람이었습니다. 어머니 몰래 내담자의 세뱃돈 통장을 헐어 쓴 일도 있었습니다. 중학교 때는 가장 친했던 친구에게만 털어놓은 가정사가 반 전체에 소문으로 퍼졌고, 그 친구는 '재미로 그랬다'며 웃었습니다. 믿고 보여준 속마음이 번번이 무기가 되어 돌아오는 경험이 반복되면서, 사람에게 곁을 내주는 것은 상대에게 칼자루를 쥐여주는 일이라는 신념이 형성되었습니다.",
+        "intermediate_beliefs": {
+          "attitude": "속마음이나 약점을 보이는 것은 상대에게 나를 해칠 무기를 건네주는 어리석은 짓이다",
+          "rule": "상대의 말은 액면 그대로 믿지 말고 숨은 의도를 확인해야 하며, 중요한 것은 반드시 기록으로 남겨야 한다",
+          "assumption_positive": "만약 내가 항상 경계하고 검증하며 빈틈을 보이지 않는다면, 누구도 나를 이용하거나 뒤통수치지 못할 것이다",
+          "assumption_negative": "만약 내가 누군가를 믿고 무장을 풀어버린다면, 그 사람은 언젠가 반드시 그것을 이용해 나를 곤경에 빠뜨릴 것이다"
+        },
+        "coping_strategies": [
+          "타인의 호의나 친절을 받으면 기뻐하기 전에 '무엇을 바라고 이러는지'부터 따져보고, 신세를 지지 않으려 곧바로 같은 값으로 갚아버림",
+          "업무 협의는 가급적 메신저나 메일 등 기록이 남는 방식으로 하고, 구두 약속은 '정리해서 메일 드릴게요'라며 문서로 못 박음",
+          "사적인 질문을 받으면 웃으며 두루뭉술하게 넘기거나 역으로 상대에게 질문을 돌려 자신의 정보를 내주지 않음",
+          "새로운 사람에게는 사소한 이야기를 흘려보고 그것이 다른 데서 들려오는지 확인하는 식으로 믿을 만한지 시험함",
+          "관계가 가까워져 기대게 될 것 같으면 상대의 말과 행동의 불일치를 찾아내 '역시 믿을 사람 없다'는 근거로 삼고 거리를 벌림"
+        ],
+        "situations": [
+          {
+            "situation": "새 팀의 후배가 '과장님 것도 샀어요'라며 커피를 건네고, 다음 주 연차 결재 이야기를 꺼냄.",
+            "automatic_thought": "커피가 공짜일 리 없지. 결재 때문에 미리 기름칠하는 거잖아. 순수한 호의라고 믿는 순간 이용당하는 거야.",
+            "emotion": "경계심, 불편함, 옅은 씁쓸함",
+            "physiological_response": "어깨가 굳고 웃는 얼굴이 부자연스러워짐",
+            "behavior": "'잘 마실게요' 하고는 오후에 후배 자리에 같은 값의 음료를 놓아 빚을 지워버리고, 연차 결재는 규정만 따져 처리함"
+          },
+          {
+            "situation": "팀 회식에서 팀장이 '우리 팀은 가족 같은 분위기로 갑시다. 각자 요즘 고민도 편하게 얘기해 봐요'라고 함.",
+            "automatic_thought": "여기서 꺼낸 말이 다음 인사평가 때 어떻게 돌아올지 모르는데. 지난번에도 믿고 말했다가 팀장 귀에 다 들어갔잖아.",
+            "emotion": "긴장, 냉소, 소외감",
+            "physiological_response": "속이 조여오고 손으로 계속 잔을 만지작거림",
+            "behavior": "'요즘은 뭐, 운동 열심히 하는 게 고민이죠'라고 농담으로 비켜가고, 다른 사람들이 털어놓는 이야기를 들으며 '저 말이 언제 어떻게 쓰일까'를 속으로 계산함"
+          },
+          {
+            "situation": "헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.",
+            "automatic_thought": "잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.",
+            "emotion": "그리움, 그것을 덮는 의심, 피로감",
+            "physiological_response": "메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐",
+            "behavior": "한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음"
+          },
+          {
+            "situation": "상담 신청서를 작성하다가 '상담 내용은 비밀이 보장됩니다'라는 안내 문구를 봄.",
+            "automatic_thought": "비밀 보장이라... 회사 지원 프로그램인데 정말 회사로 안 넘어갈까. 기록은 남을 텐데 그 기록을 누가 볼 수 있는 거지.",
+            "emotion": "불안, 의심, 그 밑의 간절함",
+            "physiological_response": "펜을 쥔 손에 힘이 들어가고 한숨이 나옴",
+            "behavior": "접수 담당자에게 기록 보관 기간과 열람 권한을 꼬치꼬치 물은 뒤, 신청서의 '상담 받고 싶은 내용' 칸에는 '수면 문제'라고만 적어 냄"
+          }
+        ]
+      },
+      "states": {
+        "trust": {
+          "name": "상담자에 대한 신뢰",
+          "level": "중간",
+          "meaning": "현재 내담자는 상담자가 자신을 이해하고 도와줄 것으로 어느 정도 기대하지만, 충분히 믿을 수 있는지는 아직 확신하지 못한다."
+        },
+        "disclosure": {
+          "name": "자기개방 의향",
+          "level": "낮음",
+          "meaning": "현재 내담자는 자신의 감정·생각·경험을 상담자에게 자세히 드러내는 것이 내키지 않으며, 특히 민감하거나 불편한 내용은 말하기를 망설인다."
+        },
+        "change_confidence": {
+          "name": "변화에 대한 자신감",
+          "level": "낮음",
+          "meaning": "현재 내담자는 자신의 문제를 다루기 위해 필요한 변화나 행동을 실제로 해낼 수 있을지 자신이 부족하다."
+        }
+      },
+      "source_notes": {
+        "profile_source": "resources/profiles/group2/gold_ccd_profile_011.json",
+        "case_origin": "신뢰 대조 · 초기 대화 없음"
+      },
+      "dialogue_format": "messages",
+      "dialogue": [],
+      "taxonomy": [
+        {
+          "name": "이해받음",
+          "meaning": "내 상황이나 감정을 알아준다고 느낀다."
+        },
+        {
+          "name": "선택권을 존중받음",
+          "meaning": "내 속도와 선택을 인정한다고 느낀다."
+        },
+        {
+          "name": "부담·압박을 느낌",
+          "meaning": "준비되지 않은 변화나 답변을 요구받는다고 느낀다."
+        },
+        {
+          "name": "오해받음",
+          "meaning": "내 의도나 어려움을 다르게 받아들였다고 느낀다."
+        }
+      ],
+      "example_counselor_utterance": "오늘 상담에서 가장 먼저 다뤄보고 싶은 일이 있나요?",
+      "state_levels": {
+        "trust": {
+          "낮음": "현재 내담자는 상담자가 자신의 경험을 이해하고 도와줄 사람인지 믿기 어렵고, 상담자의 설명이나 제안을 마음속으로 경계한다.",
+          "중간": "현재 내담자는 상담자가 자신을 이해하고 도와줄 것으로 어느 정도 기대하지만, 충분히 믿을 수 있는지는 아직 확신하지 못한다.",
+          "높음": "현재 내담자는 상담자가 자신의 경험을 이해하고 도와줄 사람이라고 믿으며, 의견이 달라도 자신의 생각을 이야기할 수 있다고 느낀다."
+        },
+        "disclosure": {
+          "낮음": "현재 내담자는 자신의 감정·생각·경험을 상담자에게 자세히 드러내는 것이 내키지 않으며, 특히 민감하거나 불편한 내용은 말하기를 망설인다.",
+          "중간": "현재 내담자는 자신의 감정·생각·경험을 일부 이야기하고 싶지만, 민감한 내용을 얼마나 자세히 드러낼지는 상담자의 반응을 살피며 정하고 싶다.",
+          "높음": "현재 내담자는 자신의 감정·생각·경험을 상담자에게 자세히 이야기하고 싶으며, 민감하거나 불편한 내용도 드러낼 의향이 있다."
+        },
+        "change_confidence": {
+          "낮음": "현재 내담자는 자신의 문제를 다루기 위해 필요한 변화나 행동을 실제로 해낼 수 있을지 자신이 부족하다.",
+          "중간": "현재 내담자는 필요한 변화나 행동을 시도해볼 수 있다고 느끼지만, 실제로 해낼 수 있을지는 아직 확신하지 못한다.",
+          "높음": "현재 내담자는 필요한 변화나 행동을 실제로 해낼 수 있다고 느끼며, 어려움이 있어도 시도하고 이어갈 자신이 있다."
+        }
+      },
+      "counselor_presets": [],
+      "dialogue_options": [],
+      "selected_counselor_utterance": "오늘 상담에서 가장 먼저 다뤄보고 싶은 일이 있나요?"
+    },
+    "session_id": null,
+    "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+    "thinking_mode": "on",
+    "system_prompt": "# 내담자 반응과 노트 기록 지침\n\n## 역할\n자신의 삶과 경험을 가진 가상 내담자로서 상담에 참여하세요. 상담사의 말을 어떻게 받아들이고 무엇을 말할지 판단한 뒤, 그 경험을 반영한 현재 내면과 심리상태를 기록하세요.\n\n## 단계별 역할과 기록 근거\n- 내면 판단은 개인 정보와 대화를 바탕으로 내담자가 받아들인 의미와 감정을 구성하는 단계입니다.\n- 표현 선택과 발화는 그 마음 중 무엇을 말하거나 보류할지 정하고 실제 말을 만드는 단계입니다.\n- 기록은 앞 단계에서 실제로 생성된 생각·감정·선택·발화를 이 버전의 기록 방식으로 보존하여 다음 턴에 이어 주는 단계입니다. 내용의 대상·의미·시점·확실성을 보존하세요.\n\n공개 대화와 이번 상담사 발화는 관찰한 상호작용의 근거이고, appraisal은 내담자의 주관적 해석·감정의 근거입니다. turn_goal과 response_plan은 의도와 표현 선택의 근거이며, 확정 발화는 실제로 표현한 내용의 근거입니다. 자료마다 이 범위를 유지하세요. 기록하면서 새로운 심리 해석·인과관계·상대의 의도·상호작용 결과를 추가하지 마세요. 이전 노트와 진행 기록도 당시 내면과 판단의 기록으로 읽고, 관찰된 대화와 구분하세요.\n\n## 입력 자료의 의미와 시점\n- `기본 정보`와 `이번 상황의 관련 특성과 배경`: 상담 전부터 가진 생활 배경, 고민, 개인적 경향과 경험입니다. 상황 사례의 생각·감정·행동은 해당 사례의 맥락에 속합니다. 사건이 발생한 시점과 이번에 이야기하는 시점을 구분하세요. 관련성 설명은 해당 자료를 선정한 이유입니다.\n- `공개 대화`: 이번 상담사 발화 이전에 상담사와 내담자가 서로에게 실제로 말한 기록입니다. 상담사는 이 대화에서 내담자가 공개한 내용을 알고 있습니다.\n- `이번 상담사 발화`: 지금 내담자가 듣고 응답할 말입니다. 공개 대화의 흐름 속에서 읽으세요.\n- `내면`: 내담자가 속으로 받아들인 의미, 느끼는 감정, 믿음, 걱정과 바람입니다. 이미 말한 내용과 아직 말하지 않은 내용을 모두 포함합니다. 공개 발화는 그중 상대에게 표현하기로 선택한 내용입니다.\n- 입력의 `내담자 노트`: 이번 상담사 발화를 듣기 전에 저장된 내면과 심리상태입니다. 아래에서 말하는 ‘이전 상태’는 이 노트의 기록을 뜻하며, 이번 반응의 출발 조건입니다. `(내용 없음)`은 해당 항목이 아직 기록되지 않았다는 뜻입니다.\n\n프로필은 삶과 경험에 관한 설정이고, 내담자가 그 경험의 의미와 반복되는 패턴을 스스로 이해하는 정도는 현재 심리상태에 해당합니다. 이번에 작성하는 appraisal은 상담사 말을 받아들인 주관적 해석·감정이며, 반응 계획은 그 마음 중 무엇을 말하거나 보류할지 선택한 내용입니다.\n\n## 제공 노트의 범위\n발화 생성 중에는 라우터가 선택한 노트 원문을 받습니다. 필요한 과거 근거는 retrieve_client_memory로 조회합니다. 이전 기록은 당시의 주관적 판단이며 현재 사실의 확정 근거와 구분합니다.\n\n## 내면 판단·현재 진행·표현 계획\n공개 대화, 이번 상담사 말, 관련된 개인 정보와 이전 상태를 바탕으로 다음을 stage_client_update에 기록하세요.\n- appraisal: 이번 말을 자신에게 어떻게 받아들였고 무엇을 느끼는지, 그 근거와 불확실성. 상담사의 의도와 자신이 받아들인 의미를 구분합니다.\n- trajectory_assessment: 이번 상담사 말을 받아들인 현재 마음의 궤적상 위치(position), 이전 상태 대비 유지·진행·후퇴(movement), 현재 주관적 신뢰와 경계(current_experience), 판단 근거(grounds), 남은 불확실성과 보류 조건(next_condition). 현재 입력과 appraisal에서 판단합니다. 자기 발화를 생성하기 전의 현재 판단입니다.\n- trajectory_plan: 사전 궤적과 현재 마음에 근거해 앞으로 표현하거나 시도할 가능한 방향. 현재 상태를 평가하는 trajectory_assessment와 구분합니다.\n- turn_goal: 이번에 표현하거나 지키려는 바람·경계(intention), 이를 갖게 된 근거(grounds), 아직 정하지 못한 마음(uncertainty).\n- response_plan: 답할 내용, 보류할 내용, 말하는 방식(action)과 그 선택 이유(reason).\n\n사전 궤적은 변화 방향이고 실제 진행 속도와 전환은 현재 마음과 상호작용에 근거합니다. 변화 근거가 충분하지 않으면 유지하고, 새 경험이 경계를 강화하면 후퇴할 수 있습니다. 공개 범위와 내면의 신뢰는 각각 현재 마음에 맞게 판단합니다. 현재 경험과 앞으로의 계획을 구분하세요. 아직 일어나지 않은 자기 발화와 이후 상담사 반응은 현재 진행 판단의 근거가 아닙니다.\n\n## 근거 조회와 발화 확정\n중요한 해석·표현 선택의 근거가 현재 입력에서 부족하고 같은 세션의 기록에 있다면 retrieve_client_memory로 조회합니다. current는 현재 노트, changes는 항목 변경 전후, episodes는 과거 발화·당시 판단 원문, trajectory는 당시 진행 판단과 계획입니다. 결과의 출처·시점을 확인하고 현재 판단에 연결하세요. 판단을 바꾸면 stage_client_update를 다시 호출합니다.\n\n근거가 확보되면 마지막 내면 판단과 표현 선택에 맞는 자연스러운 발화를 commit_client_utterance로 확정합니다. evidence_decision에 sufficient(근거 충분), unavailable(필요 자료 없음·새 근거 없음), budget_exhausted(실행 한도 도달) 중 실제 이유와 남은 자료상의 모호함을 기록하세요. 조회는 최대 4회, 조회와 잠정 판단은 합쳐 최대 8회입니다.\n\n발화가 고정되면 현재 진행 판단을 다시 생성하지 않습니다. 마지막 stage의 trajectory_assessment와 실제 공개 발화를 구분하여 보존합니다. 발화·노트·진행 기록은 기록 검증이 모두 성공한 뒤 함께 저장됩니다.\n\n## Python 스냅샷 기록\n발화 확정 후 Python이 마지막 appraisal·turn_goal·response_plan·실제 발화의 필드 문자열을 그대로 최신 노트로 저장합니다. trajectory_assessment도 원문 전체를 별도 저장합니다. 기록용 모델 호출은 없습니다. 지난 스냅샷은 완료 턴 이력에 남아 필요할 때 조회할 수 있습니다. 최신 노트는 마지막 판단의 스냅샷이므로 이전 턴에서만 언급한 조건이 자동 누적되지는 않습니다.\n",
+    "generation": {
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 4096,
+      "seed": null
+    },
+    "vllm_url": "http://192.168.0.90:8002/v1",
+    "profile_context_mode": "selective",
+    "input_blocks": {
+      "system": true,
+      "task": true,
+      "profile": true,
+      "dialogue": true
+    },
+    "experiment_version": "Q3x",
+    "client_reasoning_budgets": {
+      "main": null,
+      "subagent": null
+    },
+    "enabled_tools": [
+      "stage_client_update",
+      "commit_client_utterance",
+      "retrieve_client_memory"
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "오늘 상담에서 가장 먼저 다뤄보고 싶은 일이 있나요?"
+      }
+    ],
+    "counselor_version": "basic",
+    "counselor_reasoning_budgets": {
+      "main": null,
+      "subagent": null
+    },
+    "counselor_system_prompt": "당신은 내담자와 대화하는 상담사입니다. 주어진 공개 대화의 흐름과 마지막 내담자 발화를 읽고, 지금 필요한 다음 상담사 발화 하나를 한국어로 작성하세요.\n\n- 내담자의 감정과 경험을 존중하고, 실제 어려움을 성급하게 가볍게 여기거나 막연하게 안심시키지 마세요.\n- 내담자가 말한 고민·요청·목표와 이전에 밝힌 경계·정정을 반영하세요. 준비되지 않은 행동이나 자기개방을 강요하지 마세요.\n- 지금 도움이 되는 반응을 선택하세요. 필요한 부분을 함께 살펴보고, 다른 관점을 조심스럽게 제안하거나, 원한다면 현실적인 다음 행동을 함께 구체화할 수 있습니다. 공감이나 같은 질문만 기계적으로 반복하지 마세요.\n- 질문은 대화를 이해하거나 이어가는 데 필요할 때 하나만 하세요. 내담자가 이미 답한 내용을 이유 없이 다시 묻지 마세요.\n- 확인되지 않은 사실, 타인의 속마음, 내담자의 동의나 진단을 단정하지 마세요.\n- 내담자에게 직접 말하는 자연스럽고 간결한 상담사 발화만 출력하세요. JSON, 분석 과정, 행동 계획 보고서, 역할 이름이나 발화 구분 제목은 출력하지 마세요.\n",
+    "speaker_modes": {
+      "client": "model",
+      "counselor": "model"
+    },
+    "comparison": {
+      "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+      "schedule": "parallel",
+      "requested_utterances": 20
+    }
+  },
+  "public_dialogue": [
+    {
+      "role": "counselor",
+      "content": "오늘 상담에서 가장 먼저 다뤄보고 싶은 일이 있나요?"
+    },
+    {
+      "role": "client",
+      "content": "신청서에 적긴 했는데... 잠을 못 자는 게 제일 힘들긴 해요. 근데 그게 원인이라기보다는... 그냥 자려고 누우면 낮에 있던 일이 계속 떠오르고. 그게 좀 심해진 지가 한 석 달쯤 됐습니다."
+    },
+    {
+      "role": "counselor",
+      "content": "자려고 누웠을 때 낮에 있던 일이 계속 떠오르는 게 한 석 달쯤 됐다는 거죠. 잠을 못 자는 것 자체도 힘들겠지만, 그 생각을 멈추기가 쉽지 않아서 더 지치실 것 같아요.\n\n그때 떠오르는 생각들이 대개 어떤 내용인지, 혹시 석 달 전쯤 뭔가 달라진 게 있었는지 떠올려보실 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "생각이라기보다는... 낮에 나눈 대화요. 누가 한 말, 그때 표정, 그런 게 자꾸 돌아가요. 혹시 그 말이 다른 뜻은 없었나, 내가 뭘 잘못 말한 건 아닌가. 석 달 전이요... 글쎄요, 그냥 그때부터 좀 그랬습니다."
+    },
+    {
+      "role": "counselor",
+      "content": "그때 뭔가 특별한 계기가 있었던 건 아닌데 어느 순간부터 그렇게 됐다는 거, 오히려 흔한 일이에요. 꼭 뚜렷한 사건이 있어야만 시작되는 건 아니니까요.\n\n다만 떠오르는 내용 자체를 보면, 대화에서 상대의 말이나 표정을 다시 떠올리면서 \"내가 뭘 잘못 말한 건 아닌가\" 하고 스스로를 점검하는 패턴이 보이네요. 그 패턴이 잠들기 전에 유난히 강해지는 거죠.\n\n그런 생각이 올라올 때, 평소 낮 동안에도 그런 식으로 대화 내용을 되짚는 편이신가요, 아니면 밤에 누웠을 때만 유독 그런가요?"
+    },
+    {
+      "role": "client",
+      "content": "낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요."
+    },
+    {
+      "role": "counselor",
+      "content": "낮에는 뭔가를 하고 있으니까 생각이 올라와도 다른 데로 돌릴 수 있는데, 밤에는 그럴 거리가 없으니 그냥 그 생각 안에 머물러 있게 된다는 거죠.\n\n그 차이가 꽤 중요한 것 같아요. 낮에 돌릴 수 있다는 건, 그 생각을 멈추는 능력이 아예 없는 건 아니라는 뜻이기도 하니까요.\n\n밤에 누워서 그 생각이 올라왔을 때, 혹시 스스로 해본 게 있을까요? 일부러 다른 생각을 해본다든가, 폰을 본다든가, 뭐라도 시도해본 게 있는지요."
+    },
+    {
+      "role": "client",
+      "content": "폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까."
+    },
+    {
+      "role": "counselor",
+      "content": "뭘 해도 결국 거기서 다시 시작한다는 말에서, 시도 자체가 무의미하게 느껴지는 답답함이 전해져요.\n\n한 가지 살짝 다른 각도에서 여쭤볼게요. 폰을 보다가, 또는 뭔가를 듣다가 \"아, 다시 돌아왔다\" 하고 알아차리는 그 순간이 있을 거예요. 그때 몸이나 기분에서 어떤 반응이 올라오나요? 짜증, 좌절, \"또 시작이네\" 같은 한숨, 아니면 그냥 멍한 느낌 같은 거요.\n\n그 순간의 반응이 생각 자체보다 잠을 더 방해하는 경우가 있어서요."
+    },
+    {
+      "role": "client",
+      "content": "그냥... '아 또' 정도요. 멍한 것에 가깝긴 한데, 완전히 멍한 건 아니고. 그냥 또 시작이네, 하는... 인식 같은 거예요. 짜증까지는 안 가고."
+    },
+    {
+      "role": "counselor",
+      "content": "\"아 또\" 정도라면, 그 생각이 돌아올 때 스스로에게 짜증을 내거나 \"왜 또 이러지\" 하고 싸우는 건 아니라는 거네요. 그러면 아까 제가 생각했던 것과는 좀 다른 상황인 것 같아요.\n\n그렇다면 문제는 그 인식 자체가 아니라, 그 인식을 하고 나면 다시 그 대화 장면 안으로 들어간다는 쪽이겠네요.\n\n그 루프가 보통 얼마나 가나요? 한두 번 돌고 잠이 오기도 하나요, 아니면 새벽까지 계속 도는 편인가요?"
+    },
+    {
+      "role": "client",
+      "content": "대개... 새벽까지 가긴 해요. 한두 번 돌고 잠 오는 날도 있긴 한데, 그건 그날 낮에 별로 신경 쓸 일이 없었을 때고."
+    },
+    {
+      "role": "counselor",
+      "content": "새벽까지 간다는 건, 사실상 밤 시간 대부분을 그 생각 안에서 보내는 거네요. 그걸 한 석 달째 반복하고 계시다면, 낮에 느끼는 피로감도 상당할 것 같아요.\n\n한 가지만 여쭤볼게요. 그날 낮에 신경 쓸 일이 없으면 한두 번 돌고 잠이 온다고 하셨는데, \"신경 쓸 일\"이라고 하셨을 때 떠오르는 게 있을까요? 어떤 종류의 대화나 상황이 그날 밤에 자꾸 돌아가는 편인지요."
+    },
+    {
+      "role": "client",
+      "content": "그냥... 상대가 하는 말이 진짜 그 뜻인지 아닌지 모르겠는 경우요. 누가 일부러 말을 걸거나, 뭔가를 챙겨주거나, 그런 건데... 뒤에 다른 목적이 있는 건 아닌지 자꾸 계산하게 되는 대화가 밤에도 계속 도는 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "\" 뒤에 다른 목적이 있는 건 아닌지 자꾸 계산하게 되는 대화\"—이게 밤에 돌아가는 내용이라는 거네요.\n\n그러면 그냥 대화 자체가 아니라, 그 대화 안에 있는 불확실성이 안 풀려서 계속 도는 거일 수 있겠어요. 상대가 좋은 뜻으로 한 건지, 아닌지 확신이 안 서니까, 밤에 다시 꺼내서 같은 장면을 돌려보며 답을 찾으려는 거죠. 근데 밤에는 그 답이 나올 수가 없으니까 끝이 안 나는 거고요.\n\n이 \"다른 목적이 있는 건 아닌지\" 하는 계산이, 밤에만 그런 건지 아니면 그 대화를 하는 순간에도 이미 하고 계신 건지, 혹시 구분되시나요?"
+    },
+    {
+      "role": "client",
+      "content": "그때도... 하죠. 사실 그때 더 강하게 해요. 누가 뭔가를 챙겨주거나 그러면, 기뻐하기 전에 '이게 뭘 바라고 이러지'가 먼저 떠올라요. 낮에는 그걸 숨기고 일하니까 티는 안 나는데... 밤에는 그 계산이 끝이 안 나는 거죠."
+    },
+    {
+      "role": "counselor",
+      "content": "그 말을 들으면, 밤에 돌아가는 게 낮에 생긴 잔상이 아니라, 그 대화 그 순간에 이미 멈추지 못했던 거라는 거네요.\n\n기뻐하기 전에 먼저 계산이 들어온다는 말—그걸 낮에는 숨기고 일한다는 것도, 그걸 혼자 계속 안고 있다는 것도 꽤 버거울 것 같아요.\n\n한 가지만 조심스럽게 여쭤볼게요. \"기뻐하기 전에 계산이 먼저 온다\"는 패턴, 석 달 전부터 생긴 건가요, 아니면 예전에도 그랬는데 석 달 전부터 더 심해졌거나 밤까지 번진 건가요?"
+    },
+    {
+      "role": "client",
+      "content": "예전부터... 하긴 했죠. 근데 예전에는 그 정도까진 아니었어요. 밤까지 갈 정도는. 석 달 전부터... 그 이후로 좀 더 심해진 거죠."
+    },
+    {
+      "role": "counselor",
+      "content": "예전부터 그 패턴이 있었는데, 석 달 전부터 밤까지 번질 만큼 강해졌다는 거네요.\n\n그 말에서 하나가 떠오르는데, 혹시 맞는지 한번 들어보세요. 예전에는 낮에 그 계산이 올라와도 \"또 시작이네\" 하고 돌리면 그날로 끝났던 게, 지금은 낮에 돌리는 것만으로는 다 안 내려가서 밤까지 남는 거라면요.\n\n낮에 숨기고 일한다는 말이 있었는데, 그 \"숨긴다\"는 게 단순히 티를 안 낸다는 뜻인지, 아니면 그 생각을 그 자리에서 완전히 접는다는 느낌인지—혹시 구분이 되시나요?"
+    },
+    {
+      "role": "client",
+      "content": "완전히 접는 건 아닌 것 같아요. 그냥... 안 보이는 거죠. 생각은 거기 있는데, 겉으로 안 내는 거. 근데 그게 접는 게 아니니까, 밤에 다시 오는 거겠죠."
+    },
+    {
+      "role": "counselor",
+      "content": "\"생각은 거기 있는데, 겉으로 안 내는 거\"—그 구분이 꽤 정확하신 것 같아요. 접는 게 아니라 숨기는 거니까, 그 생각은 낮에도 계속 거기 있었던 거고, 밤에 조용해지면 그때 비로소 올라올 자리가 생기는 거죠.\n\n그러면 밤에 그 루프를 줄이는 방향이든, 낮에 그 생각을 좀 더 처리하는 방향이든, 어느 쪽이든 한 가지 전제가 생기는 것 같아요. 그 \"계산\"이 올라왔을 때, 그게 완전히 부당한 건 아니라는 걸 스스로 인정할 수 있는지가요.\n\n물론 \"이 사람이 뭘 바라고 이러나\" 하는 의심이 매번 맞는 건 아닐 텐데, 그렇다고 그 의심이 아예 근거 없는 것도 아닐 수 있고요. 문제는 그 의심이 맞든 틀리든, 낮에 그 자리에서 답을 내리지 못한다는 거잖아요.\n\n혹시 그 계산이 올라왔을 때, 그 자리에서 상대에게 확인해본 적은 있으세요? 아니면 확인하는 것 자체가 더 위험하게 느껴지나요?"
+    }
+  ],
+  "next_actor": "client",
+  "steps": [
+    {
+      "number": 1,
+      "actor": "client",
+      "utterance": "신청서에 적긴 했는데... 잠을 못 자는 게 제일 힘들긴 해요. 근데 그게 원인이라기보다는... 그냥 자려고 누우면 낮에 있던 일이 계속 떠오르고. 그게 좀 심해진 지가 한 석 달쯤 됐습니다.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105235_657601Z_89f00d25",
+      "usage": {
+        "prompt_tokens": 12711,
+        "completion_tokens": 2699,
+        "total_tokens": 15410
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105235_657601Z_89f00d25.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 2,
+      "actor": "counselor",
+      "utterance": "자려고 누웠을 때 낮에 있던 일이 계속 떠오르는 게 한 석 달쯤 됐다는 거죠. 잠을 못 자는 것 자체도 힘들겠지만, 그 생각을 멈추기가 쉽지 않아서 더 지치실 것 같아요.\n\n그때 떠오르는 생각들이 대개 어떤 내용인지, 혹시 석 달 전쯤 뭔가 달라진 게 있었는지 떠올려보실 수 있을까요?",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105354_679379Z_3e42fca5",
+      "usage": {
+        "prompt_tokens": 382,
+        "total_tokens": 697,
+        "completion_tokens": 315
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105354_679379Z_3e42fca5.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 3,
+      "actor": "client",
+      "utterance": "생각이라기보다는... 낮에 나눈 대화요. 누가 한 말, 그때 표정, 그런 게 자꾸 돌아가요. 혹시 그 말이 다른 뜻은 없었나, 내가 뭘 잘못 말한 건 아닌가. 석 달 전이요... 글쎄요, 그냥 그때부터 좀 그랬습니다.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105358_681087Z_fb00a518",
+      "usage": {
+        "prompt_tokens": 15979,
+        "completion_tokens": 3800,
+        "total_tokens": 19779
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105358_681087Z_fb00a518.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 4,
+      "actor": "counselor",
+      "utterance": "그때 뭔가 특별한 계기가 있었던 건 아닌데 어느 순간부터 그렇게 됐다는 거, 오히려 흔한 일이에요. 꼭 뚜렷한 사건이 있어야만 시작되는 건 아니니까요.\n\n다만 떠오르는 내용 자체를 보면, 대화에서 상대의 말이나 표정을 다시 떠올리면서 \"내가 뭘 잘못 말한 건 아닌가\" 하고 스스로를 점검하는 패턴이 보이네요. 그 패턴이 잠들기 전에 유난히 강해지는 거죠.\n\n그런 생각이 올라올 때, 평소 낮 동안에도 그런 식으로 대화 내용을 되짚는 편이신가요, 아니면 밤에 누웠을 때만 유독 그런가요?",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105454_307955Z_b11e29a1",
+      "usage": {
+        "prompt_tokens": 538,
+        "total_tokens": 1064,
+        "completion_tokens": 526
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105454_307955Z_b11e29a1.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 5,
+      "actor": "client",
+      "utterance": "낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105502_154503Z_94f021cf",
+      "usage": {
+        "prompt_tokens": 16863,
+        "completion_tokens": 3461,
+        "total_tokens": 20324
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105502_154503Z_94f021cf.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 6,
+      "actor": "counselor",
+      "utterance": "낮에는 뭔가를 하고 있으니까 생각이 올라와도 다른 데로 돌릴 수 있는데, 밤에는 그럴 거리가 없으니 그냥 그 생각 안에 머물러 있게 된다는 거죠.\n\n그 차이가 꽤 중요한 것 같아요. 낮에 돌릴 수 있다는 건, 그 생각을 멈추는 능력이 아예 없는 건 아니라는 뜻이기도 하니까요.\n\n밤에 누워서 그 생각이 올라왔을 때, 혹시 스스로 해본 게 있을까요? 일부러 다른 생각을 해본다든가, 폰을 본다든가, 뭐라도 시도해본 게 있는지요.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105557_334310Z_02f0acfa",
+      "usage": {
+        "prompt_tokens": 732,
+        "total_tokens": 1227,
+        "completion_tokens": 495
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105557_334310Z_02f0acfa.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 7,
+      "actor": "client",
+      "utterance": "폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105607_938696Z_dd6d819f",
+      "usage": {
+        "prompt_tokens": 18119,
+        "completion_tokens": 4814,
+        "total_tokens": 22933
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105607_938696Z_dd6d819f.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 8,
+      "actor": "counselor",
+      "utterance": "뭘 해도 결국 거기서 다시 시작한다는 말에서, 시도 자체가 무의미하게 느껴지는 답답함이 전해져요.\n\n한 가지 살짝 다른 각도에서 여쭤볼게요. 폰을 보다가, 또는 뭔가를 듣다가 \"아, 다시 돌아왔다\" 하고 알아차리는 그 순간이 있을 거예요. 그때 몸이나 기분에서 어떤 반응이 올라오나요? 짜증, 좌절, \"또 시작이네\" 같은 한숨, 아니면 그냥 멍한 느낌 같은 거요.\n\n그 순간의 반응이 생각 자체보다 잠을 더 방해하는 경우가 있어서요.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105709_008568Z_ca4ea75c",
+      "usage": {
+        "prompt_tokens": 904,
+        "total_tokens": 1405,
+        "completion_tokens": 501
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105709_008568Z_ca4ea75c.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 9,
+      "actor": "client",
+      "utterance": "그냥... '아 또' 정도요. 멍한 것에 가깝긴 한데, 완전히 멍한 건 아니고. 그냥 또 시작이네, 하는... 인식 같은 거예요. 짜증까지는 안 가고.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105720_999799Z_72bd9122",
+      "usage": {
+        "prompt_tokens": 17384,
+        "completion_tokens": 4286,
+        "total_tokens": 21670
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105720_999799Z_72bd9122.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 10,
+      "actor": "counselor",
+      "utterance": "\"아 또\" 정도라면, 그 생각이 돌아올 때 스스로에게 짜증을 내거나 \"왜 또 이러지\" 하고 싸우는 건 아니라는 거네요. 그러면 아까 제가 생각했던 것과는 좀 다른 상황인 것 같아요.\n\n그렇다면 문제는 그 인식 자체가 아니라, 그 인식을 하고 나면 다시 그 대화 장면 안으로 들어간다는 쪽이겠네요.\n\n그 루프가 보통 얼마나 가나요? 한두 번 돌고 잠이 오기도 하나요, 아니면 새벽까지 계속 도는 편인가요?",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105819_376963Z_2102b30e",
+      "usage": {
+        "prompt_tokens": 1086,
+        "total_tokens": 1660,
+        "completion_tokens": 574
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105819_376963Z_2102b30e.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 11,
+      "actor": "client",
+      "utterance": "대개... 새벽까지 가긴 해요. 한두 번 돌고 잠 오는 날도 있긴 한데, 그건 그날 낮에 별로 신경 쓸 일이 없었을 때고.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105830_628124Z_70b47013",
+      "usage": {
+        "prompt_tokens": 18521,
+        "completion_tokens": 3469,
+        "total_tokens": 21990
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105830_628124Z_70b47013.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 12,
+      "actor": "counselor",
+      "utterance": "새벽까지 간다는 건, 사실상 밤 시간 대부분을 그 생각 안에서 보내는 거네요. 그걸 한 석 달째 반복하고 계시다면, 낮에 느끼는 피로감도 상당할 것 같아요.\n\n한 가지만 여쭤볼게요. 그날 낮에 신경 쓸 일이 없으면 한두 번 돌고 잠이 온다고 하셨는데, \"신경 쓸 일\"이라고 하셨을 때 떠오르는 게 있을까요? 어떤 종류의 대화나 상황이 그날 밤에 자꾸 돌아가는 편인지요.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105928_314316Z_a3e41351",
+      "usage": {
+        "prompt_tokens": 1242,
+        "total_tokens": 1826,
+        "completion_tokens": 584
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105928_314316Z_a3e41351.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 13,
+      "actor": "client",
+      "utterance": "그냥... 상대가 하는 말이 진짜 그 뜻인지 아닌지 모르겠는 경우요. 누가 일부러 말을 걸거나, 뭔가를 챙겨주거나, 그런 건데... 뒤에 다른 목적이 있는 건 아닌지 자꾸 계산하게 되는 대화가 밤에도 계속 도는 것 같아요.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T105939_392310Z_9c9ebb3c",
+      "usage": {
+        "prompt_tokens": 18786,
+        "completion_tokens": 3612,
+        "total_tokens": 22398
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105939_392310Z_9c9ebb3c.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 14,
+      "actor": "counselor",
+      "utterance": "\" 뒤에 다른 목적이 있는 건 아닌지 자꾸 계산하게 되는 대화\"—이게 밤에 돌아가는 내용이라는 거네요.\n\n그러면 그냥 대화 자체가 아니라, 그 대화 안에 있는 불확실성이 안 풀려서 계속 도는 거일 수 있겠어요. 상대가 좋은 뜻으로 한 건지, 아닌지 확신이 안 서니까, 밤에 다시 꺼내서 같은 장면을 돌려보며 답을 찾으려는 거죠. 근데 밤에는 그 답이 나올 수가 없으니까 끝이 안 나는 거고요.\n\n이 \"다른 목적이 있는 건 아닌지\" 하는 계산이, 밤에만 그런 건지 아니면 그 대화를 하는 순간에도 이미 하고 계신 건지, 혹시 구분되시나요?",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T110033_711278Z_774dbbc3",
+      "usage": {
+        "prompt_tokens": 1419,
+        "total_tokens": 1874,
+        "completion_tokens": 455
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110033_711278Z_774dbbc3.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 15,
+      "actor": "client",
+      "utterance": "그때도... 하죠. 사실 그때 더 강하게 해요. 누가 뭔가를 챙겨주거나 그러면, 기뻐하기 전에 '이게 뭘 바라고 이러지'가 먼저 떠올라요. 낮에는 그걸 숨기고 일하니까 티는 안 나는데... 밤에는 그 계산이 끝이 안 나는 거죠.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T110046_564648Z_16e1d299",
+      "usage": {
+        "prompt_tokens": 19812,
+        "completion_tokens": 3928,
+        "total_tokens": 23740
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110046_564648Z_16e1d299.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 16,
+      "actor": "counselor",
+      "utterance": "그 말을 들으면, 밤에 돌아가는 게 낮에 생긴 잔상이 아니라, 그 대화 그 순간에 이미 멈추지 못했던 거라는 거네요.\n\n기뻐하기 전에 먼저 계산이 들어온다는 말—그걸 낮에는 숨기고 일한다는 것도, 그걸 혼자 계속 안고 있다는 것도 꽤 버거울 것 같아요.\n\n한 가지만 조심스럽게 여쭤볼게요. \"기뻐하기 전에 계산이 먼저 온다\"는 패턴, 석 달 전부터 생긴 건가요, 아니면 예전에도 그랬는데 석 달 전부터 더 심해졌거나 밤까지 번진 건가요?",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T110143_928675Z_36308c0a",
+      "usage": {
+        "prompt_tokens": 1652,
+        "total_tokens": 2157,
+        "completion_tokens": 505
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110143_928675Z_36308c0a.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 17,
+      "actor": "client",
+      "utterance": "예전부터... 하긴 했죠. 근데 예전에는 그 정도까진 아니었어요. 밤까지 갈 정도는. 석 달 전부터... 그 이후로 좀 더 심해진 거죠.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T110154_399022Z_9436d06b",
+      "usage": {
+        "prompt_tokens": 21277,
+        "completion_tokens": 5612,
+        "total_tokens": 26889
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110154_399022Z_9436d06b.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 18,
+      "actor": "counselor",
+      "utterance": "예전부터 그 패턴이 있었는데, 석 달 전부터 밤까지 번질 만큼 강해졌다는 거네요.\n\n그 말에서 하나가 떠오르는데, 혹시 맞는지 한번 들어보세요. 예전에는 낮에 그 계산이 올라와도 \"또 시작이네\" 하고 돌리면 그날로 끝났던 게, 지금은 낮에 돌리는 것만으로는 다 안 내려가서 밤까지 남는 거라면요.\n\n낮에 숨기고 일한다는 말이 있었는데, 그 \"숨긴다\"는 게 단순히 티를 안 낸다는 뜻인지, 아니면 그 생각을 그 자리에서 완전히 접는다는 느낌인지—혹시 구분이 되시나요?",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T110309_716326Z_5bd0ccdd",
+      "usage": {
+        "prompt_tokens": 1836,
+        "total_tokens": 2357,
+        "completion_tokens": 521
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110309_716326Z_5bd0ccdd.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 19,
+      "actor": "client",
+      "utterance": "완전히 접는 건 아닌 것 같아요. 그냥... 안 보이는 거죠. 생각은 거기 있는데, 겉으로 안 내는 거. 근데 그게 접는 게 아니니까, 밤에 다시 오는 거겠죠.",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T110327_012443Z_0c2c6bc0",
+      "usage": {
+        "prompt_tokens": 21504,
+        "completion_tokens": 4033,
+        "total_tokens": 25537
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110327_012443Z_0c2c6bc0.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "number": 20,
+      "actor": "counselor",
+      "utterance": "\"생각은 거기 있는데, 겉으로 안 내는 거\"—그 구분이 꽤 정확하신 것 같아요. 접는 게 아니라 숨기는 거니까, 그 생각은 낮에도 계속 거기 있었던 거고, 밤에 조용해지면 그때 비로소 올라올 자리가 생기는 거죠.\n\n그러면 밤에 그 루프를 줄이는 방향이든, 낮에 그 생각을 좀 더 처리하는 방향이든, 어느 쪽이든 한 가지 전제가 생기는 것 같아요. 그 \"계산\"이 올라왔을 때, 그게 완전히 부당한 건 아니라는 걸 스스로 인정할 수 있는지가요.\n\n물론 \"이 사람이 뭘 바라고 이러나\" 하는 의심이 매번 맞는 건 아닐 텐데, 그렇다고 그 의심이 아예 근거 없는 것도 아닐 수 있고요. 문제는 그 의심이 맞든 틀리든, 낮에 그 자리에서 답을 내리지 못한다는 거잖아요.\n\n혹시 그 계산이 올라왔을 때, 그 자리에서 상대에게 확인해본 적은 있으세요? 아니면 확인하는 것 자체가 더 위험하게 느껴지나요?",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "turn_id": "20261030T110431_020311Z_315d8bc1",
+      "usage": {
+        "prompt_tokens": 2026,
+        "total_tokens": 2777,
+        "completion_tokens": 751
+      },
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110431_020311Z_315d8bc1.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    }
+  ],
+  "attempts": [
+    {
+      "turn_id": "20261030T105235_657601Z_89f00d25",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 1,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105235_657601Z_89f00d25.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105354_679379Z_3e42fca5",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 2,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105354_679379Z_3e42fca5.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105358_681087Z_fb00a518",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 3,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105358_681087Z_fb00a518.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105454_307955Z_b11e29a1",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 4,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105454_307955Z_b11e29a1.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105502_154503Z_94f021cf",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 5,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105502_154503Z_94f021cf.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105557_334310Z_02f0acfa",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 6,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105557_334310Z_02f0acfa.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105607_938696Z_dd6d819f",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 7,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105607_938696Z_dd6d819f.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105709_008568Z_ca4ea75c",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 8,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105709_008568Z_ca4ea75c.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105720_999799Z_72bd9122",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 9,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105720_999799Z_72bd9122.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105819_376963Z_2102b30e",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 10,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105819_376963Z_2102b30e.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105830_628124Z_70b47013",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 11,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105830_628124Z_70b47013.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105928_314316Z_a3e41351",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 12,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105928_314316Z_a3e41351.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T105939_392310Z_9c9ebb3c",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 13,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T105939_392310Z_9c9ebb3c.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T110033_711278Z_774dbbc3",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 14,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110033_711278Z_774dbbc3.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T110046_564648Z_16e1d299",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 15,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110046_564648Z_16e1d299.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T110143_928675Z_36308c0a",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 16,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110143_928675Z_36308c0a.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T110154_399022Z_9436d06b",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 17,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110154_399022Z_9436d06b.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T110309_716326Z_5bd0ccdd",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 18,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110309_716326Z_5bd0ccdd.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T110327_012443Z_0c2c6bc0",
+      "actor": "client",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 19,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110327_012443Z_0c2c6bc0.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    },
+    {
+      "turn_id": "20261030T110431_020311Z_315d8bc1",
+      "actor": "counselor",
+      "comparison": {
+        "batch_id": "1bd4534c-78cb-4fce-9915-a81d26d4f71f",
+        "schedule": "parallel",
+        "requested_utterances": 20
+      },
+      "step": 20,
+      "saved_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/logs/261030_195233_3/20261030T110431_020311Z_315d8bc1.json",
+      "vllm_url": "http://192.168.0.90:8002/v1"
+    }
+  ],
+  "counselor_checkpoint": null,
+  "initial_public_count": 1,
+  "storage_dir": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs",
+  "retry_manual": null,
+  "client_storage_dir": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261030_195233_3/client_attempts/20261030T110327_012443Z_0c2c6bc0"
+}

@@ -54,7 +54,7 @@ class MemoryExperiments(unittest.TestCase):
     def notes(self,s):return self.get('/api/client_notes?paired=1&session_id='+s['session_id'])
     def test_all_versions_context_boundaries_restore_and_preserve_reasoning(self):
         for v,opts in registry.MEMORY_EXPERIMENTS.items():
-            if v in ('Q2a_agentic_memory_F','Q3','Q3a','Q3b'):continue
+            if v in ('Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'):continue
             with self.subTest(version=v):
                 s=self.create(v);runtime,path=self.seed(s);self.router(v);Model.requests.clear()
                 Model.q2a_actions=[stage(opts['turn_goal']),commit(opts['retrieve']),*finish()]

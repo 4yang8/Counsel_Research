@@ -1,0 +1,41 @@
+127.0.0.1 - - [30/Oct/2026 14:20:51] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:51] "POST /api/paired/create HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:51] "POST /api/paired/step HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:51] "GET /api/client_notes?paired=1&session_id=261030_142051 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:51] "GET /api/client_notes?paired=1&session_id=261030_142051 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:51] "GET /api/session_notes?paired=1&session_id=261030_142051 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:52] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:52] "POST /api/paired/create HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:52] "POST /api/paired/step HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:52] "GET /api/client_notes?paired=1&session_id=261030_142052 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:52] "GET /api/paired/session?session_id=261030_142052 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:53] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:53] "POST /api/paired/create HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:53] "POST /api/paired/step HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:54] "GET /api/client_notes?paired=1&session_id=261030_142053 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:54] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:54] "POST /api/paired/create HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:54] "POST /api/paired/step HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "GET /api/client_notes?paired=1&session_id=261030_142054 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "GET /api/prompts/source?role=client&version=Q3b&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "POST /api/prompts/save HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "GET /api/prompts/source?role=client&version=Q3b&kind=user HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "POST /api/prompts/save HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "GET /api/prompts/source?role=client&version=Q3b&kind=trait_router HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "POST /api/prompts/save HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "GET /api/prompts/source?role=client&version=Q3b&kind=trait_router_user HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "POST /api/prompts/save HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "GET /api/prompts/source?role=client&version=Q3b&kind=trajectory HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:56] "POST /api/prompts/save HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:57] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:57] "POST /api/paired/create HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:57] "POST /api/paired/step HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:59] "GET /api/client_notes?paired=1&session_id=261030_142057 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:59] "GET /api/paired/session?session_id=261030_142057 HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:59] "POST /api/paired/manual HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:59] "POST /api/paired/step HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2026 14:20:59] "GET /api/client_notes?paired=1&session_id=261030_142057 HTTP/1.1" 200 -
+----------------------------------------------------------------------
+Ran 9 tests in 12.026s
+
+OK

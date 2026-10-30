@@ -22,7 +22,7 @@ where = ["src"]
 include = ["app*", "client*", "counselor*", "runtime*", "storage*", "resources*"]
 
 [tool.setuptools.package-data]
-"*" = ["*.md", "*.json", "*.txt", "guides/*.md"]
+"*" = ["*.md", "*.json", "*.txt", "guides/*.md", "skills/*/SKILL.md"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

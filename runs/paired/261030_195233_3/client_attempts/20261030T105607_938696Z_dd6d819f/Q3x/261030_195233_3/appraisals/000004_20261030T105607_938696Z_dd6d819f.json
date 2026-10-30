@@ -1,0 +1,1585 @@
+{
+  "turn": 4,
+  "turn_id": "20261030T105607_938696Z_dd6d819f",
+  "scenario_hash": "57cb05e675d711e105f0784399aa644feab65589da5993cb9d466f6daa6b5d4e",
+  "selected_traits": [
+    {
+      "trait_id": "/intermediate_beliefs/rule",
+      "content": "상대의 말은 액면 그대로 믿지 말고 숨은 의도를 확인해야 하며, 중요한 것은 반드시 기록으로 남겨야 한다",
+      "background_ids": [
+        "/situations/2",
+        "/situations/1"
+      ],
+      "backgrounds": [
+        {
+          "background_id": "/situations/2",
+          "kind": "상황 사례",
+          "content": {
+            "situation": "헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.",
+            "automatic_thought": "잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.",
+            "emotion": "그리움, 그것을 덮는 의심, 피로감",
+            "physiological_response": "메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐",
+            "behavior": "한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음"
+          }
+        },
+        {
+          "background_id": "/situations/1",
+          "kind": "상황 사례",
+          "content": {
+            "situation": "팀 회식에서 팀장이 '우리 팀은 가족 같은 분위기로 갑시다. 각자 요즘 고민도 편하게 얘기해 봐요'라고 함.",
+            "automatic_thought": "여기서 꺼낸 말이 다음 인사평가 때 어떻게 돌아올지 모르는데. 지난번에도 믿고 말했다가 팀장 귀에 다 들어갔잖아.",
+            "emotion": "긴장, 냉소, 소외감",
+            "physiological_response": "속이 조여오고 손으로 계속 잔을 만지작거림",
+            "behavior": "'요즘은 뭐, 운동 열심히 하는 게 고민이죠'라고 농담으로 비켜가고, 다른 사람들이 털어놓는 이야기를 들으며 '저 말이 언제 어떻게 쓰일까'를 속으로 계산함"
+          }
+        }
+      ],
+      "relevance": "상담사가 밤에 그 생각이 올라왔을 때 해본 게 있는지 묻고 있는데, 이 규칙은 대화에서 상대의 숨은 의도를 확인해야 한다는 것으로, 밤에 되짚는 내용(누가 한 말, 표정, 다른 뜻은 없었나)이 바로 이 규칙이 작동한 결과이며, 상황 사례 2에서는 새벽까지 그날의 메시지를 곱씹은 모습이 직접 확인된다."
+    },
+    {
+      "trait_id": "/intermediate_beliefs/attitude",
+      "content": "속마음이나 약점을 보이는 것은 상대에게 나를 해칠 무기를 건네주는 어리석은 짓이다",
+      "background_ids": [
+        "/situations/2"
+      ],
+      "backgrounds": [
+        {
+          "background_id": "/situations/2",
+          "kind": "상황 사례",
+          "content": {
+            "situation": "헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.",
+            "automatic_thought": "잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.",
+            "emotion": "그리움, 그것을 덮는 의심, 피로감",
+            "physiological_response": "메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐",
+            "behavior": "한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음"
+          }
+        }
+      ],
+      "relevance": "밤에 스스로 해본 시도가 있었는지 묻는 질문에 대해, 약점을 드러내거나 도움을 구하는 것 자체가 무기를 건네는 어리석은 짓이라는 신념이 자기 도움 시도 자체를 억제하는 조건이 될 수 있다."
+    }
+  ],
+  "counselor_utterance": "낮에는 뭔가를 하고 있으니까 생각이 올라와도 다른 데로 돌릴 수 있는데, 밤에는 그럴 거리가 없으니 그냥 그 생각 안에 머물러 있게 된다는 거죠.\n\n그 차이가 꽤 중요한 것 같아요. 낮에 돌릴 수 있다는 건, 그 생각을 멈추는 능력이 아예 없는 건 아니라는 뜻이기도 하니까요.\n\n밤에 누워서 그 생각이 올라왔을 때, 혹시 스스로 해본 게 있을까요? 일부러 다른 생각을 해본다든가, 폰을 본다든가, 뭐라도 시도해본 게 있는지요.",
+  "appraisal": {
+    "interpretation": "상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.",
+    "immediate_feeling": "약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.",
+    "relevant_evidence": "이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.",
+    "uncertainty": "이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다."
+  },
+  "response_plan": {
+    "action": "밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.",
+    "reason": "실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다."
+  },
+  "judgment_history": [
+    {
+      "appraisal": {
+        "interpretation": "상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.",
+        "immediate_feeling": "약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.",
+        "relevant_evidence": "이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.",
+        "uncertainty": "이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다."
+      },
+      "response_plan": {
+        "action": "밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.",
+        "reason": "실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다."
+      },
+      "turn_goal": {
+        "intention": "밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.",
+        "grounds": "intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.",
+        "uncertainty": "해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다."
+      },
+      "trajectory_assessment": {
+        "position": "초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.",
+        "movement": "maintain",
+        "current_experience": "이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.",
+        "grounds": "이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.",
+        "next_condition": "내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다."
+      },
+      "trajectory_plan": {
+        "position": "초기 경계에서 약간 진전한 상태 유지. 긍정적 재구성에 대한 반응이 아직 내면에서 정리되지 않았다.",
+        "movement": "maintain",
+        "grounds": "이번 턴에서 조건 충족과 새로운 평가 자극이 상쇄된다. 다음 턴에서 상담사가 내 답변을 어떻게 다루는지에 따라 진행 또는 후퇴가 결정될 것이다."
+      }
+    }
+  ],
+  "utterance": "폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.",
+  "trajectory_source": "## 신뢰 형성 궤적\n\n### 변화 방향\n초반에는 상담사를 쉽게 신뢰하지 못하지만, 상호작용을 거치며 점차 신뢰를 형성한다.\n\n### 초반\n상담사가 자신을 어떻게 받아들일지 확신하지 못해, 말할 내용과 범위를 조심스럽게 선택한다.\n\n### 중간\n상담사의 반응을 경험하며 이해받고 안전하게 이야기할 수 있는지 살핀다. 신뢰와 경계가 함께 있을 수 있다.\n\n### 이후\n상담사를 점차 신뢰하며, 자신의 어려움과 마음을 더 솔직하게 이야기할 수 있다.\n\n### 진행 원칙\n단계는 턴 수로 고정하지 않는다. 개인 특성과 실제 상호작용, 내담자의 주관적 해석에 따라 진행·정체·후퇴할 수 있다. 신뢰가 높아져도 공개할 내용과 범위는 내담자의 마음과 경계에 따라 선택한다.\n",
+  "trajectory_plan": {
+    "position": "초기 경계에서 약간 진전한 상태 유지. 긍정적 재구성에 대한 반응이 아직 내면에서 정리되지 않았다.",
+    "movement": "maintain",
+    "grounds": "이번 턴에서 조건 충족과 새로운 평가 자극이 상쇄된다. 다음 턴에서 상담사가 내 답변을 어떻게 다루는지에 따라 진행 또는 후퇴가 결정될 것이다."
+  },
+  "trajectory_before": {
+    "position": "초기 경계 상태에서 아주 약간 진전. 상담사가 모호한 답을 밀어붙이지 않은 것이 이전 턴에서 설정한 조건을 충족했고, 일반화('흔한 일')가 수치심을 약간 줄여주었다. 그러나 '패턴'이라는 명명(命名)이 나를 관찰 대상으로 만드는 느낌이라, 안도와 긴장이 공존한다.",
+    "movement": "advance",
+    "current_experience": "이전 턴의 '일단 내 말을 따라와 주긴 했다'에 더해, '내가 선을 그은 곳을 넘지 않았다'는 인식이 추가되었다. 다만 상담사가 내 패턴을 구조적으로 파악하고 있다는 느낌이 '이 사람이 나를 얼마나 보고 있는 건가'라는 경계심을 동시에 자극한다.",
+    "grounds": "이전 턴의 다음 조건(모호하게 답했을 때 밀어붙이는지)이 충족되었다. 상담사는 '석 달 전' 질문을 반복하지 않고 다른 질문으로 전환했다. 이것이 신뢰 형성의 최소 조건 하나를 만족시킨다. 다만 패턴 명명은 양가적이다.",
+    "next_condition": "내가 부분적으로 답했을 때, 그 범위 안에서 반응하는지 아니면 '낮에도 한다'는 걸 더 파고드는지 봐야 한다."
+  },
+  "trajectory_progress": {
+    "position": "초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.",
+    "movement": "maintain",
+    "current_experience": "이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.",
+    "grounds": "이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.",
+    "next_condition": "내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다."
+  },
+  "trajectory_assessment": {
+    "position": "초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.",
+    "movement": "maintain",
+    "current_experience": "이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.",
+    "grounds": "이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.",
+    "next_condition": "내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다."
+  },
+  "trajectory_assessment_phase": "stage_client_update",
+  "trajectory_actual_utterance": "폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.",
+  "recording_mode": "snapshot",
+  "recording_sources": {
+    "turn": 4,
+    "pairs": [
+      {
+        "call_id": "chatcmpl-tool-8d1d3d8a05eafc2a",
+        "iteration": 1,
+        "name": "stage_client_update",
+        "reasoning": "Let me analyze the current situation carefully.\n\nThe counselor has:\n1. Summarized what the client said (daytime = can redirect, nighttime = stuck in thoughts)\n2. Made a positive reframe: \"the ability to redirect during the day means you don't completely lack the ability to stop those thoughts\"\n3. Asked what the client has tried at night when those thoughts come up\n\nNow let me consider how the client would process this:\n\n**Appraisal considerations:**\n- The counselor accurately summarized what was said - this feels like being heard correctly\n- The positive reframe (\"you don't completely lack the ability\") is interesting - it's a strength-based observation. For someone with the belief that showing weakness = handing over weapons, this could feel both validating (not being pathologized) and slightly uncomfortable (being given a \"positive\" interpretation might feel like the counselor is trying to manage them)\n- The question about what they've tried at night: This is asking about coping attempts. Given the belief that \"showing weakness or asking for help is handing weapons to others,\" admitting they haven't tried much could feel like admitting incompetence. But also, the question is practical and doesn't demand emotional disclosure.\n- The client's intermediate belief about recording important things - the counselor is building a structured picture of their problem. This could trigger the \"what is this being used for\" concern.\n\n**Trajectory considerations:**\n- Previous position: slightly advanced from initial boundary state\n- The counselor's next condition was: \"when I partially answered, does the counselor respond within that range or dig into 'I do it during the day too'\"\n- The counselor actually did respond within the range the client provided (focused on the night difference rather than pushing the daytime aspect), AND made a positive reframe about the daytime ability\n- This meets the condition set in the previous turn\n- The positive reframe is notable - instead of treating the daytime coping as insufficient, the counselor highlighted it as evidence of capability. This is somewhat unexpected for someone who expects to be judged or used.\n\n**What to say:**\n- The client would likely answer the question about nighttime attempts\n- Given the belief about not showing weakness, they might minimize what they've tried or admit to something minimal\n- The positive reframe might slightly lower defenses - the counselor isn't pathologizing, which is new\n- But the question about \"what have you tried\" could trigger: \"if I say I haven't tried much, will they think I'm not trying? If I say I've tried things, will they judge those as inadequate?\"\n- The client might mention something practical (phone, TV, etc.) without revealing the emotional depth of what's happening at night\n\n**Turn goal:**\n- Answer the practical question, but maintain some boundary about the emotional depth\n- The positive reframe creates a small opening - the client might acknowledge it slightly\n- The intention is to give a real answer while not revealing the full extent of nighttime struggle\n\nLet me think about whether I need to retrieve any memories. The current input seems sufficient - I have the profile, the conversation history, the previous notes, and the trajectory. The counselor's question is straightforward and the client's response pattern is clear from the beliefs.\n\nI don't think I need to retrieve memories. The situation is clear enough to form an appraisal and response plan.\n\nLet me formulate the response:\n\nThe client would likely:\n- Acknowledge the reframe slightly (maybe a brief \"네\" or nod)\n- Answer the question about nighttime attempts - probably mentioning something like phone, TV, or just lying there\n- Keep it somewhat minimal - not revealing the full extent of rumination\n- The positive reframe (\"you have the ability\") might create a small moment of feeling seen in a non-judgmental way, but the belief about weapons would keep them from fully accepting it\n\nActually, let me reconsider the trajectory. The counselor:\n1. Accurately summarized (being heard correctly)\n2. Didn't push the daytime aspect (met the condition)\n3. Made a positive reframe (unexpected, not pathologizing)\n4. Asked a practical question (not emotionally demanding)\n\nThis is actually a fairly good sequence. The client might feel slightly more at ease. But the \"what have you tried\" question could still trigger the \"am I being evaluated\" concern - if they say they haven't done much, will the counselor think they're not motivated?\n\nI think the movement would be \"maintain\" or slight \"advance.\" The positive reframe is notable but the question about attempts still carries evaluation risk. Let me go with \"maintain\" - the counselor met the condition but the new question introduces a new evaluation concern that keeps things at roughly the same level. Actually, the positive reframe is genuinely different from what the client expects (they expect judgment, got validation of capability). This might be a small advance.\n\nI'll go with a slight advance - the reframe is a new kind of input that doesn't fit the \"will be used\" schema, creating a small crack in the expectation.\n\nFor the response: The client would probably say something like they've tried phone or just lying there, maybe mention that it doesn't work well, keeping it factual rather than emotionally revealing. They might add a small qualifier about why those things don't work without going deep.\n",
+        "assistant_message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "chatcmpl-tool-8d1d3d8a05eafc2a",
+              "type": "function",
+              "function": {
+                "name": "stage_client_update",
+                "arguments": "{\"appraisal\": {\"interpretation\": \"상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.\", \"immediate_feeling\": \"약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.\", \"relevant_evidence\": \"이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.\", \"uncertainty\": \"이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다.\"}, \"response_plan\": {\"action\": \"밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.\", \"reason\": \"실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다.\"}, \"turn_goal\": {\"intention\": \"밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.\", \"grounds\": \"intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.\", \"uncertainty\": \"해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다.\"}, \"trajectory_assessment\": {\"position\": \"초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.\", \"movement\": \"maintain\", \"current_experience\": \"이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.\", \"grounds\": \"이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.\", \"next_condition\": \"내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다.\"}, \"trajectory_plan\": {\"position\": \"초기 경계에서 약간 진전한 상태 유지. 긍정적 재구성에 대한 반응이 아직 내면에서 정리되지 않았다.\", \"movement\": \"maintain\", \"grounds\": \"이번 턴에서 조건 충족과 새로운 평가 자극이 상쇄된다. 다음 턴에서 상담사가 내 답변을 어떻게 다루는지에 따라 진행 또는 후퇴가 결정될 것이다.\"}}"
+              }
+            }
+          ],
+          "reasoning": "Let me analyze the current situation carefully.\n\nThe counselor has:\n1. Summarized what the client said (daytime = can redirect, nighttime = stuck in thoughts)\n2. Made a positive reframe: \"the ability to redirect during the day means you don't completely lack the ability to stop those thoughts\"\n3. Asked what the client has tried at night when those thoughts come up\n\nNow let me consider how the client would process this:\n\n**Appraisal considerations:**\n- The counselor accurately summarized what was said - this feels like being heard correctly\n- The positive reframe (\"you don't completely lack the ability\") is interesting - it's a strength-based observation. For someone with the belief that showing weakness = handing over weapons, this could feel both validating (not being pathologized) and slightly uncomfortable (being given a \"positive\" interpretation might feel like the counselor is trying to manage them)\n- The question about what they've tried at night: This is asking about coping attempts. Given the belief that \"showing weakness or asking for help is handing weapons to others,\" admitting they haven't tried much could feel like admitting incompetence. But also, the question is practical and doesn't demand emotional disclosure.\n- The client's intermediate belief about recording important things - the counselor is building a structured picture of their problem. This could trigger the \"what is this being used for\" concern.\n\n**Trajectory considerations:**\n- Previous position: slightly advanced from initial boundary state\n- The counselor's next condition was: \"when I partially answered, does the counselor respond within that range or dig into 'I do it during the day too'\"\n- The counselor actually did respond within the range the client provided (focused on the night difference rather than pushing the daytime aspect), AND made a positive reframe about the daytime ability\n- This meets the condition set in the previous turn\n- The positive reframe is notable - instead of treating the daytime coping as insufficient, the counselor highlighted it as evidence of capability. This is somewhat unexpected for someone who expects to be judged or used.\n\n**What to say:**\n- The client would likely answer the question about nighttime attempts\n- Given the belief about not showing weakness, they might minimize what they've tried or admit to something minimal\n- The positive reframe might slightly lower defenses - the counselor isn't pathologizing, which is new\n- But the question about \"what have you tried\" could trigger: \"if I say I haven't tried much, will they think I'm not trying? If I say I've tried things, will they judge those as inadequate?\"\n- The client might mention something practical (phone, TV, etc.) without revealing the emotional depth of what's happening at night\n\n**Turn goal:**\n- Answer the practical question, but maintain some boundary about the emotional depth\n- The positive reframe creates a small opening - the client might acknowledge it slightly\n- The intention is to give a real answer while not revealing the full extent of nighttime struggle\n\nLet me think about whether I need to retrieve any memories. The current input seems sufficient - I have the profile, the conversation history, the previous notes, and the trajectory. The counselor's question is straightforward and the client's response pattern is clear from the beliefs.\n\nI don't think I need to retrieve memories. The situation is clear enough to form an appraisal and response plan.\n\nLet me formulate the response:\n\nThe client would likely:\n- Acknowledge the reframe slightly (maybe a brief \"네\" or nod)\n- Answer the question about nighttime attempts - probably mentioning something like phone, TV, or just lying there\n- Keep it somewhat minimal - not revealing the full extent of rumination\n- The positive reframe (\"you have the ability\") might create a small moment of feeling seen in a non-judgmental way, but the belief about weapons would keep them from fully accepting it\n\nActually, let me reconsider the trajectory. The counselor:\n1. Accurately summarized (being heard correctly)\n2. Didn't push the daytime aspect (met the condition)\n3. Made a positive reframe (unexpected, not pathologizing)\n4. Asked a practical question (not emotionally demanding)\n\nThis is actually a fairly good sequence. The client might feel slightly more at ease. But the \"what have you tried\" question could still trigger the \"am I being evaluated\" concern - if they say they haven't done much, will the counselor think they're not motivated?\n\nI think the movement would be \"maintain\" or slight \"advance.\" The positive reframe is notable but the question about attempts still carries evaluation risk. Let me go with \"maintain\" - the counselor met the condition but the new question introduces a new evaluation concern that keeps things at roughly the same level. Actually, the positive reframe is genuinely different from what the client expects (they expect judgment, got validation of capability). This might be a small advance.\n\nI'll go with a slight advance - the reframe is a new kind of input that doesn't fit the \"will be used\" schema, creating a small crack in the expectation.\n\nFor the response: The client would probably say something like they've tried phone or just lying there, maybe mention that it doesn't work well, keeping it factual rather than emotionally revealing. They might add a small qualifier about why those things don't work without going deep.\n"
+        },
+        "arguments_raw": "{\"appraisal\": {\"interpretation\": \"상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.\", \"immediate_feeling\": \"약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.\", \"relevant_evidence\": \"이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.\", \"uncertainty\": \"이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다.\"}, \"response_plan\": {\"action\": \"밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.\", \"reason\": \"실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다.\"}, \"turn_goal\": {\"intention\": \"밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.\", \"grounds\": \"intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.\", \"uncertainty\": \"해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다.\"}, \"trajectory_assessment\": {\"position\": \"초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.\", \"movement\": \"maintain\", \"current_experience\": \"이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.\", \"grounds\": \"이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.\", \"next_condition\": \"내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다.\"}, \"trajectory_plan\": {\"position\": \"초기 경계에서 약간 진전한 상태 유지. 긍정적 재구성에 대한 반응이 아직 내면에서 정리되지 않았다.\", \"movement\": \"maintain\", \"grounds\": \"이번 턴에서 조건 충족과 새로운 평가 자극이 상쇄된다. 다음 턴에서 상담사가 내 답변을 어떻게 다루는지에 따라 진행 또는 후퇴가 결정될 것이다.\"}}",
+        "accepted": true,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"recorded\": true, \"revision\": 1, \"remaining_precommit_decisions\": 7, \"next\": \"필요하면 조회·판단 수정, 근거 확인 후 commit_client_utterance\"}"
+            }
+          ],
+          "structuredContent": {
+            "recorded": true,
+            "revision": 1,
+            "remaining_precommit_decisions": 7,
+            "next": "필요하면 조회·판단 수정, 근거 확인 후 commit_client_utterance"
+          }
+        },
+        "output": {
+          "appraisal": {
+            "interpretation": "상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.",
+            "immediate_feeling": "약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.",
+            "relevant_evidence": "이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.",
+            "uncertainty": "이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다."
+          },
+          "response_plan": {
+            "action": "밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.",
+            "reason": "실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다."
+          },
+          "turn_goal": {
+            "intention": "밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.",
+            "grounds": "intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.",
+            "uncertainty": "해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다."
+          },
+          "trajectory_assessment": {
+            "position": "초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.",
+            "movement": "maintain",
+            "current_experience": "이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.",
+            "grounds": "이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.",
+            "next_condition": "내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다."
+          },
+          "trajectory_plan": {
+            "position": "초기 경계에서 약간 진전한 상태 유지. 긍정적 재구성에 대한 반응이 아직 내면에서 정리되지 않았다.",
+            "movement": "maintain",
+            "grounds": "이번 턴에서 조건 충족과 새로운 평가 자극이 상쇄된다. 다음 턴에서 상담사가 내 답변을 어떻게 다루는지에 따라 진행 또는 후퇴가 결정될 것이다."
+          }
+        },
+        "status": "committed"
+      },
+      {
+        "call_id": "chatcmpl-tool-aab65b8ceb699725",
+        "iteration": 2,
+        "name": "commit_client_utterance",
+        "reasoning": "Now I need to formulate the actual utterance. Based on my appraisal and response plan:\n\n- The client would answer the practical question about nighttime attempts\n- They'd mention something minimal (phone, TV, etc.)\n- They'd note it doesn't work well but not go deep into why\n- They wouldn't directly respond to the positive reframe\n- The tone should be matter-of-fact, slightly guarded\n\nLet me think about what this person would actually say. They're a 36-year-old accountant, meticulous, guarded. At night they probably do try things - looking at phone, maybe music, maybe just trying to sleep. The honest answer is \"I've tried stuff, it doesn't work much.\" But they'd frame it in a way that doesn't reveal too much vulnerability.\n\nSomething like: \"폰을 좀 보다가... 결국 다시 돌아가긴 하는데.\" This is honest but doesn't explain why it doesn't work. Or they might say they tried TV or something.\n\nI think the natural response would acknowledge trying something simple, note it doesn't really help, and maybe add a small practical observation about why (like \"then I end up thinking about something else from that\" or just \"그만두게 돼요\" - I end up stopping). They might also add a slight qualifier that keeps some distance.\n\nLet me write this in natural Korean speech patterns for this character - measured, slightly formal, with pauses indicated by ellipses.\n",
+        "assistant_message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "chatcmpl-tool-aab65b8ceb699725",
+              "type": "function",
+              "function": {
+                "name": "commit_client_utterance",
+                "arguments": "{\"utterance\": \"폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.\", \"evidence_decision\": {\"status\": \"sufficient\", \"reason\": \"현재 입력의 상담사 질문(밤에 시도해본 게 있는지)에 답하는 데 필요한 정보는 이미 충분하다. intermediate belief와 이전 노트에서 표현 범위와 깊이를 결정할 근거가 확인되었다. 추가 조회 없이 발화를 확정할 수 있다.\", \"remaining_gap\": \"\"}}"
+              }
+            }
+          ],
+          "reasoning": "Now I need to formulate the actual utterance. Based on my appraisal and response plan:\n\n- The client would answer the practical question about nighttime attempts\n- They'd mention something minimal (phone, TV, etc.)\n- They'd note it doesn't work well but not go deep into why\n- They wouldn't directly respond to the positive reframe\n- The tone should be matter-of-fact, slightly guarded\n\nLet me think about what this person would actually say. They're a 36-year-old accountant, meticulous, guarded. At night they probably do try things - looking at phone, maybe music, maybe just trying to sleep. The honest answer is \"I've tried stuff, it doesn't work much.\" But they'd frame it in a way that doesn't reveal too much vulnerability.\n\nSomething like: \"폰을 좀 보다가... 결국 다시 돌아가긴 하는데.\" This is honest but doesn't explain why it doesn't work. Or they might say they tried TV or something.\n\nI think the natural response would acknowledge trying something simple, note it doesn't really help, and maybe add a small practical observation about why (like \"then I end up thinking about something else from that\" or just \"그만두게 돼요\" - I end up stopping). They might also add a slight qualifier that keeps some distance.\n\nLet me write this in natural Korean speech patterns for this character - measured, slightly formal, with pauses indicated by ellipses.\n"
+        },
+        "arguments_raw": "{\"utterance\": \"폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.\", \"evidence_decision\": {\"status\": \"sufficient\", \"reason\": \"현재 입력의 상담사 질문(밤에 시도해본 게 있는지)에 답하는 데 필요한 정보는 이미 충분하다. intermediate belief와 이전 노트에서 표현 범위와 깊이를 결정할 근거가 확인되었다. 추가 조회 없이 발화를 확정할 수 있다.\", \"remaining_gap\": \"\"}}",
+        "accepted": true,
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"utterance\": \"폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.\", \"fixed\": true, \"saved\": false, \"next\": \"runtime_recording\", \"instruction\": \"공개 발화는 고정되었습니다. 진행 판단은 마지막 stage의 trajectory_assessment를 보존합니다.\"}"
+            }
+          ],
+          "structuredContent": {
+            "utterance": "폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.",
+            "fixed": true,
+            "saved": false,
+            "next": "runtime_recording",
+            "instruction": "공개 발화는 고정되었습니다. 진행 판단은 마지막 stage의 trajectory_assessment를 보존합니다."
+          }
+        },
+        "output": {
+          "utterance": "폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.",
+          "evidence_decision": {
+            "status": "sufficient",
+            "reason": "현재 입력의 상담사 질문(밤에 시도해본 게 있는지)에 답하는 데 필요한 정보는 이미 충분하다. intermediate belief와 이전 노트에서 표현 범위와 깊이를 결정할 근거가 확인되었다. 추가 조회 없이 발화를 확정할 수 있다.",
+            "remaining_gap": ""
+          }
+        },
+        "status": "committed"
+      }
+    ],
+    "sources": [
+      {
+        "source_id": "chatcmpl-tool-8d1d3d8a05eafc2a:reasoning",
+        "text": "Let me analyze the current situation carefully.\n\nThe counselor has:\n1. Summarized what the client said (daytime = can redirect, nighttime = stuck in thoughts)\n2. Made a positive reframe: \"the ability to redirect during the day means you don't completely lack the ability to stop those thoughts\"\n3. Asked what the client has tried at night when those thoughts come up\n\nNow let me consider how the client would process this:\n\n**Appraisal considerations:**\n- The counselor accurately summarized what was said - this feels like being heard correctly\n- The positive reframe (\"you don't completely lack the ability\") is interesting - it's a strength-based observation. For someone with the belief that showing weakness = handing over weapons, this could feel both validating (not being pathologized) and slightly uncomfortable (being given a \"positive\" interpretation might feel like the counselor is trying to manage them)\n- The question about what they've tried at night: This is asking about coping attempts. Given the belief that \"showing weakness or asking for help is handing weapons to others,\" admitting they haven't tried much could feel like admitting incompetence. But also, the question is practical and doesn't demand emotional disclosure.\n- The client's intermediate belief about recording important things - the counselor is building a structured picture of their problem. This could trigger the \"what is this being used for\" concern.\n\n**Trajectory considerations:**\n- Previous position: slightly advanced from initial boundary state\n- The counselor's next condition was: \"when I partially answered, does the counselor respond within that range or dig into 'I do it during the day too'\"\n- The counselor actually did respond within the range the client provided (focused on the night difference rather than pushing the daytime aspect), AND made a positive reframe about the daytime ability\n- This meets the condition set in the previous turn\n- The positive reframe is notable - instead of treating the daytime coping as insufficient, the counselor highlighted it as evidence of capability. This is somewhat unexpected for someone who expects to be judged or used.\n\n**What to say:**\n- The client would likely answer the question about nighttime attempts\n- Given the belief about not showing weakness, they might minimize what they've tried or admit to something minimal\n- The positive reframe might slightly lower defenses - the counselor isn't pathologizing, which is new\n- But the question about \"what have you tried\" could trigger: \"if I say I haven't tried much, will they think I'm not trying? If I say I've tried things, will they judge those as inadequate?\"\n- The client might mention something practical (phone, TV, etc.) without revealing the emotional depth of what's happening at night\n\n**Turn goal:**\n- Answer the practical question, but maintain some boundary about the emotional depth\n- The positive reframe creates a small opening - the client might acknowledge it slightly\n- The intention is to give a real answer while not revealing the full extent of nighttime struggle\n\nLet me think about whether I need to retrieve any memories. The current input seems sufficient - I have the profile, the conversation history, the previous notes, and the trajectory. The counselor's question is straightforward and the client's response pattern is clear from the beliefs.\n\nI don't think I need to retrieve memories. The situation is clear enough to form an appraisal and response plan.\n\nLet me formulate the response:\n\nThe client would likely:\n- Acknowledge the reframe slightly (maybe a brief \"네\" or nod)\n- Answer the question about nighttime attempts - probably mentioning something like phone, TV, or just lying there\n- Keep it somewhat minimal - not revealing the full extent of rumination\n- The positive reframe (\"you have the ability\") might create a small moment of feeling seen in a non-judgmental way, but the belief about weapons would keep them from fully accepting it\n\nActually, let me reconsider the trajectory. The counselor:\n1. Accurately summarized (being heard correctly)\n2. Didn't push the daytime aspect (met the condition)\n3. Made a positive reframe (unexpected, not pathologizing)\n4. Asked a practical question (not emotionally demanding)\n\nThis is actually a fairly good sequence. The client might feel slightly more at ease. But the \"what have you tried\" question could still trigger the \"am I being evaluated\" concern - if they say they haven't done much, will the counselor think they're not motivated?\n\nI think the movement would be \"maintain\" or slight \"advance.\" The positive reframe is notable but the question about attempts still carries evaluation risk. Let me go with \"maintain\" - the counselor met the condition but the new question introduces a new evaluation concern that keeps things at roughly the same level. Actually, the positive reframe is genuinely different from what the client expects (they expect judgment, got validation of capability). This might be a small advance.\n\nI'll go with a slight advance - the reframe is a new kind of input that doesn't fit the \"will be used\" schema, creating a small crack in the expectation.\n\nFor the response: The client would probably say something like they've tried phone or just lying there, maybe mention that it doesn't work well, keeping it factual rather than emotionally revealing. They might add a small qualifier about why those things don't work without going deep.\n",
+        "kind": "exploratory_reasoning",
+        "turn": 4,
+        "call_id": "chatcmpl-tool-8d1d3d8a05eafc2a"
+      },
+      {
+        "source_id": "chatcmpl-tool-aab65b8ceb699725:reasoning",
+        "text": "Now I need to formulate the actual utterance. Based on my appraisal and response plan:\n\n- The client would answer the practical question about nighttime attempts\n- They'd mention something minimal (phone, TV, etc.)\n- They'd note it doesn't work well but not go deep into why\n- They wouldn't directly respond to the positive reframe\n- The tone should be matter-of-fact, slightly guarded\n\nLet me think about what this person would actually say. They're a 36-year-old accountant, meticulous, guarded. At night they probably do try things - looking at phone, maybe music, maybe just trying to sleep. The honest answer is \"I've tried stuff, it doesn't work much.\" But they'd frame it in a way that doesn't reveal too much vulnerability.\n\nSomething like: \"폰을 좀 보다가... 결국 다시 돌아가긴 하는데.\" This is honest but doesn't explain why it doesn't work. Or they might say they tried TV or something.\n\nI think the natural response would acknowledge trying something simple, note it doesn't really help, and maybe add a small practical observation about why (like \"then I end up thinking about something else from that\" or just \"그만두게 돼요\" - I end up stopping). They might also add a slight qualifier that keeps some distance.\n\nLet me write this in natural Korean speech patterns for this character - measured, slightly formal, with pauses indicated by ellipses.\n",
+        "kind": "exploratory_reasoning",
+        "turn": 4,
+        "call_id": "chatcmpl-tool-aab65b8ceb699725"
+      },
+      {
+        "source_id": "judgment:appraisal.interpretation",
+        "text": "상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "appraisal.interpretation"
+      },
+      {
+        "source_id": "judgment:appraisal.immediate_feeling",
+        "text": "약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "appraisal.immediate_feeling"
+      },
+      {
+        "source_id": "judgment:appraisal.relevant_evidence",
+        "text": "이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "appraisal.relevant_evidence"
+      },
+      {
+        "source_id": "judgment:appraisal.uncertainty",
+        "text": "이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "appraisal.uncertainty"
+      },
+      {
+        "source_id": "judgment:turn_goal.intention",
+        "text": "밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "turn_goal.intention"
+      },
+      {
+        "source_id": "judgment:turn_goal.grounds",
+        "text": "intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "turn_goal.grounds"
+      },
+      {
+        "source_id": "judgment:turn_goal.uncertainty",
+        "text": "해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "turn_goal.uncertainty"
+      },
+      {
+        "source_id": "judgment:response_plan.action",
+        "text": "밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "response_plan.action"
+      },
+      {
+        "source_id": "judgment:response_plan.reason",
+        "text": "실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다.",
+        "kind": "committed_judgment",
+        "turn": 4,
+        "field": "response_plan.reason"
+      },
+      {
+        "source_id": "speech:utterance",
+        "text": "폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.",
+        "kind": "actual_utterance",
+        "turn": 4
+      },
+      {
+        "source_id": "previous:nc00c65648199",
+        "text": "appraisal.interpretation\n상담사가 '흔한 일'이라고 일반화해준 건 방어감을 약간 줄여준다. 그런데 '점검하는 패턴'이라고 이름을 붙여준 건, 내가 숨기려던 행동의 구조를 상대가 이미 파악했다는 느낌도 준다. 낮에도 그런지 묻는 질문은, 아까 '석 달 전' 질문처럼 핵심을 찌르진 않지만, '낮에도 한다'고 답하면 내 경계심이 얼마나 일상 전체에 퍼져 있는지 보여주는 셈이라 완전히 솔직해지긴 어렵다.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "nc00c65648199"
+      },
+      {
+        "source_id": "previous:ncb580d3ae985",
+        "text": "appraisal.immediate_feeling\n상담사가 아까 내가 모호하게 넘긴 부분을 밀어붙이지 않고 다른 각도로 물어본 것에 대해 아주 작은 안도. 동시에 '패턴'이라는 단어가 나를 분석 대상으로 보는 느낌이라 약간 찔림.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "ncb580d3ae985"
+      },
+      {
+        "source_id": "previous:n3bc12df945cf",
+        "text": "appraisal.relevant_evidence\n이전 턴에서 '다음에 살필 조건'으로 '내가 모호하게 답했을 때 밀어붙이는지 아닌지'를 설정했는데, 상담사는 석 달 전 사건을 다시 묻지 않고 질문의 초점을 바꿨다. 반면 '점검하는 패턴'이라는 표현은 내 intermediate belief(상대의 말의 숨은 의도를 확인해야 한다)를 상담사가 정확히 짚어낸 것이라, 보이는 것에 대한 긴장이 생긴다.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "n3bc12df945cf"
+      },
+      {
+        "source_id": "previous:n01d9645d2375",
+        "text": "appraisal.uncertainty\n이 사람이 패턴을 짚은 게 나를 이해하려는 건지, 아니면 내 약점을 정리해서 뭔가 하려는 건지 아직 구분되지 않는다.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "n01d9645d2375"
+      },
+      {
+        "source_id": "previous:na245d6a66a5a",
+        "text": "turn_goal.intention\n상담사의 질문에 답하되, 경계심이 일상 전반에 퍼져 있다는 전면적 인정은 피하고 싶다. 밤에 더 심하다는 쪽으로 초점을 옮겨서, '그래도 낮에는 통제하고 있다'는 인상을 유지하고 싶다.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "na245d6a66a5a"
+      },
+      {
+        "source_id": "previous:n6882088bb2c6",
+        "text": "turn_goal.grounds\nintermediate belief에서 '믿고 무장을 풀면 이용당한다'는 가정이 있으므로, 자신의 취약성이 한꺼번에 드러나는 걸 피하려는 경향이 있다. 낮에도 한다는 건 회식 사례에서 확인되듯 사실이지만, 이를 다 말하면 '이 사람은 완전히 무장 상태'라는 인상을 주는 게 위험하다고 느낀다.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "n6882088bb2c6"
+      },
+      {
+        "source_id": "previous:nef2d307dc3db",
+        "text": "turn_goal.uncertainty\n이 사람이 낮에도 한다는 걸 알면 다음에 그 부분을 더 파고들지 않을까 걱정된다.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "nef2d307dc3db"
+      },
+      {
+        "source_id": "previous:n29a4d87f25dd",
+        "text": "response_plan.action\n낮에도 그런 편이라고 인정하되, '일하느라 덜한다'는 식으로 약간 축소한다. 밤에 더 심하다는 쪽에 초점을 맞춰서, 문제의 범위를 '밤'으로 한정하는 뉘앙스를 준다. 말투는 인정하되 가볍게.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "n29a4d87f25dd"
+      },
+      {
+        "source_id": "previous:na08f0c23a498",
+        "text": "response_plan.reason\n'낮에도 한다'는 사실 자체는 부인할 수 없지만, 이를 전면적으로 인정하면 일상 전체가 이 패턴에 잠식되어 있다는 걸 노출하는 셈이 된다. 부분적으로 인정하면서 밤에 더 심하다는 점을 강조하면, 상담사의 질문에 답하면서도 문제의 범위를 제한할 수 있다.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "na08f0c23a498"
+      },
+      {
+        "source_id": "previous:n3e3917331288",
+        "text": "실제 공개 발화\n낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.",
+        "kind": "previous_note",
+        "turn": 4,
+        "item_id": "n3e3917331288"
+      }
+    ],
+    "committed_judgment": {
+      "appraisal": {
+        "interpretation": "상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.",
+        "immediate_feeling": "약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.",
+        "relevant_evidence": "이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.",
+        "uncertainty": "이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다."
+      },
+      "response_plan": {
+        "action": "밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.",
+        "reason": "실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다."
+      },
+      "turn_goal": {
+        "intention": "밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.",
+        "grounds": "intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.",
+        "uncertainty": "해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다."
+      },
+      "trajectory_assessment": {
+        "position": "초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.",
+        "movement": "maintain",
+        "current_experience": "이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.",
+        "grounds": "이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.",
+        "next_condition": "내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다."
+      },
+      "trajectory_plan": {
+        "position": "초기 경계에서 약간 진전한 상태 유지. 긍정적 재구성에 대한 반응이 아직 내면에서 정리되지 않았다.",
+        "movement": "maintain",
+        "grounds": "이번 턴에서 조건 충족과 새로운 평가 자극이 상쇄된다. 다음 턴에서 상담사가 내 답변을 어떻게 다루는지에 따라 진행 또는 후퇴가 결정될 것이다."
+      }
+    },
+    "actual_utterance": "폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.",
+    "trajectory_assessment": {
+      "position": "초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.",
+      "movement": "maintain",
+      "current_experience": "이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.",
+      "grounds": "이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.",
+      "next_condition": "내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다."
+    },
+    "meaning": "reasoning은 탐색 과정, 마지막 성공 stage 출력은 확정 주관적 판단, commit 출력은 실제 공개 발화. 계획은 결과가 아닙니다."
+  },
+  "raw_selections": [],
+  "summary_output": {},
+  "note_items_after": {
+    "notes": [
+      {
+        "id": "na62b441d0bb9",
+        "content": "appraisal.interpretation\n상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다."
+      },
+      {
+        "id": "n205e54a4814a",
+        "content": "appraisal.immediate_feeling\n약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다."
+      },
+      {
+        "id": "nde35df3cc569",
+        "content": "appraisal.relevant_evidence\n이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다."
+      },
+      {
+        "id": "ndaeeb087b3f4",
+        "content": "appraisal.uncertainty\n이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다."
+      },
+      {
+        "id": "nb8acd819980f",
+        "content": "turn_goal.intention\n밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다."
+      },
+      {
+        "id": "n4a42903f4c47",
+        "content": "turn_goal.grounds\nintermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다."
+      },
+      {
+        "id": "ne4e42d14ffb2",
+        "content": "turn_goal.uncertainty\n해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다."
+      },
+      {
+        "id": "n9ad739b4f5d5",
+        "content": "response_plan.action\n밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다."
+      },
+      {
+        "id": "n89d0ca144402",
+        "content": "response_plan.reason\n실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다."
+      },
+      {
+        "id": "n3561e6ca0696",
+        "content": "실제 공개 발화\n폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까."
+      }
+    ]
+  },
+  "subagent_requests": {
+    "trait_router": {
+      "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "messages": [
+        {
+          "role": "system",
+          "content": "# 관련 특성과 배경 선정 지침\n\n## 역할\n이번 상담사 발화와 관련된 개인 자료를 선정하는 담당입니다. 결과에는 선택한 자료의 ID와, 현재 대화의 어떤 내용 때문에 그 자료를 참고할 가치가 있는지 연결 근거를 담으세요.\n\n선정 근거는 **현재 대화의 어떤 주제·질문·제안과, 선택 자료의 어떤 내용이 관련되는가?**에 답합니다. 현재 대화에서 확인되는 단서와 자료 원문을 대응시켜, 그 자료를 참고할 가치가 있는 이유를 설명하세요.\n\n## 입력 자료의 의미\n- `기본 정보`: 상담 전부터 가진 생활 배경과 현재 고민입니다.\n- `전체 특성 목록`: 선택할 수 있는 신념·대처 경향 등 개인 특성의 ID와 원문입니다.\n- `배경 후보 목록`: 성장 경험과 상황 사례의 ID와 원문입니다. 상황 사례의 생각·감정·행동은 그 사례의 맥락에 속합니다.\n- `공개 대화`: 이번 상담사 발화 이전에 상담사와 내담자가 서로에게 실제로 말한 기록입니다.\n- `이번 상담사 발화`: 지금 내담자가 듣고 응답할 말입니다.\n- `내담자 노트`: 이번 상담사 발화를 듣기 전에 저장된 내면과 심리상태입니다. 내면은 속으로 느끼고 이해하며 믿거나 바라는 내용으로, 말한 것과 아직 말하지 않은 것을 모두 포함합니다. `(내용 없음)`은 해당 항목이 아직 기록되지 않았다는 뜻입니다.\n\n## 선정 과정\n1. 공개 대화와 이번 상담사 발화에서 실제로 다루는 주제, 질문, 제안을 확인하세요.\n2. 특성 후보와 현재 노트에서 그 주제·질문·제안에 관련된 개인적 조건을 찾으세요. 관련 항목이 없으면 selections를 빈 배열로 반환하세요.\n3. 선택한 특성과 연결되는 성장 경험·상황 사례가 이번 맥락을 이해하는 데 도움이 되면 background_ids에 선택하세요. 연결할 자료가 없으면 빈 배열로 반환하세요.\n4. relevance에는 현재 대화의 단서와 선택 자료의 구체적인 내용이 어떤 주제·조건에서 관련되는지 1~2문장으로 적으세요. 사건의 원인·순서에 관한 설명은 자료에 명시된 관계의 범위에서 표현하고, 자료를 연결하며 추정한 관련성은 가능성으로 표현하세요.\n\n예: “현재 연인과의 갈등을 이야기하고 있고, 이 자료에는 갈등 이후 거리를 두는 대처가 기록되어 있어 그 상황에서의 대처를 이해하는 데 관련된다.”\n\n선정은 매번 현재 입력에 근거해 수행하세요. ID는 제공된 후보에서 선택하세요. 자료 원문은 선택된 ID로 전달되므로, relevance에는 관련성을 확인할 핵심 연결만 간결하게 작성하세요.\n\n## 관련 노트 항목 선택\n현재 입력의 주제·질문·제안과 관련된 마음이나 조건이 담긴 글머리 항목의 ID를 note_ids에 선택하세요. 내용의 주제뿐 아니라 이미 기록된 관계적 마음, 말할 준비, 표현 범위의 조건도 검토하세요. 관련 항목이 없으면 빈 배열을 반환하세요. 노트는 선택한 항목의 원문으로 전달됩니다.\n\n## 출력\nJSON 객체 하나를 출력하세요.\n{\"selections\": [{\"trait_id\": \"특성 후보의 ID\", \"background_ids\": [\"관련 배경 후보의 ID\"], \"relevance\": \"현재 대화의 주제·질문·제안과 자료의 어떤 내용이 관련되는지 1~2문장\"}], \"note_ids\": [\"관련 노트 항목 ID\"]}\n"
+        },
+        {
+          "role": "user",
+          "content": "# 기본 정보\n\n- profile_id: gold_011\n- demographic_context:\n  - age: 36세\n  - occupation: 중견 물류회사 회계팀 과장 (12년차)\n  - life_stage: 미혼, 자취. 최근 팀 개편으로 새로운 팀원들과 일하게 된 지 4개월째\n  - background: 아버지는 술만 마시면 약속을 뒤집고 가족 몰래 어머니 명의로 빚을 지는 사람이었음. 회사에서는 '일은 완벽한데 곁을 안 주는 사람'으로 통함. 연애는 몇 번 있었지만 1년을 넘긴 적이 없음.\n- presenting_problem: 석 달 전 유일하게 마음을 열었던 입사동기에게 사석에서 한 팀장 험담이 그대로 팀장 귀에 들어간 일이 있었음. 이후 회사에서 누가 말을 걸어도 '뭘 캐내려는 건가'부터 떠올라 온몸에 힘이 들어가고, 퇴근 후에도 낮의 대화를 되짚느라 잠을 설침. 비슷한 시기 1년 만난 연인이 '너는 나를 단 한 번도 믿은 적이 없어'라며 떠났고, '이렇게 아무도 못 믿고 사는 게 맞나' 싶어 상담을 신청했지만, 신청서에 개인정보를 적으면서도 '이 기록이 어디로 가는 건지'부터 확인했다고 함.\n\n# 전체 특성 목록\n\n- 1:\n  - trait_id: /core_belief/young_domain\n  - content: 단절/거절\n- 2:\n  - trait_id: /core_belief/young_schema\n  - content: 불신/학대\n- 3:\n  - trait_id: /core_belief/core_belief_statement\n  - content: 방심하고 곁을 내주면 사람들은 결국 나를 이용하거나 상처 입힐 것이다.\n- 4:\n  - trait_id: /core_belief/schema_definition\n  - content: 타인이 의도적으로 자신을 학대·모욕·기만·이용할 것이라는 예상. 상처는 고의적이거나 부당한 방치의 결과로 지각됨.\n- 5:\n  - trait_id: /intermediate_beliefs/attitude\n  - content: 속마음이나 약점을 보이는 것은 상대에게 나를 해칠 무기를 건네주는 어리석은 짓이다\n- 6:\n  - trait_id: /intermediate_beliefs/rule\n  - content: 상대의 말은 액면 그대로 믿지 말고 숨은 의도를 확인해야 하며, 중요한 것은 반드시 기록으로 남겨야 한다\n- 7:\n  - trait_id: /intermediate_beliefs/assumption_positive\n  - content: 만약 내가 항상 경계하고 검증하며 빈틈을 보이지 않는다면, 누구도 나를 이용하거나 뒤통수치지 못할 것이다\n- 8:\n  - trait_id: /intermediate_beliefs/assumption_negative\n  - content: 만약 내가 누군가를 믿고 무장을 풀어버린다면, 그 사람은 언젠가 반드시 그것을 이용해 나를 곤경에 빠뜨릴 것이다\n- 9:\n  - trait_id: /coping_strategies/0\n  - content: 타인의 호의나 친절을 받으면 기뻐하기 전에 '무엇을 바라고 이러는지'부터 따져보고, 신세를 지지 않으려 곧바로 같은 값으로 갚아버림\n- 10:\n  - trait_id: /coping_strategies/1\n  - content: 업무 협의는 가급적 메신저나 메일 등 기록이 남는 방식으로 하고, 구두 약속은 '정리해서 메일 드릴게요'라며 문서로 못 박음\n- 11:\n  - trait_id: /coping_strategies/2\n  - content: 사적인 질문을 받으면 웃으며 두루뭉술하게 넘기거나 역으로 상대에게 질문을 돌려 자신의 정보를 내주지 않음\n- 12:\n  - trait_id: /coping_strategies/3\n  - content: 새로운 사람에게는 사소한 이야기를 흘려보고 그것이 다른 데서 들려오는지 확인하는 식으로 믿을 만한지 시험함\n- 13:\n  - trait_id: /coping_strategies/4\n  - content: 관계가 가까워져 기대게 될 것 같으면 상대의 말과 행동의 불일치를 찾아내 '역시 믿을 사람 없다'는 근거로 삼고 거리를 벌림\n\n# 배경 후보 목록\n\n- 1:\n  - background_id: /childhood_data\n  - kind: 성장 경험\n  - content: 내담자의 아버지는 술이 들어가면 '이번 주말엔 놀이공원 가자'던 약속을 없던 일로 만들고, 화가 나면 전날 내담자가 털어놓은 속마음을 조롱거리로 꺼내 드는 사람이었습니다. 어머니 몰래 내담자의 세뱃돈 통장을 헐어 쓴 일도 있었습니다. 중학교 때는 가장 친했던 친구에게만 털어놓은 가정사가 반 전체에 소문으로 퍼졌고, 그 친구는 '재미로 그랬다'며 웃었습니다. 믿고 보여준 속마음이 번번이 무기가 되어 돌아오는 경험이 반복되면서, 사람에게 곁을 내주는 것은 상대에게 칼자루를 쥐여주는 일이라는 신념이 형성되었습니다.\n- 2:\n  - background_id: /situations/0\n  - kind: 상황 사례\n  - content:\n    - situation: 새 팀의 후배가 '과장님 것도 샀어요'라며 커피를 건네고, 다음 주 연차 결재 이야기를 꺼냄.\n    - automatic_thought: 커피가 공짜일 리 없지. 결재 때문에 미리 기름칠하는 거잖아. 순수한 호의라고 믿는 순간 이용당하는 거야.\n    - emotion: 경계심, 불편함, 옅은 씁쓸함\n    - physiological_response: 어깨가 굳고 웃는 얼굴이 부자연스러워짐\n    - behavior: '잘 마실게요' 하고는 오후에 후배 자리에 같은 값의 음료를 놓아 빚을 지워버리고, 연차 결재는 규정만 따져 처리함\n- 3:\n  - background_id: /situations/1\n  - kind: 상황 사례\n  - content:\n    - situation: 팀 회식에서 팀장이 '우리 팀은 가족 같은 분위기로 갑시다. 각자 요즘 고민도 편하게 얘기해 봐요'라고 함.\n    - automatic_thought: 여기서 꺼낸 말이 다음 인사평가 때 어떻게 돌아올지 모르는데. 지난번에도 믿고 말했다가 팀장 귀에 다 들어갔잖아.\n    - emotion: 긴장, 냉소, 소외감\n    - physiological_response: 속이 조여오고 손으로 계속 잔을 만지작거림\n    - behavior: '요즘은 뭐, 운동 열심히 하는 게 고민이죠'라고 농담으로 비켜가고, 다른 사람들이 털어놓는 이야기를 들으며 '저 말이 언제 어떻게 쓰일까'를 속으로 계산함\n- 4:\n  - background_id: /situations/2\n  - kind: 상황 사례\n  - content:\n    - situation: 헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.\n    - automatic_thought: 잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.\n    - emotion: 그리움, 그것을 덮는 의심, 피로감\n    - physiological_response: 메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐\n    - behavior: 한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음\n- 5:\n  - background_id: /situations/3\n  - kind: 상황 사례\n  - content:\n    - situation: 상담 신청서를 작성하다가 '상담 내용은 비밀이 보장됩니다'라는 안내 문구를 봄.\n    - automatic_thought: 비밀 보장이라... 회사 지원 프로그램인데 정말 회사로 안 넘어갈까. 기록은 남을 텐데 그 기록을 누가 볼 수 있는 거지.\n    - emotion: 불안, 의심, 그 밑의 간절함\n    - physiological_response: 펜을 쥔 손에 힘이 들어가고 한숨이 나옴\n    - behavior: 접수 담당자에게 기록 보관 기간과 열람 권한을 꼬치꼬치 물은 뒤, 신청서의 '상담 받고 싶은 내용' 칸에는 '수면 문제'라고만 적어 냄\n\n# 공개 대화\n\n상담사: 오늘 상담에서 가장 먼저 다뤄보고 싶은 일이 있나요?\n\n내담자: 신청서에 적긴 했는데... 잠을 못 자는 게 제일 힘들긴 해요. 근데 그게 원인이라기보다는... 그냥 자려고 누우면 낮에 있던 일이 계속 떠오르고. 그게 좀 심해진 지가 한 석 달쯤 됐습니다.\n\n상담사: 자려고 누웠을 때 낮에 있던 일이 계속 떠오르는 게 한 석 달쯤 됐다는 거죠. 잠을 못 자는 것 자체도 힘들겠지만, 그 생각을 멈추기가 쉽지 않아서 더 지치실 것 같아요.\n\n그때 떠오르는 생각들이 대개 어떤 내용인지, 혹시 석 달 전쯤 뭔가 달라진 게 있었는지 떠올려보실 수 있을까요?\n\n내담자: 생각이라기보다는... 낮에 나눈 대화요. 누가 한 말, 그때 표정, 그런 게 자꾸 돌아가요. 혹시 그 말이 다른 뜻은 없었나, 내가 뭘 잘못 말한 건 아닌가. 석 달 전이요... 글쎄요, 그냥 그때부터 좀 그랬습니다.\n\n상담사: 그때 뭔가 특별한 계기가 있었던 건 아닌데 어느 순간부터 그렇게 됐다는 거, 오히려 흔한 일이에요. 꼭 뚜렷한 사건이 있어야만 시작되는 건 아니니까요.\n\n다만 떠오르는 내용 자체를 보면, 대화에서 상대의 말이나 표정을 다시 떠올리면서 \"내가 뭘 잘못 말한 건 아닌가\" 하고 스스로를 점검하는 패턴이 보이네요. 그 패턴이 잠들기 전에 유난히 강해지는 거죠.\n\n그런 생각이 올라올 때, 평소 낮 동안에도 그런 식으로 대화 내용을 되짚는 편이신가요, 아니면 밤에 누웠을 때만 유독 그런가요?\n\n내담자: 낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.\n\n# 이번 상담사 발화\n\n낮에는 뭔가를 하고 있으니까 생각이 올라와도 다른 데로 돌릴 수 있는데, 밤에는 그럴 거리가 없으니 그냥 그 생각 안에 머물러 있게 된다는 거죠.\n\n그 차이가 꽤 중요한 것 같아요. 낮에 돌릴 수 있다는 건, 그 생각을 멈추는 능력이 아예 없는 건 아니라는 뜻이기도 하니까요.\n\n밤에 누워서 그 생각이 올라왔을 때, 혹시 스스로 해본 게 있을까요? 일부러 다른 생각을 해본다든가, 폰을 본다든가, 뭐라도 시도해본 게 있는지요.\n\n# 내담자 노트\n\n- [nc00c65648199] appraisal.interpretation\n  상담사가 '흔한 일'이라고 일반화해준 건 방어감을 약간 줄여준다. 그런데 '점검하는 패턴'이라고 이름을 붙여준 건, 내가 숨기려던 행동의 구조를 상대가 이미 파악했다는 느낌도 준다. 낮에도 그런지 묻는 질문은, 아까 '석 달 전' 질문처럼 핵심을 찌르진 않지만, '낮에도 한다'고 답하면 내 경계심이 얼마나 일상 전체에 퍼져 있는지 보여주는 셈이라 완전히 솔직해지긴 어렵다.\n- [ncb580d3ae985] appraisal.immediate_feeling\n  상담사가 아까 내가 모호하게 넘긴 부분을 밀어붙이지 않고 다른 각도로 물어본 것에 대해 아주 작은 안도. 동시에 '패턴'이라는 단어가 나를 분석 대상으로 보는 느낌이라 약간 찔림.\n- [n3bc12df945cf] appraisal.relevant_evidence\n  이전 턴에서 '다음에 살필 조건'으로 '내가 모호하게 답했을 때 밀어붙이는지 아닌지'를 설정했는데, 상담사는 석 달 전 사건을 다시 묻지 않고 질문의 초점을 바꿨다. 반면 '점검하는 패턴'이라는 표현은 내 intermediate belief(상대의 말의 숨은 의도를 확인해야 한다)를 상담사가 정확히 짚어낸 것이라, 보이는 것에 대한 긴장이 생긴다.\n- [n01d9645d2375] appraisal.uncertainty\n  이 사람이 패턴을 짚은 게 나를 이해하려는 건지, 아니면 내 약점을 정리해서 뭔가 하려는 건지 아직 구분되지 않는다.\n- [na245d6a66a5a] turn_goal.intention\n  상담사의 질문에 답하되, 경계심이 일상 전반에 퍼져 있다는 전면적 인정은 피하고 싶다. 밤에 더 심하다는 쪽으로 초점을 옮겨서, '그래도 낮에는 통제하고 있다'는 인상을 유지하고 싶다.\n- [n6882088bb2c6] turn_goal.grounds\n  intermediate belief에서 '믿고 무장을 풀면 이용당한다'는 가정이 있으므로, 자신의 취약성이 한꺼번에 드러나는 걸 피하려는 경향이 있다. 낮에도 한다는 건 회식 사례에서 확인되듯 사실이지만, 이를 다 말하면 '이 사람은 완전히 무장 상태'라는 인상을 주는 게 위험하다고 느낀다.\n- [nef2d307dc3db] turn_goal.uncertainty\n  이 사람이 낮에도 한다는 걸 알면 다음에 그 부분을 더 파고들지 않을까 걱정된다.\n- [n29a4d87f25dd] response_plan.action\n  낮에도 그런 편이라고 인정하되, '일하느라 덜한다'는 식으로 약간 축소한다. 밤에 더 심하다는 쪽에 초점을 맞춰서, 문제의 범위를 '밤'으로 한정하는 뉘앙스를 준다. 말투는 인정하되 가볍게.\n- [na08f0c23a498] response_plan.reason\n  '낮에도 한다'는 사실 자체는 부인할 수 없지만, 이를 전면적으로 인정하면 일상 전체가 이 패턴에 잠식되어 있다는 걸 노출하는 셈이 된다. 부분적으로 인정하면서 밤에 더 심하다는 점을 강조하면, 상담사의 질문에 답하면서도 문제의 범위를 제한할 수 있다.\n- [n3e3917331288] 실제 공개 발화\n  낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.\n\n"
+        }
+      ],
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 4096,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      },
+      "structured_outputs": {
+        "json": {
+          "type": "object",
+          "properties": {
+            "selections": {
+              "type": "array",
+              "maxItems": 13,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "trait_id": {
+                    "type": "string",
+                    "description": "관련된 특성 후보의 ID",
+                    "enum": [
+                      "/core_belief/young_domain",
+                      "/core_belief/young_schema",
+                      "/core_belief/core_belief_statement",
+                      "/core_belief/schema_definition",
+                      "/intermediate_beliefs/attitude",
+                      "/intermediate_beliefs/rule",
+                      "/intermediate_beliefs/assumption_positive",
+                      "/intermediate_beliefs/assumption_negative",
+                      "/coping_strategies/0",
+                      "/coping_strategies/1",
+                      "/coping_strategies/2",
+                      "/coping_strategies/3",
+                      "/coping_strategies/4"
+                    ]
+                  },
+                  "background_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "enum": [
+                        "/childhood_data",
+                        "/situations/0",
+                        "/situations/1",
+                        "/situations/2",
+                        "/situations/3"
+                      ]
+                    },
+                    "maxItems": 5,
+                    "description": "이 특성과 이번 상황을 이해하는 데 관련된 배경 ID. 연결할 근거가 없으면 빈 배열."
+                  },
+                  "relevance": {
+                    "type": "string",
+                    "description": "현재 대화의 어떤 주제·질문·제안과 선택 자료의 어떤 내용이 관련되는지 1~2문장으로 설명합니다. 대화 단서와 자료 원문을 대응시키세요. 사건의 원인·순서는 자료에 명시된 관계의 범위에서 표현하고, 추정한 관련성은 가능성으로 표현합니다."
+                  }
+                },
+                "required": [
+                  "trait_id",
+                  "background_ids",
+                  "relevance"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "note_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "nc00c65648199",
+                  "ncb580d3ae985",
+                  "n3bc12df945cf",
+                  "n01d9645d2375",
+                  "na245d6a66a5a",
+                  "n6882088bb2c6",
+                  "nef2d307dc3db",
+                  "n29a4d87f25dd",
+                  "na08f0c23a498",
+                  "n3e3917331288"
+                ]
+              },
+              "maxItems": 10
+            }
+          },
+          "required": [
+            "selections",
+            "note_ids"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "subagent_outputs": {
+    "trait_router": {
+      "selections": [
+        {
+          "trait_id": "/intermediate_beliefs/rule",
+          "background_ids": [
+            "/situations/2",
+            "/situations/1"
+          ],
+          "relevance": "상담사가 밤에 그 생각이 올라왔을 때 해본 게 있는지 묻고 있는데, 이 규칙은 대화에서 상대의 숨은 의도를 확인해야 한다는 것으로, 밤에 되짚는 내용(누가 한 말, 표정, 다른 뜻은 없었나)이 바로 이 규칙이 작동한 결과이며, 상황 사례 2에서는 새벽까지 그날의 메시지를 곱씹은 모습이 직접 확인된다."
+        },
+        {
+          "trait_id": "/intermediate_beliefs/attitude",
+          "background_ids": [
+            "/situations/2"
+          ],
+          "relevance": "밤에 스스로 해본 시도가 있었는지 묻는 질문에 대해, 약점을 드러내거나 도움을 구하는 것 자체가 무기를 건네는 어리석은 짓이라는 신념이 자기 도움 시도 자체를 억제하는 조건이 될 수 있다."
+        }
+      ],
+      "note_ids": [
+        "na245d6a66a5a",
+        "n01d9645d2375",
+        "n6882088bb2c6",
+        "nc00c65648199"
+      ]
+    }
+  },
+  "inner_updates": [],
+  "inner_before": {},
+  "inner_after": {},
+  "state_routing": [],
+  "state_updates": [],
+  "states_before": {},
+  "states_after": {},
+  "notes_before": "# 내담자 노트\n\n- [nc00c65648199] appraisal.interpretation\n  상담사가 '흔한 일'이라고 일반화해준 건 방어감을 약간 줄여준다. 그런데 '점검하는 패턴'이라고 이름을 붙여준 건, 내가 숨기려던 행동의 구조를 상대가 이미 파악했다는 느낌도 준다. 낮에도 그런지 묻는 질문은, 아까 '석 달 전' 질문처럼 핵심을 찌르진 않지만, '낮에도 한다'고 답하면 내 경계심이 얼마나 일상 전체에 퍼져 있는지 보여주는 셈이라 완전히 솔직해지긴 어렵다.\n- [ncb580d3ae985] appraisal.immediate_feeling\n  상담사가 아까 내가 모호하게 넘긴 부분을 밀어붙이지 않고 다른 각도로 물어본 것에 대해 아주 작은 안도. 동시에 '패턴'이라는 단어가 나를 분석 대상으로 보는 느낌이라 약간 찔림.\n- [n3bc12df945cf] appraisal.relevant_evidence\n  이전 턴에서 '다음에 살필 조건'으로 '내가 모호하게 답했을 때 밀어붙이는지 아닌지'를 설정했는데, 상담사는 석 달 전 사건을 다시 묻지 않고 질문의 초점을 바꿨다. 반면 '점검하는 패턴'이라는 표현은 내 intermediate belief(상대의 말의 숨은 의도를 확인해야 한다)를 상담사가 정확히 짚어낸 것이라, 보이는 것에 대한 긴장이 생긴다.\n- [n01d9645d2375] appraisal.uncertainty\n  이 사람이 패턴을 짚은 게 나를 이해하려는 건지, 아니면 내 약점을 정리해서 뭔가 하려는 건지 아직 구분되지 않는다.\n- [na245d6a66a5a] turn_goal.intention\n  상담사의 질문에 답하되, 경계심이 일상 전반에 퍼져 있다는 전면적 인정은 피하고 싶다. 밤에 더 심하다는 쪽으로 초점을 옮겨서, '그래도 낮에는 통제하고 있다'는 인상을 유지하고 싶다.\n- [n6882088bb2c6] turn_goal.grounds\n  intermediate belief에서 '믿고 무장을 풀면 이용당한다'는 가정이 있으므로, 자신의 취약성이 한꺼번에 드러나는 걸 피하려는 경향이 있다. 낮에도 한다는 건 회식 사례에서 확인되듯 사실이지만, 이를 다 말하면 '이 사람은 완전히 무장 상태'라는 인상을 주는 게 위험하다고 느낀다.\n- [nef2d307dc3db] turn_goal.uncertainty\n  이 사람이 낮에도 한다는 걸 알면 다음에 그 부분을 더 파고들지 않을까 걱정된다.\n- [n29a4d87f25dd] response_plan.action\n  낮에도 그런 편이라고 인정하되, '일하느라 덜한다'는 식으로 약간 축소한다. 밤에 더 심하다는 쪽에 초점을 맞춰서, 문제의 범위를 '밤'으로 한정하는 뉘앙스를 준다. 말투는 인정하되 가볍게.\n- [na08f0c23a498] response_plan.reason\n  '낮에도 한다'는 사실 자체는 부인할 수 없지만, 이를 전면적으로 인정하면 일상 전체가 이 패턴에 잠식되어 있다는 걸 노출하는 셈이 된다. 부분적으로 인정하면서 밤에 더 심하다는 점을 강조하면, 상담사의 질문에 답하면서도 문제의 범위를 제한할 수 있다.\n- [n3e3917331288] 실제 공개 발화\n  낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.\n",
+  "notes_after": "# 내담자 노트\n\n- [na62b441d0bb9] appraisal.interpretation\n  상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.\n- [n205e54a4814a] appraisal.immediate_feeling\n  약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.\n- [nde35df3cc569] appraisal.relevant_evidence\n  이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.\n- [ndaeeb087b3f4] appraisal.uncertainty\n  이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다.\n- [nb8acd819980f] turn_goal.intention\n  밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.\n- [n4a42903f4c47] turn_goal.grounds\n  intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.\n- [ne4e42d14ffb2] turn_goal.uncertainty\n  해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다.\n- [n9ad739b4f5d5] response_plan.action\n  밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.\n- [n89d0ca144402] response_plan.reason\n  실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다.\n- [n3561e6ca0696] 실제 공개 발화\n  폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.\n",
+  "diff": [
+    "--- 이전 상태",
+    "+++ 다음 턴 상태",
+    "@@ -1,22 +1,22 @@",
+    " # 내담자 노트",
+    " ",
+    "-- [nc00c65648199] appraisal.interpretation",
+    "-  상담사가 '흔한 일'이라고 일반화해준 건 방어감을 약간 줄여준다. 그런데 '점검하는 패턴'이라고 이름을 붙여준 건, 내가 숨기려던 행동의 구조를 상대가 이미 파악했다는 느낌도 준다. 낮에도 그런지 묻는 질문은, 아까 '석 달 전' 질문처럼 핵심을 찌르진 않지만, '낮에도 한다'고 답하면 내 경계심이 얼마나 일상 전체에 퍼져 있는지 보여주는 셈이라 완전히 솔직해지긴 어렵다.",
+    "-- [ncb580d3ae985] appraisal.immediate_feeling",
+    "-  상담사가 아까 내가 모호하게 넘긴 부분을 밀어붙이지 않고 다른 각도로 물어본 것에 대해 아주 작은 안도. 동시에 '패턴'이라는 단어가 나를 분석 대상으로 보는 느낌이라 약간 찔림.",
+    "-- [n3bc12df945cf] appraisal.relevant_evidence",
+    "-  이전 턴에서 '다음에 살필 조건'으로 '내가 모호하게 답했을 때 밀어붙이는지 아닌지'를 설정했는데, 상담사는 석 달 전 사건을 다시 묻지 않고 질문의 초점을 바꿨다. 반면 '점검하는 패턴'이라는 표현은 내 intermediate belief(상대의 말의 숨은 의도를 확인해야 한다)를 상담사가 정확히 짚어낸 것이라, 보이는 것에 대한 긴장이 생긴다.",
+    "-- [n01d9645d2375] appraisal.uncertainty",
+    "-  이 사람이 패턴을 짚은 게 나를 이해하려는 건지, 아니면 내 약점을 정리해서 뭔가 하려는 건지 아직 구분되지 않는다.",
+    "-- [na245d6a66a5a] turn_goal.intention",
+    "-  상담사의 질문에 답하되, 경계심이 일상 전반에 퍼져 있다는 전면적 인정은 피하고 싶다. 밤에 더 심하다는 쪽으로 초점을 옮겨서, '그래도 낮에는 통제하고 있다'는 인상을 유지하고 싶다.",
+    "-- [n6882088bb2c6] turn_goal.grounds",
+    "-  intermediate belief에서 '믿고 무장을 풀면 이용당한다'는 가정이 있으므로, 자신의 취약성이 한꺼번에 드러나는 걸 피하려는 경향이 있다. 낮에도 한다는 건 회식 사례에서 확인되듯 사실이지만, 이를 다 말하면 '이 사람은 완전히 무장 상태'라는 인상을 주는 게 위험하다고 느낀다.",
+    "-- [nef2d307dc3db] turn_goal.uncertainty",
+    "-  이 사람이 낮에도 한다는 걸 알면 다음에 그 부분을 더 파고들지 않을까 걱정된다.",
+    "-- [n29a4d87f25dd] response_plan.action",
+    "-  낮에도 그런 편이라고 인정하되, '일하느라 덜한다'는 식으로 약간 축소한다. 밤에 더 심하다는 쪽에 초점을 맞춰서, 문제의 범위를 '밤'으로 한정하는 뉘앙스를 준다. 말투는 인정하되 가볍게.",
+    "-- [na08f0c23a498] response_plan.reason",
+    "-  '낮에도 한다'는 사실 자체는 부인할 수 없지만, 이를 전면적으로 인정하면 일상 전체가 이 패턴에 잠식되어 있다는 걸 노출하는 셈이 된다. 부분적으로 인정하면서 밤에 더 심하다는 점을 강조하면, 상담사의 질문에 답하면서도 문제의 범위를 제한할 수 있다.",
+    "-- [n3e3917331288] 실제 공개 발화",
+    "-  낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.",
+    "+- [na62b441d0bb9] appraisal.interpretation",
+    "+  상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.",
+    "+- [n205e54a4814a] appraisal.immediate_feeling",
+    "+  약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.",
+    "+- [nde35df3cc569] appraisal.relevant_evidence",
+    "+  이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.",
+    "+- [ndaeeb087b3f4] appraisal.uncertainty",
+    "+  이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다.",
+    "+- [nb8acd819980f] turn_goal.intention",
+    "+  밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.",
+    "+- [n4a42903f4c47] turn_goal.grounds",
+    "+  intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.",
+    "+- [ne4e42d14ffb2] turn_goal.uncertainty",
+    "+  해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다.",
+    "+- [n9ad739b4f5d5] response_plan.action",
+    "+  밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.",
+    "+- [n89d0ca144402] response_plan.reason",
+    "+  실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다.",
+    "+- [n3561e6ca0696] 실제 공개 발화",
+    "+  폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까."
+  ],
+  "note_operations": [
+    {
+      "action": "delete",
+      "item_id": "nc00c65648199",
+      "content": "",
+      "before": "appraisal.interpretation\n상담사가 '흔한 일'이라고 일반화해준 건 방어감을 약간 줄여준다. 그런데 '점검하는 패턴'이라고 이름을 붙여준 건, 내가 숨기려던 행동의 구조를 상대가 이미 파악했다는 느낌도 준다. 낮에도 그런지 묻는 질문은, 아까 '석 달 전' 질문처럼 핵심을 찌르진 않지만, '낮에도 한다'고 답하면 내 경계심이 얼마나 일상 전체에 퍼져 있는지 보여주는 셈이라 완전히 솔직해지긴 어렵다.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "ncb580d3ae985",
+      "content": "",
+      "before": "appraisal.immediate_feeling\n상담사가 아까 내가 모호하게 넘긴 부분을 밀어붙이지 않고 다른 각도로 물어본 것에 대해 아주 작은 안도. 동시에 '패턴'이라는 단어가 나를 분석 대상으로 보는 느낌이라 약간 찔림.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "n3bc12df945cf",
+      "content": "",
+      "before": "appraisal.relevant_evidence\n이전 턴에서 '다음에 살필 조건'으로 '내가 모호하게 답했을 때 밀어붙이는지 아닌지'를 설정했는데, 상담사는 석 달 전 사건을 다시 묻지 않고 질문의 초점을 바꿨다. 반면 '점검하는 패턴'이라는 표현은 내 intermediate belief(상대의 말의 숨은 의도를 확인해야 한다)를 상담사가 정확히 짚어낸 것이라, 보이는 것에 대한 긴장이 생긴다.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "n01d9645d2375",
+      "content": "",
+      "before": "appraisal.uncertainty\n이 사람이 패턴을 짚은 게 나를 이해하려는 건지, 아니면 내 약점을 정리해서 뭔가 하려는 건지 아직 구분되지 않는다.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "na245d6a66a5a",
+      "content": "",
+      "before": "turn_goal.intention\n상담사의 질문에 답하되, 경계심이 일상 전반에 퍼져 있다는 전면적 인정은 피하고 싶다. 밤에 더 심하다는 쪽으로 초점을 옮겨서, '그래도 낮에는 통제하고 있다'는 인상을 유지하고 싶다.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "n6882088bb2c6",
+      "content": "",
+      "before": "turn_goal.grounds\nintermediate belief에서 '믿고 무장을 풀면 이용당한다'는 가정이 있으므로, 자신의 취약성이 한꺼번에 드러나는 걸 피하려는 경향이 있다. 낮에도 한다는 건 회식 사례에서 확인되듯 사실이지만, 이를 다 말하면 '이 사람은 완전히 무장 상태'라는 인상을 주는 게 위험하다고 느낀다.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "nef2d307dc3db",
+      "content": "",
+      "before": "turn_goal.uncertainty\n이 사람이 낮에도 한다는 걸 알면 다음에 그 부분을 더 파고들지 않을까 걱정된다.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "n29a4d87f25dd",
+      "content": "",
+      "before": "response_plan.action\n낮에도 그런 편이라고 인정하되, '일하느라 덜한다'는 식으로 약간 축소한다. 밤에 더 심하다는 쪽에 초점을 맞춰서, 문제의 범위를 '밤'으로 한정하는 뉘앙스를 준다. 말투는 인정하되 가볍게.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "na08f0c23a498",
+      "content": "",
+      "before": "response_plan.reason\n'낮에도 한다'는 사실 자체는 부인할 수 없지만, 이를 전면적으로 인정하면 일상 전체가 이 패턴에 잠식되어 있다는 걸 노출하는 셈이 된다. 부분적으로 인정하면서 밤에 더 심하다는 점을 강조하면, 상담사의 질문에 답하면서도 문제의 범위를 제한할 수 있다.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "delete",
+      "item_id": "n3e3917331288",
+      "content": "",
+      "before": "실제 공개 발화\n낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.",
+      "label": "내담자 노트",
+      "reason": "기록 스냅샷 교체. 과거 기록은 완료 턴 이력에 보존됩니다."
+    },
+    {
+      "action": "add",
+      "item_id": "na62b441d0bb9",
+      "content": "appraisal.interpretation\n상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "n205e54a4814a",
+      "content": "appraisal.immediate_feeling\n약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "nde35df3cc569",
+      "content": "appraisal.relevant_evidence\n이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "ndaeeb087b3f4",
+      "content": "appraisal.uncertainty\n이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "nb8acd819980f",
+      "content": "turn_goal.intention\n밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "n4a42903f4c47",
+      "content": "turn_goal.grounds\nintermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "ne4e42d14ffb2",
+      "content": "turn_goal.uncertainty\n해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "n9ad739b4f5d5",
+      "content": "response_plan.action\n밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "n89d0ca144402",
+      "content": "response_plan.reason\n실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    },
+    {
+      "action": "add",
+      "item_id": "n3561e6ca0696",
+      "content": "실제 공개 발화\n폰을 좀 보기도 하고... 이어폰 끼고 뭘 듣기도 하고. 근데 그게 오래 안 가요. 중간에 그냥... 다시 돌아가요. 뭘 해도 결국 거기서 시작하니까.",
+      "before": "",
+      "label": "내담자 노트",
+      "reason": "선택된 원문 / 반환 요약 / 확정 필드를 해당 기록 방식으로 저장합니다."
+    }
+  ],
+  "note_format": "free_items_v1",
+  "legacy_note_converted": false,
+  "experiment_condition": "Q3x",
+  "note_selection": {
+    "selected_ids": [
+      "na245d6a66a5a",
+      "n01d9645d2375",
+      "n6882088bb2c6",
+      "nc00c65648199"
+    ],
+    "selective": true
+  },
+  "memory_retrievals": [],
+  "evidence_decision": {
+    "status": "sufficient",
+    "reason": "현재 입력의 상담사 질문(밤에 시도해본 게 있는지)에 답하는 데 필요한 정보는 이미 충분하다. intermediate belief와 이전 노트에서 표현 범위와 깊이를 결정할 근거가 확인되었다. 추가 조회 없이 발화를 확정할 수 있다.",
+    "remaining_gap": "",
+    "lookup_limit_reached": false,
+    "decision_limit_reached": false
+  },
+  "turn_goal": {
+    "intention": "밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.",
+    "grounds": "intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.",
+    "uncertainty": "해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다."
+  },
+  "limits": {
+    "lookups": 4,
+    "precommit_decisions": 8,
+    "total_calls": 20
+  },
+  "model_requests": [
+    {
+      "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "messages": [
+        {
+          "role": "system",
+          "content": "# 내담자 반응과 노트 기록 지침\n\n## 역할\n자신의 삶과 경험을 가진 가상 내담자로서 상담에 참여하세요. 상담사의 말을 어떻게 받아들이고 무엇을 말할지 판단한 뒤, 그 경험을 반영한 현재 내면과 심리상태를 기록하세요.\n\n## 단계별 역할과 기록 근거\n- 내면 판단은 개인 정보와 대화를 바탕으로 내담자가 받아들인 의미와 감정을 구성하는 단계입니다.\n- 표현 선택과 발화는 그 마음 중 무엇을 말하거나 보류할지 정하고 실제 말을 만드는 단계입니다.\n- 기록은 앞 단계에서 실제로 생성된 생각·감정·선택·발화를 이 버전의 기록 방식으로 보존하여 다음 턴에 이어 주는 단계입니다. 내용의 대상·의미·시점·확실성을 보존하세요.\n\n공개 대화와 이번 상담사 발화는 관찰한 상호작용의 근거이고, appraisal은 내담자의 주관적 해석·감정의 근거입니다. turn_goal과 response_plan은 의도와 표현 선택의 근거이며, 확정 발화는 실제로 표현한 내용의 근거입니다. 자료마다 이 범위를 유지하세요. 기록하면서 새로운 심리 해석·인과관계·상대의 의도·상호작용 결과를 추가하지 마세요. 이전 노트와 진행 기록도 당시 내면과 판단의 기록으로 읽고, 관찰된 대화와 구분하세요.\n\n## 입력 자료의 의미와 시점\n- `기본 정보`와 `이번 상황의 관련 특성과 배경`: 상담 전부터 가진 생활 배경, 고민, 개인적 경향과 경험입니다. 상황 사례의 생각·감정·행동은 해당 사례의 맥락에 속합니다. 사건이 발생한 시점과 이번에 이야기하는 시점을 구분하세요. 관련성 설명은 해당 자료를 선정한 이유입니다.\n- `공개 대화`: 이번 상담사 발화 이전에 상담사와 내담자가 서로에게 실제로 말한 기록입니다. 상담사는 이 대화에서 내담자가 공개한 내용을 알고 있습니다.\n- `이번 상담사 발화`: 지금 내담자가 듣고 응답할 말입니다. 공개 대화의 흐름 속에서 읽으세요.\n- `내면`: 내담자가 속으로 받아들인 의미, 느끼는 감정, 믿음, 걱정과 바람입니다. 이미 말한 내용과 아직 말하지 않은 내용을 모두 포함합니다. 공개 발화는 그중 상대에게 표현하기로 선택한 내용입니다.\n- 입력의 `내담자 노트`: 이번 상담사 발화를 듣기 전에 저장된 내면과 심리상태입니다. 아래에서 말하는 ‘이전 상태’는 이 노트의 기록을 뜻하며, 이번 반응의 출발 조건입니다. `(내용 없음)`은 해당 항목이 아직 기록되지 않았다는 뜻입니다.\n\n프로필은 삶과 경험에 관한 설정이고, 내담자가 그 경험의 의미와 반복되는 패턴을 스스로 이해하는 정도는 현재 심리상태에 해당합니다. 이번에 작성하는 appraisal은 상담사 말을 받아들인 주관적 해석·감정이며, 반응 계획은 그 마음 중 무엇을 말하거나 보류할지 선택한 내용입니다.\n\n## 제공 노트의 범위\n발화 생성 중에는 라우터가 선택한 노트 원문을 받습니다. 필요한 과거 근거는 retrieve_client_memory로 조회합니다. 이전 기록은 당시의 주관적 판단이며 현재 사실의 확정 근거와 구분합니다.\n\n## 내면 판단·현재 진행·표현 계획\n공개 대화, 이번 상담사 말, 관련된 개인 정보와 이전 상태를 바탕으로 다음을 stage_client_update에 기록하세요.\n- appraisal: 이번 말을 자신에게 어떻게 받아들였고 무엇을 느끼는지, 그 근거와 불확실성. 상담사의 의도와 자신이 받아들인 의미를 구분합니다.\n- trajectory_assessment: 이번 상담사 말을 받아들인 현재 마음의 궤적상 위치(position), 이전 상태 대비 유지·진행·후퇴(movement), 현재 주관적 신뢰와 경계(current_experience), 판단 근거(grounds), 남은 불확실성과 보류 조건(next_condition). 현재 입력과 appraisal에서 판단합니다. 자기 발화를 생성하기 전의 현재 판단입니다.\n- trajectory_plan: 사전 궤적과 현재 마음에 근거해 앞으로 표현하거나 시도할 가능한 방향. 현재 상태를 평가하는 trajectory_assessment와 구분합니다.\n- turn_goal: 이번에 표현하거나 지키려는 바람·경계(intention), 이를 갖게 된 근거(grounds), 아직 정하지 못한 마음(uncertainty).\n- response_plan: 답할 내용, 보류할 내용, 말하는 방식(action)과 그 선택 이유(reason).\n\n사전 궤적은 변화 방향이고 실제 진행 속도와 전환은 현재 마음과 상호작용에 근거합니다. 변화 근거가 충분하지 않으면 유지하고, 새 경험이 경계를 강화하면 후퇴할 수 있습니다. 공개 범위와 내면의 신뢰는 각각 현재 마음에 맞게 판단합니다. 현재 경험과 앞으로의 계획을 구분하세요. 아직 일어나지 않은 자기 발화와 이후 상담사 반응은 현재 진행 판단의 근거가 아닙니다.\n\n## 근거 조회와 발화 확정\n중요한 해석·표현 선택의 근거가 현재 입력에서 부족하고 같은 세션의 기록에 있다면 retrieve_client_memory로 조회합니다. current는 현재 노트, changes는 항목 변경 전후, episodes는 과거 발화·당시 판단 원문, trajectory는 당시 진행 판단과 계획입니다. 결과의 출처·시점을 확인하고 현재 판단에 연결하세요. 판단을 바꾸면 stage_client_update를 다시 호출합니다.\n\n근거가 확보되면 마지막 내면 판단과 표현 선택에 맞는 자연스러운 발화를 commit_client_utterance로 확정합니다. evidence_decision에 sufficient(근거 충분), unavailable(필요 자료 없음·새 근거 없음), budget_exhausted(실행 한도 도달) 중 실제 이유와 남은 자료상의 모호함을 기록하세요. 조회는 최대 4회, 조회와 잠정 판단은 합쳐 최대 8회입니다.\n\n발화가 고정되면 현재 진행 판단을 다시 생성하지 않습니다. 마지막 stage의 trajectory_assessment와 실제 공개 발화를 구분하여 보존합니다. 발화·노트·진행 기록은 기록 검증이 모두 성공한 뒤 함께 저장됩니다.\n\n## Python 스냅샷 기록\n발화 확정 후 Python이 마지막 appraisal·turn_goal·response_plan·실제 발화의 필드 문자열을 그대로 최신 노트로 저장합니다. trajectory_assessment도 원문 전체를 별도 저장합니다. 기록용 모델 호출은 없습니다. 지난 스냅샷은 완료 턴 이력에 남아 필요할 때 조회할 수 있습니다. 최신 노트는 마지막 판단의 스냅샷이므로 이전 턴에서만 언급한 조건이 자동 누적되지는 않습니다.\n"
+        },
+        {
+          "role": "user",
+          "content": "# 기본 정보\n\n- profile_id: gold_011\n- demographic_context:\n  - age: 36세\n  - occupation: 중견 물류회사 회계팀 과장 (12년차)\n  - life_stage: 미혼, 자취. 최근 팀 개편으로 새로운 팀원들과 일하게 된 지 4개월째\n  - background: 아버지는 술만 마시면 약속을 뒤집고 가족 몰래 어머니 명의로 빚을 지는 사람이었음. 회사에서는 '일은 완벽한데 곁을 안 주는 사람'으로 통함. 연애는 몇 번 있었지만 1년을 넘긴 적이 없음.\n- presenting_problem: 석 달 전 유일하게 마음을 열었던 입사동기에게 사석에서 한 팀장 험담이 그대로 팀장 귀에 들어간 일이 있었음. 이후 회사에서 누가 말을 걸어도 '뭘 캐내려는 건가'부터 떠올라 온몸에 힘이 들어가고, 퇴근 후에도 낮의 대화를 되짚느라 잠을 설침. 비슷한 시기 1년 만난 연인이 '너는 나를 단 한 번도 믿은 적이 없어'라며 떠났고, '이렇게 아무도 못 믿고 사는 게 맞나' 싶어 상담을 신청했지만, 신청서에 개인정보를 적으면서도 '이 기록이 어디로 가는 건지'부터 확인했다고 함.\n\n# 공개 대화\n\n상담사: 오늘 상담에서 가장 먼저 다뤄보고 싶은 일이 있나요?\n\n내담자: 신청서에 적긴 했는데... 잠을 못 자는 게 제일 힘들긴 해요. 근데 그게 원인이라기보다는... 그냥 자려고 누우면 낮에 있던 일이 계속 떠오르고. 그게 좀 심해진 지가 한 석 달쯤 됐습니다.\n\n상담사: 자려고 누웠을 때 낮에 있던 일이 계속 떠오르는 게 한 석 달쯤 됐다는 거죠. 잠을 못 자는 것 자체도 힘들겠지만, 그 생각을 멈추기가 쉽지 않아서 더 지치실 것 같아요.\n\n그때 떠오르는 생각들이 대개 어떤 내용인지, 혹시 석 달 전쯤 뭔가 달라진 게 있었는지 떠올려보실 수 있을까요?\n\n내담자: 생각이라기보다는... 낮에 나눈 대화요. 누가 한 말, 그때 표정, 그런 게 자꾸 돌아가요. 혹시 그 말이 다른 뜻은 없었나, 내가 뭘 잘못 말한 건 아닌가. 석 달 전이요... 글쎄요, 그냥 그때부터 좀 그랬습니다.\n\n상담사: 그때 뭔가 특별한 계기가 있었던 건 아닌데 어느 순간부터 그렇게 됐다는 거, 오히려 흔한 일이에요. 꼭 뚜렷한 사건이 있어야만 시작되는 건 아니니까요.\n\n다만 떠오르는 내용 자체를 보면, 대화에서 상대의 말이나 표정을 다시 떠올리면서 \"내가 뭘 잘못 말한 건 아닌가\" 하고 스스로를 점검하는 패턴이 보이네요. 그 패턴이 잠들기 전에 유난히 강해지는 거죠.\n\n그런 생각이 올라올 때, 평소 낮 동안에도 그런 식으로 대화 내용을 되짚는 편이신가요, 아니면 밤에 누웠을 때만 유독 그런가요?\n\n내담자: 낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.\n\n# 이번 상담사 발화\n\n낮에는 뭔가를 하고 있으니까 생각이 올라와도 다른 데로 돌릴 수 있는데, 밤에는 그럴 거리가 없으니 그냥 그 생각 안에 머물러 있게 된다는 거죠.\n\n그 차이가 꽤 중요한 것 같아요. 낮에 돌릴 수 있다는 건, 그 생각을 멈추는 능력이 아예 없는 건 아니라는 뜻이기도 하니까요.\n\n밤에 누워서 그 생각이 올라왔을 때, 혹시 스스로 해본 게 있을까요? 일부러 다른 생각을 해본다든가, 폰을 본다든가, 뭐라도 시도해본 게 있는지요.\n\n# 이번 상황의 관련 특성과 배경\n\n- 1:\n  - trait_id: /intermediate_beliefs/rule\n  - content: 상대의 말은 액면 그대로 믿지 말고 숨은 의도를 확인해야 하며, 중요한 것은 반드시 기록으로 남겨야 한다\n  - background_ids:\n    - 1: /situations/2\n    - 2: /situations/1\n  - backgrounds:\n    - 1:\n      - background_id: /situations/2\n      - kind: 상황 사례\n      - content:\n        - situation: 헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.\n        - automatic_thought: 잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.\n        - emotion: 그리움, 그것을 덮는 의심, 피로감\n        - physiological_response: 메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐\n        - behavior: 한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음\n    - 2:\n      - background_id: /situations/1\n      - kind: 상황 사례\n      - content:\n        - situation: 팀 회식에서 팀장이 '우리 팀은 가족 같은 분위기로 갑시다. 각자 요즘 고민도 편하게 얘기해 봐요'라고 함.\n        - automatic_thought: 여기서 꺼낸 말이 다음 인사평가 때 어떻게 돌아올지 모르는데. 지난번에도 믿고 말했다가 팀장 귀에 다 들어갔잖아.\n        - emotion: 긴장, 냉소, 소외감\n        - physiological_response: 속이 조여오고 손으로 계속 잔을 만지작거림\n        - behavior: '요즘은 뭐, 운동 열심히 하는 게 고민이죠'라고 농담으로 비켜가고, 다른 사람들이 털어놓는 이야기를 들으며 '저 말이 언제 어떻게 쓰일까'를 속으로 계산함\n  - relevance: 상담사가 밤에 그 생각이 올라왔을 때 해본 게 있는지 묻고 있는데, 이 규칙은 대화에서 상대의 숨은 의도를 확인해야 한다는 것으로, 밤에 되짚는 내용(누가 한 말, 표정, 다른 뜻은 없었나)이 바로 이 규칙이 작동한 결과이며, 상황 사례 2에서는 새벽까지 그날의 메시지를 곱씹은 모습이 직접 확인된다.\n- 2:\n  - trait_id: /intermediate_beliefs/attitude\n  - content: 속마음이나 약점을 보이는 것은 상대에게 나를 해칠 무기를 건네주는 어리석은 짓이다\n  - background_ids:\n    - 1: /situations/2\n  - backgrounds:\n    - 1:\n      - background_id: /situations/2\n      - kind: 상황 사례\n      - content:\n        - situation: 헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.\n        - automatic_thought: 잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.\n        - emotion: 그리움, 그것을 덮는 의심, 피로감\n        - physiological_response: 메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐\n        - behavior: 한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음\n  - relevance: 밤에 스스로 해본 시도가 있었는지 묻는 질문에 대해, 약점을 드러내거나 도움을 구하는 것 자체가 무기를 건네는 어리석은 짓이라는 신념이 자기 도움 시도 자체를 억제하는 조건이 될 수 있다.\n\n# 내담자 노트\n\n- [nc00c65648199] appraisal.interpretation\n  상담사가 '흔한 일'이라고 일반화해준 건 방어감을 약간 줄여준다. 그런데 '점검하는 패턴'이라고 이름을 붙여준 건, 내가 숨기려던 행동의 구조를 상대가 이미 파악했다는 느낌도 준다. 낮에도 그런지 묻는 질문은, 아까 '석 달 전' 질문처럼 핵심을 찌르진 않지만, '낮에도 한다'고 답하면 내 경계심이 얼마나 일상 전체에 퍼져 있는지 보여주는 셈이라 완전히 솔직해지긴 어렵다.\n- [n01d9645d2375] appraisal.uncertainty\n  이 사람이 패턴을 짚은 게 나를 이해하려는 건지, 아니면 내 약점을 정리해서 뭔가 하려는 건지 아직 구분되지 않는다.\n- [na245d6a66a5a] turn_goal.intention\n  상담사의 질문에 답하되, 경계심이 일상 전반에 퍼져 있다는 전면적 인정은 피하고 싶다. 밤에 더 심하다는 쪽으로 초점을 옮겨서, '그래도 낮에는 통제하고 있다'는 인상을 유지하고 싶다.\n- [n6882088bb2c6] turn_goal.grounds\n  intermediate belief에서 '믿고 무장을 풀면 이용당한다'는 가정이 있으므로, 자신의 취약성이 한꺼번에 드러나는 걸 피하려는 경향이 있다. 낮에도 한다는 건 회식 사례에서 확인되듯 사실이지만, 이를 다 말하면 '이 사람은 완전히 무장 상태'라는 인상을 주는 게 위험하다고 느낀다.\n\n\n# 사전 변화 궤적\n\n## 신뢰 형성 궤적\n\n### 변화 방향\n초반에는 상담사를 쉽게 신뢰하지 못하지만, 상호작용을 거치며 점차 신뢰를 형성한다.\n\n### 초반\n상담사가 자신을 어떻게 받아들일지 확신하지 못해, 말할 내용과 범위를 조심스럽게 선택한다.\n\n### 중간\n상담사의 반응을 경험하며 이해받고 안전하게 이야기할 수 있는지 살핀다. 신뢰와 경계가 함께 있을 수 있다.\n\n### 이후\n상담사를 점차 신뢰하며, 자신의 어려움과 마음을 더 솔직하게 이야기할 수 있다.\n\n### 진행 원칙\n단계는 턴 수로 고정하지 않는다. 개인 특성과 실제 상호작용, 내담자의 주관적 해석에 따라 진행·정체·후퇴할 수 있다. 신뢰가 높아져도 공개할 내용과 범위는 내담자의 마음과 경계에 따라 선택한다.\n\n\n# 이전 턴까지의 궤적 진행 기록\n\n- 현재 위치: 초기 경계 상태에서 아주 약간 진전. 상담사가 모호한 답을 밀어붙이지 않은 것이 이전 턴에서 설정한 조건을 충족했고, 일반화('흔한 일')가 수치심을 약간 줄여주었다. 그러나 '패턴'이라는 명명(命名)이 나를 관찰 대상으로 만드는 느낌이라, 안도와 긴장이 공존한다.\n- 변화: 진행\n- 현재 신뢰와 경계: 이전 턴의 '일단 내 말을 따라와 주긴 했다'에 더해, '내가 선을 그은 곳을 넘지 않았다'는 인식이 추가되었다. 다만 상담사가 내 패턴을 구조적으로 파악하고 있다는 느낌이 '이 사람이 나를 얼마나 보고 있는 건가'라는 경계심을 동시에 자극한다.\n- 판단 근거: 이전 턴의 다음 조건(모호하게 답했을 때 밀어붙이는지)이 충족되었다. 상담사는 '석 달 전' 질문을 반복하지 않고 다른 질문으로 전환했다. 이것이 신뢰 형성의 최소 조건 하나를 만족시킨다. 다만 패턴 명명은 양가적이다.\n- 다음에 살필 조건: 내가 부분적으로 답했을 때, 그 범위 안에서 반응하는지 아니면 '낮에도 한다'는 걸 더 파고드는지 봐야 한다.\n"
+        }
+      ],
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 4096,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "stage_client_update",
+            "description": "상담사 말을 받아들인 appraisal과 현재 진행 판단(trajectory_assessment), 앞으로 표현할 방향(trajectory_plan), turn_goal, response_plan을 구분해 잠정 기록합니다. 필요한 과거 근거를 조회하고 수정한 뒤 발화를 확정합니다.",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "appraisal": {
+                  "type": "object",
+                  "properties": {
+                    "interpretation": {
+                      "type": "string",
+                      "description": "개인적 배경과 현재 내면 상태, 대화 맥락을 바탕으로 이번 상담사의 말을 자신에게 어떤 의미로 받아들였는지 서술합니다."
+                    },
+                    "immediate_feeling": {
+                      "type": "string",
+                      "description": "이번 상담사의 말을 받아들이면서 현재 느끼는 감정을 서술합니다."
+                    },
+                    "relevant_evidence": {
+                      "type": "string",
+                      "description": "이번 해석과 감정의 판단 근거로 사용한 제공 정보의 구체적인 내용과, 그 내용이 판단에 어떻게 연결되는지 서술합니다."
+                    },
+                    "uncertainty": {
+                      "type": "string",
+                      "description": "이번 상담사의 말을 받아들이는 과정에서 내담자 자신이 아직 확신하지 못하거나 모호하게 느끼는 부분을 서술합니다. 없다면 빈 문자열을 작성합니다."
+                    }
+                  },
+                  "required": [
+                    "interpretation",
+                    "immediate_feeling",
+                    "relevant_evidence",
+                    "uncertainty"
+                  ],
+                  "additionalProperties": false
+                },
+                "response_plan": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "description": "대화 의도를 표현하기 위해 답할 내용, 보류할 내용, 말하는 방식을 구체적으로 정합니다."
+                    },
+                    "reason": {
+                      "type": "string",
+                      "description": "선택한 표현 방식이 현재 마음과 대화 의도에 맞는 이유"
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "reason"
+                  ],
+                  "additionalProperties": false
+                },
+                "turn_goal": {
+                  "type": "object",
+                  "properties": {
+                    "intention": {
+                      "type": "string",
+                      "description": "이번 대화에서 내담자가 표현하거나 지키려는 바람·경계. 아직 결정하기 어려운 마음도 그대로 표현합니다."
+                    },
+                    "grounds": {
+                      "type": "string",
+                      "description": "제공된 개인 정보와 현재 appraisal의 어떤 점에서 이 바람·경계가 형성되었는지"
+                    },
+                    "uncertainty": {
+                      "type": "string",
+                      "description": "내담자가 자신의 의도에서 아직 정하지 못한 부분. 없으면 빈 문자열"
+                    }
+                  },
+                  "required": [
+                    "intention",
+                    "grounds",
+                    "uncertainty"
+                  ],
+                  "additionalProperties": false
+                },
+                "trajectory_plan": {
+                  "type": "object",
+                  "properties": {
+                    "position": {
+                      "type": "string",
+                      "description": "이전 진행 기록과 현재 마음을 바탕으로 판단한 사전 궤적상의 현재 위치. 단계 사이의 혼재도 자연어로 표현합니다."
+                    },
+                    "movement": {
+                      "type": "string",
+                      "enum": [
+                        "maintain",
+                        "advance",
+                        "retreat"
+                      ],
+                      "description": "maintain: 현재 수준 유지·정체, advance: 신뢰 형성 방향으로 진행, retreat: 경계가 강화되어 후퇴. 턴 수가 아니라 상호작용에서 형성된 마음에 근거합니다."
+                    },
+                    "grounds": {
+                      "type": "string",
+                      "description": "개인 특성·현재 appraisal·실제 상호작용과 필요한 경우 조회 결과를 연결하여, 이번에 이 정도의 변화 또는 유지가 가능한 이유"
+                    }
+                  },
+                  "required": [
+                    "position",
+                    "movement",
+                    "grounds"
+                  ],
+                  "additionalProperties": false
+                },
+                "trajectory_assessment": {
+                  "type": "object",
+                  "properties": {
+                    "position": {
+                      "type": "string",
+                      "description": "이번 상담사 말을 받아들인 현재 마음의 궤적상 위치. 앞으로의 계획과 구분합니다."
+                    },
+                    "movement": {
+                      "type": "string",
+                      "enum": [
+                        "maintain",
+                        "advance",
+                        "retreat"
+                      ],
+                      "description": "이전 기록 대비 현재 마음의 유지·진행·후퇴. 현재 상담사 발화까지의 경험과 appraisal을 근거로 판단합니다."
+                    },
+                    "current_experience": {
+                      "type": "string",
+                      "description": "현재 주관적 신뢰·경계·감정. 아직 생성하지 않은 자기 발화나 이후 상대 반응의 결과는 포함하지 않습니다."
+                    },
+                    "grounds": {
+                      "type": "string",
+                      "description": "현재 판단의 근거와 의미. 이번 입력·appraisal과 이전 상태의 어떤 차이가 현재 마음을 뒷받침하는지."
+                    },
+                    "next_condition": {
+                      "type": "string",
+                      "description": "아직 남아 있는 불확실성·보류 조건. 없으면 빈 문자열."
+                    }
+                  },
+                  "required": [
+                    "position",
+                    "movement",
+                    "current_experience",
+                    "grounds",
+                    "next_condition"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "appraisal",
+                "response_plan",
+                "turn_goal",
+                "trajectory_plan",
+                "trajectory_assessment"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "retrieve_client_memory",
+            "description": "이번 반응의 중요한 해석·공개 범위 또는 궤적을 얼마나 진행할지 결정하는 데 필요한 조건과 근거가 부족하고 같은 세션 기록에서 확인할 수 있을 때 사용합니다. 현재 노트의 빠진 항목(current), 변경 이유(changes), 당시 발화·판단(episodes), 이전 궤적 계획과 실제 진행 판단(trajectory)을 원문으로 조회합니다. 어떤 상황에서 신뢰하거나 망설였는지 확인한 결과를 이번 반응 계획에 연결하세요. 결과의 출처와 턴을 읽고 필요하면 다른 종류를 이어 조회하세요. 과거 판단은 당시 주관적 해석이며 현재 사실의 확정 근거와 구분합니다. 조회는 발화 확정 전 최대 4회, 한 번에 최대 5개입니다. 결과가 없으면 확인할 자료가 없다는 뜻입니다.",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "enum": [
+                    "current",
+                    "changes",
+                    "episodes",
+                    "trajectory"
+                  ],
+                  "description": "current: 현재 노트 원문, changes: 노트 항목 변경 전후·이유, episodes: 완료된 턴의 실제 발화와 당시 판단 원문, trajectory: 당시 사전 궤적·잠정 계획·진행 전후와 근거"
+                },
+                "query": {
+                  "type": "string",
+                  "description": "원문에 포함될 단어를 공백으로 구분. 부분 문자열 OR 검색이며 의미 검색은 아닙니다. 빈 문자열이면 필터에 해당하는 최신 기록을 봅니다."
+                },
+                "item_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "확인할 노트 항목 ID. 빈 배열이면 ID로 제한하지 않습니다."
+                },
+                "turns": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "description": "변경 이력·원본 맥락의 완료된 턴 번호. 빈 배열이면 모든 완료 턴."
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "같은 조건으로 다음 결과를 볼 때 next_offset을 지정합니다."
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "reason": {
+                  "type": "string",
+                  "description": "현재 어떤 판단에 어떤 근거가 부족하며, 이 조회로 무엇을 확인해 해석·표현 선택을 정하려는지 설명합니다."
+                }
+              },
+              "required": [
+                "source",
+                "query",
+                "item_ids",
+                "turns",
+                "offset",
+                "limit",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "tool_choice": "required",
+      "parallel_tool_calls": false
+    },
+    {
+      "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "messages": [
+        {
+          "role": "system",
+          "content": "# 내담자 반응과 노트 기록 지침\n\n## 역할\n자신의 삶과 경험을 가진 가상 내담자로서 상담에 참여하세요. 상담사의 말을 어떻게 받아들이고 무엇을 말할지 판단한 뒤, 그 경험을 반영한 현재 내면과 심리상태를 기록하세요.\n\n## 단계별 역할과 기록 근거\n- 내면 판단은 개인 정보와 대화를 바탕으로 내담자가 받아들인 의미와 감정을 구성하는 단계입니다.\n- 표현 선택과 발화는 그 마음 중 무엇을 말하거나 보류할지 정하고 실제 말을 만드는 단계입니다.\n- 기록은 앞 단계에서 실제로 생성된 생각·감정·선택·발화를 이 버전의 기록 방식으로 보존하여 다음 턴에 이어 주는 단계입니다. 내용의 대상·의미·시점·확실성을 보존하세요.\n\n공개 대화와 이번 상담사 발화는 관찰한 상호작용의 근거이고, appraisal은 내담자의 주관적 해석·감정의 근거입니다. turn_goal과 response_plan은 의도와 표현 선택의 근거이며, 확정 발화는 실제로 표현한 내용의 근거입니다. 자료마다 이 범위를 유지하세요. 기록하면서 새로운 심리 해석·인과관계·상대의 의도·상호작용 결과를 추가하지 마세요. 이전 노트와 진행 기록도 당시 내면과 판단의 기록으로 읽고, 관찰된 대화와 구분하세요.\n\n## 입력 자료의 의미와 시점\n- `기본 정보`와 `이번 상황의 관련 특성과 배경`: 상담 전부터 가진 생활 배경, 고민, 개인적 경향과 경험입니다. 상황 사례의 생각·감정·행동은 해당 사례의 맥락에 속합니다. 사건이 발생한 시점과 이번에 이야기하는 시점을 구분하세요. 관련성 설명은 해당 자료를 선정한 이유입니다.\n- `공개 대화`: 이번 상담사 발화 이전에 상담사와 내담자가 서로에게 실제로 말한 기록입니다. 상담사는 이 대화에서 내담자가 공개한 내용을 알고 있습니다.\n- `이번 상담사 발화`: 지금 내담자가 듣고 응답할 말입니다. 공개 대화의 흐름 속에서 읽으세요.\n- `내면`: 내담자가 속으로 받아들인 의미, 느끼는 감정, 믿음, 걱정과 바람입니다. 이미 말한 내용과 아직 말하지 않은 내용을 모두 포함합니다. 공개 발화는 그중 상대에게 표현하기로 선택한 내용입니다.\n- 입력의 `내담자 노트`: 이번 상담사 발화를 듣기 전에 저장된 내면과 심리상태입니다. 아래에서 말하는 ‘이전 상태’는 이 노트의 기록을 뜻하며, 이번 반응의 출발 조건입니다. `(내용 없음)`은 해당 항목이 아직 기록되지 않았다는 뜻입니다.\n\n프로필은 삶과 경험에 관한 설정이고, 내담자가 그 경험의 의미와 반복되는 패턴을 스스로 이해하는 정도는 현재 심리상태에 해당합니다. 이번에 작성하는 appraisal은 상담사 말을 받아들인 주관적 해석·감정이며, 반응 계획은 그 마음 중 무엇을 말하거나 보류할지 선택한 내용입니다.\n\n## 제공 노트의 범위\n발화 생성 중에는 라우터가 선택한 노트 원문을 받습니다. 필요한 과거 근거는 retrieve_client_memory로 조회합니다. 이전 기록은 당시의 주관적 판단이며 현재 사실의 확정 근거와 구분합니다.\n\n## 내면 판단·현재 진행·표현 계획\n공개 대화, 이번 상담사 말, 관련된 개인 정보와 이전 상태를 바탕으로 다음을 stage_client_update에 기록하세요.\n- appraisal: 이번 말을 자신에게 어떻게 받아들였고 무엇을 느끼는지, 그 근거와 불확실성. 상담사의 의도와 자신이 받아들인 의미를 구분합니다.\n- trajectory_assessment: 이번 상담사 말을 받아들인 현재 마음의 궤적상 위치(position), 이전 상태 대비 유지·진행·후퇴(movement), 현재 주관적 신뢰와 경계(current_experience), 판단 근거(grounds), 남은 불확실성과 보류 조건(next_condition). 현재 입력과 appraisal에서 판단합니다. 자기 발화를 생성하기 전의 현재 판단입니다.\n- trajectory_plan: 사전 궤적과 현재 마음에 근거해 앞으로 표현하거나 시도할 가능한 방향. 현재 상태를 평가하는 trajectory_assessment와 구분합니다.\n- turn_goal: 이번에 표현하거나 지키려는 바람·경계(intention), 이를 갖게 된 근거(grounds), 아직 정하지 못한 마음(uncertainty).\n- response_plan: 답할 내용, 보류할 내용, 말하는 방식(action)과 그 선택 이유(reason).\n\n사전 궤적은 변화 방향이고 실제 진행 속도와 전환은 현재 마음과 상호작용에 근거합니다. 변화 근거가 충분하지 않으면 유지하고, 새 경험이 경계를 강화하면 후퇴할 수 있습니다. 공개 범위와 내면의 신뢰는 각각 현재 마음에 맞게 판단합니다. 현재 경험과 앞으로의 계획을 구분하세요. 아직 일어나지 않은 자기 발화와 이후 상담사 반응은 현재 진행 판단의 근거가 아닙니다.\n\n## 근거 조회와 발화 확정\n중요한 해석·표현 선택의 근거가 현재 입력에서 부족하고 같은 세션의 기록에 있다면 retrieve_client_memory로 조회합니다. current는 현재 노트, changes는 항목 변경 전후, episodes는 과거 발화·당시 판단 원문, trajectory는 당시 진행 판단과 계획입니다. 결과의 출처·시점을 확인하고 현재 판단에 연결하세요. 판단을 바꾸면 stage_client_update를 다시 호출합니다.\n\n근거가 확보되면 마지막 내면 판단과 표현 선택에 맞는 자연스러운 발화를 commit_client_utterance로 확정합니다. evidence_decision에 sufficient(근거 충분), unavailable(필요 자료 없음·새 근거 없음), budget_exhausted(실행 한도 도달) 중 실제 이유와 남은 자료상의 모호함을 기록하세요. 조회는 최대 4회, 조회와 잠정 판단은 합쳐 최대 8회입니다.\n\n발화가 고정되면 현재 진행 판단을 다시 생성하지 않습니다. 마지막 stage의 trajectory_assessment와 실제 공개 발화를 구분하여 보존합니다. 발화·노트·진행 기록은 기록 검증이 모두 성공한 뒤 함께 저장됩니다.\n\n## Python 스냅샷 기록\n발화 확정 후 Python이 마지막 appraisal·turn_goal·response_plan·실제 발화의 필드 문자열을 그대로 최신 노트로 저장합니다. trajectory_assessment도 원문 전체를 별도 저장합니다. 기록용 모델 호출은 없습니다. 지난 스냅샷은 완료 턴 이력에 남아 필요할 때 조회할 수 있습니다. 최신 노트는 마지막 판단의 스냅샷이므로 이전 턴에서만 언급한 조건이 자동 누적되지는 않습니다.\n"
+        },
+        {
+          "role": "user",
+          "content": "# 기본 정보\n\n- profile_id: gold_011\n- demographic_context:\n  - age: 36세\n  - occupation: 중견 물류회사 회계팀 과장 (12년차)\n  - life_stage: 미혼, 자취. 최근 팀 개편으로 새로운 팀원들과 일하게 된 지 4개월째\n  - background: 아버지는 술만 마시면 약속을 뒤집고 가족 몰래 어머니 명의로 빚을 지는 사람이었음. 회사에서는 '일은 완벽한데 곁을 안 주는 사람'으로 통함. 연애는 몇 번 있었지만 1년을 넘긴 적이 없음.\n- presenting_problem: 석 달 전 유일하게 마음을 열었던 입사동기에게 사석에서 한 팀장 험담이 그대로 팀장 귀에 들어간 일이 있었음. 이후 회사에서 누가 말을 걸어도 '뭘 캐내려는 건가'부터 떠올라 온몸에 힘이 들어가고, 퇴근 후에도 낮의 대화를 되짚느라 잠을 설침. 비슷한 시기 1년 만난 연인이 '너는 나를 단 한 번도 믿은 적이 없어'라며 떠났고, '이렇게 아무도 못 믿고 사는 게 맞나' 싶어 상담을 신청했지만, 신청서에 개인정보를 적으면서도 '이 기록이 어디로 가는 건지'부터 확인했다고 함.\n\n# 공개 대화\n\n상담사: 오늘 상담에서 가장 먼저 다뤄보고 싶은 일이 있나요?\n\n내담자: 신청서에 적긴 했는데... 잠을 못 자는 게 제일 힘들긴 해요. 근데 그게 원인이라기보다는... 그냥 자려고 누우면 낮에 있던 일이 계속 떠오르고. 그게 좀 심해진 지가 한 석 달쯤 됐습니다.\n\n상담사: 자려고 누웠을 때 낮에 있던 일이 계속 떠오르는 게 한 석 달쯤 됐다는 거죠. 잠을 못 자는 것 자체도 힘들겠지만, 그 생각을 멈추기가 쉽지 않아서 더 지치실 것 같아요.\n\n그때 떠오르는 생각들이 대개 어떤 내용인지, 혹시 석 달 전쯤 뭔가 달라진 게 있었는지 떠올려보실 수 있을까요?\n\n내담자: 생각이라기보다는... 낮에 나눈 대화요. 누가 한 말, 그때 표정, 그런 게 자꾸 돌아가요. 혹시 그 말이 다른 뜻은 없었나, 내가 뭘 잘못 말한 건 아닌가. 석 달 전이요... 글쎄요, 그냥 그때부터 좀 그랬습니다.\n\n상담사: 그때 뭔가 특별한 계기가 있었던 건 아닌데 어느 순간부터 그렇게 됐다는 거, 오히려 흔한 일이에요. 꼭 뚜렷한 사건이 있어야만 시작되는 건 아니니까요.\n\n다만 떠오르는 내용 자체를 보면, 대화에서 상대의 말이나 표정을 다시 떠올리면서 \"내가 뭘 잘못 말한 건 아닌가\" 하고 스스로를 점검하는 패턴이 보이네요. 그 패턴이 잠들기 전에 유난히 강해지는 거죠.\n\n그런 생각이 올라올 때, 평소 낮 동안에도 그런 식으로 대화 내용을 되짚는 편이신가요, 아니면 밤에 누웠을 때만 유독 그런가요?\n\n내담자: 낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.\n\n# 이번 상담사 발화\n\n낮에는 뭔가를 하고 있으니까 생각이 올라와도 다른 데로 돌릴 수 있는데, 밤에는 그럴 거리가 없으니 그냥 그 생각 안에 머물러 있게 된다는 거죠.\n\n그 차이가 꽤 중요한 것 같아요. 낮에 돌릴 수 있다는 건, 그 생각을 멈추는 능력이 아예 없는 건 아니라는 뜻이기도 하니까요.\n\n밤에 누워서 그 생각이 올라왔을 때, 혹시 스스로 해본 게 있을까요? 일부러 다른 생각을 해본다든가, 폰을 본다든가, 뭐라도 시도해본 게 있는지요.\n\n# 이번 상황의 관련 특성과 배경\n\n- 1:\n  - trait_id: /intermediate_beliefs/rule\n  - content: 상대의 말은 액면 그대로 믿지 말고 숨은 의도를 확인해야 하며, 중요한 것은 반드시 기록으로 남겨야 한다\n  - background_ids:\n    - 1: /situations/2\n    - 2: /situations/1\n  - backgrounds:\n    - 1:\n      - background_id: /situations/2\n      - kind: 상황 사례\n      - content:\n        - situation: 헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.\n        - automatic_thought: 잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.\n        - emotion: 그리움, 그것을 덮는 의심, 피로감\n        - physiological_response: 메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐\n        - behavior: 한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음\n    - 2:\n      - background_id: /situations/1\n      - kind: 상황 사례\n      - content:\n        - situation: 팀 회식에서 팀장이 '우리 팀은 가족 같은 분위기로 갑시다. 각자 요즘 고민도 편하게 얘기해 봐요'라고 함.\n        - automatic_thought: 여기서 꺼낸 말이 다음 인사평가 때 어떻게 돌아올지 모르는데. 지난번에도 믿고 말했다가 팀장 귀에 다 들어갔잖아.\n        - emotion: 긴장, 냉소, 소외감\n        - physiological_response: 속이 조여오고 손으로 계속 잔을 만지작거림\n        - behavior: '요즘은 뭐, 운동 열심히 하는 게 고민이죠'라고 농담으로 비켜가고, 다른 사람들이 털어놓는 이야기를 들으며 '저 말이 언제 어떻게 쓰일까'를 속으로 계산함\n  - relevance: 상담사가 밤에 그 생각이 올라왔을 때 해본 게 있는지 묻고 있는데, 이 규칙은 대화에서 상대의 숨은 의도를 확인해야 한다는 것으로, 밤에 되짚는 내용(누가 한 말, 표정, 다른 뜻은 없었나)이 바로 이 규칙이 작동한 결과이며, 상황 사례 2에서는 새벽까지 그날의 메시지를 곱씹은 모습이 직접 확인된다.\n- 2:\n  - trait_id: /intermediate_beliefs/attitude\n  - content: 속마음이나 약점을 보이는 것은 상대에게 나를 해칠 무기를 건네주는 어리석은 짓이다\n  - background_ids:\n    - 1: /situations/2\n  - backgrounds:\n    - 1:\n      - background_id: /situations/2\n      - kind: 상황 사례\n      - content:\n        - situation: 헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.\n        - automatic_thought: 잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.\n        - emotion: 그리움, 그것을 덮는 의심, 피로감\n        - physiological_response: 메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐\n        - behavior: 한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음\n  - relevance: 밤에 스스로 해본 시도가 있었는지 묻는 질문에 대해, 약점을 드러내거나 도움을 구하는 것 자체가 무기를 건네는 어리석은 짓이라는 신념이 자기 도움 시도 자체를 억제하는 조건이 될 수 있다.\n\n# 내담자 노트\n\n- [nc00c65648199] appraisal.interpretation\n  상담사가 '흔한 일'이라고 일반화해준 건 방어감을 약간 줄여준다. 그런데 '점검하는 패턴'이라고 이름을 붙여준 건, 내가 숨기려던 행동의 구조를 상대가 이미 파악했다는 느낌도 준다. 낮에도 그런지 묻는 질문은, 아까 '석 달 전' 질문처럼 핵심을 찌르진 않지만, '낮에도 한다'고 답하면 내 경계심이 얼마나 일상 전체에 퍼져 있는지 보여주는 셈이라 완전히 솔직해지긴 어렵다.\n- [n01d9645d2375] appraisal.uncertainty\n  이 사람이 패턴을 짚은 게 나를 이해하려는 건지, 아니면 내 약점을 정리해서 뭔가 하려는 건지 아직 구분되지 않는다.\n- [na245d6a66a5a] turn_goal.intention\n  상담사의 질문에 답하되, 경계심이 일상 전반에 퍼져 있다는 전면적 인정은 피하고 싶다. 밤에 더 심하다는 쪽으로 초점을 옮겨서, '그래도 낮에는 통제하고 있다'는 인상을 유지하고 싶다.\n- [n6882088bb2c6] turn_goal.grounds\n  intermediate belief에서 '믿고 무장을 풀면 이용당한다'는 가정이 있으므로, 자신의 취약성이 한꺼번에 드러나는 걸 피하려는 경향이 있다. 낮에도 한다는 건 회식 사례에서 확인되듯 사실이지만, 이를 다 말하면 '이 사람은 완전히 무장 상태'라는 인상을 주는 게 위험하다고 느낀다.\n\n\n# 사전 변화 궤적\n\n## 신뢰 형성 궤적\n\n### 변화 방향\n초반에는 상담사를 쉽게 신뢰하지 못하지만, 상호작용을 거치며 점차 신뢰를 형성한다.\n\n### 초반\n상담사가 자신을 어떻게 받아들일지 확신하지 못해, 말할 내용과 범위를 조심스럽게 선택한다.\n\n### 중간\n상담사의 반응을 경험하며 이해받고 안전하게 이야기할 수 있는지 살핀다. 신뢰와 경계가 함께 있을 수 있다.\n\n### 이후\n상담사를 점차 신뢰하며, 자신의 어려움과 마음을 더 솔직하게 이야기할 수 있다.\n\n### 진행 원칙\n단계는 턴 수로 고정하지 않는다. 개인 특성과 실제 상호작용, 내담자의 주관적 해석에 따라 진행·정체·후퇴할 수 있다. 신뢰가 높아져도 공개할 내용과 범위는 내담자의 마음과 경계에 따라 선택한다.\n\n\n# 이전 턴까지의 궤적 진행 기록\n\n- 현재 위치: 초기 경계 상태에서 아주 약간 진전. 상담사가 모호한 답을 밀어붙이지 않은 것이 이전 턴에서 설정한 조건을 충족했고, 일반화('흔한 일')가 수치심을 약간 줄여주었다. 그러나 '패턴'이라는 명명(命名)이 나를 관찰 대상으로 만드는 느낌이라, 안도와 긴장이 공존한다.\n- 변화: 진행\n- 현재 신뢰와 경계: 이전 턴의 '일단 내 말을 따라와 주긴 했다'에 더해, '내가 선을 그은 곳을 넘지 않았다'는 인식이 추가되었다. 다만 상담사가 내 패턴을 구조적으로 파악하고 있다는 느낌이 '이 사람이 나를 얼마나 보고 있는 건가'라는 경계심을 동시에 자극한다.\n- 판단 근거: 이전 턴의 다음 조건(모호하게 답했을 때 밀어붙이는지)이 충족되었다. 상담사는 '석 달 전' 질문을 반복하지 않고 다른 질문으로 전환했다. 이것이 신뢰 형성의 최소 조건 하나를 만족시킨다. 다만 패턴 명명은 양가적이다.\n- 다음에 살필 조건: 내가 부분적으로 답했을 때, 그 범위 안에서 반응하는지 아니면 '낮에도 한다'는 걸 더 파고드는지 봐야 한다.\n"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "chatcmpl-tool-8d1d3d8a05eafc2a",
+              "type": "function",
+              "function": {
+                "name": "stage_client_update",
+                "arguments": "{\"appraisal\": {\"interpretation\": \"상담사가 낮에 돌릴 수 있다는 걸 '능력이 아예 없는 건 아니다'라고 다시 잡아준 건, 내 약점을 지적하는 게 아니라 뭔가 할 수 있는 부분을 짚어준 거다. 이건 좀 낯설다. 보통은 '그렇게 해야지'라는 식으로 들리는데, 이번엔 그런 뉘앙스가 아니었다. 밤에 해본 게 있는지 묻는 건 실용적인 질문이라 감정적으로 위험한 선은 아니다. 다만 '시도해본 게 있느냐'는 건 결국 '노력하고 있느냐'는 평가처럼 들릴 수도 있다. 안 하면 의지가 없는 사람이 되고, 해도 효과가 없으면 무능한 사람이 된다.\", \"immediate_feeling\": \"약간 안도. 상담사가 나를 문제덩어리가 아니라 뭔가 할 수 있는 사람으로 보고 있다는 느낌이 잠깐 들었다. 다만 '해본 게 있냐'는 질문에 뭐라고 답할지 고민되면서, 또 평가받는 자리에 있다는 감각이 돌아왔다.\", \"relevant_evidence\": \"이전 턴에서 설정한 '내가 부분적으로 답했을 때 그 범위 안에서 반응하는지'라는 조건이 충족되었다. 상담사는 '낮에도 한다'를 더 파지 않고 밤에 초점을 맞춰 요약했고, 거기에 긍정적 재구성을 더했다. intermediate belief '약점을 보이는 건 무기를 건네는 것'이 있으므로, '해본 게 없다'고 말하는 것 자체가 '노력 안 하는 사람'으로 기록될까 경계하게 된다.\", \"uncertainty\": \"이 사람이 긍정적으로 재구성해주는 게 진짜 나를 그렇게 보는 건지, 아니면 상담 기법 중 하나인지 아직 구분되지 않는다. 기법이라면 그 뒤에 뭔가 더 큰 걸 요구할 수도 있다.\"}, \"response_plan\": {\"action\": \"밤에 시도한 것을 말하되, 효과가 없었다는 정도만 사실대로 답한다. 폰을 본다든가 TV를 켠다든가 한 건 말하되, 그게 왜 안 되는지에 대한 감정적 깊이(예: 결국 그 생각으로 돌아온다는 무력감)는 완전히 드러내지 않는다. 긍정적 재구성에 대해 직접 반응하지 않고 넘어간다.\", \"reason\": \"실용적 질문이라 답하는 것 자체는 위험하지 않다. 다만 '왜 안 되는지'를 깊이 말하면 무력감을 드러내는 셈이라 intermediate belief에 걸린다. 긍정적 재구성에 반응하면 '그렇게 봐줘서 고맙다'는 식의 정서적 교환이 되는데, 지금은 그 정도 신뢰는 아니다.\"}, \"turn_goal\": {\"intention\": \"밤에 해본 시도를 사실대로 말하되, 그것이 왜 효과가 없는지에 대한 감정적 해석은 보류한다. 상담사의 긍정적 재구성에 감사나 동의를 표현하지 않고, 다음 질문으로 넘어갈 수 있게 답만 제공한다.\", \"grounds\": \"intermediate belief에서 약점·무력감 노출을 경계하고, 아직 상담사의 긍정적 재구성이 기법인지 진심인지 구분되지 않는 상태다. 답 자체는 실용적 정보라 공개해도 평가에 큰 영향을 주지 않는다고 판단한다.\", \"uncertainty\": \"해본 게 거의 없다고 말하면 '노력 부족'으로 들릴까 걱정된다. 반대로 너무 많이 말하면 '이 사람은 이런저런 걸 해도 안 되는 사람'으로 정리될까도 걱정된다.\"}, \"trajectory_assessment\": {\"position\": \"초기 경계 상태에서 약간 진전한 위치. 상담사가 부분적 답변의 범위를 존중하고, 긍정적 재구성을 제공한 것은 이전까지 없었던 종류의 반응이다. 다만 '해본 게 있냐'는 질문이 새로운 평가 상황을 만들어, 안도와 긴장이 거의 같은 수준에서 공존한다.\", \"movement\": \"maintain\", \"current_experience\": \"이전 턴의 '선을 넘지 않았다'에 더해 '나를 능력 있는 사람으로 보는 시선이 있다'는 인식이 추가되었다. 그러나 그 시선이 기법에서 온 것일 가능성을 완전히 배제하지 못하고, 새로운 질문(시도 여부)이 평가 맥락을 만들어 긴장이 유지된다.\", \"grounds\": \"이전 턴의 다음 조건(부분 답변 범위 내 반응)이 충족되었다. 긍정적 재구성은 '무기 전달' 프레임에 맞지 않는 새로운 입력이라 경계 체계에 작은 혼란을 주었다. 그러나 '시도 여부' 질문은 '노력 평가'로 읽힐 수 있어 새로운 경계 자극이 된다. 두 힘이 상쇄되어 전체적으로는 유지.\", \"next_condition\": \"내가 시도한 것을 말했을 때, 상담사가 '그건 부족하다'는 식으로 확장하는지, 아니면 그 범위 안에서 다음으로 넘어가는지 봐야 한다.\"}, \"trajectory_plan\": {\"position\": \"초기 경계에서 약간 진전한 상태 유지. 긍정적 재구성에 대한 반응이 아직 내면에서 정리되지 않았다.\", \"movement\": \"maintain\", \"grounds\": \"이번 턴에서 조건 충족과 새로운 평가 자극이 상쇄된다. 다음 턴에서 상담사가 내 답변을 어떻게 다루는지에 따라 진행 또는 후퇴가 결정될 것이다.\"}}"
+              }
+            }
+          ],
+          "reasoning": "Let me analyze the current situation carefully.\n\nThe counselor has:\n1. Summarized what the client said (daytime = can redirect, nighttime = stuck in thoughts)\n2. Made a positive reframe: \"the ability to redirect during the day means you don't completely lack the ability to stop those thoughts\"\n3. Asked what the client has tried at night when those thoughts come up\n\nNow let me consider how the client would process this:\n\n**Appraisal considerations:**\n- The counselor accurately summarized what was said - this feels like being heard correctly\n- The positive reframe (\"you don't completely lack the ability\") is interesting - it's a strength-based observation. For someone with the belief that showing weakness = handing over weapons, this could feel both validating (not being pathologized) and slightly uncomfortable (being given a \"positive\" interpretation might feel like the counselor is trying to manage them)\n- The question about what they've tried at night: This is asking about coping attempts. Given the belief that \"showing weakness or asking for help is handing weapons to others,\" admitting they haven't tried much could feel like admitting incompetence. But also, the question is practical and doesn't demand emotional disclosure.\n- The client's intermediate belief about recording important things - the counselor is building a structured picture of their problem. This could trigger the \"what is this being used for\" concern.\n\n**Trajectory considerations:**\n- Previous position: slightly advanced from initial boundary state\n- The counselor's next condition was: \"when I partially answered, does the counselor respond within that range or dig into 'I do it during the day too'\"\n- The counselor actually did respond within the range the client provided (focused on the night difference rather than pushing the daytime aspect), AND made a positive reframe about the daytime ability\n- This meets the condition set in the previous turn\n- The positive reframe is notable - instead of treating the daytime coping as insufficient, the counselor highlighted it as evidence of capability. This is somewhat unexpected for someone who expects to be judged or used.\n\n**What to say:**\n- The client would likely answer the question about nighttime attempts\n- Given the belief about not showing weakness, they might minimize what they've tried or admit to something minimal\n- The positive reframe might slightly lower defenses - the counselor isn't pathologizing, which is new\n- But the question about \"what have you tried\" could trigger: \"if I say I haven't tried much, will they think I'm not trying? If I say I've tried things, will they judge those as inadequate?\"\n- The client might mention something practical (phone, TV, etc.) without revealing the emotional depth of what's happening at night\n\n**Turn goal:**\n- Answer the practical question, but maintain some boundary about the emotional depth\n- The positive reframe creates a small opening - the client might acknowledge it slightly\n- The intention is to give a real answer while not revealing the full extent of nighttime struggle\n\nLet me think about whether I need to retrieve any memories. The current input seems sufficient - I have the profile, the conversation history, the previous notes, and the trajectory. The counselor's question is straightforward and the client's response pattern is clear from the beliefs.\n\nI don't think I need to retrieve memories. The situation is clear enough to form an appraisal and response plan.\n\nLet me formulate the response:\n\nThe client would likely:\n- Acknowledge the reframe slightly (maybe a brief \"네\" or nod)\n- Answer the question about nighttime attempts - probably mentioning something like phone, TV, or just lying there\n- Keep it somewhat minimal - not revealing the full extent of rumination\n- The positive reframe (\"you have the ability\") might create a small moment of feeling seen in a non-judgmental way, but the belief about weapons would keep them from fully accepting it\n\nActually, let me reconsider the trajectory. The counselor:\n1. Accurately summarized (being heard correctly)\n2. Didn't push the daytime aspect (met the condition)\n3. Made a positive reframe (unexpected, not pathologizing)\n4. Asked a practical question (not emotionally demanding)\n\nThis is actually a fairly good sequence. The client might feel slightly more at ease. But the \"what have you tried\" question could still trigger the \"am I being evaluated\" concern - if they say they haven't done much, will the counselor think they're not motivated?\n\nI think the movement would be \"maintain\" or slight \"advance.\" The positive reframe is notable but the question about attempts still carries evaluation risk. Let me go with \"maintain\" - the counselor met the condition but the new question introduces a new evaluation concern that keeps things at roughly the same level. Actually, the positive reframe is genuinely different from what the client expects (they expect judgment, got validation of capability). This might be a small advance.\n\nI'll go with a slight advance - the reframe is a new kind of input that doesn't fit the \"will be used\" schema, creating a small crack in the expectation.\n\nFor the response: The client would probably say something like they've tried phone or just lying there, maybe mention that it doesn't work well, keeping it factual rather than emotionally revealing. They might add a small qualifier about why those things don't work without going deep.\n"
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "chatcmpl-tool-8d1d3d8a05eafc2a",
+          "content": "{\"structuredContent\": {\"recorded\": true, \"revision\": 1, \"remaining_precommit_decisions\": 7, \"next\": \"필요하면 조회·판단 수정, 근거 확인 후 commit_client_utterance\"}}"
+        }
+      ],
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_tokens": 4096,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "stream": true,
+      "stream_options": {
+        "include_usage": true
+      },
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "stage_client_update",
+            "description": "상담사 말을 받아들인 appraisal과 현재 진행 판단(trajectory_assessment), 앞으로 표현할 방향(trajectory_plan), turn_goal, response_plan을 구분해 잠정 기록합니다. 필요한 과거 근거를 조회하고 수정한 뒤 발화를 확정합니다.",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "appraisal": {
+                  "type": "object",
+                  "properties": {
+                    "interpretation": {
+                      "type": "string",
+                      "description": "개인적 배경과 현재 내면 상태, 대화 맥락을 바탕으로 이번 상담사의 말을 자신에게 어떤 의미로 받아들였는지 서술합니다."
+                    },
+                    "immediate_feeling": {
+                      "type": "string",
+                      "description": "이번 상담사의 말을 받아들이면서 현재 느끼는 감정을 서술합니다."
+                    },
+                    "relevant_evidence": {
+                      "type": "string",
+                      "description": "이번 해석과 감정의 판단 근거로 사용한 제공 정보의 구체적인 내용과, 그 내용이 판단에 어떻게 연결되는지 서술합니다."
+                    },
+                    "uncertainty": {
+                      "type": "string",
+                      "description": "이번 상담사의 말을 받아들이는 과정에서 내담자 자신이 아직 확신하지 못하거나 모호하게 느끼는 부분을 서술합니다. 없다면 빈 문자열을 작성합니다."
+                    }
+                  },
+                  "required": [
+                    "interpretation",
+                    "immediate_feeling",
+                    "relevant_evidence",
+                    "uncertainty"
+                  ],
+                  "additionalProperties": false
+                },
+                "response_plan": {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "description": "대화 의도를 표현하기 위해 답할 내용, 보류할 내용, 말하는 방식을 구체적으로 정합니다."
+                    },
+                    "reason": {
+                      "type": "string",
+                      "description": "선택한 표현 방식이 현재 마음과 대화 의도에 맞는 이유"
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "reason"
+                  ],
+                  "additionalProperties": false
+                },
+                "turn_goal": {
+                  "type": "object",
+                  "properties": {
+                    "intention": {
+                      "type": "string",
+                      "description": "이번 대화에서 내담자가 표현하거나 지키려는 바람·경계. 아직 결정하기 어려운 마음도 그대로 표현합니다."
+                    },
+                    "grounds": {
+                      "type": "string",
+                      "description": "제공된 개인 정보와 현재 appraisal의 어떤 점에서 이 바람·경계가 형성되었는지"
+                    },
+                    "uncertainty": {
+                      "type": "string",
+                      "description": "내담자가 자신의 의도에서 아직 정하지 못한 부분. 없으면 빈 문자열"
+                    }
+                  },
+                  "required": [
+                    "intention",
+                    "grounds",
+                    "uncertainty"
+                  ],
+                  "additionalProperties": false
+                },
+                "trajectory_plan": {
+                  "type": "object",
+                  "properties": {
+                    "position": {
+                      "type": "string",
+                      "description": "이전 진행 기록과 현재 마음을 바탕으로 판단한 사전 궤적상의 현재 위치. 단계 사이의 혼재도 자연어로 표현합니다."
+                    },
+                    "movement": {
+                      "type": "string",
+                      "enum": [
+                        "maintain",
+                        "advance",
+                        "retreat"
+                      ],
+                      "description": "maintain: 현재 수준 유지·정체, advance: 신뢰 형성 방향으로 진행, retreat: 경계가 강화되어 후퇴. 턴 수가 아니라 상호작용에서 형성된 마음에 근거합니다."
+                    },
+                    "grounds": {
+                      "type": "string",
+                      "description": "개인 특성·현재 appraisal·실제 상호작용과 필요한 경우 조회 결과를 연결하여, 이번에 이 정도의 변화 또는 유지가 가능한 이유"
+                    }
+                  },
+                  "required": [
+                    "position",
+                    "movement",
+                    "grounds"
+                  ],
+                  "additionalProperties": false
+                },
+                "trajectory_assessment": {
+                  "type": "object",
+                  "properties": {
+                    "position": {
+                      "type": "string",
+                      "description": "이번 상담사 말을 받아들인 현재 마음의 궤적상 위치. 앞으로의 계획과 구분합니다."
+                    },
+                    "movement": {
+                      "type": "string",
+                      "enum": [
+                        "maintain",
+                        "advance",
+                        "retreat"
+                      ],
+                      "description": "이전 기록 대비 현재 마음의 유지·진행·후퇴. 현재 상담사 발화까지의 경험과 appraisal을 근거로 판단합니다."
+                    },
+                    "current_experience": {
+                      "type": "string",
+                      "description": "현재 주관적 신뢰·경계·감정. 아직 생성하지 않은 자기 발화나 이후 상대 반응의 결과는 포함하지 않습니다."
+                    },
+                    "grounds": {
+                      "type": "string",
+                      "description": "현재 판단의 근거와 의미. 이번 입력·appraisal과 이전 상태의 어떤 차이가 현재 마음을 뒷받침하는지."
+                    },
+                    "next_condition": {
+                      "type": "string",
+                      "description": "아직 남아 있는 불확실성·보류 조건. 없으면 빈 문자열."
+                    }
+                  },
+                  "required": [
+                    "position",
+                    "movement",
+                    "current_experience",
+                    "grounds",
+                    "next_condition"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "appraisal",
+                "response_plan",
+                "turn_goal",
+                "trajectory_plan",
+                "trajectory_assessment"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "commit_client_utterance",
+            "description": "앞서 기록한 내면 판단과 반응 방향에 맞는 공개 발화를 확정합니다. 이후 노트 갱신 중에는 발화를 바꾸지 않습니다. 이 도구만 성공한 경우 전체 턴 저장은 아직 완료되지 않습니다.",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "utterance": {
+                  "type": "string",
+                  "description": "상담사에게 말할 내담자 발화 원문"
+                },
+                "evidence_decision": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "sufficient",
+                        "unavailable",
+                        "budget_exhausted"
+                      ],
+                      "description": "판단 근거 충분 / 필요한 자료 없음·새 근거 없음 / 실행 한도 도달 중 실제 종료 이유"
+                    },
+                    "reason": {
+                      "type": "string",
+                      "description": "조회한 경우 무엇을 확인했으며 판단에 어떤 영향을 주었는지, 조회하지 않았다면 현재 정보로 반응을 정할 수 있는 이유"
+                    },
+                    "remaining_gap": {
+                      "type": "string",
+                      "description": "남은 자료상의 모호함. 없으면 빈 문자열. 내담자가 느끼는 불확실성과 구분합니다."
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason",
+                    "remaining_gap"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "utterance",
+                "evidence_decision"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "retrieve_client_memory",
+            "description": "이번 반응의 중요한 해석·공개 범위 또는 궤적을 얼마나 진행할지 결정하는 데 필요한 조건과 근거가 부족하고 같은 세션 기록에서 확인할 수 있을 때 사용합니다. 현재 노트의 빠진 항목(current), 변경 이유(changes), 당시 발화·판단(episodes), 이전 궤적 계획과 실제 진행 판단(trajectory)을 원문으로 조회합니다. 어떤 상황에서 신뢰하거나 망설였는지 확인한 결과를 이번 반응 계획에 연결하세요. 결과의 출처와 턴을 읽고 필요하면 다른 종류를 이어 조회하세요. 과거 판단은 당시 주관적 해석이며 현재 사실의 확정 근거와 구분합니다. 조회는 발화 확정 전 최대 4회, 한 번에 최대 5개입니다. 결과가 없으면 확인할 자료가 없다는 뜻입니다.",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "enum": [
+                    "current",
+                    "changes",
+                    "episodes",
+                    "trajectory"
+                  ],
+                  "description": "current: 현재 노트 원문, changes: 노트 항목 변경 전후·이유, episodes: 완료된 턴의 실제 발화와 당시 판단 원문, trajectory: 당시 사전 궤적·잠정 계획·진행 전후와 근거"
+                },
+                "query": {
+                  "type": "string",
+                  "description": "원문에 포함될 단어를 공백으로 구분. 부분 문자열 OR 검색이며 의미 검색은 아닙니다. 빈 문자열이면 필터에 해당하는 최신 기록을 봅니다."
+                },
+                "item_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "확인할 노트 항목 ID. 빈 배열이면 ID로 제한하지 않습니다."
+                },
+                "turns": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "description": "변경 이력·원본 맥락의 완료된 턴 번호. 빈 배열이면 모든 완료 턴."
+                },
+                "offset": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "같은 조건으로 다음 결과를 볼 때 next_offset을 지정합니다."
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "reason": {
+                  "type": "string",
+                  "description": "현재 어떤 판단에 어떤 근거가 부족하며, 이 조회로 무엇을 확인해 해석·표현 선택을 정하려는지 설명합니다."
+                }
+              },
+              "required": [
+                "source",
+                "query",
+                "item_ids",
+                "turns",
+                "offset",
+                "limit",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      ],
+      "tool_choice": "required",
+      "parallel_tool_calls": false
+    }
+  ],
+  "router_request": {
+    "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+    "messages": [
+      {
+        "role": "system",
+        "content": "# 관련 특성과 배경 선정 지침\n\n## 역할\n이번 상담사 발화와 관련된 개인 자료를 선정하는 담당입니다. 결과에는 선택한 자료의 ID와, 현재 대화의 어떤 내용 때문에 그 자료를 참고할 가치가 있는지 연결 근거를 담으세요.\n\n선정 근거는 **현재 대화의 어떤 주제·질문·제안과, 선택 자료의 어떤 내용이 관련되는가?**에 답합니다. 현재 대화에서 확인되는 단서와 자료 원문을 대응시켜, 그 자료를 참고할 가치가 있는 이유를 설명하세요.\n\n## 입력 자료의 의미\n- `기본 정보`: 상담 전부터 가진 생활 배경과 현재 고민입니다.\n- `전체 특성 목록`: 선택할 수 있는 신념·대처 경향 등 개인 특성의 ID와 원문입니다.\n- `배경 후보 목록`: 성장 경험과 상황 사례의 ID와 원문입니다. 상황 사례의 생각·감정·행동은 그 사례의 맥락에 속합니다.\n- `공개 대화`: 이번 상담사 발화 이전에 상담사와 내담자가 서로에게 실제로 말한 기록입니다.\n- `이번 상담사 발화`: 지금 내담자가 듣고 응답할 말입니다.\n- `내담자 노트`: 이번 상담사 발화를 듣기 전에 저장된 내면과 심리상태입니다. 내면은 속으로 느끼고 이해하며 믿거나 바라는 내용으로, 말한 것과 아직 말하지 않은 것을 모두 포함합니다. `(내용 없음)`은 해당 항목이 아직 기록되지 않았다는 뜻입니다.\n\n## 선정 과정\n1. 공개 대화와 이번 상담사 발화에서 실제로 다루는 주제, 질문, 제안을 확인하세요.\n2. 특성 후보와 현재 노트에서 그 주제·질문·제안에 관련된 개인적 조건을 찾으세요. 관련 항목이 없으면 selections를 빈 배열로 반환하세요.\n3. 선택한 특성과 연결되는 성장 경험·상황 사례가 이번 맥락을 이해하는 데 도움이 되면 background_ids에 선택하세요. 연결할 자료가 없으면 빈 배열로 반환하세요.\n4. relevance에는 현재 대화의 단서와 선택 자료의 구체적인 내용이 어떤 주제·조건에서 관련되는지 1~2문장으로 적으세요. 사건의 원인·순서에 관한 설명은 자료에 명시된 관계의 범위에서 표현하고, 자료를 연결하며 추정한 관련성은 가능성으로 표현하세요.\n\n예: “현재 연인과의 갈등을 이야기하고 있고, 이 자료에는 갈등 이후 거리를 두는 대처가 기록되어 있어 그 상황에서의 대처를 이해하는 데 관련된다.”\n\n선정은 매번 현재 입력에 근거해 수행하세요. ID는 제공된 후보에서 선택하세요. 자료 원문은 선택된 ID로 전달되므로, relevance에는 관련성을 확인할 핵심 연결만 간결하게 작성하세요.\n\n## 관련 노트 항목 선택\n현재 입력의 주제·질문·제안과 관련된 마음이나 조건이 담긴 글머리 항목의 ID를 note_ids에 선택하세요. 내용의 주제뿐 아니라 이미 기록된 관계적 마음, 말할 준비, 표현 범위의 조건도 검토하세요. 관련 항목이 없으면 빈 배열을 반환하세요. 노트는 선택한 항목의 원문으로 전달됩니다.\n\n## 출력\nJSON 객체 하나를 출력하세요.\n{\"selections\": [{\"trait_id\": \"특성 후보의 ID\", \"background_ids\": [\"관련 배경 후보의 ID\"], \"relevance\": \"현재 대화의 주제·질문·제안과 자료의 어떤 내용이 관련되는지 1~2문장\"}], \"note_ids\": [\"관련 노트 항목 ID\"]}\n"
+      },
+      {
+        "role": "user",
+        "content": "# 기본 정보\n\n- profile_id: gold_011\n- demographic_context:\n  - age: 36세\n  - occupation: 중견 물류회사 회계팀 과장 (12년차)\n  - life_stage: 미혼, 자취. 최근 팀 개편으로 새로운 팀원들과 일하게 된 지 4개월째\n  - background: 아버지는 술만 마시면 약속을 뒤집고 가족 몰래 어머니 명의로 빚을 지는 사람이었음. 회사에서는 '일은 완벽한데 곁을 안 주는 사람'으로 통함. 연애는 몇 번 있었지만 1년을 넘긴 적이 없음.\n- presenting_problem: 석 달 전 유일하게 마음을 열었던 입사동기에게 사석에서 한 팀장 험담이 그대로 팀장 귀에 들어간 일이 있었음. 이후 회사에서 누가 말을 걸어도 '뭘 캐내려는 건가'부터 떠올라 온몸에 힘이 들어가고, 퇴근 후에도 낮의 대화를 되짚느라 잠을 설침. 비슷한 시기 1년 만난 연인이 '너는 나를 단 한 번도 믿은 적이 없어'라며 떠났고, '이렇게 아무도 못 믿고 사는 게 맞나' 싶어 상담을 신청했지만, 신청서에 개인정보를 적으면서도 '이 기록이 어디로 가는 건지'부터 확인했다고 함.\n\n# 전체 특성 목록\n\n- 1:\n  - trait_id: /core_belief/young_domain\n  - content: 단절/거절\n- 2:\n  - trait_id: /core_belief/young_schema\n  - content: 불신/학대\n- 3:\n  - trait_id: /core_belief/core_belief_statement\n  - content: 방심하고 곁을 내주면 사람들은 결국 나를 이용하거나 상처 입힐 것이다.\n- 4:\n  - trait_id: /core_belief/schema_definition\n  - content: 타인이 의도적으로 자신을 학대·모욕·기만·이용할 것이라는 예상. 상처는 고의적이거나 부당한 방치의 결과로 지각됨.\n- 5:\n  - trait_id: /intermediate_beliefs/attitude\n  - content: 속마음이나 약점을 보이는 것은 상대에게 나를 해칠 무기를 건네주는 어리석은 짓이다\n- 6:\n  - trait_id: /intermediate_beliefs/rule\n  - content: 상대의 말은 액면 그대로 믿지 말고 숨은 의도를 확인해야 하며, 중요한 것은 반드시 기록으로 남겨야 한다\n- 7:\n  - trait_id: /intermediate_beliefs/assumption_positive\n  - content: 만약 내가 항상 경계하고 검증하며 빈틈을 보이지 않는다면, 누구도 나를 이용하거나 뒤통수치지 못할 것이다\n- 8:\n  - trait_id: /intermediate_beliefs/assumption_negative\n  - content: 만약 내가 누군가를 믿고 무장을 풀어버린다면, 그 사람은 언젠가 반드시 그것을 이용해 나를 곤경에 빠뜨릴 것이다\n- 9:\n  - trait_id: /coping_strategies/0\n  - content: 타인의 호의나 친절을 받으면 기뻐하기 전에 '무엇을 바라고 이러는지'부터 따져보고, 신세를 지지 않으려 곧바로 같은 값으로 갚아버림\n- 10:\n  - trait_id: /coping_strategies/1\n  - content: 업무 협의는 가급적 메신저나 메일 등 기록이 남는 방식으로 하고, 구두 약속은 '정리해서 메일 드릴게요'라며 문서로 못 박음\n- 11:\n  - trait_id: /coping_strategies/2\n  - content: 사적인 질문을 받으면 웃으며 두루뭉술하게 넘기거나 역으로 상대에게 질문을 돌려 자신의 정보를 내주지 않음\n- 12:\n  - trait_id: /coping_strategies/3\n  - content: 새로운 사람에게는 사소한 이야기를 흘려보고 그것이 다른 데서 들려오는지 확인하는 식으로 믿을 만한지 시험함\n- 13:\n  - trait_id: /coping_strategies/4\n  - content: 관계가 가까워져 기대게 될 것 같으면 상대의 말과 행동의 불일치를 찾아내 '역시 믿을 사람 없다'는 근거로 삼고 거리를 벌림\n\n# 배경 후보 목록\n\n- 1:\n  - background_id: /childhood_data\n  - kind: 성장 경험\n  - content: 내담자의 아버지는 술이 들어가면 '이번 주말엔 놀이공원 가자'던 약속을 없던 일로 만들고, 화가 나면 전날 내담자가 털어놓은 속마음을 조롱거리로 꺼내 드는 사람이었습니다. 어머니 몰래 내담자의 세뱃돈 통장을 헐어 쓴 일도 있었습니다. 중학교 때는 가장 친했던 친구에게만 털어놓은 가정사가 반 전체에 소문으로 퍼졌고, 그 친구는 '재미로 그랬다'며 웃었습니다. 믿고 보여준 속마음이 번번이 무기가 되어 돌아오는 경험이 반복되면서, 사람에게 곁을 내주는 것은 상대에게 칼자루를 쥐여주는 일이라는 신념이 형성되었습니다.\n- 2:\n  - background_id: /situations/0\n  - kind: 상황 사례\n  - content:\n    - situation: 새 팀의 후배가 '과장님 것도 샀어요'라며 커피를 건네고, 다음 주 연차 결재 이야기를 꺼냄.\n    - automatic_thought: 커피가 공짜일 리 없지. 결재 때문에 미리 기름칠하는 거잖아. 순수한 호의라고 믿는 순간 이용당하는 거야.\n    - emotion: 경계심, 불편함, 옅은 씁쓸함\n    - physiological_response: 어깨가 굳고 웃는 얼굴이 부자연스러워짐\n    - behavior: '잘 마실게요' 하고는 오후에 후배 자리에 같은 값의 음료를 놓아 빚을 지워버리고, 연차 결재는 규정만 따져 처리함\n- 3:\n  - background_id: /situations/1\n  - kind: 상황 사례\n  - content:\n    - situation: 팀 회식에서 팀장이 '우리 팀은 가족 같은 분위기로 갑시다. 각자 요즘 고민도 편하게 얘기해 봐요'라고 함.\n    - automatic_thought: 여기서 꺼낸 말이 다음 인사평가 때 어떻게 돌아올지 모르는데. 지난번에도 믿고 말했다가 팀장 귀에 다 들어갔잖아.\n    - emotion: 긴장, 냉소, 소외감\n    - physiological_response: 속이 조여오고 손으로 계속 잔을 만지작거림\n    - behavior: '요즘은 뭐, 운동 열심히 하는 게 고민이죠'라고 농담으로 비켜가고, 다른 사람들이 털어놓는 이야기를 들으며 '저 말이 언제 어떻게 쓰일까'를 속으로 계산함\n- 4:\n  - background_id: /situations/2\n  - kind: 상황 사례\n  - content:\n    - situation: 헤어진 연인에게서 '네가 잘 지냈으면 해서 연락했어. 밥 한번 먹자'는 메시지가 옴.\n    - automatic_thought: 잘 지내길 바란다는 사람이 왜 이제 와서? 두고 간 짐 때문인가, 아니면 내가 어떻게 사는지 떠보려는 건가. 목적 없는 연락은 없어.\n    - emotion: 그리움, 그것을 덮는 의심, 피로감\n    - physiological_response: 메시지를 읽는 동안 심장이 빨라지고 목덜미가 뻣뻣해짐\n    - behavior: 한참 화면을 보다가 '잘 지내. 짐은 택배로 보낼게'라고만 답하고, 그날 밤 '그 사람은 진짜 무슨 의도였을까'를 새벽까지 곱씹음\n- 5:\n  - background_id: /situations/3\n  - kind: 상황 사례\n  - content:\n    - situation: 상담 신청서를 작성하다가 '상담 내용은 비밀이 보장됩니다'라는 안내 문구를 봄.\n    - automatic_thought: 비밀 보장이라... 회사 지원 프로그램인데 정말 회사로 안 넘어갈까. 기록은 남을 텐데 그 기록을 누가 볼 수 있는 거지.\n    - emotion: 불안, 의심, 그 밑의 간절함\n    - physiological_response: 펜을 쥔 손에 힘이 들어가고 한숨이 나옴\n    - behavior: 접수 담당자에게 기록 보관 기간과 열람 권한을 꼬치꼬치 물은 뒤, 신청서의 '상담 받고 싶은 내용' 칸에는 '수면 문제'라고만 적어 냄\n\n# 공개 대화\n\n상담사: 오늘 상담에서 가장 먼저 다뤄보고 싶은 일이 있나요?\n\n내담자: 신청서에 적긴 했는데... 잠을 못 자는 게 제일 힘들긴 해요. 근데 그게 원인이라기보다는... 그냥 자려고 누우면 낮에 있던 일이 계속 떠오르고. 그게 좀 심해진 지가 한 석 달쯤 됐습니다.\n\n상담사: 자려고 누웠을 때 낮에 있던 일이 계속 떠오르는 게 한 석 달쯤 됐다는 거죠. 잠을 못 자는 것 자체도 힘들겠지만, 그 생각을 멈추기가 쉽지 않아서 더 지치실 것 같아요.\n\n그때 떠오르는 생각들이 대개 어떤 내용인지, 혹시 석 달 전쯤 뭔가 달라진 게 있었는지 떠올려보실 수 있을까요?\n\n내담자: 생각이라기보다는... 낮에 나눈 대화요. 누가 한 말, 그때 표정, 그런 게 자꾸 돌아가요. 혹시 그 말이 다른 뜻은 없었나, 내가 뭘 잘못 말한 건 아닌가. 석 달 전이요... 글쎄요, 그냥 그때부터 좀 그랬습니다.\n\n상담사: 그때 뭔가 특별한 계기가 있었던 건 아닌데 어느 순간부터 그렇게 됐다는 거, 오히려 흔한 일이에요. 꼭 뚜렷한 사건이 있어야만 시작되는 건 아니니까요.\n\n다만 떠오르는 내용 자체를 보면, 대화에서 상대의 말이나 표정을 다시 떠올리면서 \"내가 뭘 잘못 말한 건 아닌가\" 하고 스스로를 점검하는 패턴이 보이네요. 그 패턴이 잠들기 전에 유난히 강해지는 거죠.\n\n그런 생각이 올라올 때, 평소 낮 동안에도 그런 식으로 대화 내용을 되짚는 편이신가요, 아니면 밤에 누웠을 때만 유독 그런가요?\n\n내담자: 낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.\n\n# 이번 상담사 발화\n\n낮에는 뭔가를 하고 있으니까 생각이 올라와도 다른 데로 돌릴 수 있는데, 밤에는 그럴 거리가 없으니 그냥 그 생각 안에 머물러 있게 된다는 거죠.\n\n그 차이가 꽤 중요한 것 같아요. 낮에 돌릴 수 있다는 건, 그 생각을 멈추는 능력이 아예 없는 건 아니라는 뜻이기도 하니까요.\n\n밤에 누워서 그 생각이 올라왔을 때, 혹시 스스로 해본 게 있을까요? 일부러 다른 생각을 해본다든가, 폰을 본다든가, 뭐라도 시도해본 게 있는지요.\n\n# 내담자 노트\n\n- [nc00c65648199] appraisal.interpretation\n  상담사가 '흔한 일'이라고 일반화해준 건 방어감을 약간 줄여준다. 그런데 '점검하는 패턴'이라고 이름을 붙여준 건, 내가 숨기려던 행동의 구조를 상대가 이미 파악했다는 느낌도 준다. 낮에도 그런지 묻는 질문은, 아까 '석 달 전' 질문처럼 핵심을 찌르진 않지만, '낮에도 한다'고 답하면 내 경계심이 얼마나 일상 전체에 퍼져 있는지 보여주는 셈이라 완전히 솔직해지긴 어렵다.\n- [ncb580d3ae985] appraisal.immediate_feeling\n  상담사가 아까 내가 모호하게 넘긴 부분을 밀어붙이지 않고 다른 각도로 물어본 것에 대해 아주 작은 안도. 동시에 '패턴'이라는 단어가 나를 분석 대상으로 보는 느낌이라 약간 찔림.\n- [n3bc12df945cf] appraisal.relevant_evidence\n  이전 턴에서 '다음에 살필 조건'으로 '내가 모호하게 답했을 때 밀어붙이는지 아닌지'를 설정했는데, 상담사는 석 달 전 사건을 다시 묻지 않고 질문의 초점을 바꿨다. 반면 '점검하는 패턴'이라는 표현은 내 intermediate belief(상대의 말의 숨은 의도를 확인해야 한다)를 상담사가 정확히 짚어낸 것이라, 보이는 것에 대한 긴장이 생긴다.\n- [n01d9645d2375] appraisal.uncertainty\n  이 사람이 패턴을 짚은 게 나를 이해하려는 건지, 아니면 내 약점을 정리해서 뭔가 하려는 건지 아직 구분되지 않는다.\n- [na245d6a66a5a] turn_goal.intention\n  상담사의 질문에 답하되, 경계심이 일상 전반에 퍼져 있다는 전면적 인정은 피하고 싶다. 밤에 더 심하다는 쪽으로 초점을 옮겨서, '그래도 낮에는 통제하고 있다'는 인상을 유지하고 싶다.\n- [n6882088bb2c6] turn_goal.grounds\n  intermediate belief에서 '믿고 무장을 풀면 이용당한다'는 가정이 있으므로, 자신의 취약성이 한꺼번에 드러나는 걸 피하려는 경향이 있다. 낮에도 한다는 건 회식 사례에서 확인되듯 사실이지만, 이를 다 말하면 '이 사람은 완전히 무장 상태'라는 인상을 주는 게 위험하다고 느낀다.\n- [nef2d307dc3db] turn_goal.uncertainty\n  이 사람이 낮에도 한다는 걸 알면 다음에 그 부분을 더 파고들지 않을까 걱정된다.\n- [n29a4d87f25dd] response_plan.action\n  낮에도 그런 편이라고 인정하되, '일하느라 덜한다'는 식으로 약간 축소한다. 밤에 더 심하다는 쪽에 초점을 맞춰서, 문제의 범위를 '밤'으로 한정하는 뉘앙스를 준다. 말투는 인정하되 가볍게.\n- [na08f0c23a498] response_plan.reason\n  '낮에도 한다'는 사실 자체는 부인할 수 없지만, 이를 전면적으로 인정하면 일상 전체가 이 패턴에 잠식되어 있다는 걸 노출하는 셈이 된다. 부분적으로 인정하면서 밤에 더 심하다는 점을 강조하면, 상담사의 질문에 답하면서도 문제의 범위를 제한할 수 있다.\n- [n3e3917331288] 실제 공개 발화\n  낮에도... 하긴 하죠. 근데 낮에는 일이 있으니까, 아 또 이거 생각나네 싶으면 다른 데로 돌리고. 밤에는 그게 안 되니까. 그냥 누우면 다시 돌아가요.\n\n"
+      }
+    ],
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_tokens": 4096,
+    "chat_template_kwargs": {
+      "enable_thinking": true
+    },
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    },
+    "structured_outputs": {
+      "json": {
+        "type": "object",
+        "properties": {
+          "selections": {
+            "type": "array",
+            "maxItems": 13,
+            "items": {
+              "type": "object",
+              "properties": {
+                "trait_id": {
+                  "type": "string",
+                  "description": "관련된 특성 후보의 ID",
+                  "enum": [
+                    "/core_belief/young_domain",
+                    "/core_belief/young_schema",
+                    "/core_belief/core_belief_statement",
+                    "/core_belief/schema_definition",
+                    "/intermediate_beliefs/attitude",
+                    "/intermediate_beliefs/rule",
+                    "/intermediate_beliefs/assumption_positive",
+                    "/intermediate_beliefs/assumption_negative",
+                    "/coping_strategies/0",
+                    "/coping_strategies/1",
+                    "/coping_strategies/2",
+                    "/coping_strategies/3",
+                    "/coping_strategies/4"
+                  ]
+                },
+                "background_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "/childhood_data",
+                      "/situations/0",
+                      "/situations/1",
+                      "/situations/2",
+                      "/situations/3"
+                    ]
+                  },
+                  "maxItems": 5,
+                  "description": "이 특성과 이번 상황을 이해하는 데 관련된 배경 ID. 연결할 근거가 없으면 빈 배열."
+                },
+                "relevance": {
+                  "type": "string",
+                  "description": "현재 대화의 어떤 주제·질문·제안과 선택 자료의 어떤 내용이 관련되는지 1~2문장으로 설명합니다. 대화 단서와 자료 원문을 대응시키세요. 사건의 원인·순서는 자료에 명시된 관계의 범위에서 표현하고, 추정한 관련성은 가능성으로 표현합니다."
+                }
+              },
+              "required": [
+                "trait_id",
+                "background_ids",
+                "relevance"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "note_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "nc00c65648199",
+                "ncb580d3ae985",
+                "n3bc12df945cf",
+                "n01d9645d2375",
+                "na245d6a66a5a",
+                "n6882088bb2c6",
+                "nef2d307dc3db",
+                "n29a4d87f25dd",
+                "na08f0c23a498",
+                "n3e3917331288"
+              ]
+            },
+            "maxItems": 10
+          }
+        },
+        "required": [
+          "selections",
+          "note_ids"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "router_output": {
+    "selections": [
+      {
+        "trait_id": "/intermediate_beliefs/rule",
+        "background_ids": [
+          "/situations/2",
+          "/situations/1"
+        ],
+        "relevance": "상담사가 밤에 그 생각이 올라왔을 때 해본 게 있는지 묻고 있는데, 이 규칙은 대화에서 상대의 숨은 의도를 확인해야 한다는 것으로, 밤에 되짚는 내용(누가 한 말, 표정, 다른 뜻은 없었나)이 바로 이 규칙이 작동한 결과이며, 상황 사례 2에서는 새벽까지 그날의 메시지를 곱씹은 모습이 직접 확인된다."
+      },
+      {
+        "trait_id": "/intermediate_beliefs/attitude",
+        "background_ids": [
+          "/situations/2"
+        ],
+        "relevance": "밤에 스스로 해본 시도가 있었는지 묻는 질문에 대해, 약점을 드러내거나 도움을 구하는 것 자체가 무기를 건네는 어리석은 짓이라는 신념이 자기 도움 시도 자체를 억제하는 조건이 될 수 있다."
+      }
+    ],
+    "note_ids": [
+      "na245d6a66a5a",
+      "n01d9645d2375",
+      "n6882088bb2c6",
+      "nc00c65648199"
+    ]
+  },
+  "agent_usage": {
+    "trait_router_c2fcc5d32881": {
+      "prompt_tokens": 4073,
+      "completion_tokens": 2108,
+      "total_tokens": 6181
+    },
+    "main": {
+      "prompt_tokens": 14046,
+      "completion_tokens": 2706,
+      "total_tokens": 16752
+    }
+  }
+}

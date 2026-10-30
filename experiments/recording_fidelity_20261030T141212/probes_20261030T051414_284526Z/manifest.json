@@ -1,0 +1,13 @@
+{
+  "source_session": "261030_132004",
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "endpoint": "http://192.168.0.86:8002/v1",
+  "repeats": 2,
+  "scope": "Frozen recording calls; prior appraisal, committed speech and same-turn history are held fixed.",
+  "caveat": "notes_turn3 retains the old upstream progress/appraisal; this probes new recording claims, not removal of all pre-existing claims.",
+  "seeds": [
+    101,
+    102
+  ],
+  "evaluation": "Structural validation plus direct source/output review; no keyword grader."
+}
