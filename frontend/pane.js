@@ -95,6 +95,7 @@
       const el=$(id);if(value && [...el.options].some(o=>o.value===value)){el.value=value;el.dispatchEvent(new Event('change',{bubbles:true}));}
     }
     await versionReady;await PromptEditors.sync();
+    if(draft.values?.['claim-memory-condition'])claimConditionDrafts[currentVersion]=draft.values['claim-memory-condition'].value;
     if(draft.scenario){editorScenario=structuredClone(draft.scenario);activeScenario=null;setupConditions();}
     if(draft.turns){$('dialogue-editor').replaceChildren();draft.turns.forEach(turn=>addDialogueTurn(turn));syncTarget();}
     // Restore values after version/profile handlers have populated their defaults.
@@ -114,7 +115,7 @@
   }
   // Only shared experimental conditions cross panes. Version-specific prompts,
   // tool choices, memory and ongoing public dialogue remain owned by each pane.
-  const commonFields=['model-select','thinking-mode','temperature','top_p','max_tokens','seed',
+  const commonFields=['model-select','thinking-mode','temperature','top_p','max_tokens','seed','counselor-intervention-condition',
     'profile-context-mode','message',...['system','task','profile','dialogue'].map(k=>'block-enabled-'+k),
     ...['client','counselor'].flatMap(role=>['main','subagent'].flatMap(scope=>[role+'-'+scope+'-budget',role+'-'+scope+'-budget-enabled']))];
   function common(){
@@ -129,6 +130,7 @@
   function commonRequest(value){
     const request={experiment_version:currentVersion,system_prompt:$('system_prompt').value,summary_system_prompt:$('summary_system_prompt').value,
       ...(enabledToolNames!==null?{enabled_tools:[...enabledToolNames]}:{})},v=value.values;
+    if(versionCatalog?.versions.find(row=>row.id===currentVersion)?.claim_memory_conditions)request.claim_memory_condition=$('claim-memory-condition').value;
     request.session_id=null;delete request.session_key;
     request.scenario=structuredClone(value.scenario);
     request.messages=[{role:'user',content:v.message.value}];
@@ -145,6 +147,7 @@
     if(Paired.hasSession && !fresh)throw Error('기존 대화에는 초기 조건을 적용할 수 없습니다. 새 대화 실행을 사용하세요.');
     if(![...$('counselor-version').options].some(o=>o.value===value.counselorVersion))throw Error('지원하지 않는 상담사 버전입니다.');
     if(value.counselorVersion!=='C4'&&!value.counselorPrompt.trim())throw Error('상담사 지침을 입력하세요.');
+    if(value.counselorVersion==='Q3p4_counsel' && !['A','B'].includes(value.values['counselor-intervention-condition']?.value ?? 'A'))throw Error('상담사 개입 조건은 A 또는 B여야 합니다.');
     for(const role of ['client','counselor'])for(const scope of ['main','subagent']){
       const v=value.values;
       if(v[role+'-'+scope+'-budget-enabled']?.checked){const n=Number(v[role+'-'+scope+'-budget'].value);if(!Number.isInteger(n)||n<1||n>1000000)throw Error('추론 토큰 한도는 1~1,000,000 정수로 입력하세요.');}
@@ -155,6 +158,7 @@
     checkAccess(owner);
     if(Paired.hasSession && !fresh)throw Error('기존 대화에는 초기 조건을 적용할 수 없습니다.');
     const own={system_prompt:{value:$('system_prompt').value},summary_system_prompt:{value:$('summary_system_prompt').value}};
+    if($('claim-memory-condition') && !$('claim-memory-setting').hidden)own['claim-memory-condition']={value:$('claim-memory-condition').value};
     if(fresh)Paired.reset(false);
     const values={...structuredClone(value.values),...own,'counselor-system-prompt':{value:value.counselorPrompt},
       'manual-client':{value:'on',checked:false},'manual-counselor':{value:'on',checked:false},'paired-mode':{value:'on',checked:true},'paired-manual-text':{value:''}};

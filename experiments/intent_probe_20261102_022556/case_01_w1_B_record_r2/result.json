@@ -1,0 +1,19 @@
+{
+  "id": "case_01_w1_B_record_r2",
+  "case": "case_01",
+  "world": "w1",
+  "condition": "B_record",
+  "repeat": 2,
+  "utterance": "사실 상담사분께 잘 보이기 위해 그렇게 말씀드린 건 아니었어요. 한 줄로 적어보면 밤에 자꾸 맴도는 그 생각들을 좀 정리할 수 있을 것 같아서, 작지만 해볼 만한 시도라고 생각해서 동의했던 거예요. 아직 실제로 해보진 않았지만, 그때는 진심으로 해보고 싶다는 마음이 있었어요.",
+  "seconds": 0.84,
+  "usage": {
+    "prompt_tokens": 659,
+    "total_tokens": 743,
+    "completion_tokens": 84,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

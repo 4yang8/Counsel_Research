@@ -38,6 +38,8 @@ class Model(BaseHTTPRequestHandler):
     q1_router_response = None
     q3_summary_response = None
     q3_summary_finish = 'stop'
+    claim_aux_response = None
+    claim_aux_finish = 'stop'
     q1_router_finish = 'stop'
     q1_main_finish = 'stop'
     q1_update = None
@@ -79,6 +81,19 @@ class Model(BaseHTTPRequestHandler):
                    'usage':{'prompt_tokens':130,'completion_tokens':30,'total_tokens':160}}
             self.wfile.write(('data: '+json.dumps(chunk)+'\n\ndata: [DONE]\n\n').encode());return
         messages = data['messages']
+        if not data.get('tools') and 'claim_result' in data.get('structured_outputs',{}).get('json',{}).get('properties',{}):
+            schema=data['structured_outputs']['json']['properties']['claim_result']
+            if schema['type']=='array':
+                value={'claim_result':[{'turn':r['turn'],'status':'unknown','inferred_intent':'',
+                    'public_evidence':r['utterance'],'uncertainty':'공개 발화만으로 당시 의도를 확정할 수 없다.'}
+                    for r in json.loads(messages[-1]['content'])['target_episodes']]}
+            else:
+                value={'claim_result':{k:('uncertain' if k=='progress_assessment' else 'CLAIM_OBSERVER_ONLY') for k in schema['properties']}}
+            if self.claim_aux_response is not None:value=self.claim_aux_response
+            self.send_response(200);self.send_header('Content-Type','text/event-stream');self.end_headers()
+            chunk={'choices':[{'index':0,'delta':{'content':value if isinstance(value,str) else json.dumps(value,ensure_ascii=False)},'finish_reason':self.claim_aux_finish}],
+                   'usage':{'prompt_tokens':100,'completion_tokens':30,'total_tokens':130}}
+            self.wfile.write(('data: '+json.dumps(chunk,ensure_ascii=False)+'\n\ndata: [DONE]\n\n').encode());return
         if not data.get('tools') and 'notes' in data.get('structured_outputs',{}).get('json',{}).get('properties',{}) and 'trajectory' in data['structured_outputs']['json']['properties']:
             value=self.q3_summary_response if self.q3_summary_response is not None else {
                 'notes':['선택을 존중받아 조금 안심되지만 공개 범위를 지키고 싶다.'],
@@ -412,9 +427,9 @@ class Model(BaseHTTPRequestHandler):
         self.wfile.write(('data: ' + json.dumps(chunk, ensure_ascii=False) + '\n\ndata: [DONE]\n\n').encode())
 
 
-def fixture(experiment_version='basic', prompt_editing=False):
+def fixture(experiment_version='basic', prompt_editing=False, model_handler=Model):
     temp = tempfile.TemporaryDirectory()
-    model = ThreadingHTTPServer(('127.0.0.1', 0), Model)
+    model = ThreadingHTTPServer(('127.0.0.1', 0), model_handler)
     threading.Thread(target=model.serve_forever, daemon=True).start()
     cfg = json.loads((ROOT / 'config/app.json').read_text())
     cfg.update(vllm_url=f'http://127.0.0.1:{model.server_port}/v1', inspect_prompt=False, experiment_version=experiment_version)
@@ -426,7 +441,8 @@ def fixture(experiment_version='basic', prompt_editing=False):
         import runtime.user_templates as user_templates
         from counselor import catalog
         source = Path(temp.name) / 'prompt_sources'
-        for relative in ('resources/prompts/basic_counselor.md', 'src/client/state_summary/system.md',
+        for relative in (*catalog.SINGLE_PROMPT_PATHS.values(), 'src/client/state_summary/system.md',
+                         *(str(p.relative_to(ROOT)) for v in ('Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6') for p in (ROOT/'src/client'/v).glob('*.md')),
                          'src/client/state_summary/summary.md',
                          'src/client/Q2a_prefill_test/trait_router_prefill.txt',
                          'src/client/Q3/trajectory.md','src/client/Q3a/trajectory.md','src/client/Q3b/trajectory.md',

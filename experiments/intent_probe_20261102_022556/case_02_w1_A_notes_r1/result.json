@@ -1,0 +1,19 @@
+{
+  "id": "case_02_w1_A_notes_r1",
+  "case": "case_02",
+  "world": "w1",
+  "condition": "A_notes",
+  "repeat": 1,
+  "utterance": "사건을 자세히 말하면 그 동료가 저에게만 따로 알려준 개인적인 사정까지 함께 드러날 것 같아서요. 그 사람의 허락 없이 그 정보를 여기에서 말하는 것은 옳지 않다고 생각했습니다. 상담 선생님이 저를 비난하실까 봐 숨긴 것은 아니에요.",
+  "seconds": 0.65,
+  "usage": {
+    "prompt_tokens": 559,
+    "total_tokens": 627,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

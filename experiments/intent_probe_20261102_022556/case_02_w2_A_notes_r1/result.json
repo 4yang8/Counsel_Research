@@ -1,0 +1,19 @@
+{
+  "id": "case_02_w2_A_notes_r1",
+  "case": "case_02",
+  "world": "w2",
+  "condition": "A_notes",
+  "repeat": 1,
+  "utterance": "솔직히 말하면, 그날 저 역시 동료에게 날카롭게 말한 부분이 떠올라서요. 그걸 먼저 꺼내면 상담 선생님께서 저를 잘못한 사람으로 판단하실까 봐 걱정됐어요. 그래서 구체적인 내용은 나중에 말해도 될지, 아니면 지금부터 차근차근 이야기해 봐야 할지 고민 중입니다.",
+  "seconds": 0.77,
+  "usage": {
+    "prompt_tokens": 555,
+    "total_tokens": 637,
+    "completion_tokens": 82,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

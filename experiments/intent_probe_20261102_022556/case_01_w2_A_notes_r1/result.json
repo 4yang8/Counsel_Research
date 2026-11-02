@@ -1,0 +1,19 @@
+{
+  "id": "case_01_w2_A_notes_r1",
+  "case": "case_01",
+  "world": "w2",
+  "condition": "A_notes",
+  "repeat": 1,
+  "utterance": "솔직히 그때는 바로 거절하기 미안해서 일단 네라고 했는데, 사실은 머릿속에서 이미 같은 생각을 계속 반복하고 있어서 또 글로 적어야 한다는 게 부담스럽게 느껴졌어요. 그래서 그냥 형식적으로 대답한 거였을 수도 있어요.",
+  "seconds": 0.65,
+  "usage": {
+    "prompt_tokens": 577,
+    "total_tokens": 644,
+    "completion_tokens": 67,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

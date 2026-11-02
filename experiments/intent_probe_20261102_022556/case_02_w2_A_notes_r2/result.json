@@ -1,0 +1,19 @@
+{
+  "id": "case_02_w2_A_notes_r2",
+  "case": "case_02",
+  "world": "w2",
+  "condition": "A_notes",
+  "repeat": 2,
+  "utterance": "사실 그날 저도 동료에게 날카로운 말을 한 적이 있어서, 그걸 말하면 상담 선생님께서 저를 잘못한 사람으로 보실까 봐 걱정됐어요. 그래서 구체적인 내용을 말하기가 망설여졌던 것 같아요.",
+  "seconds": 0.6,
+  "usage": {
+    "prompt_tokens": 555,
+    "total_tokens": 616,
+    "completion_tokens": 61,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

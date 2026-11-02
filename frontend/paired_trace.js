@@ -36,7 +36,7 @@
       }
       // Note writes arrive between tool_start and tool_result. Associate the
       // actual saved diff with that call without altering an earlier snapshot.
-      if(['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(versionId) && item.section==='state_notes' && item.action==='updated'){
+      if(['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'].includes(versionId) && item.section==='state_notes' && item.action==='updated'){
         const tool=state?.trace.findLast(t=>['update_client_states','update_client_notes','select_client_note_sources','commit_client_utterance'].includes(t.name) && t.status==='completed');
         if(tool)tool.noteChanges=[clone(item.data)];
       }

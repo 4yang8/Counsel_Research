@@ -185,6 +185,11 @@ def create(server, config, body, runtime, base_build):
     if spec is None:
         raise ValueError('지원하지 않는 상담사 버전입니다.')
     request['counselor_version'] = counselor
+    if spec.get('intervention_conditions'):
+        condition = request.get('counselor_intervention_condition', spec['default_intervention_condition'])
+        if not isinstance(condition, str) or condition not in [row['id'] for row in spec['intervention_conditions']]:
+            raise ValueError('상담사 개입 조건은 A 또는 B여야 합니다.')
+        request['counselor_intervention_condition'] = condition
     request['counselor_reasoning_budgets'] = reasoning_budget.normalize(request.get('counselor_reasoning_budgets'))
     if spec.get('system_prompt') is not None:
         prompt = request.get('counselor_system_prompt', spec['system_prompt'])
@@ -225,6 +230,8 @@ def create(server, config, body, runtime, base_build):
 def phase(label):
     if label == 'basic_counselor':
         return '기본 상담사 발화 생성'
+    if label in ('Q3p1_counsel', 'Q3p2_counsel', 'Q3p4_counsel'):
+        return label + ' 발화 생성'
     if 'information_observer' in label:
         return '관찰·정보 갱신'
     if 'action_selector' in label:
@@ -235,7 +242,7 @@ def phase(label):
 
 
 def counselor_step(config, session, backend, base_build, emit, cancelled, directory=None):
-    # Only public utterances enter C4, never scenario/profile/state/summary/tool records.
+    # Only public utterances enter counselors, never client profile/state/summary/tool records.
     history = [{'role': 'user' if row['role'] == 'client' else 'assistant', 'content': row['content']}
                for row in session['public_dialogue']]
     usage = {}
@@ -281,15 +288,19 @@ def counselor_step(config, session, backend, base_build, emit, cancelled, direct
                     if isinstance(value, int):
                         usage[key] = usage.get(key, 0) + value
         if not complete or finish != 'stop' or not output.strip():
-            raise ValueError(('C4' if version == 'C4' else '기본 상담사') + ' 모델 응답이 정상 완료되지 않았습니다: ' + str(finish))
+            raise ValueError(('기본 상담사' if version == 'basic' else version) + ' 모델 응답이 정상 완료되지 않았습니다: ' + str(finish))
         emit('model_result', phase=phase(label), iteration=calls, response=output, reasoning=reasoning, finish_reason=finish)
         return output
-    if version == 'basic':
+    if version in counselor_catalog.SINGLE_PROMPT_PATHS:
         public = '\n\n'.join(('내담자' if row['role'] == 'client' else '상담사') + ': ' + row['content']
                               for row in session['public_dialogue'])
-        utterance = call_model(session['settings']['counselor_system_prompt'], user_templates.render('counselor', 'basic', dialogue=public),
-                               'basic_counselor', config['generation']['temperature'], config['generation']['max_tokens']).strip()
-        emit('basic_counselor_record', version='basic', response=utterance)
+        values = {'dialogue': public}
+        if version == 'Q3p4_counsel':
+            values['intervention_condition'] = session['settings']['counselor_intervention_condition']
+        utterance = call_model(session['settings']['counselor_system_prompt'], user_templates.render('counselor', version, **values),
+                               'basic_counselor' if version == 'basic' else version,
+                               config['generation']['temperature'], config['generation']['max_tokens']).strip()
+        emit('basic_counselor_record', version=version, response=utterance)
         return utterance, None, usage
     pipeline = c4_class()(call_model, 'C4')
     if session['counselor_checkpoint']:
@@ -398,6 +409,8 @@ def handle_post(handler, backend, runtime, base_build):
             lock = None
             raise ValueError('같은 세션의 생성이 이미 진행 중입니다.')
         session = read_session(handler.server, sid)
+        if session.get('q3p6_managed'):
+            raise ValueError('Q3p6 관리 세션은 분기 실험 화면에서 실행하세요.')
         if type(body.get('expected_step')) is not int or body['expected_step'] != len(session['steps']):
             raise ValueError('대화 단계가 달라졌습니다. 저장된 세션을 다시 불러오세요.')
         if handler.path.endswith('/controls'):

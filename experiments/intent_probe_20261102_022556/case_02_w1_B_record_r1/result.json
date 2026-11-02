@@ -1,0 +1,19 @@
+{
+  "id": "case_02_w1_B_record_r1",
+  "case": "case_02",
+  "world": "w1",
+  "condition": "B_record",
+  "repeat": 1,
+  "utterance": "그 동료에게 개인적으로 들은 사적인 이야기가 있는데, 제 입으로 그걸 꺼내면 상대의 허락 없이 비밀을 노출하는 것 같아서요. 상담 선생님이 저를 판단하실까 봐 숨긴 건 아니고, 그냥 그분과의 신뢰를 지키고 싶어서 그랬습니다.",
+  "seconds": 1.52,
+  "usage": {
+    "prompt_tokens": 647,
+    "total_tokens": 715,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

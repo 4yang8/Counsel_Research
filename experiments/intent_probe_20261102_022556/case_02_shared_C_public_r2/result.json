@@ -1,0 +1,19 @@
+{
+  "id": "case_02_shared_C_public_r2",
+  "case": "case_02",
+  "world": null,
+  "condition": "C_public",
+  "repeat": 2,
+  "utterance": "그날 일이 계속 머릿속에서 맴돌아서, 여기서 꺼내 놓으면 그 감정이 더 커질 것 같아서요. 그냥 지금은 그 기억을 조금 안전한 곳에 따로 넣어두고 싶은 마음이에요.",
+  "seconds": 0.55,
+  "usage": {
+    "prompt_tokens": 504,
+    "total_tokens": 559,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

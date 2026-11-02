@@ -100,6 +100,13 @@ REGISTRY = {('client', 'Q1', 'user'): {'path': 'src/client/Q1/user.md',
                                                                          '포함)'}},
  ('counselor', 'basic', 'user'): {'path': 'resources/prompts/basic_counselor_user.md',
                                   'variables': {'dialogue': '현재까지의 공개 대화 (상담사/내담자 스크립트)'}},
+ ('counselor', 'Q3p1_counsel', 'user'): {'path': 'src/counselor/Q3p1_counsel/user.md',
+                                         'variables': {'dialogue': '현재까지의 공개 대화 (상담사/내담자 스크립트)'}},
+ ('counselor', 'Q3p2_counsel', 'user'): {'path': 'src/counselor/Q3p2_counsel/user.md',
+                                         'variables': {'dialogue': '현재까지의 공개 대화 (상담사/내담자 스크립트)'}},
+ ('counselor', 'Q3p4_counsel', 'user'): {'path': 'src/counselor/Q3p4_counsel/user.md',
+                                         'variables': {'dialogue': '현재까지의 공개 대화 (상담사/내담자 스크립트)',
+                                                       'intervention_condition': '세션 시작 시 고정한 개입 조건 A 또는 B'}},
  ('counselor', 'P1', 'user'): {'path': 'src/counselor/P1/user.md',
                                'variables': {'dialogue': '현재까지의 공개 대화 (상담사/내담자 스크립트)',
                                              'client_notes': '현재 상담 노트 원문'}},
@@ -231,7 +238,15 @@ REGISTRY[('client','Q3sk','user')]['variables'] = dict(REGISTRY[('client','Q3','
 # Recording variants own editable sources, with the same precommit variables as Q3.
 for _version in ('Q3n','Q3sb','Q3x'):
     REGISTRY[('client',_version,'user')]['variables']=dict(REGISTRY[('client','Q3','user')]['variables'])
+for _version in ('Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'):
+    REGISTRY[('client',_version,'user')]['variables']=dict(REGISTRY[('client','Q3','user')]['variables'])
+for _version, _kind in (('Q3p3','intent_reconstructor'), ('Q3p4','intervention_observer'), ('Q3p5','progress_observer')):
+    REGISTRY[('client',_version,_kind+'_user')] = {
+        'path': 'src/client/'+_version+'/'+_kind+'_user.md',
+        'variables': {'claim_input': '이 호출에 허용된 자료만 담은 JSON'}}
 REGISTRY[('client','Q3sb','note_summarizer_user')]={
     'path':'src/client/Q3sb/note_summarizer_user.md',
     'variables':{'source_bundle':'이번 턴 판단·발화의 전체 reasoning·출력 쌍과 확정 출처 JSON',
                  'previous_notes':'이전 턴까지의 현재 노트 원문'}}
+
+REGISTRY[('counselor','Q3p6_counsel','user')] = {'path':'src/counselor/Q3p6_counsel/user.md','variables':{'dialogue':'공개 대화'}}

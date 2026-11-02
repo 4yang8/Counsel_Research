@@ -73,6 +73,10 @@ def catalog(config):
 
 
 def configure(config, body):
+    from client.claim_experiments import SPECS as CLAIM_EXPERIMENTS, condition as claim_condition
+    selected_version = name(config, body)
+    if selected_version in CLAIM_EXPERIMENTS:
+        body['claim_memory_condition'] = claim_condition(selected_version, body)
     model = body.get('model', config['model'])
     if not isinstance(model, str) or model not in (*MODEL_CHOICES, config['model']):
         raise ValueError('지원하지 않는 모델 선택입니다.')

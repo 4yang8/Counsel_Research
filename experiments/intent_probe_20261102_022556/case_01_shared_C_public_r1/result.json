@@ -1,0 +1,19 @@
+{
+  "id": "case_01_shared_C_public_r1",
+  "case": "case_01",
+  "world": null,
+  "condition": "C_public",
+  "repeat": 1,
+  "utterance": "솔직히 말하면, 그냥 '그래야 할 것 같아서'라고 대답한 것 같아요. 적어본다고 해서 생각이 멈출지 확신은 없지만, 가만히 누워서 그 장면만 반복하는 것보다는 뭔가 다른 행동을 하는 게 낫겠다는 생각이 들었어요.",
+  "seconds": 0.69,
+  "usage": {
+    "prompt_tokens": 521,
+    "total_tokens": 592,
+    "completion_tokens": 71,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

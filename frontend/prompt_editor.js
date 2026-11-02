@@ -32,7 +32,7 @@
   function target(editor){
     const version=selected(editor.role);
     if(editor.skill)return version==='Q3sk'?{role:'client',version,kind:'skill_notes'}:null;
-    if(editor.kind==='trajectory')return ['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(version)?{role:'client',version,kind:'trajectory'}:null;
+    if(editor.kind==='trajectory')return ['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5'].includes(version)?{role:'client',version,kind:'trajectory'}:null;
     if(editor.subagent){
       const kind=$(editor.role+'-subagent-select').value;
       return (editor.role==='client'?clientSubagents():subagents()).some(item=>item.kind===kind)?{role:editor.role,version,kind:editor.userTemplate?kind+'_user':kind}:null;

@@ -1,0 +1,19 @@
+{
+  "id": "case_01_w2_A_notes_r2",
+  "case": "case_01",
+  "world": "w2",
+  "condition": "A_notes",
+  "repeat": 2,
+  "utterance": "사실 그 순간에는 솔직히 기록을 할 마음이 크지 않았어요. 이미 머릿속에서 같은 생각을 반복하고 있는데, 그걸 또 글로 적어야 한다는 게 부담스럽게 느껴졌거든요. 그런데 처음 만난 상담사 선생님이 제안하신 걸 바로 거절하면 비협조적으로 보일까 봐, 그냥 습관적으로 '네'라고 대답했던 것 같아요.",
+  "seconds": 0.95,
+  "usage": {
+    "prompt_tokens": 577,
+    "total_tokens": 666,
+    "completion_tokens": 89,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

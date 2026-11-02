@@ -64,7 +64,7 @@ exec vllm serve Qwen/Qwen3.8-Flash-Next-FP8 \
   --enable-expert-parallel \
   --moe-backend "${MOE_BACKEND:-marlin}" \
   --dtype bfloat16 \
-  --gpu-memory-utilization "${GPU_MEMORY_UTILIZATION:-0.90}" \
+  --gpu-memory-utilization "${GPU_MEMORY_UTILIZATION:-0.95}" \
   --max-num-seqs "${MAX_NUM_SEQS:-64}" \
   --enable-prefix-caching \
   --kv-cache-dtype "${KV_CACHE_DTYPE:-auto}" \

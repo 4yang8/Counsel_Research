@@ -1,0 +1,19 @@
+{
+  "id": "case_02_shared_C_public_r1",
+  "case": "case_02",
+  "world": null,
+  "condition": "C_public",
+  "repeat": 1,
+  "utterance": "그날 일은 아직 정리되지 않은 것 같아요. 그냥 다시 떠올리면 가슴이 답답해져서, 지금은 말하기보다는 그냥 혼자 가만히 있는 게 편할 것 같아서요.",
+  "seconds": 0.92,
+  "usage": {
+    "prompt_tokens": 504,
+    "total_tokens": 555,
+    "completion_tokens": 51,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

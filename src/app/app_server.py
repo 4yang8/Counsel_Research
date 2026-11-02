@@ -14,6 +14,7 @@ from resources.history_cases import load_catalog
 import client.registry as experiment_versions
 import resources.contrast_profiles as contrast_profiles
 import runtime.paired_lab as paired_lab
+import runtime.q3p6 as q3p6
 import storage.file_manager as file_manager
 import storage.session_browser as session_browser
 import app.prompt_files as prompt_files
@@ -95,6 +96,9 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
             if getattr(self, 'path', None)=='/api/config' and status==200:data={**data,'nested_mode':mode,'experiment':experiment}
             return super().json_response(data,status)
         def do_GET(self):
+            if q3p6.handle_get(self):return
+            from app import routing_stats
+            if routing_stats.handle_get(self):return
             import app.client_notes as client_notes
             if client_notes.handle_get(self):return
             if prompt_files.handle_get(self):return
@@ -145,7 +149,11 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
                 except (OSError, ValueError) as error:
                     self.json_response({'error': '그룹1 프로필 조회 실패: ' + str(error)}, 500)
                 return
-            assets={'/':('workspace.html','text/html; charset=utf-8'),
+            assets={'/q3p6':('q3p6.html','text/html; charset=utf-8'),
+                    '/q3p6.js':('q3p6.js','text/javascript'),'/q3p6.css':('q3p6.css','text/css'),
+                    '/':('workspace.html','text/html; charset=utf-8'),
+                    '/routing':('routing.html','text/html; charset=utf-8'),
+                    '/routing.js':('routing.js','text/javascript'),'/routing.css':('routing.css','text/css'),
                     '/lab':('index.html','text/html; charset=utf-8'),
                     '/master_controller.js':('master_controller.js','text/javascript'),
                     '/workspace.js':('workspace.js','text/javascript'),'/workspace.css':('workspace.css','text/css'),
@@ -173,6 +181,7 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
             self.end_headers();self.wfile.write(raw)
 
         def do_POST(self):
+            if q3p6.handle_post(self, backend, runtime, base_build):return
             if prompt_files.handle_post(self):return
             if file_manager.handle_post(self):return
             if self.path in ('/api/paired/create','/api/paired/step','/api/paired/manual','/api/chat'):
@@ -185,6 +194,7 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
     server=backend.make_server(config_path,host=host,port=port,storage_dir=destination)
     locals_server['server']=server
     file_manager.initialize(server)
+    q3p6.initialize(server)
     server.storage_dir.mkdir(parents=True, exist_ok=True)
     server.RequestHandlerClass=Handler
     server.paired_locks = {}

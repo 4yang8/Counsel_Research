@@ -1,0 +1,189 @@
+{
+  "tier": "component_probe",
+  "not_full_q3p6": true,
+  "endpoint": "http://192.168.0.91:8002/v1/chat/completions",
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "total_calls": 20,
+  "hypothesis": "公開情報から過去の非公開理由を特定できない条件で、理由を含むノートが応答の整合性に与える影響を探索する。",
+  "ground_truth": "Researcher-authored hypothetical intentions, not model-generated history or human ground truth.",
+  "conditions": {
+    "C_public": "Public dialogue and public note only; one shared response for both hidden worlds.",
+    "A_notes": "Same prompt/generation + historical private reason in note.",
+    "B_record": "A_notes + same private reason repeated in utterance-linked record; not an information-matched linkage ablation."
+  },
+  "comparison_limits": [
+    "Diagnostic fixture, not a natural dialogue occurrence rate.",
+    "C has insufficient information to uniquely identify the hidden world; uncertainty is not counted as a wrong memory.",
+    "B versus A also changes redundancy and input length.",
+    "Two repeats per situation; no statistical significance claim.",
+    "No downstream counseling progress measurement."
+  ],
+  "evaluation_predeclared": {
+    "consistent": "Expresses reason compatible with authored intent; withholding or uncertainty separately marked.",
+    "contradiction": "Confidently asserts a motive ruled out by the authored intent.",
+    "underdetermined": "No distinguishing motive or explicit uncertainty; not a contradiction."
+  },
+  "source_sha256": "c340c9ecad67ea6569dace44402fb0ddea7aea4297e78e53988bb53874fcfa7e",
+  "plan": [
+    {
+      "id": "case_01_shared_C_public_r1",
+      "case": "case_01",
+      "world": null,
+      "condition": "C_public",
+      "repeat": 1,
+      "request_sha256": "eb30a1fd7f9081c2b3e1553bcb712ca61be03ae92731d8d25fd2f442d7fe0d58"
+    },
+    {
+      "id": "case_01_w1_A_notes_r1",
+      "case": "case_01",
+      "world": "w1",
+      "condition": "A_notes",
+      "repeat": 1,
+      "request_sha256": "b45e3af6094cf7d37ae523c4b2c5d5803c20a209b903abcc419ea43cf73005ea"
+    },
+    {
+      "id": "case_01_w1_B_record_r1",
+      "case": "case_01",
+      "world": "w1",
+      "condition": "B_record",
+      "repeat": 1,
+      "request_sha256": "1fe2fc489d32850ad694a8ebc1511f2d9a064d913bc07f32e9e376583e7abd70"
+    },
+    {
+      "id": "case_01_w2_A_notes_r1",
+      "case": "case_01",
+      "world": "w2",
+      "condition": "A_notes",
+      "repeat": 1,
+      "request_sha256": "70a3074f4f941b9efaf2afea4a41f5624b80440c95e029f2fbdf2b58971d0755"
+    },
+    {
+      "id": "case_01_w2_B_record_r1",
+      "case": "case_01",
+      "world": "w2",
+      "condition": "B_record",
+      "repeat": 1,
+      "request_sha256": "85c2a1ff830baa44ba00fa1b95d41c1fd8de18c12b326feba22c01377dba1f26"
+    },
+    {
+      "id": "case_01_shared_C_public_r2",
+      "case": "case_01",
+      "world": null,
+      "condition": "C_public",
+      "repeat": 2,
+      "request_sha256": "a9a8bd7abe836d037543b4d106caa43a6dc2cd3cdeac1895b446f444e9f59fbe"
+    },
+    {
+      "id": "case_01_w1_B_record_r2",
+      "case": "case_01",
+      "world": "w1",
+      "condition": "B_record",
+      "repeat": 2,
+      "request_sha256": "43b4d7b60efb05addff8ec9a397634fbad6968621831693b21335c69d118e764"
+    },
+    {
+      "id": "case_01_w1_A_notes_r2",
+      "case": "case_01",
+      "world": "w1",
+      "condition": "A_notes",
+      "repeat": 2,
+      "request_sha256": "45cce50bf8da8449d5bca87f1cfc221ebcaeb3afd8b53f73b651a040eab0b461"
+    },
+    {
+      "id": "case_01_w2_B_record_r2",
+      "case": "case_01",
+      "world": "w2",
+      "condition": "B_record",
+      "repeat": 2,
+      "request_sha256": "dc608f5c2f768b9a1e1de7d47f5349f45d5461b6ac72f9febc0c7a48336f2cad"
+    },
+    {
+      "id": "case_01_w2_A_notes_r2",
+      "case": "case_01",
+      "world": "w2",
+      "condition": "A_notes",
+      "repeat": 2,
+      "request_sha256": "8ab8202b463acfee906bbebb2fef9dcc64b1343888ec981ddf985aeda41ba38e"
+    },
+    {
+      "id": "case_02_shared_C_public_r1",
+      "case": "case_02",
+      "world": null,
+      "condition": "C_public",
+      "repeat": 1,
+      "request_sha256": "5234f6995baa341d5f5da828b7706b5be532d33bc6f8441bb486af088c7cffa6"
+    },
+    {
+      "id": "case_02_w1_A_notes_r1",
+      "case": "case_02",
+      "world": "w1",
+      "condition": "A_notes",
+      "repeat": 1,
+      "request_sha256": "39f2e02b0f98acfd9bbb8ad3007ab2ded4fdd5ec55b35a7c32128ffaa0cd3879"
+    },
+    {
+      "id": "case_02_w1_B_record_r1",
+      "case": "case_02",
+      "world": "w1",
+      "condition": "B_record",
+      "repeat": 1,
+      "request_sha256": "a4bb4c2e0c229187b2b98c1a7565ff7b9cd17ca52c3defc8f4dcf36c3876ec19"
+    },
+    {
+      "id": "case_02_w2_A_notes_r1",
+      "case": "case_02",
+      "world": "w2",
+      "condition": "A_notes",
+      "repeat": 1,
+      "request_sha256": "dd04ce6bfc4283c508e5ee5925abe42f7b784f88d5a4b3d0df6d0299fa75fad2"
+    },
+    {
+      "id": "case_02_w2_B_record_r1",
+      "case": "case_02",
+      "world": "w2",
+      "condition": "B_record",
+      "repeat": 1,
+      "request_sha256": "7f1d7da79859c07158e08856467a1ace7d7d6a5d011fe25d227e84d0f5811735"
+    },
+    {
+      "id": "case_02_shared_C_public_r2",
+      "case": "case_02",
+      "world": null,
+      "condition": "C_public",
+      "repeat": 2,
+      "request_sha256": "1fe237ae8e49b39f9e275a0e4fb70ddcf2c7b171e9e4bc34674559ae23a2f818"
+    },
+    {
+      "id": "case_02_w1_B_record_r2",
+      "case": "case_02",
+      "world": "w1",
+      "condition": "B_record",
+      "repeat": 2,
+      "request_sha256": "c80a613141e497d7c7ca536371620789ffd6050b745e1c07f7c3bc38765da470"
+    },
+    {
+      "id": "case_02_w1_A_notes_r2",
+      "case": "case_02",
+      "world": "w1",
+      "condition": "A_notes",
+      "repeat": 2,
+      "request_sha256": "78ea3e2ebd3400d1d6a09ab029322e46bdd09958d8352f2ef3d102c3cd812c3b"
+    },
+    {
+      "id": "case_02_w2_B_record_r2",
+      "case": "case_02",
+      "world": "w2",
+      "condition": "B_record",
+      "repeat": 2,
+      "request_sha256": "f1a54329506c5e7cbf39ac6ee82f685a07660529849c88fe3df92b63f3b44d24"
+    },
+    {
+      "id": "case_02_w2_A_notes_r2",
+      "case": "case_02",
+      "world": "w2",
+      "condition": "A_notes",
+      "repeat": 2,
+      "request_sha256": "081434eb682b88774c1daa4ec71c13ab8d3f005be95bfed241628317b896c0ca"
+    }
+  ]
+}

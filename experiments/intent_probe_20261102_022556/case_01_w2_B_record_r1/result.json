@@ -1,0 +1,19 @@
+{
+  "id": "case_01_w2_B_record_r1",
+  "case": "case_01",
+  "world": "w2",
+  "condition": "B_record",
+  "repeat": 1,
+  "utterance": "솔직히 말씀드리면, 그때는 바로 거절하기가 좀 부담스러워서 네라고 했지만, 사실은 또 그 생각을 글로 옮기는 게 오히려 더 큰 부담으로 느껴질 것 같아서 망설임이 컸어요.",
+  "seconds": 0.69,
+  "usage": {
+    "prompt_tokens": 665,
+    "total_tokens": 725,
+    "completion_tokens": 60,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

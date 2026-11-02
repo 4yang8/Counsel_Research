@@ -1,0 +1,19 @@
+{
+  "id": "case_02_w1_B_record_r2",
+  "case": "case_02",
+  "world": "w1",
+  "condition": "B_record",
+  "repeat": 2,
+  "utterance": "그날 일에는 동료에게만 말한 개인적인 사정도 섞여 있어서, 그분 허락 없이 제가 여기서 다 꺼내놓는 건 좀 조심스러웠어요. 상담 선생님이 저를 판단하실까 봐 숨긴 건 아니고요.",
+  "seconds": 1.47,
+  "usage": {
+    "prompt_tokens": 647,
+    "total_tokens": 705,
+    "completion_tokens": 58,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

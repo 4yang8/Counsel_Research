@@ -19,7 +19,7 @@ py-modules = ["project_paths"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["app*", "client*", "counselor*", "runtime*", "storage*", "resources*"]
+include = ["app*", "analysis*", "client*", "counselor*", "runtime*", "storage*", "resources*"]
 
 [tool.setuptools.package-data]
 "*" = ["*.md", "*.json", "*.txt", "guides/*.md", "skills/*/SKILL.md"]

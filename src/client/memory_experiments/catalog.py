@@ -3,8 +3,12 @@ import threading
 from importlib.util import spec_from_file_location, module_from_spec
 from pathlib import Path
 from client.Q2a_agentic_memory_F.settings import OPTIONS as F_OPTIONS
+from client.claim_experiments import SPECS as CLAIM_EXPERIMENTS
 
 SPECS = {
+    **{version: {'condition': version, 'label': version+' · '+spec[1],
+                 'select_notes': False, 'retrieve': True, 'turn_goal': True}
+       for version, spec in CLAIM_EXPERIMENTS.items()},
     'Q2a_note_select': {'condition':'B','label':'B · 관련 노트 선택','select_notes':True,'retrieve':False,'turn_goal':False},
     'Q2a_note_retrieve': {'condition':'C','label':'C · 노트 선택 + 능동 조회','select_notes':True,'retrieve':True,'turn_goal':False},
     'Q2a_turn_goal': {'condition':'D','label':'D · 대화 의도 / 표현 계획','select_notes':False,'retrieve':False,'turn_goal':True},
@@ -28,6 +32,9 @@ def get_runtime(version):
         return _RUNTIMES[version]
 
 def _create_runtime(version):
+    if version in CLAIM_EXPERIMENTS:
+        from importlib import import_module
+        return import_module('client.'+version+'.runtime')._runtime
     if version in ('Q3n','Q3sb','Q3x'):
         from importlib import import_module
         return import_module('client.'+version+'.runtime')._runtime

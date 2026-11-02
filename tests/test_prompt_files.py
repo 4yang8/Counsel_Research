@@ -27,7 +27,7 @@ class PromptFileTests(unittest.TestCase):
             **{key: source[key] for key in ('role', 'version', 'kind', 'revision')}, 'content': content}))
 
     def test_all_editors_save_the_actual_source_and_catalogs_read_it(self):
-        targets = [('counselor', version, 'system') for version in ('basic', 'P1', 'P2', 'P3', 'P3a')]
+        targets = [('counselor', version, 'system') for version in ('basic', 'Q3p1_counsel', 'Q3p2_counsel', 'Q3p4_counsel', 'P1', 'P2', 'P3', 'P3a')]
         targets += [('client', 'basic', 'system'), ('client', 'state_summary', 'system'),
                     ('client', 'state_summary', 'summary'), ('counselor', 'P3a', 'guide_agent')]
         for role, version, kind in targets:

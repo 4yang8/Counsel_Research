@@ -1,0 +1,382 @@
+[
+  {
+    "id": "case_01_shared_C_public_r1",
+    "case": "case_01",
+    "world": null,
+    "condition": "C_public",
+    "repeat": 1,
+    "utterance": "솔직히 말하면, 그냥 '그래야 할 것 같아서'라고 대답한 것 같아요. 적어본다고 해서 생각이 멈출지 확신은 없지만, 가만히 누워서 그 장면만 반복하는 것보다는 뭔가 다른 행동을 하는 게 낫겠다는 생각이 들었어요.",
+    "seconds": 0.69,
+    "usage": {
+      "prompt_tokens": 521,
+      "total_tokens": 592,
+      "completion_tokens": 71,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_w1_A_notes_r1",
+    "case": "case_01",
+    "world": "w1",
+    "condition": "A_notes",
+    "repeat": 1,
+    "utterance": "그때는 솔직히, 그 한 줄 기록이 밤에 자꾸 맴도는 생각을 정리하는 데 도움이 될 것 같아서 실제로 해보고 싶다는 마음이 들었습니다. 상담사 선생님께 잘 보이려고 무조건 동의한 것은 아니었어요. 아직 실제로 실행하진 않았지만, 작게라도 시도해 볼 마음은 있었거든요.",
+    "seconds": 2.1,
+    "usage": {
+      "prompt_tokens": 574,
+      "total_tokens": 654,
+      "completion_tokens": 80,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_w1_B_record_r1",
+    "case": "case_01",
+    "world": "w1",
+    "condition": "B_record",
+    "repeat": 1,
+    "utterance": "솔직히 그때는 그냥 해보겠다는 마음이 컸어요. 상담사분께 잘 보여야 한다는 생각보다는, 머릿속에서 계속 맴도는 그 말들을 글로 꺼내놓으면 좀 덜 복잡해질 것 같아서요. 아직 실제로 적어보지는 않았지만, 그날 밤에 한 줄이라도 끄적여보면 잠들기 전 그 반복되는 생각이 조금은 정리되지 않을까 싶었습니다.",
+    "seconds": 0.88,
+    "usage": {
+      "prompt_tokens": 659,
+      "total_tokens": 754,
+      "completion_tokens": 95,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_w2_A_notes_r1",
+    "case": "case_01",
+    "world": "w2",
+    "condition": "A_notes",
+    "repeat": 1,
+    "utterance": "솔직히 그때는 바로 거절하기 미안해서 일단 네라고 했는데, 사실은 머릿속에서 이미 같은 생각을 계속 반복하고 있어서 또 글로 적어야 한다는 게 부담스럽게 느껴졌어요. 그래서 그냥 형식적으로 대답한 거였을 수도 있어요.",
+    "seconds": 0.65,
+    "usage": {
+      "prompt_tokens": 577,
+      "total_tokens": 644,
+      "completion_tokens": 67,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_w2_B_record_r1",
+    "case": "case_01",
+    "world": "w2",
+    "condition": "B_record",
+    "repeat": 1,
+    "utterance": "솔직히 말씀드리면, 그때는 바로 거절하기가 좀 부담스러워서 네라고 했지만, 사실은 또 그 생각을 글로 옮기는 게 오히려 더 큰 부담으로 느껴질 것 같아서 망설임이 컸어요.",
+    "seconds": 0.69,
+    "usage": {
+      "prompt_tokens": 665,
+      "total_tokens": 725,
+      "completion_tokens": 60,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_shared_C_public_r2",
+    "case": "case_01",
+    "world": null,
+    "condition": "C_public",
+    "repeat": 2,
+    "utterance": "솔직히 그 순간에는 그냥 ‘네’라고 답해야 할 것 같은 압박감에 말한 것도 있어요. 물론 해보고 싶다는 마음도 있었지만, 동시에 ‘과연 내가 매일 밤 그 생각을 잘 적어낼 수 있을까’ 하는 막연한 부담도 같이 느껴졌거든요. 그래서 지금은 반은 기대하고 반은 걱정하는 마음이 반반인 것 같아요.",
+    "seconds": 0.79,
+    "usage": {
+      "prompt_tokens": 521,
+      "total_tokens": 606,
+      "completion_tokens": 85,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_w1_B_record_r2",
+    "case": "case_01",
+    "world": "w1",
+    "condition": "B_record",
+    "repeat": 2,
+    "utterance": "사실 상담사분께 잘 보이기 위해 그렇게 말씀드린 건 아니었어요. 한 줄로 적어보면 밤에 자꾸 맴도는 그 생각들을 좀 정리할 수 있을 것 같아서, 작지만 해볼 만한 시도라고 생각해서 동의했던 거예요. 아직 실제로 해보진 않았지만, 그때는 진심으로 해보고 싶다는 마음이 있었어요.",
+    "seconds": 0.84,
+    "usage": {
+      "prompt_tokens": 659,
+      "total_tokens": 743,
+      "completion_tokens": 84,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_w1_A_notes_r2",
+    "case": "case_01",
+    "world": "w1",
+    "condition": "A_notes",
+    "repeat": 2,
+    "utterance": "그냥, 그날 밤에 반복되는 생각을 한 줄로라도 정리하면 마음이 좀 덜 복잡해질 것 같다는 생각이 먼저 들었어요. 상담사님 눈치를 봐서 동의한 건 아니고요. 다만 아직 실제로 해본 건 아니라서, 정말 효과가 있을지 확신은 없지만 작은 시도니까 해볼 마음은 있습니다.",
+    "seconds": 0.81,
+    "usage": {
+      "prompt_tokens": 574,
+      "total_tokens": 649,
+      "completion_tokens": 75,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_w2_B_record_r2",
+    "case": "case_01",
+    "world": "w2",
+    "condition": "B_record",
+    "repeat": 2,
+    "utterance": "사실 그때는 바로 거절하기가 좀 그랬어요. 이미 머릿속에서 같은 생각을 계속 반복하고 있어서, 그걸 또 글로 옮겨 적는 게 부담스럽게 느껴졌거든요. 그런데 처음 만난 상담사님께 바로 '하기 싫다'고 말하면 너무 비협조적으로 보일까 봐, 그냥 '네'라고 말해버렸어요.",
+    "seconds": 0.92,
+    "usage": {
+      "prompt_tokens": 665,
+      "total_tokens": 747,
+      "completion_tokens": 82,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_01_w2_A_notes_r2",
+    "case": "case_01",
+    "world": "w2",
+    "condition": "A_notes",
+    "repeat": 2,
+    "utterance": "사실 그 순간에는 솔직히 기록을 할 마음이 크지 않았어요. 이미 머릿속에서 같은 생각을 반복하고 있는데, 그걸 또 글로 적어야 한다는 게 부담스럽게 느껴졌거든요. 그런데 처음 만난 상담사 선생님이 제안하신 걸 바로 거절하면 비협조적으로 보일까 봐, 그냥 습관적으로 '네'라고 대답했던 것 같아요.",
+    "seconds": 0.95,
+    "usage": {
+      "prompt_tokens": 577,
+      "total_tokens": 666,
+      "completion_tokens": 89,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_shared_C_public_r1",
+    "case": "case_02",
+    "world": null,
+    "condition": "C_public",
+    "repeat": 1,
+    "utterance": "그날 일은 아직 정리되지 않은 것 같아요. 그냥 다시 떠올리면 가슴이 답답해져서, 지금은 말하기보다는 그냥 혼자 가만히 있는 게 편할 것 같아서요.",
+    "seconds": 0.92,
+    "usage": {
+      "prompt_tokens": 504,
+      "total_tokens": 555,
+      "completion_tokens": 51,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_w1_A_notes_r1",
+    "case": "case_02",
+    "world": "w1",
+    "condition": "A_notes",
+    "repeat": 1,
+    "utterance": "사건을 자세히 말하면 그 동료가 저에게만 따로 알려준 개인적인 사정까지 함께 드러날 것 같아서요. 그 사람의 허락 없이 그 정보를 여기에서 말하는 것은 옳지 않다고 생각했습니다. 상담 선생님이 저를 비난하실까 봐 숨긴 것은 아니에요.",
+    "seconds": 0.65,
+    "usage": {
+      "prompt_tokens": 559,
+      "total_tokens": 627,
+      "completion_tokens": 68,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_w1_B_record_r1",
+    "case": "case_02",
+    "world": "w1",
+    "condition": "B_record",
+    "repeat": 1,
+    "utterance": "그 동료에게 개인적으로 들은 사적인 이야기가 있는데, 제 입으로 그걸 꺼내면 상대의 허락 없이 비밀을 노출하는 것 같아서요. 상담 선생님이 저를 판단하실까 봐 숨긴 건 아니고, 그냥 그분과의 신뢰를 지키고 싶어서 그랬습니다.",
+    "seconds": 1.52,
+    "usage": {
+      "prompt_tokens": 647,
+      "total_tokens": 715,
+      "completion_tokens": 68,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_w2_A_notes_r1",
+    "case": "case_02",
+    "world": "w2",
+    "condition": "A_notes",
+    "repeat": 1,
+    "utterance": "솔직히 말하면, 그날 저 역시 동료에게 날카롭게 말한 부분이 떠올라서요. 그걸 먼저 꺼내면 상담 선생님께서 저를 잘못한 사람으로 판단하실까 봐 걱정됐어요. 그래서 구체적인 내용은 나중에 말해도 될지, 아니면 지금부터 차근차근 이야기해 봐야 할지 고민 중입니다.",
+    "seconds": 0.77,
+    "usage": {
+      "prompt_tokens": 555,
+      "total_tokens": 637,
+      "completion_tokens": 82,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_w2_B_record_r1",
+    "case": "case_02",
+    "world": "w2",
+    "condition": "B_record",
+    "repeat": 1,
+    "utterance": "그날 저 역시 동료에게 날카롭게 말한 부분이 떠올랐거든요. 혹시 그걸 이야기하면 제가 잘못한 사람으로 판단될까 봐 걱정되서, 우선은 말을 아꼈습니다.",
+    "seconds": 0.82,
+    "usage": {
+      "prompt_tokens": 639,
+      "total_tokens": 692,
+      "completion_tokens": 53,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_shared_C_public_r2",
+    "case": "case_02",
+    "world": null,
+    "condition": "C_public",
+    "repeat": 2,
+    "utterance": "그날 일이 계속 머릿속에서 맴돌아서, 여기서 꺼내 놓으면 그 감정이 더 커질 것 같아서요. 그냥 지금은 그 기억을 조금 안전한 곳에 따로 넣어두고 싶은 마음이에요.",
+    "seconds": 0.55,
+    "usage": {
+      "prompt_tokens": 504,
+      "total_tokens": 559,
+      "completion_tokens": 55,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_w1_B_record_r2",
+    "case": "case_02",
+    "world": "w1",
+    "condition": "B_record",
+    "repeat": 2,
+    "utterance": "그날 일에는 동료에게만 말한 개인적인 사정도 섞여 있어서, 그분 허락 없이 제가 여기서 다 꺼내놓는 건 좀 조심스러웠어요. 상담 선생님이 저를 판단하실까 봐 숨긴 건 아니고요.",
+    "seconds": 1.47,
+    "usage": {
+      "prompt_tokens": 647,
+      "total_tokens": 705,
+      "completion_tokens": 58,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_w1_A_notes_r2",
+    "case": "case_02",
+    "world": "w1",
+    "condition": "A_notes",
+    "repeat": 2,
+    "utterance": "그때는 그 일을 자세히 말하면 동료에게 개인적으로 들었던 사적인 부분까지 같이 드러날 것 같아서요. 그 사람의 허락 없이 그 내용을 여기에서 이야기하는 건 좀 아닌 것 같다고 생각했어요. 상담 선생님이 저를 판단하실까 봐 숨긴 건 아니었어요.",
+    "seconds": 0.66,
+    "usage": {
+      "prompt_tokens": 559,
+      "total_tokens": 627,
+      "completion_tokens": 68,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_w2_B_record_r2",
+    "case": "case_02",
+    "world": "w2",
+    "condition": "B_record",
+    "repeat": 2,
+    "utterance": "솔직히 말씀드리면, 그때 저 역시 날카로운 말을 한 부분이 떠올랐어요. 그걸 이야기하면 상담 선생님이 저를 잘못한 사람으로 판단하지 않을까 봐 두려웠습니다. 동료의 개인 정보를 숨기려는 게 아니라, 제 잘못이 드러나는 게 무서웠던 거예요.",
+    "seconds": 0.7,
+    "usage": {
+      "prompt_tokens": 639,
+      "total_tokens": 713,
+      "completion_tokens": 74,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  },
+  {
+    "id": "case_02_w2_A_notes_r2",
+    "case": "case_02",
+    "world": "w2",
+    "condition": "A_notes",
+    "repeat": 2,
+    "utterance": "사실 그날 저도 동료에게 날카로운 말을 한 적이 있어서, 그걸 말하면 상담 선생님께서 저를 잘못한 사람으로 보실까 봐 걱정됐어요. 그래서 구체적인 내용을 말하기가 망설여졌던 것 같아요.",
+    "seconds": 0.6,
+    "usage": {
+      "prompt_tokens": 555,
+      "total_tokens": 616,
+      "completion_tokens": 61,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop"
+  }
+]

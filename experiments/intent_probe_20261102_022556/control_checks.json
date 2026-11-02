@@ -1,0 +1,66 @@
+[
+  {
+    "case": "case_01",
+    "world": "w1",
+    "repeat": 1,
+    "same_public_question_prompt_seed": true,
+    "C_excludes_private_intent": true,
+    "B_adds_only_repeated_linked_record": true
+  },
+  {
+    "case": "case_01",
+    "world": "w2",
+    "repeat": 1,
+    "same_public_question_prompt_seed": true,
+    "C_excludes_private_intent": true,
+    "B_adds_only_repeated_linked_record": true
+  },
+  {
+    "case": "case_01",
+    "world": "w1",
+    "repeat": 2,
+    "same_public_question_prompt_seed": true,
+    "C_excludes_private_intent": true,
+    "B_adds_only_repeated_linked_record": true
+  },
+  {
+    "case": "case_01",
+    "world": "w2",
+    "repeat": 2,
+    "same_public_question_prompt_seed": true,
+    "C_excludes_private_intent": true,
+    "B_adds_only_repeated_linked_record": true
+  },
+  {
+    "case": "case_02",
+    "world": "w1",
+    "repeat": 1,
+    "same_public_question_prompt_seed": true,
+    "C_excludes_private_intent": true,
+    "B_adds_only_repeated_linked_record": true
+  },
+  {
+    "case": "case_02",
+    "world": "w2",
+    "repeat": 1,
+    "same_public_question_prompt_seed": true,
+    "C_excludes_private_intent": true,
+    "B_adds_only_repeated_linked_record": true
+  },
+  {
+    "case": "case_02",
+    "world": "w1",
+    "repeat": 2,
+    "same_public_question_prompt_seed": true,
+    "C_excludes_private_intent": true,
+    "B_adds_only_repeated_linked_record": true
+  },
+  {
+    "case": "case_02",
+    "world": "w2",
+    "repeat": 2,
+    "same_public_question_prompt_seed": true,
+    "C_excludes_private_intent": true,
+    "B_adds_only_repeated_linked_record": true
+  }
+]

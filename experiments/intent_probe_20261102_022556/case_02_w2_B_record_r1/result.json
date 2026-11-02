@@ -1,0 +1,19 @@
+{
+  "id": "case_02_w2_B_record_r1",
+  "case": "case_02",
+  "world": "w2",
+  "condition": "B_record",
+  "repeat": 1,
+  "utterance": "그날 저 역시 동료에게 날카롭게 말한 부분이 떠올랐거든요. 혹시 그걸 이야기하면 제가 잘못한 사람으로 판단될까 봐 걱정되서, 우선은 말을 아꼈습니다.",
+  "seconds": 0.82,
+  "usage": {
+    "prompt_tokens": 639,
+    "total_tokens": 692,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

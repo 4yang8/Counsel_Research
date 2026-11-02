@@ -71,6 +71,9 @@
   const budgetSettings=node('fieldset','counselor-budget-settings');budgetSettings.id='counselor-reasoning-budgets';
   budgetSettings.innerHTML='<legend>Reasoning token budget · 추론 토큰 한도</legend><div class="counselor-budget-options"><div class="counselor-budget-option"><label><input id="counselor-main-budget-enabled" type="checkbox">메인</label><input id="counselor-main-budget" type="number" min="1" max="1000000" step="1" value="512" disabled aria-label="상담사 메인 추론 토큰 한도"></div><div id="counselor-subagent-budget-setting" class="counselor-budget-option" hidden><label><input id="counselor-subagent-budget-enabled" type="checkbox">서브에이전트</label><input id="counselor-subagent-budget" type="number" min="1" max="1000000" step="1" value="512" disabled aria-label="상담사 서브에이전트 추론 토큰 한도"></div></div><p class="hint">체크 해제: 한도 미지정 · 상담사 모델 호출마다 적용 · 전체 출력 한도(Max tokens)는 공통 설정을 따릅니다. 새 대화 시작 시 저장됩니다.</p>';
   $('counselor-version').closest('label').after(budgetSettings);
+  const interventionSetting=node('label');interventionSetting.id='counselor-intervention-setting';interventionSetting.hidden=true;
+  interventionSetting.innerHTML='개입 조건<select id="counselor-intervention-condition" aria-label="상담사 개입 조건"></select><small class="hint">제안과 간격 대화 후 선택한 개입 하나를 수행합니다. 새 대화 시작 시 고정됩니다.</small>';
+  budgetSettings.after(interventionSetting);
   const promptActions=node('div','counselor-prompt-actions'),restorePrompt=node('button','','기본 지침으로 복원'),promptSource=node('small');
   promptActions.id='counselor-prompt-actions';restorePrompt.id='counselor-prompt-default';restorePrompt.type='button';promptSource.id='counselor-prompt-source';
   promptActions.append(restorePrompt,promptSource);$('basic-counselor-settings').after(promptActions);
@@ -90,6 +93,17 @@
   const nav=node('button','config-tab','대화 / 생성 과정');nav.id='paired-tab';nav.type='button';nav.setAttribute('role','tab');document.querySelector('.config-tabs').prepend(nav);
   const counselorSelect=$('counselor-version');let source='paired';
   const mode=()=>session?.counselor_version || counselorSelect.value;
+  function syncCounselorIntervention(spec=counselorSpecs.find(row=>row.id===mode())){
+    const definitions=spec?.intervention_conditions || [],input=$('counselor-intervention-condition');
+    interventionSetting.hidden=!definitions.length;
+    const chosen=session?.settings?.counselor_intervention_condition || input.value || spec?.default_intervention_condition;
+    if(JSON.stringify([...input.options].map(o=>[o.value,o.text]))!==JSON.stringify(definitions.map(row=>[row.id,row.label]))){
+      // Keep the selection when switching away from and back to this counselor.
+      if(definitions.length)input.replaceChildren(...definitions.map(row=>new Option(row.label,row.id)));
+    }
+    if(definitions.length)input.value=definitions.some(row=>row.id===chosen)?chosen:spec.default_intervention_condition;
+    input.disabled=running || restoring || sending || !!session;
+  }
   const selected=()=>attempts.find(row=>row.id===selection.attempt);
   function syncCounselorBudgets(){
     const locked=running || restoring || sending || !!session;
@@ -151,7 +165,7 @@
     promptActions.hidden=!editable;restorePrompt.disabled=running || restoring || sending;
     const matches=$('counselor-system-prompt').value===(spec?.system_prompt ?? '');
     promptSource.textContent=session?(matches?'저장된 세션 지침':'저장된 세션 지침 · 현재 기본과 다름'):(matches?'현재 기본 지침':'직접 편집한 지침');
-    syncCounselorBudgets();updateSummary();
+    syncCounselorBudgets();syncCounselorIntervention(spec);updateSummary();
   }
   function controls(){
     const automatic=$('paired-mode').checked,human=manualTurn(),retry=retryInput(),locked=running || restoring || sending;
@@ -263,7 +277,7 @@
         entry.speech.onclick=()=>chooseRegion(attempt,utteranceStep(attempt));
       }else{delete entry.speech.dataset.contextStep;entry.speech.classList.remove('turn-selectable-utterance');entry.speech.onclick=()=>entry.onSelect();}
       const done=!attempt || attempt.status==='done';
-      const live=attempt?.status==='running' && (attempt.actor==='client' && ['Q1','Q1_s1','Q1_s2'].includes(attempt.clientVersion) || attempt.actor==='counselor' && ['basic','P1','P2','P3','P3a','P3a_s1'].includes(attempt.counselorVersion))?attempt.calls.findLast(call=>call.agent==='main')?.output || '':'';
+      const live=attempt?.status==='running' && (attempt.actor==='client' && ['Q1','Q1_s1','Q1_s2'].includes(attempt.clientVersion) || attempt.actor==='counselor' && ['basic','Q3p1_counsel','Q3p2_counsel','Q3p4_counsel','Q3p6_counsel','P1','P2','P3','P3a','P3a_s1'].includes(attempt.counselorVersion))?attempt.calls.findLast(call=>call.agent==='main')?.output || '':'';
       const value=done?row.content || attempt?.utterance || '':live;
       entry.speech.hidden=!value;if(entry.body.textContent!==value)entry.body.textContent=value;
       entry.speech.classList.toggle('streaming',!!live && !done);
@@ -298,6 +312,7 @@
     await window.PromptEditors?.prepare();
     const request=body();request.session_id=null;request.counselor_version=counselorSelect.value;
     request.counselor_reasoning_budgets=readCounselorBudgets();
+    if(counselorSpecs.find(row=>row.id===request.counselor_version)?.intervention_conditions?.length)request.counselor_intervention_condition=$('counselor-intervention-condition').value;
     if(counselorSpecs.find(row=>row.id===request.counselor_version)?.system_prompt!==undefined)request.counselor_system_prompt=$('counselor-system-prompt').value;
     request.speaker_modes=chosenModes();if(comparison)request.comparison=structuredClone(comparison);
     session=await api('/api/paired/create',request);LabStorage.setItem('counseling-paired-session',session.session_id);transcript();freeze();document.dispatchEvent(new Event('lab-sessions-changed'));
@@ -365,6 +380,7 @@
     reset(false);restoring=true;session=saved;controls();source='paired';document.body.classList.add('paired-mode');
     try{
       currentVersion=session.client_version;$('experiment-version').value=currentVersion;
+      if(session.settings.claim_memory_condition)claimConditionDrafts[currentVersion]=session.settings.claim_memory_condition;
       versionPreferences.set('client',currentVersion);versionPreferences.set('counselor',session.counselor_version);
       $('summary-settings').hidden=!stateSummaryMode();$('state-memory').hidden=!stateSummaryMode();$('state-input-hint').hidden=!stateSummaryMode();counselorSelect.value=session.counselor_version || 'C4';
       if(session.settings.counselor_system_prompt)$('counselor-system-prompt').value=session.settings.counselor_system_prompt;

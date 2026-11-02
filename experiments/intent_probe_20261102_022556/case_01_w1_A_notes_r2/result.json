@@ -1,0 +1,19 @@
+{
+  "id": "case_01_w1_A_notes_r2",
+  "case": "case_01",
+  "world": "w1",
+  "condition": "A_notes",
+  "repeat": 2,
+  "utterance": "그냥, 그날 밤에 반복되는 생각을 한 줄로라도 정리하면 마음이 좀 덜 복잡해질 것 같다는 생각이 먼저 들었어요. 상담사님 눈치를 봐서 동의한 건 아니고요. 다만 아직 실제로 해본 건 아니라서, 정말 효과가 있을지 확신은 없지만 작은 시도니까 해볼 마음은 있습니다.",
+  "seconds": 0.81,
+  "usage": {
+    "prompt_tokens": 574,
+    "total_tokens": 649,
+    "completion_tokens": 75,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

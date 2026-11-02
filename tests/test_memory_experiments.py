@@ -32,11 +32,11 @@ class MemoryExperiments(unittest.TestCase):
         Model.q2a_actions=None;Model.q1_router_response=None;Model.q2a_finish='stop'
         close(self.server,self.model,self.temp)
     def get(self,path):return json.load(urlopen(f'http://127.0.0.1:{self.server.server_port}'+path))
-    def create(self,v):
+    def create(self,v,**extra):
         cfg=self.get('/api/config');scenario=copy.deepcopy(cfg['scenario']);scenario['dialogue_format']='messages';scenario['dialogue']=[];scenario.pop('dialogue_turns',None)
         return json.loads(post(self.server,'/api/paired/create',{'experiment_version':v,'counselor_version':'basic','scenario':scenario,
             'system_prompt':registry.client_runtime(v).specification()['system_prompt'],'generation':cfg['generation'],
-            'messages':[{'role':'user','content':'준비할 시간을 갖고 이야기해도 괜찮아요.'}]}))
+            'messages':[{'role':'user','content':'준비할 시간을 갖고 이야기해도 괜찮아요.'}],**extra}))
     def step(self,s):
         return [json.loads(l)['event'] for l in post(self.server,'/api/paired/step',{'session_id':s['session_id'],'expected_step':len(s['steps'])}).splitlines()]
     def seed(self,s):
@@ -54,7 +54,7 @@ class MemoryExperiments(unittest.TestCase):
     def notes(self,s):return self.get('/api/client_notes?paired=1&session_id='+s['session_id'])
     def test_all_versions_context_boundaries_restore_and_preserve_reasoning(self):
         for v,opts in registry.MEMORY_EXPERIMENTS.items():
-            if v in ('Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'):continue
+            if v in ('Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'):continue
             with self.subTest(version=v):
                 s=self.create(v);runtime,path=self.seed(s);self.router(v);Model.requests.clear()
                 Model.q2a_actions=[stage(opts['turn_goal']),commit(opts['retrieve']),*finish()]

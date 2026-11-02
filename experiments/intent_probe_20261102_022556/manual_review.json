@@ -1,0 +1,105 @@
+{
+  "method": "Assistant directly reviewed all 20 generated utterances; no LLM judge calls. Exploratory labels, not blinded expert ratings.",
+  "annotations": [
+    {
+      "id": "case_01_shared_C_public_r1",
+      "label": "public_only_inference",
+      "note": "시도 기대·의향을 이유에 포함함. 실행 마음이 없었던 w2 설정과 충돌하는 설명. w1과 일부 양립할 수 있으므로 두 숨은 세계를 구분했다고 볼 수 없음."
+    },
+    {
+      "id": "case_01_w1_A_notes_r1",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_01_w1_B_record_r1",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_01_w2_A_notes_r1",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_01_w2_B_record_r1",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_01_shared_C_public_r2",
+      "label": "public_only_inference",
+      "note": "시도 기대·의향을 이유에 포함함. 실행 마음이 없었던 w2 설정과 충돌하는 설명. w1과 일부 양립할 수 있으므로 두 숨은 세계를 구분했다고 볼 수 없음."
+    },
+    {
+      "id": "case_01_w1_B_record_r2",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_01_w1_A_notes_r2",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_01_w2_B_record_r2",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_01_w2_A_notes_r2",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_02_shared_C_public_r1",
+      "label": "public_only_inference",
+      "note": "감정이 정리되지 않음/감정이 커질 우려를 설명함. 설정된 타인정보 보호 또는 자신에 대한 판단 우려는 복원하지 않음. 다른 동기의 공존을 배제할 수 없어 명백한 모순으로 단정하지 않음."
+    },
+    {
+      "id": "case_02_w1_A_notes_r1",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_02_w1_B_record_r1",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_02_w2_A_notes_r1",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_02_w2_B_record_r1",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_02_shared_C_public_r2",
+      "label": "public_only_inference",
+      "note": "감정이 정리되지 않음/감정이 커질 우려를 설명함. 설정된 타인정보 보호 또는 자신에 대한 판단 우려는 복원하지 않음. 다른 동기의 공존을 배제할 수 없어 명백한 모순으로 단정하지 않음."
+    },
+    {
+      "id": "case_02_w1_B_record_r2",
+      "label": "core_compatible_detail_issue",
+      "note": "사생활 보호라는 핵심 동기는 부합. 다만 “동료에게만 말한 개인적인 사정”은 원문의 “동료에게 개인적으로 들은 정보”와 정보 전달 방향이 달라지는 표현으로 검토 필요."
+    },
+    {
+      "id": "case_02_w1_A_notes_r2",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_02_w2_B_record_r2",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    },
+    {
+      "id": "case_02_w2_A_notes_r2",
+      "label": "core_compatible",
+      "note": "구성한 당시 비공개 이유와 핵심 동기가 부합. 모든 세부 표현이 완벽하다는 판정은 아님."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "case_02_w2_B_record_r2",
+  "case": "case_02",
+  "world": "w2",
+  "condition": "B_record",
+  "repeat": 2,
+  "utterance": "솔직히 말씀드리면, 그때 저 역시 날카로운 말을 한 부분이 떠올랐어요. 그걸 이야기하면 상담 선생님이 저를 잘못한 사람으로 판단하지 않을까 봐 두려웠습니다. 동료의 개인 정보를 숨기려는 게 아니라, 제 잘못이 드러나는 게 무서웠던 거예요.",
+  "seconds": 0.7,
+  "usage": {
+    "prompt_tokens": 639,
+    "total_tokens": 713,
+    "completion_tokens": 74,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

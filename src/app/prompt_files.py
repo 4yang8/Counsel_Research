@@ -6,7 +6,7 @@ from urllib.parse import parse_qs, urlsplit
 import uuid
 
 from storage.file_manager import LIMIT, digest
-from counselor.catalog import PRACTICE_VERSIONS
+from counselor.catalog import PRACTICE_VERSIONS, SINGLE_PROMPT_PATHS
 
 from project_paths import PROJECT_ROOT
 HERE = PROJECT_ROOT
@@ -16,18 +16,21 @@ def source(server, role, version, kind):
     if kind == 'user' or isinstance(kind, str) and kind.endswith('_user'):
         return HERE / user_templates.descriptor(role, version, kind)['path'], None
     if role == 'client':
+        claim_agents = {'Q3p3': 'intent_reconstructor', 'Q3p4': 'intervention_observer', 'Q3p5': 'progress_observer'}
+        if version in claim_agents and kind == claim_agents[version]:
+            return HERE / 'src/client' / version / (kind + '.md'), None
         if version == 'Q3sb' and kind == 'note_summarizer':
             return HERE / 'src/client/Q3sb/note_summarizer.md', None
         if version == 'Q3sk' and kind == 'skill_notes':
             from client.Q3sk.skills_runtime import path
             return path(HERE / 'src/client/Q3sk'), None
-        if version in ('Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x') and kind == 'trajectory':
+        if version in ('Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6') and kind == 'trajectory':
             return HERE / 'src/client' / version / 'trajectory.md', None
         if version == 'basic' and kind == 'system':
             return Path(server.config_path), 'system_prompt'
         if version == 'state_summary' and kind in ('system', 'summary'):
             return HERE / 'src/client/state_summary' / (kind + '.md'), None
-        if version in ('Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x') and kind in ('system', 'trait_router'):
+        if version in ('Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6') and kind in ('system', 'trait_router'):
             return HERE / 'src/client' / version / (kind + '.md'), None
         if version == 'Q2' and kind in ('system', 'trait_router', 'state_router', 'state_updater'):
             return HERE / 'src/client/Q2' / (kind + '.md'), None
@@ -37,8 +40,8 @@ def source(server, role, version, kind):
             return HERE / 'src/client' / version / (kind + '.md'), None
     elif role == 'counselor':
         if kind == 'system':
-            if version == 'basic':
-                return HERE / 'resources/prompts/basic_counselor.md', None
+            if version in SINGLE_PROMPT_PATHS:
+                return HERE / SINGLE_PROMPT_PATHS[version], None
             if version in PRACTICE_VERSIONS:
                 return HERE / 'src/counselor' / version / 'system.md', None
         package = PRACTICE_VERSIONS.get(version)

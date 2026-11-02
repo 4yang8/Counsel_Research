@@ -44,6 +44,7 @@
     const completed=saved.turns.filter(turn=>turn.record.status==='completed');
     const last=(completed.at(-1) || saved.turns.at(-1)).record,input=last.input;
     currentVersion=saved.version;$('experiment-version').value=currentVersion;versionPreferences.set('client',currentVersion);
+    if(input.claim_memory_condition)claimConditionDrafts[currentVersion]=input.claim_memory_condition;
     const profileEntry=historyCatalog.profiles.find(p=>p.histories.some(h=>h.scenario.id===input.scenario?.id));$('experiment-profile').value=profileEntry?.number || 'default';populateHistoryChoices();if(profileEntry)$('history-select').value=profileEntry.histories.find(h=>h.scenario.id===input.scenario?.id).id;
     $('summary-settings').hidden=!stateSummaryMode();$('state-memory').hidden=!stateSummaryMode();$('state-input-hint').hidden=!stateSummaryMode();
     editorScenario=structuredClone(input.scenario || config.scenario);setupConditions();

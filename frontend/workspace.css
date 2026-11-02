@@ -27,3 +27,5 @@
 .master-primary{background:#287762;color:#fff;border-color:#287762}.master-primary:hover{background:#20634f}
 #master-status{font-size:11px;margin:7px 0 0;color:#3c6555;line-height:1.5;overflow-wrap:anywhere}
 @media(max-width:650px){#master-body{padding:7px 8px}.master-heading{align-items:flex-start}.master-heading strong{font-size:11px}.master-target{grid-template-columns:18px minmax(100px,1fr) minmax(85px,.7fr)}.master-target-detail{grid-column:2 / 4;grid-row:auto}.master-target-progress{grid-column:3;grid-row:1}.master-actions{gap:5px}.master-actions button{flex:1 1 130px;font-size:11px}.master-fields .master-model,.master-fields .master-endpoint{flex-basis:100%}}
+
+#routing-open{flex:none;color:#287762;font-size:11px;text-decoration:none;padding:3px 5px;white-space:nowrap}#routing-open:focus-visible{outline:2px solid #287762}

@@ -10,6 +10,13 @@
     const target=$('client-notes-body');target.replaceChildren();if(!data?.available)return;
     const turn=$('client-notes-turn').value,record=turn==='latest'?data.records.at(-1):data.records.find(r=>r.turn_id===turn),mode=$('client-notes-mode').value;
     $('client-notes-path').textContent=data.path || '새 대화 초기 노트 · 아직 저장된 발화 없음';
+    if(record?.claim_experiment){
+      const experiment=record.claim_experiment;
+      target.append(el('strong','주장별 실험 · '+experiment.claim+' · '+experiment.memory_condition));
+      for(const [title,value] of [['실제 전달한 과거 의도 자료 · 출처와 범위',experiment.memory_view],['재구성·관찰자 결과 · 실제 요청과 사용량',experiment.auxiliary_calls]]){
+        const box=el('details');box.append(el('summary',title),el('pre',JSON.stringify(value,null,2)));target.append(box);
+      }
+    }
     if(['Q3n','Q3sb','Q3x'].includes(data.version)){
       const label={Q3n:'원문 선택 · Python 복사',Q3sb:'요약 서브에이전트',Q3x:'Python 확정 필드 스냅샷'}[data.version];
       target.append(el('strong','기록 방식 · '+label),el('p','현재 진행 판단은 발화 전 stage에서 생성합니다. 실제 공개 발화는 별도로 보존하며 지난 기록은 저장 시점에서 조회합니다.','hint'));
@@ -44,7 +51,7 @@
         }
       }else target.append(el('p','(내용 없음)'));
     }
-    if(['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(data.version)){
+    if(['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'].includes(data.version)){
       const progress=mode==='before'?record?.trajectory_before:turn==='latest'?data.trajectory_progress:record?.trajectory_progress;
       const text=p=>p?Object.entries(p).map(([k,v])=>({position:'현재 위치',movement:'변화',current_experience:'현재 신뢰와 경계',grounds:'판단 근거',next_condition:'다음에 살필 조건'}[k] || k)+': '+({maintain:'유지·정체',advance:'진행',retreat:'후퇴'}[v] || v || '(내용 없음)')).join('\n'):'(내용 없음)';
       target.append(el('strong','사전 궤적 · '+(turn==='latest'?'다음 생성에 사용할 파일':'해당 턴 입력 원문')),el('pre',turn==='latest'?data.trajectory:record?.trajectory_source || '(내용 없음)'));
@@ -90,7 +97,7 @@
     const params=new URLSearchParams({version:currentVersion});if(sid)params.set('session_id',sid);if(paired)params.set('paired','1');if(!paired && restoredSessionKey)params.set('key',restoredSessionKey);
     $('client-notes-status').textContent='조회 중…';
     try{
-      const result=await api('/api/client_notes?'+params);if(rev!==revision)return;data=result;panel.querySelector('h2').textContent=['Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(result.version)?'내담자 노트 · 자유 글머리':['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(result.version)?'내담자 노트 · 현재 내면 / 심리상태':'내담자 심리상태 노트';
+      const result=await api('/api/client_notes?'+params);if(rev!==revision)return;data=result;panel.querySelector('h2').textContent=['Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'].includes(result.version)?'내담자 노트 · 자유 글머리':['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'].includes(result.version)?'내담자 노트 · 현재 내면 / 심리상태':'내담자 심리상태 노트';
       const choice=$('client-notes-turn').value;const picker=$('client-notes-turn');picker.replaceChildren(new Option('최신 파일','latest'));
       for(const row of result.records || [])picker.add(new Option('내담자 턴 '+row.turn,row.turn_id));
       if([...picker.options].some(o=>o.value===choice))picker.value=choice;
@@ -125,7 +132,7 @@
       const next=JSON.stringify(result.notes);if(next===stamp)return;stamp=next;
       const target=$('session-notes-body'),scrolls=[...target.querySelectorAll('pre')].map(e=>e.scrollTop);target.replaceChildren();
       for(const [actor,title] of [['client','내담자가 작성한 노트'],['counselor','상담사가 작성한 노트']]){
-        const group=node('section','','session-notes-group');group.dataset.actor=actor;group.append(node('h3',actor==='client' && result.notes.some(n=>['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x'].includes(n.version))?'내담자 노트 · 궤적':title));
+        const group=node('section','','session-notes-group');group.dataset.actor=actor;group.append(node('h3',actor==='client' && result.notes.some(n=>['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'].includes(n.version))?'내담자 노트 · 궤적':title));
         const notes=result.notes.filter(note=>note.actor===actor);
         for(const note of notes){const box=node('section','','session-note-box');box.append(node('strong',note.version+' · '+note.label),node('pre',note.content || '(빈 노트)'));group.append(box);}
         if(!notes.length)group.append(node('p','현재 저장된 노트가 없습니다.','hint'));target.append(group);
