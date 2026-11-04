@@ -36,6 +36,45 @@ def handle_get(handler):
     return True
 
 
+
+def memory_note_content(records):
+    """Render only per-turn thoughts and speech, never saved request/context logs."""
+    labels = {
+        'appraisal': '상황 해석과 감정', 'interpretation': '해석',
+        'immediate_feeling': '즉각적인 감정', 'relevant_evidence': '관련 근거',
+        'uncertainty': '불확실한 점', 'turn_goal': '이번 발화의 목표',
+        'intention': '의도', 'grounds': '근거', 'response_plan': '응답 계획',
+        'action': '표현 방식', 'reason': '이유',
+    }
+    def lines(value, depth=0):
+        indent = '  ' * depth
+        if isinstance(value, dict):
+            result = []
+            for key, item in value.items():
+                label = labels.get(key, key)
+                if isinstance(item, (dict, list)):
+                    result.append(indent + label + ':')
+                    result.extend(lines(item, depth + 1))
+                else:
+                    result.append(indent + label + ': ' + str(item))
+            return result
+        if isinstance(value, list):
+            return [line for item in value for line in lines(item, depth)]
+        return [indent + str(value)]
+
+    turns = []
+    for record in records:
+        content = ['내담자 ' + str(record['turn']) + '턴',
+                   '상담사: ' + record.get('counselor_utterance', ''),
+                   '내담자: ' + record.get('utterance', ''), '', '당시 내면 기록']
+        content.extend(lines(record.get('inner', {})))
+        if 'memory_input' in record:
+            used = ', '.join(str(row['turn']) + '턴' for row in record['memory_input'])
+            content.extend(['', '생성 시 참고한 과거 내면: ' + (used or '없음')])
+        turns.append('\n'.join(content))
+    return '\n\n────────────────────\n\n'.join(turns) or '아직 완료된 내담자 턴이 없습니다.'
+
+
 def session_notes(handler, args):
     """Read current persisted notes; never initialize files or expose pending drafts."""
     sid=args.get('session_id',[''])[0]
@@ -63,8 +102,8 @@ def session_notes(handler, args):
     from client.memory_access import VERSIONS as MEMORY_ACCESS_VERSIONS
     if version in MEMORY_ACCESS_VERSIONS:
         value=client_runtime(version).load({'_storage_dir':str(storage)},sid if storage else None)
-        notes.append({'actor':'client','version':version,'label':'턴별 내면 기록 · 입력 여부는 memory_input에서 확인',
-                      'content':value['content'],'path':value['path']})
+        notes.append({'actor':'client','version':version,'label':'턴별 내면 기록과 발화',
+                      'content':memory_note_content(value['records']),'path':value['path']})
     if version in ('Q3cars','Q3patientact','Q3calmit'):
         import json
         from client.paper_baselines.common import load as load_paper, directory

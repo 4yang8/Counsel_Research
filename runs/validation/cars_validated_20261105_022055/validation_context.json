@@ -1,0 +1,44 @@
+{
+  "test_suite": {
+    "command": "bash scripts/test.sh",
+    "tests": 325,
+    "result": "passed",
+    "note": "이후 오류 메시지 및 검토 프롬프트를 보완하고 관련 테스트를 재실행함"
+  },
+  "focused_final": {
+    "command": "PYTHONPATH=src:tests python -m unittest test_paper_baselines",
+    "tests": 21,
+    "result": "passed after source-quote correction feedback change"
+  },
+  "browser": {
+    "command": "COUNSELING_PYTHON=python node tests/browser_paper_baselines.cjs",
+    "result": "passed again after final prompt changes"
+  },
+  "generation": {
+    "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+    "endpoint": "http://127.0.0.1:18001/v1",
+    "max_tokens": 8192,
+    "seed": 1105
+  },
+  "scope": "별도 저장소에서 기존 세션의 상담사 문장 4개를 재사용한 실행 점검. 개선 효과·원논문 성능을 입증하는 대조 실험은 아님.",
+  "limitations": [
+    "동일 모델이 생성과 의미 검토를 수행함.",
+    "이전 검토 시도에서 오탐·누락을 관찰했고 프롬프트와 검사 입력을 수정함. 최종 통과도 무오류 보장은 아님.",
+    "max_tokens=4096 초기 프로필 생성에서 length 종료를 관찰함.",
+    "초기 배경에는 팀 개편을 석 달 전이라고 쓰면서 4개월째라고 적은 시간 표현 불일치가 남았으며 프로필 검토에서 놓침."
+  ],
+  "fresh_generation": {
+    "status": "4 client turns completed",
+    "warning": "이 실행 중 3턴의 근거 없는 수면 유형 추정을 사람이 발견해 이후 규약을 보완함. 4턴 성공은 API 및 상태 저장 성공을 뜻하며 의미 검증 완전성을 뜻하지 않음."
+  },
+  "grounding_replay": {
+    "status": "old unsupported claim rejected; regeneration rejected twice because of inaccurate verbatim quotation",
+    "path": "grounding_replay/summary.json"
+  },
+  "grounding_repair": {
+    "status": "passed",
+    "path": "grounding_repair/summary.json",
+    "method": "동일 prefix와 이전 실제 실패 후보를 사용해 1회 수정 경로를 재생함",
+    "result": "증상 유형을 확정하지 않고 추후 기록해 확인하겠다고 답함. 인용을 원문 그대로 수정함."
+  }
+}

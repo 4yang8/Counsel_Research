@@ -118,6 +118,8 @@ def configure(config, body):
     # Caller-supplied frozen bundles are validated; edits remain visible in provenance.
     prompts = body.setdefault('paper_prompts', saved.get('frozen_prompts') or bundle(version))
     expected = set(bundle(version))
+    if version=='Q3cars' and isinstance(prompts,dict) and set(prompts)!=expected:
+        raise ValueError('이 CARS 세션은 이전 검증 규약으로 생성됐습니다. 기존 기록은 보존되며, 수정 버전은 새 대화에서 시작하세요.')
     if not isinstance(prompts, dict) or set(prompts) != expected or any(not isinstance(v,str) or not v.strip() for v in prompts.values()):
         raise ValueError('논문 프롬프트 묶음이 올바르지 않습니다.')
     body['paper_provenance'] = provenance(version, options, config, prompts)
@@ -139,7 +141,9 @@ def provenance(version, options, config, prompts):
         profile_source = '사용자가 제공한 논문 형식 프로필' if 'profile' in options else '프로젝트 프로필 + 생성한 회기별 CCD(변환)'
         deviations += ['감정은 설정값(기본 50)에서 시작합니다. 원문의 초기값은 명시되지 않았습니다.',
                        '원본 감정별 예문 자료는 포함하지 않았습니다. 필요하면 emotion_examples로 제공하세요.',
-                       '사후 대화 절단과 STREAMS 상담사 학습은 구현하지 않았으며 원문 발화를 보존합니다.']
+                       '사후 대화 절단과 STREAMS 상담사 학습은 구현하지 않았으며 원문 발화를 보존합니다.',
+                       'cars-validated-v2: 인지 분기·사실 출처 구조화 및 LLM 의미 검토를 추가했습니다. 원논문에 없는 보완이며 의미 오류를 완전히 보장하지 않습니다.',
+                       '검토 실패 시 해당 단계만 1회 수정합니다. 다시 실패하면 턴 전체를 저장하지 않습니다.']
     else:
         source = '로컬 CALM-IT PDF, 알고리즘 A1/A2 및 그림 A2–A16'
         profile_source = '사용자가 제공한 논문 형식 프로필' if 'profile' in options else '프로젝트 프로필 변환(원본 Reddit 데이터 아님)'
@@ -148,7 +152,7 @@ def provenance(version, options, config, prompts):
                        '초기값, 최근 대화 범위, 계획·종료 임계값, 발화 길이, 난수 시드는 명시적인 구현 선택입니다.',
                        '상담사 전략 순위별로 후보 하나를 생성하고, 전환 시에는 단일 전략으로 후보 세 개를 생성합니다.',
                        '데이터셋별 길이·마무리 표집 대신 설정한 양쪽 화자 합계 발화 수 한도를 사용합니다.']
-    return dict(version=version, implementation='paper-baselines-v1', source=source,
+    return dict(version=version, implementation='cars-validated-v2' if version=='Q3cars' else 'paper-baselines-v1', source=source,
                 profile_source=profile_source, fidelity='ported_official_pipeline' if version=='Q3patientact' else 'paper_based_approximation',
                 deviations=deviations, model=config.get('model'), generation=copy.deepcopy(config.get('generation',{})),
                 options={k:v for k,v in options.items() if k!='profile'}, prompts_sha256=digest(prompts),
@@ -214,7 +218,11 @@ class StageCalls:
             run_turn(self.config, payload, None, self.upstream, self.frames, self.inspect,
                      event, self.cancelled, request['messages'])
             if result.get('finish_reason') != 'stop':
-                raise ValueError(stage + ': incomplete model response')
+                reason = result.get('finish_reason')
+                detail = stage + ': incomplete model response (finish_reason=' + str(reason) + ')'
+                if reason == 'length':
+                    detail += ' 출력 토큰 한도(max_tokens=' + str(payload.get('max_tokens')) + ')에서 잘렸습니다. 한도를 늘려 다시 시도하세요.'
+                raise ValueError(detail)
             raw = result['response'].strip()
             if raw.startswith('```'):
                 raw = raw.split('\n',1)[1].rsplit('```',1)[0]

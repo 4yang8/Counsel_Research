@@ -11,7 +11,15 @@ from urllib.request import urlopen
 
 from test_lab import fixture, close, post
 from client import registry
-from client.paper_baselines import common, patientact, calmit
+from client.paper_baselines import common, patientact, calmit, cars
+
+
+def cars_reply():
+    return {'Thinking':'PRIVATE_CARS_THINKING','Emotion':-7,
+            'Intention':'PRIVATE_CARS_GOAL','nonverbal_behavior':'눈을 피함','Response':'조심스럽네요.',
+            'Reasoning':{'topic':'일반 질문','branch':'no_matching_ccd','belief_checks':[],
+                         'emotion_reason':'선호에 맞지 않아 경계한다.','intention_reason':'아직 조심스럽다.',
+                         'expression_reason':'짧게 표현한다.'},'Grounding':[]}
 
 
 class PaperModel(BaseHTTPRequestHandler):
@@ -50,8 +58,7 @@ class PaperModel(BaseHTTPRequestHandler):
             'resistance_pattern':{'reasoning':'PRIVATE_RESISTANCE','pattern':'minimal_talk'},
             'response':{'reasoning':'PRIVATE_RESPONSE_REASON','content':'아직 말하기 어렵네요.'},
             'trust_update':{'reasoning':'PRIVATE_TRUST','direction':'decreased_slightly'},
-            'cognitive_response':{'Thinking':'PRIVATE_CARS_THINKING','Emotion':-7,
-                                  'Intention':'PRIVATE_CARS_GOAL','nonverbal_behavior':'눈을 피함','Response':'조심스럽네요.'},
+            'cognitive_response':cars_reply(),
             'client_appraisal':{'rating':'BAD','reason':'I feel pushed.'},
             'client_rapport':{'value':-.05},'counselor_rapport':{'value':.02},
             'client_action':{'value':'Hesitate'},'counselor_background':{'value':'preferences: slower pace'},
@@ -62,6 +69,8 @@ class PaperModel(BaseHTTPRequestHandler):
             for i in range(1,4):
                 defaults[role+'_candidate_'+str(i)]={'value':role+' public candidate '+str(i)}
         result=self.overrides.get(stage,defaults.get(stage,result))
+        if isinstance(result,list):
+            result=result.pop(0)
         if self.delay_stage==stage:
             time.sleep(.3)
         self.send_response(200)
@@ -160,7 +169,10 @@ class PaperTests(unittest.TestCase):
     def test_trust_update_failure_and_invalid_json_leave_no_state(self):
         session=self.create()
         PaperModel.fail_stage='trust_update'
-        self.assertEqual(self.step(session)[-1]['type'],'error')
+        error=self.step(session)[-1]
+        self.assertEqual(error['type'],'error')
+        self.assertIn('finish_reason=length',error['error'])
+        self.assertIn('max_tokens=',error['error'])
         saved=self.get('/api/paired/session?session_id='+session['session_id'])
         self.assertEqual(saved['steps'],[])
         self.assertNotIn('client_storage_dir',saved)
@@ -199,26 +211,79 @@ class PaperTests(unittest.TestCase):
 
     def test_cars_adapter_once_and_emotion_persists(self):
         first=self.success(self.create('Q3cars'))
-        self.assertEqual(self.stages(),['session_ccd_preparation','cognitive_response'])
+        self.assertEqual(self.stages(),['session_ccd_preparation','cars_profile_review','cognitive_response','cars_response_review'])
         self.assertEqual(self.state(first)['state']['emotion'],43)
         self.assertIn('native_profile',self.state(first)['state'])
         PaperModel.requests=[]
         second=self.success(self.next_counselor(first))
-        self.assertEqual(self.stages(),['cognitive_response'])
+        self.assertEqual(self.stages(),['cognitive_response','cars_response_review'])
         self.assertEqual(self.state(second)['state']['emotion'],36)
         self.assertNotIn('PRIVATE_CARS',json.dumps(second['public_dialogue']))
         self.assertFalse(self.state(second)['state']['emotion_examples_available'])
 
     def test_native_cars_avoids_preparation(self):
-        native=dict(persona='p',background='b',main_ccd='m',session_ccd='s',preferences='prefs',
+        native=dict(persona='p',background='b',main_ccd='m',session_ccd=[{'theme':'theme','automatic_thought':{'situation':'s','cognition':'c','reaction':'r'},'intermediate_belief':{'attitude':'a','assumption':'a','rule':'r'}}],preferences='prefs',
                     emotion_examples=['Example'])
         session=self.success(self.create('Q3cars',paper_options={'profile':native,'initial_emotion':3}))
-        self.assertEqual(self.stages(),['cognitive_response'])
+        self.assertEqual(self.stages(),['cars_profile_review','cognitive_response','cars_response_review'])
         state=self.state(session)['state']
         self.assertEqual(state['emotion'],0)
         self.assertTrue(state['below_posthoc_emotion_threshold'])
         self.assertTrue(state['emotion_examples_available'])
         self.assertFalse(session.get('terminated',False))
+
+    def test_cars_profile_repair_is_bounded_and_logged(self):
+        bad={'issues':[{'kind':'emotion_scale','detail':'높은 점수를 분노로 정의함'}]}
+        PaperModel.overrides['cars_profile_review']=[bad,{'issues':[]}]
+        first=self.success(self.create('Q3cars'))
+        self.assertEqual(self.stages().count('session_ccd_preparation'),2)
+        self.assertEqual(self.stages().count('cars_profile_review'),2)
+        requests=[r for r in PaperModel.requests if r['structured_outputs']['json']['title']=='session_ccd_preparation']
+        self.assertIn('높은 점수를 분노로 정의함',json.dumps(requests[1],ensure_ascii=False))
+        self.assertEqual(self.state(first)['state']['pipeline_version'],cars.PIPELINE_VERSION)
+
+    def test_cars_repair_only_commits_accepted_response_and_delta(self):
+        bad={'issues':[{'kind':'unsupported_fact','detail':'원문에 없는 수면 시간'}]}
+        PaperModel.overrides['cars_response_review']=[bad,{'issues':[]}]
+        first=self.success(self.create('Q3cars'))
+        state=self.state(first)['state']
+        self.assertEqual(state['emotion'],43)  # rejected candidate must not also change state
+        self.assertEqual(len(state['validation']),2)
+        self.assertEqual(state['validation'][0]['issues'],bad['issues'])
+        self.assertEqual(state['validation'][1]['issues'],[])
+
+    def test_cars_persistent_review_failure_preserves_committed_state(self):
+        first=self.success(self.create('Q3cars'));before=self.state(first)
+        PaperModel.requests=[]
+        PaperModel.overrides['cars_response_review']={'issues':[{'kind':'unsupported_fact','detail':'근거 없는 행동'}]}
+        self.assertEqual(self.step(self.next_counselor(first))[-1]['type'],'error')
+        current=self.get('/api/paired/session?session_id='+first['session_id'])
+        self.assertEqual(self.state(current),before)
+        self.assertEqual(self.stages(),['cognitive_response','cars_response_review']*2)
+
+    def test_cars_structural_error_cannot_be_approved_by_judge(self):
+        reply=cars_reply()
+        reply['Grounding']=[{'claim':'한두 시간씩 깨어 있음','source_id':'background','quote':'DOES_NOT_EXIST'}]
+        PaperModel.overrides['cognitive_response']=reply
+        session=self.create('Q3cars')
+        self.assertEqual(self.step(session)[-1]['type'],'error')
+        self.assertNotIn('cars_response_review',self.stages())
+        self.assertEqual(self.stages().count('cognitive_response'),2)
+        self.assertEqual(list(Path(self.temp.name).rglob('paper_state.json')),[])
+        feedback=cars.structural_issues(reply,{'background':'EXACT_SOURCE'})[0]['detail']
+        self.assertIn('DOES_NOT_EXIST',feedback)
+        self.assertIn('EXACT_SOURCE',feedback)
+        reply=cars_reply();reply['Reasoning']['branch']='matched_ccd'
+        self.assertEqual(cars.structural_issues(reply,{} )[0]['kind'],'cognitive_branch')
+        reply['Reasoning']['belief_checks']=[{'ccd_index':1,'situation_evidence':'s',
+            'consistency':'contradicted','consistency_reason':'r','use_as_premise':True}]
+        self.assertTrue(cars.structural_issues(reply,{}))
+
+    def test_old_cars_prompt_bundle_requires_new_session(self):
+        body=self.body('Q3cars')
+        body['paper_prompts']={k:v for k,v in common.bundle('Q3cars').items() if k in ('cars_profile','cars_turn')}
+        with self.assertRaisesRegex(ValueError,'새 대화'):
+            common.configure({},body)
 
     def test_calmit_two_role_pipeline_and_private_boundary(self):
         native={'background':'PRIVATE_CALMIT_BACKGROUND','cognitive_model':'PRIVATE_CALMIT_COGNITION',

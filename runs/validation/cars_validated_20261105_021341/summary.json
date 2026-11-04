@@ -1,0 +1,7 @@
+{
+  "review_probes": [],
+  "fresh_turns": [],
+  "probe_error": "URLError(ConnectionRefusedError(111, 'Connection refused'))",
+  "fresh_status": "failed",
+  "fresh_error": "AssertionError({'type': 'error', 'error': '<urlopen error [Errno 111] Connection refused>', 'saved_at': '2026-11-04T17:13:42.971140+00:00'})"
+}

@@ -83,3 +83,7 @@ anonymous `{}`, and a runtime structured JSON output contract.
 `calmit_summary.md`, `calmit_counselor_emotion.md`, `calmit_counselor_stagnation.md`
 and `calmit_selector.md` are explicitly marked reconstructed/replacement instructions,
 not supplied paper prompts. Original role-specific likelihood ranker weights are not included.
+
+### CARS local validation extension (2026-11-05)
+
+`cars_contract.md`, `cars_profile_review.md`, and `cars_response_review.md` are project-authored validation instructions, not translated paper prompts. The emotion wording in the profile/turn templates is clarified to consistently mean positive affect/engagement rather than anger intensity. Structured reasoning, source quotations, semantic review, and one bounded correction attempt are local additions; provenance identifies this execution as `cars-validated-v2`.

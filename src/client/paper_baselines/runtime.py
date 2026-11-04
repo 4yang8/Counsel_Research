@@ -70,6 +70,10 @@ class PaperRuntime:
                 native = cars.prepare(calls,prompts,ctx['scenario']['profile'],ctx['messages']) if self.version=='Q3cars' else calmit.profile(ctx['scenario']['profile'])
             module = cars if self.version=='Q3cars' else calmit
             native = module.validate_profile(native)
+            if self.version=='Q3cars' and 'profile' in options and not state.get('cars_profile_reviewed'):
+                cars.review_native(calls,prompts,native)
+            if self.version=='Q3cars':
+                state['cars_profile_reviewed'] = True
             utterance,state = module.generate(calls,prompts,options,native,ctx['messages'],state)
             state['native_profile'] = native
         common.commit(config,body,ctx,state,utterance,calls)

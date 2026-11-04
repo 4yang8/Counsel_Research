@@ -1,0 +1,19 @@
+{
+  "review_probes": [
+    {
+      "name": "old_profile",
+      "issues": [
+        {
+          "kind": "emotion_scale",
+          "detail": "possible_responses_under_different_emotions에서 감정 상태가 '높은' 범위를 '분노·좌절'로 정의하고 있다. 검사 규칙상 0~100 척도에서 높을수록 긍정적·참여 증가여야 하는데, 분노·좌절은 부정적 정서이다. 낮은 범위(불안·경계)는 부정적·참여 감소로 올바르게 배치되어 있으나, 높은 범위에 부정적 정서를 배치한 것이 척도 방향과 충돌한다."
+        }
+      ]
+    },
+    {
+      "name": "old_turn3",
+      "issues": []
+    }
+  ],
+  "fresh_turns": [],
+  "probe_error": "AssertionError()"
+}

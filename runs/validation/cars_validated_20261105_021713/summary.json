@@ -1,0 +1,33 @@
+{
+  "review_probes": [
+    {
+      "name": "old_profile",
+      "issues": [
+        {
+          "kind": "emotion_scale",
+          "detail": "possible_responses_under_different_emotions에서 '감정 상태가 높은(분노·좌절) 상태'로 정의되어 있으나, 감정 척도(0~100)에서 낮을수록 부정적·참여 감소, 높을수록 긍정적·참여 증가이므로 분노·좌절은 낮은 점수 구간에 해당해야 한다. 현재 구조에서는 낮은 구간(불안·경계)과 높은 구간(분노·좌절)이 모두 부정적 정서로 배치되어 점수 방향이 충돌한다."
+        },
+        {
+          "kind": "source_conflict",
+          "detail": "childhood_data에는 '어머니 몰래 내담자의 세뱃돈 통장을 헐어 쓴 일'로 기술되어 있으나, demographic_context.background에는 '가족 몰래 어머니 명의로 빚을 지는 사람'으로 서술되어 있다. 아버지의 금전적 일탈 대상이 '내담자의 세뱃돈'에서 '어머니 명의의 빚'으로 변경되어 원 사실과 다르다."
+        }
+      ]
+    },
+    {
+      "name": "old_turn3",
+      "issues": [
+        {
+          "kind": "unsupported_fact",
+          "detail": "Response의 '한두 시간씩 깨 있다가 겨우 잠들어요'는 자료에 없는 구체적 수면 패턴이다. 프로필은 '평균 수면 시간이 4시간 미만'과 '잠을 설침'만 제시하며, '한두 시간씩 깨어 있음'이라는 구체적 횟수·지속 시간은 근거가 없다. 검토 지침에서도 '불면'은 '매일 한두 시간 깨어 있음'의 근거가 아니라고 명시하고 있다."
+        },
+        {
+          "kind": "emotion_scale",
+          "detail": "Thinking에서 '이전 감정 48에서 소폭 상승 가능'이라 서술하면서 '감정 변화: +3'으로 기록하고, Emotion 필드에는 3을 기입했다. 만약 스케일이 0–100이라면 이전 48에서 +3은 51이어야 하고, 스케일이 1–5라면 '48'이라는 수치가 성립하지 않으며 +3은 '소폭 상승'이 아니다. 변화량 서술과 최종 점수 사이에 자기 모순이 있다."
+        }
+      ]
+    }
+  ],
+  "fresh_turns": [],
+  "fresh_status": "failed",
+  "fresh_error": "AssertionError({'type': 'error', 'error': 'session_ccd_preparation: incomplete model response', 'saved_at': '2026-11-04T17:19:11.099105+00:00'})"
+}
