@@ -1,0 +1,12 @@
+{
+  "rag": {
+    "input_tokens": 1711,
+    "output_reserve": 4096,
+    "case": "context_scope_chain"
+  },
+  "llm": {
+    "input_tokens": 16230,
+    "output_reserve": 4096,
+    "case": "context_scope_chain"
+  }
+}

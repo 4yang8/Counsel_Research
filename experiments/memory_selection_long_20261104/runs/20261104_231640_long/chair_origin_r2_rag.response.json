@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-91fa930af25e9a69",
+  "object": "chat.completion",
+  "created": 1793801897,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"의자 가까이 옮길 때 처음 괜찮아요라고 한 순간의 판단\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question is asking about the moment when the counselor first asked \"제가 의자를 가까이 옮겨도 되냐고 처음 물었을 때 '괜찮아요'라고 하셨죠\" - referring to the moment when the client said \"괜찮아요\" to the chair-moving question. The counselor wants to confirm the client's judgment/feeling at that specific moment, not the later reflection.\n\nLooking at the public dialogue, there's this exchange:\n- Counselor: \"의자를 가까이 옮겨도 괜찮을까요?\"\n- Client: \"괜찮아요.\"\n\nAnd later:\n- Counselor: \"지난번 의자가 가까웠을 때 실제로는 어땠나요?\"\n- Client: \"괜찮다고 했지만 조금 불편했어요.\"\n\nThe counselor's final question is asking about the original moment - what was the client's actual judgment/feeling at the very first moment when they said \"괜찮아요\" about the chair being moved closer. The counselor explicitly says \"그 순간의 판단을 확인하고 싶어요\" (I want to confirm the judgment at that moment).\n\nSo I need to create a search query that targets the record from when the client first said \"괜찮아요\" about the chair, focusing on their immediate internal feeling/judgment at that specific moment.\n\nThe query should preserve: the chair-moving event, the initial \"괜찮아요\" response, and the focus on the immediate judgment/feeling at that moment (not later reflection).\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1580,
+    "total_tokens": 1906,
+    "completion_tokens": 326,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 305
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

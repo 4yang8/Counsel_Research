@@ -1,0 +1,12 @@
+{
+  "count": 30,
+  "mean_inner_chars": 1077.6,
+  "min_inner_chars": 1010,
+  "max_inner_chars": 1160,
+  "questions": 12,
+  "n_distribution": {
+    "1": 4,
+    "2": 4,
+    "3": 4
+  }
+}

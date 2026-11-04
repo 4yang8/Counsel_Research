@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-8208144c98843b91",
+  "object": "chat.completion",
+  "created": 1793801825,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"의자 가까이 옮겼을 때 처음 괜찮다고 한 순간의 판단\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question is asking about the moment when the counselor first asked if it was okay to move the chair closer, and the client said \"괜찮아요\" (it's okay). The counselor wants to confirm the client's judgment at that specific moment, rather than focusing on the current distance or the later feeling of discomfort.\n\nSo the query should focus on finding the record of the moment when the chair was moved closer and the client initially said \"괜찮아요\" - specifically the client's initial judgment/feeling at that exact moment.\n\nThe key elements to preserve:\n- The chair being moved closer (의자 가까이)\n- The initial response \"괜찮아요\"\n- The moment of judgment at that instant\n\nThe query should search for the record of when the chair was first moved closer and the client's initial assessment at that moment.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1580,
+    "total_tokens": 1777,
+    "completion_tokens": 197,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 176
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

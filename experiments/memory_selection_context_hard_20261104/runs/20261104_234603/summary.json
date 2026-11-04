@@ -1,0 +1,54 @@
+{
+  "rag": {
+    "attempts": 24,
+    "completed": 23,
+    "exact_match": 13,
+    "mean_precision_recall": 0.7536231884057972,
+    "mean_latency_ms": 6153.99608695652,
+    "mean_prompt_tokens": 1694.2173913043478,
+    "mean_completion_tokens": 669.8695652173913,
+    "by_n": {
+      "1": {
+        "count": 7,
+        "exact": 5,
+        "recall": 0.7142857142857143
+      },
+      "2": {
+        "count": 8,
+        "exact": 4,
+        "recall": 0.75
+      },
+      "3": {
+        "count": 8,
+        "exact": 4,
+        "recall": 0.7916666666666667
+      }
+    }
+  },
+  "llm": {
+    "attempts": 24,
+    "completed": 24,
+    "exact_match": 24,
+    "mean_precision_recall": 1.0,
+    "mean_latency_ms": 4576.659583333332,
+    "mean_prompt_tokens": 16213.583333333334,
+    "mean_completion_tokens": 483.8333333333333,
+    "by_n": {
+      "1": {
+        "count": 8,
+        "exact": 8,
+        "recall": 1.0
+      },
+      "2": {
+        "count": 8,
+        "exact": 8,
+        "recall": 1.0
+      },
+      "3": {
+        "count": 8,
+        "exact": 8,
+        "recall": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-9ab4f279e1847c28",
+  "object": "chat.completion",
+  "created": 1793799643,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"버스에서 갑자기 내린 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question is about the bus incident - specifically asking whether the client actually knew the reason for getting off the bus suddenly on Monday but withheld it. This is asking about a non-public memory related to the bus incident.\n\nThe public dialogue shows:\n- The client got off the bus suddenly (mentioned multiple times)\n- The client said \"저도 잘 모르겠어요\" (I don't really know either) when first asked\n- The client said \"여전히 잘 모르겠어요\" (I still don't really know) when asked again\n- The client only wrote \"언제 내렸는지만 적었어요\" (I only wrote down when I got off) in their diary\n\nThe last question asks whether the client actually knew the reason but held back. This is probing for a non-public memory about what actually happened or why they got off the bus.\n\nI need to create a search query that preserves the public elements (bus, getting off suddenly, Monday) and focuses on the question's intent (the actual reason that was withheld). I should not fabricate reasons that aren't in the public dialogue.\n\nThe query should focus on: bus incident, getting off suddenly, the reason, what was withheld/not said.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2848,
+    "total_tokens": 3115,
+    "completion_tokens": 267,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 254
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

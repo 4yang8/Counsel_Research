@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-8cb270e8a6bfe18b",
+  "object": "chat.completion",
+  "created": 1793801740,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [6, 19]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about two specific moments:\n1. When the client first said they weren't ready to talk about the team leader incident (turn 6)\n2. When the client said they still couldn't talk about it in detail even after receiving 수연's green message permission (turn 19)\n\nThe question asks what was the obstacle/blocking factor in each case.\n\nLooking at the private turns:\n- Turn 6: \"사건을 설명하면 수연이 제보한 사실이 드러날 수 있어 동료를 보호하려고 보류했다.\" - The reason was protecting 수연, not distrust of the counselor.\n- Turn 19: \"동료의 허락 문제는 풀렸지만 사건을 말하다 감정이 커져 멈추지 못할까 봐 망설인다.\" - The reason changed; now it's fear of emotions escalating and not being able to stop.\n\nThese are the two turns directly referenced by the counselor's question. I should select turns 6 and 19.\n\nLet me check if there are any other relevant turns. The question specifically contrasts \"처음 말할 준비가 안 됐다고 했을 때\" (turn 6) and \"수연의 초록 메시지로 허락받고도 자세히 말하기 어렵다고 했을 때\" (turn 19). These are the two turns being compared.\n\nMax turns is 3, and I have exactly 2 relevant turns.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 4302,
+    "total_tokens": 4613,
+    "completion_tokens": 311,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 298
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

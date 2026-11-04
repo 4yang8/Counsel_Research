@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-9d3d155016bdf7ab",
+  "object": "chat.completion",
+  "created": 1793801728,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"파란 카드 과제 처음 동의했을 때와 직접 시간을 골라 보내기로 선택했을 때의 감정 차이\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The user wants me to generate a search query to find a past private record related to the last counselor question.\n\nThe last counselor question is: \"파란 카드 과제에 처음 동의했을 때와, 연락하지 않아도 된다는 선택권을 드린 뒤 직접 시간을 골라 보내고 싶다고 했을 때는 마음이 어떻게 달랐나요?\"\n\nThis question is asking about the difference in feelings between:\n1. When the client first agreed to the blue card assignment\n2. When the client was given the choice not to contact and then chose to send a message at their own time\n\nFrom the public dialogue, I can see:\n- The blue card assignment was introduced: \"파란 카드에 적은 과제처럼 이번 주 지수에게 먼저 연락해 볼까요?\" → \"네, 한번 해볼게요.\"\n- Later, the counselor gave the client a choice: \"파란 카드 과제를 오늘은 어떻게 할지 직접 정해볼까요?\" → \"제가 고른 시간에 짧게 보내는 건 해보고 싶어요.\"\n\nThe question is asking about the emotional difference between these two moments. The counselor is asking the client to reflect on how their feelings changed between the first agreement (which seemed like automatic compliance) and the second time when they had autonomy to choose.\n\nFor the search query, I need to capture the essence of this question - it's about the client's feelings/emotions when they first agreed to the blue card task vs. when they were given autonomy and chose to do it on their own terms. This relates to the presenting problem of \"대인관계에서의 선택과 부담\" (choice and burden in interpersonal relationships).\n\nThe query should focus on: 파란 카드 과제, 처음 동의 vs 직접 선택한 경우의 마음/감정 차이, 선택권, 부담감\n\nLet me formulate a search query that captures this.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1577,
+    "total_tokens": 1991,
+    "completion_tokens": 414,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 384
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

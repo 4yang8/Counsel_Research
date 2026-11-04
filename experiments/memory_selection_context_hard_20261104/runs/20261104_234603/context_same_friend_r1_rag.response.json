@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-9e0fbaab9c4fe275",
+  "object": "chat.completion",
+  "created": 1793803661,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"친구 부탁에 대해 생각해 볼게요라고 답한 당시 발화\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about \"그 두 번의 유보\" - referring to the two times the client said \"생각해 볼게요\" (I'll think about it). The counselor explicitly compared these two instances:\n1. When a friend asked for help preparing for a weekend gathering - client said \"생각해 볼게요, 라고 했어요\"\n2. When the same friend later invited to a book club - client said \"생각해 볼게요, 했어요\"\n\nThe counselor is now asking about the feelings behind each of these two \"생각해 볼게요\" responses. I need to create a search query that targets the original utterances from those two events.\n\nThe target_count is 2, which matches the two instances of \"생각해 볼게요\" responses.\n\nI should create a query that captures both original utterances - the \"생각해 볼게요\" responses to the friend's requests (helping with weekend gathering preparation and book club invitation).\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1688,
+    "total_tokens": 1920,
+    "completion_tokens": 232,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 210
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

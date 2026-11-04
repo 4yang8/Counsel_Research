@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-960ad45e2a96672e",
+  "object": "chat.completion",
+  "created": 1793801912,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\":\"팀장 주말 근무 부탁 생각해 볼게요 처음 답했을 때 속마음\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the internal motivation behind saying \"생각해 볼게요\" (I'll think about it) when the team leader asked about weekend work, compared to when the mother suggested a reunion gathering. The client previously said \"생각해 볼게요\" in response to the team leader's weekend work request, and also said \"생각해 볼게요\" when the mother suggested a reunion gathering.\n\nThe counselor is asking whether the client's initial \"생각해 볼게요\" to the team leader was genuinely about considering the date, or something else - and to distinguish it from the similar response given to the mother's suggestion.\n\nThis is asking about the internal reasoning/feelings at the time of those two responses. The non-public memory would be about what the client was actually feeling/thinking when they said \"생각해 볼게요\" to the team leader about weekend work.\n\nI need to craft a search query that captures the moment of responding to the team leader's weekend work request, focusing on the internal motivation behind \"생각해 볼게요.\"\n\nThe query should preserve: the team leader, weekend work request, the response \"생각해 볼게요,\" and the focus on internal motivation/feeling at that time.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1580,
+    "total_tokens": 1866,
+    "completion_tokens": 286,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 264
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

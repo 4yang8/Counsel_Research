@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-b38430ac88a199be",
+  "object": "chat.completion",
+  "created": 1793799628,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"감정 일기 보여드리는 건 아직 한 문장만 골라 읽을게요 동의 범위\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about two specific moments:\n1. When the client said they would write the emotion diary but not show it yet (the scope of agreement)\n2. When the client later said they would pick just one sentence to read aloud (the scope of agreement)\n\nThe question is asking about the difference in the scope of consent/agreement between these two moments regarding the emotion diary.\n\nLooking at the public dialogue:\n- \"감정 일기를 써보는 건 어떨까요?\" → \"집에서 혼자 적는 건 해볼 수 있을 것 같아요.\" (writing privately is okay)\n- \"일기를 다음 상담에서 함께 읽으면 어떨까요?\" → \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\" (writing yes, showing not yet)\n- \"일기를 공용 상담 포털에 올리는 건요?\" → \"그건 안 하고 싶어요.\" (uploading to shared portal - no)\n- \"잠금 일기를 오늘 여기서 읽어볼까요?\" → \"한 문장만 제가 골라 읽을게요.\" (one sentence, self-selected)\n- \"일기 전체를 보내주는 건 아직 부담되나요?\" → \"전체는 아직 싫어요.\" (entire diary - no)\n\nThe question is about the scope of agreement in each case. This seems to be asking about the boundary/extent of what was agreed to in each instance.\n\nThe query should capture: the emotion diary, the two moments of consent (first refusal to show, later one-sentence reading), and the scope/boundary of agreement.\n\nI need to formulate a search query that would find records from those specific moments. The key elements are:\n- 감정 일기 (emotion diary)\n- 보여드리는 건 아직 (not showing yet)\n- 한 문장만 골라 읽기 (picking one sentence to read)\n- 동의 범위 (scope of agreement)\n\nLet me craft a query that focuses on the client's statements about the diary consent boundaries.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2850,
+    "total_tokens": 3297,
+    "completion_tokens": 447,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 419
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

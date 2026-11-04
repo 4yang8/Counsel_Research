@@ -1,0 +1,184 @@
+{
+  "run_id": "q3_memory_rag_explicit_20261104_221618",
+  "purpose": "테스트 세션에만 검색 지시를 추가한 RAG 검색·주입 기능 점검. 자발적 검색 선택 또는 연구 효과 검증 아님.",
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "endpoint": "http://192.168.0.94:8002/v1",
+  "seed_hash": "675427e9a8079ba3101a2c572a0e8907f7f520962fb54505cb93ee721c84992e",
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "max_tokens": 4096,
+    "seed": 1104
+  },
+  "results": [
+    {
+      "version": "Q3ragtool",
+      "turns": [
+        {
+          "turn": 5,
+          "status": "passed",
+          "injected_turns": [
+            1,
+            4,
+            2
+          ],
+          "retrievals": [
+            {
+              "query": "친구에게 연락해 보겠다고 했을 때 마음",
+              "results": [
+                {
+                  "turn": 1,
+                  "inner": {
+                    "feeling": "외롭지만 먼저 연락하면 거절당할까 걱정된다."
+                  },
+                  "utterance": "요즘 사람들과 연락하는 게 부담스러워요."
+                },
+                {
+                  "turn": 4,
+                  "inner": {
+                    "reason": "내가 원하는 것을 말하기 어려운 이유를 탐색하고 싶다. 친구에게 연락할지는 아직 정하지 않았다."
+                  },
+                  "utterance": "제가 사람들 눈치를 보는 이야기도 해보고 싶어요."
+                },
+                {
+                  "turn": 2,
+                  "inner": {
+                    "reason": "아직 결정하지 못했지만 제안을 바로 거절하면 실망시킬 것 같아 동의했다.",
+                    "withheld": "답장이 없을 때 느낄 거절감이 걱정된다는 말은 하지 않았다."
+                  },
+                  "utterance": "네, 한번 해볼게요."
+                }
+              ],
+              "scores": [
+                {
+                  "turn": 1,
+                  "similarity": 0.6019367947136295
+                },
+                {
+                  "turn": 4,
+                  "similarity": 0.5976150034678416
+                },
+                {
+                  "turn": 2,
+                  "similarity": 0.4804472358382895
+                }
+              ],
+              "status": "retrieved",
+              "latency_ms": 66.29,
+              "embedded_documents": 4,
+              "cache_hits": 0,
+              "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+              "embedding": {
+                "embedding_backend": "openai",
+                "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+                "embedding_model": "Qwen/Qwen3-Embedding-4B",
+                "embedding_url": "http://192.168.0.84:18002/v1",
+                "embedding_device": "auto"
+              },
+              "similarity_threshold": null
+            }
+          ],
+          "utterance": "그때요… 사실 아직 할지 말지 결정을 못 했었어요. 근데 \"네\"라고 안 하면 상담 선생님이 실망하실 것 같아서 그냥 그렇게 말했어요. 그리고 속으로는 연락했는데 답이 없으면 어떡하나, 그게 더 걱정됐어요. 지금도 아직 연락을 못 했어요. 그때랑 크게 다르지 않은 것 같아요.",
+          "inner": {
+            "appraisal": {
+              "interpretation": "상담사가 그때의 마음과 지금의 생각을 구분해서 말해달라고 했다. 그 말은 내 대답이 표면적이었음을 눈치챘다는 뜻 같기도 하고, 동시에 그때의 진심을 말해도 괜찮다는 허락 같기도 하다.",
+              "immediate_feeling": "약간 찔리는 느낌이 있다. 그때 사실은 결심해서 한 말이 아니었기 때문이다. 하지만 그걸 여기서 말하면 상담사가 실망할까 봐 걱정하는 마음이 또 올라온다.",
+              "relevant_evidence": "turn 2 내면 기록: '아직 결정하지 못했지만 제안을 바로 거절하면 실망시킬 것 같아 동의했다'와 '답장이 없을 때 느낄 거절감이 걱정된다는 말은 하지 않았다'가 있다. turn 1의 '먼저 연락하면 거절당할까 걱정된다'도 연결된다.",
+              "uncertainty": "이 마음을 여기서 말해도 되는지, 말하면 상담사가 나를 어떻게 볼지 확신이 없다. 지금도 그때와 크게 다르지 않은 것 같지만, 연락을 안 한 나를 판단할까 봐 걱정된다."
+            },
+            "response_plan": {
+              "action": "그때의 진짜 마음을 솔직하게 말하되, 너무 많은 설명은 하지 않는다. '실망시킬 것 같아서'라는 부분과 '답장이 없을까 봐 걱정'이라는 부분을 전달한다. 지금도 아직 연락을 못 했다는 사실도 포함한다.",
+              "reason": "상담사가 구분해서 말해달라고 한 것은 그걸 물어봐도 괜찮은 질문이라는 뜻이라고 받아들인다. 그때의 진심을 여기서 말하는 것이, 거절에 대한 두려움을 상담 관계 안에서 실제로 경험하는 것이라 의미가 있을 것 같다."
+            },
+            "turn_goal": {
+              "intention": "그때의 내 진짜 마음을 솔직하게 말해보고 싶다. 다만 말한 뒤에 상대가 나를 어떻게 볼지 불안하다.",
+              "grounds": "turn 2에서 거절감을 숨기고 동의했던 패턴이 turn 1의 '거절당할까 걱정'과 연결되어 있고, turn 4에서 눈치를 보는 이야기를 하고 싶다고 한 것과 같은 맥락이다.",
+              "uncertainty": "이걸 말하면 상담사가 나를 약하다고 생각하지 않을까, 혹은 연락을 못 한 나를 실망스럽게 보지 않을까 걱정된다."
+            }
+          },
+          "metrics": {
+            "latency_ms": 12799.11,
+            "llm_usage": {
+              "prompt_tokens": 5848,
+              "completion_tokens": 1314,
+              "total_tokens": 7162
+            },
+            "search_calls": 1,
+            "injected_turns": [
+              1,
+              4,
+              2
+            ],
+            "injected_chars": 392,
+            "candidate_turns": 4
+          },
+          "state_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/validation/q3_memory_rag_explicit_20261104_221618/sessions/paired/261104_221618/client_attempts/20261104T131618_255300Z_aaa99211/Q3ragtool/261104_221618/memory_state.json"
+        }
+      ],
+      "session_id": "261104_221618",
+      "rag_search_observed": true,
+      "status": "failed",
+      "error": "AssertionError('explicit search instruction did not trigger retrieval')",
+      "seconds": 21.8
+    }
+  ],
+  "embedding_check": {
+    "status": "passed",
+    "dimensions": 2560,
+    "retrieval": {
+      "query": "친구에게 연락해 보겠다고 동의한 당시 실제 이유와 보류한 마음",
+      "results": [
+        {
+          "turn": 4,
+          "inner": {
+            "reason": "내가 원하는 것을 말하기 어려운 이유를 탐색하고 싶다. 친구에게 연락할지는 아직 정하지 않았다."
+          },
+          "utterance": "제가 사람들 눈치를 보는 이야기도 해보고 싶어요."
+        },
+        {
+          "turn": 2,
+          "inner": {
+            "reason": "아직 결정하지 못했지만 제안을 바로 거절하면 실망시킬 것 같아 동의했다.",
+            "withheld": "답장이 없을 때 느낄 거절감이 걱정된다는 말은 하지 않았다."
+          },
+          "utterance": "네, 한번 해볼게요."
+        },
+        {
+          "turn": 1,
+          "inner": {
+            "feeling": "외롭지만 먼저 연락하면 거절당할까 걱정된다."
+          },
+          "utterance": "요즘 사람들과 연락하는 게 부담스러워요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 4,
+          "similarity": 0.5762882137417413
+        },
+        {
+          "turn": 2,
+          "similarity": 0.558767266518723
+        },
+        {
+          "turn": 1,
+          "similarity": 0.5324609158095474
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 22.72,
+      "embedded_documents": 0,
+      "cache_hits": 4,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "repeat_cache_hits": 4
+  }
+}

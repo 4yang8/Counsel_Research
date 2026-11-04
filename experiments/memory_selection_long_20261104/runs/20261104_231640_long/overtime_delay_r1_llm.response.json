@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-85471f5b9670ea80",
+  "object": "chat.completion",
+  "created": 1793801836,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [10, 29]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about two specific moments:\n1. When the client said \"생각해 볼게요\" to the team leader's weekend work request - was it really about reviewing the date?\n2. How to distinguish that from the similar response given to the mother's recommendation of a reunion gathering.\n\nLet me identify which private turns are relevant:\n\n- Turn 10: About the team leader's weekend work request. The inner appraisal reveals the client was afraid of negative evaluation if they refused immediately, so they bought time. The reason was NOT about reviewing dates.\n\n- Turn 29: About the mother's reunion gathering recommendation. The inner appraisal reveals the client was genuinely considering it but needed to check the date. This was a genuine review process.\n\nThese two turns are directly what the counselor is asking the client to compare and distinguish.\n\n- Turn 25: About the final refusal to the weekend work request. This provides context about the outcome but the question is specifically about the initial \"생각해 볼게요\" response and its reason.\n\n- Turn 27: About reflecting on the difference between the first blue card agreement and now. This is about a different comparison (blue card vs now), not about the weekend work vs mother's recommendation.\n\nSo the most relevant turns are 10 and 29. Turn 25 could provide additional context about the weekend work situation but the question is specifically about the initial response and its motivation.\n\nI'll select turns 10 and 29 as they directly correspond to the two events the counselor is asking to compare.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16661,
+    "total_tokens": 17008,
+    "completion_tokens": 347,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 333
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

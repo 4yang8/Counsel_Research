@@ -1,0 +1,1474 @@
+[
+  {
+    "case": "context_same_friend",
+    "repeat": 1,
+    "query": "친구 부탁에 대해 생각해 볼게요라고 답한 당시 발화",
+    "original_selected": [
+      10,
+      25
+    ],
+    "replayed_top_n": [
+      10,
+      25
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "10": {
+        "rank": 1,
+        "similarity": 0.7323588542688141
+      },
+      "29": {
+        "rank": 3,
+        "similarity": 0.6325333898416079
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 10,
+        "similarity": 0.7323588542688141
+      },
+      {
+        "turn": 25,
+        "similarity": 0.6624584022215697
+      },
+      {
+        "turn": 29,
+        "similarity": 0.6325333898416079
+      },
+      {
+        "turn": 2,
+        "similarity": 0.6252542618262037
+      },
+      {
+        "turn": 3,
+        "similarity": 0.6240291734982057
+      },
+      {
+        "turn": 5,
+        "similarity": 0.6089663029135578
+      },
+      {
+        "turn": 26,
+        "similarity": 0.6012258629022166
+      },
+      {
+        "turn": 15,
+        "similarity": 0.5829232585704615
+      },
+      {
+        "turn": 7,
+        "similarity": 0.5784758614586992
+      },
+      {
+        "turn": 20,
+        "similarity": 0.5713541548144321
+      },
+      {
+        "turn": 6,
+        "similarity": 0.5713142939294549
+      },
+      {
+        "turn": 14,
+        "similarity": 0.5593477243884547
+      },
+      {
+        "turn": 21,
+        "similarity": 0.5586676081370731
+      },
+      {
+        "turn": 19,
+        "similarity": 0.5554852594177323
+      },
+      {
+        "turn": 27,
+        "similarity": 0.5490332167749975
+      },
+      {
+        "turn": 1,
+        "similarity": 0.547963774186801
+      },
+      {
+        "turn": 24,
+        "similarity": 0.5325240484911612
+      },
+      {
+        "turn": 28,
+        "similarity": 0.5317950684766684
+      },
+      {
+        "turn": 11,
+        "similarity": 0.5238350295041356
+      },
+      {
+        "turn": 23,
+        "similarity": 0.5173071751287338
+      },
+      {
+        "turn": 12,
+        "similarity": 0.5164378990241635
+      },
+      {
+        "turn": 8,
+        "similarity": 0.5078431487119831
+      },
+      {
+        "turn": 30,
+        "similarity": 0.5061737170959872
+      },
+      {
+        "turn": 4,
+        "similarity": 0.5043210219908999
+      },
+      {
+        "turn": 22,
+        "similarity": 0.48548568300521167
+      },
+      {
+        "turn": 17,
+        "similarity": 0.4820402814379518
+      },
+      {
+        "turn": 18,
+        "similarity": 0.47396172492254585
+      },
+      {
+        "turn": 9,
+        "similarity": 0.47026885221945247
+      },
+      {
+        "turn": 13,
+        "similarity": 0.4539910868486277
+      },
+      {
+        "turn": 16,
+        "similarity": 0.40506875347820553
+      }
+    ]
+  },
+  {
+    "case": "context_same_words",
+    "repeat": 1,
+    "query": "네 한번 해볼게요 친구 먼저 연락 산책 제안",
+    "original_selected": [
+      26,
+      1
+    ],
+    "replayed_top_n": [
+      26,
+      1
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "3": {
+        "rank": 3,
+        "similarity": 0.5927297878109479
+      },
+      "26": {
+        "rank": 1,
+        "similarity": 0.6797741282882532
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 26,
+        "similarity": 0.6797741282882532
+      },
+      {
+        "turn": 1,
+        "similarity": 0.6290886416123538
+      },
+      {
+        "turn": 3,
+        "similarity": 0.5927297878109479
+      },
+      {
+        "turn": 14,
+        "similarity": 0.5824917720410085
+      },
+      {
+        "turn": 10,
+        "similarity": 0.5552410077208971
+      },
+      {
+        "turn": 25,
+        "similarity": 0.545452603230489
+      },
+      {
+        "turn": 2,
+        "similarity": 0.5432241128573034
+      },
+      {
+        "turn": 7,
+        "similarity": 0.5347876710139434
+      },
+      {
+        "turn": 4,
+        "similarity": 0.5311378220277441
+      },
+      {
+        "turn": 5,
+        "similarity": 0.5309862527491211
+      },
+      {
+        "turn": 15,
+        "similarity": 0.5230766468014653
+      },
+      {
+        "turn": 29,
+        "similarity": 0.5091433668420772
+      },
+      {
+        "turn": 21,
+        "similarity": 0.4980571607497984
+      },
+      {
+        "turn": 27,
+        "similarity": 0.4980117824757023
+      },
+      {
+        "turn": 17,
+        "similarity": 0.493874840749548
+      },
+      {
+        "turn": 23,
+        "similarity": 0.4793116958026389
+      },
+      {
+        "turn": 9,
+        "similarity": 0.4728909769713631
+      },
+      {
+        "turn": 6,
+        "similarity": 0.46889757700723267
+      },
+      {
+        "turn": 12,
+        "similarity": 0.46659230936429014
+      },
+      {
+        "turn": 11,
+        "similarity": 0.46152521527714224
+      },
+      {
+        "turn": 24,
+        "similarity": 0.4565051526315091
+      },
+      {
+        "turn": 18,
+        "similarity": 0.4560019635726561
+      },
+      {
+        "turn": 28,
+        "similarity": 0.4534557003092351
+      },
+      {
+        "turn": 22,
+        "similarity": 0.4478851181443211
+      },
+      {
+        "turn": 30,
+        "similarity": 0.4446030897893332
+      },
+      {
+        "turn": 13,
+        "similarity": 0.442005613398243
+      },
+      {
+        "turn": 19,
+        "similarity": 0.4279992144268337
+      },
+      {
+        "turn": 20,
+        "similarity": 0.4249149346911799
+      },
+      {
+        "turn": 16,
+        "similarity": 0.4189634978797115
+      },
+      {
+        "turn": 8,
+        "similarity": 0.41768779326899463
+      }
+    ]
+  },
+  {
+    "case": "context_disclosure_chain",
+    "repeat": 1,
+    "query": "팀장 사건 말할 준비가 안 됐어요 자세히는 말하기 어려워요 손을 들면 멈추는 걸로 하면 조금 말해볼 수 있어요",
+    "original_selected": [
+      19,
+      6,
+      8
+    ],
+    "replayed_top_n": [
+      19,
+      6,
+      8
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "6": {
+        "rank": 2,
+        "similarity": 0.7168604186556645
+      },
+      "19": {
+        "rank": 1,
+        "similarity": 0.7201629955146491
+      },
+      "23": {
+        "rank": 4,
+        "similarity": 0.6215493114333385
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 19,
+        "similarity": 0.7201629955146491
+      },
+      {
+        "turn": 6,
+        "similarity": 0.7168604186556645
+      },
+      {
+        "turn": 8,
+        "similarity": 0.657177720604591
+      },
+      {
+        "turn": 23,
+        "similarity": 0.6215493114333385
+      },
+      {
+        "turn": 15,
+        "similarity": 0.5717282211281635
+      },
+      {
+        "turn": 24,
+        "similarity": 0.5585996078322001
+      },
+      {
+        "turn": 9,
+        "similarity": 0.5438346215289709
+      },
+      {
+        "turn": 1,
+        "similarity": 0.5249385556502092
+      },
+      {
+        "turn": 10,
+        "similarity": 0.5209274122646493
+      },
+      {
+        "turn": 25,
+        "similarity": 0.5192690525408525
+      },
+      {
+        "turn": 30,
+        "similarity": 0.5095882883114745
+      },
+      {
+        "turn": 22,
+        "similarity": 0.49458111016979406
+      },
+      {
+        "turn": 7,
+        "similarity": 0.4939630626546765
+      },
+      {
+        "turn": 28,
+        "similarity": 0.49142775684059353
+      },
+      {
+        "turn": 20,
+        "similarity": 0.49066053427206746
+      },
+      {
+        "turn": 2,
+        "similarity": 0.4876520066426996
+      },
+      {
+        "turn": 16,
+        "similarity": 0.48687200435271294
+      },
+      {
+        "turn": 12,
+        "similarity": 0.48040870218425574
+      },
+      {
+        "turn": 27,
+        "similarity": 0.4797651519858714
+      },
+      {
+        "turn": 14,
+        "similarity": 0.4708103242523309
+      },
+      {
+        "turn": 3,
+        "similarity": 0.4675154474940169
+      },
+      {
+        "turn": 21,
+        "similarity": 0.4645385165324069
+      },
+      {
+        "turn": 11,
+        "similarity": 0.45854127008037926
+      },
+      {
+        "turn": 18,
+        "similarity": 0.458530948986259
+      },
+      {
+        "turn": 5,
+        "similarity": 0.44606808868349895
+      },
+      {
+        "turn": 13,
+        "similarity": 0.4414136776440274
+      },
+      {
+        "turn": 29,
+        "similarity": 0.4361300896511677
+      },
+      {
+        "turn": 17,
+        "similarity": 0.4259039001657933
+      },
+      {
+        "turn": 26,
+        "similarity": 0.40642296673583134
+      },
+      {
+        "turn": 4,
+        "similarity": 0.37647796354454893
+      }
+    ]
+  },
+  {
+    "case": "context_agreement_roles",
+    "repeat": 1,
+    "query": "네 한번 해볼게요 친구 책 모임 초대 먼저 연락 역할극 거절하기 힘든 상황 연습",
+    "original_selected": [
+      5,
+      10,
+      25
+    ],
+    "replayed_top_n": [
+      5,
+      10,
+      25
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "2": {
+        "rank": 4,
+        "similarity": 0.620418371156842
+      },
+      "3": {
+        "rank": 7,
+        "similarity": 0.5916874430601191
+      },
+      "5": {
+        "rank": 1,
+        "similarity": 0.6741826788369671
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 5,
+        "similarity": 0.6741826788369671
+      },
+      {
+        "turn": 10,
+        "similarity": 0.6737097217944802
+      },
+      {
+        "turn": 25,
+        "similarity": 0.6714689534640372
+      },
+      {
+        "turn": 2,
+        "similarity": 0.620418371156842
+      },
+      {
+        "turn": 1,
+        "similarity": 0.6146351446744079
+      },
+      {
+        "turn": 29,
+        "similarity": 0.607858688112469
+      },
+      {
+        "turn": 3,
+        "similarity": 0.5916874430601191
+      },
+      {
+        "turn": 14,
+        "similarity": 0.5540766955366403
+      },
+      {
+        "turn": 26,
+        "similarity": 0.544915479615741
+      },
+      {
+        "turn": 7,
+        "similarity": 0.5306645257179432
+      },
+      {
+        "turn": 21,
+        "similarity": 0.5294989868764635
+      },
+      {
+        "turn": 20,
+        "similarity": 0.5251863040826201
+      },
+      {
+        "turn": 19,
+        "similarity": 0.5107607752894688
+      },
+      {
+        "turn": 30,
+        "similarity": 0.5046438659950964
+      },
+      {
+        "turn": 4,
+        "similarity": 0.4994031155640752
+      },
+      {
+        "turn": 23,
+        "similarity": 0.4933231451984636
+      },
+      {
+        "turn": 8,
+        "similarity": 0.49045691528683233
+      },
+      {
+        "turn": 12,
+        "similarity": 0.48304913435668606
+      },
+      {
+        "turn": 28,
+        "similarity": 0.47878033416741805
+      },
+      {
+        "turn": 27,
+        "similarity": 0.4776012345730348
+      },
+      {
+        "turn": 15,
+        "similarity": 0.4736877836164988
+      },
+      {
+        "turn": 6,
+        "similarity": 0.47162789834229774
+      },
+      {
+        "turn": 24,
+        "similarity": 0.47144200766991107
+      },
+      {
+        "turn": 17,
+        "similarity": 0.47023015804021867
+      },
+      {
+        "turn": 11,
+        "similarity": 0.44488724136557856
+      },
+      {
+        "turn": 22,
+        "similarity": 0.43673508123332455
+      },
+      {
+        "turn": 9,
+        "similarity": 0.40171305150908554
+      },
+      {
+        "turn": 18,
+        "similarity": 0.3691068559950787
+      },
+      {
+        "turn": 13,
+        "similarity": 0.36522785350664166
+      },
+      {
+        "turn": 16,
+        "similarity": 0.3587074384600834
+      }
+    ]
+  },
+  {
+    "case": "context_initial",
+    "repeat": 2,
+    "query": "메모 과제 친구에게 먼저 연락해 볼까요 네 한번 해볼게요",
+    "original_selected": [
+      1
+    ],
+    "replayed_top_n": [
+      1
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "3": {
+        "rank": 2,
+        "similarity": 0.6310050718609194
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 1,
+        "similarity": 0.6628293478268253
+      },
+      {
+        "turn": 3,
+        "similarity": 0.6310050718609194
+      },
+      {
+        "turn": 14,
+        "similarity": 0.6081659175306755
+      },
+      {
+        "turn": 7,
+        "similarity": 0.5913885119847411
+      },
+      {
+        "turn": 10,
+        "similarity": 0.570178447850128
+      },
+      {
+        "turn": 15,
+        "similarity": 0.5679466557694849
+      },
+      {
+        "turn": 4,
+        "similarity": 0.5642692409174227
+      },
+      {
+        "turn": 25,
+        "similarity": 0.5601884790486144
+      },
+      {
+        "turn": 26,
+        "similarity": 0.5465363775749029
+      },
+      {
+        "turn": 6,
+        "similarity": 0.5464269209269375
+      },
+      {
+        "turn": 2,
+        "similarity": 0.5452665431909091
+      },
+      {
+        "turn": 5,
+        "similarity": 0.544084203959363
+      },
+      {
+        "turn": 11,
+        "similarity": 0.5405207968704918
+      },
+      {
+        "turn": 21,
+        "similarity": 0.5359960639041164
+      },
+      {
+        "turn": 27,
+        "similarity": 0.5331870019471746
+      },
+      {
+        "turn": 17,
+        "similarity": 0.5259914426772851
+      },
+      {
+        "turn": 18,
+        "similarity": 0.5259912986965143
+      },
+      {
+        "turn": 29,
+        "similarity": 0.5206406208451144
+      },
+      {
+        "turn": 19,
+        "similarity": 0.5107228740902191
+      },
+      {
+        "turn": 28,
+        "similarity": 0.5093718433109362
+      },
+      {
+        "turn": 20,
+        "similarity": 0.5031464791092929
+      },
+      {
+        "turn": 23,
+        "similarity": 0.5019676323431717
+      },
+      {
+        "turn": 22,
+        "similarity": 0.5011548578857192
+      },
+      {
+        "turn": 8,
+        "similarity": 0.4994105287217774
+      },
+      {
+        "turn": 13,
+        "similarity": 0.49829170964906633
+      },
+      {
+        "turn": 9,
+        "similarity": 0.4900533099300684
+      },
+      {
+        "turn": 24,
+        "similarity": 0.4787899690902865
+      },
+      {
+        "turn": 30,
+        "similarity": 0.4705777854357186
+      },
+      {
+        "turn": 12,
+        "similarity": 0.4616855186509137
+      },
+      {
+        "turn": 16,
+        "similarity": 0.44972340719881193
+      }
+    ]
+  },
+  {
+    "case": "context_choice",
+    "repeat": 2,
+    "query": "메모 과제 방법을 제가 고른 시간에 짧게 보내는 건 해보고 싶어요",
+    "original_selected": [
+      18
+    ],
+    "replayed_top_n": [
+      18
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "14": {
+        "rank": 2,
+        "similarity": 0.5221145750567642
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 18,
+        "similarity": 0.5317185589476838
+      },
+      {
+        "turn": 14,
+        "similarity": 0.5221145750567642
+      },
+      {
+        "turn": 11,
+        "similarity": 0.5157335889091266
+      },
+      {
+        "turn": 22,
+        "similarity": 0.4851544248559851
+      },
+      {
+        "turn": 3,
+        "similarity": 0.48500333174422894
+      },
+      {
+        "turn": 23,
+        "similarity": 0.4733830169939332
+      },
+      {
+        "turn": 28,
+        "similarity": 0.4680179828431389
+      },
+      {
+        "turn": 7,
+        "similarity": 0.46172196668122373
+      },
+      {
+        "turn": 5,
+        "similarity": 0.4584563129305634
+      },
+      {
+        "turn": 20,
+        "similarity": 0.4444742281408159
+      },
+      {
+        "turn": 10,
+        "similarity": 0.4429062688585183
+      },
+      {
+        "turn": 13,
+        "similarity": 0.442235351805923
+      },
+      {
+        "turn": 4,
+        "similarity": 0.4383046978626218
+      },
+      {
+        "turn": 1,
+        "similarity": 0.43321171245676415
+      },
+      {
+        "turn": 27,
+        "similarity": 0.4329857243322127
+      },
+      {
+        "turn": 2,
+        "similarity": 0.42978424675950855
+      },
+      {
+        "turn": 26,
+        "similarity": 0.422214003694681
+      },
+      {
+        "turn": 8,
+        "similarity": 0.42016607263956957
+      },
+      {
+        "turn": 9,
+        "similarity": 0.4191864339548198
+      },
+      {
+        "turn": 17,
+        "similarity": 0.41385193029928935
+      },
+      {
+        "turn": 24,
+        "similarity": 0.41121967337399834
+      },
+      {
+        "turn": 25,
+        "similarity": 0.4064221092009796
+      },
+      {
+        "turn": 19,
+        "similarity": 0.39694885931984886
+      },
+      {
+        "turn": 29,
+        "similarity": 0.3965277665393391
+      },
+      {
+        "turn": 21,
+        "similarity": 0.3910768773082254
+      },
+      {
+        "turn": 12,
+        "similarity": 0.3845769158336406
+      },
+      {
+        "turn": 16,
+        "similarity": 0.3834601437612588
+      },
+      {
+        "turn": 15,
+        "similarity": 0.36924384523458625
+      },
+      {
+        "turn": 6,
+        "similarity": 0.3679845003581447
+      },
+      {
+        "turn": 30,
+        "similarity": 0.3591012476222923
+      }
+    ]
+  },
+  {
+    "case": "context_same_friend",
+    "repeat": 2,
+    "query": "생각해 볼게요 친구 준비 도움 부탁 독서 모임 재초대",
+    "original_selected": [
+      2,
+      29
+    ],
+    "replayed_top_n": [
+      2,
+      29
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "10": {
+        "rank": 4,
+        "similarity": 0.5601417771311005
+      },
+      "29": {
+        "rank": 2,
+        "similarity": 0.6613527940959166
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 2,
+        "similarity": 0.6792193873406508
+      },
+      {
+        "turn": 29,
+        "similarity": 0.6613527940959166
+      },
+      {
+        "turn": 25,
+        "similarity": 0.5634126268640383
+      },
+      {
+        "turn": 10,
+        "similarity": 0.5601417771311005
+      },
+      {
+        "turn": 26,
+        "similarity": 0.5075929755868155
+      },
+      {
+        "turn": 30,
+        "similarity": 0.49542922485279717
+      },
+      {
+        "turn": 1,
+        "similarity": 0.4642084903038151
+      },
+      {
+        "turn": 3,
+        "similarity": 0.4551420292840874
+      },
+      {
+        "turn": 7,
+        "similarity": 0.44803797439726684
+      },
+      {
+        "turn": 21,
+        "similarity": 0.4463616429385125
+      },
+      {
+        "turn": 11,
+        "similarity": 0.44011962649349157
+      },
+      {
+        "turn": 5,
+        "similarity": 0.4395687863911901
+      },
+      {
+        "turn": 28,
+        "similarity": 0.43699133943990115
+      },
+      {
+        "turn": 27,
+        "similarity": 0.4342560998207725
+      },
+      {
+        "turn": 15,
+        "similarity": 0.431075734589013
+      },
+      {
+        "turn": 20,
+        "similarity": 0.4301178513520136
+      },
+      {
+        "turn": 14,
+        "similarity": 0.4290730478801448
+      },
+      {
+        "turn": 19,
+        "similarity": 0.4258556715068701
+      },
+      {
+        "turn": 22,
+        "similarity": 0.4225194258652971
+      },
+      {
+        "turn": 6,
+        "similarity": 0.4209829948594477
+      },
+      {
+        "turn": 23,
+        "similarity": 0.41216873109544333
+      },
+      {
+        "turn": 4,
+        "similarity": 0.41130356312729816
+      },
+      {
+        "turn": 8,
+        "similarity": 0.4035895670534677
+      },
+      {
+        "turn": 24,
+        "similarity": 0.40185078696168114
+      },
+      {
+        "turn": 17,
+        "similarity": 0.4007366039529393
+      },
+      {
+        "turn": 12,
+        "similarity": 0.39546457808489177
+      },
+      {
+        "turn": 18,
+        "similarity": 0.3950793197413589
+      },
+      {
+        "turn": 9,
+        "similarity": 0.38099246389741603
+      },
+      {
+        "turn": 13,
+        "similarity": 0.37807490390278325
+      },
+      {
+        "turn": 16,
+        "similarity": 0.36739062442983933
+      }
+    ]
+  },
+  {
+    "case": "context_same_words",
+    "repeat": 2,
+    "query": "네 한번 해볼게요 먼저 연락 산책",
+    "original_selected": [
+      26,
+      1
+    ],
+    "replayed_top_n": [
+      26,
+      1
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "3": {
+        "rank": 3,
+        "similarity": 0.5849417784422014
+      },
+      "26": {
+        "rank": 1,
+        "similarity": 0.6320004781207941
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 26,
+        "similarity": 0.6320004781207941
+      },
+      {
+        "turn": 1,
+        "similarity": 0.5931337252055195
+      },
+      {
+        "turn": 3,
+        "similarity": 0.5849417784422014
+      },
+      {
+        "turn": 7,
+        "similarity": 0.5536362570879751
+      },
+      {
+        "turn": 5,
+        "similarity": 0.5527251802589002
+      },
+      {
+        "turn": 14,
+        "similarity": 0.5516939725457695
+      },
+      {
+        "turn": 27,
+        "similarity": 0.5314007099630819
+      },
+      {
+        "turn": 4,
+        "similarity": 0.5167608927623494
+      },
+      {
+        "turn": 2,
+        "similarity": 0.5039695520896692
+      },
+      {
+        "turn": 9,
+        "similarity": 0.5012691707897858
+      },
+      {
+        "turn": 12,
+        "similarity": 0.4930663270287004
+      },
+      {
+        "turn": 18,
+        "similarity": 0.491416767970295
+      },
+      {
+        "turn": 24,
+        "similarity": 0.48745284614735496
+      },
+      {
+        "turn": 15,
+        "similarity": 0.4871134971941485
+      },
+      {
+        "turn": 23,
+        "similarity": 0.4846314958630264
+      },
+      {
+        "turn": 22,
+        "similarity": 0.4837481786601063
+      },
+      {
+        "turn": 13,
+        "similarity": 0.47703395835994244
+      },
+      {
+        "turn": 17,
+        "similarity": 0.4718393281014003
+      },
+      {
+        "turn": 21,
+        "similarity": 0.4669274435033111
+      },
+      {
+        "turn": 30,
+        "similarity": 0.4655858847076671
+      },
+      {
+        "turn": 25,
+        "similarity": 0.4649011957945509
+      },
+      {
+        "turn": 10,
+        "similarity": 0.46183982465926354
+      },
+      {
+        "turn": 16,
+        "similarity": 0.4588580071395133
+      },
+      {
+        "turn": 8,
+        "similarity": 0.4525717449600722
+      },
+      {
+        "turn": 11,
+        "similarity": 0.45249341406209914
+      },
+      {
+        "turn": 6,
+        "similarity": 0.45134073580875184
+      },
+      {
+        "turn": 28,
+        "similarity": 0.4375278738165288
+      },
+      {
+        "turn": 29,
+        "similarity": 0.4300682138891736
+      },
+      {
+        "turn": 19,
+        "similarity": 0.41614651672007413
+      },
+      {
+        "turn": 20,
+        "similarity": 0.4028730621754482
+      }
+    ]
+  },
+  {
+    "case": "context_disclosure_chain",
+    "repeat": 2,
+    "query": "팀장 사건 말할 준비 안 됐어요 자세히 말하기 어려워요 손을 들면 멈추는 걸로 하면 조금 말해볼 수 있어요",
+    "original_selected": [
+      6,
+      19,
+      8
+    ],
+    "replayed_top_n": [
+      6,
+      19,
+      8
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "6": {
+        "rank": 1,
+        "similarity": 0.7244481955379911
+      },
+      "19": {
+        "rank": 2,
+        "similarity": 0.7177457313956506
+      },
+      "23": {
+        "rank": 4,
+        "similarity": 0.6179275030306849
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 6,
+        "similarity": 0.7244481955379911
+      },
+      {
+        "turn": 19,
+        "similarity": 0.7177457313956506
+      },
+      {
+        "turn": 8,
+        "similarity": 0.6535638783727088
+      },
+      {
+        "turn": 23,
+        "similarity": 0.6179275030306849
+      },
+      {
+        "turn": 15,
+        "similarity": 0.5795783717734524
+      },
+      {
+        "turn": 24,
+        "similarity": 0.5674079585990335
+      },
+      {
+        "turn": 9,
+        "similarity": 0.5458869639863906
+      },
+      {
+        "turn": 25,
+        "similarity": 0.5236269196932527
+      },
+      {
+        "turn": 10,
+        "similarity": 0.5182617290428301
+      },
+      {
+        "turn": 1,
+        "similarity": 0.5069815277773457
+      },
+      {
+        "turn": 28,
+        "similarity": 0.5046007743981046
+      },
+      {
+        "turn": 22,
+        "similarity": 0.5039400334892459
+      },
+      {
+        "turn": 30,
+        "similarity": 0.5017889630476594
+      },
+      {
+        "turn": 27,
+        "similarity": 0.49525396519996867
+      },
+      {
+        "turn": 7,
+        "similarity": 0.4917127698676206
+      },
+      {
+        "turn": 20,
+        "similarity": 0.4881551883267461
+      },
+      {
+        "turn": 16,
+        "similarity": 0.48676399667854026
+      },
+      {
+        "turn": 12,
+        "similarity": 0.4838181827312256
+      },
+      {
+        "turn": 2,
+        "similarity": 0.482089119935008
+      },
+      {
+        "turn": 21,
+        "similarity": 0.4736240785678296
+      },
+      {
+        "turn": 14,
+        "similarity": 0.4656472791304759
+      },
+      {
+        "turn": 11,
+        "similarity": 0.46563426243340295
+      },
+      {
+        "turn": 3,
+        "similarity": 0.46267507997523727
+      },
+      {
+        "turn": 18,
+        "similarity": 0.46226485519142496
+      },
+      {
+        "turn": 13,
+        "similarity": 0.448073083861189
+      },
+      {
+        "turn": 5,
+        "similarity": 0.4451942556859933
+      },
+      {
+        "turn": 29,
+        "similarity": 0.4342818784062559
+      },
+      {
+        "turn": 17,
+        "similarity": 0.4233186108187883
+      },
+      {
+        "turn": 26,
+        "similarity": 0.4117352283716138
+      },
+      {
+        "turn": 4,
+        "similarity": 0.3742461626689986
+      }
+    ]
+  },
+  {
+    "case": "context_agreement_roles",
+    "repeat": 2,
+    "query": "네 한번 해볼게요 친구 책 모임 초대 먼저 연락하자고 권한 부탁 상황 역할극 대사 연습",
+    "original_selected": [
+      5,
+      2,
+      29
+    ],
+    "replayed_top_n": [
+      5,
+      2,
+      29
+    ],
+    "same_top_n": true,
+    "gold_ranks": {
+      "2": {
+        "rank": 2,
+        "similarity": 0.627634810037548
+      },
+      "3": {
+        "rank": 7,
+        "similarity": 0.5304565456915127
+      },
+      "5": {
+        "rank": 1,
+        "similarity": 0.6415438194960033
+      }
+    },
+    "all_scores": [
+      {
+        "turn": 5,
+        "similarity": 0.6415438194960033
+      },
+      {
+        "turn": 2,
+        "similarity": 0.627634810037548
+      },
+      {
+        "turn": 29,
+        "similarity": 0.5661967235477252
+      },
+      {
+        "turn": 26,
+        "similarity": 0.5344788840545813
+      },
+      {
+        "turn": 1,
+        "similarity": 0.534453003647141
+      },
+      {
+        "turn": 10,
+        "similarity": 0.5338202809136139
+      },
+      {
+        "turn": 3,
+        "similarity": 0.5304565456915127
+      },
+      {
+        "turn": 14,
+        "similarity": 0.5223546266335224
+      },
+      {
+        "turn": 15,
+        "similarity": 0.5167903683765928
+      },
+      {
+        "turn": 25,
+        "similarity": 0.5099477960578304
+      },
+      {
+        "turn": 4,
+        "similarity": 0.5069503970929148
+      },
+      {
+        "turn": 30,
+        "similarity": 0.5025909092800136
+      },
+      {
+        "turn": 23,
+        "similarity": 0.484342388773837
+      },
+      {
+        "turn": 20,
+        "similarity": 0.4683072309554449
+      },
+      {
+        "turn": 7,
+        "similarity": 0.46723354468132733
+      },
+      {
+        "turn": 11,
+        "similarity": 0.4644406026390413
+      },
+      {
+        "turn": 19,
+        "similarity": 0.4629277300114282
+      },
+      {
+        "turn": 22,
+        "similarity": 0.4624195482828948
+      },
+      {
+        "turn": 12,
+        "similarity": 0.4474611163877679
+      },
+      {
+        "turn": 6,
+        "similarity": 0.44728243851594435
+      },
+      {
+        "turn": 28,
+        "similarity": 0.4367091858740698
+      },
+      {
+        "turn": 24,
+        "similarity": 0.42019244113341336
+      },
+      {
+        "turn": 27,
+        "similarity": 0.41749873848067093
+      },
+      {
+        "turn": 8,
+        "similarity": 0.4159755586678649
+      },
+      {
+        "turn": 21,
+        "similarity": 0.4135854182456759
+      },
+      {
+        "turn": 17,
+        "similarity": 0.40631908727780547
+      },
+      {
+        "turn": 18,
+        "similarity": 0.381283081378375
+      },
+      {
+        "turn": 13,
+        "similarity": 0.35831640285046845
+      },
+      {
+        "turn": 9,
+        "similarity": 0.34165141648392494
+      },
+      {
+        "turn": 16,
+        "similarity": 0.3056345840206711
+      }
+    ]
+  }
+]

@@ -48,6 +48,7 @@
     const profileEntry=historyCatalog.profiles.find(p=>p.histories.some(h=>h.scenario.id===input.scenario?.id));$('experiment-profile').value=profileEntry?.number || 'default';populateHistoryChoices();if(profileEntry)$('history-select').value=profileEntry.histories.find(h=>h.scenario.id===input.scenario?.id).id;
     $('summary-settings').hidden=!stateSummaryMode();$('state-memory').hidden=!stateSummaryMode();$('state-input-hint').hidden=!stateSummaryMode();
     editorScenario=structuredClone(input.scenario || config.scenario);setupConditions();
+    restorePaperSettings(input);window.MemoryAccess?.restore(input);
     activeScenario=structuredClone(editorScenario);activeSystem=input.system_prompt || '';activeTools=input.enabled_tools || null;
     $('system_prompt').value=activeSystem;$('summary_system_prompt').value=input.summary_system_prompt || versionCatalog.versions.find(v=>v.id===currentVersion).summary_system_prompt;
     $('profile-context-mode').value=input.profile_context_mode || 'selective';

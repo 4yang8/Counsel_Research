@@ -116,7 +116,7 @@
   // Only shared experimental conditions cross panes. Version-specific prompts,
   // tool choices, memory and ongoing public dialogue remain owned by each pane.
   const commonFields=['model-select','thinking-mode','temperature','top_p','max_tokens','seed','counselor-intervention-condition',
-    'profile-context-mode','message',...['system','task','profile','dialogue'].map(k=>'block-enabled-'+k),
+    'profile-context-mode','message','memory-seed',...['system','task','profile','dialogue'].map(k=>'block-enabled-'+k),
     ...['client','counselor'].flatMap(role=>['main','subagent'].flatMap(scope=>[role+'-'+scope+'-budget',role+'-'+scope+'-budget-enabled']))];
   function common(){
     return {scenario:selectedScenario(),turns:readTurns(),profileId:$('experiment-profile').value,historyId:$('history-select').value,
@@ -131,6 +131,8 @@
     const request={experiment_version:currentVersion,system_prompt:$('system_prompt').value,summary_system_prompt:$('summary_system_prompt').value,
       ...(enabledToolNames!==null?{enabled_tools:[...enabledToolNames]}:{})},v=value.values;
     if(versionCatalog?.versions.find(row=>row.id===currentVersion)?.claim_memory_conditions)request.claim_memory_condition=$('claim-memory-condition').value;
+    Object.assign(request,paperRequest(),window.MemoryAccess?.request() || {});
+    if(request.memory_options && v['memory-seed'])request.memory_options.seed=JSON.parse(v['memory-seed'].value || 'null');
     request.session_id=null;delete request.session_key;
     request.scenario=structuredClone(value.scenario);
     request.messages=[{role:'user',content:v.message.value}];

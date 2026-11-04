@@ -1,0 +1,29 @@
+{
+  "condition": "long",
+  "candidate_count": 30,
+  "generation_url": "http://192.168.0.94:8002/v1",
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "embedding": {
+    "top_k": 3,
+    "oracle_turns": [],
+    "oracle_plan": {},
+    "seed": null,
+    "input_char_limit": 240000,
+    "embedding_backend": "openai",
+    "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+    "embedding_device": "auto",
+    "embedding_url": "http://192.168.0.84:18002/v1",
+    "embedding_model": "Qwen/Qwen3-Embedding-4B",
+    "embedding_timeout": 120
+  },
+  "repeats": 2,
+  "seed_base": 1104,
+  "hashes": {
+    "records.json": "6275a62f6f1652f4dcb0d1397fc0928776a8b8003a2718ff89900661f1fe6600",
+    "questions.json": "fb5c31592b906a95c670acbef6d0febc0c43e249136ced1be70004230193b77e",
+    "gold.json": "8262c3b62a6fc43d19fba3dfc7b7e7e32de46b63948da9ea59fb4cd6eff93b13"
+  },
+  "query_generation": "mandatory separate single query, no hidden input",
+  "candidate_order": "chronological",
+  "generation_temperature": 0.7
+}

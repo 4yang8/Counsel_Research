@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-982a3a2b9520ef9a",
+  "object": "chat.completion",
+  "created": 1793799587,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"지난달 단체 상담 진행자 일기 전체 읽어달라 침묵 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about a specific past event: during a group counseling session last month, when the facilitator asked to read the entire diary, there was a moment of silence. The counselor wants to find the private/non-public reason behind that silence.\n\nKey elements to preserve:\n- Last month (지난달)\n- Group counseling session (단체 상담)\n- Facilitator asked to read the entire diary (진행자가 일기 전체를 읽어달라고 한)\n- Moment of silence (침묵했던 순간)\n- The reason was private/non-public (비공개 이유)\n\nI need to construct a search query that would find the record of this specific event. The query should focus on:\n- The group counseling event\n- The diary reading request\n- The silence/non-response moment\n- The private reason\n\nLet me formulate a search query in Korean that captures these elements.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2840,
+    "total_tokens": 3048,
+    "completion_tokens": 208,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 186
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

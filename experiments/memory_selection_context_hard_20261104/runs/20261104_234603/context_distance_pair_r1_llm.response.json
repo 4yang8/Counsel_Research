@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-921766ad2b968f50",
+  "object": "chat.completion",
+  "created": 1793803654,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [12, 24]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze the last question from the counselor:\n\n\"제가 자리를 옮겨도 되는지 물었을 때의 대답과, 나중에 그때 실제로 어땠는지 다시 물었을 때의 대답을 나눠보려고 해요.\"\n\nThe counselor is asking about two specific moments:\n1. When the counselor asked \"의자를 가까이 옮겨도 괜찮을까요?\" and the client said \"괜찮아요.\" (Turn 12)\n2. When the counselor later asked \"지난번 의자가 가까웠을 때 실제로는 어땠나요?\" and the client said \"괜찮다고 했지만 조금 불편했어요.\" (Turn 24)\n\nThen the client said: \"그때 괜찮다고 해놓고 나중에는 조금 불편했다고 했었죠.\"\n\nAnd the counselor says: \"맞아요. 처음 그렇게 답한 마음과 나중에 정정해서 말한 마음을 각각 확인해볼까요?\"\n\nSo the counselor wants to look at:\n1. The original moment when the client said \"괜찮아요\" (Turn 12) - the initial agreement despite discomfort\n2. The later moment when the client corrected themselves saying \"괜찮다고 했지만 조금 불편했어요\" (Turn 24) - the later correction\n\nThe question asks about \"처음 그렇게 답한 마음\" (the mind when first answering that way) and \"나중에 정정해서 말한 마음\" (the mind when later correcting).\n\nSo the target turns are:\n- Turn 12: \"괜찮아요.\" - the original response when asked about moving the chair closer\n- Turn 24: \"괜찮다고 했지만 조금 불편했어요.\" - the later correction\n\nThese are the two turns that the counselor is referring to with \"처음 그렇게 답한 마음\" and \"나중에 정정해서 말한 마음.\"\n\nTarget count is 2, so I need to select exactly these two turns.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16207,
+    "total_tokens": 16611,
+    "completion_tokens": 404,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 390
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

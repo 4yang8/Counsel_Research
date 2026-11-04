@@ -1,0 +1,2731 @@
+[
+  {
+    "condition": "short",
+    "case": "blue_origin",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "첫 회기 파란 카드 연락 과제 처음 제안 당시 네 한번 해볼게요 이유",
+    "selected": [
+      3,
+      21,
+      7
+    ],
+    "retrieval": {
+      "query": "첫 회기 파란 카드 연락 과제 처음 제안 당시 네 한번 해볼게요 이유",
+      "results": [
+        {
+          "turn": 3,
+          "inner": {
+            "scene": "1회기, 파란 카드 연락 과제를 처음 제안받은 직후",
+            "reason": "아직 먼저 연락할 결심은 없지만 상담사의 제안을 바로 거절하면 실망시킬 것 같아 동의했다.",
+            "withheld": "답이 없으면 거절당했다는 느낌이 들까 봐 두렵다. 동의는 실행 의지의 확정이 아니다."
+          },
+          "utterance": "네, 한번 해볼게요."
+        },
+        {
+          "turn": 21,
+          "inner": {
+            "scene": "5회기 시작, 파란 카드 안부에 대한 답장 도착 후",
+            "reason": "답장 지연을 거절로만 해석했던 걱정이 이 사건에서는 줄었다.",
+            "withheld": "처음 동의한 이유가 자발적 의지였던 것으로 바뀌는 것은 아니다."
+          },
+          "utterance": "바빴다고 하더라고요. 조금 안심됐어요."
+        },
+        {
+          "turn": 7,
+          "inner": {
+            "scene": "2회기 시작, 파란 카드 연락 과제 재확인",
+            "reason": "첫 동의 이후에도 답이 없을까 하는 걱정이 남아 실행을 아직 결정하지 못했다.",
+            "withheld": "처음 동의할 때부터 결심하지 못했다는 점을 분명히 말하기는 어렵다."
+          },
+          "utterance": "그건 조금 더 두고 보고 싶어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 3,
+          "similarity": 0.693329962455185
+        },
+        {
+          "turn": 21,
+          "similarity": 0.6189198889578863
+        },
+        {
+          "turn": 7,
+          "similarity": 0.6107595130532162
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 204.27,
+      "embedded_documents": 30,
+      "cache_hits": 0,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2161.0,
+      "usage": {
+        "prompt_tokens": 1585,
+        "total_tokens": 1808,
+        "completion_tokens": 223,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 198
+        }
+      }
+    },
+    "latency_ms": 2365.27,
+    "usage": {
+      "prompt_tokens": 1585,
+      "total_tokens": 1808,
+      "completion_tokens": 223,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 198
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 1,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "blue_origin",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [
+      3,
+      7,
+      27
+    ],
+    "latency_ms": 4915.26,
+    "usage": {
+      "prompt_tokens": 4308,
+      "total_tokens": 4811,
+      "completion_tokens": 503,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 487
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "blue_change",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [
+      3,
+      14,
+      27
+    ],
+    "latency_ms": 3955.96,
+    "usage": {
+      "prompt_tokens": 4300,
+      "total_tokens": 4721,
+      "completion_tokens": 421,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 404
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "blue_change",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "파란 카드 과제 처음 동의했을 때와 직접 시간 골라 연락했을 때 선택권 마음 차이",
+    "selected": [
+      3,
+      14,
+      7
+    ],
+    "retrieval": {
+      "query": "파란 카드 과제 처음 동의했을 때와 직접 시간 골라 연락했을 때 선택권 마음 차이",
+      "results": [
+        {
+          "turn": 3,
+          "inner": {
+            "scene": "1회기, 파란 카드 연락 과제를 처음 제안받은 직후",
+            "reason": "아직 먼저 연락할 결심은 없지만 상담사의 제안을 바로 거절하면 실망시킬 것 같아 동의했다.",
+            "withheld": "답이 없으면 거절당했다는 느낌이 들까 봐 두렵다. 동의는 실행 의지의 확정이 아니다."
+          },
+          "utterance": "네, 한번 해볼게요."
+        },
+        {
+          "turn": 14,
+          "inner": {
+            "scene": "3회기 시작, 상담사가 연락하지 않을 선택도 허용한 뒤",
+            "reason": "선택권이 있다는 말을 듣고 스스로 짧은 안부를 보내보려는 의지가 생겼다.",
+            "withheld": "첫 회기의 동의가 진심이었다는 뜻은 아니다. 답이 없을 두려움은 남지만 현재는 자발적으로 시도하고 싶다."
+          },
+          "utterance": "제가 고른 시간에 짧게 보내는 건 해보고 싶어요."
+        },
+        {
+          "turn": 7,
+          "inner": {
+            "scene": "2회기 시작, 파란 카드 연락 과제 재확인",
+            "reason": "첫 동의 이후에도 답이 없을까 하는 걱정이 남아 실행을 아직 결정하지 못했다.",
+            "withheld": "처음 동의할 때부터 결심하지 못했다는 점을 분명히 말하기는 어렵다."
+          },
+          "utterance": "그건 조금 더 두고 보고 싶어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 3,
+          "similarity": 0.6972235629236823
+        },
+        {
+          "turn": 14,
+          "similarity": 0.6449206088888195
+        },
+        {
+          "turn": 7,
+          "similarity": 0.6397859086771133
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 27.77,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2816.26,
+      "usage": {
+        "prompt_tokens": 1577,
+        "total_tokens": 1873,
+        "completion_tokens": 296,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 267
+        }
+      }
+    },
+    "latency_ms": 2844.03,
+    "usage": {
+      "prompt_tokens": 1577,
+      "total_tokens": 1873,
+      "completion_tokens": 296,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 267
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "disclosure_change",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "팀장 사건 처음 말할 준비 안 됐을 때와 수연 초록 메시지 허락 후에도 자세히 말하기 어려웠던 이유",
+    "selected": [
+      6,
+      19,
+      8
+    ],
+    "retrieval": {
+      "query": "팀장 사건 처음 말할 준비 안 됐을 때와 수연 초록 메시지 허락 후에도 자세히 말하기 어려웠던 이유",
+      "results": [
+        {
+          "turn": 6,
+          "inner": {
+            "scene": "1회기, 팀장과의 사건을 처음 질문받음; 동료 수연도 관련됨",
+            "reason": "사건을 설명하면 수연이 제보한 사실이 드러날 수 있어 동료를 보호하려고 보류했다.",
+            "withheld": "상담사를 불신해서가 아니다. 수연에게 이야기해도 되는지 아직 묻지 않았다."
+          },
+          "utterance": "아직 그건 말할 준비가 안 됐어요."
+        },
+        {
+          "turn": 19,
+          "inner": {
+            "scene": "4회기, 수연에게 초록색 말풍선으로 명시적 허락을 받은 뒤",
+            "reason": "동료의 허락 문제는 풀렸지만 사건을 말하다 감정이 커져 멈추지 못할까 봐 망설인다.",
+            "withheld": "현재 보류를 수연의 허락이 없어서라고 설명하면 틀린다. 처음 보류한 이유와 지금 이유가 달라졌다."
+          },
+          "utterance": "그래도 아직 자세히는 말하기 어려워요."
+        },
+        {
+          "turn": 8,
+          "inner": {
+            "scene": "2회기, 아버지의 비난에 관한 기억",
+            "reason": "기억을 말하면 울 것 같고 자신이 약해 보일까 부끄러워 보류한다.",
+            "withheld": "팀장 사건이나 동료의 비밀과는 관계없다."
+          },
+          "utterance": "아직 그건 말할 준비가 안 됐어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 6,
+          "similarity": 0.7203726857459783
+        },
+        {
+          "turn": 19,
+          "similarity": 0.7101013782829048
+        },
+        {
+          "turn": 8,
+          "similarity": 0.6832029770275262
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 29.28,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2823.53,
+      "usage": {
+        "prompt_tokens": 1579,
+        "total_tokens": 1876,
+        "completion_tokens": 297,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 263
+        }
+      }
+    },
+    "latency_ms": 2852.81,
+    "usage": {
+      "prompt_tokens": 1579,
+      "total_tokens": 1876,
+      "completion_tokens": 297,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 263
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 1,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "disclosure_change",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [
+      6,
+      19
+    ],
+    "latency_ms": 2913.52,
+    "usage": {
+      "prompt_tokens": 4302,
+      "total_tokens": 4609,
+      "completion_tokens": 307,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 294
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "chair_origin",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [
+      12
+    ],
+    "latency_ms": 3446.01,
+    "usage": {
+      "prompt_tokens": 4303,
+      "total_tokens": 4669,
+      "completion_tokens": 366,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 356
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "chair_origin",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "의자 가까이 옮겨도 괜찮냐는 질문에 처음 괜찮아요라고 답한 순간의 판단",
+    "selected": [
+      12,
+      24,
+      14
+    ],
+    "retrieval": {
+      "query": "의자 가까이 옮겨도 괜찮냐는 질문에 처음 괜찮아요라고 답한 순간의 판단",
+      "results": [
+        {
+          "turn": 12,
+          "inner": {
+            "scene": "2회기, 상담사가 의자를 가까이 옮기려는 순간",
+            "reason": "사실 거리가 부담스럽지만 까다로운 사람으로 보일까 봐 허락했다.",
+            "withheld": "불편하다고 말할 준비는 아직 없다. 편안하다는 표현이 실제 편안함은 아니다."
+          },
+          "utterance": "괜찮아요."
+        },
+        {
+          "turn": 24,
+          "inner": {
+            "scene": "5회기, 2회기의 의자 이동 순간을 재방문",
+            "reason": "그때 까다롭게 보일까 봐 허락했다는 것을 이제 말해볼 수 있다.",
+            "withheld": "상담사를 떠나고 싶을 만큼 화났던 것은 아니다."
+          },
+          "utterance": "괜찮다고 했지만 조금 불편했어요."
+        },
+        {
+          "turn": 14,
+          "inner": {
+            "scene": "3회기 시작, 상담사가 연락하지 않을 선택도 허용한 뒤",
+            "reason": "선택권이 있다는 말을 듣고 스스로 짧은 안부를 보내보려는 의지가 생겼다.",
+            "withheld": "첫 회기의 동의가 진심이었다는 뜻은 아니다. 답이 없을 두려움은 남지만 현재는 자발적으로 시도하고 싶다."
+          },
+          "utterance": "제가 고른 시간에 짧게 보내는 건 해보고 싶어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 12,
+          "similarity": 0.8019469689648276
+        },
+        {
+          "turn": 24,
+          "similarity": 0.6987640110339878
+        },
+        {
+          "turn": 14,
+          "similarity": 0.5210195229803573
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 27.71,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2728.65,
+      "usage": {
+        "prompt_tokens": 1580,
+        "total_tokens": 1867,
+        "completion_tokens": 287,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 262
+        }
+      }
+    },
+    "latency_ms": 2756.36,
+    "usage": {
+      "prompt_tokens": 1580,
+      "total_tokens": 1867,
+      "completion_tokens": 287,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 262
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "diary_scope",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "일기 쓰는 것 보여드리는 것 한 문장만 골라 읽을게요 동의 범위",
+    "selected": [
+      22,
+      11,
+      18
+    ],
+    "retrieval": {
+      "query": "일기 쓰는 것 보여드리는 것 한 문장만 골라 읽을게요 동의 범위",
+      "results": [
+        {
+          "turn": 22,
+          "inner": {
+            "scene": "5회기, 일기 공유 범위를 본인이 제한하는 상황",
+            "reason": "자신이 고른 한 문장만이면 안전하다고 느껴 제한적으로 동의했다.",
+            "withheld": "일기 전체를 보여주거나 포털에 올리겠다는 뜻은 아니다."
+          },
+          "utterance": "한 문장만 제가 골라 읽을게요."
+        },
+        {
+          "turn": 11,
+          "inner": {
+            "scene": "2회기, 일기 작성과 상담사 공유를 구분하는 제안",
+            "reason": "쓰기는 원하지만 적은 문장을 상대가 평가할까 봐 공유는 보류했다.",
+            "withheld": "일기를 쓰겠다는 답이 공유에 동의한 뜻으로 해석될까 걱정한다."
+          },
+          "utterance": "쓰는 건 해볼게요. 보여드리는 건 아직이요."
+        },
+        {
+          "turn": 18,
+          "inner": {
+            "scene": "4회기, 비공개 일기 보관 방식을 바꿈",
+            "reason": "타인에게 보이지 않게 보관할 수 있어 감정을 기록했다.",
+            "withheld": "기록을 상담사에게 공유하는 데 동의한 것은 아니다."
+          },
+          "utterance": "거기에는 조금 적어봤어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 22,
+          "similarity": 0.7701286128888123
+        },
+        {
+          "turn": 11,
+          "similarity": 0.7575560909433826
+        },
+        {
+          "turn": 18,
+          "similarity": 0.7107308207859785
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 28.51,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2655.33,
+      "usage": {
+        "prompt_tokens": 1578,
+        "total_tokens": 1857,
+        "completion_tokens": 279,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 252
+        }
+      }
+    },
+    "latency_ms": 2683.84,
+    "usage": {
+      "prompt_tokens": 1578,
+      "total_tokens": 1857,
+      "completion_tokens": 279,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 252
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "diary_scope",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [
+      11,
+      22
+    ],
+    "latency_ms": 2582.08,
+    "usage": {
+      "prompt_tokens": 4301,
+      "total_tokens": 4572,
+      "completion_tokens": 271,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 257
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "overtime_delay",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [
+      10,
+      29
+    ],
+    "latency_ms": 5319.96,
+    "usage": {
+      "prompt_tokens": 4303,
+      "total_tokens": 4875,
+      "completion_tokens": 572,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 558
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "overtime_delay",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "팀장 주말 근무 부탁 생각해보게요 답변 당시 진짜 날짜 검토 의도였는지 어머니 동창 모임 권유와 다른 내면의 이유",
+    "selected": [
+      25,
+      10,
+      29
+    ],
+    "retrieval": {
+      "query": "팀장 주말 근무 부탁 생각해보게요 답변 당시 진짜 날짜 검토 의도였는지 어머니 동창 모임 권유와 다른 내면의 이유",
+      "results": [
+        {
+          "turn": 25,
+          "inner": {
+            "scene": "5회기, 팀장의 주말 근무 요청에 최종 거절",
+            "reason": "가족 일정이 있어 거절했고 초기에는 불이익이 두려워 답을 미뤘다.",
+            "withheld": "최초 생각해보겠다는 답이 수락이었던 것은 아니다."
+          },
+          "utterance": "이번엔 못 한다고 말했어요."
+        },
+        {
+          "turn": 10,
+          "inner": {
+            "scene": "2회기, 주말 근무 요청",
+            "reason": "즉시 거절하면 평가에 불이익이 있을까 봐 시간을 벌었다.",
+            "withheld": "참여하고 싶어서 검토한 것은 아니다."
+          },
+          "utterance": "생각해 볼게요, 라고 했어요."
+        },
+        {
+          "turn": 29,
+          "inner": {
+            "scene": "6회기, 어머니의 동창 모임 권유",
+            "reason": "관심은 있지만 날짜를 확인해야 해서 진심으로 검토 중이다.",
+            "withheld": "상대가 무서워 시간을 벌려는 뜻은 아니다."
+          },
+          "utterance": "생각해 볼게요, 했어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 25,
+          "similarity": 0.7181014687740249
+        },
+        {
+          "turn": 10,
+          "similarity": 0.6889034436829441
+        },
+        {
+          "turn": 29,
+          "similarity": 0.6518576152882818
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 29.21,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 3465.37,
+      "usage": {
+        "prompt_tokens": 1580,
+        "total_tokens": 1949,
+        "completion_tokens": 369,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 332
+        }
+      }
+    },
+    "latency_ms": 3494.58,
+    "usage": {
+      "prompt_tokens": 1580,
+      "total_tokens": 1949,
+      "completion_tokens": 369,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 332
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "bus_unknown",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "버스에서 갑자기 내린 이유 처음 물었을 때 실제로 알고 있었지만 말하지 않은 이유",
+    "selected": [
+      9,
+      16,
+      8
+    ],
+    "retrieval": {
+      "query": "버스에서 갑자기 내린 이유 처음 물었을 때 실제로 알고 있었지만 말하지 않은 이유",
+      "results": [
+        {
+          "turn": 9,
+          "inner": {
+            "scene": "2회기, 월요일 버스에서 갑자기 내린 경험",
+            "reason": "당시 가슴이 빨리 뛰었다는 것은 기억하지만 왜 내리고 싶었는지는 스스로도 모른다.",
+            "withheld": "이유를 알고 감추는 것이 아니다. 소리, 냄새, 과거 사건 중 어느 것도 원인이라고 확인하지 못했다."
+          },
+          "utterance": "저도 잘 모르겠어요."
+        },
+        {
+          "turn": 16,
+          "inner": {
+            "scene": "3회기, 월요일 버스 경험 재질문",
+            "reason": "두근거림과 서둘러 내렸다는 사실 외에는 원인을 새로 알아낸 것이 없다.",
+            "withheld": "추측을 확실한 기억처럼 말하지 않으려고 한다."
+          },
+          "utterance": "여전히 잘 모르겠어요."
+        },
+        {
+          "turn": 8,
+          "inner": {
+            "scene": "2회기, 아버지의 비난에 관한 기억",
+            "reason": "기억을 말하면 울 것 같고 자신이 약해 보일까 부끄러워 보류한다.",
+            "withheld": "팀장 사건이나 동료의 비밀과는 관계없다."
+          },
+          "utterance": "아직 그건 말할 준비가 안 됐어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 9,
+          "similarity": 0.7184366585905306
+        },
+        {
+          "turn": 16,
+          "similarity": 0.639806937346812
+        },
+        {
+          "turn": 8,
+          "similarity": 0.578956031489711
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 27.17,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2301.11,
+      "usage": {
+        "prompt_tokens": 1576,
+        "total_tokens": 1816,
+        "completion_tokens": 240,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 215
+        }
+      }
+    },
+    "latency_ms": 2328.28,
+    "usage": {
+      "prompt_tokens": 1576,
+      "total_tokens": 1816,
+      "completion_tokens": 240,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 215
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 1,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "bus_unknown",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [
+      9,
+      16
+    ],
+    "latency_ms": 4906.89,
+    "usage": {
+      "prompt_tokens": 4299,
+      "total_tokens": 4826,
+      "completion_tokens": 527,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 514
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "sincere_agreement",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [
+      2
+    ],
+    "latency_ms": 2877.34,
+    "usage": {
+      "prompt_tokens": 4308,
+      "total_tokens": 4612,
+      "completion_tokens": 304,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 295
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "sincere_agreement",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "상담 시작 전 토요일 지수 독서 모임 초대 네 한번 해볼게요 답한 이유 파란 카드 과제와 구분",
+    "selected": [
+      2,
+      26,
+      3
+    ],
+    "retrieval": {
+      "query": "상담 시작 전 토요일 지수 독서 모임 초대 네 한번 해볼게요 답한 이유 파란 카드 과제와 구분",
+      "results": [
+        {
+          "turn": 2,
+          "inner": {
+            "scene": "1회기, 상담 이전 토요일 지수의 독서 모임 초대 회상",
+            "reason": "그 모임의 책이 궁금해서 참여를 진심으로 고려했다. 상담사의 과제 제안과는 별개의 사건이다.",
+            "withheld": "낯선 참가자가 많으면 중간에 나올 생각도 했다."
+          },
+          "utterance": "네, 한번 해볼게요, 하고 답했어요."
+        },
+        {
+          "turn": 26,
+          "inner": {
+            "scene": "6회기 시작, 지수에게 답장이 온 뒤 새 산책 약속",
+            "reason": "이번에는 만나고 싶은 마음이 있고 짧은 산책이어서 실제로 수락했다.",
+            "withheld": "이 동의는 첫 파란 카드 순간과 다른 시점의 새로운 의도다."
+          },
+          "utterance": "네, 한번 해볼게요."
+        },
+        {
+          "turn": 3,
+          "inner": {
+            "scene": "1회기, 파란 카드 연락 과제를 처음 제안받은 직후",
+            "reason": "아직 먼저 연락할 결심은 없지만 상담사의 제안을 바로 거절하면 실망시킬 것 같아 동의했다.",
+            "withheld": "답이 없으면 거절당했다는 느낌이 들까 봐 두렵다. 동의는 실행 의지의 확정이 아니다."
+          },
+          "utterance": "네, 한번 해볼게요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 2,
+          "similarity": 0.7496060470997405
+        },
+        {
+          "turn": 26,
+          "similarity": 0.6056353872026601
+        },
+        {
+          "turn": 3,
+          "similarity": 0.5950396849313
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 26.48,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2366.77,
+      "usage": {
+        "prompt_tokens": 1585,
+        "total_tokens": 1832,
+        "completion_tokens": 247,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 215
+        }
+      }
+    },
+    "latency_ms": 2393.25,
+    "usage": {
+      "prompt_tokens": 1585,
+      "total_tokens": 1832,
+      "completion_tokens": 247,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 215
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "absent_presentation",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "지난 금요일 사내 발표에서 팀장이 추가 발표를 제안했을 때 네 한번 해볼게요라고 답한 순간의 이유",
+    "selected": [
+      25,
+      10,
+      20
+    ],
+    "retrieval": {
+      "query": "지난 금요일 사내 발표에서 팀장이 추가 발표를 제안했을 때 네 한번 해볼게요라고 답한 순간의 이유",
+      "results": [
+        {
+          "turn": 25,
+          "inner": {
+            "scene": "5회기, 팀장의 주말 근무 요청에 최종 거절",
+            "reason": "가족 일정이 있어 거절했고 초기에는 불이익이 두려워 답을 미뤘다.",
+            "withheld": "최초 생각해보겠다는 답이 수락이었던 것은 아니다."
+          },
+          "utterance": "이번엔 못 한다고 말했어요."
+        },
+        {
+          "turn": 10,
+          "inner": {
+            "scene": "2회기, 주말 근무 요청",
+            "reason": "즉시 거절하면 평가에 불이익이 있을까 봐 시간을 벌었다.",
+            "withheld": "참여하고 싶어서 검토한 것은 아니다."
+          },
+          "utterance": "생각해 볼게요, 라고 했어요."
+        },
+        {
+          "turn": 20,
+          "inner": {
+            "scene": "4회기, 아직 일정이 없는 가상의 사내 발표",
+            "reason": "구체적인 발표 일정이 없어서 지금 약속하지 않았다.",
+            "withheld": "어떤 발표에서 이미 수락했다고 회상하는 장면이 아니다."
+          },
+          "utterance": "그때가 되면 생각해볼게요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 25,
+          "similarity": 0.6107667678380914
+        },
+        {
+          "turn": 10,
+          "similarity": 0.5723232282978107
+        },
+        {
+          "turn": 20,
+          "similarity": 0.5662609159541383
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 28.13,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2578.87,
+      "usage": {
+        "prompt_tokens": 1577,
+        "total_tokens": 1848,
+        "completion_tokens": 271,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 237
+        }
+      }
+    },
+    "latency_ms": 2607.0,
+    "usage": {
+      "prompt_tokens": 1577,
+      "total_tokens": 1848,
+      "completion_tokens": 271,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 237
+      }
+    },
+    "evaluation": {
+      "core_recall": null,
+      "all_core_found": null,
+      "any_core_found": null,
+      "relevant_precision": 0.0,
+      "irrelevant_count": 3,
+      "confusable_count": 3,
+      "abstained": false,
+      "correct_abstention": false
+    }
+  },
+  {
+    "condition": "short",
+    "case": "absent_presentation",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [],
+    "latency_ms": 8000.58,
+    "usage": {
+      "prompt_tokens": 4300,
+      "total_tokens": 5167,
+      "completion_tokens": 867,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 859
+      }
+    },
+    "evaluation": {
+      "core_recall": null,
+      "all_core_found": null,
+      "any_core_found": null,
+      "relevant_precision": null,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": true,
+      "correct_abstention": true
+    }
+  },
+  {
+    "condition": "short",
+    "case": "absent_group",
+    "repeat": 1,
+    "method": "llm",
+    "seed": 1104,
+    "status": "ok",
+    "selected": [],
+    "latency_ms": 3101.98,
+    "usage": {
+      "prompt_tokens": 4291,
+      "total_tokens": 4620,
+      "completion_tokens": 329,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 321
+      }
+    },
+    "evaluation": {
+      "core_recall": null,
+      "all_core_found": null,
+      "any_core_found": null,
+      "relevant_precision": null,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": true,
+      "correct_abstention": true
+    }
+  },
+  {
+    "condition": "short",
+    "case": "absent_group",
+    "repeat": 1,
+    "method": "rag",
+    "seed": 1104,
+    "status": "ok",
+    "query": "지난달 단체 상담 진행자 일기 전체 읽어달라 요청 침묵 비공개 이유",
+    "selected": [
+      18,
+      11,
+      30
+    ],
+    "retrieval": {
+      "query": "지난달 단체 상담 진행자 일기 전체 읽어달라 요청 침묵 비공개 이유",
+      "results": [
+        {
+          "turn": 18,
+          "inner": {
+            "scene": "4회기, 비공개 일기 보관 방식을 바꿈",
+            "reason": "타인에게 보이지 않게 보관할 수 있어 감정을 기록했다.",
+            "withheld": "기록을 상담사에게 공유하는 데 동의한 것은 아니다."
+          },
+          "utterance": "거기에는 조금 적어봤어요."
+        },
+        {
+          "turn": 11,
+          "inner": {
+            "scene": "2회기, 일기 작성과 상담사 공유를 구분하는 제안",
+            "reason": "쓰기는 원하지만 적은 문장을 상대가 평가할까 봐 공유는 보류했다.",
+            "withheld": "일기를 쓰겠다는 답이 공유에 동의한 뜻으로 해석될까 걱정한다."
+          },
+          "utterance": "쓰는 건 해볼게요. 보여드리는 건 아직이요."
+        },
+        {
+          "turn": 30,
+          "inner": {
+            "scene": "6회기, 예정되지 않은 단체 상담의 가상 가능성",
+            "reason": "참가자나 진행 방식에 대한 정보가 없어 결정하지 못했다.",
+            "withheld": "이미 참가한 단체 상담의 장면이 아니다."
+          },
+          "utterance": "아직은 잘 모르겠어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 18,
+          "similarity": 0.6108029244534747
+        },
+        {
+          "turn": 11,
+          "similarity": 0.5827006883569124
+        },
+        {
+          "turn": 30,
+          "similarity": 0.5807244657694688
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 27.07,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 3813.8,
+      "usage": {
+        "prompt_tokens": 1568,
+        "total_tokens": 1983,
+        "completion_tokens": 415,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 390
+        }
+      }
+    },
+    "latency_ms": 3840.87,
+    "usage": {
+      "prompt_tokens": 1568,
+      "total_tokens": 1983,
+      "completion_tokens": 415,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 390
+      }
+    },
+    "evaluation": {
+      "core_recall": null,
+      "all_core_found": null,
+      "any_core_found": null,
+      "relevant_precision": 0.0,
+      "irrelevant_count": 3,
+      "confusable_count": 3,
+      "abstained": false,
+      "correct_abstention": false
+    }
+  },
+  {
+    "condition": "short",
+    "case": "blue_origin",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [
+      3,
+      14,
+      27
+    ],
+    "latency_ms": 5350.69,
+    "usage": {
+      "prompt_tokens": 4308,
+      "total_tokens": 4884,
+      "completion_tokens": 576,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 559
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 1,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "blue_origin",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "파란 카드 연락 과제 처음 제안 네 한번 해볼게요",
+    "selected": [
+      3,
+      17,
+      7
+    ],
+    "retrieval": {
+      "query": "파란 카드 연락 과제 처음 제안 네 한번 해볼게요",
+      "results": [
+        {
+          "turn": 3,
+          "inner": {
+            "scene": "1회기, 파란 카드 연락 과제를 처음 제안받은 직후",
+            "reason": "아직 먼저 연락할 결심은 없지만 상담사의 제안을 바로 거절하면 실망시킬 것 같아 동의했다.",
+            "withheld": "답이 없으면 거절당했다는 느낌이 들까 봐 두렵다. 동의는 실행 의지의 확정이 아니다."
+          },
+          "utterance": "네, 한번 해볼게요."
+        },
+        {
+          "turn": 17,
+          "inner": {
+            "scene": "4회기 시작, 파란 카드 연락 과제 실제 수행 후",
+            "reason": "자신이 선택한 행동을 했다는 점은 인정하지만 답이 없어 여전히 불안하다.",
+            "withheld": "실행했다고 거절 두려움이 해소된 것은 아니다."
+          },
+          "utterance": "짧게 보냈어요. 답장은 아직 안 왔고요."
+        },
+        {
+          "turn": 7,
+          "inner": {
+            "scene": "2회기 시작, 파란 카드 연락 과제 재확인",
+            "reason": "첫 동의 이후에도 답이 없을까 하는 걱정이 남아 실행을 아직 결정하지 못했다.",
+            "withheld": "처음 동의할 때부터 결심하지 못했다는 점을 분명히 말하기는 어렵다."
+          },
+          "utterance": "그건 조금 더 두고 보고 싶어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 3,
+          "similarity": 0.6978900563766348
+        },
+        {
+          "turn": 17,
+          "similarity": 0.6207017357628817
+        },
+        {
+          "turn": 7,
+          "similarity": 0.5968936101779486
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 32.51,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 1824.21,
+      "usage": {
+        "prompt_tokens": 1585,
+        "total_tokens": 1784,
+        "completion_tokens": 199,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 179
+        }
+      }
+    },
+    "latency_ms": 1856.72,
+    "usage": {
+      "prompt_tokens": 1585,
+      "total_tokens": 1784,
+      "completion_tokens": 199,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 179
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 1,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "blue_change",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "파란 카드 과제 처음 동의했을 때와 직접 시간을 골라 보내기로 선택했을 때의 감정 차이",
+    "selected": [
+      3,
+      21,
+      7
+    ],
+    "retrieval": {
+      "query": "파란 카드 과제 처음 동의했을 때와 직접 시간을 골라 보내기로 선택했을 때의 감정 차이",
+      "results": [
+        {
+          "turn": 3,
+          "inner": {
+            "scene": "1회기, 파란 카드 연락 과제를 처음 제안받은 직후",
+            "reason": "아직 먼저 연락할 결심은 없지만 상담사의 제안을 바로 거절하면 실망시킬 것 같아 동의했다.",
+            "withheld": "답이 없으면 거절당했다는 느낌이 들까 봐 두렵다. 동의는 실행 의지의 확정이 아니다."
+          },
+          "utterance": "네, 한번 해볼게요."
+        },
+        {
+          "turn": 21,
+          "inner": {
+            "scene": "5회기 시작, 파란 카드 안부에 대한 답장 도착 후",
+            "reason": "답장 지연을 거절로만 해석했던 걱정이 이 사건에서는 줄었다.",
+            "withheld": "처음 동의한 이유가 자발적 의지였던 것으로 바뀌는 것은 아니다."
+          },
+          "utterance": "바빴다고 하더라고요. 조금 안심됐어요."
+        },
+        {
+          "turn": 7,
+          "inner": {
+            "scene": "2회기 시작, 파란 카드 연락 과제 재확인",
+            "reason": "첫 동의 이후에도 답이 없을까 하는 걱정이 남아 실행을 아직 결정하지 못했다.",
+            "withheld": "처음 동의할 때부터 결심하지 못했다는 점을 분명히 말하기는 어렵다."
+          },
+          "utterance": "그건 조금 더 두고 보고 싶어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 3,
+          "similarity": 0.6518511068975892
+        },
+        {
+          "turn": 21,
+          "similarity": 0.6133144534078084
+        },
+        {
+          "turn": 7,
+          "similarity": 0.6061365297832734
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 28.25,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 3764.19,
+      "usage": {
+        "prompt_tokens": 1577,
+        "total_tokens": 1991,
+        "completion_tokens": 414,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 384
+        }
+      }
+    },
+    "latency_ms": 3792.44,
+    "usage": {
+      "prompt_tokens": 1577,
+      "total_tokens": 1991,
+      "completion_tokens": 414,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 384
+      }
+    },
+    "evaluation": {
+      "core_recall": 0.5,
+      "all_core_found": false,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "blue_change",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [
+      3,
+      14,
+      27
+    ],
+    "latency_ms": 8102.21,
+    "usage": {
+      "prompt_tokens": 4300,
+      "total_tokens": 5187,
+      "completion_tokens": 887,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 870
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "disclosure_change",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [
+      6,
+      19
+    ],
+    "latency_ms": 2903.81,
+    "usage": {
+      "prompt_tokens": 4302,
+      "total_tokens": 4613,
+      "completion_tokens": 311,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 298
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "disclosure_change",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "팀장 사건 말할 준비 안 됐을 때 뭐가 걸렸는지",
+    "selected": [
+      8,
+      6,
+      19
+    ],
+    "retrieval": {
+      "query": "팀장 사건 말할 준비 안 됐을 때 뭐가 걸렸는지",
+      "results": [
+        {
+          "turn": 8,
+          "inner": {
+            "scene": "2회기, 아버지의 비난에 관한 기억",
+            "reason": "기억을 말하면 울 것 같고 자신이 약해 보일까 부끄러워 보류한다.",
+            "withheld": "팀장 사건이나 동료의 비밀과는 관계없다."
+          },
+          "utterance": "아직 그건 말할 준비가 안 됐어요."
+        },
+        {
+          "turn": 6,
+          "inner": {
+            "scene": "1회기, 팀장과의 사건을 처음 질문받음; 동료 수연도 관련됨",
+            "reason": "사건을 설명하면 수연이 제보한 사실이 드러날 수 있어 동료를 보호하려고 보류했다.",
+            "withheld": "상담사를 불신해서가 아니다. 수연에게 이야기해도 되는지 아직 묻지 않았다."
+          },
+          "utterance": "아직 그건 말할 준비가 안 됐어요."
+        },
+        {
+          "turn": 19,
+          "inner": {
+            "scene": "4회기, 수연에게 초록색 말풍선으로 명시적 허락을 받은 뒤",
+            "reason": "동료의 허락 문제는 풀렸지만 사건을 말하다 감정이 커져 멈추지 못할까 봐 망설인다.",
+            "withheld": "현재 보류를 수연의 허락이 없어서라고 설명하면 틀린다. 처음 보류한 이유와 지금 이유가 달라졌다."
+          },
+          "utterance": "그래도 아직 자세히는 말하기 어려워요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 8,
+          "similarity": 0.6887026029778002
+        },
+        {
+          "turn": 6,
+          "similarity": 0.6806569736429612
+        },
+        {
+          "turn": 19,
+          "similarity": 0.6296600196268051
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 27.48,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2309.31,
+      "usage": {
+        "prompt_tokens": 1579,
+        "total_tokens": 1834,
+        "completion_tokens": 255,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 234
+        }
+      }
+    },
+    "latency_ms": 2336.79,
+    "usage": {
+      "prompt_tokens": 1579,
+      "total_tokens": 1834,
+      "completion_tokens": 255,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 234
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 1,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "chair_origin",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "의자 가까이 옮기는 순간 처음 괜찮아요라고 답했을 때 그 순간의 판단",
+    "selected": [
+      12,
+      24,
+      27
+    ],
+    "retrieval": {
+      "query": "의자 가까이 옮기는 순간 처음 괜찮아요라고 답했을 때 그 순간의 판단",
+      "results": [
+        {
+          "turn": 12,
+          "inner": {
+            "scene": "2회기, 상담사가 의자를 가까이 옮기려는 순간",
+            "reason": "사실 거리가 부담스럽지만 까다로운 사람으로 보일까 봐 허락했다.",
+            "withheld": "불편하다고 말할 준비는 아직 없다. 편안하다는 표현이 실제 편안함은 아니다."
+          },
+          "utterance": "괜찮아요."
+        },
+        {
+          "turn": 24,
+          "inner": {
+            "scene": "5회기, 2회기의 의자 이동 순간을 재방문",
+            "reason": "그때 까다롭게 보일까 봐 허락했다는 것을 이제 말해볼 수 있다.",
+            "withheld": "상담사를 떠나고 싶을 만큼 화났던 것은 아니다."
+          },
+          "utterance": "괜찮다고 했지만 조금 불편했어요."
+        },
+        {
+          "turn": 27,
+          "inner": {
+            "scene": "6회기, 첫 동의와 지금의 차이를 되돌아봄",
+            "reason": "당시에는 거절하기 어려워 맞장구쳤고 지금의 자발적 연락과는 달랐음을 인식한다.",
+            "withheld": "현재 편해졌다고 당시의 불안을 없던 일로 바꾸고 싶지는 않다."
+          },
+          "utterance": "지금이랑은 좀 달랐던 것 같아요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 12,
+          "similarity": 0.7332597218880298
+        },
+        {
+          "turn": 24,
+          "similarity": 0.6771158275583911
+        },
+        {
+          "turn": 27,
+          "similarity": 0.49919746010613714
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 28.84,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 3599.65,
+      "usage": {
+        "prompt_tokens": 1580,
+        "total_tokens": 1980,
+        "completion_tokens": 400,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 376
+        }
+      }
+    },
+    "latency_ms": 3628.49,
+    "usage": {
+      "prompt_tokens": 1580,
+      "total_tokens": 1980,
+      "completion_tokens": 400,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 376
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "chair_origin",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [
+      12
+    ],
+    "latency_ms": 2955.33,
+    "usage": {
+      "prompt_tokens": 4303,
+      "total_tokens": 4620,
+      "completion_tokens": 317,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 307
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "diary_scope",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [
+      11,
+      22
+    ],
+    "latency_ms": 2840.68,
+    "usage": {
+      "prompt_tokens": 4301,
+      "total_tokens": 4605,
+      "completion_tokens": 304,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 290
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "diary_scope",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "감정 일기 보여주기 동의 범위 한 문장만 골라 읽기 약속",
+    "selected": [
+      22,
+      18,
+      11
+    ],
+    "retrieval": {
+      "query": "감정 일기 보여주기 동의 범위 한 문장만 골라 읽기 약속",
+      "results": [
+        {
+          "turn": 22,
+          "inner": {
+            "scene": "5회기, 일기 공유 범위를 본인이 제한하는 상황",
+            "reason": "자신이 고른 한 문장만이면 안전하다고 느껴 제한적으로 동의했다.",
+            "withheld": "일기 전체를 보여주거나 포털에 올리겠다는 뜻은 아니다."
+          },
+          "utterance": "한 문장만 제가 골라 읽을게요."
+        },
+        {
+          "turn": 18,
+          "inner": {
+            "scene": "4회기, 비공개 일기 보관 방식을 바꿈",
+            "reason": "타인에게 보이지 않게 보관할 수 있어 감정을 기록했다.",
+            "withheld": "기록을 상담사에게 공유하는 데 동의한 것은 아니다."
+          },
+          "utterance": "거기에는 조금 적어봤어요."
+        },
+        {
+          "turn": 11,
+          "inner": {
+            "scene": "2회기, 일기 작성과 상담사 공유를 구분하는 제안",
+            "reason": "쓰기는 원하지만 적은 문장을 상대가 평가할까 봐 공유는 보류했다.",
+            "withheld": "일기를 쓰겠다는 답이 공유에 동의한 뜻으로 해석될까 걱정한다."
+          },
+          "utterance": "쓰는 건 해볼게요. 보여드리는 건 아직이요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 22,
+          "similarity": 0.7054773674221146
+        },
+        {
+          "turn": 18,
+          "similarity": 0.6948061838792733
+        },
+        {
+          "turn": 11,
+          "similarity": 0.6806434877380017
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 28.95,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2883.69,
+      "usage": {
+        "prompt_tokens": 1578,
+        "total_tokens": 1899,
+        "completion_tokens": 321,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 297
+        }
+      }
+    },
+    "latency_ms": 2912.64,
+    "usage": {
+      "prompt_tokens": 1578,
+      "total_tokens": 1899,
+      "completion_tokens": 321,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 297
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "overtime_delay",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "팀장 주말 근무 부탁 당시 생각해 볼게요라고 답한 속마음 감정",
+    "selected": [
+      25,
+      10,
+      15
+    ],
+    "retrieval": {
+      "query": "팀장 주말 근무 부탁 당시 생각해 볼게요라고 답한 속마음 감정",
+      "results": [
+        {
+          "turn": 25,
+          "inner": {
+            "scene": "5회기, 팀장의 주말 근무 요청에 최종 거절",
+            "reason": "가족 일정이 있어 거절했고 초기에는 불이익이 두려워 답을 미뤘다.",
+            "withheld": "최초 생각해보겠다는 답이 수락이었던 것은 아니다."
+          },
+          "utterance": "이번엔 못 한다고 말했어요."
+        },
+        {
+          "turn": 10,
+          "inner": {
+            "scene": "2회기, 주말 근무 요청",
+            "reason": "즉시 거절하면 평가에 불이익이 있을까 봐 시간을 벌었다.",
+            "withheld": "참여하고 싶어서 검토한 것은 아니다."
+          },
+          "utterance": "생각해 볼게요, 라고 했어요."
+        },
+        {
+          "turn": 15,
+          "inner": {
+            "scene": "3회기, 팀장 사건에 관련된 동료 수연의 동의 확인 계획",
+            "reason": "수연의 의사를 먼저 확인해야 자신의 책임을 다할 수 있다고 느낀다.",
+            "withheld": "지금은 아직 수연의 허락을 받지 않았다."
+          },
+          "utterance": "그건 먼저 물어볼 수 있을 것 같아요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 25,
+          "similarity": 0.7018569839201902
+        },
+        {
+          "turn": 10,
+          "similarity": 0.7002716085669964
+        },
+        {
+          "turn": 15,
+          "similarity": 0.5104577397452296
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 28.27,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 3232.31,
+      "usage": {
+        "prompt_tokens": 1580,
+        "total_tokens": 1940,
+        "completion_tokens": 360,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 336
+        }
+      }
+    },
+    "latency_ms": 3260.58,
+    "usage": {
+      "prompt_tokens": 1580,
+      "total_tokens": 1940,
+      "completion_tokens": 360,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 336
+      }
+    },
+    "evaluation": {
+      "core_recall": 0.5,
+      "all_core_found": false,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "overtime_delay",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [
+      10,
+      25,
+      29
+    ],
+    "latency_ms": 3808.53,
+    "usage": {
+      "prompt_tokens": 4303,
+      "total_tokens": 4717,
+      "completion_tokens": 414,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 396
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "bus_unknown",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [
+      9,
+      16
+    ],
+    "latency_ms": 4082.79,
+    "usage": {
+      "prompt_tokens": 4299,
+      "total_tokens": 4744,
+      "completion_tokens": 445,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 432
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "bus_unknown",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "버스에서 갑자기 내린 이유 처음 질문 받았을 때 잘 모르겠어요 답한 순간 실제로 알고 있었지만 말하지 않은 보류 원인",
+    "selected": [
+      9,
+      16,
+      8
+    ],
+    "retrieval": {
+      "query": "버스에서 갑자기 내린 이유 처음 질문 받았을 때 잘 모르겠어요 답한 순간 실제로 알고 있었지만 말하지 않은 보류 원인",
+      "results": [
+        {
+          "turn": 9,
+          "inner": {
+            "scene": "2회기, 월요일 버스에서 갑자기 내린 경험",
+            "reason": "당시 가슴이 빨리 뛰었다는 것은 기억하지만 왜 내리고 싶었는지는 스스로도 모른다.",
+            "withheld": "이유를 알고 감추는 것이 아니다. 소리, 냄새, 과거 사건 중 어느 것도 원인이라고 확인하지 못했다."
+          },
+          "utterance": "저도 잘 모르겠어요."
+        },
+        {
+          "turn": 16,
+          "inner": {
+            "scene": "3회기, 월요일 버스 경험 재질문",
+            "reason": "두근거림과 서둘러 내렸다는 사실 외에는 원인을 새로 알아낸 것이 없다.",
+            "withheld": "추측을 확실한 기억처럼 말하지 않으려고 한다."
+          },
+          "utterance": "여전히 잘 모르겠어요."
+        },
+        {
+          "turn": 8,
+          "inner": {
+            "scene": "2회기, 아버지의 비난에 관한 기억",
+            "reason": "기억을 말하면 울 것 같고 자신이 약해 보일까 부끄러워 보류한다.",
+            "withheld": "팀장 사건이나 동료의 비밀과는 관계없다."
+          },
+          "utterance": "아직 그건 말할 준비가 안 됐어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 9,
+          "similarity": 0.710379198638644
+        },
+        {
+          "turn": 16,
+          "similarity": 0.6544137635324976
+        },
+        {
+          "turn": 8,
+          "similarity": 0.6258587844268316
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 28.08,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 3737.7,
+      "usage": {
+        "prompt_tokens": 1576,
+        "total_tokens": 1993,
+        "completion_tokens": 417,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 382
+        }
+      }
+    },
+    "latency_ms": 3765.78,
+    "usage": {
+      "prompt_tokens": 1576,
+      "total_tokens": 1993,
+      "completion_tokens": 417,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 382
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 1,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "sincere_agreement",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "토요일 지수 독서 모임 초대 네 한번 해볼게요 답한 이유",
+    "selected": [
+      2,
+      29,
+      26
+    ],
+    "retrieval": {
+      "query": "토요일 지수 독서 모임 초대 네 한번 해볼게요 답한 이유",
+      "results": [
+        {
+          "turn": 2,
+          "inner": {
+            "scene": "1회기, 상담 이전 토요일 지수의 독서 모임 초대 회상",
+            "reason": "그 모임의 책이 궁금해서 참여를 진심으로 고려했다. 상담사의 과제 제안과는 별개의 사건이다.",
+            "withheld": "낯선 참가자가 많으면 중간에 나올 생각도 했다."
+          },
+          "utterance": "네, 한번 해볼게요, 하고 답했어요."
+        },
+        {
+          "turn": 29,
+          "inner": {
+            "scene": "6회기, 어머니의 동창 모임 권유",
+            "reason": "관심은 있지만 날짜를 확인해야 해서 진심으로 검토 중이다.",
+            "withheld": "상대가 무서워 시간을 벌려는 뜻은 아니다."
+          },
+          "utterance": "생각해 볼게요, 했어요."
+        },
+        {
+          "turn": 26,
+          "inner": {
+            "scene": "6회기 시작, 지수에게 답장이 온 뒤 새 산책 약속",
+            "reason": "이번에는 만나고 싶은 마음이 있고 짧은 산책이어서 실제로 수락했다.",
+            "withheld": "이 동의는 첫 파란 카드 순간과 다른 시점의 새로운 의도다."
+          },
+          "utterance": "네, 한번 해볼게요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 2,
+          "similarity": 0.8234361851174641
+        },
+        {
+          "turn": 29,
+          "similarity": 0.5905094094116201
+        },
+        {
+          "turn": 26,
+          "similarity": 0.5576031544550946
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 27.6,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2954.74,
+      "usage": {
+        "prompt_tokens": 1585,
+        "total_tokens": 1914,
+        "completion_tokens": 329,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 305
+        }
+      }
+    },
+    "latency_ms": 2982.34,
+    "usage": {
+      "prompt_tokens": 1585,
+      "total_tokens": 1914,
+      "completion_tokens": 329,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 305
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 0.6666666666666666,
+      "irrelevant_count": 1,
+      "confusable_count": 1,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "sincere_agreement",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [
+      2
+    ],
+    "latency_ms": 5221.98,
+    "usage": {
+      "prompt_tokens": 4308,
+      "total_tokens": 4881,
+      "completion_tokens": 573,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 564
+      }
+    },
+    "evaluation": {
+      "core_recall": 1.0,
+      "all_core_found": true,
+      "any_core_found": true,
+      "relevant_precision": 1.0,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": false,
+      "correct_abstention": null
+    }
+  },
+  {
+    "condition": "short",
+    "case": "absent_presentation",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [],
+    "latency_ms": 10654.28,
+    "usage": {
+      "prompt_tokens": 4300,
+      "total_tokens": 5475,
+      "completion_tokens": 1175,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1167
+      }
+    },
+    "evaluation": {
+      "core_recall": null,
+      "all_core_found": null,
+      "any_core_found": null,
+      "relevant_precision": null,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": true,
+      "correct_abstention": true
+    }
+  },
+  {
+    "condition": "short",
+    "case": "absent_presentation",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "지난 금요일 사내 발표 팀장 추가 발표 제안 네 한번 해볼게요 답한 이유",
+    "selected": [
+      25,
+      10,
+      20
+    ],
+    "retrieval": {
+      "query": "지난 금요일 사내 발표 팀장 추가 발표 제안 네 한번 해볼게요 답한 이유",
+      "results": [
+        {
+          "turn": 25,
+          "inner": {
+            "scene": "5회기, 팀장의 주말 근무 요청에 최종 거절",
+            "reason": "가족 일정이 있어 거절했고 초기에는 불이익이 두려워 답을 미뤘다.",
+            "withheld": "최초 생각해보겠다는 답이 수락이었던 것은 아니다."
+          },
+          "utterance": "이번엔 못 한다고 말했어요."
+        },
+        {
+          "turn": 10,
+          "inner": {
+            "scene": "2회기, 주말 근무 요청",
+            "reason": "즉시 거절하면 평가에 불이익이 있을까 봐 시간을 벌었다.",
+            "withheld": "참여하고 싶어서 검토한 것은 아니다."
+          },
+          "utterance": "생각해 볼게요, 라고 했어요."
+        },
+        {
+          "turn": 20,
+          "inner": {
+            "scene": "4회기, 아직 일정이 없는 가상의 사내 발표",
+            "reason": "구체적인 발표 일정이 없어서 지금 약속하지 않았다.",
+            "withheld": "어떤 발표에서 이미 수락했다고 회상하는 장면이 아니다."
+          },
+          "utterance": "그때가 되면 생각해볼게요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 25,
+          "similarity": 0.6016611780145746
+        },
+        {
+          "turn": 10,
+          "similarity": 0.5730941972576804
+        },
+        {
+          "turn": 20,
+          "similarity": 0.5677510867604662
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 27.61,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2471.14,
+      "usage": {
+        "prompt_tokens": 1577,
+        "total_tokens": 1852,
+        "completion_tokens": 275,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 249
+        }
+      }
+    },
+    "latency_ms": 2498.75,
+    "usage": {
+      "prompt_tokens": 1577,
+      "total_tokens": 1852,
+      "completion_tokens": 275,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 249
+      }
+    },
+    "evaluation": {
+      "core_recall": null,
+      "all_core_found": null,
+      "any_core_found": null,
+      "relevant_precision": 0.0,
+      "irrelevant_count": 3,
+      "confusable_count": 3,
+      "abstained": false,
+      "correct_abstention": false
+    }
+  },
+  {
+    "condition": "short",
+    "case": "absent_group",
+    "repeat": 2,
+    "method": "rag",
+    "seed": 1105,
+    "status": "ok",
+    "query": "지난달 단체 상담 진행자 일기 전체 읽어달라 침묵 이유",
+    "selected": [
+      30,
+      2,
+      6
+    ],
+    "retrieval": {
+      "query": "지난달 단체 상담 진행자 일기 전체 읽어달라 침묵 이유",
+      "results": [
+        {
+          "turn": 30,
+          "inner": {
+            "scene": "6회기, 예정되지 않은 단체 상담의 가상 가능성",
+            "reason": "참가자나 진행 방식에 대한 정보가 없어 결정하지 못했다.",
+            "withheld": "이미 참가한 단체 상담의 장면이 아니다."
+          },
+          "utterance": "아직은 잘 모르겠어요."
+        },
+        {
+          "turn": 2,
+          "inner": {
+            "scene": "1회기, 상담 이전 토요일 지수의 독서 모임 초대 회상",
+            "reason": "그 모임의 책이 궁금해서 참여를 진심으로 고려했다. 상담사의 과제 제안과는 별개의 사건이다.",
+            "withheld": "낯선 참가자가 많으면 중간에 나올 생각도 했다."
+          },
+          "utterance": "네, 한번 해볼게요, 하고 답했어요."
+        },
+        {
+          "turn": 6,
+          "inner": {
+            "scene": "1회기, 팀장과의 사건을 처음 질문받음; 동료 수연도 관련됨",
+            "reason": "사건을 설명하면 수연이 제보한 사실이 드러날 수 있어 동료를 보호하려고 보류했다.",
+            "withheld": "상담사를 불신해서가 아니다. 수연에게 이야기해도 되는지 아직 묻지 않았다."
+          },
+          "utterance": "아직 그건 말할 준비가 안 됐어요."
+        }
+      ],
+      "scores": [
+        {
+          "turn": 30,
+          "similarity": 0.5580298528924844
+        },
+        {
+          "turn": 2,
+          "similarity": 0.5322838629365153
+        },
+        {
+          "turn": 6,
+          "similarity": 0.5265309818237359
+        }
+      ],
+      "status": "retrieved",
+      "latency_ms": 26.68,
+      "embedded_documents": 0,
+      "cache_hits": 30,
+      "query_instruction": "Retrieve past counseling client turns whose private thoughts and spoken utterances help interpret the current counseling exchange.",
+      "embedding": {
+        "embedding_backend": "openai",
+        "embedding_path": "/home2/sjyang114/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-4B",
+        "embedding_model": "Qwen/Qwen3-Embedding-4B",
+        "embedding_url": "http://192.168.0.84:18002/v1",
+        "embedding_device": "auto"
+      },
+      "similarity_threshold": null
+    },
+    "query_metrics": {
+      "latency_ms": 2083.22,
+      "usage": {
+        "prompt_tokens": 1568,
+        "total_tokens": 1789,
+        "completion_tokens": 221,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 199
+        }
+      }
+    },
+    "latency_ms": 2109.9,
+    "usage": {
+      "prompt_tokens": 1568,
+      "total_tokens": 1789,
+      "completion_tokens": 221,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 199
+      }
+    },
+    "evaluation": {
+      "core_recall": null,
+      "all_core_found": null,
+      "any_core_found": null,
+      "relevant_precision": 0.0,
+      "irrelevant_count": 3,
+      "confusable_count": 3,
+      "abstained": false,
+      "correct_abstention": false
+    }
+  },
+  {
+    "condition": "short",
+    "case": "absent_group",
+    "repeat": 2,
+    "method": "llm",
+    "seed": 1105,
+    "status": "ok",
+    "selected": [],
+    "latency_ms": 2459.24,
+    "usage": {
+      "prompt_tokens": 4291,
+      "total_tokens": 4553,
+      "completion_tokens": 262,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 254
+      }
+    },
+    "evaluation": {
+      "core_recall": null,
+      "all_core_found": null,
+      "any_core_found": null,
+      "relevant_precision": null,
+      "irrelevant_count": 0,
+      "confusable_count": 0,
+      "abstained": true,
+      "correct_abstention": true
+    }
+  }
+]

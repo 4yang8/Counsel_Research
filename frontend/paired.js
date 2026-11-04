@@ -170,7 +170,7 @@
   function controls(){
     const automatic=$('paired-mode').checked,human=manualTurn(),retry=retryInput(),locked=running || restoring || sending;
     $('paired-next').hidden=automatic || human;$('paired-auto').hidden=!automatic || human;
-    $('paired-next').disabled=locked || !config || !editorScenario;$('paired-auto').disabled=$('paired-next').disabled;
+    $('paired-next').disabled=locked || !config || !editorScenario || !!session?.terminated;$('paired-auto').disabled=$('paired-next').disabled;
     $('paired-pause').disabled=!running || !auto;$('paired-stop').disabled=!running;
     $('paired-pause').hidden=!running || !auto;$('paired-stop').hidden=!running;
     for(const id of ['paired-mode','manual-client','manual-counselor','turn-endpoint-mode','turn-endpoint-octet','turn-endpoint-port'])$(id).disabled=locked;
@@ -178,7 +178,7 @@
     $('paired-mode').disabled=locked || Object.values(modes()).every(value=>value==='manual');
     $('paired-limit-setting').hidden=!automatic || Object.values(modes()).includes('manual');
     $('paired-limit').disabled=locked || !automatic;counselorSelect.disabled=locked || !!session;
-    for(const id of ['paired-manual-send','paired-manual-text'])$(id).disabled=locked || !config;
+    for(const id of ['paired-manual-send','paired-manual-text'])$(id).disabled=locked || !config || !!session?.terminated;
     $('paired-manual-role').value=inputActor();manual.hidden=!human && !retry;
     $('paired-manual-text').placeholder=retry?'상대 응답 실패 · 마지막 '+names[inputActor()]+' 발화를 수정해 재전송할 수 있습니다.':names[inputActor()]+' 발화 입력 · Shift+Enter 줄바꿈';
     $('paired-manual-send').textContent=retry?'재전송':'전송';
@@ -289,7 +289,7 @@
     wanted.forEach((element,i)=>{if(target.children[i]!==element)target.insertBefore(element,target.children[i] || null);});
     const keep=new Set(wanted);for(const element of [...target.children])if(!keep.has(element))element.remove();
     const pending=attempts.findLast(row=>row.status==='running');
-    $('paired-chat-status').textContent=pending?names[pending.actor]+' 발화 생성 중…':session?'다음 차례: '+names[session.next_actor]:'';
+    $('paired-chat-status').textContent=session?.terminated?'논문 규칙에 따라 세션 종료':pending?names[pending.actor]+' 발화 생성 중…':session?'다음 차례: '+names[session.next_actor]:'';
     $('paired-dialogue-count').textContent=session?session.public_dialogue.length+'개 발화 / 새로 생성 '+session.steps.filter(row=>row.source!=='manual').length+'개 · 직접 입력 '+session.steps.filter(row=>row.source==='manual').length+'개':'초기 대화';
     markSelection();target.scrollTop=followTranscript?target.scrollHeight:top;
   }
@@ -299,6 +299,7 @@
     return attempt;
   }
   function accept(attempt,event){
+    window.MemoryAccess?.event(event);
     PairedTrace.accept(attempt,event);
     if(activationFollow && shell.dataset.view==='activation' && selection.attempt===attempt.id)selection.activationIndex=Math.max(0,attempt.steps.length-1);
     if(attempt.extras.versions?.[attempt.counselorVersion])LabVersionViews.setCurrent(attempt.counselorVersion,attempt.extras.versions[attempt.counselorVersion]);
@@ -337,8 +338,8 @@
     try{endpointValue();}catch(error){running=false;notice(error.message);controls();return {status:'error',generated:0,error:error.message};}
     setBusy(true);controls();notice();
     if(['settings','library'].includes(shell.dataset.view))window.showLabResult('visual');
-    try{while(remaining>0 && !pause && !manualTurn()){await one();remaining--;generated++;if(remaining>0 && !pause && !manualTurn())await new Promise(resolve=>setTimeout(resolve,300));}
-      $('paired-status').textContent=(manualTurn()?'직접 입력 대기 · ':pause?'일시정지 · ':'완료 · ')+'다음 차례: '+names[nextActor()];$('status').textContent=manualTurn()?'직접 입력 대기':pause?'일시정지':'완료';
+    try{while(remaining>0 && !pause && !manualTurn() && !session?.terminated){await one();remaining--;generated++;if(remaining>0 && !pause && !manualTurn())await new Promise(resolve=>setTimeout(resolve,300));}
+      $('paired-status').textContent=session?.terminated?'논문 규칙에 따라 세션 종료':(manualTurn()?'직접 입력 대기 · ':pause?'일시정지 · ':'완료 · ')+'다음 차례: '+names[nextActor()];$('status').textContent=manualTurn()?'직접 입력 대기':pause?'일시정지':'완료';
     }catch(error){failure=error.message;pause=true;$('status').textContent='미완료';$('paired-status').textContent='중단 / 오류 · 같은 발화부터 다시 시도 가능';notice(error.message);
       if(session)try{session=await api('/api/paired/session?session_id='+encodeURIComponent(session.session_id));}catch{}
       if(retryInput()){$('paired-manual-text').value=retryInput().content;}
@@ -379,7 +380,7 @@
     try{saved=await api('/api/paired/session?session_id='+encodeURIComponent(id)+(key?'&key='+encodeURIComponent(key):''));}catch(error){restoring=false;controls();throw error;}
     reset(false);restoring=true;session=saved;controls();source='paired';document.body.classList.add('paired-mode');
     try{
-      currentVersion=session.client_version;$('experiment-version').value=currentVersion;
+      currentVersion=session.client_version;$('experiment-version').value=currentVersion;restorePaperSettings(session.settings);window.MemoryAccess?.restore(session.settings);
       if(session.settings.claim_memory_condition)claimConditionDrafts[currentVersion]=session.settings.claim_memory_condition;
       versionPreferences.set('client',currentVersion);versionPreferences.set('counselor',session.counselor_version);
       $('summary-settings').hidden=!stateSummaryMode();$('state-memory').hidden=!stateSummaryMode();$('state-input-hint').hidden=!stateSummaryMode();counselorSelect.value=session.counselor_version || 'C4';
@@ -396,7 +397,7 @@
       $('thinking-mode').value=session.settings.thinking_mode || (session.connection.chat_template_kwargs?.enable_thinking===true?'on':session.connection.chat_template_kwargs?.enable_thinking===false?'off':'default');
       enabledToolNames=session.settings.enabled_tools || null;await refreshTools();
       for(const row of saved.attempts){const attempt=newAttempt(row.actor,row.turn_id,row.step),result=await api('/api/paired/events?session_id='+encodeURIComponent(id)+'&attempt='+encodeURIComponent(row.turn_id));for(const event of result.events)accept(attempt,event);if(attempt.status==='running')accept(attempt,{type:'error',error:'완료 전 연결이 종료된 실행 기록입니다.'});}
-      session=saved;LabStorage.setItem('counseling-paired-session',id);$('paired-status').textContent='불러옴 · 다음 차례: '+names[session.next_actor];
+      session=saved;LabStorage.setItem('counseling-paired-session',id);$('paired-status').textContent=session.terminated?'종료된 논문 세션':'불러옴 · 다음 차례: '+names[session.next_actor];
       $('paired-manual-text').value=retryInput()?.content || '';followTranscript=true;transcript();
       const versionState=await api('/api/paired/version_state?session_id='+encodeURIComponent(id));LabVersionViews.setCurrent(versionState.version,versionState.data);
       if(attempts.length)chooseAttempt(attempts.at(-1));else window.showLabResult('visual');

@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a7fbad3b0aa26893",
+  "object": "chat.completion",
+  "created": 1793803611,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [14]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze the last question carefully.\n\nThe counselor's last message says: \"네. 그 말을 꺼낸 바로 그때의 마음을 확인하고 싶어요.\" (Yes. I want to confirm the feeling at the exact moment you said that.)\n\nThe client's preceding message says: \"안 해도 된다고 하셔서, 제가 방법을 정해보겠다고 했던 대답인가요?\" (Because you said I don't have to, was that the answer where I said I'd decide the method myself?)\n\nSo the client is asking about a specific moment: the time when they said \"제가 방법을 정해보겠다고\" (I'd decide the method myself) - this refers to the moment when the counselor said \"연락하지 않는 선택도 괜찮다\" (it's okay not to contact) and the client responded with \"제가 고른 시간에 짧게 보내는 건 해보고 싶어요.\" (I'd like to try sending a short message at a time I choose myself.)\n\nThe counselor is asking about \"그 말을 꺼낸 바로 그때의 마음\" - the feeling at the exact moment of saying that.\n\nSo the target is turn 14, where the client said \"제가 고른 시간에 짧게 보내는 건 해보고 싶어요.\"\n\nLet me verify: The client's question \"안 해도 된다고 하셔서, 제가 방법을 정해보겠다고 했던 대답인가요?\" refers to the exchange where:\n- Counselor said something like \"it's okay not to contact\" (turn 14's context)\n- Client said \"제가 고른 시간에 짧게 보내는 건 해보고 싶어요\" (turn 14)\n\nThe counselor confirms \"네\" and asks about the feeling at that exact moment. So the target turn is 14.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16206,
+    "total_tokens": 16575,
+    "completion_tokens": 369,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 359
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

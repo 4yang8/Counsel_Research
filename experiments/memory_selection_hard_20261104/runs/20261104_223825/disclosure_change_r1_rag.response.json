@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-8930677fae778102",
+  "object": "chat.completion",
+  "created": 1793799527,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"팀장 사건 말할 준비 안 됐을 때 걸린 이유 수연 허락 후에도 자세히 말하기 어려운 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's final question asks about two specific moments:\n1. When the client first said they weren't ready to talk about the \"팀장 사건\" (team leader incident)\n2. When the client received 수연's green message permission but still found it hard to talk in detail\n\nThe question asks what was the barrier/obstacle in each case.\n\nThe key elements to search for:\n- 팀장 사건 (team leader incident) - this is the undisclosed event\n- 수연의 초록 메시지 (Su-yeon's green message) - this is the permission given\n- The client's reasons for not being ready to share\n\nThe counselor is asking about the internal barriers at two specific moments. The search should focus on the team leader incident and the client's hesitation about sharing it.\n\nI need to craft a search query that captures the undisclosed memory around the team leader incident and the client's internal barriers to sharing it. The public dialogue already reveals:\n- 팀장 사건 exists but hasn't been fully disclosed\n- 수연 gave permission (green message) but client still found it hard\n- The client said \"아직 그건 말할 준비가 안 됐어요\" initially\n- After permission: \"그래도 아직 자세히는 말하기 어려워요\"\n\nThe search should look for the actual content of the team leader incident or the client's internal experience/reason for not sharing it.\n\nA good query would focus on the team leader incident and the client's internal barriers to disclosing it.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2851,
+    "total_tokens": 3191,
+    "completion_tokens": 340,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 310
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

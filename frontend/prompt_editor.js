@@ -31,6 +31,7 @@
   }
   function target(editor){
     const version=selected(editor.role);
+    if(editor.userTemplate && ['Q3cars','Q3patientact','Q3calmit','Q3calmit_counsel','Q3public','Q3oracle','Q3full','Q3select','Q3ragtool'].includes(version))return null;
     if(editor.skill)return version==='Q3sk'?{role:'client',version,kind:'skill_notes'}:null;
     if(editor.kind==='trajectory')return ['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5'].includes(version)?{role:'client',version,kind:'trajectory'}:null;
     if(editor.subagent){
@@ -54,7 +55,7 @@
     if(editor.error){editor.status.textContent=editor.error;editor.status.dataset.error='true';return;}
     editor.status.dataset.error='false';
     editor.status.textContent=editor.meta?
-      `${editor.meta.path}${editor.meta.field?' · '+editor.meta.field:''} · ${changed?(editor.touched?'미저장 변경':!editor.subagent && !editor.userTemplate && frozen()?'저장된 세션의 지침 · 현재 파일과 다름':'표시 내용이 원본과 다름'):editor.saved?'파일 저장 완료':'파일과 일치'} · ${editor.skill?'저장은 다음 내담자 생성부터 적용 · 실제 사용한 원문은 턴 기록에 보존':editor.kind==='trajectory'?'저장은 다음 내담자 생성부터 적용':editor.userTemplate?'저장은 다음 생성부터 적용 · 변수는 호출 시 최신 데이터로 대체':editor.subagent?'저장은 다음 서브에이전트 호출부터 적용':'저장은 새 대화부터 적용'}`:
+      `${editor.meta.path}${editor.meta.field?' · '+editor.meta.field:''} · ${changed?(editor.touched?'미저장 변경':!editor.subagent && !editor.userTemplate && frozen()?'저장된 세션의 지침 · 현재 파일과 다름':'표시 내용이 원본과 다름'):editor.saved?'파일 저장 완료':'파일과 일치'} · ${editor.skill?'저장은 다음 내담자 생성부터 적용 · 실제 사용한 원문은 턴 기록에 보존':editor.kind==='trajectory'?'저장은 다음 내담자 생성부터 적용':editor.userTemplate?'저장은 다음 생성부터 적용 · 변수는 호출 시 최신 데이터로 대체':editor.subagent?(['Q3cars','Q3patientact','Q3calmit','Q3public','Q3oracle','Q3full','Q3select','Q3ragtool'].includes(editor.target?.version)?'세션 프롬프트는 고정됨 · 저장은 새 대화부터 적용':'저장은 다음 서브에이전트 호출부터 적용'):'저장은 새 대화부터 적용'}`:
       '원본 파일을 불러오는 중…';
   }
   async function load(editor,value){

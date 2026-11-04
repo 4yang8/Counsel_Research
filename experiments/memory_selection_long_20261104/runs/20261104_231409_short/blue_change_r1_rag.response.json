@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a4df7107b436db93",
+  "object": "chat.completion",
+  "created": 1793801661,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"파란 카드 과제 처음 동의했을 때와 직접 시간 골라 연락했을 때 선택권 마음 차이\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the difference in feelings between when the client first agreed to the blue card task and when they chose to send a message at a time they picked themselves after being given the option not to contact. This is about the internal experience of autonomy and choice regarding the blue card task.\n\nThe client's core issue is about burden in relationships, difficulty with contact, and issues with autonomy/choice. The question focuses on comparing two moments of decision-making regarding the blue card task - the initial agreement vs. the later self-chosen action.\n\nI need to find a private record that would contain the client's internal thoughts/feelings about these two moments of choice regarding the blue card task. This could be from a diary entry (since the client mentioned writing in a locked diary app), or from a previous session where these feelings were discussed privately.\n\nThe key elements to preserve:\n- 파란 카드 (blue card task)\n- 처음 동의했을 때 (first agreement)\n- 직접 시간을 골라 보냈을 때 (choosing time to send)\n- 선택권 (choice/autonomy)\n- 마음의 차이 (difference in feelings)\n\nI should formulate a search query that targets the client's internal experience of these two moments of choice regarding the blue card task.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1577,
+    "total_tokens": 1873,
+    "completion_tokens": 296,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 267
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

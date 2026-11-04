@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-819c7bb04da70143",
+  "object": "chat.completion",
+  "created": 1793801884,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"첫 회기 파란 카드 연락 과제 처음 제안 네 한번 해볼게요\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the moment when the client first said \"네, 한번 해볼게요\" (Yes, I'll try) in response to the first session's blue card contact assignment. The counselor wants to distinguish that initial moment from when the client's mind changed later.\n\nSo I need to search for the record of that first moment when the blue card contact assignment was first proposed and the client said \"네, 한번 해볼게요.\"\n\nKey elements to preserve:\n- 파란 카드 (blue card)\n- 연락 과제 (contact assignment)\n- 처음 제안 (first proposal)\n- \"네, 한번 해볼게요\" (the exact response)\n- 첫 회기 (first session)\n\nThe question focuses on the initial reason for saying \"yes\" at that moment, distinguishing it from later changes in attitude.\n\nI should craft a query that targets the first session record where the blue card contact assignment was first proposed.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1585,
+    "total_tokens": 1806,
+    "completion_tokens": 221,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 198
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

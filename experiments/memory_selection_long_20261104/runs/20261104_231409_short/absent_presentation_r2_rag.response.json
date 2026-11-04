@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-b95ad8e4a8e6a57e",
+  "object": "chat.completion",
+  "created": 1793801792,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\":\"지난 금요일 사내 발표 팀장 추가 발표 제안 네 한번 해볼게요 답한 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The user wants me to generate a search query to find a private memory record related to the last counselor question.\n\nThe last counselor question is: \"지난 금요일 실제 사내 발표 자리에서 팀장이 추가 발표를 제안했을 때 '네, 한번 해볼게요'라고 답한 그 순간의 비공개 이유를 확인할 수 있나요?\"\n\nKey elements to preserve:\n- Public event: 지난 금요일 사내 발표 자리 (last Friday's internal presentation)\n- Public person: 팀장 (team leader)\n- Public action: 추가 발표를 제안 (proposed additional presentation)\n- Public response: \"네, 한번 해볼게요\" (said \"yes, I'll try\")\n- Focus of the question: 비공개 이유 (the private/unstated reason behind that response)\n- Time: 지난 금요일 (last Friday)\n\nI need to construct a search query that captures these elements without fabricating reasons. The query should focus on finding the private reason behind why 민수 said \"네, 한번 해볼게요\" when the team leader proposed an additional presentation at last Friday's internal presentation event.\n\nThe query should be in Korean and search for records from that specific moment.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1577,
+    "total_tokens": 1852,
+    "completion_tokens": 275,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 249
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

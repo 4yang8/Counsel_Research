@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-b4cef79745f47c03",
+  "object": "chat.completion",
+  "created": 1793803703,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [6, 19, 23]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze the last question carefully.\n\nThe counselor's last message says: \"그 일을 자세히 말하기 어렵다고 했던 대답은 주변 사람에게 물어보기 전과 답을 받은 뒤에 있었죠. 그 다음에는 중단하는 방법을 정하고 조금 말해보겠다고 하셨고요.\"\n\nThis translates to: \"The answers where you said it was difficult to talk about that matter in detail were before asking the person around you and after receiving the reply. And then after that, you said you could talk a little if we set a method to stop.\"\n\nThe client responds: \"먼저 물어볼 수 있다고만 했던 대답은 중간 계획이었고요.\" (The answer where you only said you could ask first was an intermediate plan.)\n\nThe counselor's final question: \"네. 계획만 말한 때는 빼고, 말씀드린 세 번의 대답에 담긴 마음을 각각 확인해볼까요?\" (Yes. Excluding the time you only stated the plan, shall we check the feelings contained in each of the three answers I mentioned?)\n\nSo the counselor is referring to three specific turns:\n1. \"그 일을 자세히 말하기 어렵다고 했던 대답\" before asking - this is turn 6 (동료를 보호하려고 보류)\n2. \"그 일을 자세히 말하기 어렵다고 했던 대답\" after receiving the reply - this is turn 19 (동료의 허락 문제는 풀렸지만 감정이 커져 멈추지 못할까 봐 망설임)\n3. \"중단하는 방법을 정하고 조금 말해보겠다고 하셨고요\" - this is turn 23 (손을 들면 멈추는 걸로 하면 조금 말해볼 수 있어요)\n\nThe counselor explicitly excludes \"먼저 물어볼 수 있다고만 했던 대답\" which is turn 15 (그건 먼저 물어볼 수 있을 것 같아요).\n\nSo the three target turns are: 6, 19, 23.\n\nLet me verify:\n- Turn 6: \"아직 그건 말할 준비가 안 됐어요.\" - This was about the 팀장 사건, before asking the colleague. The reason was protecting the colleague.\n- Turn 15: \"그건 먼저 물어볼 수 있을 것 같아요.\" - This was the intermediate plan (asking the colleague first). The counselor explicitly excludes this.\n- Turn 19: \"그래도 아직 자세히는 말하기 어려워요.\" - This was after the colleague gave permission, but now the reason changed to fear of emotional overwhelm.\n- Turn 23: \"손을 들면 멈추는 걸로 하면 조금 말해볼 수 있어요.\" - This was after setting up a stop signal method, willing to talk a little.\n\nThese match perfectly with the counselor's description. The three turns are 6, 19, 23.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16217,
+    "total_tokens": 16815,
+    "completion_tokens": 598,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 581
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

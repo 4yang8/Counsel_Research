@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a2076946be58d8e2",
+  "object": "chat.completion",
+  "created": 1793801889,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [3, 14, 27]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the difference between the first time agreeing to the blue card task and when they were given the choice not to contact and then said they wanted to send a message at their own chosen time.\n\nThis directly relates to:\n- Turn 3: First agreement to the blue card task (where the inner reason was fear of disappointing the counselor, not genuine willingness)\n- Turn 14: After being told they don't have to contact, choosing to send a short message at their own time (genuine willingness emerged)\n- Turn 27: Reflecting on how the first agreement was different from now\n\nTurn 27 is the most directly relevant because it's the client's own reflection comparing the first blue card agreement to the present. Turn 3 provides the original context of the first agreement. Turn 14 provides the context of the voluntary choice.\n\nI should select these three turns as they directly address the counselor's question about the difference between the two moments.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16658,
+    "total_tokens": 16881,
+    "completion_tokens": 223,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 206
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

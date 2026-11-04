@@ -60,6 +60,18 @@ def session_notes(handler, args):
         import storage.session_browser as session_browser
         storage,kind,found=session_browser.resolve(handler.server,args['key'][0])
         if found!=sid or kind!=version:raise ValueError('선택한 세션 정보가 일치하지 않습니다.')
+    from client.memory_access import VERSIONS as MEMORY_ACCESS_VERSIONS
+    if version in MEMORY_ACCESS_VERSIONS:
+        value=client_runtime(version).load({'_storage_dir':str(storage)},sid if storage else None)
+        notes.append({'actor':'client','version':version,'label':'턴별 내면 기록 · 입력 여부는 memory_input에서 확인',
+                      'content':value['content'],'path':value['path']})
+    if version in ('Q3cars','Q3patientact','Q3calmit'):
+        import json
+        from client.paper_baselines.common import load as load_paper, directory
+        value=load_paper({'_storage_dir':str(storage)},version,sid if storage else None)
+        notes.append({'actor':'client','version':version,'label':'논문별 비공개 상태 · 마지막 완료 턴',
+                      'content':json.dumps(value['state'],ensure_ascii=False,indent=2),
+                      'path':str(directory({'_storage_dir':str(storage)},version,sid)) if storage else None})
     if version in ('Q1','Q1a','Q1_s1','Q1_s2','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'):
         module=client_runtime(version)
         with module.LOCK:

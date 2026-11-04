@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-b92b62032394a70e",
+  "object": "chat.completion",
+  "created": 1793801758,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"팀장 주말 근무 부탁 당시 생각해 볼게요라고 답한 속마음 감정\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the internal motivation behind saying \"생각해 볼게요\" (I'll think about it) when the 팀장 (team leader) asked about weekend work, and to distinguish it from the similar response given to the mother's suggestion about a reunion gathering. \n\nThe client previously said \"생각해 볼게요, 라고 했어요\" when asked about the team leader's weekend work request, and \"생각해 볼게요, 했어요\" when asked about the mother suggesting a reunion gathering.\n\nThe counselor wants to explore the difference in internal feelings/motivation between these two similar outward responses. This is about the client's internal state during those moments - what was really going on inside when they said \"생각해 볼게요\" to the team leader vs. to the mother.\n\nI need to craft a search query that would find private records about the client's internal thoughts/feelings when responding \"생각해 볼게요\" to the team leader's weekend work request, specifically distinguishing it from the similar response to the mother's reunion suggestion.\n\nThe key elements to preserve:\n- 팀장 (team leader) - public person\n- 주말 근무 (weekend work) - public event\n- \"생각해 볼게요\" - public response\n- 어머니의 모임 권유 (mother's reunion suggestion) - public event\n- The distinction between the two internal motivations - this is the private aspect being sought\n\nI should search for the internal experience/thoughts during the team leader's weekend work request moment, as that's what the counselor is trying to uncover the difference in.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1580,
+    "total_tokens": 1940,
+    "completion_tokens": 360,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 336
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

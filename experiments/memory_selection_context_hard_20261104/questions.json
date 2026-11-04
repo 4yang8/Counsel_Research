@@ -1,0 +1,182 @@
+[
+  {
+    "id": "context_initial",
+    "target_count": 1,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "친구의 초대에 답한 이야기나, 제가 부탁을 받았다고 가정하고 대사를 연습해보자고 했던 장면은 지금 제외할게요. 여기서 제가 먼저 연락을 권했던 대답을 돌아보고 싶어요."
+      },
+      {
+        "role": "client",
+        "content": "네. 제가 시간을 직접 골라보겠다고 말하기 전의 대답을 말씀하시는 거죠?"
+      }
+    ],
+    "question": "맞아요. 그때 짧게 하겠다고 답한 순간에는 어떤 마음이었는지 확인해볼까요?"
+  },
+  {
+    "id": "context_choice",
+    "target_count": 1,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "결과를 말한 순간과 결정을 내린 순간을 나눠볼게요. 메시지를 이미 보냈다고 하거나 답장을 읽었다고 말한 장면은 지금 묻는 게 아니에요."
+      },
+      {
+        "role": "client",
+        "content": "안 해도 된다고 하셔서, 제가 방법을 정해보겠다고 했던 대답인가요?"
+      }
+    ],
+    "question": "네. 그 말을 꺼낸 바로 그때의 마음을 확인하고 싶어요."
+  },
+  {
+    "id": "context_unknown",
+    "target_count": 1,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "같은 경험을 제가 나중에도 다시 여쭤봤고, 기록에 적었는지도 이야기했죠. 이번에는 나중에 한 설명은 빼고, 제가 처음 이유를 물었던 대답만 돌아볼게요."
+      },
+      {
+        "role": "client",
+        "content": "갑자기 내렸던 일에 대해 저도 모르겠다고 했던 거요?"
+      }
+    ],
+    "question": "맞아요. 그때는 이유를 알고도 보류한 건지, 정말 설명이 안 됐던 건지 확인해볼까요?"
+  },
+  {
+    "id": "context_limited_share",
+    "target_count": 1,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "혼자 쓰겠다고만 했던 장면이나 전체를 보내기는 싫다고 답했던 장면과 나눠서 볼게요. 실제로 여기서 일부를 읽는 방식을 제안하셨던 순간이요."
+      },
+      {
+        "role": "client",
+        "content": "제가 읽을 부분을 골라서 말하겠다고 했던 때요?"
+      }
+    ],
+    "question": "네. 그때 정확히 어디까지 괜찮다고 생각했던 건지 확인하고 싶어요."
+  },
+  {
+    "id": "context_permission_pair",
+    "target_count": 2,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "그 사건을 보류한 대답 두 개를 비교하려고 해요. 관련된 사람에게 물어보기 전의 대답과 그 사람의 답을 읽고도 자세히 말하기 어렵다고 했던 대답이에요."
+      },
+      {
+        "role": "client",
+        "content": "멈추는 방법을 정하자고 하기 전까지의 두 장면이네요."
+      }
+    ],
+    "question": "네. 두 번 모두 아직 어렵다고 했지만 그 말을 한 이유도 같았는지 확인해볼까요?"
+  },
+  {
+    "id": "context_distance_pair",
+    "target_count": 2,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "제가 자리를 옮겨도 되는지 물었을 때의 대답과, 나중에 그때 실제로 어땠는지 다시 물었을 때의 대답을 나눠보려고 해요."
+      },
+      {
+        "role": "client",
+        "content": "그때 괜찮다고 해놓고 나중에는 조금 불편했다고 했었죠."
+      }
+    ],
+    "question": "맞아요. 처음 그렇게 답한 마음과 나중에 정정해서 말한 마음을 각각 확인해볼까요?"
+  },
+  {
+    "id": "context_same_friend",
+    "target_count": 2,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "같은 친구에게 생각해보겠다고 했던 대답을 비교할게요. 한 번은 준비 일을 도와달라는 부탁이었고, 다른 한 번은 나중에 독서 모임에 다시 오라는 권유였어요."
+      },
+      {
+        "role": "client",
+        "content": "두 번 다 바로 네라고 하지는 않았어요."
+      }
+    ],
+    "question": "그 두 번의 유보에는 각각 어떤 마음이 있었는지 확인해볼까요?"
+  },
+  {
+    "id": "context_same_words",
+    "target_count": 2,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "같이 해보겠다고 한 대답 중, 제가 이 자리에서 먼저 연락을 권했을 때와 나중에 그 친구와 산책 약속을 이야기했을 때만 비교할게요."
+      },
+      {
+        "role": "client",
+        "content": "표현은 똑같이 했던 것 같아요."
+      }
+    ],
+    "question": "네. 그 두 대답이 당시 같은 의미였는지 각각의 마음을 확인해볼까요?"
+  },
+  {
+    "id": "context_scope_chain",
+    "target_count": 3,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "읽어주는 범위가 바뀐 세 대답을 순서대로 보려고 해요. 쓰기는 하지만 보여주기는 아직이라고 했던 대답, 직접 일부를 골라 읽겠다고 했던 대답, 그 뒤 전체를 보내는 건 싫다고 했던 대답이에요."
+      },
+      {
+        "role": "client",
+        "content": "앱에 적었다고 말한 순간은 빼고, 보여주는 범위를 제가 말한 때들이군요."
+      }
+    ],
+    "question": "맞아요. 그 세 번에 각각 무엇을 허용하고 무엇을 남겨두려 했는지 확인해볼까요?"
+  },
+  {
+    "id": "context_contact_chain",
+    "target_count": 3,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "연락 이야기는 처음 여기서 해보겠다고 대답한 순간, 나중에 제가 안 해도 된다고 하자 직접 방법을 정하겠다고 한 순간, 실제로 보냈지만 답은 아직 없다고 보고한 순간을 나눠볼게요."
+      },
+      {
+        "role": "client",
+        "content": "상대에게 답장이 온 뒤의 대답이나 나중에 과거를 돌아본 설명은 아니고요."
+      }
+    ],
+    "question": "네. 그 세 순간에 각각 어떤 마음으로 말했는지 확인해볼까요?"
+  },
+  {
+    "id": "context_disclosure_chain",
+    "target_count": 3,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "그 일을 자세히 말하기 어렵다고 했던 대답은 주변 사람에게 물어보기 전과 답을 받은 뒤에 있었죠. 그 다음에는 중단하는 방법을 정하고 조금 말해보겠다고 하셨고요."
+      },
+      {
+        "role": "client",
+        "content": "먼저 물어볼 수 있다고만 했던 대답은 중간 계획이었고요."
+      }
+    ],
+    "question": "네. 계획만 말한 때는 빼고, 말씀드린 세 번의 대답에 담긴 마음을 각각 확인해볼까요?"
+  },
+  {
+    "id": "context_agreement_roles",
+    "target_count": 3,
+    "recent_context": [
+      {
+        "role": "counselor",
+        "content": "똑같이 해보겠다고 한 세 장면만 볼게요. 상담 전에 친구가 책 모임에 초대한 일, 여기서 제가 먼저 연락하자고 권한 일, 그리고 부탁을 받은 상황을 가정해서 대사를 연습한 일이에요."
+      },
+      {
+        "role": "client",
+        "content": "나중에 산책해보겠다고 한 약속은 여기에 넣지 않는 거죠?"
+      }
+    ],
+    "question": "네. 그 세 번은 각각 어떤 의도로 한 말이었는지 확인해볼까요?"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-8c83e5044cfed574",
+  "object": "chat.completion",
+  "created": 1793803784,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [22]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze the last question in the public dialogue:\n\nThe counselor says: \"혼자 쓰겠다고만 했던 장면이나 전체를 보내기는 싫다고 답했던 장면과 나눠서 볼게요. 실제로 여기서 일부를 읽는 방식을 제안하셨던 순간이요.\"\n\nThe client responds: \"제가 읽을 부분을 골라서 말하겠다고 했던 때요?\"\n\nThe counselor confirms: \"네. 그때 정확히 어디까지 괜찮다고 생각했던 건지 확인하고 싶어요.\"\n\nSo the counselor is asking about the moment when the client proposed reading a portion (one sentence) of their diary here in the session. The client is confirming \"the time when I said I'd pick which part to read.\"\n\nLooking at the public dialogue, this corresponds to:\n- Counselor: \"잠금 일기를 오늘 여기서 읽어볼까요?\" (Turn 22's counselor question)\n- Client: \"한 문장만 제가 골라 읽을게요.\" (Turn 22's client response)\n\nSo the target is turn 22, where the client said \"한 문장만 제가 골라 읽을게요.\"\n\nThe counselor is asking about that specific moment - when the client proposed reading just one sentence they chose themselves. The question is about what exactly the client felt was okay to share at that time.\n\nTurn 22 matches: \"한 문장만 제가 골라 읽을게요.\" - this is the utterance where the client said they would pick one sentence to read.\n\nThe target_count is 1, so I need to select exactly 1 turn.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16204,
+    "total_tokens": 16542,
+    "completion_tokens": 338,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 328
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

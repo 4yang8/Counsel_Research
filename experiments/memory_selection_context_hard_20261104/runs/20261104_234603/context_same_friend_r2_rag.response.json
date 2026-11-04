@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-b5e14ff557666d7f",
+  "object": "chat.completion",
+  "created": 1793803814,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"생각해 볼게요 친구 준비 도움 부탁 독서 모임 재초대\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The last question from the counselor is: \"그 두 번의 유보에는 각각 어떤 마음이 있었는지 확인해볼까요?\"\n\nThis refers to \"그 두 번\" which the counselor just explicitly identified in the previous turn:\n1. 준비 일을 도와달라는 부탁 (friend asking for help preparing)\n2. 나중에 독서 모임에 다시 오라는 권유 (friend inviting back to a book club)\n\nBoth times, the client said \"생각해 볼게요\" (I'll think about it).\n\nThe target_count is 2, meaning we need to find 2 original utterances.\n\nThe original utterances are:\n1. \"생각해 볼게요, 라고 했어요.\" - when the friend asked for help with weekend gathering preparation\n2. \"생각해 볼게요, 했어요.\" - when the friend invited back to a book club later\n\nSo I need to write a search query that captures both of these original utterances, preserving the public context (the two specific events and the response \"생각해 볼게요\").\n\nThe query should include the key distinguishing elements: the two events (준비 도움 부탁, 독서 모임 재초대) and the common response (생각해 볼게요).\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1688,
+    "total_tokens": 1971,
+    "completion_tokens": 283,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 260
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

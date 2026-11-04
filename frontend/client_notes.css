@@ -17,3 +17,9 @@
 .session-note-box>strong{font-size:12px;color:#456073}
 .session-note-box pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.5 ui-monospace,GemmaKorean,monospace;max-height:420px;overflow:auto;overscroll-behavior:contain;margin:6px 0 0}
 .session-notes-group[data-actor=client] .session-note-box{background:#f5f2fa;border-color:#d8cde8}
+.lab-shell[data-view=memory_access] .workspace,.lab-shell[data-view=memory_access] .journey{display:none}
+#memory-access-view pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto;font-size:12px;line-height:1.6}
+#memory-turn-results>details{margin:10px 0;padding:10px;border:1px solid #cad9e4;border-radius:6px;background:#fff}
+#memory-live-summary{color:#365c52;line-height:1.6}
+#memory-oracle-picker label{display:flex;align-items:center;gap:7px;margin:6px 0}
+#memory-oracle-picker input{width:auto}

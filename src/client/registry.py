@@ -1,10 +1,12 @@
 """Small registry: basic keeps its existing runtime; new versions opt in."""
 from pathlib import Path
 from client.memory_experiments.catalog import SPECS as MEMORY_EXPERIMENTS, get_runtime as memory_runtime
+from client.memory_access import VERSIONS as MEMORY_ACCESS_VERSIONS
+PAPER_VERSIONS = ('Q3cars', 'Q3patientact', 'Q3calmit')
 
 from project_paths import PROJECT_ROOT
 HERE = PROJECT_ROOT
-NAMES = ('basic', 'state_summary', 'Q1', 'Q1_s1', 'Q1_s2', 'Q1a', 'Q2', 'Q2a', 'Q2a_variant_context', 'Q2a_trait_background', 'Q2a_prefill_test', *MEMORY_EXPERIMENTS)
+NAMES = ('basic', 'state_summary', 'Q1', 'Q1_s1', 'Q1_s2', 'Q1a', 'Q2', 'Q2a', 'Q2a_variant_context', 'Q2a_trait_background', 'Q2a_prefill_test', *MEMORY_EXPERIMENTS, *PAPER_VERSIONS, *MEMORY_ACCESS_VERSIONS)
 MODEL_CHOICES = ('google/gemma-4-31B-it', 'Qwen/Qwen3.8-27B', 'Qwen/Qwen3.8-27B-FP8',
                  'Qwen/Qwen3.8-Flash-Next-FP8',
                  'bottlecapai/ThinkingCap-Qwen3.8-27B-FP8',
@@ -13,6 +15,12 @@ OPTIONAL_BLOCKS = ('system', 'task', 'profile', 'dialogue')
 
 
 def client_runtime(version):
+    if version in MEMORY_ACCESS_VERSIONS:
+        from client.memory_access.runtime import RUNTIMES
+        return RUNTIMES[version]
+    if version in PAPER_VERSIONS:
+        from client.paper_baselines.runtime import RUNTIMES
+        return RUNTIMES[version]
     if version in MEMORY_EXPERIMENTS:return memory_runtime(version)
     if version == 'Q1':
         from client.Q1 import runtime
@@ -69,7 +77,7 @@ def catalog(config):
          'system_prompt': (HERE / 'src/client/state_summary/system.md').read_text(encoding='utf-8'),
          'summary_system_prompt': (HERE / 'src/client/state_summary/summary.md').read_text(encoding='utf-8')},
         specification(), client_runtime('Q1_s1').specification(), client_runtime('Q1_s2').specification(), client_runtime('Q1a').specification(), client_runtime('Q2').specification(), client_runtime('Q2a').specification(), client_runtime('Q2a_variant_context').specification(), {**client_runtime('Q2a_trait_background').specification(), 'label':'A · 기준선 · Q2a_trait_background', 'condition':'A'}, client_runtime('Q2a_prefill_test').specification(), *(memory_runtime(v).specification() for v in MEMORY_EXPERIMENTS)
-    ]}
+    ] + [client_runtime(v).specification() for v in (*PAPER_VERSIONS, *MEMORY_ACCESS_VERSIONS)]}
 
 
 def configure(config, body):
@@ -94,4 +102,12 @@ def configure(config, body):
     config['_input_blocks'] = input_blocks(config, body)
     config['_experiment_version'] = name(config, body)
     config['_request_body'] = body
+    if selected_version in MEMORY_ACCESS_VERSIONS:
+        from client.memory_access.runtime import configure as configure_memory
+        body['experiment_version'] = selected_version
+        configure_memory(config, body)
+    if selected_version in PAPER_VERSIONS:
+        from client.paper_baselines.common import configure as configure_paper
+        body['experiment_version'] = selected_version
+        configure_paper(config, body)
     config['_defer_initial_request'] = config['_experiment_version'] == 'state_summary' or client_runtime(config['_experiment_version']) is not None

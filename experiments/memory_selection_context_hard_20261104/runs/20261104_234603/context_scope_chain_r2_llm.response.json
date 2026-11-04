@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-9af8f32ad999bd46",
+  "object": "chat.completion",
+  "created": 1793803824,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [11, 22, 28]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze the last question in the public dialogue. The counselor says:\n\n\"읽어주는 범위가 바뀐 세 대답을 순서대로 보려고 해요. 쓰기는 하지만 보여주기는 아직이라고 했던 대답, 직접 일부를 골라 읽겠다고 했던 대답, 그 뒤 전체를 보내는 건 싫다고 했던 대답이에요.\"\n\nThe counselor is referring to three responses where the client talked about the scope of sharing diary content:\n1. \"쓰기는 하지만 보여주기는 아직이라고 했던 대답\" - This refers to when the client said they would write but not show. Looking at the public dialogue: \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\" - This is turn 11.\n2. \"직접 일부를 골라 읽겠다고 했던 대답\" - This refers to when the client said they would pick one sentence to read. Looking at the public dialogue: \"한 문장만 제가 골라 읽을게요.\" - This is turn 22.\n3. \"그 뒤 전체를 보내는 건 싫다고 했던 대답\" - This refers to when the client said they don't want to send the whole thing. Looking at the public dialogue: \"전체는 아직 싫어요.\" - This is turn 28.\n\nThe client then responds: \"앱에 적었다고 말한 순간은 빼고, 보여주는 범위를 제가 말한 때들이군요.\" - confirming these are the three moments about showing scope (excluding the moment about writing in the app, which was turn 18).\n\nThe counselor then asks: \"맞아요. 그 세 번에 각각 무엇을 허용하고 무엇을 남겨두려 했는지 확인해볼까요?\"\n\nSo the question is asking about the three turns where the client discussed the scope of showing/sharing diary content:\n- Turn 11: \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\" (writing is okay, showing is not yet)\n- Turn 22: \"한 문장만 제가 골라 읽을게요.\" (I'll pick one sentence to read)\n- Turn 28: \"전체는 아직 싫어요.\" (I don't want to send the whole thing)\n\nThese are the three target turns.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16230,
+    "total_tokens": 16713,
+    "completion_tokens": 483,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 465
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

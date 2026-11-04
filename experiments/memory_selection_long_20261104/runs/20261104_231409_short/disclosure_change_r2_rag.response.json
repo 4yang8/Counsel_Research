@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-8d079c061b44aeca",
+  "object": "chat.completion",
+  "created": 1793801743,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"팀장 사건 말할 준비 안 됐을 때 뭐가 걸렸는지\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about two specific moments:\n1. When the client said they weren't ready to talk about the team leader incident (팀장 사건)\n2. When the client said they still couldn't talk about it in detail even after receiving 수연's green message permission\n\nThe counselor is asking what was blocking them in each of these two moments.\n\nI need to search for the private memory/record from the time when the client first said they weren't ready to talk about the team leader incident. This is the first moment the counselor references. The counselor is comparing two moments - the first one being when they first said \"아직 그건 말할 준비가 안 됐어요\" about the 팀장 사건.\n\nThe search query should focus on the initial moment when the client declined to discuss the team leader incident - what was happening at that time, what was blocking them. I should preserve the public elements: 팀장 사건, the refusal to speak, and the counselor's question about what was blocking them.\n\nLet me formulate a query that targets the private record from when the client first refused to talk about the team leader incident.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1579,
+    "total_tokens": 1834,
+    "completion_tokens": 255,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 234
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

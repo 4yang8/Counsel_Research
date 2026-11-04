@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-add808b2544a0224",
+  "object": "chat.completion",
+  "created": 1793801830,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [11, 22]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the difference in scope of agreement between two moments:\n1. \"감정 일기를 쓰는 건 해보겠지만 보여주는 건 아직이라고 했던 때\" - This refers to turn 11, where the client said \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\" (willing to write diary but not share it yet)\n2. \"나중에 직접 한 문장만 골라 읽겠다고 했을 때\" - This refers to turn 22, where the client said \"한 문장만 제가 골라 읽을게요.\" (willing to read just one sentence they chose)\n\nThe counselor is asking about the scope of agreement in each of these two moments. I need to select the turns that are directly relevant to this question.\n\nTurn 11: The client agreed to write but not share - the scope was \"writing yes, sharing no\"\nTurn 22: The client agreed to read one sentence they chose themselves - the scope was \"one self-selected sentence only\"\n\nThese are the two turns directly referenced by the counselor's question. I should select both.\n\nLet me also consider if any other turns are relevant. Turn 28 (\"전체는 아직 싫어요\") is about refusing to share the entire diary, which is related to the progression from turn 11 to turn 22, but the question specifically asks about the scope at the two moments mentioned. Turn 18 (about the locked diary app) is context but not directly asked about.\n\nI'll select turns 11 and 22 as the most directly relevant.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16659,
+    "total_tokens": 17011,
+    "completion_tokens": 352,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 338
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

@@ -8,6 +8,7 @@
 프로젝트 루트에서 실행합니다. Python 3.10 이상이 필요합니다.
 
 ```bash
+pip install -e .
 bash scripts/run_counseling.sh
 # 다른 포트 또는 설정
 bash scripts/run_counseling.sh --port 8892 --config /절대/경로/config.json
@@ -31,6 +32,11 @@ bash scripts/stop_counseling.sh --port 8892
 모델 서빙 스크립트와 GPU 의존성은 `vllm/`에 별도로 있습니다.
 
 ## 대조실험 컨트롤러
+
+논문 비교 버전 `Q3cars`, `Q3patientact`, `Q3calmit`도 선택할 수 있습니다.
+CALM-IT의 대응 상담사는 `Q3calmit_counsel`입니다.
+PatientAct 공식 프로필 선택, native 입력 구조, 원논문과의 차이는
+[논문 비교 실행 안내](src/client/paper_baselines/README.md)에 정리했습니다.
 
 상단의 **대조실험 컨트롤러**를 펼치고, 기준이 될 탭에서 **현재 탭 조건 불러오기**를 누릅니다. 대상 탭을 선택한 뒤 모델·주소·발화 수·생성 옵션을 정합니다. 프로필·초기 대화·상담사 지침·입력 범위·추론 한도는 기준 탭에서 함께 복사하고, 내담자 버전별 프롬프트·도구는 각 탭에 유지합니다.
 

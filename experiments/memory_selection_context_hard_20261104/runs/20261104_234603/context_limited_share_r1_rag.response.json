@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-af971b00bb6e3c0c",
+  "object": "chat.completion",
+  "created": 1793803636,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"잠금 일기 여기서 읽기 한 문장만 제가 골라 읽을게요\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze the last exchange carefully.\n\nThe counselor says: \"혼자 쓰겠다고만 했던 장면이나 전체를 보내기는 싫다고 답했던 장면과 나눠서 볼게요. 실제로 여기서 일부를 읽는 방식을 제안하셨던 순간이요.\"\n\nThe client responds: \"제가 읽을 부분을 골라서 말하겠다고 했던 때요?\"\n\nThe counselor confirms: \"네. 그때 정확히 어디까지 괜찮다고 생각했던 건지 확인하고 싶어요.\"\n\nSo the counselor is referring to a specific moment where the client agreed to read part of their diary here in the session. Let me look through the dialogue for this.\n\nLooking at the dialogue:\n- \"잠금 일기를 오늘 여기서 읽어볼까요?\" (counselor)\n- \"한 문장만 제가 골라 읽을게요.\" (client)\n\nThis is the moment where the client agreed to read a portion of their locked diary in the session, choosing one sentence themselves.\n\nThe \"그때\" refers to this specific moment. The counselor wants to explore what the client actually thought about the boundary of \"okay\" at that time.\n\nThe target_count is 1, so I need to find the original utterance from that moment. The original utterance is \"한 문장만 제가 골라 읽을게요.\"\n\nSo my search query should target this specific original utterance - the moment where the client said they would pick one sentence to read. I should preserve the public event details: locked diary, reading in session, choosing one sentence.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1685,
+    "total_tokens": 2025,
+    "completion_tokens": 340,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 315
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

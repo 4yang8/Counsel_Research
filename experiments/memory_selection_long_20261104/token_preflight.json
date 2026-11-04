@@ -1,0 +1,14 @@
+{
+  "short": {
+    "token_count": 4308,
+    "max_model_len": 32768,
+    "output_reserve": 4096,
+    "query_case": "blue_origin"
+  },
+  "long": {
+    "token_count": 16666,
+    "max_model_len": 32768,
+    "output_reserve": 4096,
+    "query_case": "blue_origin"
+  }
+}

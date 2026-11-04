@@ -1,0 +1,14 @@
+{
+  "short": {
+    "count": 30,
+    "mean_inner_chars": 136.53333333333333,
+    "min_inner_chars": 107,
+    "max_inner_chars": 175
+  },
+  "long": {
+    "count": 30,
+    "mean_inner_chars": 1114.2,
+    "min_inner_chars": 1040,
+    "max_inner_chars": 1204
+  }
+}

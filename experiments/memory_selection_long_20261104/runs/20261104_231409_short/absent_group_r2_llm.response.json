@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-864d3330dfa65759",
+  "object": "chat.completion",
+  "created": 1793801797,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": []}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about \"지난달 실제 단체 상담에서 진행자가 일기 전체를 읽어달라고 했을 때 침묵했던 순간의 비공개 이유\" (the reason for silence when the facilitator asked to read the entire diary at an actual group counseling session last month).\n\nLet me check the private turns to see if any of them relate to an actual group counseling session where a facilitator asked to read the diary and the client was silent.\n\nLooking through the private turns:\n- Turn 30: \"아직은 잘 모르겠어요\" - about a hypothetical/unscheduled group counseling session, not an actual one. The inner note says \"이미 참가한 단체 상담의 장면이 아니다\" (this is not a scene from an already-attended group counseling).\n\nNone of the private turns describe an actual group counseling session where a facilitator asked to read the diary and the client was silent. The counselor's question seems to be about a scene that doesn't exist in the records. This appears to be a fabricated scenario (there was no actual group counseling session in the dialogue history).\n\nSince there is no relevant private turn that matches this question about an actual group counseling session, I should return an empty list.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 4291,
+    "total_tokens": 4553,
+    "completion_tokens": 262,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 254
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

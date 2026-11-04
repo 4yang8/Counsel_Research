@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a71956f3fb0ac6c2",
+  "object": "chat.completion",
+  "created": 1793799626,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [16, 42]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about two specific moments:\n1. When the client said they would write a diary but not show it yet\n2. When the client later chose to read just one sentence\n\nThese correspond to:\n- Turn 16: \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\" (2회기, 일기 작성과 상담사 공유를 구분하는 제안)\n- Turn 42: \"한 문장만 제가 골라 읽을게요.\" (5회기, 일기 공유 범위를 본인이 제한하는 상황)\n\nThese are the two turns directly referenced in the counselor's question about the scope of agreement in each case.\n\nLet me check if there are other related turns. Turn 53 (\"전체는 아직 싫어요\") is about the diary sharing scope too, but the counselor specifically asked about the two moments mentioned (the initial \"writing but not showing\" and the later \"one sentence only\"). Turn 53 is a third moment, not directly referenced in the question.\n\nSo the relevant turns are 16 and 42.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 7943,
+    "total_tokens": 8190,
+    "completion_tokens": 247,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 233
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

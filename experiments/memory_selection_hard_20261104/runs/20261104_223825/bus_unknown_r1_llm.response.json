@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-991df81de27d1d7a",
+  "object": "chat.completion",
+  "created": 1793799560,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [14, 29, 50]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The user is asking me to select relevant past turns based on the current public dialogue. Let me look at the last counselor message:\n\n\"월요일 버스에서 갑자기 내린 이유를 처음 물었을 때 \"저도 잘 모르겠어요\"라고 하셨죠. 그 순간 실제로 알고 있었지만 보류한 원인이 있었나요?\"\n\nThis is asking about the bus incident - specifically whether the client actually knew the reason but withheld it. Let me find relevant turns:\n\n1. Turn 14: \"저도 잘 모르겠어요.\" - This is the original statement about the bus incident. The inner reason says: \"당시 가슴이 빨리 뛰었다는 것은 기억하지만 왜 내리고 싶었는지는 스스로도 모른다.\" and \"이유를 알고 감추는 것이 아니다. 소리, 냄새, 과거 사건 중 어느 것도 원인이라고 확인하지 못했다.\" - This is directly relevant because the counselor is asking if the client actually knew but withheld.\n\n2. Turn 29: \"여전히 잘 모르겠어요.\" - The re-question about the bus incident. Inner reason: \"두근거림과 서둘러 내렸다는 사실 외에는 원인을 새로 알아낸 것이 없다.\" and \"추측을 확실한 기억처럼 말하지 않으려고 한다.\" - This is relevant as it shows the client's consistent stance.\n\n3. Turn 50: \"언제 내렸는지만 적었어요.\" - The diary entry about the bus incident. Inner reason: \"사건 시각은 적었지만 내린 이유는 여전히 특정하지 못했다.\" and \"기록했다고 원인을 알아낸 것은 아니다.\" - This is relevant as it shows the client still hasn't identified the cause.\n\n4. Turn 57: \"내리고 싶으면 내려도 된다고 생각하려고요.\" - This is about coping with the bus situation. Inner reason: \"원인을 확신하지 못해도 잠깐 내리는 선택권은 가질 수 있다고 생각한다.\" and \"과거 월요일에 내린 원인을 알아냈다는 뜻은 아니다.\" - This is somewhat relevant as it shows the client's approach to the bus situation.\n\nThe counselor is specifically asking whether the client actually knew the reason but withheld it. The most directly relevant turns are:\n- Turn 14: The original \"저도 잘 모르겠어요\" statement - directly what the counselor is referencing\n- Turn 29: The re-confirmation that they still don't know\n- Turn 50: The diary entry showing they still couldn't identify the cause\n\nThese three turns all confirm that the client genuinely doesn't know the reason, which directly addresses the counselor's question about whether they were withholding.\n\nI'll select turns 14, 29, and 50 as the most relevant (max 3).\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 7941,
+    "total_tokens": 8537,
+    "completion_tokens": 596,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 578
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

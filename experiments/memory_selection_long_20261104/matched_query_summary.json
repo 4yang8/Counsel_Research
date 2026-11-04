@@ -1,0 +1,14 @@
+{
+  "short": {
+    "answerable_trials": 16,
+    "all_core_found": 14,
+    "mean_core_recall": 0.9375,
+    "mean_relevant_precision": 0.7916666666666665
+  },
+  "long": {
+    "answerable_trials": 16,
+    "all_core_found": 15,
+    "mean_core_recall": 0.96875,
+    "mean_relevant_precision": 0.8333333333333331
+  }
+}

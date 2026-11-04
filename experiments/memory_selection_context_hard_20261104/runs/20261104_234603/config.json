@@ -1,0 +1,24 @@
+{
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "generation_url": "http://192.168.0.94:8002/v1",
+  "embedding_url": "http://192.168.0.84:18002/v1",
+  "repeats": 2,
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "max_tokens": 4096,
+  "reasoning_effort": "low",
+  "seeds": [
+    1104,
+    1105
+  ],
+  "orders": [
+    "chronological",
+    "shuffle seed 20261104"
+  ],
+  "known_n": true,
+  "hashes": {
+    "records.json": "99c07d45bfcf3946f746b9493c4cc8cd642bc2f73064d65bf703a2c61fc560e8",
+    "questions.json": "9770dd6c295f5633d1225952f38e07c1b06d3910dcec0944f4cac207a036de9b",
+    "gold.json": "1b65e04706d6c86d898e29d0c5f437a09852d6512709673f709422e951bfb6ec"
+  }
+}

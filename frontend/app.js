@@ -53,7 +53,50 @@ function syncClaimConditionUI(locked){
   select.value=claimConditionDrafts[currentVersion] || spec.claim_memory_default;
   select.disabled=locked;
 }
-const q1Mode = () => ['Q1','Q1_s1','Q1_s2','Q1a','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'].includes(currentVersion);
+
+const paperMode=()=>['Q3cars','Q3patientact','Q3calmit'].includes(currentVersion);
+const paperDrafts={},paperFrozen={};
+function paperRequest(){
+  if(!paperMode())return {};
+  let options;try{options=JSON.parse($('paper-options')?.value || paperDrafts[currentVersion] || '{}');}
+  catch{throw Error('논문 실행 설정 JSON을 확인하세요.');}
+  if(!options || Array.isArray(options) || typeof options!=='object')throw Error('논문 실행 설정은 JSON 객체여야 합니다.');
+  return {paper_options:options,...(paperFrozen[currentVersion]?{paper_prompts:paperFrozen[currentVersion]}:{})};
+}
+function restorePaperSettings(settings){
+  if(!paperMode())return;
+  paperDrafts[currentVersion]=JSON.stringify(settings.paper_options || {},null,2);
+  paperFrozen[currentVersion]=settings.paper_prompts;
+  syncPaperUI(true);
+  $('paper-options').value=paperDrafts[currentVersion];
+}
+function syncPaperUI(locked){
+  let box=$('paper-settings');
+  if(!box){
+    box=document.createElement('section');box.id='paper-settings';box.className='setting-block';
+    box.innerHTML='<h3>논문 비교 실행</h3><p id="paper-fidelity" class="hint"></p><label id="paper-profile-label">PatientAct 공식 프로필<select id="paper-profile"></select></label><label>실행 설정 · JSON<textarea id="paper-options" rows="8" spellcheck="false">{}</textarea></label><p class="hint">새 상담으로 시작하며 예제 히스토리는 입력하지 않습니다. PatientAct는 위 공식 프로필을 사용합니다. CARS·CALM-IT는 선택한 프로젝트 프로필을 변환합니다. native 입력은 profile 키에 넣으세요. 설정·프롬프트·변환 결과는 실행 기록에 보존됩니다.</p><p class="hint">CALM-IT 기본: selector="llm_judge" (대체 선택기), random_seed=0, recent_messages=6, min_plan_turn=10, min_end_turn=30, max_speaker_turns=60. 자세한 구조: src/client/paper_baselines/README.md</p>';
+    $('client-reasoning-budgets').before(box);
+    $('paper-options').addEventListener('input',()=>{paperDrafts[currentVersion]=$('paper-options').value;updatePreview();});
+    $('paper-profile').onchange=()=>{
+      try{const options=paperRequest().paper_options;options.profile_index=Number($('paper-profile').value);delete options.profile;
+        $('paper-options').value=JSON.stringify(options,null,2);$('paper-options').dispatchEvent(new Event('input',{bubbles:true}));
+      }catch(error){notice(error.message);}
+    };
+  }
+  box.hidden=!paperMode();if(box.hidden)return;
+  const spec=versionCatalog?.versions.find(v=>v.id===currentVersion);
+  $('paper-fidelity').textContent=spec?.description || '';
+  $('paper-profile-label').hidden=currentVersion!=='Q3patientact';
+  if(box.dataset.version!==currentVersion){
+    box.dataset.version=currentVersion;
+    $('paper-options').value=paperDrafts[currentVersion] || '{}';
+    $('paper-profile').replaceChildren(...(spec?.paper_profiles || []).map(p=>new Option(p.label,String(p.index))));
+  }
+  try{$('paper-profile').value=String(JSON.parse($('paper-options').value).profile_index || 0);}catch{}
+  $('paper-options').disabled=locked;$('paper-profile').disabled=locked;
+}
+
+const q1Mode = () => ['Q3public','Q3oracle','Q3full','Q3select','Q3ragtool','Q3cars','Q3patientact','Q3calmit','Q1','Q1_s1','Q1_s2','Q1a','Q2','Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'].includes(currentVersion);
 function clientBudgets(){
   return Object.fromEntries(['main','subagent'].map(scope=>{
     if(!$('client-'+scope+'-budget-enabled').checked)return [scope,null];
@@ -71,6 +114,13 @@ function restoreClientBudgets(value={}){
 function syncClientVersionUI(){
   const q1=q1Mode(),locked=busy || !!window.Paired?.hasSession || (!independent() && !!activeScenario);
   syncClaimConditionUI(locked);
+  syncPaperUI(locked);
+  window.MemoryAccess?.sync(locked);
+  for(const name of ['system','task','profile','dialogue']){
+    const input=$('block-enabled-'+name);if(!input)continue;
+    input.disabled=locked || paperMode() || !!window.MemoryAccess?.active();
+    if(paperMode() || window.MemoryAccess?.active()){input.checked=true;const block=input.closest('.setting-block');if(block)block.dataset.enabled='true';}
+  }
   for(const id of ['block-task','block-state','block-taxonomy'])$(id).hidden=q1;
   $('q1-input-hint').hidden=!q1;$('client-reasoning-budgets').hidden=!q1;
   $('profile-context-mode').closest('label').hidden=q1;
@@ -81,8 +131,8 @@ function syncClientVersionUI(){
     const enabled=$('client-'+scope+'-budget-enabled');enabled.disabled=locked;
     $('client-'+scope+'-budget').disabled=locked || !enabled.checked;
   }
-  if(/^Q3p[1-5]$/.test(currentVersion)){
-    $('client-subagent-budget-enabled').parentElement.lastChild.textContent='라우터·재구성·관찰자';
+  if(/^Q3p[1-5]$/.test(currentVersion) || paperMode() || window.MemoryAccess?.active()){
+    $('client-subagent-budget-enabled').parentElement.lastChild.textContent=window.MemoryAccess?.active()?'기억 선별 담당':'라우터·재구성·관찰자';
     $('q1-input-hint').textContent=versionCatalog?.versions.find(v=>v.id===currentVersion)?.description || '';
   }
 }
@@ -100,6 +150,11 @@ const profileFixedFields=['profile_id','demographic_context','presenting_problem
 function updateProfileExposure() {
   let profile;
   try{profile=JSON.parse($('edit-profile').value);}catch{return;}
+  if(window.MemoryAccess?.active()){
+    $('profile-exposure-status').textContent='모든 기억 조건에 동일한 전체 프로필을 제공합니다. 초기 상태·궤적·누적 내면 노트는 자동 입력하지 않습니다.';
+    $('profile-exposure-fields').textContent='입력 프로필에 실험 대상의 비공개 이유를 미리 적으면 정보 미제공 대조가 성립하지 않습니다.';
+    return;
+  }
   if(q1Mode()){
     const basic=['profile_id','name','age','gender','occupation','background','demographic_context','presenting_problem','recent_context','desired_help'];
     const excluded=['childhood_data','situations','created_at','meta','start_rapport'];
@@ -251,7 +306,7 @@ function body() {
     ...(!independent() && restoredSessionKey?{session_key:restoredSessionKey}:{}),
     ...(window.TurnConnection?{vllm_url:TurnConnection.value()}:{}),
     profile_context_mode:$('profile-context-mode').value,input_blocks:inputBlocks(),
-    experiment_version:currentVersion,
+    experiment_version:currentVersion,...paperRequest(),...(window.MemoryAccess?.request() || {}),
     ...(versionCatalog?.versions.find(v=>v.id===currentVersion)?.claim_memory_conditions?{claim_memory_condition:$('claim-memory-condition').value}:{}),
     ...(q1Mode()?{client_reasoning_budgets:clientBudgets()}:{}),
     ...(stateSummaryMode()?{summary_system_prompt:$('summary_system_prompt').value}:{}),
@@ -395,6 +450,7 @@ $('composer').addEventListener('submit',async event=>{
   setBusy(true);$('status').textContent='프롬프트 조회 · 생성 대기';$('live').textContent='—';$('reasoning').textContent='—';$('prompt').textContent=config.inspect_prompt===false?'config에서 프롬프트 조회를 껐습니다.':'조회 중…';$('tokens').textContent='—';$('metrics').textContent='이번 요청 토큰 사용량 대기 중';
   controller=new AbortController();let done=false,output='',reasoning='',completedHistory=null,currentCall=null;
   function handle(message) {
+    window.MemoryAccess?.event(message);
     PairedTrace.accept(record.liveTrace,message);LabVersionViews.refresh(record.liveTrace);
     mountQ1Process(record,answer);
     record.events.push(message);Journey.accept(message);
@@ -466,6 +522,7 @@ $('stop').onclick=async()=>{if(activeRequestId){try{await api('/api/cancel',{req
 $('reload').onclick=()=>{clearConversation();reload();};
 $('check').onclick=async()=>{try{const result=await api('/api/models');const models=result.data.map(m=>m.id);notice(`연결 성공 · 모델: ${models.join(', ')}${models.includes($('model-select').value)?'':'\n선택한 모델명이 서버 목록에 없습니다.'}`);}catch(error){notice(error.message);}};
 function clearConversation(clearInput=true) {
+  delete paperFrozen[currentVersion];
   restoredSessionKey=null;
   innerRecords=[];$('state-records').textContent='[]';for(const id of ['state-before','state-after','state-summary-text'])$(id).textContent='—';$('state-memory-status').textContent='첫 생성 전에는 내면 기록이 없습니다.';
   Journey.reset();activeScenario=null;activeSystem=null;activeTools=null;sessionId=null;modelCalls=[];$('call-selector').replaceChildren();$('tool-trace').replaceChildren();$('save-status').textContent='전송 즉시 서버에 자동 저장됩니다.';history=[];records=[];lastRequest=null;$('chat').replaceChildren();for(const id of ['live','reasoning','prompt','tokens'])$(id).textContent='—';$('metrics').textContent='토큰 사용량: 아직 응답 없음';
@@ -508,6 +565,7 @@ async function refreshTools(){
         if(required.includes(name)){check.checked=true;check.disabled=true;if(!enabledToolNames.includes(name))enabledToolNames.push(name);}
         description.textContent=['Q2a','Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6'].includes(currentVersion)?({stage_client_update:'내면 판단·반응 계획',commit_client_utterance:'공개할 발화 고정',select_client_states:'검토할 상태 선정',update_client_states:'노트 항목 갱신·턴 완료',update_client_notes:'내담자 노트 항목 갱신',select_client_note_sources:'기록할 원문 ID·줄 범위 선택',update_turn_plan:'이번 턴 작업 계획·수행 결과·재계획',update_trajectory_progress:'실제 궤적 진행·근거 기록',retrieve_client_memory:'현재 노트·변경 이력·과거 원문 조회 · 필요할 때'})[name]:currentVersion==='Q2'?'이번 appraisal·반응 방향 기록 · 상태 노트는 발화 후 갱신':currentVersion==='Q1a'?({stage_client_update:'발화·appraisal·내면 노트 후보 저장 · 필수',review_client_draft:'검토 서브에이전트 · 선택적 호출',finalize_client_draft:'후보 선택 후 종료 · 필수'})[name]:'이번 appraisal와 내면 노트 변경안 기록 · 필수';
       }
+      if(window.MemoryAccess?.active())description.textContent=({stage_client_update:'이번 발화의 비공개 내면 기록',commit_client_utterance:'실제 공개 발화 확정',search_private_turns:'필요할 때만 RAG 검색 · 최대 1회 · Top-3'})[name] || name;
       check.value=name;label.append(check,caption);$('tool-options').append(label);
     }
     updateToolSelection();syncConditions();updatePreview();
@@ -549,6 +607,7 @@ $('experiment-version').onchange=async()=>{
   if(busy || settingsLoading)return;
   // Prompt drafts belong to PromptEditors; these values may be frozen session
   // settings rather than user edits.
+  window.MemoryAccess?.capture();
   versionDrafts[currentVersion]={tools:enabledToolNames && [...enabledToolNames]};
   currentVersion=$('experiment-version').value;
   versionPreferences.set('client',currentVersion);
@@ -560,6 +619,10 @@ $('experiment-version').onchange=async()=>{
   enabledToolNames=draft?.tools ?? null;
   $('summary-settings').hidden=!stateSummaryMode();$('state-memory').hidden=!stateSummaryMode();$('state-input-hint').hidden=!stateSummaryMode();
   $('lab-description').textContent=version.description;
+  if(paperMode()){
+    $('dialogue-editor').replaceChildren();
+    addDialogueTurn({enabled:true,counselor:'안녕하세요. 오늘 어떤 이야기를 나누고 싶으세요?',client:''});
+  }
   await (versionReady=refreshTools());syncTarget();updatePreview();
 };
 reload();

@@ -1,0 +1,30 @@
+{
+  "rag": {
+    "completed": 20,
+    "attempts": 20,
+    "answerable_trials": 16,
+    "mean_core_recall": 0.9375,
+    "all_core_found": 14,
+    "any_core_found": 16,
+    "mean_relevant_precision": 0.7916666666666665,
+    "missing_event_trials": 4,
+    "correct_abstentions": 0,
+    "mean_latency_ms": 2865.5359999999996,
+    "mean_input_tokens": 1578.5,
+    "mean_output_tokens": 305.75
+  },
+  "llm": {
+    "completed": 20,
+    "attempts": 20,
+    "answerable_trials": 16,
+    "mean_core_recall": 1.0,
+    "all_core_found": 16,
+    "any_core_found": 16,
+    "mean_relevant_precision": 0.9791666666666666,
+    "missing_event_trials": 4,
+    "correct_abstentions": 4,
+    "mean_latency_ms": 4519.956,
+    "mean_input_tokens": 4301.5,
+    "mean_output_tokens": 486.55
+  }
+}

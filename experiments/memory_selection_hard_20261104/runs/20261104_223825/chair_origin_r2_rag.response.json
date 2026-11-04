@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-be5ac3058dfb106d",
+  "object": "chat.completion",
+  "created": 1793799616,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"의자 가까이 옮겨도 되냐고 처음 물었을 때 괜찮아요라고 한 순간의 판단\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question is asking about the moment when the counselor first asked \"제가 의자를 가까이 옮겨도 되냐고\" (Can I move the chair closer?) and the client said \"괜찮아요\" (It's okay). The counselor wants to confirm the client's judgment at that specific moment, not the later distance or the feeling they mentioned afterward.\n\nLooking at the public dialogue, I can find this exchange:\n- Counselor: \"의자를 가까이 옮겨도 괜찮을까요?\" (Is it okay if I move the chair closer?)\n- Client: \"괜찮아요.\" (It's okay.)\n\nAnd later:\n- Counselor: \"지난번 의자가 가까웠을 때 실제로는 어땠나요?\" (When the chair was close last time, how was it actually?)\n- Client: \"괜찮다고 했지만 조금 불편했어요.\" (I said it was okay but I was a little uncomfortable.)\n\nThe counselor is now asking to revisit the very first moment - the initial judgment when they first said \"괜찮아요\" - not the later reflection. This is about the non-public memory of what was actually happening in their mind at that first moment of saying \"괜찮아요.\"\n\nI need to create a search query that captures:\n- The specific moment: first time asked about moving the chair closer\n- The response: \"괜찮아요\"\n- The focus: the judgment/decision at that exact moment (not the later reflection about discomfort)\n\nThe query should search for records from that moment - what the client was thinking or feeling when they first said \"괜찮아요\" to the chair question.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2852,
+    "total_tokens": 3216,
+    "completion_tokens": 364,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 338
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

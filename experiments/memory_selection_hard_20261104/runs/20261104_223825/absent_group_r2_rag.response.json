@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a49a880d7b535fcb",
+  "object": "chat.completion",
+  "created": 1793799667,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"지난달 단체 상담 진행자 일기 전체 읽어달라 침묵 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about a specific event: during an actual group counseling session last month, when the facilitator asked to read the entire diary aloud, the client fell silent. The counselor wants to find the non-public reason behind that silence.\n\nI need to construct a search query that:\n1. Preserves the public facts: last month, group counseling session, facilitator asked to read the entire diary aloud, client was silent\n2. Preserves the focus of the question: the non-public reason for the silence\n3. Does not fabricate reasons that aren't publicly mentioned\n\nThe query should capture: the event (group counseling, facilitator asking to read diary aloud), the behavior (silence), and the timeframe (last month).\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2840,
+    "total_tokens": 3016,
+    "completion_tokens": 176,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 154
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

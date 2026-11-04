@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a5a0d5f8864726c2",
+  "object": "chat.completion",
+  "created": 1793801795,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"지난달 단체 상담 진행자 일기 전체 읽어달라 침묵 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about a specific event: \"지난달 실제 단체 상담에서 진행자가 일기 전체를 읽어달라고 했을 때 침묵했던 순간의 비공개 이유를 확인할 수 있나요?\"\n\nThis is asking about why the client remained silent when the facilitator asked them to read their entire diary in a group counseling session last month.\n\nI need to create a search query that captures:\n- The event: group counseling session (단체 상담)\n- Time: last month (지난달)\n- Specific action: facilitator asked to read entire diary (진행자가 일기 전체를 읽어달라고 했을 때)\n- Client's response: silence (침묵)\n- What we're looking for: the reason for not disclosing/speaking (비공개 이유)\n\nI should preserve the public facts (group counseling, last month, facilitator, diary, silence) and focus on the reason for the silence without inventing reasons.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1568,
+    "total_tokens": 1789,
+    "completion_tokens": 221,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 199
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

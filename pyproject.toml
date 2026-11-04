@@ -7,10 +7,11 @@ name = "counseling-research"
 version = "0.1.0"
 description = "Interactive counseling research with versioned client and counselor agents"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["Jinja2>=3.1,<4"]
 
 [project.optional-dependencies]
 test = ["pytest>=7.0"]
+embedding = ["sentence-transformers>=2.7", "transformers>=4.51", "torch>=2.2"]
 legacy-c4 = ["requests>=2.28"]
 
 [tool.setuptools]
@@ -22,7 +23,7 @@ where = ["src"]
 include = ["app*", "analysis*", "client*", "counselor*", "runtime*", "storage*", "resources*"]
 
 [tool.setuptools.package-data]
-"*" = ["*.md", "*.json", "*.txt", "guides/*.md", "skills/*/SKILL.md"]
+"*" = ["*.md", "*.json", "*.txt", "guides/*.md", "skills/*/SKILL.md", "prompts/*.md", "data/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

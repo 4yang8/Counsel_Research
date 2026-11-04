@@ -459,7 +459,7 @@ def fixture(experiment_version='basic', prompt_editing=False, model_handler=Mode
                          'src/client/Q1_s1/system.md','src/client/Q1_s1/trait_router.md','src/client/Q1_s1/inner_notes_template.md',
                          'src/client/Q1a/system.md','src/client/Q1a/trait_router.md','src/client/Q1a/inner_notes_template.md','src/client/Q1a/draft_reviewer.md',
                          'src/client/Q1_s2/system.md','src/client/Q1_s2/trait_router.md','src/client/Q1_s2/inner_notes_template.md',
-                         *(f'src/counselor/{version}/system.md' for version in ('P1', 'P2', 'P3', 'P3a', 'P3a_s1')),
+                         *(f'src/counselor/{version}/system.md' for version in ('P1', 'P2', 'P3', 'P3a', 'P3a_s1', 'Q3calmit_counsel')),
                          'src/counselor/P3a/guide_agent.md','src/counselor/P3a_s1/guide_agent.md',
                          'src/counselor/P3a_s1/guide_grounded.md'):
             destination = source / relative

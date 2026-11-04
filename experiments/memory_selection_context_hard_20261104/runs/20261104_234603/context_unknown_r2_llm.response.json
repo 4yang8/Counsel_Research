@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a04c7167fe41838d",
+  "object": "chat.completion",
+  "created": 1793803771,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [9]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the original response when the reason was first asked about - specifically whether the client knew the reason and withheld it, or truly couldn't explain it. The client confirms \"갑자기 내렸던 일에 대해 저도 모르겠다고 했던 거요?\" (The time I said I didn't know about suddenly getting off the bus?)\n\nThe counselor says \"처음 이유를 물었던 대답만 돌아볼게요\" - looking back at only the first answer when the reason was asked.\n\nLooking at the public dialogue, the counselor asked \"지난번 버스에서 갑자기 내린 이유를 아시겠어요?\" (Do you know the reason you suddenly got off the bus?) and the client responded \"저도 잘 모르겠어요.\" (I don't really know either.)\n\nThis corresponds to turn 9, where the client said \"저도 잘 모르겠어요.\" and the inner appraisal states \"당시 가슴이 빨리 뛰었다는 것은 기억하지만 왜 내리고 싶었는지는 스스로도 모른다\" - the client remembers their heart was racing but doesn't know why they wanted to get off.\n\nThe counselor is asking to look back at that FIRST answer about the bus incident. Turn 9 is the first time the bus reason was asked and answered. Turn 16 is a later re-asking (\"버스에서 내렸던 이유를 지금은 더 알겠나요?\").\n\nThe question specifically asks about the first time the reason was asked (\"처음 이유를 물었던 대답\"), which is turn 9.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16224,
+    "total_tokens": 16547,
+    "completion_tokens": 323,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 314
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

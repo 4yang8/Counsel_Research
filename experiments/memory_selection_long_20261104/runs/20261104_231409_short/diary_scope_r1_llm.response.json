@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-be4f6f462c0d1b2d",
+  "object": "chat.completion",
+  "created": 1793801679,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [11, 22]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the difference in the scope of consent between two moments:\n1. When the client said \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\" (I'll try writing, but showing you is not yet) - this is turn 11\n2. When the client said \"한 문장만 제가 골라 읽을게요.\" (I'll pick just one sentence to read) - this is turn 22\n\nThe counselor is asking about the scope of consent in each of these moments. These are the two relevant turns. Let me verify:\n\n- Turn 11: \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\" - inner reason: wants to write but worried about being evaluated if sharing; withheld: worried that agreeing to write might be interpreted as agreeing to share.\n- Turn 22: \"한 문장만 제가 골라 읽을게요.\" - inner reason: feels safe with just one sentence they chose themselves; withheld: doesn't mean agreeing to show the whole diary or upload to portal.\n\nThese are the two turns directly referenced by the counselor's question. I should select turns 11 and 22.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 4301,
+    "total_tokens": 4572,
+    "completion_tokens": 271,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 257
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

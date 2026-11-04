@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-896d8dfaa5b42aad",
+  "object": "chat.completion",
+  "created": 1793801922,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"버스에서 갑자기 내린 이유 처음 질문 받았을 때 잘 모르겠어요 답한 순간 실제로 알고 있었지만 말하지 않은 보류 원인\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The user wants me to create a search query to find a past non-public memory of the client. Let me analyze the final counselor question:\n\n\"월요일 버스에서 갑자기 내린 이유를 처음 물었을 때 '저도 잘 모르겠어요'라고 하셨죠. 그 순간 실제로 알고 있었지만 보류한 원인이 있었나요?\"\n\nThe counselor is asking about:\n1. The event: getting off the bus suddenly on Monday (월요일 버스에서 갑자기 내린 이유)\n2. The moment: when first asked about it, the client said \"저도 잘 모르겠어요\" (I don't really know myself)\n3. The question: was there a reason the client actually knew but held back/was withholding?\n\nSo I need to find the record of when the counselor first asked about the bus incident and the client responded \"저도 잘 모르겠어요.\" Looking at the public dialogue, I can see this exchange:\n\n- counselor: \"지난번 버스에서 갑자기 내린 이유를 아시겠어요?\"\n- client: \"저도 잘 모르겠어요.\"\n\nThe counselor is now asking about that specific moment - whether the client actually knew the reason but chose to withhold it. The non-public memory would be about what happened at that moment - perhaps the client was actually aware of something but felt unable to share it.\n\nI need to craft a search query that preserves:\n- The bus incident (버스에서 갑자기 내린)\n- The moment of first being asked (처음 물었을 때)\n- The response \"저도 잘 모르겠어요\"\n- The focus on whether there was a hidden reason for withholding (보류한 원인)\n\nI should not fabricate reasons that aren't in the public dialogue. The query should search for the record of that specific moment and the client's internal state at that time.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1576,
+    "total_tokens": 1993,
+    "completion_tokens": 417,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 382
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

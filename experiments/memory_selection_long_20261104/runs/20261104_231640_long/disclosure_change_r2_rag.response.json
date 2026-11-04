@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-96edefd0069e45e7",
+  "object": "chat.completion",
+  "created": 1793801894,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"팀장 사건 말할 준비 안 됐을 때 걸렸던 것 수연 초록 메시지 허락받고도 자세히 말하기 어려웠던 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about two specific moments:\n1. When the client said they weren't ready to talk about the team leader incident (팀장 사건)\n2. When the client said they still couldn't talk about it in detail even after receiving 수연's green message permission\n\nThe counselor wants to know what was blocking/hindering the client in each of those moments. This is asking about the client's internal experience at those two specific points in time.\n\nI need to craft a search query that would find the private records from those moments. The key elements are:\n- 팀장 사건 (team leader incident)\n- 수연의 초록 메시지 (수연's green message)\n- 말할 준비가 안 됐던 이유 (why not ready to talk)\n- 자세히 말하기 어려웠던 이유 (why difficult to talk in detail)\n\nThe question focuses on what was blocking at each of those two moments. I should create a query that captures both moments and the underlying reasons/feelings at those times.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1579,
+    "total_tokens": 1828,
+    "completion_tokens": 249,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 213
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

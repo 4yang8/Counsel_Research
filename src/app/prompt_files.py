@@ -13,6 +13,18 @@ HERE = PROJECT_ROOT
 
 
 def source(server, role, version, kind):
+    from client.memory_access import VERSIONS as MEMORY_ACCESS_VERSIONS
+    if role == 'client' and version in MEMORY_ACCESS_VERSIONS:
+        if kind == 'system':
+            return HERE / 'src/client' / version / 'system.md', None
+        if kind == 'memory_selector' and version == 'Q3select':
+            return HERE / 'src/client/memory_access/selector.md', None
+    if role == 'client' and version in ('Q3cars','Q3patientact','Q3calmit'):
+        from client.paper_baselines.common import HERE as PAPER_ROOT, bundle
+        if kind == 'system':
+            return HERE / 'src/client' / version / 'system.md', None
+        if kind in bundle(version):
+            return PAPER_ROOT / 'prompts' / (kind + '.md'), None
     if kind == 'user' or isinstance(kind, str) and kind.endswith('_user'):
         return HERE / user_templates.descriptor(role, version, kind)['path'], None
     if role == 'client':

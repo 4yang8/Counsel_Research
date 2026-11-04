@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a04eedfc35658a7c",
+  "object": "chat.completion",
+  "created": 1793799551,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [15, 55, 47]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks the client to distinguish between two instances of saying \"생각해 볼게요\":\n1. When the team leader asked about weekend work - the client said \"생각해 볼게요\"\n2. When the mother suggested a reunion gathering - the client said \"생각해 볼게요\"\n\nThe counselor is asking whether the first one was genuinely about reviewing dates, and to distinguish it from the mother's gathering suggestion.\n\nLet me look at the relevant private turns:\n\n- Turn 15: \"생각해 볼게요, 라고 했어요.\" - Scene: 2회기, 주말 근무 요청. Inner reason: 즉시 거절하면 평가에 불이익이 있을까 봐 시간을 벌었다. Withheld: 참여하고 싶어서 검토한 것은 아니다.\n\n- Turn 55: \"생각해 볼게요, 했어요.\" - Scene: 6회기, 어머니의 동창 모임 권유. Inner reason: 관심은 있지만 날짜를 확인해야 해서 진심으로 검토 중이다. Withheld: 상대가 무서워 시간을 벌려는 뜻은 아니다.\n\n- Turn 47: \"이번엔 못 한다고 말했어요.\" - Scene: 5회기, 팀장의 주말 근무 요청에 최종 거절. Inner reason: 가족 일정이 있어 거절했고 초기에는 불이익이 두려워 답을 미뤘다. Withheld: 최초 생각해보겠다는 답이 수락이었던 것은 아니다.\n\nThese three turns are directly relevant to the counselor's question about distinguishing the two \"생각해 볼게요\" responses.\n\nTurn 15 is the weekend work one (buying time due to fear of evaluation).\nTurn 55 is the mother's gathering one (genuinely reviewing dates).\nTurn 47 provides additional context about the weekend work situation (final refusal).\n\nI'll select turns 15, 55, and 47. That's 3 turns, which is within the max of 3.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 7945,
+    "total_tokens": 8381,
+    "completion_tokens": 436,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 418
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

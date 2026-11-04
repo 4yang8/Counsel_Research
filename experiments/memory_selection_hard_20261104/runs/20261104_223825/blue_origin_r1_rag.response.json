@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-96b74e9557ed4f6d",
+  "object": "chat.completion",
+  "created": 1793799505,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"첫 회기 파란 카드 연락 과제 처음 제안했을 때 네 한번 해볼게요 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the first session when the blue card contact assignment was first proposed, and the client said \"네, 한번 해볼게요\" (Yes, I'll try). The counselor wants to distinguish this from later changes in feeling and explore the reason why the client said that at that time.\n\nI need to create a search query to find the past (non-public) record of what happened when the blue card assignment was first proposed in the first session - specifically the reason/context behind the client saying \"네, 한번 해볼게요\" at that moment.\n\nKey elements to preserve:\n- 파란 카드 (blue card)\n- 연락 과제 (contact assignment)\n- 처음 제안했을 때 (when first proposed)\n- \"네, 한번 해볼게요\" (the response)\n- 당시의 이유 (reason at that time)\n- 첫 회기 (first session)\n\nI should not fabricate reasons that weren't mentioned publicly. I'll focus on finding the record of that initial moment and the client's stated reason at that time.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2857,
+    "total_tokens": 3105,
+    "completion_tokens": 248,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 222
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-b408554bf43a90a7",
+  "object": "chat.completion",
+  "created": 1793801926,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"상담 시작 전 토요일 지수 독서 모임 초대 네 한번 해볼게요 답한 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about a specific moment: the Saturday before counseling started, when the client (민수) responded \"네, 한번 해볼게요\" to 지수's invitation to a book club (독서 모임). The counselor explicitly asks the client to recall how they felt at that time, and specifically asks to distinguish it from the 파란 카드 과제 (blue card assignment) - meaning the counselor wants to know the reason/motivation behind that specific response at that specific time.\n\nThe key elements to preserve in the search query:\n- Saturday before counseling started\n- 지수's invitation to 독서 모임 (book club)\n- The response \"네, 한번 해볼게요\"\n- The reason/motivation at that time\n- Distinction from 파란 카드 과제\n\nI need to craft a search query that would find the private record from that specific moment - what was going on when 민수 said \"네, 한번 해볼게요\" to 지수's book club invitation on that Saturday before counseling began. The counselor is asking about the actual reason/feeling behind that response at that time.\n\nThe query should focus on: the Saturday before counseling, 지수's 독서 모임 invitation, and the client's actual reason for agreeing at that moment.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1585,
+    "total_tokens": 1876,
+    "completion_tokens": 291,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 265
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

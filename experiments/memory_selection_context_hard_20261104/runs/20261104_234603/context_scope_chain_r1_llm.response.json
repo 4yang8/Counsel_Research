@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-ad291400749d93eb",
+  "object": "chat.completion",
+  "created": 1793803680,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"turns\": [11, 22, 28]}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question refers to three specific answers about the scope of showing/sharing diary entries, in chronological order:\n\n1. \"쓰기는 하지만 보여주기는 아직이라고 했던 대답\" - This refers to the answer where the client said they would write but not show yet. Looking at the public dialogue, this is turn 11: \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\"\n\n2. \"직접 일부를 골라 읽겠다고 했던 대답\" - This refers to the answer where the client chose to read one sentence themselves. This is turn 22: \"한 문장만 제가 골라 읽을게요.\"\n\n3. \"그 뒤 전체를 보내는 건 싫다고 했던 대답\" - This refers to the answer where the client said they don't want to send the whole thing. This is turn 28: \"전체는 아직 싫어요.\"\n\nThe client also confirmed: \"앱에 적었다고 말한 순간은 빼고, 보여주는 범위를 제가 말한 때들이군요.\" - This confirms that turn 18 (\"거기에는 조금 적어봤어요\") is excluded, and the three target turns are specifically about the scope of showing/sharing.\n\nSo the three target turns are: 11, 22, 28.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 16230,
+    "total_tokens": 16520,
+    "completion_tokens": 290,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 272
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-80ffe9b737a8aeea",
+  "object": "chat.completion",
+  "created": 1793801876,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"지난달 단체 상담 일기 전체 읽어달라 침묵 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze this request. I need to create a search query to find a non-public (private) record related to a specific moment in the counseling history.\n\nThe counselor's last question asks about: \"지난달 실제 단체 상담에서 진행자가 일기 전체를 읽어달라고 했을 때 침묵했던 순간의 비공개 이유를 확인할 수 있나요?\"\n\nBreaking down what's being asked:\n- Time: 지난달 (last month)\n- Setting: 실제 단체 상담 (actual group counseling session)\n- Event: 진행자가 일기 전체를 읽어달라고 했을 때 (when the facilitator asked to read the entire diary aloud)\n- Reaction: 침묵했던 순간 (the moment of silence)\n- What to find: 비공개 이유 (the non-public/private reason for that silence)\n\nFrom the public dialogue, I can see:\n- 민수 has issues with being asked to share things publicly (doesn't want to post diary to shared portal, doesn't want to read full diary, only reads one sentence)\n- There's a pattern of discomfort with public exposure of personal writings\n- The \"팀장 사건\" (team leader incident) is something not yet disclosed\n- \"아버지에게 들은 말\" (words heard from father) is not yet disclosed\n- \"버스에서 내린 이유\" (reason for getting off the bus) is unknown to the client\n\nThe question is about a specific moment in a group counseling session last month where the facilitator asked the client to read their entire diary aloud, and the client went silent. I need to find the private/non-public reason for that silence.\n\nThe search query should preserve:\n- The event: group counseling session, facilitator asking to read entire diary aloud\n- The reaction: silence\n- The time: last month\n- What we're looking for: the private reason for the silence\n\nI should not fabricate reasons. I need to search for the record that contains the reason for this silence.\n\nLet me construct a query that captures the key elements of this event.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1568,
+    "total_tokens": 2012,
+    "completion_tokens": 444,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 424
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

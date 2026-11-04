@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-ab043a171e7d1112",
+  "object": "chat.completion",
+  "created": 1793803830,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"일기 보여드리는 건 아직이요 한 문장만 제가 골라 읽을게요 전체는 아직 싫어요\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze the last question from the counselor:\n\n\"읽어주는 범위가 바뀐 세 대답을 순서대로 보려고 해요. 쓰기는 하지만 보여주기는 아직이라고 했던 대답, 직접 일부를 골라 읽겠다고 했던 대답, 그 뒤 전체를 보내는 건 싫다고 했던 대답이에요.\"\n\nThe counselor is asking about three specific responses where the client changed the scope of what they were willing to show/share:\n\n1. \"쓰기는 하지만 보여주기는 아직이라고 했던 대답\" - This refers to: \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\" (when asked about reading diary in next session)\n\n2. \"직접 일부를 골라 읽겠다고 했던 대답\" - This refers to: \"한 문장만 제가 골라 읽을게요.\" (when asked about reading locked diary here)\n\n3. \"그 뒤 전체를 보내는 건 싫다고 했던 대답\" - This refers to: \"전체는 아직 싫어요.\" (when asked about sending entire diary)\n\nThe target_count is 3, which matches these three responses.\n\nNow I need to create a search query that captures these three original utterances. They all relate to the diary sharing boundary - specifically about the scope of showing/sharing the diary. The key elements are:\n- Writing diary but not showing it yet\n- Choosing one sentence to read aloud\n- Not wanting to send the entire diary\n\nThese are all about the boundary of sharing diary content. I should create a query that captures these three specific moments about diary sharing scope/boundary.\n\nThe query should preserve the public events (diary, showing, scope changes) and not invent psychological reasons.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1711,
+    "total_tokens": 2090,
+    "completion_tokens": 379,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 347
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

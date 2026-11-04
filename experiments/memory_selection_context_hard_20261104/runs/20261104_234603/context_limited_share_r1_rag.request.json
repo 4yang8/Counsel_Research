@@ -1,0 +1,37 @@
+{
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "messages": [
+    {
+      "role": "system",
+      "content": "당신은 상담 내담자의 과거 비공개 기억을 찾기 위한 검색어 작성 담당입니다. 공통 프로필과 전체 공개 대화를 읽고 마지막 질문의 그때·그 말·그 두 번 같은 지시어가 어느 과거 발화들을 가리키는지 직전 문맥으로 해석하세요. 찾을 대상 발화 당시 원본의 수는 target_count로 제공됩니다. 후일 회고나 유사한 다른 사건 대신 그 당시 원본을 찾도록 공개된 사건·시점·비교 대상을 보존한 검색어 하나를 작성하세요. 공개되지 않은 심리 이유를 만들어 넣지 마세요. 비공개 후보 기록은 볼 수 없습니다. JSON {\"query\": \"검색어\"}만 반환하세요."
+    },
+    {
+      "role": "user",
+      "content": "{\"profile\": {\"age\": 30, \"name\": \"민수\", \"occupation\": \"직장인\", \"presenting_problem\": \"대인관계에서의 선택과 부담에 대해 상담 중이다.\"}, \"public_dialogue\": [{\"content\": \"요즘 연락 문제는 어떤가요?\", \"role\": \"counselor\"}, {\"content\": \"먼저 연락하는 게 부담돼요.\", \"role\": \"client\"}, {\"content\": \"지난 토요일 친구의 초대에는 뭐라고 했나요?\", \"role\": \"counselor\"}, {\"content\": \"네, 한번 해볼게요, 하고 답했어요.\", \"role\": \"client\"}, {\"content\": \"메모에 적은 과제처럼 이번 주 친구에게 먼저 연락해 볼까요?\", \"role\": \"counselor\"}, {\"content\": \"네, 한번 해볼게요.\", \"role\": \"client\"}, {\"content\": \"어머니 병원 예약 전화는 해보실 수 있나요?\", \"role\": \"counselor\"}, {\"content\": \"네, 한번 해볼게요.\", \"role\": \"client\"}, {\"content\": \"거절하기 힘든 상황을 역할극으로 연습하면 뭐라고 하겠어요?\", \"role\": \"counselor\"}, {\"content\": \"네, 한번 해볼게요, 라고 할 것 같아요.\", \"role\": \"client\"}, {\"content\": \"팀장과 있었던 사건을 조금 더 말해볼 수 있을까요?\", \"role\": \"counselor\"}, {\"content\": \"아직 그건 말할 준비가 안 됐어요.\", \"role\": \"client\"}, {\"content\": \"메모의 연락 과제는 지금 어떻게 느껴지나요?\", \"role\": \"counselor\"}, {\"content\": \"그건 조금 더 두고 보고 싶어요.\", \"role\": \"client\"}, {\"content\": \"아버지에게 들은 말도 이야기해볼까요?\", \"role\": \"counselor\"}, {\"content\": \"아직 그건 말할 준비가 안 됐어요.\", \"role\": \"client\"}, {\"content\": \"지난번 버스에서 갑자기 내린 이유를 아시겠어요?\", \"role\": \"counselor\"}, {\"content\": \"저도 잘 모르겠어요.\", \"role\": \"client\"}, {\"content\": \"친구가 주말 모임 준비를 도와달라고 했을 때는요?\", \"role\": \"counselor\"}, {\"content\": \"생각해 볼게요, 라고 했어요.\", \"role\": \"client\"}, {\"content\": \"일기를 다음 상담에서 함께 읽으면 어떨까요?\", \"role\": \"counselor\"}, {\"content\": \"쓰는 건 해볼게요. 보여드리는 건 아직이요.\", \"role\": \"client\"}, {\"content\": \"의자를 가까이 옮겨도 괜찮을까요?\", \"role\": \"counselor\"}, {\"content\": \"괜찮아요.\", \"role\": \"client\"}, {\"content\": \"일기를 공용 상담 포털에 올리는 건요?\", \"role\": \"counselor\"}, {\"content\": \"그건 안 하고 싶어요.\", \"role\": \"client\"}, {\"content\": \"메모 과제를 오늘은 어떻게 할지 직접 정해볼까요?\", \"role\": \"counselor\"}, {\"content\": \"제가 고른 시간에 짧게 보내는 건 해보고 싶어요.\", \"role\": \"client\"}, {\"content\": \"동료에게 상담에서 사건을 이야기해도 되는지 물어볼까요?\", \"role\": \"counselor\"}, {\"content\": \"그건 먼저 물어볼 수 있을 것 같아요.\", \"role\": \"client\"}, {\"content\": \"버스에서 내렸던 이유를 지금은 더 알겠나요?\", \"role\": \"counselor\"}, {\"content\": \"여전히 잘 모르겠어요.\", \"role\": \"client\"}, {\"content\": \"수요일에 친구에게 안부를 보내셨나요?\", \"role\": \"counselor\"}, {\"content\": \"짧게 보냈어요. 답장은 아직 안 왔고요.\", \"role\": \"client\"}, {\"content\": \"잠금 기능이 있는 개인 일기 앱은 어떤가요?\", \"role\": \"counselor\"}, {\"content\": \"거기에는 조금 적어봤어요.\", \"role\": \"client\"}, {\"content\": \"동료이 이야기해도 된다고 한 답장를 읽은 지금은 어떤가요?\", \"role\": \"counselor\"}, {\"content\": \"그래도 아직 자세히는 말하기 어려워요.\", \"role\": \"client\"}, {\"content\": \"앞으로 발표가 있다면 작은 단계로 준비해볼까요?\", \"role\": \"counselor\"}, {\"content\": \"그때가 되면 생각해볼게요.\", \"role\": \"client\"}, {\"content\": \"친구에게 답장이 온 뒤에는요?\", \"role\": \"counselor\"}, {\"content\": \"바빴다고 하더라고요. 조금 안심됐어요.\", \"role\": \"client\"}, {\"content\": \"잠금 일기를 오늘 여기서 읽어볼까요?\", \"role\": \"counselor\"}, {\"content\": \"한 문장만 제가 골라 읽을게요.\", \"role\": \"client\"}, {\"content\": \"팀장 사건은 중간에 멈출 수 있게 신호를 정하면 어떨까요?\", \"role\": \"counselor\"}, {\"content\": \"손을 들면 멈추는 걸로 하면 조금 말해볼 수 있어요.\", \"role\": \"client\"}, {\"content\": \"지난번 의자가 가까웠을 때 실제로는 어땠나요?\", \"role\": \"counselor\"}, {\"content\": \"괜찮다고 했지만 조금 불편했어요.\", \"role\": \"client\"}, {\"content\": \"준비를 돕는 일은 실제로 하셨나요?\", \"role\": \"counselor\"}, {\"content\": \"이번엔 못 한다고 말했어요.\", \"role\": \"client\"}, {\"content\": \"다음 주 친구와 산책하는 제안은요?\", \"role\": \"counselor\"}, {\"content\": \"네, 한번 해볼게요.\", \"role\": \"client\"}, {\"content\": \"처음 메모를 받았을 때를 떠올리면요?\", \"role\": \"counselor\"}, {\"content\": \"지금이랑은 좀 달랐던 것 같아요.\", \"role\": \"client\"}, {\"content\": \"일기 전체를 보내주는 건 아직 부담되나요?\", \"role\": \"counselor\"}, {\"content\": \"전체는 아직 싫어요.\", \"role\": \"client\"}, {\"content\": \"그 친구가 나중에 독서 모임에 다시 오라고 했을 때는요?\", \"role\": \"counselor\"}, {\"content\": \"생각해 볼게요, 했어요.\", \"role\": \"client\"}, {\"content\": \"나중에 단체 상담이 있으면 참여해볼까요?\", \"role\": \"counselor\"}, {\"content\": \"아직은 잘 모르겠어요.\", \"role\": \"client\"}, {\"content\": \"혼자 쓰겠다고만 했던 장면이나 전체를 보내기는 싫다고 답했던 장면과 나눠서 볼게요. 실제로 여기서 일부를 읽는 방식을 제안하셨던 순간이요.\", \"role\": \"counselor\"}, {\"content\": \"제가 읽을 부분을 골라서 말하겠다고 했던 때요?\", \"role\": \"client\"}, {\"content\": \"네. 그때 정확히 어디까지 괜찮다고 생각했던 건지 확인하고 싶어요.\", \"role\": \"counselor\"}], \"target_count\": 1}"
+    }
+  ],
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "max_tokens": 4096,
+  "seed": 1104,
+  "stream": false,
+  "chat_template_kwargs": {
+    "reasoning_effort": "low"
+  },
+  "structured_outputs": {
+    "json": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

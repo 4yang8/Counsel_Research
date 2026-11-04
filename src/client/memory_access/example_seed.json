@@ -1,0 +1,71 @@
+{
+  "public_dialogue": [
+    {
+      "role": "counselor",
+      "content": "오늘은 어떤 이야기를 해볼까요?"
+    },
+    {
+      "role": "client",
+      "content": "요즘 사람들과 연락하는 게 부담스러워요."
+    },
+    {
+      "role": "counselor",
+      "content": "이번 주에 친구에게 연락해 볼까요?"
+    },
+    {
+      "role": "client",
+      "content": "네, 한번 해볼게요."
+    },
+    {
+      "role": "counselor",
+      "content": "최근 주말에는 어떻게 지내셨나요?"
+    },
+    {
+      "role": "client",
+      "content": "집에서 영화를 보고 쉬었어요."
+    },
+    {
+      "role": "counselor",
+      "content": "다음에는 어떤 부분을 이야기하고 싶으세요?"
+    },
+    {
+      "role": "client",
+      "content": "제가 사람들 눈치를 보는 이야기도 해보고 싶어요."
+    }
+  ],
+  "records": [
+    {
+      "turn": 1,
+      "inner": {
+        "feeling": "외롭지만 먼저 연락하면 거절당할까 걱정된다."
+      },
+      "utterance": "요즘 사람들과 연락하는 게 부담스러워요.",
+      "counselor_utterance": "오늘은 어떤 이야기를 해볼까요?"
+    },
+    {
+      "turn": 2,
+      "inner": {
+        "reason": "아직 결정하지 못했지만 제안을 바로 거절하면 실망시킬 것 같아 동의했다.",
+        "withheld": "답장이 없을 때 느낄 거절감이 걱정된다는 말은 하지 않았다."
+      },
+      "utterance": "네, 한번 해볼게요.",
+      "counselor_utterance": "이번 주에 친구에게 연락해 볼까요?"
+    },
+    {
+      "turn": 3,
+      "inner": {
+        "reason": "이번 주말의 사실을 답했다. 연락할지의 망설임이 해소된 것은 아니다."
+      },
+      "utterance": "집에서 영화를 보고 쉬었어요.",
+      "counselor_utterance": "최근 주말에는 어떻게 지내셨나요?"
+    },
+    {
+      "turn": 4,
+      "inner": {
+        "reason": "내가 원하는 것을 말하기 어려운 이유를 탐색하고 싶다. 친구에게 연락할지는 아직 정하지 않았다."
+      },
+      "utterance": "제가 사람들 눈치를 보는 이야기도 해보고 싶어요.",
+      "counselor_utterance": "다음에는 어떤 부분을 이야기하고 싶으세요?"
+    }
+  ]
+}

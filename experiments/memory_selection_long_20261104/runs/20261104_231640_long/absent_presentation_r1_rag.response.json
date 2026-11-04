@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-b6fa28c4906b1a94",
+  "object": "chat.completion",
+  "created": 1793801856,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"지난 금요일 사내 발표에서 팀장이 추가 발표를 제안했을 때 네 한번 해볼게요라고 답한 순간의 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the moment when the team leader (팀장) proposed an additional presentation at the company presentation on Friday, and the client responded \"네, 한번 해볼게요\" (Yes, I'll try). The counselor wants to confirm the non-public reason for that specific moment.\n\nLet me analyze what's public:\n- The event: Friday's company presentation (사내 발표)\n- The person: 팀장 (team leader)\n- The action: 팀장 proposed an additional presentation (추가 발표 제안)\n- The response: \"네, 한번 해볼게요\"\n- The question focuses on the non-public reason (비공개 이유) for that specific moment\n\nI need to craft a search query that preserves the public elements (Friday, company presentation, team leader, additional presentation proposal, the response \"네, 한번 해볼게요\") and focuses on the non-public reason without fabricating one.\n\nThe query should target the record of that specific moment - what was going through the client's mind when they said \"네, 한번 해볼게요\" to the team leader's proposal for an additional presentation.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1577,
+    "total_tokens": 1848,
+    "completion_tokens": 271,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 237
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

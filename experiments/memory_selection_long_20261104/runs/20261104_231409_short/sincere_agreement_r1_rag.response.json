@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-9e8a58f28561488d",
+  "object": "chat.completion",
+  "created": 1793801701,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"상담 시작 전 토요일 지수 독서 모임 초대 네 한번 해볼게요 답한 이유 파란 카드 과제와 구분\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question is asking about a specific moment: the Saturday before counseling started, when the client responded \"네, 한번 해볼게요\" to Jisu's reading group invitation. The counselor specifically asks to distinguish this from the blue card task and to confirm the reason at that time.\n\nThe key elements to preserve in the search query:\n1. Saturday before counseling started (시점)\n2. Jisu's reading group invitation (공개된 사건)\n3. The response \"네, 한번 해볼게요\" (공개된 대화 내용)\n4. The reason/motivation at that time (질문의 초점)\n5. Distinction from blue card task (질문의 초점)\n\nI need to craft a search query that would find the private record of what happened at that specific moment - likely a diary entry or session note from that Saturday.\n\nThe query should focus on: the Saturday before counseling, Jisu's reading group invitation, the reason for agreeing, and the distinction from the blue card task.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1585,
+    "total_tokens": 1832,
+    "completion_tokens": 247,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 215
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

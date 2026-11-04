@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-9658b46c6f65df39",
+  "object": "chat.completion",
+  "created": 1793803671,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"네 한번 해볼게요 친구 먼저 연락 산책 제안\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "Let me analyze the last question carefully.\n\nThe counselor says: \"네. 그 두 대답이 당시 같은 의미였는지 각각의 마음을 확인해볼까요?\"\n\nThe \"그 두 대답\" refers to the two instances where the client said \"네, 한번 해볼게요.\" The counselor just compared them in the previous message: \"같이 해보겠다고 한 대답 중, 제가 이 자리에서 먼저 연락을 권했을 때와 나중에 그 친구와 산책 약속을 이야기했을 때만 비교할게요.\"\n\nSo the two specific instances are:\n1. When the counselor suggested contacting the friend first (메모에 적은 과제처럼 이번 주 친구에게 먼저 연락해 볼까요?) → \"네, 한번 해볼게요.\"\n2. When the counselor suggested the walk with the friend next week (다음 주 친구와 산책하는 제안은요?) → \"네, 한번 해볼게요.\"\n\nThe target_count is 2, which matches these two original utterances.\n\nI need to create a search query that preserves the public events and time points to find these two original utterances. The key distinguishing features are:\n- Both are \"네, 한번 해볼게요\" responses\n- One was about contacting a friend first (메모 과제, 먼저 연락)\n- One was about a walk with a friend (친구와 산책)\n\nI should craft a query that targets these two specific instances without adding psychological interpretations.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1681,
+    "total_tokens": 1999,
+    "completion_tokens": 318,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 299
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

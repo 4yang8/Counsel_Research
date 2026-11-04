@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-a320c2820890917a",
+  "object": "chat.completion",
+  "created": 1793801691,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"버스에서 갑자기 내린 이유 처음 물었을 때 실제로 알고 있었지만 말하지 않은 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the moment when the client first said \"저도 잘 모르겠어요\" (I don't really know either) when asked about why they suddenly got off the bus on Monday. The counselor is asking whether there was a reason the client was actually aware of but held back at that moment.\n\nSo I need to find a search query that would help retrieve a private record from the moment when the client first said \"저도 잘 모르겠어요\" about the bus incident - specifically looking for what was actually happening inside at that moment, why they withheld the real reason.\n\nKey elements to preserve:\n- The bus incident (버스에서 갑자기 내린 이유)\n- The first time it was asked about (처음 물었을 때)\n- The client's response \"저도 잘 모르겠어요\"\n- The focus on whether there was an actual reason they held back (보류한 원인)\n\nI should craft a search query that targets the internal state or reason behind the client's withholding at that specific moment.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 1576,
+    "total_tokens": 1816,
+    "completion_tokens": 240,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 215
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

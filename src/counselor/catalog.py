@@ -1,10 +1,10 @@
 """Version metadata selects settings and a pluggable UI renderer."""
 from pathlib import Path
-from . import P1, P2, P3, P3a, P3a_s1
+from . import P1, P2, P3, P3a, P3a_s1, Q3calmit_counsel
 
 from project_paths import PROJECT_ROOT
 HERE = PROJECT_ROOT
-PRACTICE_VERSIONS = {'P1': P1, 'P2': P2, 'P3': P3, 'P3a': P3a, 'P3a_s1': P3a_s1}
+PRACTICE_VERSIONS = {'P1': P1, 'P2': P2, 'P3': P3, 'P3a': P3a, 'P3a_s1': P3a_s1, 'Q3calmit_counsel': Q3calmit_counsel}
 SINGLE_PROMPT_PATHS = {
     'Q3p6_counsel': 'src/counselor/Q3p6_counsel/system.md',
     'basic': 'resources/prompts/basic_counselor.md',

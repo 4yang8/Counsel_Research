@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-bdd8565fd81bf877",
+  "object": "chat.completion",
+  "created": 1793799594,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"첫 회기 파란 카드 연락 과제 제안 당시 네 한번 해볼게요 이유\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question is asking about the first session when the blue card contact task was first proposed, and the client said \"네, 한번 해볼게요\" (Yes, I'll try). The counselor wants to distinguish between what changed the client's mind later versus the reason why they said yes at that time.\n\nI need to search for the record of when the blue card contact task was first proposed in the first session, and why the client agreed at that moment.\n\nThe key elements to preserve:\n- First session (첫 회기)\n- Blue card contact task (파란 카드 연락 과제)\n- The moment of agreeing \"네, 한번 해볼게요\"\n- The reason at that time (당시의 이유)\n\nThe query should focus on finding the record from the first session about the blue card task proposal and the client's initial agreement.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2857,
+    "total_tokens": 3061,
+    "completion_tokens": 204,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 180
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}

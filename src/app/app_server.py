@@ -96,6 +96,8 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
             if getattr(self, 'path', None)=='/api/config' and status==200:data={**data,'nested_mode':mode,'experiment':experiment}
             return super().json_response(data,status)
         def do_GET(self):
+            from app import memory_access_api
+            if memory_access_api.handle_get(self):return
             if q3p6.handle_get(self):return
             from app import routing_stats
             if routing_stats.handle_get(self):return
@@ -159,6 +161,7 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
                     '/workspace.js':('workspace.js','text/javascript'),'/workspace.css':('workspace.css','text/css'),
                     '/pane_storage.js':('pane_storage.js','text/javascript'),
                     '/pane.js':('pane.js','text/javascript'),'/pane.css':('pane.css','text/css'),
+                    '/memory_access.js':('memory_access.js','text/javascript'),
                     '/app.js':('app.js','text/javascript'),
                     '/profiles.js':('profiles.js','text/javascript'),
                     '/client_notes.js':('client_notes.js','text/javascript'),'/client_notes.css':('client_notes.css','text/css'),
@@ -203,8 +206,8 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
     def configure_request(config, body):
         import runtime.connection_settings as connection_settings
         connection_settings.apply(config, body)
-        experiment_versions.configure(config, body)
         session_browser.configure(server, config, body)
+        experiment_versions.configure(config, body)
     server.configure_request = configure_request
     server.definitions=lambda config:runtime.definitions(mode,'main',0,filesystem_definitions(config),experiment,
         version=config.get('_experiment_version', experiment_versions.name(config)))

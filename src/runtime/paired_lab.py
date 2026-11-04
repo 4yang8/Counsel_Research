@@ -209,6 +209,21 @@ def create(server, config, body, runtime, base_build):
         next(row for row in reversed(scenario['dialogue_turns']) if row['enabled'])['counselor'] = current
         scenario = runtime.validate_scenario(scenario)
     request['scenario'] = scenario
+    if request['experiment_version'] in experiment_versions.MEMORY_ACCESS_VERSIONS and request['memory_options']['seed'] is not None:
+        from client.memory_access.runtime import public_source
+        scenario.pop('dialogue_turns', None)
+        scenario.pop('selected_counselor_utterance', None)
+        scenario['dialogue_format'] = 'messages'
+        scenario['dialogue'] = public_source(scenario, request['memory_options'])
+    if request['experiment_version'] in experiment_versions.PAPER_VERSIONS:
+        # The paper's native person must not inherit another persona's example dialogue.
+        scenario.pop('dialogue_turns', None)
+        scenario.pop('selected_counselor_utterance', None)
+        scenario['dialogue_format'] = 'messages'
+        scenario['dialogue'] = []
+    if counselor == 'Q3calmit_counsel':
+        from counselor.Q3calmit_counsel.runtime import freeze
+        freeze(config, request)
     request['messages'] = [{'role': 'user', 'content': current}]
     runtime.build(copy.deepcopy(config), request, [], base_build, preview=True)
     public = copy.deepcopy(scenario['dialogue'])
@@ -409,6 +424,8 @@ def handle_post(handler, backend, runtime, base_build):
             lock = None
             raise ValueError('같은 세션의 생성이 이미 진행 중입니다.')
         session = read_session(handler.server, sid)
+        if session.get('terminated') and not handler.path.endswith('/controls'):
+            raise ValueError('종료된 논문 세션입니다. 새 대화를 시작하세요.')
         if session.get('q3p6_managed'):
             raise ValueError('Q3p6 관리 세션은 분기 실험 화면에서 실행하세요.')
         if type(body.get('expected_step')) is not int or body['expected_step'] != len(session['steps']):
@@ -506,6 +523,11 @@ def handle_post(handler, backend, runtime, base_build):
         else:
             utterance, usage, storage = client_step(handler.server, config, session, backend, runtime, base_build, send, cancelled, log.state['turn_id'])
             session['client_storage_dir'] = storage
+        if role == 'client' and session['client_version'] in experiment_versions.PAPER_VERSIONS:
+            from client.paper_baselines.common import load as load_paper
+            session['terminated'] = bool(load_paper({'_storage_dir':storage},session['client_version'],sid)['state'].get('terminated'))
+        elif role == 'counselor' and session['counselor_version'] == 'Q3calmit_counsel':
+            session['terminated'] = bool(checkpoint.get('terminated'))
         session['public_dialogue'].append({'role': role, 'content': utterance})
         step = {'number': len(session['steps']) + 1, 'actor': role, 'utterance': utterance,
                 **({'comparison': body['comparison']} if 'comparison' in body else {}),

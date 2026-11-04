@@ -1,0 +1,42 @@
+{
+  "id": "chatcmpl-9f37e6cdb21d30fb",
+  "object": "chat.completion",
+  "created": 1793799558,
+  "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"query\": \"버스에서 내린 이유 알고 있었지만 말하지 않은 순간\"}",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "reasoning": "The counselor's last question asks about the moment when the client first said \"저도 잘 모르겠어요\" (I don't know either) when asked about why they suddenly got off the bus on Monday. The question asks whether there was a reason the client actually knew but held back from sharing.\n\nI need to create a search query that would find the private record from that moment - the bus incident and the client's internal state at that time. The key elements to preserve:\n- The bus event (버스에서 내린 사건)\n- The moment of saying \"잘 모르겠어요\"\n- The question is about what was actually known but withheld\n\nThe query should focus on finding the private memory/record about the bus incident - specifically the client's internal thoughts or reasons for getting off the bus that they haven't shared publicly.\n\nI should focus on the bus event itself as the non-public memory to search for.\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null,
+      "routed_experts": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": "vllm-0.32.0-tp2-ep-2f7b2b44",
+  "usage": {
+    "prompt_tokens": 2848,
+    "total_tokens": 3056,
+    "completion_tokens": 208,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 189
+    }
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "prompt_text": null,
+  "kv_transfer_params": null,
+  "ec_transfer_params": null,
+  "metrics": null
+}
