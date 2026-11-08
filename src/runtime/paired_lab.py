@@ -428,6 +428,8 @@ def handle_post(handler, backend, runtime, base_build):
             raise ValueError('종료된 논문 세션입니다. 새 대화를 시작하세요.')
         if session.get('q3p6_managed'):
             raise ValueError('Q3p6 관리 세션은 분기 실험 화면에서 실행하세요.')
+        if session.get('batch_managed'):
+            raise ValueError('대량생성 관리 세션은 대량생성 화면에서 실행하세요.')
         if type(body.get('expected_step')) is not int or body['expected_step'] != len(session['steps']):
             raise ValueError('대화 단계가 달라졌습니다. 저장된 세션을 다시 불러오세요.')
         if handler.path.endswith('/controls'):

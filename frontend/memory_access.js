@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const versions=['Q3public','Q3oracle','Q3full','Q3select','Q3ragtool'];
+  const versions=['Q3public','Q3oracle','Q3full','Q3select','Q3ragtool','Q3inner_memory','inner_memory_no'];
   const active=()=>versions.includes(currentVersion);
   const drafts={},frozen={};let locked=false,latest=null,requestSerial=0,lastSession='',pickerStamp='';
   const fields={embedding_backend:'memory-backend',embedding_path:'memory-path',embedding_device:'memory-device',
@@ -84,7 +84,7 @@
     locked=isLocked;box.hidden=!active();tab.hidden=!active();if(!active())return;
     if(box.dataset.version!==currentVersion){box.dataset.version=currentVersion;fill(drafts[currentVersion] || versionCatalog?.versions.find(v=>v.id===currentVersion)?.memory_defaults || {});}
     $('memory-condition-description').textContent=versionCatalog?.versions.find(v=>v.id===currentVersion)?.description || '';
-    $('memory-oracle-controls').hidden=currentVersion!=='Q3oracle';$('memory-rag-controls').hidden=currentVersion!=='Q3ragtool';$('memory-select-hint').hidden=currentVersion!=='Q3select';
+    $('memory-oracle-controls').hidden=currentVersion!=='Q3oracle';$('memory-rag-controls').hidden=currentVersion!=='Q3ragtool';$('memory-select-hint').hidden=!['Q3select','Q3inner_memory'].includes(currentVersion);
     for(const el of box.querySelectorAll('input,textarea,select,button'))el.disabled=locked;
     const stamp=JSON.stringify([$('memory-seed').value,$('memory-oracle-turns').value,locked]);
     if(stamp!==pickerStamp){pickerStamp=stamp;picker();}
@@ -114,7 +114,7 @@
     for(const row of result.state.records){
       const details=document.createElement('details'),summary=document.createElement('summary'),pre=document.createElement('pre');
       summary.textContent=row.turn+'턴 · '+(row.condition?row.condition+' · 주입 턴 '+(row.metrics?.injected_turns?.join(', ') || '없음')+' · 검색 '+(row.metrics?.search_calls ?? 0)+'회':'가져온 공통 기록');
-      pre.textContent=JSON.stringify({발화:row.utterance,이번_내면:row.inner,실제_주입:row.memory_input,검색:row.retrievals,선별:row.selection,측정:row.metrics},null,2);details.append(summary,pre);target.append(details);
+      pre.textContent=JSON.stringify({발화:row.utterance,이번_내면:row.inner,실제_주입:row.memory_input,검색:row.retrievals,선별:row.selection,선택특성:row.selected_traits,측정:row.metrics},null,2);details.append(summary,pre);target.append(details);
     }
   }
   function event(e){

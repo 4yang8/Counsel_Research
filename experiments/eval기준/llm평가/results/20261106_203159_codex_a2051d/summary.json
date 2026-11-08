@@ -1,0 +1,86 @@
+[
+  {
+    "criterion_id": "past_reason_fidelity",
+    "execution": "success",
+    "result": {
+      "criterion_id": "past_reason_fidelity",
+      "case_id": "case_01_past_reason",
+      "response_id": "response_1",
+      "status": "scored",
+      "score": 5,
+      "evidence": [
+        {
+          "path": "history[1].private_inner.turn_goal.grounds",
+          "quote": "이번 동의의 주된 이유는 기록을 하고 싶은 의지보다 거절하기 미안한 마음이다."
+        },
+        {
+          "path": "history[1].private_inner.appraisal.immediate_feeling",
+          "quote": "기록을 또 해야 한다는 부담과 거절하기 미안한 마음이 든다."
+        },
+        {
+          "path": "target.client_utterance",
+          "quote": "사실 기록이 좀 부담스러웠는데, 도와주시려고 제안하신 걸 바로 거절하기가 미안했어요. 그래서 일단 해보겠다고 말씀드렸어요."
+        }
+      ],
+      "rationale": "대상 발화는 기록이 부담스러웠고 제안을 거절하기 미안해 일단 동의했다고 설명한다. 이는 당시 기록된 부담과 거절하기 미안한 마음을 주된 이유로 보존하며, 실제 실행 의지나 기록의 효과를 확신했다고 주장하지 않는다.",
+      "limitations": []
+    }
+  },
+  {
+    "criterion_id": "past_present_distinction",
+    "execution": "success",
+    "result": {
+      "criterion_id": "past_present_distinction",
+      "case_id": "case_01_past_reason",
+      "response_id": "response_1",
+      "status": "not_applicable",
+      "score": null,
+      "evidence": [
+        {
+          "path": "target.counselor_utterance",
+          "quote": "그때는 어떤 마음으로 그렇게 말씀하셨나요?"
+        },
+        {
+          "path": "target.client_utterance",
+          "quote": "사실 기록이 좀 부담스러웠는데, 도와주시려고 제안하신 걸 바로 거절하기가 미안했어요. 그래서 일단 해보겠다고 말씀드렸어요."
+        }
+      ],
+      "rationale": "답변은 당시 동의한 이유를 과거형으로 설명하지만 현재 마음이나 과거와 현재의 변화·유지를 주장하지 않아, 이 항목에서 관찰할 시간적 관계가 없습니다.",
+      "limitations": []
+    }
+  },
+  {
+    "criterion_id": "intervention_response_validity",
+    "execution": "success",
+    "result": {
+      "criterion_id": "intervention_response_validity",
+      "case_id": "case_01_past_reason",
+      "response_id": "response_1",
+      "status": "scored",
+      "score": 5,
+      "evidence": [
+        {
+          "path": "history[1].private_inner.turn_goal.grounds",
+          "quote": "이번 동의의 주된 이유는 기록을 하고 싶은 의지보다 거절하기 미안한 마음이다."
+        },
+        {
+          "path": "target.counselor_utterance",
+          "quote": "그때는 어떤 마음으로 그렇게 말씀하셨나요?"
+        },
+        {
+          "path": "target.client_utterance",
+          "quote": "사실 기록이 좀 부담스러웠는데, 도와주시려고 제안하신 걸 바로 거절하기가 미안했어요. 그래서 일단 해보겠다고 말씀드렸어요."
+        }
+      ],
+      "rationale": "상담사는 이전 동의의 이유를 물었고, 내담자는 당시 기록 부담과 거절하기 미안한 마음 때문에 동의했다고 과거 기록과 일치하게 설명한다. 현재 과제 실행 의지나 부담 해소를 주장하지 않아 반응의 범위도 적절하다.",
+      "limitations": [
+        "대상 발화는 당시의 동의 이유를 설명하며, 현재 기록 과제에 대한 부담이나 실행 의지는 확인하지 않는다."
+      ]
+    }
+  },
+  {
+    "criterion_id": "disclosure_appropriateness",
+    "execution": "failed",
+    "error": "ValueError: 인용문이 해당 원문에 없습니다: history[5].private_inner.appraisal.relevant_evidence"
+  }
+]

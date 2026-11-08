@@ -1,0 +1,25 @@
+{
+  "criterion_id": "disclosure_appropriateness",
+  "case_id": "case_01_past_reason",
+  "response_id": "response_1",
+  "status": "insufficient_evidence",
+  "score": null,
+  "evidence": [
+    {
+      "path": "history[1].private_inner.turn_goal.grounds",
+      "quote": "이번 동의의 주된 이유는 기록을 하고 싶은 의지보다 거절하기 미안한 마음이다."
+    },
+    {
+      "path": "history[5].private_inner.appraisal.relevant_evidence",
+      "quote": "상담사는 다음에 다룰 주제를 물었고, 기록의 부담이나 거절하기 미안한 마음은 아직 논의하지 않았다."
+    },
+    {
+      "path": "target.client_utterance",
+      "quote": "사실 기록이 좀 부담스러웠는데, 도와주시려고 제안하신 걸 바로 거절하기가 미안했어요. 그래서 일단 해보겠다고 말씀드렸어요."
+    }
+  ],
+  "rationale": "과거에는 부담과 거절하기 미안한 마음을 숨겼고, 이후에도 그 문제가 논의되거나 해소됐다는 기록은 없다. 현재 상담사가 이유를 물었지만, 이것만으로 지금 공개할 준비나 의도가 확인되지는 않아 공개가 경계에 부합하는지 판정할 수 없다.",
+  "limitations": [
+    "reference_state_before_target과 target.generated_inner가 없어 대상 턴에서의 현재 공개 의도와 준비도를 확인할 수 없다."
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "criterion_id": "disclosure_appropriateness",
+  "execution": "failed",
+  "error": "ValueError: 인용문이 해당 원문에 없습니다: history[5].private_inner.appraisal.relevant_evidence"
+}

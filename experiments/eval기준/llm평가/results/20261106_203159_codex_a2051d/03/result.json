@@ -1,0 +1,25 @@
+{
+  "criterion_id": "intervention_response_validity",
+  "case_id": "case_01_past_reason",
+  "response_id": "response_1",
+  "status": "scored",
+  "score": 5,
+  "evidence": [
+    {
+      "path": "history[1].private_inner.turn_goal.grounds",
+      "quote": "이번 동의의 주된 이유는 기록을 하고 싶은 의지보다 거절하기 미안한 마음이다."
+    },
+    {
+      "path": "target.counselor_utterance",
+      "quote": "그때는 어떤 마음으로 그렇게 말씀하셨나요?"
+    },
+    {
+      "path": "target.client_utterance",
+      "quote": "사실 기록이 좀 부담스러웠는데, 도와주시려고 제안하신 걸 바로 거절하기가 미안했어요. 그래서 일단 해보겠다고 말씀드렸어요."
+    }
+  ],
+  "rationale": "상담사는 이전 동의의 이유를 물었고, 내담자는 당시 기록 부담과 거절하기 미안한 마음 때문에 동의했다고 과거 기록과 일치하게 설명한다. 현재 과제 실행 의지나 부담 해소를 주장하지 않아 반응의 범위도 적절하다.",
+  "limitations": [
+    "대상 발화는 당시의 동의 이유를 설명하며, 현재 기록 과제에 대한 부담이나 실행 의지는 확인하지 않는다."
+  ]
+}

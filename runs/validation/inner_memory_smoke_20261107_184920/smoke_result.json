@@ -1,0 +1,53 @@
+{
+  "id": "batch_583e878b2fd345e9aaf6",
+  "created_at": "2026-11-07T09:49:20.529576+00:00",
+  "status": "completed",
+  "options": {
+    "turns": 2,
+    "concurrency": 2,
+    "retries": 1
+  },
+  "rows": [
+    {
+      "index": 0,
+      "filename": "gold_ccd_profile_011.json",
+      "profile_id": "gold_011",
+      "profile_hash": "3a0bcc6a7e31bfcdafb3345282f5eca860585a818a6dd414f41945a6759aea85",
+      "version": "Q3inner_memory",
+      "status": "completed",
+      "completed_turns": 2,
+      "session_id": "261107_184920",
+      "phase": "완료",
+      "error": "",
+      "retry_count": 0
+    },
+    {
+      "index": 1,
+      "filename": "gold_ccd_profile_011.json",
+      "profile_id": "gold_011",
+      "profile_hash": "3a0bcc6a7e31bfcdafb3345282f5eca860585a818a6dd414f41945a6759aea85",
+      "version": "inner_memory_no",
+      "status": "completed",
+      "completed_turns": 2,
+      "session_id": "261107_184920_2",
+      "phase": "완료",
+      "error": "",
+      "retry_count": 0
+    }
+  ],
+  "profile_directory": "/home2/sjyang114/Counsel_Research_dynamic_client_new/resources/001-100",
+  "versions": [
+    "Q3inner_memory",
+    "inner_memory_no"
+  ],
+  "error": "",
+  "completed_turns": 4,
+  "total_turns": 4,
+  "turn_percent": 100.0,
+  "finished": 2,
+  "total": 2,
+  "finished_percent": 100.0,
+  "succeeded": 2,
+  "failed": 0,
+  "output_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/validation/inner_memory_smoke_20261107_184920/sessions/profile_batches/batch_583e878b2fd345e9aaf6"
+}

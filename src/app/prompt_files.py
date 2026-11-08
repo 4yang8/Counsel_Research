@@ -19,6 +19,10 @@ def source(server, role, version, kind):
             return HERE / 'src/client' / version / 'system.md', None
         if kind == 'memory_selector' and version == 'Q3select':
             return HERE / 'src/client/memory_access/selector.md', None
+        if kind == 'memory_selector' and version == 'Q3inner_memory':
+            return HERE / 'src/client/memory_access/inner_selector.md', None
+        if kind == 'trait_router' and version in ('Q3inner_memory', 'inner_memory_no'):
+            return HERE / 'src/client/memory_access/inner_router.md', None
     if role == 'client' and version in ('Q3cars','Q3patientact','Q3calmit'):
         from client.paper_baselines.common import HERE as PAPER_ROOT, bundle
         if kind == 'system':

@@ -1,0 +1,13 @@
+{
+  "mode": "codex",
+  "criteria": [
+    "01"
+  ],
+  "dry_run": false,
+  "timeout": 600,
+  "input": "/home2/sjyang114/Counsel_Research_dynamic_client_new/experiments/eval기준/llm평가/입력예시_01_response_1.json",
+  "output": "/home2/sjyang114/Counsel_Research_dynamic_client_new/experiments/eval기준/llm평가/results_smoke",
+  "codex_bin": "codex",
+  "model": "gpt-6-luna",
+  "effort": "max"
+}

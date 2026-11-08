@@ -15,6 +15,7 @@ import client.registry as experiment_versions
 import resources.contrast_profiles as contrast_profiles
 import runtime.paired_lab as paired_lab
 import runtime.q3p6 as q3p6
+import runtime.profile_batch as profile_batch
 import storage.file_manager as file_manager
 import storage.session_browser as session_browser
 import app.prompt_files as prompt_files
@@ -96,6 +97,7 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
             if getattr(self, 'path', None)=='/api/config' and status==200:data={**data,'nested_mode':mode,'experiment':experiment}
             return super().json_response(data,status)
         def do_GET(self):
+            if profile_batch.handle_get(self):return
             from app import memory_access_api
             if memory_access_api.handle_get(self):return
             if q3p6.handle_get(self):return
@@ -151,7 +153,9 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
                 except (OSError, ValueError) as error:
                     self.json_response({'error': '그룹1 프로필 조회 실패: ' + str(error)}, 500)
                 return
-            assets={'/q3p6':('q3p6.html','text/html; charset=utf-8'),
+            assets={'/batch':('batch.html','text/html; charset=utf-8'),
+                    '/batch.js':('batch.js','text/javascript'),'/batch.css':('batch.css','text/css'),
+                    '/q3p6':('q3p6.html','text/html; charset=utf-8'),
                     '/q3p6.js':('q3p6.js','text/javascript'),'/q3p6.css':('q3p6.css','text/css'),
                     '/':('workspace.html','text/html; charset=utf-8'),
                     '/routing':('routing.html','text/html; charset=utf-8'),
@@ -184,6 +188,7 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
             self.end_headers();self.wfile.write(raw)
 
         def do_POST(self):
+            if profile_batch.handle_post(self, backend, runtime, base_build):return
             if q3p6.handle_post(self, backend, runtime, base_build):return
             if prompt_files.handle_post(self):return
             if file_manager.handle_post(self):return
@@ -198,6 +203,7 @@ def make_server(config_path=HERE/'config/app.json',host=None,port=8891,storage_d
     locals_server['server']=server
     file_manager.initialize(server)
     q3p6.initialize(server)
+    profile_batch.initialize(server)
     server.storage_dir.mkdir(parents=True, exist_ok=True)
     server.RequestHandlerClass=Handler
     server.paired_locks = {}

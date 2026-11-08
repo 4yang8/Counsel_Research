@@ -13,17 +13,23 @@ from .validation import validate
 from counselor.P1.runtime import write
 from runtime import reasoning_budget
 from runtime.cancellation import Cancelled
-from . import VERSIONS
+from . import VERSIONS, INNER_VERSIONS
 from .memory import MODEL_PATH, chunk, digest, encode, retrieve
 
 HERE = Path(__file__).resolve().parent
 LOCK = threading.RLock()
 LABELS = {'Q3public': '과거 비공개 정보 미제공', 'Q3oracle': '사람이 지정한 과거 턴',
           'Q3full': '전체 과거 턴 직접 제공', 'Q3select': 'LLM이 전체 기록에서 선별',
-          'Q3ragtool': '필요 시 RAG 도구 1회 · Top-3'}
+          'Q3ragtool': '필요 시 RAG 도구 1회 · Top-3',
+          'Q3inner_memory': '특성 라우터 + 관련 내면 최대 3턴 선별',
+          'inner_memory_no': '특성 라우터 + 과거 내면 미제공'}
 DEFAULTS = dict(top_k=3, oracle_turns=[], oracle_plan={}, seed=None, input_char_limit=240000,
                 embedding_backend='local', embedding_path=MODEL_PATH, embedding_device='auto',
                 embedding_url='', embedding_model='Qwen/Qwen3-Embedding-4B', embedding_timeout=120)
+
+
+def selector_path(version):
+    return HERE / ('inner_selector.md' if version in INNER_VERSIONS else 'selector.md')
 
 
 def tool(name, description, schema):
@@ -120,7 +126,12 @@ def configure(config, body):
         if type(options[key]) is not int or not lo<=options[key]<=hi:
             raise ValueError(key+'의 범위를 확인하세요.')
     body['memory_options']=options
-    body.setdefault('memory_selector_prompt',saved.get('selector_prompt') or (HERE/'selector.md').read_text())
+    if version in INNER_VERSIONS:
+        from .inner_router import PROMPT
+        body.setdefault('memory_router_prompt', saved.get('router_prompt') or PROMPT.read_text())
+        if not isinstance(body['memory_router_prompt'], str) or not body['memory_router_prompt'].strip():
+            raise ValueError('특성 라우터 프롬프트가 비어 있습니다.')
+    body.setdefault('memory_selector_prompt',saved.get('selector_prompt') or selector_path(version).read_text())
     if not isinstance(body['memory_selector_prompt'],str) or not body['memory_selector_prompt'].strip():
         raise ValueError('기억 선별 프롬프트가 비어 있습니다.')
     body.setdefault('system_prompt',RUNTIMES[version].specification()['system_prompt'])
@@ -151,7 +162,9 @@ def context(config, body, runtime, preview=False):
         raise ValueError('과거 모델 도구 기록은 재입력하지 마세요. 공개 대화만 받습니다.')
     saved=load(config,version,body.get('session_id'))
     signature=digest({'profile':scenario['profile'],'options':options,'system':body['system_prompt'],
-                      'selector':body['memory_selector_prompt']})
+                      'selector':body['memory_selector_prompt'],
+                      **({'memory_policy':'llm_select_top3_v1'} if version=='Q3inner_memory' else {}),
+                      **({'router':body['memory_router_prompt']} if version in INNER_VERSIONS else {})})
     if saved['revision'] and signature!=saved['signature']:
         raise ValueError('기억 실험 설정·프로필·지침이 달라졌습니다. 새 대화로 시작하세요.')
     initial=public_source(scenario,options)
@@ -203,7 +216,8 @@ class MemoryRuntime:
                 'required_tools':[t['function']['name'] for t in self.TOOLS],
                 'default_reasoning_budgets':{'main':None,'subagent':None},
                 'memory_defaults':copy.deepcopy(DEFAULTS),
-                'subagent_prompts':[{'kind':'memory_selector','label':'기억 선별 담당'}] if self.version=='Q3select' else []}
+                'subagent_prompts':(([{'kind':'trait_router','label':'특성·배경 라우터 (공개 정보만)'}] if self.version in INNER_VERSIONS else []) +
+                    ([{'kind':'memory_selector','label':'기억 선별 담당'}] if self.version in ('Q3select','Q3inner_memory') else []))}
 
     def load(self,config,sid):
         state=load(config,self.version,sid)
@@ -211,7 +225,12 @@ class MemoryRuntime:
                 'path':str(path(config,self.version,sid)) if sid else None}
 
     def payload(self,config,body,ctx,visible,builder,preview=False):
-        request={'system_prompt':body['system_prompt'],'messages':[{'role':'user','content':encode(source(ctx,visible))}],
+        if self.version in INNER_VERSIONS:
+            from .inner_router import main_source
+            data = main_source(ctx, visible)
+        else:
+            data = source(ctx, visible)
+        request={'system_prompt':body['system_prompt'],'messages':[{'role':'user','content':encode(data)}],
                  'generation':copy.deepcopy(body.get('generation',config.get('generation',{}))),'_reasoning_budget_role':'main'}
         payload=builder(config,request,copy.deepcopy(self.TOOLS),preview)
         payload['parallel_tool_calls']=False
@@ -235,11 +254,17 @@ class MemoryRuntime:
             if len(encode(req))>options['input_char_limit']:
                 raise RuntimeError('입력 길이 한도 초과: 원문을 자동 절삭하지 않았습니다.')
         event('memory_access','started',{'turn':ctx['turn'],'condition':self.version,'available_turns':[r['turn'] for r in ctx['records']]})
+        if self.version in INNER_VERSIONS:
+            from .inner_router import route
+            selected, request, usage = route(config, body, ctx, build, upstream, frames, inspect, emit, cancelled, check_size)
+            requests.append({'stage':'trait_router','payload':copy.deepcopy(request)})
+            usages['trait_router'] = usage
+            event('traits', 'routed', {'selected':selected,'public_only':True})
         if self.version=='Q3full':
             visible=[chunk(r) for r in ctx['records']]
         elif self.version=='Q3oracle':
             visible=oracle_records(ctx,options)
-        elif self.version=='Q3select' and ctx['records']:
+        elif self.version in ('Q3select','Q3inner_memory') and ctx['records']:
             began=time.monotonic()
             schema=obj({'turns':{'type':'array','items':{'type':'integer','enum':[r['turn'] for r in ctx['records']]},'maxItems':3,'uniqueItems':True}})
             req=build(config,{'system_prompt':body['memory_selector_prompt'],
@@ -329,9 +354,13 @@ class MemoryRuntime:
                     'utterance':speech['utterance'],'counselor_utterance':ctx['public'][-1]['content'],
                     'condition':self.version,'memory_input':copy.deepcopy(visible),'retrievals':retrievals,
                     'selection':selection,'metrics':metrics,'model_requests':requests,'agent_usage':usages}
+            if self.version in INNER_VERSIONS:
+                record['selected_traits'] = copy.deepcopy(ctx['selected_traits'])
             saved={'revision':ctx['saved']['revision']+1,'signature':ctx['signature'],
                    'records':ctx['records']+[record], 'public_dialogue':ctx['public']+[{'role':'client','content':speech['utterance']}],
                    'options':options,'selector_prompt':body['memory_selector_prompt']}
+            if self.version in INNER_VERSIONS:
+                saved['router_prompt'] = body['memory_router_prompt']
             with LOCK:
                 sid=config['_turn_info']['session_id']
                 if load(config,self.version,sid)!=ctx['saved']:raise ValueError('다른 실행이 기록을 변경했습니다. 덮어쓰기를 중단합니다.')
@@ -341,9 +370,14 @@ class MemoryRuntime:
                 write(target,json.dumps(saved,ensure_ascii=False,indent=2))
             event('memory_access','completed',metrics)
             event('utterance','committed',{'content':speech['utterance'],'pending':False})
+            subagent_usage={}
+            for agent, usage in usages.items():
+                if agent!='main':
+                    for key,value in usage.items():
+                        if type(value) in (int,float):subagent_usage[key]=subagent_usage.get(key,0)+value
             emit('done',response=speech['utterance'],finish_reason='stop',response_source='committed_utterance',
                  history=[{'role':'user' if m['role']=='counselor' else 'assistant','content':m['content']} for m in saved['public_dialogue']],
-                 usage=total,main_usage=usages['main'],subagent_usage=usages.get('memory_selector',{}),
+                 usage=total,main_usage=usages['main'],subagent_usage=subagent_usage,
                  agent_usage=usages,experiment_version=self.version)
         except Exception:
             event('memory_access','discarded',{'turn':ctx['turn'],'message':'이번 턴은 저장하지 않았습니다.'})

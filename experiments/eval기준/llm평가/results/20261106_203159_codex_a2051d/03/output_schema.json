@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "properties": {
+    "criterion_id": {
+      "type": "string",
+      "enum": [
+        "intervention_response_validity"
+      ]
+    },
+    "case_id": {
+      "type": "string",
+      "enum": [
+        "case_01_past_reason"
+      ]
+    },
+    "response_id": {
+      "type": "string",
+      "enum": [
+        "response_1"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scored",
+        "insufficient_evidence",
+        "not_applicable"
+      ]
+    },
+    "score": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "evidence": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "criterion_id",
+    "case_id",
+    "response_id",
+    "status",
+    "score",
+    "evidence",
+    "rationale",
+    "limitations"
+  ],
+  "additionalProperties": false
+}
