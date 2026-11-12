@@ -1,0 +1,18 @@
+{
+  "session_id": "261111_220850_5",
+  "turn_id": "20261111T130855_621522Z_dd27558a",
+  "status": "stopped",
+  "input": {
+    "session_id": "261111_220850_5",
+    "actor": "client",
+    "step": 1,
+    "experiment_version": "Q3compare_memory_private_position",
+    "batch_job": "batch_3c42927d97144d8da8d6"
+  },
+  "response": "",
+  "reasoning": "",
+  "started_at": "2026-11-11T13:08:55.649540+00:00",
+  "updated_at": "2026-11-11T13:08:55.649540+00:00",
+  "finished_at": "2026-11-11T13:08:55.649540+00:00",
+  "error": "대량생성 중단"
+}
