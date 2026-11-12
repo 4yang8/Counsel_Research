@@ -1,0 +1,11 @@
+{
+  "session": "261111_043443",
+  "status": "compacted",
+  "files": 14,
+  "attempt_bytes": 12051915,
+  "state_sha256": "cb9030dc95c9722287b6a3bc343db67a7017da3edd36988eba5e4d420aaa6b3f",
+  "archive": "runs/paired/261111_043443/state_archive/client_attempts_d601142a.tar.gz",
+  "archive_bytes": 1854525,
+  "current_bytes": 1851577,
+  "archive_sha256": "1f677ae09c697def0534f8c5adee56b58870cbbb26f13671bc103345260a3cb8"
+}

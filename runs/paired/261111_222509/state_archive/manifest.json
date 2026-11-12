@@ -1,0 +1,11 @@
+{
+  "session": "261111_222509",
+  "status": "compacted",
+  "files": 7,
+  "attempt_bytes": 4348275,
+  "state_sha256": "7296b714eb50bd26b222d0ef635b56f85f66657920e05a8a4254f1cff306013f",
+  "archive": "runs/paired/261111_222509/state_archive/client_attempts_ccdb332f.tar.gz",
+  "archive_bytes": 604710,
+  "current_bytes": 858379,
+  "archive_sha256": "d84765217605026dcaf62a58d99993daec9c539a631e3888f7d58e97c8021702"
+}

@@ -1,0 +1,11 @@
+{
+  "session": "261111_143651",
+  "status": "compacted",
+  "files": 7,
+  "attempt_bytes": 3963703,
+  "state_sha256": "7f13a2c196fa814876111025ff5d2c08ef9d4b19a02f3f500658cc8408231b12",
+  "archive": "runs/paired/261111_143651/state_archive/client_attempts_dc2704d4.tar.gz",
+  "archive_bytes": 548577,
+  "current_bytes": 800318,
+  "archive_sha256": "c6072b28d71cb300872ce998856fbf8ec9ebce92ea9d2cc6ea6e8830097e68dd"
+}
