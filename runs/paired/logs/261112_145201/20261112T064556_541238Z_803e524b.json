@@ -1,0 +1,133 @@
+{
+  "session_id": "261112_145201",
+  "turn_id": "20261112T064556_541238Z_803e524b",
+  "status": "failed",
+  "input": {
+    "session_id": "261112_145201",
+    "actor": "client",
+    "step": 19,
+    "experiment_version": "Q3cm_split",
+    "batch_job": "1112_110802_04"
+  },
+  "response": "",
+  "reasoning": "",
+  "started_at": "2026-11-12T06:45:56.604877+00:00",
+  "updated_at": "2026-11-12T06:46:00.588725+00:00",
+  "subagent_events": [
+    {
+      "type": "agent_event",
+      "actor": "client",
+      "agent_id": "trait_router",
+      "agent_name": "특성·배경 라우터",
+      "agent_kind": "trait_router",
+      "parent_agent_id": "main",
+      "depth": 1,
+      "event": {
+        "type": "request",
+        "payload": {
+          "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+          "messages": [
+            {
+              "role": "system",
+              "content": "# 관련 특성·배경 선정\n\n당신은 Q3 내담자의 특성·배경 라우터입니다. 기본 프로필, 특성 후보, 배경 후보, 공개 대화만 읽고 이번 상담사 발화에 관련된 자료를 선택하세요.\n\n- traits의 trait_id와 backgrounds의 background_id 중 실제 존재하는 ID만 사용하세요.\n- 선택한 특성과 관련된 성장 경험·상황 사례를 연결하세요. 관련 배경이 없으면 background_ids를 비워두세요.\n- relevance에는 공개 대화의 어떤 질문·제안·주제와 후보 원문이 관련되는지 간단히 설명하세요.\n- 상황 사례는 과거 예시이며 현재 상담에서 실제로 일어난 일이라고 취급하지 마세요.\n- 새로운 내면이나 사건을 생성하지 말고, 공개 발화만으로 숨은 의도를 확정하지 마세요.\n- 과거 비공개 내면, 누적 노트, 궤적 계획은 입력되지 않습니다. 두 기억 조건에서 같은 규칙을 사용합니다.\n- 관련 자료가 없으면 selections를 빈 배열로 반환하세요.\n\n출력은 지정된 JSON 스키마만 사용하세요.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"backgrounds\": [{\"background_id\": \"/childhood_data\", \"content\": \"내담자는 어릴 적부터 공부를 잘하던 형과 끊임없이 비교당했습니다. 성적표를 받아올 때마다 아버지는 '형 반만 따라가 봐라'라고 했고, 내담자가 나름대로 노력해서 올린 성적에도 '그 정도로 되겠냐'는 반응이 돌아왔습니다. 중학교 때 반에서 상위권에 든 적이 있었지만 '형은 전교권이었다'는 말로 무시당한 뒤로는 잘해도 소용없다는 생각이 굳어졌고, 고등학교 진학 후에는 아예 시험 전날 공부를 안 하는 식으로 스스로 이유를 만들어 두는 습관이 생겼습니다. 이런 경험이 반복되면서 '나는 애초에 남들만큼 해낼 수 없는 사람'이라는 핵심 신념이 형성되었습니다.\", \"kind\": \"성장 경험\"}, {\"background_id\": \"/situations/0\", \"content\": {\"automatic_thought\": \"봤다가 점수가 바닥이면 진짜 끝이야. 이번에도 안 됐다는 걸 눈으로 확인하는 순간 나는 무너질 거야.\", \"behavior\": \"조회 페이지를 열었다 닫기를 반복하다가 결국 확인하지 않고, 게임을 켜서 새벽 3시까지 함\", \"emotion\": \"불안, 두려움\", \"physiological_response\": \"심장이 빠르게 뛰고 손바닥에 땀이 남\", \"situation\": \"학원 모의고사 성적 발표일이 되었지만 성적 조회 페이지를 열지 못하고 있음.\"}, \"kind\": \"상황 사례\"}, {\"background_id\": \"/situations/1\", \"content\": {\"automatic_thought\": \"역시 아버지 눈에 나는 형 발끝도 못 따라가는 놈이지. 이번에 붙어도 9급이 뭐 대단하냐고 하실 거잖아.\", \"behavior\": \"'알아서 할게요'라고 짧게 답한 뒤 밥을 남기고 방으로 들어가 문을 잠그고, 그날 밤 공부 대신 휴대폰만 봄\", \"emotion\": \"수치심, 분노, 무력감\", \"physiological_response\": \"얼굴이 달아오르고 밥이 목에 걸린 듯 넘어가지 않음\", \"situation\": \"가족 저녁 식사 자리에서 아버지가 '이번에는 되는 거냐. 형은 네 나이에 벌써 대리 달았다'고 말함.\"}, \"kind\": \"상황 사례\"}, {\"background_id\": \"/situations/2\", \"content\": {\"automatic_thought\": \"다들 앞으로 나아가는데 나만 3년째 제자리야. 가면 '너는 요즘 뭐 하냐'고 물어볼 텐데 할 말이 없어.\", \"behavior\": \"메시지를 읽고 몇 시간 뒤 '그날 시험이라 못 가, 축하해'라고 거짓 핑계를 보내고, 이후 단체방 알림을 꺼버림\", \"emotion\": \"열등감, 부러움, 자기혐오\", \"physiological_response\": \"가슴이 답답하고 한숨이 계속 나옴\", \"situation\": \"대학 동기에게서 '나 이번에 OO기업 최종 붙었어! 애들이랑 축하 모임 하는데 올래?'라는 단체 메시지가 옴.\"}, \"kind\": \"상황 사례\"}, {\"background_id\": \"/situations/3\", \"content\": {\"automatic_thought\": \"작년에도 틀린 걸 지금도 틀리네. 3년을 했는데 이 모양이면 머리 자체가 안 되는 거야. 해봤자 어차피 안 돼.\", \"behavior\": \"문제집을 덮고 침대에 누워 '내일 아침부터 제대로 하자'고 생각하며 휴대폰으로 시험 후기 글들을 새벽까지 읽음\", \"emotion\": \"무력감, 좌절, 우울감\", \"physiological_response\": \"몸에 힘이 빠지고 눈이 무거워지며 멍해짐\", \"situation\": \"밤에 책상 앞에 앉아 문제집을 폈지만 첫 페이지의 틀렸던 문제가 눈에 들어옴.\"}, \"kind\": \"상황 사례\"}], \"basic_profile\": {\"demographic_context\": {\"age\": \"27세\", \"background\": \"부모님 집에서 거주하며 용돈을 받아 생활. 두 살 위 형은 대기업 재직 중. 수험 기간이 길어지며 대학 동기들과의 연락을 스스로 끊은 상태.\", \"life_stage\": \"대학 졸업 후 취업 대신 수험 생활을 시작해 세 번째 필기시험을 두 달 앞둔 시기\", \"occupation\": \"무직 (9급 공무원 시험 준비 3년차)\"}, \"presenting_problem\": \"세 번째 필기시험이 두 달 앞으로 다가왔는데 몇 주째 책상에 앉아도 공부가 손에 잡히지 않고, 새벽까지 휴대폰을 보다가 오후에 일어나는 생활이 반복됨. 최근에는 학원 모의고사도 '컨디션이 안 좋다'며 두 번 연속 결시함. 아들이 방에서 나오지 않는 것을 걱정한 어머니의 권유로 반쯤 떠밀리듯 상담을 신청했으나, 본인도 '이대로는 안 된다는 건 안다'고 함.\", \"profile_id\": \"gold_003\"}, \"public_dialogue\": [{\"content\": \"오늘 상담에서 어떤 이야기를 나누고 싶으신가요?\", \"role\": \"counselor\"}, {\"content\": \"그냥… 뭘 얘기해야 할지 모르겠어요. 그냥 앉아는 있는데, 막상 말로 정리하려니 생각이 잘 안 나고요.\", \"role\": \"client\"}, {\"content\": \"말로 정리하려니 생각이 안 나는 그 느낌, 괜찮아요. 굳이 처음부터 정리해서 말씀하실 필요는 없어요. 지금 이 순간, 몸이나 기분에서 먼저 느껴지는 게 있으세요?\", \"role\": \"counselor\"}, {\"content\": \"몸이 좀 무겁고 멍한 느낌이에요. 그냥… 그런 상태예요.\", \"role\": \"client\"}, {\"content\": \"몸이 무겁고 멍한 상태, 그 상태로 앉아 있는 것도 쉽지 않으셨을 거예요. 이런 느낌이 요즘 자주 드는 건가요, 아니면 오늘따라 그런 건가요?\", \"role\": \"counselor\"}, {\"content\": \"요즘 계속… 그런 상태예요. 오늘만의 일은 아닌 것 같아요.\", \"role\": \"client\"}, {\"content\": \"요즘 계속 그러셨군요. 그 느낌이 언제쯤부터 시작됐는지 대략 기억나세요?\", \"role\": \"counselor\"}, {\"content\": \"한 달쯤 된 것 같아요. 딱히 계기가 있다기보다는 그냥 점점 그렇게 된 것 같아요.\", \"role\": \"client\"}, {\"content\": \"계기가 딱히 없는 것도 있어요. 그럼 하루하루 지낼 때 그 무거움이랑 멍한 느낌이 주로 언제 더 심하게 느껴지세요?\", \"role\": \"counselor\"}, {\"content\": \"밤에 책상 앞에 앉을 때가 더 심한 것 같아요. 낮에는 그냥 멍한 정도고요.\", \"role\": \"client\"}, {\"content\": \"밤에 책상 앞에 앉을 때 특히 무거워지시는군요. 그 시간에 보통 뭘 하고 계시는 건가요?\", \"role\": \"counselor\"}, {\"content\": \"그냥… 문제집 펴다가 덮고, 폰 좀 봤어요.\", \"role\": \"client\"}, {\"content\": \"문제집 펴다가 덮는 그 순간에 어떤 느낌이 드세요?\", \"role\": \"counselor\"}, {\"content\": \"그냥 멍해져요. 몸에서 힘이 빠지는 느낌? 그래서 덮게 돼요.\", \"role\": \"client\"}, {\"content\": \"문제집을 펴는 그 순간에 몸이 먼저 힘을 빼는 거라면, 그게 마치 몸이 '이건 지금 못 하겠다'고 먼저 말하고 있는 것처럼도 느껴지네요. 책상 앞에 앉을 때, 그 문제집을 봐야 한다는 것 자체에서 어떤 생각이 먼저 떠오르세요?\", \"role\": \"counselor\"}, {\"content\": \"그냥… 해봤자, 라는 생각이 먼저 와요. 매일 하는데, 남한테 말한 건 처음인 것 같네요.\", \"role\": \"client\"}, {\"content\": \"그 말을 여기서 꺼내 주셔서 고마워요. 아까 제가 몸이 먼저 '못 하겠다'고 말하고 있는 거 같다고 했는데, 그 말이 어떻게 들리셨어요?\", \"role\": \"counselor\"}, {\"content\": \"그렇게 들리기도 하는데… 근데 그 전에 '해봤자'가 먼저 떠오르니까 몸이 그렇게 되는 것 같기도 하고. 그냥 제가 게으른 건지도 모르겠어요.\", \"role\": \"client\"}, {\"content\": \"게으르다는 말로 설명하기엔, '해봤자'라는 생각이 시작 전에 먼저 와서 힘을 빼버리는 거잖아요. 게으름은 안 하고 싶은 건데, 이건 하고 싶은 마음이 있는데도 그 생각이 먼저 와서 막아버리는 것에 가까워 보이거든요.\", \"role\": \"counselor\"}], \"traits\": [{\"content\": \"손상된 자율성 및 수행\", \"trait_id\": \"/core_belief/young_domain\"}, {\"content\": \"실패\", \"trait_id\": \"/core_belief/young_schema\"}, {\"content\": \"나는 남들만큼 해내지 못하고, 결국 이번에도 실패할 것이다.\", \"trait_id\": \"/core_belief/core_belief_statement\"}, {\"content\": \"또래에 비해 자신이 실패했거나 반드시 실패할 것이라는 확신.\", \"trait_id\": \"/core_belief/schema_definition\"}, {\"content\": \"전력을 다했는데도 실패하는 것은 내 밑바닥 능력이 드러나는 일이라 견딜 수 없다\", \"trait_id\": \"/intermediate_beliefs/attitude\"}, {\"content\": \"결과를 확인해야 하는 상황, 남과 비교당하는 상황은 최대한 미루거나 피해야 한다\", \"trait_id\": \"/intermediate_beliefs/rule\"}, {\"content\": \"만약 내가 제대로 시작하지 않거나 전력을 다하지 않는다면, 실패해도 '진짜 실력이 아니었다'고 여길 수 있어 덜 비참할 것이다\", \"trait_id\": \"/intermediate_beliefs/assumption_positive\"}, {\"content\": \"만약 내가 정말 최선을 다해 도전한다면, 그런데도 실패해서 내가 무능하다는 것이 완전히 증명되고 말 것이다\", \"trait_id\": \"/intermediate_beliefs/assumption_negative\"}, {\"content\": \"중요한 시험이나 평가가 다가올수록 오히려 공부를 미루고 휴대폰·유튜브로 시간을 보내며, 나중에 '제대로 안 해서 떨어진 것'이라고 말할 여지를 만들어 둠\", \"trait_id\": \"/coping_strategies/0\"}, {\"content\": \"모의고사·성적 발표처럼 자신의 현재 실력이 숫자로 드러나는 상황을 컨디션이나 일정 핑계로 결시하거나 확인을 미룸\", \"trait_id\": \"/coping_strategies/1\"}, {\"content\": \"취업하거나 잘 지내는 또래·동기들과의 연락과 모임을 끊어, 비교당하거나 근황을 설명해야 하는 상황 자체를 차단함\", \"trait_id\": \"/coping_strategies/2\"}, {\"content\": \"가족이 시험 준비 상황을 물으면 '하고 있다'고 얼버무리고 방으로 들어가 대화를 끝내버림\", \"trait_id\": \"/coping_strategies/3\"}, {\"content\": \"계획표를 세우는 데 몇 시간을 들이고는 '내일부터 제대로 하면 된다'며 실행을 반복적으로 다음 날로 넘김\", \"trait_id\": \"/coping_strategies/4\"}]}"
+            }
+          ],
+          "temperature": 0.7,
+          "top_p": 0.95,
+          "max_tokens": 4096,
+          "chat_template_kwargs": {},
+          "stream": true,
+          "stream_options": {
+            "include_usage": true
+          },
+          "structured_outputs": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "selections": {
+                  "type": "array",
+                  "maxItems": 13,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "trait_id": {
+                        "type": "string",
+                        "description": "관련된 특성 후보의 ID",
+                        "enum": [
+                          "/core_belief/young_domain",
+                          "/core_belief/young_schema",
+                          "/core_belief/core_belief_statement",
+                          "/core_belief/schema_definition",
+                          "/intermediate_beliefs/attitude",
+                          "/intermediate_beliefs/rule",
+                          "/intermediate_beliefs/assumption_positive",
+                          "/intermediate_beliefs/assumption_negative",
+                          "/coping_strategies/0",
+                          "/coping_strategies/1",
+                          "/coping_strategies/2",
+                          "/coping_strategies/3",
+                          "/coping_strategies/4"
+                        ]
+                      },
+                      "background_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "enum": [
+                            "/childhood_data",
+                            "/situations/0",
+                            "/situations/1",
+                            "/situations/2",
+                            "/situations/3"
+                          ]
+                        },
+                        "maxItems": 5,
+                        "description": "이 특성과 이번 상황을 이해하는 데 관련된 배경 ID. 연결할 근거가 없으면 빈 배열."
+                      },
+                      "relevance": {
+                        "type": "string",
+                        "description": "현재 대화의 어떤 주제·질문·제안과 선택 자료의 어떤 내용이 관련되는지 1~2문장으로 설명합니다. 대화 단서와 자료 원문을 대응시키세요. 사건의 원인·순서는 자료에 명시된 관계의 범위에서 표현하고, 추정한 관련성은 가능성으로 표현합니다."
+                      }
+                    },
+                    "required": [
+                      "trait_id",
+                      "background_ids",
+                      "relevance"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "selections"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "iteration": 1,
+        "phase": "공개 대화 기반 특성·배경 선택"
+      }
+    },
+    {
+      "type": "agent_event",
+      "actor": "client",
+      "agent_id": "trait_router",
+      "agent_name": "특성·배경 라우터",
+      "agent_kind": "trait_router",
+      "parent_agent_id": "main",
+      "depth": 1,
+      "event": {
+        "type": "inspection",
+        "iteration": 1,
+        "error": "<urlopen error [Errno 111] Connection refused>"
+      }
+    }
+  ],
+  "finished_at": "2026-11-12T06:46:00.588725+00:00",
+  "error": "<urlopen error [Errno 111] Connection refused>"
+}
