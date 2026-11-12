@@ -1,0 +1,34 @@
+{
+  "verified_sessions": 367,
+  "source_files": 4640,
+  "source_bytes": 5665664757,
+  "archive_bytes": 956607133,
+  "current_bytes": 663221643,
+  "files_by_kind": {
+    "other": 1597,
+    "events": 9555,
+    "log_json": 9555,
+    "legacy_attempts": 2831,
+    "archives": 1101,
+    "current_state": 367
+  },
+  "bytes_by_kind": {
+    "other": 137504060,
+    "events": 14235325248,
+    "log_json": 17461646833,
+    "legacy_attempts": 596593754,
+    "archives": 983939851,
+    "current_state": 663221643
+  },
+  "total_bytes_after": 34078231389,
+  "tests": {
+    "full_suite": {
+      "count": 352,
+      "passed": true
+    },
+    "final_state_and_branch": {
+      "count": 21,
+      "passed": true
+    }
+  }
+}

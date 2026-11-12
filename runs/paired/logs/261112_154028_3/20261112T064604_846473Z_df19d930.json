@@ -1,0 +1,150 @@
+{
+  "session_id": "261112_154028_3",
+  "turn_id": "20261112T064604_846473Z_df19d930",
+  "status": "failed",
+  "input": {
+    "session_id": "261112_154028_3",
+    "actor": "counselor",
+    "step": 2,
+    "experiment_version": "Q3cm_state",
+    "batch_job": "1112_110803_10"
+  },
+  "response": "",
+  "reasoning": "",
+  "started_at": "2026-11-12T06:46:04.860505+00:00",
+  "updated_at": "2026-11-12T06:46:10.024840+00:00",
+  "subagent_events": [
+    {
+      "type": "agent_event",
+      "actor": "counselor",
+      "agent_id": "ledger",
+      "agent_name": "P3rs_ledger ledger",
+      "agent_kind": "ledger",
+      "parent_agent_id": "main",
+      "depth": 1,
+      "event": {
+        "type": "request",
+        "phase": "ledger",
+        "label": "P3rs_ledger",
+        "iteration": 1,
+        "payload": {
+          "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+          "messages": [
+            {
+              "role": "system",
+              "content": "당신은 상담사 내부의 보조 담당입니다. 공개 대화와 상담사가 남긴 공개 근거 기반 기록만 사용합니다. 내담자의 비공개 기록·프로필·실험 조건은 알 수 없습니다. 짧은 동의가 진정한 수용 또는 숨은 불편함이라고 단정하지 마세요. 숨은 반응을 만들거나 특정 답을 유도하는 것이 목적이 아닙니다. 근거 인용은 해당 턴의 공개 문장을 그대로 복사하세요. 지정된 JSON만 반환합니다.\n\n전체 상담사의 역할은 맥락에 맞는 제안·해석을 하고, 그 말에 대한 반응을 이후 대화에서 자연스럽게 확인하는 것입니다. 고정된 턴·질문 문장·부정적 반응을 강제하지 않습니다. checks_so_far가 0이고 이전 제안·해석을 확인할 수 있으면 최소 한 번 확인하는 원칙을 고려합니다. 확인 뒤에는 관련 기회가 있을 때 다룹니다. 내담자가 밝힌 경계와 직전 질문도 고려하세요.\n\nevents에 이미 있는 자기 제안·해석 사건을 공개 후속 대화로 갱신합니다. updates는 변경할 사건만, event_turn은 기존 사건 번호만 적습니다. 사건의 원래 발언은 수정하지 않습니다. public_response는 공개적으로 드러난 반응, unresolved는 아직 확인되지 않은 점입니다. status는 unconfirmed/asked/answered/deferred입니다. 질문한 것만으로 answered가 되지 않습니다. answered도 내담자 속마음 전체를 확인했다는 의미는 아닙니다. 변경마다 공개 인용을 제시하세요. events가 비어 있거나 새 근거가 없으면 updates=[]입니다.\n"
+            },
+            {
+              "role": "user",
+              "content": "## 현재 단계의 공개 정보와 작업 자료\n\n{\"public_dialogue\": [{\"role\": \"counselor\", \"content\": \"오늘 상담에서 어떤 이야기를 나누고 싶으신가요?\"}, {\"role\": \"client\", \"content\": \"막상 뭐라고 말씀드려야 할지 잘 모르겠어요. 이런 걸로 시간 내도 되나 싶으면서 여기까지 왔는데, 막상 앉으니까 뭘 먼저 꺼내야 할지 모르겠습니다.\"}], \"numbered_dialogue\": \"[1턴] 상담사: 오늘 상담에서 어떤 이야기를 나누고 싶으신가요?\\n\\n[1턴] 내담자: 막상 뭐라고 말씀드려야 할지 잘 모르겠어요. 이런 걸로 시간 내도 되나 싶으면서 여기까지 왔는데, 막상 앉으니까 뭘 먼저 꺼내야 할지 모르겠습니다.\", \"checks_so_far\": 0, \"events\": []}\n"
+            }
+          ],
+          "temperature": 0.7,
+          "top_p": 0.95,
+          "max_tokens": 4096,
+          "chat_template_kwargs": {},
+          "stream": true,
+          "stream_options": {
+            "include_usage": true
+          },
+          "structured_outputs": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "updates": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "event_turn": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "unconfirmed",
+                          "asked",
+                          "answered",
+                          "deferred"
+                        ]
+                      },
+                      "public_response": {
+                        "type": "string",
+                        "maxLength": 5000
+                      },
+                      "unresolved": {
+                        "type": "string",
+                        "maxLength": 5000
+                      },
+                      "evidence": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "turn": {
+                              "type": "integer",
+                              "minimum": 1
+                            },
+                            "role": {
+                              "type": "string",
+                              "enum": [
+                                "counselor",
+                                "client"
+                              ]
+                            },
+                            "quote": {
+                              "type": "string",
+                              "maxLength": 5000
+                            }
+                          },
+                          "required": [
+                            "turn",
+                            "role",
+                            "quote"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "maxItems": 8
+                      }
+                    },
+                    "required": [
+                      "event_turn",
+                      "status",
+                      "public_response",
+                      "unresolved",
+                      "evidence"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 20
+                }
+              },
+              "required": [
+                "updates"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "agent_event",
+      "actor": "counselor",
+      "agent_id": "ledger",
+      "agent_name": "P3rs_ledger ledger",
+      "agent_kind": "ledger",
+      "parent_agent_id": "main",
+      "depth": 1,
+      "event": {
+        "type": "inspection",
+        "phase": "ledger",
+        "iteration": 1,
+        "error": "<urlopen error [Errno 111] Connection refused>"
+      }
+    }
+  ],
+  "finished_at": "2026-11-12T06:46:10.024840+00:00",
+  "error": "<urlopen error [Errno 111] Connection refused>"
+}

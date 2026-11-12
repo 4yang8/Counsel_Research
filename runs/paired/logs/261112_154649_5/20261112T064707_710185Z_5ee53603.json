@@ -1,0 +1,133 @@
+{
+  "session_id": "261112_154649_5",
+  "turn_id": "20261112T064707_710185Z_5ee53603",
+  "status": "failed",
+  "input": {
+    "session_id": "261112_154649_5",
+    "actor": "client",
+    "step": 1,
+    "experiment_version": "Q3cm_review",
+    "batch_job": "1112_110804_16"
+  },
+  "response": "",
+  "reasoning": "",
+  "started_at": "2026-11-12T06:47:07.728520+00:00",
+  "updated_at": "2026-11-12T06:47:08.767218+00:00",
+  "subagent_events": [
+    {
+      "type": "agent_event",
+      "actor": "client",
+      "agent_id": "trait_router",
+      "agent_name": "특성·배경 라우터",
+      "agent_kind": "trait_router",
+      "parent_agent_id": "main",
+      "depth": 1,
+      "event": {
+        "type": "request",
+        "payload": {
+          "model": "Qwen/Qwen3.8-Flash-Next-FP8",
+          "messages": [
+            {
+              "role": "system",
+              "content": "# 관련 특성·배경 선정\n\n당신은 Q3 내담자의 특성·배경 라우터입니다. 기본 프로필, 특성 후보, 배경 후보, 공개 대화만 읽고 이번 상담사 발화에 관련된 자료를 선택하세요.\n\n- traits의 trait_id와 backgrounds의 background_id 중 실제 존재하는 ID만 사용하세요.\n- 선택한 특성과 관련된 성장 경험·상황 사례를 연결하세요. 관련 배경이 없으면 background_ids를 비워두세요.\n- relevance에는 공개 대화의 어떤 질문·제안·주제와 후보 원문이 관련되는지 간단히 설명하세요.\n- 상황 사례는 과거 예시이며 현재 상담에서 실제로 일어난 일이라고 취급하지 마세요.\n- 새로운 내면이나 사건을 생성하지 말고, 공개 발화만으로 숨은 의도를 확정하지 마세요.\n- 과거 비공개 내면, 누적 노트, 궤적 계획은 입력되지 않습니다. 두 기억 조건에서 같은 규칙을 사용합니다.\n- 관련 자료가 없으면 selections를 빈 배열로 반환하세요.\n\n출력은 지정된 JSON 스키마만 사용하세요.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"backgrounds\": [{\"background_id\": \"/childhood_data\", \"content\": \"내담자의 아버지는 고등학교 교사였고, 집안에서는 성적이 곧 사람의 가치처럼 다뤄졌습니다. 시험에서 98점을 받아오면 칭찬 대신 '2점은 왜 틀렸냐'는 추궁이 돌아왔고, 100점을 받아도 '당연한 걸 가지고 유난 떨 것 없다'는 반응이었습니다. 잘한 것은 언급되지 않고 부족한 것만 지적되는 경험이 반복되면서, 내담자는 쉬거나 만족하는 순간 곧바로 뒤처지고 비난받을 것이라는 긴장 속에서 스스로를 몰아붙이는 것이 삶의 기본값이 되었습니다.\", \"kind\": \"성장 경험\"}, {\"background_id\": \"/situations/0\", \"content\": {\"automatic_thought\": \"이게 학부모 손에 들어갔으면 학원 이름에 먹칠할 뻔했잖아. 결국 내가 하나하나 다 봐야 해. 어느 것 하나 마음 놓을 수가 없어.\", \"behavior\": \"새벽 1시까지 교재 전체를 처음부터 다시 검수하고, 다음 날 아침 회의에서 해당 강사에게 전 직원 앞에서 실수를 지적함\", \"emotion\": \"짜증, 불안, 피로감\", \"physiological_response\": \"뒷목과 관자놀이가 조여오고 눈이 뻑뻑해짐\", \"situation\": \"퇴근 후 밤 11시, 강사가 만든 여름특강 교재에서 오답 해설 하나가 틀린 것을 발견함.\"}, \"kind\": \"상황 사례\"}, {\"background_id\": \"/situations/1\", \"content\": {\"automatic_thought\": \"8점이나 어디서 나간 거야. 지금 이 실수 습관을 못 잡으면 고등학교 가서 무너져. 좋아할 때가 아니야.\", \"behavior\": \"'잘했네'라는 말 대신 틀린 문제부터 짚으며 오답 정리를 시키고, 딸이 '엄마는 칭찬을 할 줄 몰라?'라며 방문을 닫자 '다 너 잘되라고 하는 소리'라고 받아침\", \"emotion\": \"초조함, 답답함\", \"physiological_response\": \"가슴이 조급하게 두근거림\", \"situation\": \"딸이 중간고사 수학에서 92점을 받아 와서 밝은 얼굴로 시험지를 보여줌.\"}, \"kind\": \"상황 사례\"}, {\"background_id\": \"/situations/2\", \"content\": {\"automatic_thought\": \"다음 주 학부모 설명회 자료가 아직 완성이 아닌데 지금 놀러 가면 그게 계속 마음에 걸릴 거야. 준비가 안 된 채로 쉬는 건 노는 게 아니라 도망치는 거지.\", \"behavior\": \"'설명회 끝나고 가자'며 미루고 노트북을 펴지만, 남편의 실망한 표정이 떠올라 자료 작업에도 집중하지 못한 채 밤을 보냄\", \"emotion\": \"불안, 죄책감, 미안함\", \"physiological_response\": \"앉아 있어도 몸이 들썩이고 마음이 붕 뜬 느낌\", \"situation\": \"일요일 오후, 남편이 '오늘은 일 얘기 그만하고 드라이브나 가자'고 제안함.\"}, \"kind\": \"상황 사례\"}, {\"background_id\": \"/situations/3\", \"content\": {\"automatic_thought\": \"빨랐다는 건 전달이 안 됐다는 거잖아. 그 학부모는 등록 안 하겠지. 완벽하게 준비했다고 생각했는데 결국 구멍이 있었네.\", \"behavior\": \"칭찬 일색인 29장은 넘겨버리고 그 1장을 몇 번이고 다시 읽으며, 새벽까지 설명회 진행을 처음부터 복기하고 다음 설명회 대본을 뜯어고침\", \"emotion\": \"실망, 자책, 찜찜함\", \"physiological_response\": \"두통이 다시 시작되고 잠자리에서 몇 시간째 뒤척임\", \"situation\": \"학부모 설명회가 끝난 뒤 설문지 30장 중 29장이 '매우 만족'이었고, 1장에 '설명이 다소 빨랐다'는 의견이 적혀 있었음.\"}, \"kind\": \"상황 사례\"}], \"basic_profile\": {\"demographic_context\": {\"age\": \"46세\", \"background\": \"대기업 사교육 브랜드 강사로 10년 일하다 독립해 학원을 차림. 지역에서 '깐깐하지만 확실한 원장'으로 알려져 있음. 남편은 '당신은 쉬는 법을 모른다'고 자주 말함.\", \"life_stage\": \"결혼 17년차, 중학교 2학년 딸 1명. 학원을 두 번째 분원으로 확장할지 검토 중인 시기\", \"occupation\": \"수학학원 원장 (강사 5명 규모, 운영 8년차)\"}, \"presenting_problem\": \"1년 넘게 이어진 불면과 긴장성 두통으로 내과를 전전하다 '스트레스성이니 상담을 받아보라'는 말을 들음. 비슷한 시기에 강사 두 명이 연달아 퇴사하면서 '원장님 밑에서는 숨이 막힌다'고 했다는 말을 전해 들었고, 며칠 뒤 딸이 성적 문제로 다투던 중 '엄마처럼 살고 싶지 않다'고 소리쳐 큰 충격을 받음. 본인은 '나는 나한테 더 엄격했을 뿐인데 뭐가 잘못된 건지 모르겠다'고 함.\", \"profile_id\": \"gold_004\"}, \"public_dialogue\": [{\"content\": \"오늘 상담에서 어떤 이야기를 나누고 싶으신가요?\", \"role\": \"counselor\"}], \"traits\": [{\"content\": \"과잉경계 및 억제\", \"trait_id\": \"/core_belief/young_domain\"}, {\"content\": \"엄격한 기준/과잉비판\", \"trait_id\": \"/core_belief/young_schema\"}, {\"content\": \"내가 하는 일은 무엇이든 결코 충분하지 않다.\", \"trait_id\": \"/core_belief/core_belief_statement\"}, {\"content\": \"비난을 피하려 매우 높은 내면화된 기준을 충족해야 한다는 강박.\", \"trait_id\": \"/core_belief/schema_definition\"}, {\"content\": \"일을 어중간하게 하거나 실수를 그냥 넘기는 것은 무책임하고 한심한 일이다\", \"trait_id\": \"/intermediate_beliefs/attitude\"}, {\"content\": \"나는 항상 남들보다 높은 기준으로 완벽하게 해내야 하고, 쉬는 것은 그럴 자격을 갖춘 다음의 일이다\", \"trait_id\": \"/intermediate_beliefs/rule\"}, {\"content\": \"만약 내가 모든 일을 빈틈없이 해낸다면, 누구도 나를 흠잡지 못하고 내 가치가 유지될 것이다\", \"trait_id\": \"/intermediate_beliefs/assumption_positive\"}, {\"content\": \"만약 내가 기준을 낮추거나 느슨해진다면, 결과가 무너지고 사람들은 내가 그 정도밖에 안 되는 사람임을 알게 될 것이다\", \"trait_id\": \"/intermediate_beliefs/assumption_negative\"}, {\"content\": \"강사에게 맡긴 교재 검수나 상담 내용을 결국 밤에 처음부터 자신이 다시 확인하고, 사소한 오탈자도 다음 날 회의에서 짚고 넘어감\", \"trait_id\": \"/coping_strategies/0\"}, {\"content\": \"학원 운영·가정 일정을 분 단위로 계획하고, 계획이 틀어지면 쉬는 시간을 줄여서라도 그날 안에 만회하려 함\", \"trait_id\": \"/coping_strategies/1\"}, {\"content\": \"몸이 아프거나 지쳐도 '이 정도로 쉬는 건 핑계'라며 일정을 그대로 소화하고, 쉬는 날이 생기면 오히려 불안해서 밀린 일거리를 찾아냄\", \"trait_id\": \"/coping_strategies/2\"}, {\"content\": \"자신의 성과에 대한 칭찬은 '아직 멀었다', '운이 좋았다'로 깎아내리고, 잘된 부분보다 부족했던 부분을 복기하는 데 시간을 씀\", \"trait_id\": \"/coping_strategies/3\"}, {\"content\": \"가족이나 직원의 느슨한 태도를 보면 참지 못하고 '기본이 안 됐다'는 식의 지적을 하며, 지적 후에는 관계가 서먹해져도 '틀린 말은 아니지 않냐'며 정당화함\", \"trait_id\": \"/coping_strategies/4\"}]}"
+            }
+          ],
+          "temperature": 0.7,
+          "top_p": 0.95,
+          "max_tokens": 4096,
+          "chat_template_kwargs": {},
+          "stream": true,
+          "stream_options": {
+            "include_usage": true
+          },
+          "structured_outputs": {
+            "json": {
+              "type": "object",
+              "properties": {
+                "selections": {
+                  "type": "array",
+                  "maxItems": 13,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "trait_id": {
+                        "type": "string",
+                        "description": "관련된 특성 후보의 ID",
+                        "enum": [
+                          "/core_belief/young_domain",
+                          "/core_belief/young_schema",
+                          "/core_belief/core_belief_statement",
+                          "/core_belief/schema_definition",
+                          "/intermediate_beliefs/attitude",
+                          "/intermediate_beliefs/rule",
+                          "/intermediate_beliefs/assumption_positive",
+                          "/intermediate_beliefs/assumption_negative",
+                          "/coping_strategies/0",
+                          "/coping_strategies/1",
+                          "/coping_strategies/2",
+                          "/coping_strategies/3",
+                          "/coping_strategies/4"
+                        ]
+                      },
+                      "background_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "enum": [
+                            "/childhood_data",
+                            "/situations/0",
+                            "/situations/1",
+                            "/situations/2",
+                            "/situations/3"
+                          ]
+                        },
+                        "maxItems": 5,
+                        "description": "이 특성과 이번 상황을 이해하는 데 관련된 배경 ID. 연결할 근거가 없으면 빈 배열."
+                      },
+                      "relevance": {
+                        "type": "string",
+                        "description": "현재 대화의 어떤 주제·질문·제안과 선택 자료의 어떤 내용이 관련되는지 1~2문장으로 설명합니다. 대화 단서와 자료 원문을 대응시키세요. 사건의 원인·순서는 자료에 명시된 관계의 범위에서 표현하고, 추정한 관련성은 가능성으로 표현합니다."
+                      }
+                    },
+                    "required": [
+                      "trait_id",
+                      "background_ids",
+                      "relevance"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "selections"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "iteration": 1,
+        "phase": "공개 대화 기반 특성·배경 선택"
+      }
+    },
+    {
+      "type": "agent_event",
+      "actor": "client",
+      "agent_id": "trait_router",
+      "agent_name": "특성·배경 라우터",
+      "agent_kind": "trait_router",
+      "parent_agent_id": "main",
+      "depth": 1,
+      "event": {
+        "type": "inspection",
+        "iteration": 1,
+        "error": "<urlopen error [Errno 111] Connection refused>"
+      }
+    }
+  ],
+  "finished_at": "2026-11-12T06:47:08.767218+00:00",
+  "error": "<urlopen error [Errno 111] Connection refused>"
+}

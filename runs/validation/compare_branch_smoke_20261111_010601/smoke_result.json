@@ -1,0 +1,105 @@
+{
+ "request": {
+  "profile_directory": "/home2/sjyang114/Counsel_Research_dynamic_client_new/resources/001-100",
+  "filenames": [
+   "gold_ccd_profile_001.json"
+  ],
+  "mode": "compare",
+  "turns": 6,
+  "fork_turn": 3,
+  "concurrency": 1,
+  "retries": 1,
+  "model": "Qwen/Qwen3.8-27B-FP8",
+  "vllm_url": "http://127.0.0.1:18001/v1"
+ },
+ "job": {
+  "id": "batch_4099468ded984d01bb6e",
+  "created_at": "2026-11-10T16:06:01.845347+00:00",
+  "status": "failed",
+  "options": {
+   "turns": 6,
+   "concurrency": 1,
+   "retries": 1,
+   "fork_turn": 3
+  },
+  "rows": [
+   {
+    "index": 0,
+    "filename": "gold_ccd_profile_001.json",
+    "profile_id": "gold_001",
+    "profile_hash": "4dd79db3190839229aa89b76c2b49bcd1bd02e5929f784cbe318bc448005fa34",
+    "version": "Q3compare_memory",
+    "status": "failed",
+    "completed_turns": 0,
+    "session_id": "261111_010601",
+    "phase": "오류",
+    "error": "HTTP Error 400: Bad Request",
+    "retry_count": 1,
+    "branch": "common",
+    "target_turns": 2
+   },
+   {
+    "index": 1,
+    "filename": "gold_ccd_profile_001.json",
+    "profile_id": "gold_001",
+    "profile_hash": "4dd79db3190839229aa89b76c2b49bcd1bd02e5929f784cbe318bc448005fa34",
+    "version": "Q3compare_memory",
+    "status": "failed",
+    "completed_turns": 0,
+    "session_id": null,
+    "phase": "공통 구간 미완료",
+    "error": "HTTP Error 400: Bad Request",
+    "retry_count": 0,
+    "branch": "provided",
+    "target_turns": 4
+   },
+   {
+    "index": 2,
+    "filename": "gold_ccd_profile_001.json",
+    "profile_id": "gold_001",
+    "profile_hash": "4dd79db3190839229aa89b76c2b49bcd1bd02e5929f784cbe318bc448005fa34",
+    "version": "Q3compare_memory",
+    "status": "failed",
+    "completed_turns": 0,
+    "session_id": null,
+    "phase": "공통 구간 미완료",
+    "error": "HTTP Error 400: Bad Request",
+    "retry_count": 0,
+    "branch": "withheld",
+    "target_turns": 4
+   }
+  ],
+  "profile_directory": "/home2/sjyang114/Counsel_Research_dynamic_client_new/resources/001-100",
+  "versions": [
+   "Q3compare_memory"
+  ],
+  "error": "",
+  "mode": "compare",
+  "completed_turns": 0,
+  "total_turns": 10,
+  "turn_percent": 0.0,
+  "finished": 3,
+  "total": 3,
+  "finished_percent": 100.0,
+  "succeeded": 0,
+  "failed": 3,
+  "output_path": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/validation/compare_branch_smoke_20261111_010601/sessions/profile_batches/batch_4099468ded984d01bb6e"
+ },
+ "sessions": {
+  "common": {
+   "session_id": "261111_010601",
+   "compare": {
+    "branch": "common",
+    "fork_turn": 3
+   },
+   "public_dialogue": [
+    {
+     "role": "counselor",
+     "content": "오늘 상담에서 어떤 이야기를 나누고 싶으신가요?"
+    }
+   ],
+   "revisits": [],
+   "records": []
+  }
+ }
+}

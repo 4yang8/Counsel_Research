@@ -1,0 +1,58 @@
+127.0.0.1 - - [12/Nov/2026 10:34:30] "GET /api/config HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/versions HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3public&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3oracle&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3full&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3select&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3ragtool&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3inner_memory&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=inner_memory_no&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3compare_memory&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3compare_memory_private_position&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3cm&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3cm_split&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3cm_temporal&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3cm_state&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3cm_tools&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3cm_review&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3cm_full&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=cm&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=cm_split&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=cm_temporal&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=cm_state&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=cm_tools&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=cm_review&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=cm_full&kind=system HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "POST /api/preview HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:32] "GET /api/prompts/source?role=client&version=Q3select&kind=memory_selector HTTP/1.1" 200 -
+.127.0.0.1 - - [12/Nov/2026 10:34:33] "GET /api/versions HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:33] "POST /api/tools HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:33] "POST /api/tools HTTP/1.1" 200 -
+127.0.0.1 - - [12/Nov/2026 10:34:33] "POST /api/chat HTTP/1.1" 200 -
+...
+----------------------------------------------------------------------
+Ran 4 tests in 3.717s
+
+OK
