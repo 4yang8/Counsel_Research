@@ -13,7 +13,7 @@ from .validation import validate
 from counselor.P1.runtime import write
 from runtime import reasoning_budget
 from runtime.cancellation import Cancelled
-from . import VERSIONS, INNER_VERSIONS
+from . import VERSIONS, INNER_VERSIONS, COMPARE_VERSION, COMPARE_STANCE_VERSION, COMPARE_VERSIONS, COMPARE_MODES, ALL_CM_VERSIONS
 from .memory import MODEL_PATH, chunk, digest, encode, retrieve
 
 HERE = Path(__file__).resolve().parent
@@ -22,7 +22,13 @@ LABELS = {'Q3public': '과거 비공개 정보 미제공', 'Q3oracle': '사람�
           'Q3full': '전체 과거 턴 직접 제공', 'Q3select': 'LLM이 전체 기록에서 선별',
           'Q3ragtool': '필요 시 RAG 도구 1회 · Top-3',
           'Q3inner_memory': '특성 라우터 + 관련 내면 최대 3턴 선별',
-          'inner_memory_no': '특성 라우터 + 과거 내면 미제공'}
+          'inner_memory_no': '특성 라우터 + 과거 내면 미제공',
+          COMPARE_VERSION: '공통 구간 뒤 분기 · 과거 내면 제공/미제공 비교',
+          COMPARE_STANCE_VERSION: '공통 구간 뒤 분기 · 상담사 말에 대한 입장 기록 추가'}
+LABELS.update(dict(cm='compare memory · 입장 기록 기본형', cm_split='실제 반응 / 표현 결정 분리',
+                   cm_temporal='과거 경험 / 현재 판단 분리', cm_state='사건별 내면 상태 갱신',
+                   cm_tools='필요 시 과거 내면 조회 툴', cm_review='발화 초안 검토', cm_full='시간·반응·표현·검토·상태 통합'))
+LABELS.update({'Q3'+v:LABELS[v] for v in ALL_CM_VERSIONS if v.startswith('cm')})
 DEFAULTS = dict(top_k=3, oracle_turns=[], oracle_plan={}, seed=None, input_char_limit=240000,
                 embedding_backend='local', embedding_path=MODEL_PATH, embedding_device='auto',
                 embedding_url='', embedding_model='Qwen/Qwen3-Embedding-4B', embedding_timeout=120)
@@ -45,6 +51,24 @@ STAGE = copy.deepcopy(Q3_TOOLS[0])
 STAGE['function']['parameters']['properties'].pop('trajectory_plan', None)
 STAGE['function']['parameters']['required'] = [k for k in STAGE['function']['parameters']['required'] if k != 'trajectory_plan']
 STAGE['function']['description'] = '이번 발화의 해석·감정·대화 의도·표현 계획을 비공개 기록합니다. 다음에 commit_client_utterance로 발화하세요.'
+INNER_STAGE = copy.deepcopy(STAGE)
+INNER_STAGE['function']['parameters']['properties']['private_position'] = obj({
+    'actual_wish': {'type':'string','description':'이번 상황에서 자신이 실제로 원하는 결과·선택·관계상의 바람. 상담사에게 할 말의 초안과 구분합니다. 아직 모르거나 상반된 바람이 있으면 그대로 기록합니다.'},
+    'intended_message': {'type':'string','description':'이번 발화로 상담사에게 전달하려는 의미·입장. 실제 바람과 같을 수도 있으며, 다르다고 강제하지 않습니다.'},
+    'withheld_content': {'type':'string','description':'현재 자신은 알고 있지만 이번 발화에서는 말하지 않기로 한 구체적인 생각·감정·이유. 없으면 없음, 아직 자신도 모르면 불확실이라고 적고 모르는 내용을 확정하지 않습니다.'},
+    'withholding_reason': {'type':'string','description':'그 내용을 지금 말하지 않기로 한 이유. 공개하면 어떤 일이 생길 것으로 예상하는지 등 현재 근거가 있는 이유만 씁니다. 보류 내용이 없으면 해당 없음, 이유를 모르겠으면 불확실이라고 적습니다.'},
+})
+INNER_STAGE['function']['parameters']['required'].append('private_position')
+INNER_STAGE['function']['description'] = '이번 해석·감정, 실제 바람과 전달하려는 의미, 보류 내용·이유, 대화 의도와 표현 계획을 구분해 비공개 기록합니다. 숨은 이유나 불일치를 강제하지 않습니다. 다음에 공개 발화를 확정하세요.'
+STANCE_STAGE = copy.deepcopy(INNER_STAGE)
+STANCE_STAGE['function']['parameters']['properties']['private_position'] = obj({
+    **INNER_STAGE['function']['parameters']['properties']['private_position']['properties'],
+    'counselor_stance': {'type':'string','enum':['agree','partly_agree','disagree','uncomfortable','unsure','none'],
+        'description':'이번 상담사의 말(제안·해석·질문)에 대한 자신의 실제 입장. 발화에서 어떻게 말할지와 상관없이 적습니다. agree=맞다고 느낌, partly_agree=일부만 맞음, disagree=맞지 않음, uncomfortable=맞고 틀림과 별개로 불편하거나 부담스러움, unsure=아직 모르겠음, none=입장을 가질 만한 말이 아님.'},
+    'stance_expression': {'type':'string','enum':['voiced','softened','not_voiced','none'],
+        'description':'그 입장을 이번 공개 발화에서 어떻게 하는지. voiced=그대로 말함, softened=약하게 줄여 말함, not_voiced=말하지 않음, none=counselor_stance가 none이어서 해당 없음.'},
+})
+STANCE_STAGE['function']['description'] = '이번 해석·감정, 실제 바람과 전달하려는 의미, 보류 내용·이유, 상담사의 말에 대한 실제 입장과 그 표현 여부, 대화 의도와 표현 계획을 구분해 비공개 기록합니다. 숨은 이유나 불일치를 강제하지 않습니다. 다음에 공개 발화를 확정하세요.'
 COMMIT = tool('commit_client_utterance', '앞서 기록한 내면에 따라 실제로 공개할 발화만 확정합니다.', obj({'utterance':{'type':'string','minLength':1}}))
 SEARCH = tool('search_private_turns', '필요할 때 이전 내담자 턴의 비공개 내면+실제 발화를 검색합니다. 발화 생성당 최대 1회, 상위 3개. 현재 판단 기록 전에 호출하세요.',
               obj({'query':{'type':'string','minLength':1, 'maxLength':2000}}))
@@ -126,6 +150,18 @@ def configure(config, body):
         if type(options[key]) is not int or not lo<=options[key]<=hi:
             raise ValueError(key+'의 범위를 확인하세요.')
     body['memory_options']=options
+    if version in COMPARE_VERSIONS:
+        # Session-level switch; stand-alone use behaves like the provided branch.
+        if body.setdefault('compare_memory_mode','provided') not in COMPARE_MODES:
+            raise ValueError('compare_memory_mode는 provided 또는 withheld입니다.')
+    if version in ALL_CM_VERSIONS and version not in ('cm','Q3cm'):
+        from .cm_runtime import bundle, STAGES
+        if 'cm_prompts' not in body:
+            body['cm_prompts'] = saved.get('cm_prompts') or bundle(version)
+        if not isinstance(body['cm_prompts'], dict) or set(body['cm_prompts']) != set(STAGES[version]):
+            raise ValueError('cm 단계 프롬프트 목록을 확인하세요.')
+        if any(not isinstance(v,str) or not v.strip() for v in body['cm_prompts'].values()):
+            raise ValueError('cm 단계 프롬프트가 비어 있습니다.')
     if version in INNER_VERSIONS:
         from .inner_router import PROMPT
         body.setdefault('memory_router_prompt', saved.get('router_prompt') or PROMPT.read_text())
@@ -164,6 +200,10 @@ def context(config, body, runtime, preview=False):
     signature=digest({'profile':scenario['profile'],'options':options,'system':body['system_prompt'],
                       'selector':body['memory_selector_prompt'],
                       **({'memory_policy':'llm_select_top3_v1'} if version=='Q3inner_memory' else {}),
+                      # Identical for both branches so a fork can continue the shared records.
+                      **({'memory_policy':'compare_fork_v1'} if version in COMPARE_VERSIONS else {}),
+                      **({'inner_record_schema':'private_position_stance_v1' if version==COMPARE_STANCE_VERSION or version in ALL_CM_VERSIONS else 'private_position_v1'} if version in INNER_VERSIONS else {}),
+                      **({'cm_pipeline':version,'cm_prompts':body.get('cm_prompts',{})} if version in ALL_CM_VERSIONS else {}),
                       **({'router':body['memory_router_prompt']} if version in INNER_VERSIONS else {})})
     if saved['revision'] and signature!=saved['signature']:
         raise ValueError('기억 실험 설정·프로필·지침이 달라졌습니다. 새 대화로 시작하세요.')
@@ -206,7 +246,8 @@ class MemoryRuntime:
     TOOL=STAGE
     def __init__(self,version):
         self.version=version;self.HERE=HERE.parent/version
-        self.TOOLS=copy.deepcopy([STAGE,COMMIT]+([SEARCH] if version=='Q3ragtool' else []))
+        self.TOOL=copy.deepcopy(STANCE_STAGE if version==COMPARE_STANCE_VERSION or version in ALL_CM_VERSIONS else INNER_STAGE if version in INNER_VERSIONS else STAGE)
+        self.TOOLS=copy.deepcopy([self.TOOL,COMMIT]+([SEARCH] if version=='Q3ragtool' else []))
 
     def specification(self):
         return {'id':self.version,'label':self.version+' · '+LABELS[self.version],
@@ -217,7 +258,7 @@ class MemoryRuntime:
                 'default_reasoning_budgets':{'main':None,'subagent':None},
                 'memory_defaults':copy.deepcopy(DEFAULTS),
                 'subagent_prompts':(([{'kind':'trait_router','label':'특성·배경 라우터 (공개 정보만)'}] if self.version in INNER_VERSIONS else []) +
-                    ([{'kind':'memory_selector','label':'기억 선별 담당'}] if self.version in ('Q3select','Q3inner_memory') else []))}
+                    ([{'kind':'memory_selector','label':'기억 선별 담당'}] if self.version in ('Q3select','Q3inner_memory',*COMPARE_VERSIONS) else []))}
 
     def load(self,config,sid):
         state=load(config,self.version,sid)
@@ -264,7 +305,8 @@ class MemoryRuntime:
             visible=[chunk(r) for r in ctx['records']]
         elif self.version=='Q3oracle':
             visible=oracle_records(ctx,options)
-        elif self.version in ('Q3select','Q3inner_memory') and ctx['records']:
+        elif (self.version in ('Q3select','Q3inner_memory') or
+              (self.version in COMPARE_VERSIONS and body['compare_memory_mode']=='provided')) and ctx['records']:
             began=time.monotonic()
             schema=obj({'turns':{'type':'array','items':{'type':'integer','enum':[r['turn'] for r in ctx['records']]},'maxItems':3,'uniqueItems':True}})
             req=build(config,{'system_prompt':body['memory_selector_prompt'],
@@ -356,6 +398,8 @@ class MemoryRuntime:
                     'selection':selection,'metrics':metrics,'model_requests':requests,'agent_usage':usages}
             if self.version in INNER_VERSIONS:
                 record['selected_traits'] = copy.deepcopy(ctx['selected_traits'])
+            if self.version in COMPARE_VERSIONS:
+                record['memory_mode'] = body['compare_memory_mode']
             saved={'revision':ctx['saved']['revision']+1,'signature':ctx['signature'],
                    'records':ctx['records']+[record], 'public_dialogue':ctx['public']+[{'role':'client','content':speech['utterance']}],
                    'options':options,'selector_prompt':body['memory_selector_prompt']}
@@ -385,6 +429,8 @@ class MemoryRuntime:
 
 
 RUNTIMES={version:MemoryRuntime(version) for version in VERSIONS}
+from .cm_runtime import CompareRuntime
+RUNTIMES.update({version:CompareRuntime(version) for version in ALL_CM_VERSIONS if version not in ('cm','Q3cm')})
 
 
 def snapshot(config,version,sid):

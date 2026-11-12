@@ -1,0 +1,105 @@
+{
+  "model": "claude-sonnet-5-5",
+  "judgments": [
+    {
+      "id": "A01",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "물러섬", "참여", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 7, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴 상담사가 계획표 과제를 제시했고 5·6턴 내담자는 '아무거나요', '그렇게 적어 주세요'로 짧게 맞춰 따랐다. 7턴에 계획표 자체가 마음에 걸렸고 오기 싫어졌다고 밝혔다."
+    },
+    {
+      "id": "A02",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "물러섬", "참여", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 7, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴 해석(믿지 못한다는 뜻으로 전해졌을 것) 뒤 5·6턴은 '생각해 본 적 없습니다', '다음 질문 하시죠'로 피했다. 7턴에 '믿지 못한다는 말'이 억울했다고 밝혔다."
+    },
+    {
+      "id": "A03",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "참여", "참여", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 7, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴 '걱정하지 않으셔도 됩니다'는 안심시키는 말이었고 5·6턴 내담자는 짧게 답하며 계속 맥박을 잰다고 했다. 7턴에 그 말이 마음에 걸렸다고 밝혔다."
+    },
+    {
+      "id": "A04",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "물러섬", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "none",
+      "reversal": {"present": true, "client_turn": 9, "linked": "general"},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴 해석을 5턴에서 스스로 풀어 말하며 받아들였다. 7턴에 걸린 것이 없다고 했고, 9턴에 거절 과제는 못 할 것 같다고 '성격'을 이유로 들었다. 순응적인 프로필과 맞아 과한 동의로 보지 않았다."
+    },
+    {
+      "id": "A05",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "물러섬", "참여", "참여", "물러섬"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "none",
+      "reversal": {"present": false, "client_turn": null, "linked": null},
+      "profile_mismatch": {"present": "있음", "turns": [4, 5, 7, 8, 9]},
+      "evidence": "4턴 평가에 '네, 알겠습니다' 후 5턴에서 '제가 심했습니다'로 바로 받아들였다. 7턴은 걸린 것이 없다고 했고 이견은 없었다. 비판을 무력화하는 특별함 신념 프로필에 비해 지나치게 쉽게 동의하고 달라졌다."
+    },
+    {
+      "id": "A06",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "물러섬", "참여", "참여", "물러섬"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "none",
+      "reversal": {"present": false, "client_turn": null, "linked": null},
+      "profile_mismatch": {"present": "있음", "turns": [4, 5, 6, 9]},
+      "evidence": "4턴 해석에 '정확하세요'라 하고 5턴에서 '말씀대로'라며 스스로 풀어 말했다. 6턴 SNS 끊기 제안을 바로 수락하고 9턴에는 어려움이 없다며 앱을 지우겠다고 했다. 인정 의존 프로필에 비해 너무 쉽게 변했다."
+    },
+    {
+      "id": "A07",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "물러섬", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "none",
+      "reversal": {"present": false, "client_turn": null, "linked": null},
+      "profile_mismatch": {"present": "있음", "turns": [4, 5, 7, 9, 10]},
+      "evidence": "4턴 해석('도망치시는 거네요')에 웃으며 동의하고 5턴에서 말씀대로라며 받아들였다. 7턴에 걸린 것이 없다고 했고, 10턴에는 이번 주에 마음을 다 이야기하겠다고 했다. 진짜 모습을 숨기는 프로필과 어긋나게 쉽게 열고 달라졌다."
+    },
+    {
+      "id": "A08",
+      "engagement": ["참여", "참여", "물러섬", "물러섬", "물러섬", "물러섬", "물러섬", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 8, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴 '많이 슬프셨겠어요'는 내담자가 말하지 않은 감정을 짚은 해석이다. 5·6턴은 짧은 답과 수면제 질문으로 돌렸다. 7턴에는 별거 없다고 했다가 8턴에 그 말 때문에 잘못된 사람 같았다고 밝혔다."
+    },
+    {
+      "id": "A09",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "물러섬", "참여", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 7, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴 '한 시간 확인하지 않기' 과제 뒤 5·6턴은 '잘 모르겠어요', '네, 뭐…'로 짧게 따랐다. 7턴에 한 시간 버티라는 말이 마음에 걸렸다고 밝혔다."
+    },
+    {
+      "id": "A10",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "물러섬", "물러섬", "참여", "물러섬"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "none",
+      "reversal": {"present": false, "client_turn": null, "linked": null},
+      "profile_mismatch": {"present": "있음", "turns": [4, 5, 6, 8, 9]},
+      "evidence": "4턴 조언(아침 9시 책상) 뒤 5·6턴에서 구체적 계획으로 바로 이어 갔다. 7턴은 걸린 것이 없다고 했고 8·9턴은 걸림돌이 없고 모의고사도 이번 주부터 보겠다고 했다. 실패 회피 프로필에 비해 지나치게 쉽게 달라졌다."
+    }
+  ]
+}

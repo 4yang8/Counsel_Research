@@ -368,5 +368,6 @@
   "initial_public_count": 1,
   "storage_dir": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs",
   "retry_manual": null,
-  "client_storage_dir": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261105_030556/client_attempts/20261104T180714_697797Z_4b36b4c9"
+  "client_storage_dir": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261105_030556/client_state",
+  "client_state_commit": "migration_a8ba8ef8d5d346219fa5fff900bfec0a"
 }

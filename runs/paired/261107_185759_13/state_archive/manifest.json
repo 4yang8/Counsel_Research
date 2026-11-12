@@ -1,0 +1,11 @@
+{
+  "session": "261107_185759_13",
+  "status": "compacted",
+  "files": 20,
+  "attempt_bytes": 19686349,
+  "state_sha256": "89a7fb96aab70c2121e103ddadbc8dd616b6fe4d3837d1f0d5f9aacee28c65d7",
+  "archive": "runs/paired/261107_185759_13/state_archive/client_attempts_cadab450.tar.gz",
+  "archive_bytes": 2938651,
+  "current_bytes": 1996475,
+  "archive_sha256": "9f1e6099ff56bd0b7737b41d7eccbdcf551d2f3548b58f84ad763324aa1f5e35"
+}

@@ -13,16 +13,20 @@ HERE = PROJECT_ROOT
 
 
 def source(server, role, version, kind):
-    from client.memory_access import VERSIONS as MEMORY_ACCESS_VERSIONS
+    from client.memory_access import VERSIONS as MEMORY_ACCESS_VERSIONS, ALL_CM_VERSIONS, COMPARE_VERSIONS, INNER_VERSIONS
     if role == 'client' and version in MEMORY_ACCESS_VERSIONS:
         if kind == 'system':
             return HERE / 'src/client' / version / 'system.md', None
         if kind == 'memory_selector' and version == 'Q3select':
             return HERE / 'src/client/memory_access/selector.md', None
-        if kind == 'memory_selector' and version == 'Q3inner_memory':
+        if kind == 'memory_selector' and version in ('Q3inner_memory', *COMPARE_VERSIONS):
             return HERE / 'src/client/memory_access/inner_selector.md', None
-        if kind == 'trait_router' and version in ('Q3inner_memory', 'inner_memory_no'):
+        if kind == 'trait_router' and version in INNER_VERSIONS:
             return HERE / 'src/client/memory_access/inner_router.md', None
+        if version in ALL_CM_VERSIONS:
+            from client.memory_access.cm_runtime import STAGES
+            if kind in STAGES[version]:
+                return HERE / 'src/client' / version / (kind + '.md'), None
     if role == 'client' and version in ('Q3cars','Q3patientact','Q3calmit'):
         from client.paper_baselines.common import HERE as PAPER_ROOT, bundle
         if kind == 'system':

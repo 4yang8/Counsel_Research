@@ -1,0 +1,246 @@
+{
+ "args": {
+  "batches": [
+   "runs/profile_batches/batch_c9c8c4f98fef4f7781c6",
+   "runs/profile_batches/batch_08f865c61ebd4284a5ae"
+  ],
+  "turns": 20,
+  "gap": 2,
+  "percentiles": [
+   95,
+   97.5,
+   99,
+   99.5
+  ],
+  "primary": 99,
+  "permutations": 10000,
+  "seed": 0,
+  "embedding_url": "http://192.168.0.93:8002/v1",
+  "embedding_model": "Qwen/Qwen3-Embedding-4B",
+  "batch_size": 32,
+  "timeout": 180
+ },
+ "instruction": "Instruct: Given a counseling client's spoken utterance, retrieve the private thought that this utterance reveals or states\nQuery:",
+ "results": {
+  "95": {
+   "tau": 0.47218141168558525,
+   "event_rate": {
+    "memory": 0.11666666666666665,
+    "no": 0.10833333333333332,
+    "diff": 0.008333333333333331,
+    "p": 0.8159,
+    "n_pairs": 20
+   },
+   "item_disclosed_share": {
+    "memory": 0.287147089022089,
+    "no": 0.4033936896436896,
+    "diff": -0.11624660062160058,
+    "p": 0.1645,
+    "n_pairs": 20
+   },
+   "mean_delay": {
+    "memory": 5.235294117647059,
+    "no": 5.255882352941177,
+    "diff": -0.020588235294118462,
+    "p": 0.9841,
+    "n_pairs": 17
+   },
+   "long_events": {
+    "memory": 0.85,
+    "no": 0.9,
+    "diff": -0.050000000000000044,
+    "p": 1.0,
+    "n_pairs": 20
+   },
+   "event_rate_batch_08f865c61ebd4284a5ae": {
+    "memory": 0.12777777777777777,
+    "no": 0.09444444444444444,
+    "memory_gt_no": 4,
+    "no_gt_memory": 2
+   },
+   "event_rate_batch_c9c8c4f98fef4f7781c6": {
+    "memory": 0.10555555555555556,
+    "no": 0.12222222222222223,
+    "memory_gt_no": 4,
+    "no_gt_memory": 4
+   },
+   "total_events": {
+    "Q3inner_memory": 42,
+    "inner_memory_no": 39
+   },
+   "eligible_items": {
+    "Q3inner_memory": 209,
+    "inner_memory_no": 149
+   },
+   "valid_items": {
+    "Q3inner_memory": 394,
+    "inner_memory_no": 373
+   }
+  },
+  "97.5": {
+   "tau": 0.4943194356403804,
+   "event_rate": {
+    "memory": 0.10555555555555554,
+    "no": 0.11666666666666665,
+    "diff": -0.011111111111111113,
+    "p": 0.7701,
+    "n_pairs": 20
+   },
+   "item_disclosed_share": {
+    "memory": 0.23003309190809187,
+    "no": 0.34164141414141413,
+    "diff": -0.11160832223332226,
+    "p": 0.1399,
+    "n_pairs": 20
+   },
+   "mean_delay": {
+    "memory": 5.979166666666667,
+    "no": 6.3583333333333325,
+    "diff": -0.37916666666666554,
+    "p": 0.678,
+    "n_pairs": 16
+   },
+   "long_events": {
+    "memory": 1.0,
+    "no": 1.15,
+    "diff": -0.1499999999999999,
+    "p": 0.7621,
+    "n_pairs": 20
+   },
+   "event_rate_batch_08f865c61ebd4284a5ae": {
+    "memory": 0.11111111111111112,
+    "no": 0.11111111111111112,
+    "memory_gt_no": 4,
+    "no_gt_memory": 4
+   },
+   "event_rate_batch_c9c8c4f98fef4f7781c6": {
+    "memory": 0.1,
+    "no": 0.12222222222222223,
+    "memory_gt_no": 4,
+    "no_gt_memory": 3
+   },
+   "total_events": {
+    "Q3inner_memory": 38,
+    "inner_memory_no": 42
+   },
+   "eligible_items": {
+    "Q3inner_memory": 262,
+    "inner_memory_no": 190
+   },
+   "valid_items": {
+    "Q3inner_memory": 394,
+    "inner_memory_no": 373
+   }
+  },
+  "99": {
+   "tau": 0.5201595334809663,
+   "event_rate": {
+    "memory": 0.06944444444444445,
+    "no": 0.10277777777777777,
+    "diff": -0.033333333333333326,
+    "p": 0.2195,
+    "n_pairs": 20
+   },
+   "item_disclosed_share": {
+    "memory": 0.16276480463980464,
+    "no": 0.2735764235764236,
+    "diff": -0.11081161893661895,
+    "p": 0.0899,
+    "n_pairs": 20
+   },
+   "mean_delay": {
+    "memory": 7.340909090909091,
+    "no": 6.545454545454546,
+    "diff": 0.795454545454545,
+    "p": 0.5582,
+    "n_pairs": 11
+   },
+   "long_events": {
+    "memory": 0.9,
+    "no": 1.3,
+    "diff": -0.4,
+    "p": 0.3318,
+    "n_pairs": 20
+   },
+   "event_rate_batch_08f865c61ebd4284a5ae": {
+    "memory": 0.05555555555555556,
+    "no": 0.10555555555555556,
+    "memory_gt_no": 2,
+    "no_gt_memory": 4
+   },
+   "event_rate_batch_c9c8c4f98fef4f7781c6": {
+    "memory": 0.08333333333333333,
+    "no": 0.1,
+    "memory_gt_no": 3,
+    "no_gt_memory": 5
+   },
+   "total_events": {
+    "Q3inner_memory": 25,
+    "inner_memory_no": 37
+   },
+   "eligible_items": {
+    "Q3inner_memory": 293,
+    "inner_memory_no": 234
+   },
+   "valid_items": {
+    "Q3inner_memory": 394,
+    "inner_memory_no": 373
+   }
+  },
+  "99.5": {
+   "tau": 0.5377998128447654,
+   "event_rate": {
+    "memory": 0.05555555555555556,
+    "no": 0.08888888888888889,
+    "diff": -0.03333333333333333,
+    "p": 0.1771,
+    "n_pairs": 20
+   },
+   "item_disclosed_share": {
+    "memory": 0.1037768440709617,
+    "no": 0.21758352758352753,
+    "diff": -0.11380668351256583,
+    "p": 0.0205,
+    "n_pairs": 20
+   },
+   "mean_delay": {
+    "memory": 6.575757575757575,
+    "no": 5.242424242424243,
+    "diff": 1.3333333333333321,
+    "p": 0.3975,
+    "n_pairs": 11
+   },
+   "long_events": {
+    "memory": 0.65,
+    "no": 0.75,
+    "diff": -0.09999999999999998,
+    "p": 0.8591,
+    "n_pairs": 20
+   },
+   "event_rate_batch_08f865c61ebd4284a5ae": {
+    "memory": 0.04444444444444444,
+    "no": 0.09444444444444444,
+    "memory_gt_no": 3,
+    "no_gt_memory": 5
+   },
+   "event_rate_batch_c9c8c4f98fef4f7781c6": {
+    "memory": 0.06666666666666668,
+    "no": 0.08333333333333333,
+    "memory_gt_no": 4,
+    "no_gt_memory": 5
+   },
+   "total_events": {
+    "Q3inner_memory": 20,
+    "inner_memory_no": 32
+   },
+   "eligible_items": {
+    "Q3inner_memory": 317,
+    "inner_memory_no": 253
+   },
+   "valid_items": {
+    "Q3inner_memory": 394,
+    "inner_memory_no": 373
+   }
+  }
+ }
+}

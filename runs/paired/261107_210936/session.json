@@ -395,5 +395,6 @@
   "storage_dir": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs",
   "batch_managed": "batch_efdd8cbde26045ab8851",
   "retry_manual": null,
-  "client_storage_dir": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261107_210936/client_attempts/20261107T121243_793263Z_c2d4fa2b"
+  "client_storage_dir": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261107_210936/client_state",
+  "client_state_commit": "migration_a4fd9535b294483a8f9c28fe0ecdec7b"
 }

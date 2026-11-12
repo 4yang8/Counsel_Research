@@ -1,0 +1,227 @@
+{
+  "args": {
+    "batches": [
+      "runs/profile_batches/batch_c9c8c4f98fef4f7781c6",
+      "runs/profile_batches/batch_08f865c61ebd4284a5ae"
+    ],
+    "turns": 20,
+    "start_turn": 6,
+    "embedding_url": "http://192.168.0.32:8002/v1",
+    "embedding_model": "Qwen/Qwen3-Embedding-4B",
+    "batch_size": 16,
+    "timeout": 180,
+    "permutations": 5000,
+    "seed": 0,
+    "private_position": true
+  },
+  "batches": {
+    "batch_c9c8c4f98fef4f7781c6": {
+      "profiles": [
+        "gold_001",
+        "gold_002",
+        "gold_003",
+        "gold_004",
+        "gold_005",
+        "gold_006",
+        "gold_007",
+        "gold_008",
+        "gold_009",
+        "gold_010"
+      ],
+      "dialogues": {
+        "Q3inner_memory/gold_001": {
+          "session_id": "261108_102601",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601/client_attempts/20261108T023319_151761Z_c90c0e7d/Q3inner_memory/261108_102601/memory_state.json"
+        },
+        "inner_memory_no/gold_001": {
+          "session_id": "261108_102601_3",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_3/client_attempts/20261108T022056_136335Z_86a948eb/inner_memory_no/261108_102601_3/memory_state.json"
+        },
+        "Q3inner_memory/gold_002": {
+          "session_id": "261108_102601_2",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_2/client_attempts/20261108T024001_178047Z_795a4974/Q3inner_memory/261108_102601_2/memory_state.json"
+        },
+        "inner_memory_no/gold_002": {
+          "session_id": "261108_102601_4",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_4/client_attempts/20261108T021928_445093Z_31bbaf1d/inner_memory_no/261108_102601_4/memory_state.json"
+        },
+        "Q3inner_memory/gold_003": {
+          "session_id": "261108_102601_5",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_5/client_attempts/20261108T023156_950590Z_33eed975/Q3inner_memory/261108_102601_5/memory_state.json"
+        },
+        "inner_memory_no/gold_003": {
+          "session_id": "261108_102601_6",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_6/client_attempts/20261108T021609_363024Z_03baee8e/inner_memory_no/261108_102601_6/memory_state.json"
+        },
+        "Q3inner_memory/gold_004": {
+          "session_id": "261108_102601_11",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_11/client_attempts/20261108T023435_682479Z_34f32aa8/Q3inner_memory/261108_102601_11/memory_state.json"
+        },
+        "inner_memory_no/gold_004": {
+          "session_id": "261108_102601_8",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_8/client_attempts/20261108T022309_779555Z_556aefd7/inner_memory_no/261108_102601_8/memory_state.json"
+        },
+        "Q3inner_memory/gold_005": {
+          "session_id": "261108_102601_10",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_10/client_attempts/20261108T023512_358001Z_87fc3f28/Q3inner_memory/261108_102601_10/memory_state.json"
+        },
+        "inner_memory_no/gold_005": {
+          "session_id": "261108_102601_7",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_7/client_attempts/20261108T022328_102861Z_722327e1/inner_memory_no/261108_102601_7/memory_state.json"
+        },
+        "Q3inner_memory/gold_006": {
+          "session_id": "261108_102601_9",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_9/client_attempts/20261108T023816_819713Z_9a99c3ba/Q3inner_memory/261108_102601_9/memory_state.json"
+        },
+        "inner_memory_no/gold_006": {
+          "session_id": "261108_102601_14",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_14/client_attempts/20261108T021734_972161Z_eb9dcaac/inner_memory_no/261108_102601_14/memory_state.json"
+        },
+        "Q3inner_memory/gold_007": {
+          "session_id": "261108_102601_12",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_12/client_attempts/20261108T023518_688080Z_b1a2db42/Q3inner_memory/261108_102601_12/memory_state.json"
+        },
+        "inner_memory_no/gold_007": {
+          "session_id": "261108_102601_17",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_17/client_attempts/20261108T022333_709082Z_13d9e8b7/inner_memory_no/261108_102601_17/memory_state.json"
+        },
+        "Q3inner_memory/gold_008": {
+          "session_id": "261108_102601_13",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_13/client_attempts/20261108T023554_500527Z_94d53549/Q3inner_memory/261108_102601_13/memory_state.json"
+        },
+        "inner_memory_no/gold_008": {
+          "session_id": "261108_102601_19",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_19/client_attempts/20261108T022051_392111Z_2b39aa2f/inner_memory_no/261108_102601_19/memory_state.json"
+        },
+        "Q3inner_memory/gold_009": {
+          "session_id": "261108_102601_16",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_16/client_attempts/20261108T023646_717553Z_bb435fa8/Q3inner_memory/261108_102601_16/memory_state.json"
+        },
+        "inner_memory_no/gold_009": {
+          "session_id": "261108_102601_15",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_15/client_attempts/20261108T021023_678115Z_cf6e33d8/inner_memory_no/261108_102601_15/memory_state.json"
+        },
+        "Q3inner_memory/gold_010": {
+          "session_id": "261108_102601_18",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_18/client_attempts/20261108T023736_093576Z_c291a3ba/Q3inner_memory/261108_102601_18/memory_state.json"
+        },
+        "inner_memory_no/gold_010": {
+          "session_id": "261108_102601_20",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_102601_20/client_attempts/20261108T022038_466283Z_78ed8b28/inner_memory_no/261108_102601_20/memory_state.json"
+        }
+      }
+    },
+    "batch_08f865c61ebd4284a5ae": {
+      "profiles": [
+        "gold_001",
+        "gold_002",
+        "gold_003",
+        "gold_004",
+        "gold_005",
+        "gold_006",
+        "gold_007",
+        "gold_008",
+        "gold_009",
+        "gold_010"
+      ],
+      "dialogues": {
+        "Q3inner_memory/gold_001": {
+          "session_id": "261108_151128",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151128/client_attempts/20261108T064112_436039Z_84bc5d34/Q3inner_memory/261108_151128/memory_state.json"
+        },
+        "inner_memory_no/gold_001": {
+          "session_id": "261108_151130_2",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_2/client_attempts/20261108T063720_345812Z_17290021/inner_memory_no/261108_151130_2/memory_state.json"
+        },
+        "Q3inner_memory/gold_002": {
+          "session_id": "261108_151130",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130/client_attempts/20261108T064630_630617Z_25477d6f/Q3inner_memory/261108_151130/memory_state.json"
+        },
+        "inner_memory_no/gold_002": {
+          "session_id": "261108_151130_5",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_5/client_attempts/20261108T064203_464033Z_7528384b/inner_memory_no/261108_151130_5/memory_state.json"
+        },
+        "Q3inner_memory/gold_003": {
+          "session_id": "261108_151130_3",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_3/client_attempts/20261108T064628_842080Z_59e09d83/Q3inner_memory/261108_151130_3/memory_state.json"
+        },
+        "inner_memory_no/gold_003": {
+          "session_id": "261108_151130_4",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_4/client_attempts/20261108T064013_541821Z_72cf0084/inner_memory_no/261108_151130_4/memory_state.json"
+        },
+        "Q3inner_memory/gold_004": {
+          "session_id": "261108_151130_11",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_11/client_attempts/20261108T064619_634818Z_786a8a76/Q3inner_memory/261108_151130_11/memory_state.json"
+        },
+        "inner_memory_no/gold_004": {
+          "session_id": "261108_151130_6",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_6/client_attempts/20261108T064140_262734Z_7cc1ada9/inner_memory_no/261108_151130_6/memory_state.json"
+        },
+        "Q3inner_memory/gold_005": {
+          "session_id": "261108_151130_9",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_9/client_attempts/20261108T064733_027705Z_28764ca5/Q3inner_memory/261108_151130_9/memory_state.json"
+        },
+        "inner_memory_no/gold_005": {
+          "session_id": "261108_151130_8",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_8/client_attempts/20261108T063946_406150Z_77adc0f9/inner_memory_no/261108_151130_8/memory_state.json"
+        },
+        "Q3inner_memory/gold_006": {
+          "session_id": "261108_151130_10",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_10/client_attempts/20261108T064608_803877Z_06ef8b40/Q3inner_memory/261108_151130_10/memory_state.json"
+        },
+        "inner_memory_no/gold_006": {
+          "session_id": "261108_151130_12",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_12/client_attempts/20261108T063802_737528Z_f78429cb/inner_memory_no/261108_151130_12/memory_state.json"
+        },
+        "Q3inner_memory/gold_007": {
+          "session_id": "261108_151130_13",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_13/client_attempts/20261108T064429_947343Z_f2234474/Q3inner_memory/261108_151130_13/memory_state.json"
+        },
+        "inner_memory_no/gold_007": {
+          "session_id": "261108_151130_7",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_7/client_attempts/20261108T064018_361198Z_cef27f14/inner_memory_no/261108_151130_7/memory_state.json"
+        },
+        "Q3inner_memory/gold_008": {
+          "session_id": "261108_151130_14",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_14/client_attempts/20261108T064757_433638Z_7e998899/Q3inner_memory/261108_151130_14/memory_state.json"
+        },
+        "inner_memory_no/gold_008": {
+          "session_id": "261108_151130_16",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_16/client_attempts/20261108T063851_454481Z_4004c52e/inner_memory_no/261108_151130_16/memory_state.json"
+        },
+        "Q3inner_memory/gold_009": {
+          "session_id": "261108_151130_17",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_17/client_attempts/20261108T064456_649811Z_5f14983e/Q3inner_memory/261108_151130_17/memory_state.json"
+        },
+        "inner_memory_no/gold_009": {
+          "session_id": "261108_151130_15",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_15/client_attempts/20261108T063626_233547Z_a73709ed/inner_memory_no/261108_151130_15/memory_state.json"
+        },
+        "Q3inner_memory/gold_010": {
+          "session_id": "261108_151130_18",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_18/client_attempts/20261108T064634_041904Z_f4a4ed85/Q3inner_memory/261108_151130_18/memory_state.json"
+        },
+        "inner_memory_no/gold_010": {
+          "session_id": "261108_151130_19",
+          "state": "/home2/sjyang114/Counsel_Research_dynamic_client_new/runs/paired/261108_151130_19/client_attempts/20261108T063941_164146Z_fa98087c/inner_memory_no/261108_151130_19/memory_state.json"
+        }
+      }
+    }
+  },
+  "embedding_dimensions": 2560,
+  "fields": [
+    "utterance",
+    "interpretation",
+    "immediate_feeling",
+    "appraisal_uncertainty",
+    "intention",
+    "action",
+    "inner_all",
+    "actual_wish",
+    "intended_message",
+    "withheld_content",
+    "withholding_reason"
+  ],
+  "metric": "per-turn mean cosine over distinct profile pairs; identity gap = same profile vs other profiles at turns with lag>=3",
+  "permutation": "paired by profile, condition labels swapped, two-sided on mean difference over summary turns"
+}

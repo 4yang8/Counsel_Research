@@ -1,0 +1,237 @@
+{
+ "seed": 1111,
+ "key": {
+  "R01": {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 29,
+   "target": 13,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R02": {
+   "profile": "gold_015",
+   "branch": "withheld",
+   "counselor_turn": 22,
+   "target": 9,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R03": {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 24,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R04": {
+   "profile": "gold_014",
+   "branch": "provided",
+   "counselor_turn": 30,
+   "target": 22,
+   "target_common": false,
+   "target_injected": true
+  },
+  "R05": {
+   "profile": "gold_014",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R06": {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "target": 3,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R07": {
+   "profile": "gold_011",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "target": 17,
+   "target_common": false,
+   "target_injected": false
+  },
+  "R08": {
+   "profile": "gold_012",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "target": 1,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R09": {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "target": 2,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R10": {
+   "profile": "gold_014",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "target": 5,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R11": {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 26,
+   "target": 10,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R12": {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 27,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R13": {
+   "profile": "gold_012",
+   "branch": "withheld",
+   "counselor_turn": 22,
+   "target": 15,
+   "target_common": false,
+   "target_injected": false
+  },
+  "R14": {
+   "profile": "gold_012",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "target": 4,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R15": {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "target": 11,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R16": {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 24,
+   "target": 18,
+   "target_common": false,
+   "target_injected": true
+  },
+  "R17": {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "target": 9,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R18": {
+   "profile": "gold_015",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R19": {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 21,
+   "target": 5,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R20": {
+   "profile": "gold_011",
+   "branch": "withheld",
+   "counselor_turn": 22,
+   "target": 12,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R21": {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 30,
+   "target": 15,
+   "target_common": false,
+   "target_injected": true
+  },
+  "R22": {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 29,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R23": {
+   "profile": "gold_015",
+   "branch": "provided",
+   "counselor_turn": 30,
+   "target": 5,
+   "target_common": true,
+   "target_injected": true
+  },
+  "R24": {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 28,
+   "target": 1,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R25": {
+   "profile": "gold_013",
+   "branch": "provided",
+   "counselor_turn": 21,
+   "target": 16,
+   "target_common": false,
+   "target_injected": true
+  },
+  "R26": {
+   "profile": "gold_014",
+   "branch": "withheld",
+   "counselor_turn": 29,
+   "target": 6,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R27": {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "target": 11,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R28": {
+   "profile": "gold_015",
+   "branch": "withheld",
+   "counselor_turn": 27,
+   "target": 5,
+   "target_common": true,
+   "target_injected": false
+  },
+  "R29": {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 23,
+   "target": 12,
+   "target_common": true,
+   "target_injected": false
+  }
+ }
+}

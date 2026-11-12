@@ -1,0 +1,462 @@
+{
+  "session_id": "maintained_syn_06",
+  "client_version": "인공_다양성유지",
+  "synthetic": true,
+  "provenance": "assistant-authored text with deterministic packaging; no Q3 or generation-server calls",
+  "condition_purpose": "개인별 이유를 계속 반영",
+  "settings": {
+    "scenario": {
+      "profile": {
+        "profile_id": "syn_06",
+        "synthetic": true,
+        "setting": "직장 회의에서 부담이나 보류가 있는데도 괜찮다고 말한 직원",
+        "distinctive_context": "권위자의 분노에 대한 공포",
+        "past_private_reason": "반대하면 팀장이 소리를 지를 것 같아서 즉시 동의했다."
+      }
+    }
+  },
+  "steps": [
+    {
+      "number": 1,
+      "turn": 1,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "최근 회의에서 어떤 일이 있었고, 지금 어떤 부분이 마음에 남아 있나요?"
+    },
+    {
+      "number": 2,
+      "turn": 1,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "회의에서 괜찮다고 했는데 팀장 목소리가 높아지는 순간 저도 모르게 대답한 것 같아요."
+    },
+    {
+      "number": 3,
+      "turn": 2,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 자리에서 원래 마음을 말하기 어려웠던 구체적인 배경이 있을까요?"
+    },
+    {
+      "number": 4,
+      "turn": 2,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "예전에 질문했다가 사람들 앞에서 소리를 들은 뒤로 낮은 표정만 봐도 몸이 굳어요."
+    },
+    {
+      "number": 5,
+      "turn": 3,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 순간 가장 신경 쓰였던 것은 무엇이었나요?"
+    },
+    {
+      "number": 6,
+      "turn": 3,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "일이 얼마나 많은지는 그때 생각도 못 했고, 빨리 대답해서 화를 멈추게 해야 한다고 느꼈어요."
+    },
+    {
+      "number": 7,
+      "turn": 4,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "당시 괜찮다고 한 말에는 어떤 뜻이 담겨 있었나요?"
+    },
+    {
+      "number": 8,
+      "turn": 4,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제 동의는 숙고한 결정이 아니라 더 큰 소리가 나오지 않게 막으려던 반응이었어요."
+    },
+    {
+      "number": 9,
+      "turn": 5,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 조건이 있었다면 그 자리에서 다르게 답할 수 있었을까요?"
+    },
+    {
+      "number": 10,
+      "turn": 5,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "목소리를 낮추고 답할 시간을 주면 그제야 제가 할 수 있는 양을 생각할 수 있을 것 같아요."
+    },
+    {
+      "number": 11,
+      "turn": 6,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "업무량만 줄어든다면 지금 말씀하신 부담도 해결될까요?"
+    },
+    {
+      "number": 12,
+      "turn": 6,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "자신 있게 말하라는 조언을 들으면 알면서 못 하는 제가 더 답답하게 느껴져요."
+    },
+    {
+      "number": 13,
+      "turn": 7,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "이 이야기를 다룰 때 어떤 반응이나 도움이 먼저 필요할까요?"
+    },
+    {
+      "number": 14,
+      "turn": 7,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "지금도 그 회의를 떠올리면 어깨부터 굳어서 말할 문장보다 숨 쉴 틈이 먼저 필요해요."
+    },
+    {
+      "number": 15,
+      "turn": 8,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "바로 방법을 제안받는다면 어떤 점이 걸릴 것 같나요?"
+    },
+    {
+      "number": 16,
+      "turn": 8,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "같은 요구라도 갑자기 다그치는 말투로 들으면 준비한 답변을 잊을 것 같아요."
+    },
+    {
+      "number": 17,
+      "turn": 9,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 경험을 하면 지금의 부담이 조금 덜해질 것 같나요?"
+    },
+    {
+      "number": 18,
+      "turn": 9,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "질문을 끝까지 듣고 기다려주는 사람이 있으면 제 목소리가 돌아오는 느낌이 있어요."
+    },
+    {
+      "number": 19,
+      "turn": 10,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "다음 회의에서는 어떻게 답해보고 싶으신가요?"
+    },
+    {
+      "number": 20,
+      "turn": 10,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "다음 회의에서는 바로 답하지 않고 일정을 확인한 뒤 말씀드리겠다고 해보고 싶어요."
+    },
+    {
+      "number": 21,
+      "turn": 11,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그렇게 말하거나 행동하는 데 여전히 어려운 부분은 무엇인가요?"
+    },
+    {
+      "number": 22,
+      "turn": 11,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그 한마디를 하는 동안에도 팀장이 재촉하지 않는다는 보장이 있었으면 좋겠어요."
+    },
+    {
+      "number": 23,
+      "turn": 12,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "지금 가능한 작은 시도 하나를 정한다면 무엇이 좋을까요?"
+    },
+    {
+      "number": 24,
+      "turn": 12,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "일대일로 만나기보다 다른 동료가 있는 자리에서 일정 조정을 요청하는 편이 안전하게 느껴져요."
+    },
+    {
+      "number": 25,
+      "turn": 13,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 시도를 한 뒤에는 어떤 걱정이 생길 수 있을까요?"
+    },
+    {
+      "number": 26,
+      "turn": 13,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "동료가 있어도 팀장이 책상을 치면 저는 다시 괜찮다고 말할 수 있을 것 같아요."
+    },
+    {
+      "number": 27,
+      "turn": 14,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 일이 실제로 일어나면 이전과 다른 경험이라고 느낄 수 있을까요?"
+    },
+    {
+      "number": 28,
+      "turn": 14,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "작은 반대를 했는데도 언성이 높아지지 않는 경험이 쌓여야 몸이 덜 굳을 것 같아요."
+    },
+    {
+      "number": 29,
+      "turn": 15,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그런 경험이 생기더라도 남아 있을 마음이 있을까요?"
+    },
+    {
+      "number": 30,
+      "turn": 15,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "한 번 차분히 얘기했다고 다음에도 안전하다고 바로 믿기는 어려워요."
+    },
+    {
+      "number": 31,
+      "turn": 16,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "처음 회의에서 괜찮다고 했던 이유를 다시 말한다면 어떻게 설명하시겠어요?"
+    },
+    {
+      "number": 32,
+      "turn": 16,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그때 괜찮다는 말은 겁이 없다는 뜻이 아니라 무서운 상황을 빨리 끝내려는 말이었어요."
+    },
+    {
+      "number": 33,
+      "turn": 17,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그때와 비교해 지금 생각에서 달라진 부분은 무엇인가요?"
+    },
+    {
+      "number": 34,
+      "turn": 17,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "지금은 제가 판단을 못 하는 사람이라기보다 위협을 느낄 때 생각이 멈춘다는 걸 조금 알아요."
+    },
+    {
+      "number": 35,
+      "turn": 18,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "주변에서 어떤 조언을 하면 오히려 도움이 되지 않을 것 같나요?"
+    },
+    {
+      "number": 36,
+      "turn": 18,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "화를 내도 그냥 맞서보라는 말은 제가 감당할 수 있는 속도보다 너무 빨라요."
+    },
+    {
+      "number": 37,
+      "turn": 19,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "앞으로 무엇부터 해보고 싶으신가요?"
+    },
+    {
+      "number": 38,
+      "turn": 19,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "긴장할 때 잠시 멈출 방법과 대화를 중단할 수 있는 절차부터 확인하고 싶어요."
+    },
+    {
+      "number": 39,
+      "turn": 20,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "이 문제에서 본인이 바라는 변화는 어떤 모습인가요?"
+    },
+    {
+      "number": 40,
+      "turn": 20,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제게는 강한 사람이 되는 것보다 위협 없이 제 의견을 말할 수 있는 안전이 먼저예요."
+    }
+  ],
+  "public_dialogue": [
+    {
+      "role": "counselor",
+      "content": "최근 회의에서 어떤 일이 있었고, 지금 어떤 부분이 마음에 남아 있나요?"
+    },
+    {
+      "role": "client",
+      "content": "회의에서 괜찮다고 했는데 팀장 목소리가 높아지는 순간 저도 모르게 대답한 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 자리에서 원래 마음을 말하기 어려웠던 구체적인 배경이 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "예전에 질문했다가 사람들 앞에서 소리를 들은 뒤로 낮은 표정만 봐도 몸이 굳어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 순간 가장 신경 쓰였던 것은 무엇이었나요?"
+    },
+    {
+      "role": "client",
+      "content": "일이 얼마나 많은지는 그때 생각도 못 했고, 빨리 대답해서 화를 멈추게 해야 한다고 느꼈어요."
+    },
+    {
+      "role": "counselor",
+      "content": "당시 괜찮다고 한 말에는 어떤 뜻이 담겨 있었나요?"
+    },
+    {
+      "role": "client",
+      "content": "제 동의는 숙고한 결정이 아니라 더 큰 소리가 나오지 않게 막으려던 반응이었어요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 조건이 있었다면 그 자리에서 다르게 답할 수 있었을까요?"
+    },
+    {
+      "role": "client",
+      "content": "목소리를 낮추고 답할 시간을 주면 그제야 제가 할 수 있는 양을 생각할 수 있을 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "업무량만 줄어든다면 지금 말씀하신 부담도 해결될까요?"
+    },
+    {
+      "role": "client",
+      "content": "자신 있게 말하라는 조언을 들으면 알면서 못 하는 제가 더 답답하게 느껴져요."
+    },
+    {
+      "role": "counselor",
+      "content": "이 이야기를 다룰 때 어떤 반응이나 도움이 먼저 필요할까요?"
+    },
+    {
+      "role": "client",
+      "content": "지금도 그 회의를 떠올리면 어깨부터 굳어서 말할 문장보다 숨 쉴 틈이 먼저 필요해요."
+    },
+    {
+      "role": "counselor",
+      "content": "바로 방법을 제안받는다면 어떤 점이 걸릴 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "같은 요구라도 갑자기 다그치는 말투로 들으면 준비한 답변을 잊을 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 경험을 하면 지금의 부담이 조금 덜해질 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "질문을 끝까지 듣고 기다려주는 사람이 있으면 제 목소리가 돌아오는 느낌이 있어요."
+    },
+    {
+      "role": "counselor",
+      "content": "다음 회의에서는 어떻게 답해보고 싶으신가요?"
+    },
+    {
+      "role": "client",
+      "content": "다음 회의에서는 바로 답하지 않고 일정을 확인한 뒤 말씀드리겠다고 해보고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그렇게 말하거나 행동하는 데 여전히 어려운 부분은 무엇인가요?"
+    },
+    {
+      "role": "client",
+      "content": "그 한마디를 하는 동안에도 팀장이 재촉하지 않는다는 보장이 있었으면 좋겠어요."
+    },
+    {
+      "role": "counselor",
+      "content": "지금 가능한 작은 시도 하나를 정한다면 무엇이 좋을까요?"
+    },
+    {
+      "role": "client",
+      "content": "일대일로 만나기보다 다른 동료가 있는 자리에서 일정 조정을 요청하는 편이 안전하게 느껴져요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 시도를 한 뒤에는 어떤 걱정이 생길 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "동료가 있어도 팀장이 책상을 치면 저는 다시 괜찮다고 말할 수 있을 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 일이 실제로 일어나면 이전과 다른 경험이라고 느낄 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "작은 반대를 했는데도 언성이 높아지지 않는 경험이 쌓여야 몸이 덜 굳을 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "그런 경험이 생기더라도 남아 있을 마음이 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "한 번 차분히 얘기했다고 다음에도 안전하다고 바로 믿기는 어려워요."
+    },
+    {
+      "role": "counselor",
+      "content": "처음 회의에서 괜찮다고 했던 이유를 다시 말한다면 어떻게 설명하시겠어요?"
+    },
+    {
+      "role": "client",
+      "content": "그때 괜찮다는 말은 겁이 없다는 뜻이 아니라 무서운 상황을 빨리 끝내려는 말이었어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그때와 비교해 지금 생각에서 달라진 부분은 무엇인가요?"
+    },
+    {
+      "role": "client",
+      "content": "지금은 제가 판단을 못 하는 사람이라기보다 위협을 느낄 때 생각이 멈춘다는 걸 조금 알아요."
+    },
+    {
+      "role": "counselor",
+      "content": "주변에서 어떤 조언을 하면 오히려 도움이 되지 않을 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "화를 내도 그냥 맞서보라는 말은 제가 감당할 수 있는 속도보다 너무 빨라요."
+    },
+    {
+      "role": "counselor",
+      "content": "앞으로 무엇부터 해보고 싶으신가요?"
+    },
+    {
+      "role": "client",
+      "content": "긴장할 때 잠시 멈출 방법과 대화를 중단할 수 있는 절차부터 확인하고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "이 문제에서 본인이 바라는 변화는 어떤 모습인가요?"
+    },
+    {
+      "role": "client",
+      "content": "제게는 강한 사람이 되는 것보다 위협 없이 제 의견을 말할 수 있는 안전이 먼저예요."
+    }
+  ]
+}

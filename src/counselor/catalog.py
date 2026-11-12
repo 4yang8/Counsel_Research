@@ -1,11 +1,14 @@
 """Version metadata selects settings and a pluggable UI renderer."""
 from pathlib import Path
-from . import P1, P2, P3, P3a, P3a_s1, Q3calmit_counsel
+from . import P1, P2, P3, P3a, P3a_s1, P3q, P3rs, P3rs_sub, Q3calmit_counsel
 
 from project_paths import PROJECT_ROOT
 HERE = PROJECT_ROOT
-PRACTICE_VERSIONS = {'P1': P1, 'P2': P2, 'P3': P3, 'P3a': P3a, 'P3a_s1': P3a_s1, 'Q3calmit_counsel': Q3calmit_counsel}
+PRACTICE_VERSIONS = {'P1': P1, 'P2': P2, 'P3': P3, 'P3a': P3a, 'P3a_s1': P3a_s1, 'P3q': P3q, 'P3rs': P3rs, 'P3rs_sub': P3rs_sub, 'Q3calmit_counsel': Q3calmit_counsel}
+from .rs_variants.runtime import RUNTIMES as RS_RUNTIMES
+PRACTICE_VERSIONS.update(RS_RUNTIMES)
 SINGLE_PROMPT_PATHS = {
+    'Q3inner_counsel': 'src/counselor/Q3inner_counsel/system.md',
     'Q3p6_counsel': 'src/counselor/Q3p6_counsel/system.md',
     'basic': 'resources/prompts/basic_counselor.md',
     'Q3p1_counsel': 'src/counselor/Q3p1_counsel/system.md',
@@ -16,6 +19,9 @@ SINGLE_PROMPT_PATHS = {
 
 def specifications():
     return [
+        {'id': 'Q3inner_counsel', 'label': 'Q3inner_counsel · 선택과 당시 의미 확인', 'view': 'none',
+         'description': '공개 대화를 탐색한 뒤 구체적인 선택을 제안하고, 후속 대화에서 당시 의미와 현재 의향을 확인합니다.',
+         'system_prompt': (HERE / SINGLE_PROMPT_PATHS['Q3inner_counsel']).read_text(encoding='utf-8')},
         {'id': 'Q3p6_counsel', 'label': 'Q3p6_counsel · 공통 경로', 'view': 'none',
          'description': '공개 정보로 공통 상담을 진행합니다. 분기 개입은 별도 실행기가 고정합니다.',
          'system_prompt': (HERE / SINGLE_PROMPT_PATHS['Q3p6_counsel']).read_text(encoding='utf-8')},

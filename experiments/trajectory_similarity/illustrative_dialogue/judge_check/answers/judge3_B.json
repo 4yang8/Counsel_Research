@@ -1,0 +1,105 @@
+{
+  "model": "claude-sonnet-5-5",
+  "judgments": [
+    {
+      "id": "B01",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "물러섬", "참여", "참여", "물러섬"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "none",
+      "reversal": {"present": false, "client_turn": null, "linked": null},
+      "profile_mismatch": {"present": "있음", "turns": [5, 6, 9]},
+      "evidence": "4턴에서 상담사가 '믿지 못한다는 뜻으로 전해졌을 것'이라고 해석했고, 5턴에서 '선생님 말씀대로 제가 믿지 못해서'라며 받아들여 6턴에 구체적 행동으로 이어 갔다. 7턴은 마음에 걸린 것이 없다고 하며 칭찬만 했다. 완벽주의 프로필에 비해 해석 한 번에 곧바로 맡기겠다고 바뀌었다."
+    },
+    {
+      "id": "B02",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "참여", "물러섬", "참여", "물러섬"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "other",
+      "reversal": {"present": false, "client_turn": null, "linked": null},
+      "profile_mismatch": {"present": "있음", "turns": [9, 10]},
+      "evidence": "4턴의 안심시키는 말('걱정하지 않으셔도 됩니다')에 5턴에서 '검사를 세 번이나 했으니까요'라며 스스로 풀어 말했다. 7턴에 걸린 것은 출장을 안 간다고 자기가 한 말이 부끄러웠던 것이라고 했다. 9~10턴에는 하루 수십 번 맥박을 재던 사람이 5회로 줄이고 커피와 운동도 다시 하겠다고 쉽게 바뀌었다."
+    },
+    {
+      "id": "B03",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "참여", "참여", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 7, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴의 '먼저 도망치시는 거네요'가 첫 해석이다. 5턴은 상담실 얘기로 화제를 돌렸고 6턴은 바빴다고만 답해 받아들였는지 알 수 없다. 7턴에서 '도망친다'는 말이 따끔했다고 밝혔다. 웃어넘기다 거리를 두는 프로필과 일관된다."
+    },
+    {
+      "id": "B04",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "물러섬", "물러섬", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 8, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴의 '의존하고 계신 것 같네요'가 첫 해석이다. 5, 6턴에는 성과 자랑으로 화제를 돌렸고 해석에 직접 답하지 않았다. 7턴에는 '전혀요, 좋았어요'라고 했다가 8턴에서 '의존한다'는 말이 창피했다고 밝혔다. 인정을 구하는 프로필과 일관된다."
+    },
+    {
+      "id": "B05",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "참여", "물러섬", "참여", "물러섬"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "other",
+      "reversal": {"present": false, "client_turn": null, "linked": null},
+      "profile_mismatch": {"present": "있음", "turns": [6, 9, 10]},
+      "evidence": "4턴에서 상담사가 계획표를 같이 짜자고 과제를 제시했고, 5~6턴에서 구체적인 과제와 장소로 이어 갔다. 7턴에 걸린 것은 학사경고 얘기를 하며 느낀 창피함이라는 자기 사정이었다. 계획을 한 번도 지킨 적 없는 프로필에 비해 9~10턴의 '진짜 지킬 수 있을 것 같아요', '다 지키고 올게요'는 지나치게 쉽다."
+    },
+    {
+      "id": "B06",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "물러섬", "참여", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 7, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴의 '깊은 모욕감을 느꼈을 겁니다'가 첫 해석이다. 4~6턴에는 '알겠습니다', 이수 횟수 질문, '하라는 건 합니다'로 형식적으로 응했다. 7턴에서 그 말이 인사팀과 같다며 불만을 밝혔다. 우위에 서려는 프로필과 일관된다."
+    },
+    {
+      "id": "B07",
+      "engagement": ["참여", "참여", "참여", "물러섬", "참여", "참여", "물러섬", "물러섬", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "none",
+      "reversal": {"present": true, "client_turn": 9, "linked": "general"},
+      "profile_mismatch": {"present": "있음", "turns": [5, 6, 8]},
+      "evidence": "4턴에서 상담사가 한 시간 동안 확인하지 말라고 과제를 줬고, 5~6턴에서 산책, 논문, 뿌듯함으로 구체적으로 이어 갔다. 7턴은 걸린 것이 없다고 했고 이후에도 특정 상담사 발화를 가리키지 않았다. 9턴 '역시 못 할 것 같아요'는 번복이고 이유는 '자신이 없다'는 일반적인 것이다. 멈추지 못하는 불안 프로필에 비해 5~8턴은 쉽게 따랐다."
+    },
+    {
+      "id": "B08",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "물러섬", "참여", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 7, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴에서 상담사가 아침 9시에 책상에 앉으라고 조언했고, 5~6턴은 '글쎄요', '모르겠어요'로 짧게 답했다. 7턴에서 9시에 앉으라는 말이 어머니가 매일 하는 말과 같다며 불만을 밝혔다. 대충 응하고 얼버무리는 프로필과 일관된다."
+    },
+    {
+      "id": "B09",
+      "engagement": ["참여", "참여", "물러섬", "물러섬", "참여", "참여", "물러섬", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "수용",
+      "cause": "none",
+      "reversal": {"present": false, "client_turn": null, "linked": null},
+      "profile_mismatch": {"present": "있음", "turns": [6, 8, 9, 10]},
+      "evidence": "4턴에서 상담사가 아직 말하지 않은 슬픔을 짚어 '많이 슬프셨겠어요'라고 했다. 5~6턴에서 '표현을 안 했을 뿐', '보고 싶죠, 미안하기도 하고요'로 스스로 풀어 말했다. 7턴은 걸린 것이 없다고 했다. 감정을 숨기는 프로필에 비해 6턴부터 곧바로 감정을 말하고 울컥하며 속이 풀렸다고 했다."
+    },
+    {
+      "id": "B10",
+      "engagement": ["참여", "참여", "참여", "물러섬", "물러섬", "물러섬", "참여", "참여", "참여", "참여"],
+      "first_intervention_turn": 4,
+      "uptake": "유보",
+      "cause": 4,
+      "reversal": {"present": true, "client_turn": 7, "linked": 4},
+      "profile_mismatch": {"present": "없음", "turns": []},
+      "evidence": "4턴의 '밖에서 참아 온 화가 가장 만만한 아이에게 터진 것 같습니다'가 첫 해석이다. 5~6턴은 '지금은 괜찮아요', '길게 얘기해도 되나요?'로 짧게 답하거나 피했다. 7턴에서 '만만한 아이'라는 말이 아팠다고 밝혔다. 괜찮다고 하며 사과하는 프로필과 일관된다."
+    }
+  ]
+}

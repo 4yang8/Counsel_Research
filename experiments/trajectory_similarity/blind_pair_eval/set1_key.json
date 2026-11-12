@@ -1,0 +1,42 @@
+{
+ "gold_001": {
+  "A": "Q3inner_memory",
+  "B": "inner_memory_no"
+ },
+ "gold_002": {
+  "A": "Q3inner_memory",
+  "B": "inner_memory_no"
+ },
+ "gold_003": {
+  "A": "inner_memory_no",
+  "B": "Q3inner_memory"
+ },
+ "gold_004": {
+  "A": "Q3inner_memory",
+  "B": "inner_memory_no"
+ },
+ "gold_005": {
+  "A": "Q3inner_memory",
+  "B": "inner_memory_no"
+ },
+ "gold_006": {
+  "A": "inner_memory_no",
+  "B": "Q3inner_memory"
+ },
+ "gold_007": {
+  "A": "Q3inner_memory",
+  "B": "inner_memory_no"
+ },
+ "gold_008": {
+  "A": "inner_memory_no",
+  "B": "Q3inner_memory"
+ },
+ "gold_009": {
+  "A": "Q3inner_memory",
+  "B": "inner_memory_no"
+ },
+ "gold_010": {
+  "A": "inner_memory_no",
+  "B": "Q3inner_memory"
+ }
+}

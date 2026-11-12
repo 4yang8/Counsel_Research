@@ -1,7 +1,7 @@
 """Small registry: basic keeps its existing runtime; new versions opt in."""
 from pathlib import Path
 from client.memory_experiments.catalog import SPECS as MEMORY_EXPERIMENTS, get_runtime as memory_runtime
-from client.memory_access import VERSIONS as MEMORY_ACCESS_VERSIONS
+from client.memory_access import VERSIONS as MEMORY_ACCESS_VERSIONS, LEGACY_CM_VERSIONS
 PAPER_VERSIONS = ('Q3cars', 'Q3patientact', 'Q3calmit')
 
 from project_paths import PROJECT_ROOT
@@ -77,7 +77,7 @@ def catalog(config):
          'system_prompt': (HERE / 'src/client/state_summary/system.md').read_text(encoding='utf-8'),
          'summary_system_prompt': (HERE / 'src/client/state_summary/summary.md').read_text(encoding='utf-8')},
         specification(), client_runtime('Q1_s1').specification(), client_runtime('Q1_s2').specification(), client_runtime('Q1a').specification(), client_runtime('Q2').specification(), client_runtime('Q2a').specification(), client_runtime('Q2a_variant_context').specification(), {**client_runtime('Q2a_trait_background').specification(), 'label':'A · 기준선 · Q2a_trait_background', 'condition':'A'}, client_runtime('Q2a_prefill_test').specification(), *(memory_runtime(v).specification() for v in MEMORY_EXPERIMENTS)
-    ] + [client_runtime(v).specification() for v in (*PAPER_VERSIONS, *MEMORY_ACCESS_VERSIONS)]}
+    ] + [{**client_runtime(v).specification(), **({'legacy':True} if v in LEGACY_CM_VERSIONS else {})} for v in (*PAPER_VERSIONS, *MEMORY_ACCESS_VERSIONS)]}
 
 
 def configure(config, body):

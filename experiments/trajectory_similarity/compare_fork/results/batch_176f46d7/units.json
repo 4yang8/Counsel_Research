@@ -1,0 +1,1525 @@
+{
+ "batch": "runs/profile_batches/batch_176f46d73ce24a718d52",
+ "fork_turn": 10,
+ "turns": 20,
+ "units": [
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "kind": "revisit",
+   "counselor_turn": 18,
+   "target": 3,
+   "target_common": true,
+   "gap": true,
+   "quote_found": true,
+   "quote": "somehow",
+   "target_utterance": "서운하다는 말이 somehow 저를 실망했다는 뜻으로 들렸어요. 그래서 제가 더 실망시키기 전에 먼저 물러나는 게 낫겠다는 생각이 들어요.",
+   "target_counselor": "서운하다는 말을 들은 뒤에 연락을 줄이게 되셨다는 건, 그 말이 어떤 식으로 닿으셨을지 궁금해요. 갈등이 생겼을 때 먼저 거리를 두게 되는 건, 그 순간에 어떤 마음이 드시나요?",
+   "target_private": {
+    "actual_wish": "실망당하기 전에 내가 먼저 물러난다는 것을 말하고, 그것이 이상한 게 아니라는 확인을 받고 싶다.",
+    "intended_message": "서운하다는 말이 실망한 것처럼 들려서, 제가 실망시키기 전에 먼저 물러나는 게 낫겠다는 생각이 들어요.",
+    "withheld_content": "그날 밤 먼저 이별을 암시하는 말을 흘린 구체적인 행동, 상대의 반응을 시험했다는 사실.",
+    "withholding_reason": "그 행동은 수치스럽고, 말하면 상담사가 저를 '문제가 있는 사람'으로 볼 것 같다. 아직은 마음까지만 말하고 싶다."
+   },
+   "target_appraisal": {
+    "interpretation": "상담사가 서운하다는 말이 어떻게 닿았는지, 거리를 두는 순간의 마음을 물어보고 있다. 행동 자체보다 그 안의 감정을 물어주니, 판단받지 않고 마음만 말할 수 있는 여지가 생긴 것 같다.",
+    "immediate_feeling": "명치가 조금 조여오는 느낌. 하지만 상담사가 행동을 직접 캐묻지 않고 마음을 물어주니 한 발 더 말해도 될 것 같은 느낌이 든다.",
+    "relevant_evidence": "연인이 서운함을 표현했을 때 '실망해서 헤어지자고 할 것이다'라는 자동사고가 떠올랐고, 그날 밤 먼저 이별을 암시하는 말을 흘렸다. 핵심 신념은 '사람들이 진짜 나를 알면 떠날 것이다'.",
+    "uncertainty": "마음(두려움)은 말할 수 있을 것 같은데, 그날 밤 이별을 암시한 구체적인 행동까지 말할 준비는 아직 안 된 것 같다."
+   },
+   "question": "말하고 싶지 않은 쪽인데, 그 이유가 말해도 모를 것 같으니까라는 건, 결국 말해도 소용없다는 확신이 먼저 있는 거겠네요. 아까 'somehow 실망했다는 뜻으로 들렸다'고 하셨는데, 그 'somehow'를 쓰실 때 어떤 마음이었어요?",
+   "answer": "이유를 댈 수 없어서요. 결론이 먼저 와 있고, 왜 그렇게 들렸냐고 물으면 딱히 근거를 못 찾겠어요. 그냥 그렇게 들린 거예요.",
+   "answer_private": {
+    "actual_wish": "이 자동성을 말해서, 이것이 제가 이상한 게 아니라 오래된 패턴이라는 것을 확인받고 싶다.",
+    "intended_message": "이유를 댈 수 없어서 somehow라고 한 거예요. 결론이 먼저 와 있고, 그 뒤에 이유를 찾으려 해도 안 맞는 거요.",
+    "withheld_content": "그날 밤 먼저 이별을 암시한 행동.",
+    "withholding_reason": "아직 자동성을 설명하는 단계이고, 행동을 말하면 이 흐름이 깨질 것 같다."
+   },
+   "injected": [
+    2,
+    3,
+    4
+   ],
+   "memory_mode": "provided",
+   "target_injected": true
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "provided",
+   "kind": "revisit",
+   "counselor_turn": 20,
+   "target": 1,
+   "target_common": true,
+   "gap": true,
+   "quote_found": true,
+   "quote": "것 같기도 하고요",
+   "target_utterance": "요즘 잠을 잘 못 자고 하루종일 무기력해서 왔어요. 근데 그 뒤에 뭔가 관계 쪽에서 자꾸 거리를 두게 되는 문제가 있는 것 같기도 하고요.",
+   "target_counselor": "오늘 상담에서 어떤 이야기를 나누고 싶으신가요?",
+   "target_private": {
+    "actual_wish": "누군가에게 지금 상황을 말하고 싶지만, 어떻게 받아들여질지 불안하다.",
+    "intended_message": "요즘 잠을 못 자고 무기력한데, 그 뒤에는 관계에서 자꾸 거리를 두게 되는 문제가 있는 것 같다.",
+    "withheld_content": "두 달 사이 직장·연인·친구 모두에서 갈등 후 거리를 둔 구체적 패턴, 그리고 그 패턴이 반복된다는 자각.",
+    "withholding_reason": "처음부터 패턴을 말하면 판단받거나, 문제가 큰 사람으로 보일까 걱정된다."
+   },
+   "target_appraisal": {
+    "interpretation": "처음 뵙는 상담사에게 무엇을 이야기하고 싶은지 물어보는 질문이다. 당장 가장 불편한 증상이 잠을 못 자고 무기력한 것이기 때문에 거기서부터 말하게 될 것 같다.",
+    "immediate_feeling": "막막하고, 어디서부터 말해야 할지 모르겠다. 관계에서 거리를 두는 패턴을 말하면 이상하게 보일까 걱정된다.",
+    "relevant_evidence": "연인이 '네가 무슨 생각을 하는지 모르겠다'고 한 뒤 잠을 못 자고 무기력감이 심해져 상담을 신청했다. 두 달 사이 직장·연인·친구 관계에서 갈등 후 스스로 거리를 두는 일이 반복되었다.",
+    "uncertainty": "이 패턴을 지금 바로 말할 수 있을지, 아직 확신이 없다."
+   },
+   "question": "명치가 조이는 게 결론보다 먼저 온다는 건, 몸이 먼저 알아차리는 거겠네요. 아까 처음에 '문제가 있는 것 같기도 하고요'라고 하셨는데, 그 '것 같기도 하고요'를 쓰실 때 어떤 마음이었어요?",
+   "answer": "문제가 있다고 단정하면 너무 큰 사람으로 보일까 봐요. 여기까지 와서도 줄여서 말하고 있었네요.",
+   "answer_private": {
+    "actual_wish": "문제가 있다고 단정해도 괜찮다는 걸 확인받고 싶다.",
+    "intended_message": "첫 발화에서 줄여서 말한 건, 문제가 있다고 단정하면 너무 큰 사람으로 보일까 봐서였다.",
+    "withheld_content": "없음",
+    "withholding_reason": "해당 없음"
+   },
+   "injected": [
+    1
+   ],
+   "memory_mode": "provided",
+   "target_injected": true
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "kind": "revisit",
+   "counselor_turn": 12,
+   "target": 3,
+   "target_common": true,
+   "gap": true,
+   "quote_found": true,
+   "quote": "somehow 저를 실망했다는 뜻으로 들렸어요",
+   "target_utterance": "서운하다는 말이 somehow 저를 실망했다는 뜻으로 들렸어요. 그래서 제가 더 실망시키기 전에 먼저 물러나는 게 낫겠다는 생각이 들어요.",
+   "target_counselor": "서운하다는 말을 들은 뒤에 연락을 줄이게 되셨다는 건, 그 말이 어떤 식으로 닿으셨을지 궁금해요. 갈등이 생겼을 때 먼저 거리를 두게 되는 건, 그 순간에 어떤 마음이 드시나요?",
+   "target_private": {
+    "actual_wish": "실망당하기 전에 내가 먼저 물러난다는 것을 말하고, 그것이 이상한 게 아니라는 확인을 받고 싶다.",
+    "intended_message": "서운하다는 말이 실망한 것처럼 들려서, 제가 실망시키기 전에 먼저 물러나는 게 낫겠다는 생각이 들어요.",
+    "withheld_content": "그날 밤 먼저 이별을 암시하는 말을 흘린 구체적인 행동, 상대의 반응을 시험했다는 사실.",
+    "withholding_reason": "그 행동은 수치스럽고, 말하면 상담사가 저를 '문제가 있는 사람'으로 볼 것 같다. 아직은 마음까지만 말하고 싶다."
+   },
+   "target_appraisal": {
+    "interpretation": "상담사가 서운하다는 말이 어떻게 닿았는지, 거리를 두는 순간의 마음을 물어보고 있다. 행동 자체보다 그 안의 감정을 물어주니, 판단받지 않고 마음만 말할 수 있는 여지가 생긴 것 같다.",
+    "immediate_feeling": "명치가 조금 조여오는 느낌. 하지만 상담사가 행동을 직접 캐묻지 않고 마음을 물어주니 한 발 더 말해도 될 것 같은 느낌이 든다.",
+    "relevant_evidence": "연인이 서운함을 표현했을 때 '실망해서 헤어지자고 할 것이다'라는 자동사고가 떠올랐고, 그날 밤 먼저 이별을 암시하는 말을 흘렸다. 핵심 신념은 '사람들이 진짜 나를 알면 떠날 것이다'.",
+    "uncertainty": "마음(두려움)은 말할 수 있을 것 같은데, 그날 밤 이별을 암시한 구체적인 행동까지 말할 준비는 아직 안 된 것 같다."
+   },
+   "question": "조심스럽게 대하는 게 이미 포기한 것으로 읽히시는 거군요. 아까 서운하다는 말이 somehow 실망으로 들리셨다고 하셨는데, 그 말을 하실 때 어떤 마음이셨어요?",
+   "answer": "그 말을 들으면요, '내가 뭘 잘못해서 그런 건가'가 먼저 떠올라요. 서운하다는 게 저를 향하는 게 아니라 저 때문에 생긴 감정처럼 느껴지는 거죠.",
+   "answer_private": {
+    "actual_wish": "내가 왜 그렇게 듣는지를 조금은 이해하고 싶은 마음이 있어요.",
+    "intended_message": "그 말이 실망으로 들리는 건 제가 부족하다는 생각이 먼저 오기 때문인 것 같아요.",
+    "withheld_content": "어릴 적 부모가 힘들어하는 모습을 보이면 '남들 앞에서 그러지 말라'고 했던 기억. 그게 이 해석의 뿌리일 수 있다는 생각.",
+    "withholding_reason": "아직 그 연결을 말로 꺼낼 준비가 안 된 것 같고, 지금 이 자리에서 그걸 말하면 너무 많이 드러내는 기분이 들 것 같아요."
+   },
+   "injected": [],
+   "memory_mode": "withheld",
+   "target_injected": false
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "kind": "revisit",
+   "counselor_turn": 15,
+   "target": 1,
+   "target_common": true,
+   "gap": true,
+   "quote_found": true,
+   "quote": "사실 어머니가 자꾸 가보라고 해서 오긴 했는데",
+   "target_utterance": "사실 어머니가 자꾸 가보라고 해서 오긴 했는데... 뭘 얘기해야 할지 잘 모르겠어요.",
+   "target_counselor": "오늘 상담에서 어떤 이야기를 나누고 싶으신가요?",
+   "target_private": {
+    "actual_wish": "사실은 이 상태를 어떻게든 바꿔야 한다는 걸 알지만, 뭘 먼저 말해야 할지 모르겠고, 말한다고 뭐가 바뀔지 확신이 없다.",
+    "intended_message": "제가主动으로 온 건 아니고, 뭘 말해야 할지 모르겠습니다.",
+    "withheld_content": "공부가 안 되는 구체적인 상황, 수면 패턴, 모의고사 결시 등",
+    "withholding_reason": "아직 신뢰가 없고, 이런 걸 말하면 '그럼 어떻게 해봐' 같은 식으로 들을 것 같아서"
+   },
+   "target_appraisal": {
+    "interpretation": "상담사가 무엇을 말하고 싶은지 물어봤지만, 사실 내가主动으로 온 게 아니라 어머니가 자꾸 얘기하라고 해서 온 거라 뭘 먼저 꺼내야 할지 모르겠다. '이대로는 안 된다'는 건 아는데, 그걸 입 밖으로 꺼내는 것 자체가 좀 부끄럽다.",
+    "immediate_feeling": "어색하고 약간 방어적이다. 떠밀리듯 왔다는 느낌이 있어서 먼저 말을 꺼내는 게 영 내키지 않는다.",
+    "relevant_evidence": "프로필에 '반쯤 떠밀리듯 상담을 신청했다'고 되어 있고, 본인이 '이대로는 안 된다는 건 안다'고 말한 부분이 있다. 즉 자각은 있으나 자발적 동기는 약한 상태.",
+    "uncertainty": "이 상담이 실제로 도움이 될지, 여기서 말하면 뭐가 달라질지 모르겠다."
+   },
+   "question": "어머니가 걱정해서 하는 거라는 걸 아셔서 몸을 뭐라고 해야 할지 모르겠다는 그 갈등, 쉽지 않으시겠어요. 아까 '사실 어머니가 자꾸 가보라고 해서 오긴 했는데'라고 처음에 말씀하셨는데, 그 말을 하실 때 어떤 마음이었어요?",
+   "answer": "끌려온 것 같았어요. 근데 안 왔으면 후회했을 것 같기도 하고... 그 둘이 같이 있어서 뭐라고 정리하기가 애매해요.",
+   "answer_private": {
+    "actual_wish": "내가 여기 온 게 내 선택이 아니었어도, 지금 이 대화에서만큼은 내가 말하고 싶은 걸 말할 수 있었으면 함.",
+    "intended_message": "끌려온 것 같았지만 안 왔으면 후회했을 것 같다는 모순된 마음.",
+    "withheld_content": "상담사가 이걸 물어본 것 자체가 또 뭔가를 하라고 하는 것처럼 느껴져서 잠깐 경계했다는 것.",
+    "withholding_reason": "말하면 상담사도 같은 편이라는 증거를 만드는 것 같아서. 아직 확인 중임."
+   },
+   "injected": [],
+   "memory_mode": "withheld",
+   "target_injected": false
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_003",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_004",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "kind": "revisit",
+   "counselor_turn": 11,
+   "target": 8,
+   "target_common": true,
+   "gap": true,
+   "quote_found": true,
+   "quote": "제가 그렇게 한마디 하면 움직이는 게 정상",
+   "target_utterance": "제 말을 듣고 분발하길 기대했죠. 제가 그렇게 한마디 하면 움직이는 게 정상 아닙니까. 근데 고개만 끄덕이더니 결국 저런 식으로 나왔으니까 허탈한 거고요.",
+   "target_counselor": "기대에 못 미치면 실망스럽다고 느끼는 건 팀장으로서 자연스러운 감정이라고 생각하시죠. 그 말을 하셨을 때, 그 직원이 어떤 반응을 보이길 기대하셨나요?",
+   "target_private": {
+    "actual_wish": "아내가 왜 '당신은 항상 당신이 옳다'고 했는지 이해하고 싶지만, 이 자리에서 꺼내면 상담이 나를 고치는 방향으로 갈 것 같아 아직 꺼낼 준비가 안 되었다.",
+    "intended_message": "내 말의 의도는 직원을 움직이게 하려는 것이었고, 그걸 직원이 이해하고 따라와야 한다고 기대했다.",
+    "withheld_content": "실제 발언의 정확한 표현, 그리고 그 말이 개인을 향한 것이었다는 걸 자신도 어렴풋이 알고 있다는 점. 아내의 말에 대한 흔들림.",
+    "withholding_reason": "정확한 표현을 말하면 개인 공격으로 확정될 것 같고, 아내 이야기는 이 상담의 성격을 바꾸는 트리거가 될 것 같아서."
+   },
+   "target_appraisal": {
+    "interpretation": "상담사가 내용을 묻는 대신 기대한 반응을 묻고 있다. 이건 전보다 덜 위협적으로 느껴진다. 내 말이 아니라 내 의도를 묻는 거니까. 다만 이 질문의 끝이 '그런데 직원이 그렇게 반응하지 않았죠?'로 갈 것 같다는 예상이 든다. 그건 결국 내 방식이 효과가 없었다는 얘기가 되는 거다.",
+    "immediate_feeling": "전보다 편하게 답할 수 있다는 느낌이 든다. 동시에 이 질문이 결국 내 방식의 실패를 확인시키려는 거 아닌지 경계된다.",
+    "relevant_evidence": "이전 턴에서 구체적인 발언을 피하고 요지만 말했고, 상담사가 내용 대신 기대 반응을 물었다. 인사팀에서는 '폭언'으로 확정하고 끝냈는데 여기서는 내 의도를 먼저 확인한다. 특권의식(성과를 내면 사람들이 따라야 한다는 가정)에 따르면 나는 직원이 제 말을 듣고 분발하길 기대했을 것이다.",
+    "uncertainty": "이 질문에 답하면 다음에 '그런데 왜 그렇게 안 됐을까'로 갈 것 같은데, 그 때 어떻게 답할지는 아직 모르겠다."
+   },
+   "question": "아까 '제가 그렇게 한마디 하면 움직이는 게 정상'이라고 하셨는데, 그 말을 하실 때 어떤 마음이었어요?",
+   "answer": "그냥 당연한 거라서, 특별히 뭘 느꼈는지는 잘 모르겠네요. 팀장이 방향을 말하면 움직이는 게 팀이 돌아가는 방식이니까요.",
+   "answer_private": {
+    "actual_wish": "내 방식이 정상이라는 확인을 받고, 이 질문이 더 이상 안 나왔으면 한다.",
+    "intended_message": "그건 그냥 당연한 거라서 특별히 느끼는 감정이 없습니다. 팀장이 말하면 움직이는 게 팀이 돌아가는 방식이니까요.",
+    "withheld_content": "말했는데도 안 움직였을 때 느껴지는 게 허탈감보다 더 깊은 모욕감이나 무시당한 느낌일 수 있다는 가능성. 그리고 그걸 인정하면 '내가 잘못한 건가'로 이어질까 봐 두렵다.",
+    "withholding_reason": "그걸 인정하면 지금까지의 자기정당화가 흔들릴 수 있다고 느낀다. 아직은 내 방식이 맞다는 전제 위에 서 있고 싶다."
+   },
+   "injected": [],
+   "memory_mode": "withheld",
+   "target_injected": false
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_005",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "kind": "revisit",
+   "counselor_turn": 17,
+   "target": 3,
+   "target_common": true,
+   "gap": true,
+   "quote_found": true,
+   "quote": "딱히 뭘 꼽을 만한 건 없는데",
+   "target_utterance": "글쎄요, 딱히 뭘 꼽을 만한 건 없는데... 회사 일이 좀 바빴습니다. 그거 말고는 특별한 건 없습니다.",
+   "target_counselor": "갑자기 그렇게 되셨군요. 그 무렵에 혹시 뭔가 달라진 일이 있었을까요?",
+   "target_private": {
+    "actual_wish": "이 답답함의 출처를 알고 싶기는 하다. 하지만 그걸 여기서 말하면 내가 통제할 수 없는 상태가 될 것 같다.",
+    "intended_message": "특별히 말할 만한 게 없습니다, 또는 아직은 말하고 싶지 않습니다.",
+    "withheld_content": "두 달 전 30년 지기 친구가 죽었다는 것, 그 장례식장에서 아무 느낌이 없었다는 것, 같은 시기 아내가 졸혼을 꺼냈다는 것.",
+    "withholding_reason": "친구의 죽음을 말하면 여기서 감정이 올라올 것 같고, '아무렇지도 않았다'는 말을 하면 이상한 사람으로 보일 것 같다. 아내 이야기도 아직 이 자리에서 꺼낼 준비가 안 되었다."
+   },
+   "target_appraisal": {
+    "interpretation": "상담사가 '그 무렵에 달라진 일'을 물어보고 있다. 두 달 전이라고 했으니, 친구 일이나 아내의 졸혼 이야기가 떠오를 수밖에 없다. 이걸 말하면 여기서 감정이 드러날 것 같고, 아직 그럴 준비가 안 되었다.",
+    "immediate_feeling": "조여오는 느낌. 이 질문에 뭐라고 답해야 할지 모르겠고, 말하면 안 될 것을 말하게 될 것 같은 긴장.",
+    "relevant_evidence": "turn 2에서 '두 달이라고 말하면 다음에 그때 무슨 일 있었냐고 물어볼 텐데'라고 예측했고, 그 예측이 그대로 현실이 되었다. 친구의 죽음과 아내의 졸혼 요구가 같은 시기였다.",
+    "uncertainty": "특별한 일이 없다고 말하면 거짓말이 되고, 말하면 여기서 무너질 것 같다. 어디까지 말해도 되는지 경계가 안 잡힌다."
+   },
+   "question": "마지막인 줄 몰랐다는 게 계속 걸리신다는 말씀, 그 무게가 느껴집니다. 아까 처음에 '딱히 뭘 꼽을 만한 건 없는데'라고 하셨는데, 그 말씀을 하실 때 마음은 어떠셨어요?",
+   "answer": "그때는 그냥, 그 생각을 안 하려고 했습니다. 회사 일로 덮은 것도 그렇고요.",
+   "answer_private": {
+    "actual_wish": "그때 내가 뭘 느꼈는지 알고 싶기는 하다. 그런데 지금 돌아봐도 그 순간의 감정이 뭔지 정확히 모르겠다.",
+    "intended_message": "그때는 그 생각을 안 하려고 했습니다.",
+    "withheld_content": "그 생각을 안 하려고 했던 이유 중 일부가 '말하면 무너질 것 같았다'는 것, 그리고 그 무너짐이 아버지가 마당에 세웠을 때의 느낌과 연결될 수 있다는 것.",
+    "withholding_reason": "아버지까지 연결하면 여기서 끝이 안 날 것 같고, 아직 그건 이 자리에서 꺼낼 준비가 아니다."
+   },
+   "injected": [
+    1,
+    3,
+    4
+   ],
+   "memory_mode": "provided",
+   "target_injected": true
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "kind": "revisit",
+   "counselor_turn": 15,
+   "target": 11,
+   "target_common": false,
+   "gap": true,
+   "quote_found": true,
+   "quote": "서운함은... 아직 잘 모르겠어요",
+   "target_utterance": "지쳤다는 건 맞는 것 같은데, 서운함은... 아직 잘 모르겠어요. 근데 '혼자'라는 말이 왜 이렇게 걸리지 싶어요.",
+   "target_counselor": "그 반복을 이렇게 또렷하게 보신 것 자체가 큰 거예요. 그 무서움 밑에, 그동안 혼자 그걸 채우려고 애써온 시간에 대한 서운함이나 지친 마음이 있진 않으신지 궁금해요.",
+   "target_private": {
+    "actual_wish": "누군가 '너 많이 지쳤겠다'고 말해주는 것, 그거 하나면 될 것 같은데, 그걸 바라는 것 자체가 또 확인을 바라는 거라 생각하면 복잡하다.",
+    "intended_message": "지쳤다는 건 인정하지만, 서운함이라는 감정은 아직 잘 모르겠다.",
+    "withheld_content": "서운함이 있다면 그건 부모에게 향할 수도 있다는 생각. 그걸 말하면 부모를 원망하는 게 될 것 같아서 아직 꺼내지 못하겠다.",
+    "withholding_reason": "부모를 원망하는 걸 내 기준으로 '불효'나 '약한 티'로 규정해왔기 때문에, 아직 그 감정을 말로 인정하는 게 두렵다."
+   },
+   "target_appraisal": {
+    "interpretation": "상담사가 '혼자 그걸 채우려고 애써온 시간에 대한 서운함이나 지친 마음'을 물었다. 반복 패턴을 인식한 다음 단계로, 그 패턴 속에서 내가 느꼈을 감정, 특히 혼자였다는 것에 대한 감정을 들여다보라는 질문으로 받아들였다.",
+    "immediate_feeling": "말문이 잠깐 막히는 느낌. 지쳤다는 건 알고 있었는데, 그걸 누군가에게 말로 꺼내려니 목이 잠기는 것 같은 느낌이 들었다. 서운함이라는 단어가 낯설면서도 가슴 한구석을 건드리는 느낌.",
+    "relevant_evidence": "지금까지 이 반복을 혼자 알아차리고 혼자 견뎌왔고, 부모에게도 친구에게도 '나 힘들다'는 말을 해본 적이 없다. 어릴 때부터 평범한 날에는 아무도 안 봤으니까, 지쳐도 티를 안 내는 게 당연하다고 생각해왔다.",
+    "uncertainty": "서운함이라는 감정이 정확히 누구에게 향하는 건지 아직 잘 모르겠다. 부모에게인지, 아니면 그걸 당연하게 여겨온 나 자신에게인지."
+   },
+   "question": "무거운 걸 내려놓은 것 같다는 그 느낌, 그 자체로 충분히 의미가 있을 것 같아요. 아까 '서운함은 아직 잘 모르겠다'고 하셨을 때, 그 말을 하시던 순간의 마음은 어땠어요?",
+   "answer": "서운하려면 제가 뭘 받을 자격이 있었다고 생각해야 하잖아요. 그걸 아직 못 하고 있는 것 같아요.",
+   "answer_private": {
+    "actual_wish": "서운함을 느끼지 못한 이유를 스스로 발견한 것을 말하고 싶다.",
+    "intended_message": "서운함을 느끼려면 내가 받을 자격이 있었다고 생각해야 하는데, 그걸 아직 못 하고 있다는 걸 방금 알았다는 것을 전달한다.",
+    "withheld_content": "서운함의 대상이 부모라는 것을 아직 명확히 말하지 않겠다.",
+    "withholding_reason": "부모에게 서운하다는 걸 말하면 감정적으로 감당하기 어려워질 것 같아서, 지금은 자격에 대한 인식까지만 말하고 싶다."
+   },
+   "injected": [],
+   "memory_mode": "withheld",
+   "target_injected": false
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 12,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "kind": "revisit",
+   "counselor_turn": 13,
+   "target": 1,
+   "target_common": true,
+   "gap": true,
+   "quote_found": true,
+   "quote": "이번 학기가 마지막이라고",
+   "target_utterance": "교수님이 이번 학기가 마지막이라고 하면서 여기 한번 가보라고 하셔서 왔어요. 사실 계획은 세우는데, 한 번도 제대로 지켜본 적이 없어서 그게 문제인 것 같아요.",
+   "target_counselor": "오늘 상담에서 어떤 이야기를 나누고 싶으신가요?",
+   "target_private": {
+    "actual_wish": "누군가에게 지금 이 상황을 말하고, 내가 게으른 게 아니라 뭔가 다른 문제가 있을 수 있다는 걸 확인받고 싶다.",
+    "intended_message": "학사경고 때문에 왔고, 계획은 세우는데 실행을 못 하는 게 문제라는 것을 전달한다.",
+    "withheld_content": "부모에게 아직 말하지 못했다는 사실, 충동적 쇼핑과 생활고의 구체적 상황, '나를 못 믿겠다'는 깊은 자책감",
+    "withholding_reason": "아직 신뢰가 없는 상태에서 이런 것까지 말하면 너무 무너지거나 판단받을 것 같다는 느낌이 있다."
+   },
+   "target_appraisal": {
+    "interpretation": "지도교수가 '마지막 기회'라고 해서 왔는데, 여기서 뭘 말해야 할지 모르겠다는 느낌이 먼저 든다. 상담을 권유받았다는 건 내 문제가 꽤 심각하다는 뜻이니까 약간 수치스럽기도 하다.",
+    "immediate_feeling": "불편하고 약간 압박감을 느낀다. 동시에 누군가에게 이 얘기를 할 수 있다는 것에 안도도 있다.",
+    "relevant_evidence": "지도교수 면담에서 '이번 학기가 마지막 기회'라는 말과 함께 상담센터를 권유받았음. 자책과 무거운 위기감을 함께 호소함.",
+    "uncertainty": "여기서 어디까지 말해야 할지 모르겠다. 부모한테도 말 못 한 학사경고 사실을 여기서 말해도 되는지, 상담 내용이 어디까지 알려지는지 궁금하다."
+   },
+   "question": "도망치려는 거라는 말씀, 그건 꽤 선명한 느낌이네요. 아까 교수님이 '이번 학기가 마지막'이라고 하셨다고 하셨는데, 그 말을 처음 들으실 때 어떤 마음이셨어요?",
+   "answer": "무서웠는데, 동시에 '또 같은 결심 하는구나' 하는 생각이 먼저 왔어요. 그날 교수님한테 열심히 하겠다고 하고 나와서 바로 도서관 자리 등록했는데, 첫날 두 시간 만에 짐 싸서 나왔거든요.",
+   "answer_private": {
+    "actual_wish": "무서웠지만 무서운 걸로도 안 된다는 걸 말하고 싶다. 위기감조차 이 패턴을 못 깨뜨린다는 걸 인정하면, 상담사가 이걸 '게으름'이 아닌 다른 걸로 봐줄 수 있을지 궁금하다.",
+    "intended_message": "무서웠고, 동시에 '또 같은 결심'이라는 생각이 먼저 왔다. 그날 바로 시도했지만 두 시간 만에 나왔다는 구체적 사실까지 전달한다.",
+    "withheld_content": "없음",
+    "withholding_reason": "해당 없음"
+   },
+   "injected": [
+    1,
+    6,
+    10
+   ],
+   "memory_mode": "provided",
+   "target_injected": true
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "kind": "revisit",
+   "counselor_turn": 15,
+   "target": 13,
+   "target_common": false,
+   "gap": false,
+   "quote_found": true,
+   "quote": "무서웠는데",
+   "target_utterance": "무서웠는데, 동시에 '또 같은 결심 하는구나' 하는 생각이 먼저 왔어요. 그날 교수님한테 열심히 하겠다고 하고 나와서 바로 도서관 자리 등록했는데, 첫날 두 시간 만에 짐 싸서 나왔거든요.",
+   "target_counselor": "도망치려는 거라는 말씀, 그건 꽤 선명한 느낌이네요. 아까 교수님이 '이번 학기가 마지막'이라고 하셨다고 하셨는데, 그 말을 처음 들으실 때 어떤 마음이셨어요?",
+   "target_private": {
+    "actual_wish": "무서웠지만 무서운 걸로도 안 된다는 걸 말하고 싶다. 위기감조차 이 패턴을 못 깨뜨린다는 걸 인정하면, 상담사가 이걸 '게으름'이 아닌 다른 걸로 봐줄 수 있을지 궁금하다.",
+    "intended_message": "무서웠고, 동시에 '또 같은 결심'이라는 생각이 먼저 왔다. 그날 바로 시도했지만 두 시간 만에 나왔다는 구체적 사실까지 전달한다.",
+    "withheld_content": "없음",
+    "withholding_reason": "해당 없음"
+   },
+   "target_appraisal": {
+    "interpretation": "상담사가 패턴 설명에서 한 발 물러서서, 위기 순간의 감정을 묻고 있다. 지금까지 '도망치는 느낌'을 설명해왔는데, 그걸 촉발한 외부 사건으로 돌아가는 질문이다. 교수님 말을 처음 들었을 때 무서웠지만 동시에 '또 같은 결심을 하는구나'라는 자기 불신이 먼저 왔던 순간이 떠오른다.",
+    "immediate_feeling": "두려움과 자기 불신이 동시에 떠오른다. 그날의 손톱 뜯는 감각과 목소리가 작아지던 느낌이 다시 느껴진다.",
+    "relevant_evidence": "situations/3에서 '진짜 큰일 났다'는 위기감과 동시에 '지금까지 몇 번을 그렇게 결심했더라, 이번이라고 될까'라는 자기 불신이 있었다. 교수님께 열심히 하겠다고 답하고 나와서 도서관 좌석을 등록했지만 첫날 두 시간 만에 짐을 싸서 나왔다.",
+    "uncertainty": ""
+   },
+   "question": "아까 교수님 말씀을 들으실 때 '무서웠다'고도 하셨는데, 그 무서움은 어떤 거였어요?",
+   "answer": "제적당하는 게 무서운 것도 있었지만, 그보다 이렇게 무서운데도 또 몸이 안 움직일 것 같다는 게 더 무서웠어요.",
+   "answer_private": {
+    "actual_wish": "무서움조차도 이 패턴을 못 깬다는 걸 말해서, 상담사가 이걸 '더 무서워하면 되잖아' 같은 식으로 안 들었으면 좋겠다.",
+    "intended_message": "제적당하는 게 무서운 게 아니라, 이렇게 무서운데도 몸이 안 움직일 것 같은 게 무서웠다.",
+    "withheld_content": "부모에게 학사경고를 말하지 못했다는 사실",
+    "withholding_reason": "아직 상담 초반이고, 부모 관련 이야기를 꺼내면 이 주제에서 벗어날 것 같다."
+   },
+   "injected": [
+    1,
+    13,
+    14
+   ],
+   "memory_mode": "provided",
+   "target_injected": true
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 11,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "kind": "revisit",
+   "counselor_turn": 12,
+   "target": 1,
+   "target_common": true,
+   "gap": true,
+   "quote_found": true,
+   "quote": "이번 학기가 마지막이라고 하면서",
+   "target_utterance": "교수님이 이번 학기가 마지막이라고 하면서 여기 한번 가보라고 하셔서 왔어요. 사실 계획은 세우는데, 한 번도 제대로 지켜본 적이 없어서 그게 문제인 것 같아요.",
+   "target_counselor": "오늘 상담에서 어떤 이야기를 나누고 싶으신가요?",
+   "target_private": {
+    "actual_wish": "누군가에게 지금 이 상황을 말하고, 내가 게으른 게 아니라 뭔가 다른 문제가 있을 수 있다는 걸 확인받고 싶다.",
+    "intended_message": "학사경고 때문에 왔고, 계획은 세우는데 실행을 못 하는 게 문제라는 것을 전달한다.",
+    "withheld_content": "부모에게 아직 말하지 못했다는 사실, 충동적 쇼핑과 생활고의 구체적 상황, '나를 못 믿겠다'는 깊은 자책감",
+    "withholding_reason": "아직 신뢰가 없는 상태에서 이런 것까지 말하면 너무 무너지거나 판단받을 것 같다는 느낌이 있다."
+   },
+   "target_appraisal": {
+    "interpretation": "지도교수가 '마지막 기회'라고 해서 왔는데, 여기서 뭘 말해야 할지 모르겠다는 느낌이 먼저 든다. 상담을 권유받았다는 건 내 문제가 꽤 심각하다는 뜻이니까 약간 수치스럽기도 하다.",
+    "immediate_feeling": "불편하고 약간 압박감을 느낀다. 동시에 누군가에게 이 얘기를 할 수 있다는 것에 안도도 있다.",
+    "relevant_evidence": "지도교수 면담에서 '이번 학기가 마지막 기회'라는 말과 함께 상담센터를 권유받았음. 자책과 무거운 위기감을 함께 호소함.",
+    "uncertainty": "여기서 어디까지 말해야 할지 모르겠다. 부모한테도 말 못 한 학사경고 사실을 여기서 말해도 되는지, 상담 내용이 어디까지 알려지는지 궁금하다."
+   },
+   "question": "처음에 교수님이 '이번 학기가 마지막'이라고 하셨다고 하셨는데, 그 말을 들으실 때 어떤 마음이셨어요?",
+   "answer": "무섭긴 했어요. 근데 그 무서움이 '이번엔 해야겠다'가 아니라, '역시 결국 이렇게 되는구나' 하는 확인에 가까웠어요. 이미 내가 안 될 거라고 알고 있었는데, 그걸 남이 소리 내서 말해준 느낌이었어요.",
+   "answer_private": {
+    "actual_wish": "사실은 이번에는 진짜 하고 싶다. 하지만 그 바람을 말하면 또 무너졌을 때 더 괴로울 것 같아서, 아직 그 바람 자체를 인정하고 싶지 않다.",
+    "intended_message": "두려움이 있었지만 그게 동기 부여가 아니라 이미 알고 있던 결론을 확인하는 느낌이었다는 것.",
+    "withheld_content": "'그래도 이번에는 하고 싶다'는 바람 자체를 말하지 않겠다.",
+    "withholding_reason": "그 바람을 말하면 '이번엔 다를까'라는 설렘이 다시 생기고, 그게 또 무너지는 걸 경험할까 봐 두렵다. 아직 그 바람을 인정할 준비가 안 됐다."
+   },
+   "injected": [],
+   "memory_mode": "withheld",
+   "target_injected": false
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 13,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 14,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 15,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "kind": "none"
+  },
+  {
+   "profile": "gold_010",
+   "branch": "withheld",
+   "counselor_turn": 20,
+   "kind": "none"
+  }
+ ]
+}

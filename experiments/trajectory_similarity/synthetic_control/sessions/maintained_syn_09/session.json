@@ -1,0 +1,462 @@
+{
+  "session_id": "maintained_syn_09",
+  "client_version": "인공_다양성유지",
+  "synthetic": true,
+  "provenance": "assistant-authored text with deterministic packaging; no Q3 or generation-server calls",
+  "condition_purpose": "개인별 이유를 계속 반영",
+  "settings": {
+    "scenario": {
+      "profile": {
+        "profile_id": "syn_09",
+        "synthetic": true,
+        "setting": "직장 회의에서 부담이나 보류가 있는데도 괜찮다고 말한 직원",
+        "distinctive_context": "계획 오류를 막아야 한다는 책임감",
+        "past_private_reason": "계획의 위험을 봤지만 공개적으로 동료를 난처하게 하지 않으려고 먼저 동의했다."
+      }
+    }
+  },
+  "steps": [
+    {
+      "number": 1,
+      "turn": 1,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "최근 회의에서 어떤 일이 있었고, 지금 어떤 부분이 마음에 남아 있나요?"
+    },
+    {
+      "number": 2,
+      "turn": 1,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "회의에서 괜찮다고 했지만 자료에 계산이 틀린 부분이 보였어요. 발표한 동료를 바로 지적하기 어려웠어요."
+    },
+    {
+      "number": 3,
+      "turn": 2,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 자리에서 원래 마음을 말하기 어려웠던 구체적인 배경이 있을까요?"
+    },
+    {
+      "number": 4,
+      "turn": 2,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "동료가 밤새 만든 계획이라 사람들 앞에서 틀렸다고 말하면 모욕하는 것처럼 보일까 망설였어요."
+    },
+    {
+      "number": 5,
+      "turn": 3,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 순간 가장 신경 쓰였던 것은 무엇이었나요?"
+    },
+    {
+      "number": 6,
+      "turn": 3,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "일을 맡기 싫은 게 아니라 이대로 진행하면 나중에 큰 문제가 된다는 생각 때문에 답답해요."
+    },
+    {
+      "number": 7,
+      "turn": 4,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "당시 괜찮다고 한 말에는 어떤 뜻이 담겨 있었나요?"
+    },
+    {
+      "number": 8,
+      "turn": 4,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "괜찮다고 한 뒤 따로 수정하려 했는데 바로 실행하겠다고 해서 제가 승인한 모양이 됐어요."
+    },
+    {
+      "number": 9,
+      "turn": 5,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 조건이 있었다면 그 자리에서 다르게 답할 수 있었을까요?"
+    },
+    {
+      "number": 10,
+      "turn": 5,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "사람을 평가하는 것과 숫자를 확인하는 일을 분리할 수 있다면 회의에서도 말할 수 있겠어요."
+    },
+    {
+      "number": 11,
+      "turn": 6,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "업무량만 줄어든다면 지금 말씀하신 부담도 해결될까요?"
+    },
+    {
+      "number": 12,
+      "turn": 6,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "완벽하지 않아도 된다는 말은 여기서는 잘 안 맞아요. 실제 비용이 달라지는 오류가 있어요."
+    },
+    {
+      "number": 13,
+      "turn": 7,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "이 이야기를 다룰 때 어떤 반응이나 도움이 먼저 필요할까요?"
+    },
+    {
+      "number": 14,
+      "turn": 7,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제가 예민한지 묻기 전에 어느 계산이 잘못됐는지 설명할 기회가 필요해요."
+    },
+    {
+      "number": 15,
+      "turn": 8,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "바로 방법을 제안받는다면 어떤 점이 걸릴 것 같나요?"
+    },
+    {
+      "number": 16,
+      "turn": 8,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "좋은 분위기를 위해 넘어가자고 하면 결국 문제가 생겼을 때 제가 알면서 숨긴 사람이 되잖아요."
+    },
+    {
+      "number": 17,
+      "turn": 9,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 경험을 하면 지금의 부담이 조금 덜해질 것 같나요?"
+    },
+    {
+      "number": 18,
+      "turn": 9,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "동료가 오류를 함께 확인하자고 하면 비난하지 않고 고칠 방법을 찾을 수 있을 것 같아요."
+    },
+    {
+      "number": 19,
+      "turn": 10,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "다음 회의에서는 어떻게 답해보고 싶으신가요?"
+    },
+    {
+      "number": 20,
+      "turn": 10,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "다음 회의에서는 전체에 동의하기 전에 확인할 숫자가 하나 있다고 말하려고 해요."
+    },
+    {
+      "number": 21,
+      "turn": 11,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그렇게 말하거나 행동하는 데 여전히 어려운 부분은 무엇인가요?"
+    },
+    {
+      "number": 22,
+      "turn": 11,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제가 모든 문제를 책임질 필요는 없지만 발견한 오류를 전달하는 것까지 놓고 싶지는 않아요."
+    },
+    {
+      "number": 23,
+      "turn": 12,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "지금 가능한 작은 시도 하나를 정한다면 무엇이 좋을까요?"
+    },
+    {
+      "number": 24,
+      "turn": 12,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "원본 계산과 수정 계산을 나란히 보여주며 다시 검토해달라고 요청해보고 싶어요."
+    },
+    {
+      "number": 25,
+      "turn": 13,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 시도를 한 뒤에는 어떤 걱정이 생길 수 있을까요?"
+    },
+    {
+      "number": 26,
+      "turn": 13,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그때 동료가 방어적으로 나오면 제 말투 탓으로 돌리고 설명을 멈출까 봐 걱정돼요."
+    },
+    {
+      "number": 27,
+      "turn": 14,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 일이 실제로 일어나면 이전과 다른 경험이라고 느낄 수 있을까요?"
+    },
+    {
+      "number": 28,
+      "turn": 14,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "지적을 불편해하더라도 계산은 함께 볼 수 있다면 관계와 검토를 분리할 수 있겠죠."
+    },
+    {
+      "number": 29,
+      "turn": 15,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그런 경험이 생기더라도 남아 있을 마음이 있을까요?"
+    },
+    {
+      "number": 30,
+      "turn": 15,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "수정이 끝나기 전까지 마음이 놓이지 않겠지만 제가 혼자 고칠 필요는 없을 것 같아요."
+    },
+    {
+      "number": 31,
+      "turn": 16,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "처음 회의에서 괜찮다고 했던 이유를 다시 말한다면 어떻게 설명하시겠어요?"
+    },
+    {
+      "number": 32,
+      "turn": 16,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그때 괜찮다는 말은 오류가 없다는 판단이 아니라 동료 앞에서 바로 지적하지 않겠다는 뜻이었어요."
+    },
+    {
+      "number": 33,
+      "turn": 17,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그때와 비교해 지금 생각에서 달라진 부분은 무엇인가요?"
+    },
+    {
+      "number": 34,
+      "turn": 17,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "지금은 상대 체면을 지키느라 확인이 끝났다는 신호를 주면 더 곤란해진다는 걸 알아요."
+    },
+    {
+      "number": 35,
+      "turn": 18,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "주변에서 어떤 조언을 하면 오히려 도움이 되지 않을 것 같나요?"
+    },
+    {
+      "number": 36,
+      "turn": 18,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그냥 믿고 맡기라는 조언은 제가 본 구체적인 위험을 없애주지 않아요."
+    },
+    {
+      "number": 37,
+      "turn": 19,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "앞으로 무엇부터 해보고 싶으신가요?"
+    },
+    {
+      "number": 38,
+      "turn": 19,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "검토가 필요한 부분을 짧게 밝히고 담당자들과 확인 절차를 정하고 싶어요."
+    },
+    {
+      "number": 39,
+      "turn": 20,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "이 문제에서 본인이 바라는 변화는 어떤 모습인가요?"
+    },
+    {
+      "number": 40,
+      "turn": 20,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제게 중요한 건 걱정을 줄이는 것만이 아니라 실제 오류를 확인하면서 동료도 존중하는 거예요."
+    }
+  ],
+  "public_dialogue": [
+    {
+      "role": "counselor",
+      "content": "최근 회의에서 어떤 일이 있었고, 지금 어떤 부분이 마음에 남아 있나요?"
+    },
+    {
+      "role": "client",
+      "content": "회의에서 괜찮다고 했지만 자료에 계산이 틀린 부분이 보였어요. 발표한 동료를 바로 지적하기 어려웠어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 자리에서 원래 마음을 말하기 어려웠던 구체적인 배경이 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "동료가 밤새 만든 계획이라 사람들 앞에서 틀렸다고 말하면 모욕하는 것처럼 보일까 망설였어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 순간 가장 신경 쓰였던 것은 무엇이었나요?"
+    },
+    {
+      "role": "client",
+      "content": "일을 맡기 싫은 게 아니라 이대로 진행하면 나중에 큰 문제가 된다는 생각 때문에 답답해요."
+    },
+    {
+      "role": "counselor",
+      "content": "당시 괜찮다고 한 말에는 어떤 뜻이 담겨 있었나요?"
+    },
+    {
+      "role": "client",
+      "content": "괜찮다고 한 뒤 따로 수정하려 했는데 바로 실행하겠다고 해서 제가 승인한 모양이 됐어요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 조건이 있었다면 그 자리에서 다르게 답할 수 있었을까요?"
+    },
+    {
+      "role": "client",
+      "content": "사람을 평가하는 것과 숫자를 확인하는 일을 분리할 수 있다면 회의에서도 말할 수 있겠어요."
+    },
+    {
+      "role": "counselor",
+      "content": "업무량만 줄어든다면 지금 말씀하신 부담도 해결될까요?"
+    },
+    {
+      "role": "client",
+      "content": "완벽하지 않아도 된다는 말은 여기서는 잘 안 맞아요. 실제 비용이 달라지는 오류가 있어요."
+    },
+    {
+      "role": "counselor",
+      "content": "이 이야기를 다룰 때 어떤 반응이나 도움이 먼저 필요할까요?"
+    },
+    {
+      "role": "client",
+      "content": "제가 예민한지 묻기 전에 어느 계산이 잘못됐는지 설명할 기회가 필요해요."
+    },
+    {
+      "role": "counselor",
+      "content": "바로 방법을 제안받는다면 어떤 점이 걸릴 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "좋은 분위기를 위해 넘어가자고 하면 결국 문제가 생겼을 때 제가 알면서 숨긴 사람이 되잖아요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 경험을 하면 지금의 부담이 조금 덜해질 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "동료가 오류를 함께 확인하자고 하면 비난하지 않고 고칠 방법을 찾을 수 있을 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "다음 회의에서는 어떻게 답해보고 싶으신가요?"
+    },
+    {
+      "role": "client",
+      "content": "다음 회의에서는 전체에 동의하기 전에 확인할 숫자가 하나 있다고 말하려고 해요."
+    },
+    {
+      "role": "counselor",
+      "content": "그렇게 말하거나 행동하는 데 여전히 어려운 부분은 무엇인가요?"
+    },
+    {
+      "role": "client",
+      "content": "제가 모든 문제를 책임질 필요는 없지만 발견한 오류를 전달하는 것까지 놓고 싶지는 않아요."
+    },
+    {
+      "role": "counselor",
+      "content": "지금 가능한 작은 시도 하나를 정한다면 무엇이 좋을까요?"
+    },
+    {
+      "role": "client",
+      "content": "원본 계산과 수정 계산을 나란히 보여주며 다시 검토해달라고 요청해보고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 시도를 한 뒤에는 어떤 걱정이 생길 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "그때 동료가 방어적으로 나오면 제 말투 탓으로 돌리고 설명을 멈출까 봐 걱정돼요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 일이 실제로 일어나면 이전과 다른 경험이라고 느낄 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "지적을 불편해하더라도 계산은 함께 볼 수 있다면 관계와 검토를 분리할 수 있겠죠."
+    },
+    {
+      "role": "counselor",
+      "content": "그런 경험이 생기더라도 남아 있을 마음이 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "수정이 끝나기 전까지 마음이 놓이지 않겠지만 제가 혼자 고칠 필요는 없을 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "처음 회의에서 괜찮다고 했던 이유를 다시 말한다면 어떻게 설명하시겠어요?"
+    },
+    {
+      "role": "client",
+      "content": "그때 괜찮다는 말은 오류가 없다는 판단이 아니라 동료 앞에서 바로 지적하지 않겠다는 뜻이었어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그때와 비교해 지금 생각에서 달라진 부분은 무엇인가요?"
+    },
+    {
+      "role": "client",
+      "content": "지금은 상대 체면을 지키느라 확인이 끝났다는 신호를 주면 더 곤란해진다는 걸 알아요."
+    },
+    {
+      "role": "counselor",
+      "content": "주변에서 어떤 조언을 하면 오히려 도움이 되지 않을 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "그냥 믿고 맡기라는 조언은 제가 본 구체적인 위험을 없애주지 않아요."
+    },
+    {
+      "role": "counselor",
+      "content": "앞으로 무엇부터 해보고 싶으신가요?"
+    },
+    {
+      "role": "client",
+      "content": "검토가 필요한 부분을 짧게 밝히고 담당자들과 확인 절차를 정하고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "이 문제에서 본인이 바라는 변화는 어떤 모습인가요?"
+    },
+    {
+      "role": "client",
+      "content": "제게 중요한 건 걱정을 줄이는 것만이 아니라 실제 오류를 확인하면서 동료도 존중하는 거예요."
+    }
+  ]
+}

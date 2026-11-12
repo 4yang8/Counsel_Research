@@ -1,0 +1,14 @@
+{
+  "embedding_shape": [
+    2,
+    10,
+    20,
+    2560
+  ],
+  "max_reference_same_turn_difference": 0.0009088975175484126,
+  "time_stretch_control_same": 0.19999999999999996,
+  "time_stretch_control_dtw": 1.0,
+  "small_matrix_bruteforce": "passed",
+  "band_monotonicity": "passed",
+  "modified_utterances": 2
+}

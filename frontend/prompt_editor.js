@@ -31,7 +31,7 @@
   }
   function target(editor){
     const version=selected(editor.role);
-    if(editor.userTemplate && ['Q3cars','Q3patientact','Q3calmit','Q3calmit_counsel','Q3public','Q3oracle','Q3full','Q3select','Q3ragtool'].includes(version))return null;
+    if(editor.userTemplate && (['Q3cars','Q3patientact','Q3calmit','Q3calmit_counsel','Q3public','Q3oracle','Q3full','Q3select','Q3ragtool','Q3inner_memory','inner_memory_no','Q3compare_memory','Q3compare_memory_private_position'].includes(version)||versionCatalog?.versions.find(v=>v.id===version)?.memory_access))return null;
     if(editor.skill)return version==='Q3sk'?{role:'client',version,kind:'skill_notes'}:null;
     if(editor.kind==='trajectory')return ['Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5'].includes(version)?{role:'client',version,kind:'trajectory'}:null;
     if(editor.subagent){

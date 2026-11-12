@@ -32,3 +32,12 @@ node_modules/
 /.claude/*.lock
 .DS_Store
 Thumbs.db
+
+# Transient paired-session state; finalized client_state remains tracked.
+/runs/paired/**/.client_pending/
+/runs/paired/**/.client_previous/
+/runs/paired/**/.client_transaction.json
+/runs/paired/**/.client_state.lock
+
+# Oversized experiment export, retained locally.
+/experiments/trajectory_similarity/compare_fork/results/batch_2a8d1de4/sessions.json

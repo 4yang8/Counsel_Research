@@ -6,6 +6,7 @@ import re
 from urllib.parse import parse_qs, urlsplit
 from storage.event_journal import read_events
 from project_paths import historical_storage_root
+from client.memory_access import ALL_CM_VERSIONS
 
 ID = re.compile(r'[a-zA-Z0-9_-]{1,80}')
 
@@ -26,7 +27,7 @@ def discover(server):
         roots = [Path(server.storage_dir), *(Path(p) for p in sorted(server.storage_roots)
                                             if Path(p) != Path(server.storage_dir))]
     for root in roots:
-        for kind in ('paired', 'basic', 'state_summary', 'Q1', 'Q1_s1', 'Q1_s2', 'Q1a', 'Q2', 'Q2a', 'Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6','Q3cars','Q3patientact','Q3calmit','Q3public','Q3oracle','Q3full','Q3select','Q3ragtool','Q3inner_memory','inner_memory_no'):
+        for kind in ('paired', 'basic', 'state_summary', 'Q1', 'Q1_s1', 'Q1_s2', 'Q1a', 'Q2', 'Q2a', 'Q2a_variant_context','Q2a_trait_background','Q2a_prefill_test','Q2a_note_select','Q2a_note_retrieve','Q2a_turn_goal','Q2a_agentic_memory','Q2a_agentic_memory_F','Q3','Q3a','Q3b','Q3sk','Q3n','Q3sb','Q3x','Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6','Q3cars','Q3patientact','Q3calmit','Q3public','Q3oracle','Q3full','Q3select','Q3ragtool','Q3inner_memory','inner_memory_no','Q3compare_memory','Q3compare_memory_private_position', *ALL_CM_VERSIONS):
             base = root / kind
             if base.is_symlink() or not base.is_dir():
                 continue

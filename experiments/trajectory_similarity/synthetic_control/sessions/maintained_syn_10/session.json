@@ -1,0 +1,462 @@
+{
+  "session_id": "maintained_syn_10",
+  "client_version": "인공_다양성유지",
+  "synthetic": true,
+  "provenance": "assistant-authored text with deterministic packaging; no Q3 or generation-server calls",
+  "condition_purpose": "개인별 이유를 계속 반영",
+  "settings": {
+    "scenario": {
+      "profile": {
+        "profile_id": "syn_10",
+        "synthetic": true,
+        "setting": "직장 회의에서 부담이나 보류가 있는데도 괜찮다고 말한 직원",
+        "distinctive_context": "부당한 분배에 대한 분노",
+        "past_private_reason": "늘 자신에게만 일이 몰리는 데 화가 났지만 화내는 사람으로 보일까 봐 동의했다."
+      }
+    }
+  },
+  "steps": [
+    {
+      "number": 1,
+      "turn": 1,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "최근 회의에서 어떤 일이 있었고, 지금 어떤 부분이 마음에 남아 있나요?"
+    },
+    {
+      "number": 2,
+      "turn": 1,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "회의에서 괜찮다고 했지만 속으로는 화가 났어요. 이번에도 일이 저한테만 넘어왔거든요."
+    },
+    {
+      "number": 3,
+      "turn": 2,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 자리에서 원래 마음을 말하기 어려웠던 구체적인 배경이 있을까요?"
+    },
+    {
+      "number": 4,
+      "turn": 2,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "먼저 퇴근하는 사람은 따로 있는데 잘한다는 이유로 늘 제가 남는 게 불공평하게 느껴져요."
+    },
+    {
+      "number": 5,
+      "turn": 3,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 순간 가장 신경 쓰였던 것은 무엇이었나요?"
+    },
+    {
+      "number": 6,
+      "turn": 3,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "업무 자체보다 당연히 제가 하겠지 하는 분위기가 싫고, 웃으면서 대답한 제가 더 억울해요."
+    },
+    {
+      "number": 7,
+      "turn": 4,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "당시 괜찮다고 한 말에는 어떤 뜻이 담겨 있었나요?"
+    },
+    {
+      "number": 8,
+      "turn": 4,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그 동의는 공평하다고 생각해서가 아니라 회의에서 화난 사람으로 찍히기 싫어서였어요."
+    },
+    {
+      "number": 9,
+      "turn": 5,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 조건이 있었다면 그 자리에서 다르게 답할 수 있었을까요?"
+    },
+    {
+      "number": 10,
+      "turn": 5,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "이번 한 건을 줄이는 것보다 왜 늘 같은 사람에게 맡기는지 설명을 듣고 싶어요."
+    },
+    {
+      "number": 11,
+      "turn": 6,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "업무량만 줄어든다면 지금 말씀하신 부담도 해결될까요?"
+    },
+    {
+      "number": 12,
+      "turn": 6,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "화를 진정시키는 법만 이야기하면 불공평한 배분은 그대로 남는 것 같아요."
+    },
+    {
+      "number": 13,
+      "turn": 7,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "이 이야기를 다룰 때 어떤 반응이나 도움이 먼저 필요할까요?"
+    },
+    {
+      "number": 14,
+      "turn": 7,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "착하게 거절하는 표현보다 제가 화날 만한 이유가 있는지 먼저 같이 보고 싶어요."
+    },
+    {
+      "number": 15,
+      "turn": 8,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "바로 방법을 제안받는다면 어떤 점이 걸릴 것 같나요?"
+    },
+    {
+      "number": 16,
+      "turn": 8,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "쉬고 오라는 말로 끝나면 돌아와서 같은 일을 떠맡을 게 보여서 더 화가 날 것 같아요."
+    },
+    {
+      "number": 17,
+      "turn": 9,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 경험을 하면 지금의 부담이 조금 덜해질 것 같나요?"
+    },
+    {
+      "number": 18,
+      "turn": 9,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "다른 직원의 업무량도 함께 공개하면 제가 예민해서만 그런 건지 확인할 수 있겠어요."
+    },
+    {
+      "number": 19,
+      "turn": 10,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "다음 회의에서는 어떻게 답해보고 싶으신가요?"
+    },
+    {
+      "number": 20,
+      "turn": 10,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "다음 회의에서는 최근 세 번의 배분을 보여주고 이번에는 순서를 바꾸자고 말하고 싶어요."
+    },
+    {
+      "number": 21,
+      "turn": 11,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그렇게 말하거나 행동하는 데 여전히 어려운 부분은 무엇인가요?"
+    },
+    {
+      "number": 22,
+      "turn": 11,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "모두 사정이 있다는 설명은 알지만 제 사정만 계속 뒤로 밀리는 게 문제예요."
+    },
+    {
+      "number": 23,
+      "turn": 12,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "지금 가능한 작은 시도 하나를 정한다면 무엇이 좋을까요?"
+    },
+    {
+      "number": 24,
+      "turn": 12,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제가 맡은 시간과 다른 사람의 시간을 기록해서 감정만으로 말하지 않으려고 해요."
+    },
+    {
+      "number": 25,
+      "turn": 13,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 시도를 한 뒤에는 어떤 걱정이 생길 수 있을까요?"
+    },
+    {
+      "number": 26,
+      "turn": 13,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그래도 원래 잘하는 사람이 해야 한다고 하면 칭찬을 이용당하는 기분이 들 것 같아요."
+    },
+    {
+      "number": 27,
+      "turn": 14,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 일이 실제로 일어나면 이전과 다른 경험이라고 느낄 수 있을까요?"
+    },
+    {
+      "number": 28,
+      "turn": 14,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "실제로 다른 사람에게도 같은 기준이 적용되면 제 분노가 좀 내려갈 것 같아요."
+    },
+    {
+      "number": 29,
+      "turn": 15,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그런 경험이 생기더라도 남아 있을 마음이 있을까요?"
+    },
+    {
+      "number": 30,
+      "turn": 15,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "한 번 배려받았다고 앞으로의 불균형까지 그냥 참겠다는 뜻은 아니에요."
+    },
+    {
+      "number": 31,
+      "turn": 16,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "처음 회의에서 괜찮다고 했던 이유를 다시 말한다면 어떻게 설명하시겠어요?"
+    },
+    {
+      "number": 32,
+      "turn": 16,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그때 괜찮다는 말은 불만이 없다는 뜻이 아니라 화를 그 자리에서 숨기겠다는 말이었어요."
+    },
+    {
+      "number": 33,
+      "turn": 17,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그때와 비교해 지금 생각에서 달라진 부분은 무엇인가요?"
+    },
+    {
+      "number": 34,
+      "turn": 17,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "지금은 화를 없애기보다 그 화가 가리키는 요구를 분명하게 말하고 싶어요."
+    },
+    {
+      "number": 35,
+      "turn": 18,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "주변에서 어떤 조언을 하면 오히려 도움이 되지 않을 것 같나요?"
+    },
+    {
+      "number": 36,
+      "turn": 18,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "관계를 위해 제가 양보하라는 말은 지금까지 해온 일을 또 하라는 것처럼 들려요."
+    },
+    {
+      "number": 37,
+      "turn": 19,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "앞으로 무엇부터 해보고 싶으신가요?"
+    },
+    {
+      "number": 38,
+      "turn": 19,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "업무 순환 기준을 정하고 다음 배분에서도 지켜지는지 확인하고 싶어요."
+    },
+    {
+      "number": 39,
+      "turn": 20,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "이 문제에서 본인이 바라는 변화는 어떤 모습인가요?"
+    },
+    {
+      "number": 40,
+      "turn": 20,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제게 나아진다는 건 더 잘 참는 사람이 되는 게 아니라 공평한 기준을 함께 세우는 거예요."
+    }
+  ],
+  "public_dialogue": [
+    {
+      "role": "counselor",
+      "content": "최근 회의에서 어떤 일이 있었고, 지금 어떤 부분이 마음에 남아 있나요?"
+    },
+    {
+      "role": "client",
+      "content": "회의에서 괜찮다고 했지만 속으로는 화가 났어요. 이번에도 일이 저한테만 넘어왔거든요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 자리에서 원래 마음을 말하기 어려웠던 구체적인 배경이 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "먼저 퇴근하는 사람은 따로 있는데 잘한다는 이유로 늘 제가 남는 게 불공평하게 느껴져요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 순간 가장 신경 쓰였던 것은 무엇이었나요?"
+    },
+    {
+      "role": "client",
+      "content": "업무 자체보다 당연히 제가 하겠지 하는 분위기가 싫고, 웃으면서 대답한 제가 더 억울해요."
+    },
+    {
+      "role": "counselor",
+      "content": "당시 괜찮다고 한 말에는 어떤 뜻이 담겨 있었나요?"
+    },
+    {
+      "role": "client",
+      "content": "그 동의는 공평하다고 생각해서가 아니라 회의에서 화난 사람으로 찍히기 싫어서였어요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 조건이 있었다면 그 자리에서 다르게 답할 수 있었을까요?"
+    },
+    {
+      "role": "client",
+      "content": "이번 한 건을 줄이는 것보다 왜 늘 같은 사람에게 맡기는지 설명을 듣고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "업무량만 줄어든다면 지금 말씀하신 부담도 해결될까요?"
+    },
+    {
+      "role": "client",
+      "content": "화를 진정시키는 법만 이야기하면 불공평한 배분은 그대로 남는 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "이 이야기를 다룰 때 어떤 반응이나 도움이 먼저 필요할까요?"
+    },
+    {
+      "role": "client",
+      "content": "착하게 거절하는 표현보다 제가 화날 만한 이유가 있는지 먼저 같이 보고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "바로 방법을 제안받는다면 어떤 점이 걸릴 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "쉬고 오라는 말로 끝나면 돌아와서 같은 일을 떠맡을 게 보여서 더 화가 날 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 경험을 하면 지금의 부담이 조금 덜해질 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "다른 직원의 업무량도 함께 공개하면 제가 예민해서만 그런 건지 확인할 수 있겠어요."
+    },
+    {
+      "role": "counselor",
+      "content": "다음 회의에서는 어떻게 답해보고 싶으신가요?"
+    },
+    {
+      "role": "client",
+      "content": "다음 회의에서는 최근 세 번의 배분을 보여주고 이번에는 순서를 바꾸자고 말하고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그렇게 말하거나 행동하는 데 여전히 어려운 부분은 무엇인가요?"
+    },
+    {
+      "role": "client",
+      "content": "모두 사정이 있다는 설명은 알지만 제 사정만 계속 뒤로 밀리는 게 문제예요."
+    },
+    {
+      "role": "counselor",
+      "content": "지금 가능한 작은 시도 하나를 정한다면 무엇이 좋을까요?"
+    },
+    {
+      "role": "client",
+      "content": "제가 맡은 시간과 다른 사람의 시간을 기록해서 감정만으로 말하지 않으려고 해요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 시도를 한 뒤에는 어떤 걱정이 생길 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "그래도 원래 잘하는 사람이 해야 한다고 하면 칭찬을 이용당하는 기분이 들 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 일이 실제로 일어나면 이전과 다른 경험이라고 느낄 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "실제로 다른 사람에게도 같은 기준이 적용되면 제 분노가 좀 내려갈 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "그런 경험이 생기더라도 남아 있을 마음이 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "한 번 배려받았다고 앞으로의 불균형까지 그냥 참겠다는 뜻은 아니에요."
+    },
+    {
+      "role": "counselor",
+      "content": "처음 회의에서 괜찮다고 했던 이유를 다시 말한다면 어떻게 설명하시겠어요?"
+    },
+    {
+      "role": "client",
+      "content": "그때 괜찮다는 말은 불만이 없다는 뜻이 아니라 화를 그 자리에서 숨기겠다는 말이었어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그때와 비교해 지금 생각에서 달라진 부분은 무엇인가요?"
+    },
+    {
+      "role": "client",
+      "content": "지금은 화를 없애기보다 그 화가 가리키는 요구를 분명하게 말하고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "주변에서 어떤 조언을 하면 오히려 도움이 되지 않을 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "관계를 위해 제가 양보하라는 말은 지금까지 해온 일을 또 하라는 것처럼 들려요."
+    },
+    {
+      "role": "counselor",
+      "content": "앞으로 무엇부터 해보고 싶으신가요?"
+    },
+    {
+      "role": "client",
+      "content": "업무 순환 기준을 정하고 다음 배분에서도 지켜지는지 확인하고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "이 문제에서 본인이 바라는 변화는 어떤 모습인가요?"
+    },
+    {
+      "role": "client",
+      "content": "제게 나아진다는 건 더 잘 참는 사람이 되는 게 아니라 공평한 기준을 함께 세우는 거예요."
+    }
+  ]
+}

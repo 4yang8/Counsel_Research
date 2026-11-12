@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>프로필 대량생성</title><link rel="stylesheet" href="/batch.css"><script defer src="/batch.js"></script></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>프로필 대량생성</title><link rel="stylesheet" href="/batch.css"><script defer src="/form_settings.js"></script><script defer src="/batch.js"></script></head>
 <body><header><h1>프로필 대량생성</h1><a href="/">실험 화면으로</a></header><main>
 <p>프로필별로 독립 대화를 생성합니다. 두 조건은 특성 라우터와 현재 내면 생성 절차가 같고, 과거 내면의 재입력 여부만 다릅니다.</p>
 <p id="error" role="alert" hidden></p>
@@ -9,13 +9,15 @@
 <p id="profile-summary" role="status">폴더를 확인하세요.</p>
 <div class="actions"><button id="select-all" type="button">전체 선택</button><button id="select-20" type="button">앞 20개 선택</button><button id="select-none" type="button">선택 해제</button></div>
 <div id="profiles" class="profile-list" aria-label="생성할 프로필 선택"></div>
-<div class="grid"><fieldset><legend>내담자 버전 · 복수 선택 가능</legend>
+<div class="grid"><label>생성 방식<select id="mode"><option value="versions">두 조건을 따로 생성</option><option value="compare:Q3compare_memory">공통 구간 뒤 분기 · Q3compare_memory</option><option value="compare:Q3compare_memory_private_position">공통 구간 뒤 분기 · Q3compare_memory_private_position (상담사 말에 대한 입장 기록)</option></select><small>분기 방식은 프로필마다 공통 구간 1개와 갈래 2개(기록 제공·미제공)를 만듭니다.</small></label>
+<label id="fork-setting" hidden>분기 턴 n<input id="fork-turn" type="number" value="4" min="1" step="1"><small>n턴 상담사 발화까지 한 번만 생성하고, n턴 내담자 답부터 두 갈래로 나눕니다.</small></label>
+<fieldset id="version-setting"><legend>내담자 버전 · 복수 선택 가능</legend>
 <label class="check"><input id="memory" type="checkbox" checked>Q3inner_memory · 누적 내면 유지</label>
 <label class="check"><input id="no-memory" type="checkbox" checked>inner_memory_no · 과거 내면 미제공</label></fieldset>
 <label>대화당 내담자 턴 수<input id="turns" type="number" value="20" min="1" max="200"><small>상담사 질문 + 내담자 답변이 1턴입니다.</small></label>
-<label>동시 진행할 대화 수<input id="concurrency" type="number" value="4" min="1" step="1"><small>각 대화 안의 발화는 순서대로 생성합니다.</small></label>
-<label>실패한 발화의 자동 재시도 횟수<input id="retries" type="number" value="1" min="0" max="3"></label>
-<label>생성 모델 서버<input id="endpoint" type="text"></label><label>생성 모델<select id="model"></select></label>
+<label>동시 진행할 대화 수<input id="concurrency" type="number" value="100" min="1" step="1"><small>각 대화 안의 발화는 순서대로 생성합니다.</small></label>
+<label>실패한 발화의 자동 재시도 횟수<input id="retries" type="number" value="3" min="0" max="3"></label>
+<label>생성 모델 서버<select id="endpoint-mode"><option value="current">현재 값</option><option value="lan">http://192.168.0.n:8002/v1</option></select><input id="endpoint" type="text" aria-label="생성 모델 서버 주소"><input id="endpoint-octet" type="number" min="0" max="255" step="1" placeholder="n (0~255)" aria-label="192.168.0.n의 n" hidden><small id="endpoint-preview"></small></label><label>생성 모델<select id="model"></select></label>
 <label>상담사 버전<select id="counselor"></select></label><label id="intervention-setting" hidden>상담사 개입 조건<select id="intervention"></select></label><label>Temperature<input id="temperature" type="number" min="0" max="2" step="0.1"></label>
 <label>Max tokens<input id="max-tokens" type="number" min="128" max="131072"></label>
 <label>Seed · 비우면 미지정<input id="seed" type="number" min="0" step="1"><small>지정 시 모든 대화에 같은 값이 적용됩니다.</small></label>

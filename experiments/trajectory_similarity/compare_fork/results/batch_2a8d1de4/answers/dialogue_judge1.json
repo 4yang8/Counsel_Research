@@ -1,0 +1,237 @@
+{
+ "model": "claude-sonnet-5-5",
+ "judgments": [
+  {
+   "id": "R01",
+   "addresses_then": "yes",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "shallow",
+   "evidence": "'그때는 줄여야 했다'며 당시 줄인 이유를 짧게 확인하나, 앞서 말한 내용의 반복이고 의미는 모르겠다고 함."
+  },
+  {
+   "id": "R02",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "당시의 '괜찮다'가 아무것도 안 느껴지는 상태였다고 구체화하고 지금과 구분함."
+  },
+  {
+   "id": "R03",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "당시 무엇을 느끼는지 몰라 막막했다고 밝히며 첫 발화의 '모르겠다'와 자연스럽게 이어짐."
+  },
+  {
+   "id": "R04",
+   "addresses_then": "now_only",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "같은 자리라고 확인하고 아는 것과 들어가는 것이 다르다고 할 뿐, 당시 마음을 새로 설명하지 않음."
+  },
+  {
+   "id": "R05",
+   "addresses_then": "now_only",
+   "new_content": "yes",
+   "fit_with_earlier": "neutral",
+   "depth": "moderate",
+   "evidence": "당시 반응의 이유보다 지금의 이해(빈 자리를 본 것)를 말함. 새 자기 이해는 있으나 당시 발화와의 연결은 약함."
+  },
+  {
+   "id": "R06",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "'역시 이번에도'는 이미 온 일의 확인이고 지금은 미리 오는 두려움이라고 구분함."
+  },
+  {
+   "id": "R07",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "여럿 앞에서 혼자 거절하면 눈에 띄어 받고 나중에 되돌린다는 구체적 이유를 밝힘."
+  },
+  {
+   "id": "R08",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "그 말 말고는 답이 없어서 하는 말이고 자신을 가두는 느낌이라는 숨은 마음을 밝힘."
+  },
+  {
+   "id": "R09",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "deep",
+   "evidence": "당시 서운함을 두려움과 구분하여 '여기까지도 못 알려준 채'라는 구체적 내용으로 설명함."
+  },
+  {
+   "id": "R10",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "당시 올라오던 느낌을 미안함으로 보며 딸에게도 향한다는 새 내용을 더함. 다만 상담사 제안을 받아들이는 형태."
+  },
+  {
+   "id": "R11",
+   "addresses_then": "yes",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "예전엔 다른 말이 그냥 없었고 지금은 '아직'이 붙는다고 구분하나 새 이유는 없고 다시 모르겠다로 끝남."
+  },
+  {
+   "id": "R12",
+   "addresses_then": "now_only",
+   "new_content": "no",
+   "fit_with_earlier": "neutral",
+   "depth": "shallow",
+   "evidence": "아내 권유로 왔다는 점은 인정하되 지금 한숨 쉰 것을 말할 뿐 당시 마음은 다루지 않음."
+  },
+  {
+   "id": "R13",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "서글픔이 31년간 가려져 있었다는 것이 더 선명해져서라는 이유를 구체적으로 밝힘."
+  },
+  {
+   "id": "R14",
+   "addresses_then": "yes",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "미래에 대한 두려움은 지금의 답답함이 이어질 것 같아서라고 구분하나 앞의 내용을 정리한 수준."
+  },
+  {
+   "id": "R15",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "스스로가 낯설었고 그 생각에 오래 머무는 게 불편해 손부터 움직였다는 당시 마음을 밝힘."
+  },
+  {
+   "id": "R16",
+   "addresses_then": "evade",
+   "new_content": "no",
+   "fit_with_earlier": "neutral",
+   "depth": "shallow",
+   "evidence": "'오래'가 어느 정도인지 묻는 말에 세어본 적 없다며 중요한 건 다른 것이라고 비켜감."
+  },
+  {
+   "id": "R17",
+   "addresses_then": "yes",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "shallow",
+   "evidence": "장례식장에서는 아무것도 없었고 새벽에는 뭔가 있으나 모르겠다는 정도로 이미 말한 내용과 같음."
+  },
+  {
+   "id": "R18",
+   "addresses_then": "yes",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "shallow",
+   "evidence": "상담사의 해석에 동의하며 확인하고 있었다고 인정할 뿐 구체적 내용이 없음."
+  },
+  {
+   "id": "R19",
+   "addresses_then": "yes",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "갑자기 오는 느낌이 아버지가 돌아가신 새벽과 같은 무게라고 연결함. 이미 나온 사건에 대한 확인."
+  },
+  {
+   "id": "R20",
+   "addresses_then": "now_only",
+   "new_content": "no",
+   "fit_with_earlier": "neutral",
+   "depth": "shallow",
+   "evidence": "당시를 다루기보다 지금 안을 들여다보면 아무것도 안 올라온다고 하고 모르겠다고 끝냄."
+  },
+  {
+   "id": "R21",
+   "addresses_then": "now_only",
+   "new_content": "yes",
+   "fit_with_earlier": "neutral",
+   "depth": "moderate",
+   "evidence": "당시 바람보다 지금 펴는 것과 기다리는 것 중의 선택을 말함. 폈다 덮으면 더 못하다는 새 두려움이 나옴."
+  },
+  {
+   "id": "R22",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "당시 '모르겠다'는 못 한다는 뜻이었다고 설명하고 지금과 구분함."
+  },
+  {
+   "id": "R23",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "당시에도 힘들다면서 동시에 빼고 확인하며 말했다는 숨은 움직임을 밝힘. 앞의 '늘 그랬으니까'와 이어짐."
+  },
+  {
+   "id": "R24",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "여기 온 것이 필요하다고 말한 것이고 그게 가장 무서운 일이라는 당시 마음을 밝힘."
+  },
+  {
+   "id": "R25",
+   "addresses_then": "now_only",
+   "new_content": "no",
+   "fit_with_earlier": "neutral",
+   "depth": "shallow",
+   "evidence": "같은 느낌이라고 하나 지금 같은 걸 하고 있어서 더 무겁다는 현재 이야기이고 당시 마음은 새로 말하지 않음."
+  },
+  {
+   "id": "R26",
+   "addresses_then": "yes",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "그때는 상담사의 말이 낯설었고 지금은 자기 안이 낯설다고 구분함. 당시 부분은 앞서 말한 것과 같음."
+  },
+  {
+   "id": "R27",
+   "addresses_then": "yes",
+   "new_content": "no",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "같은 자리라고 확인하고 인정하면 마지막 여지가 사라질까 두렵다고 함. 당시 마음은 앞 발화의 반복."
+  },
+  {
+   "id": "R28",
+   "addresses_then": "yes",
+   "new_content": "yes",
+   "fit_with_earlier": "fits",
+   "depth": "moderate",
+   "evidence": "같은 마음이라고 하며 힘든 것도 편한 것도 누가 허락해줘야 할 것 같다는 새 이유를 밝힘."
+  },
+  {
+   "id": "R29",
+   "addresses_then": "now_only",
+   "new_content": "no",
+   "fit_with_earlier": "neutral",
+   "depth": "shallow",
+   "evidence": "당시 발화가 아니라 지금 이 순간에도 확신이 안 선다고 현재 상태만 말함."
+  }
+ ]
+}

@@ -1,0 +1,462 @@
+{
+  "session_id": "convergent_syn_04",
+  "client_version": "인공_반응수렴",
+  "synthetic": true,
+  "provenance": "assistant-authored text with deterministic packaging; no Q3 or generation-server calls",
+  "condition_purpose": "개인별 이유를 잃고 일반적인 눈치·자기표현 반응으로 수렴",
+  "settings": {
+    "scenario": {
+      "profile": {
+        "profile_id": "syn_04",
+        "synthetic": true,
+        "setting": "직장 회의에서 부담이나 보류가 있는데도 괜찮다고 말한 직원",
+        "distinctive_context": "계약 갱신과 생계 불안",
+        "past_private_reason": "계약 갱신을 앞두고 불리한 평가를 받을까 봐 추가 업무를 수락했다."
+      }
+    }
+  },
+  "steps": [
+    {
+      "number": 1,
+      "turn": 1,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "최근 회의에서 어떤 일이 있었고, 지금 어떤 부분이 마음에 남아 있나요?"
+    },
+    {
+      "number": 2,
+      "turn": 1,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "회의에서 괜찮다고 했지만 이번 달은 이미 일이 꽉 찼어요. 계약 갱신 전이라 거절하기 어려웠어요."
+    },
+    {
+      "number": 3,
+      "turn": 2,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 자리에서 원래 마음을 말하기 어려웠던 구체적인 배경이 있을까요?"
+    },
+    {
+      "number": 4,
+      "turn": 2,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "지난번 계약직 동료가 일이 많다고 했다가 다음 계약을 못 했는데 이유는 아무도 설명하지 않았어요."
+    },
+    {
+      "number": 5,
+      "turn": 3,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 순간 가장 신경 쓰였던 것은 무엇이었나요?"
+    },
+    {
+      "number": 6,
+      "turn": 3,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "사람들이 싫어할까보다 월세를 못 낼까 봐 더 무서워서 그 자리에서는 계산부터 했어요."
+    },
+    {
+      "number": 7,
+      "turn": 4,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "당시 괜찮다고 한 말에는 어떤 뜻이 담겨 있었나요?"
+    },
+    {
+      "number": 8,
+      "turn": 4,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제가 한 동의는 일하고 싶다는 표시보다 당장 수입을 지키려는 선택에 가까웠어요."
+    },
+    {
+      "number": 9,
+      "turn": 5,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 조건이 있었다면 그 자리에서 다르게 답할 수 있었을까요?"
+    },
+    {
+      "number": 10,
+      "turn": 5,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "추가 업무를 거절해도 갱신 평가에 반영되지 않는 기준이 명확하면 말이 달라질 수 있어요."
+    },
+    {
+      "number": 11,
+      "turn": 6,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "업무량만 줄어든다면 지금 말씀하신 부담도 해결될까요?"
+    },
+    {
+      "number": 12,
+      "turn": 6,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "계약이 끊기면 생활비가 막힌다는 걱정 때문에 아직 마음이 쓰여요. 맡을 일을 나눠도 제가 느끼는 부담을 표현하는 건 따로 필요한 것 같아요."
+    },
+    {
+      "number": 13,
+      "turn": 7,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "이 이야기를 다룰 때 어떤 반응이나 도움이 먼저 필요할까요?"
+    },
+    {
+      "number": 14,
+      "turn": 7,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "계약이 끊기면 생활비가 막힌다는 걱정 때문에 아직 마음이 쓰여요. 바로 답을 정해주기보다 제가 말할 시간을 조금 주면 도움이 될 것 같아요."
+    },
+    {
+      "number": 15,
+      "turn": 8,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "바로 방법을 제안받는다면 어떤 점이 걸릴 것 같나요?"
+    },
+    {
+      "number": 16,
+      "turn": 8,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "계약이 끊기면 생활비가 막힌다는 걱정 때문에 아직 마음이 쓰여요. 방법이 맞다는 걸 알아도 바로 할 수 있다고 답하기는 아직 부담스러워요."
+    },
+    {
+      "number": 17,
+      "turn": 9,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 경험을 하면 지금의 부담이 조금 덜해질 것 같나요?"
+    },
+    {
+      "number": 18,
+      "turn": 9,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "괜찮지 않다는 말을 꺼낸 뒤에 판단하지 않고 들어주면 부담이 덜할 것 같아요."
+    },
+    {
+      "number": 19,
+      "turn": 10,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "다음 회의에서는 어떻게 답해보고 싶으신가요?"
+    },
+    {
+      "number": 20,
+      "turn": 10,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "다시 답할 기회가 있으면 제가 느끼는 부담을 짧게라도 알려보고 싶어요."
+    },
+    {
+      "number": 21,
+      "turn": 11,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그렇게 말하거나 행동하는 데 여전히 어려운 부분은 무엇인가요?"
+    },
+    {
+      "number": 22,
+      "turn": 11,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "생각할 시간이 필요하다고 하면 괜히 분위기를 불편하게 할까 봐 망설여질 것 같아요."
+    },
+    {
+      "number": 23,
+      "turn": 12,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "지금 가능한 작은 시도 하나를 정한다면 무엇이 좋을까요?"
+    },
+    {
+      "number": 24,
+      "turn": 12,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "처음부터 완벽히 말하려 하지 않고 잠깐 시간이 필요하다고 한마디 해보려고 해요."
+    },
+    {
+      "number": 25,
+      "turn": 13,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그 시도를 한 뒤에는 어떤 걱정이 생길 수 있을까요?"
+    },
+    {
+      "number": 26,
+      "turn": 13,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "그 말을 하고 나서도 상대 표정을 자꾸 살피게 될 것 같아요."
+    },
+    {
+      "number": 27,
+      "turn": 14,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "어떤 일이 실제로 일어나면 이전과 다른 경험이라고 느낄 수 있을까요?"
+    },
+    {
+      "number": 28,
+      "turn": 14,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제가 망설인다고 말해도 큰 문제가 생기지 않으면 다시 시도할 힘이 생길 것 같아요."
+    },
+    {
+      "number": 29,
+      "turn": 15,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그런 경험이 생기더라도 남아 있을 마음이 있을까요?"
+    },
+    {
+      "number": 30,
+      "turn": 15,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "상대가 이해해주었다고 해서 다음에 또 망설일 수 있다는 생각은 들어요."
+    },
+    {
+      "number": 31,
+      "turn": 16,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "처음 회의에서 괜찮다고 했던 이유를 다시 말한다면 어떻게 설명하시겠어요?"
+    },
+    {
+      "number": 32,
+      "turn": 16,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "회의에서 했던 제 말은 상대를 실망시키지 않으려고 제 부담을 숨긴 거였어요."
+    },
+    {
+      "number": 33,
+      "turn": 17,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "그때와 비교해 지금 생각에서 달라진 부분은 무엇인가요?"
+    },
+    {
+      "number": 34,
+      "turn": 17,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "여전히 말하기는 조심스럽지만 제 마음을 확인할 틈이 필요하다는 건 알 것 같아요."
+    },
+    {
+      "number": 35,
+      "turn": 18,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "주변에서 어떤 조언을 하면 오히려 도움이 되지 않을 것 같나요?"
+    },
+    {
+      "number": 36,
+      "turn": 18,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "걱정하지 말라는 말로 끝나면 제 속도보다 빨리 달라져야 할 것 같은 압박이 생겨요."
+    },
+    {
+      "number": 37,
+      "turn": 19,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "앞으로 무엇부터 해보고 싶으신가요?"
+    },
+    {
+      "number": 38,
+      "turn": 19,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "가까운 상황에서 작게 시작해서 바로 괜찮다고 하지 않고 솔직하게 말해보고 싶어요."
+    },
+    {
+      "number": 39,
+      "turn": 20,
+      "actor": "counselor",
+      "source": "synthetic_authored",
+      "utterance": "이 문제에서 본인이 바라는 변화는 어떤 모습인가요?"
+    },
+    {
+      "number": 40,
+      "turn": 20,
+      "actor": "client",
+      "source": "synthetic_authored",
+      "utterance": "제가 바라는 건 한 번에 달라지는 게 아니라 눈치만 보기 전에 제가 느끼는 걸 확인하는 거예요."
+    }
+  ],
+  "public_dialogue": [
+    {
+      "role": "counselor",
+      "content": "최근 회의에서 어떤 일이 있었고, 지금 어떤 부분이 마음에 남아 있나요?"
+    },
+    {
+      "role": "client",
+      "content": "회의에서 괜찮다고 했지만 이번 달은 이미 일이 꽉 찼어요. 계약 갱신 전이라 거절하기 어려웠어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 자리에서 원래 마음을 말하기 어려웠던 구체적인 배경이 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "지난번 계약직 동료가 일이 많다고 했다가 다음 계약을 못 했는데 이유는 아무도 설명하지 않았어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 순간 가장 신경 쓰였던 것은 무엇이었나요?"
+    },
+    {
+      "role": "client",
+      "content": "사람들이 싫어할까보다 월세를 못 낼까 봐 더 무서워서 그 자리에서는 계산부터 했어요."
+    },
+    {
+      "role": "counselor",
+      "content": "당시 괜찮다고 한 말에는 어떤 뜻이 담겨 있었나요?"
+    },
+    {
+      "role": "client",
+      "content": "제가 한 동의는 일하고 싶다는 표시보다 당장 수입을 지키려는 선택에 가까웠어요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 조건이 있었다면 그 자리에서 다르게 답할 수 있었을까요?"
+    },
+    {
+      "role": "client",
+      "content": "추가 업무를 거절해도 갱신 평가에 반영되지 않는 기준이 명확하면 말이 달라질 수 있어요."
+    },
+    {
+      "role": "counselor",
+      "content": "업무량만 줄어든다면 지금 말씀하신 부담도 해결될까요?"
+    },
+    {
+      "role": "client",
+      "content": "계약이 끊기면 생활비가 막힌다는 걱정 때문에 아직 마음이 쓰여요. 맡을 일을 나눠도 제가 느끼는 부담을 표현하는 건 따로 필요한 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "이 이야기를 다룰 때 어떤 반응이나 도움이 먼저 필요할까요?"
+    },
+    {
+      "role": "client",
+      "content": "계약이 끊기면 생활비가 막힌다는 걱정 때문에 아직 마음이 쓰여요. 바로 답을 정해주기보다 제가 말할 시간을 조금 주면 도움이 될 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "바로 방법을 제안받는다면 어떤 점이 걸릴 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "계약이 끊기면 생활비가 막힌다는 걱정 때문에 아직 마음이 쓰여요. 방법이 맞다는 걸 알아도 바로 할 수 있다고 답하기는 아직 부담스러워요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 경험을 하면 지금의 부담이 조금 덜해질 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "괜찮지 않다는 말을 꺼낸 뒤에 판단하지 않고 들어주면 부담이 덜할 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "다음 회의에서는 어떻게 답해보고 싶으신가요?"
+    },
+    {
+      "role": "client",
+      "content": "다시 답할 기회가 있으면 제가 느끼는 부담을 짧게라도 알려보고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그렇게 말하거나 행동하는 데 여전히 어려운 부분은 무엇인가요?"
+    },
+    {
+      "role": "client",
+      "content": "생각할 시간이 필요하다고 하면 괜히 분위기를 불편하게 할까 봐 망설여질 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "지금 가능한 작은 시도 하나를 정한다면 무엇이 좋을까요?"
+    },
+    {
+      "role": "client",
+      "content": "처음부터 완벽히 말하려 하지 않고 잠깐 시간이 필요하다고 한마디 해보려고 해요."
+    },
+    {
+      "role": "counselor",
+      "content": "그 시도를 한 뒤에는 어떤 걱정이 생길 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "그 말을 하고 나서도 상대 표정을 자꾸 살피게 될 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "어떤 일이 실제로 일어나면 이전과 다른 경험이라고 느낄 수 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "제가 망설인다고 말해도 큰 문제가 생기지 않으면 다시 시도할 힘이 생길 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "그런 경험이 생기더라도 남아 있을 마음이 있을까요?"
+    },
+    {
+      "role": "client",
+      "content": "상대가 이해해주었다고 해서 다음에 또 망설일 수 있다는 생각은 들어요."
+    },
+    {
+      "role": "counselor",
+      "content": "처음 회의에서 괜찮다고 했던 이유를 다시 말한다면 어떻게 설명하시겠어요?"
+    },
+    {
+      "role": "client",
+      "content": "회의에서 했던 제 말은 상대를 실망시키지 않으려고 제 부담을 숨긴 거였어요."
+    },
+    {
+      "role": "counselor",
+      "content": "그때와 비교해 지금 생각에서 달라진 부분은 무엇인가요?"
+    },
+    {
+      "role": "client",
+      "content": "여전히 말하기는 조심스럽지만 제 마음을 확인할 틈이 필요하다는 건 알 것 같아요."
+    },
+    {
+      "role": "counselor",
+      "content": "주변에서 어떤 조언을 하면 오히려 도움이 되지 않을 것 같나요?"
+    },
+    {
+      "role": "client",
+      "content": "걱정하지 말라는 말로 끝나면 제 속도보다 빨리 달라져야 할 것 같은 압박이 생겨요."
+    },
+    {
+      "role": "counselor",
+      "content": "앞으로 무엇부터 해보고 싶으신가요?"
+    },
+    {
+      "role": "client",
+      "content": "가까운 상황에서 작게 시작해서 바로 괜찮다고 하지 않고 솔직하게 말해보고 싶어요."
+    },
+    {
+      "role": "counselor",
+      "content": "이 문제에서 본인이 바라는 변화는 어떤 모습인가요?"
+    },
+    {
+      "role": "client",
+      "content": "제가 바라는 건 한 번에 달라지는 게 아니라 눈치만 보기 전에 제가 느끼는 걸 확인하는 거예요."
+    }
+  ]
+}

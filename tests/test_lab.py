@@ -442,7 +442,7 @@ def fixture(experiment_version='basic', prompt_editing=False, model_handler=Mode
         from counselor import catalog
         source = Path(temp.name) / 'prompt_sources'
         for relative in (*catalog.SINGLE_PROMPT_PATHS.values(), 'src/client/state_summary/system.md',
-                         *(str(p.relative_to(ROOT)) for v in ('Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6') for p in (ROOT/'src/client'/v).glob('*.md')),
+                         *(str(p.relative_to(ROOT)) for v in ('Q3p1','Q3p2','Q3p3','Q3p4','Q3p5','Q3p6') for name in (v,'Q3'+v) for p in (ROOT/'src/client'/name).glob('*.md')),
                          'src/client/state_summary/summary.md',
                          'src/client/Q2a_prefill_test/trait_router_prefill.txt',
                          'src/client/Q3/trajectory.md','src/client/Q3a/trajectory.md','src/client/Q3b/trajectory.md',
@@ -459,7 +459,10 @@ def fixture(experiment_version='basic', prompt_editing=False, model_handler=Mode
                          'src/client/Q1_s1/system.md','src/client/Q1_s1/trait_router.md','src/client/Q1_s1/inner_notes_template.md',
                          'src/client/Q1a/system.md','src/client/Q1a/trait_router.md','src/client/Q1a/inner_notes_template.md','src/client/Q1a/draft_reviewer.md',
                          'src/client/Q1_s2/system.md','src/client/Q1_s2/trait_router.md','src/client/Q1_s2/inner_notes_template.md',
-                         *(f'src/counselor/{version}/system.md' for version in ('P1', 'P2', 'P3', 'P3a', 'P3a_s1', 'Q3calmit_counsel')),
+                         *(f'src/counselor/{version}/system.md' for version in ('P1', 'P2', 'P3', 'P3a', 'P3a_s1', 'P3q', 'P3rs', 'P3rs_sub', 'Q3calmit_counsel')),
+                         'src/counselor/P3rs_sub/observer.md',
+                         *(str(p.relative_to(ROOT)) for v in ('cm','cm_split','cm_temporal','cm_state','cm_tools','cm_review','cm_full') for name in (v,'Q3'+v) for p in (ROOT/'src/client'/name).glob('*.md')),
+                         *(str(p.relative_to(ROOT)) for v in ('P3rs_sub_gate','P3rs_observe','P3rs_ledger','P3rs_tools','P3rs_dual','P3rs_hypothesis','P3rs_review','P3rs_full') for p in (ROOT/'src/counselor'/v).glob('*.md')),
                          'src/counselor/P3a/guide_agent.md','src/counselor/P3a_s1/guide_agent.md',
                          'src/counselor/P3a_s1/guide_grounded.md'):
             destination = source / relative
@@ -472,8 +475,11 @@ def fixture(experiment_version='basic', prompt_editing=False, model_handler=Mode
         stack = server.prompt_source_stack = ExitStack()
         for module in (prompt_files, user_templates, catalog, app.experiment_versions):
             stack.enter_context(patch.object(module, 'HERE', source))
+        from counselor.rs_variants import runtime as rs_runtime
+        stack.enter_context(patch.object(rs_runtime, 'ROOT', source / 'src/counselor'))
         for version, package in catalog.PRACTICE_VERSIONS.items():
-            stack.enter_context(patch.object(package.runtime, 'HERE', source / 'src/counselor' / version))
+            if version not in rs_runtime.VERSIONS:
+                stack.enter_context(patch.object(package.runtime, 'HERE', source / 'src/counselor' / version))
         for version in app.experiment_versions.MEMORY_EXPERIMENTS:
             stack.enter_context(patch.object(app.experiment_versions.client_runtime(version), 'HERE', source / 'src/client' / version))
         stack.enter_context(patch.object(app.experiment_versions.client_runtime('Q2a_prefill_test'), 'HERE', source / 'src/client/Q2a_prefill_test'))

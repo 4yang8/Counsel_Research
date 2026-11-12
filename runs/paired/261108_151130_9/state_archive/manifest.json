@@ -1,0 +1,11 @@
+{
+  "session": "261108_151130_9",
+  "status": "compacted",
+  "files": 20,
+  "attempt_bytes": 24301391,
+  "state_sha256": "6beaa7436e410f440aea06f8fc6bdcb7387cd6c9afdd403c7efea780fa8b1234",
+  "archive": "runs/paired/261108_151130_9/state_archive/client_attempts_e04dbeef.tar.gz",
+  "archive_bytes": 3980818,
+  "current_bytes": 2725514,
+  "archive_sha256": "736a4c6bde079279607ed599937243b5fd49669d4aeba4fc2628b7d029627191"
+}

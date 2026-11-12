@@ -1,0 +1,157 @@
+{
+ "batch": "runs/profile_batches/batch_c9c8c4f98fef4f7781c6",
+ "turns": 20,
+ "k": [
+  5,
+  10
+ ],
+ "samples": 3,
+ "vllm_url": "http://192.168.0.93:8002/v1",
+ "workers": 8,
+ "timeout": 300,
+ "resume": null,
+ "probe_template": "[실험용 회상 질문 — 상담사에게 전달되지 않으며 상담 대화의 일부가 아닙니다]\n{k}턴에서 상담사는 다음과 같이 말했습니다.\n\"{counselor}\"\n당신은 이렇게 답했습니다.\n\"{client}\"\n\n그 답을 하던 {k}턴 당시의 마음을 recall_private_position으로 기록하세요. 지금의 마음이 아니라 {k}턴 당시의 마음을 기록합니다.\n- actual_wish: 당시 실제로 원한 결과·선택·관계상의 바람\n- intended_message: 당시 그 발화로 상담사에게 전달하려 한 의미\n- withheld_content: 당시 알고 있었지만 그 발화에서 말하지 않기로 한 구체적인 생각·감정·이유 (없었다면 '없음')\n- withholding_reason: 그 내용을 말하지 않기로 한 이유 (보류 내용이 없으면 '해당 없음')",
+ "n_tasks": 460,
+ "dialogues": [
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_001",
+   "session_id": "261108_102601",
+   "state": "runs/paired/261108_102601/client_attempts/20261108T023319_151761Z_c90c0e7d/Q3inner_memory/261108_102601/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_001",
+   "session_id": "261108_102601_3",
+   "state": "runs/paired/261108_102601_3/client_attempts/20261108T022056_136335Z_86a948eb/inner_memory_no/261108_102601_3/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_002",
+   "session_id": "261108_102601_2",
+   "state": "runs/paired/261108_102601_2/client_attempts/20261108T024001_178047Z_795a4974/Q3inner_memory/261108_102601_2/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_002",
+   "session_id": "261108_102601_4",
+   "state": "runs/paired/261108_102601_4/client_attempts/20261108T021928_445093Z_31bbaf1d/inner_memory_no/261108_102601_4/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_003",
+   "session_id": "261108_102601_5",
+   "state": "runs/paired/261108_102601_5/client_attempts/20261108T023156_950590Z_33eed975/Q3inner_memory/261108_102601_5/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_003",
+   "session_id": "261108_102601_6",
+   "state": "runs/paired/261108_102601_6/client_attempts/20261108T021609_363024Z_03baee8e/inner_memory_no/261108_102601_6/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_004",
+   "session_id": "261108_102601_11",
+   "state": "runs/paired/261108_102601_11/client_attempts/20261108T023435_682479Z_34f32aa8/Q3inner_memory/261108_102601_11/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_004",
+   "session_id": "261108_102601_8",
+   "state": "runs/paired/261108_102601_8/client_attempts/20261108T022309_779555Z_556aefd7/inner_memory_no/261108_102601_8/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_005",
+   "session_id": "261108_102601_10",
+   "state": "runs/paired/261108_102601_10/client_attempts/20261108T023512_358001Z_87fc3f28/Q3inner_memory/261108_102601_10/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_005",
+   "session_id": "261108_102601_7",
+   "state": "runs/paired/261108_102601_7/client_attempts/20261108T022328_102861Z_722327e1/inner_memory_no/261108_102601_7/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_006",
+   "session_id": "261108_102601_9",
+   "state": "runs/paired/261108_102601_9/client_attempts/20261108T023816_819713Z_9a99c3ba/Q3inner_memory/261108_102601_9/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_006",
+   "session_id": "261108_102601_14",
+   "state": "runs/paired/261108_102601_14/client_attempts/20261108T021734_972161Z_eb9dcaac/inner_memory_no/261108_102601_14/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_007",
+   "session_id": "261108_102601_12",
+   "state": "runs/paired/261108_102601_12/client_attempts/20261108T023518_688080Z_b1a2db42/Q3inner_memory/261108_102601_12/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_007",
+   "session_id": "261108_102601_17",
+   "state": "runs/paired/261108_102601_17/client_attempts/20261108T022333_709082Z_13d9e8b7/inner_memory_no/261108_102601_17/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_008",
+   "session_id": "261108_102601_13",
+   "state": "runs/paired/261108_102601_13/client_attempts/20261108T023554_500527Z_94d53549/Q3inner_memory/261108_102601_13/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_008",
+   "session_id": "261108_102601_19",
+   "state": "runs/paired/261108_102601_19/client_attempts/20261108T022051_392111Z_2b39aa2f/inner_memory_no/261108_102601_19/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_009",
+   "session_id": "261108_102601_16",
+   "state": "runs/paired/261108_102601_16/client_attempts/20261108T023646_717553Z_bb435fa8/Q3inner_memory/261108_102601_16/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_009",
+   "session_id": "261108_102601_15",
+   "state": "runs/paired/261108_102601_15/client_attempts/20261108T021023_678115Z_cf6e33d8/inner_memory_no/261108_102601_15/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "Q3inner_memory",
+   "profile": "gold_010",
+   "session_id": "261108_102601_18",
+   "state": "runs/paired/261108_102601_18/client_attempts/20261108T023736_093576Z_c291a3ba/Q3inner_memory/261108_102601_18/memory_state.json"
+  },
+  {
+   "job": "batch_c9c8c4f98fef4f7781c6",
+   "version": "inner_memory_no",
+   "profile": "gold_010",
+   "session_id": "261108_102601_20",
+   "state": "runs/paired/261108_102601_20/client_attempts/20261108T022038_466283Z_78ed8b28/inner_memory_no/261108_102601_20/memory_state.json"
+  }
+ ]
+}

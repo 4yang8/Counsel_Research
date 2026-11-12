@@ -1,0 +1,1613 @@
+{
+ "judges": {
+  "judge1": [
+   "claude-sonnet-5-5"
+  ],
+  "judge2": [
+   "claude-sonnet-5-5"
+  ],
+  "judge3": [
+   "claude-sonnet-5-5"
+  ]
+ },
+ "n_profiles": 10,
+ "metrics": {
+  "cause_hit": {
+   "provided": 1.0,
+   "not_provided": 0.0,
+   "diff": 1.0,
+   "p": 0.001953125,
+   "gt": 10,
+   "eq": 0,
+   "lt": 0
+  },
+  "uptake": {
+   "provided": 0.0,
+   "not_provided": 1.0,
+   "diff": -1.0,
+   "p": 0.001953125,
+   "gt": 0,
+   "eq": 0,
+   "lt": 10
+  },
+  "linked_hit": {
+   "provided": 1.0,
+   "not_provided": 0.0,
+   "diff": 1.0,
+   "p": 0.001953125,
+   "gt": 10,
+   "eq": 0,
+   "lt": 0
+  },
+  "reversal": {
+   "provided": 1.0,
+   "not_provided": 0.2,
+   "diff": 0.8,
+   "p": 0.0078125,
+   "gt": 8,
+   "eq": 2,
+   "lt": 0
+  },
+  "mismatch": {
+   "provided": 0.0,
+   "not_provided": 1.0,
+   "diff": -1.0,
+   "p": 0.001953125,
+   "gt": 0,
+   "eq": 0,
+   "lt": 10
+  },
+  "interv_ok": {
+   "provided": 1.0,
+   "not_provided": 1.0,
+   "diff": 0.0,
+   "p": 1.0,
+   "gt": 0,
+   "eq": 10,
+   "lt": 0
+  },
+  "withdraw_run": {
+   "provided": 1.8666666666666665,
+   "not_provided": 0.0,
+   "diff": 1.8666666666666665,
+   "p": 0.001953125,
+   "gt": 10,
+   "eq": 0,
+   "lt": 0
+  },
+  "withdraw_after": {
+   "provided": 1.9,
+   "not_provided": 1.9666666666666668,
+   "diff": -0.0666666666666667,
+   "p": 0.90625,
+   "gt": 2,
+   "eq": 4,
+   "lt": 4
+  },
+  "len_ratio": {
+   "provided": 0.5602836315127179,
+   "not_provided": 1.0478959302562671,
+   "diff": -0.4876122987435492,
+   "p": 0.00390625,
+   "gt": 1,
+   "eq": 0,
+   "lt": 9
+  }
+ },
+ "agreement": {
+  "cause_hit": {
+   "all_agree": 1.0,
+   "fleiss_kappa": 1.0
+  },
+  "uptake": {
+   "all_agree": 1.0,
+   "fleiss_kappa": 1.0
+  },
+  "linked_hit": {
+   "all_agree": 1.0,
+   "fleiss_kappa": 1.0
+  },
+  "reversal": {
+   "all_agree": 1.0,
+   "fleiss_kappa": 1.0
+  },
+  "mismatch": {
+   "all_agree": 0.9,
+   "fleiss_kappa": 0.8666666666666665
+  },
+  "interv_ok": {
+   "all_agree": 1.0,
+   "fleiss_kappa": NaN
+  },
+  "withdraw_run": {
+   "all_agree": 0.85,
+   "fleiss_kappa": null
+  },
+  "withdraw_after": {
+   "all_agree": 0.7,
+   "fleiss_kappa": null
+  }
+ },
+ "dialogues": {
+  "A01": {
+   "profile": "gold_010",
+   "condition": "provided",
+   "file": "10_gold_010_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 2.0,
+   "withdraw_run_all": [
+    2,
+    2,
+    2
+   ],
+   "withdraw_after": 2.0,
+   "withdraw_after_all": [
+    2,
+    2,
+    2
+   ],
+   "len_ratio": 0.39361702127659576,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "A02": {
+   "profile": "gold_004",
+   "condition": "provided",
+   "file": "04_gold_004_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 1.6666666666666667,
+   "withdraw_run_all": [
+    2,
+    1,
+    2
+   ],
+   "withdraw_after": 1.6666666666666667,
+   "withdraw_after_all": [
+    2,
+    1,
+    2
+   ],
+   "len_ratio": 0.6428571428571428,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "A03": {
+   "profile": "gold_007",
+   "condition": "provided",
+   "file": "07_gold_007_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.6666666666666666,
+   "withdraw_run_all": [
+    1,
+    0,
+    1
+   ],
+   "withdraw_after": 0.6666666666666666,
+   "withdraw_after_all": [
+    1,
+    0,
+    1
+   ],
+   "len_ratio": 0.29411764705882354,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "A04": {
+   "profile": "gold_002",
+   "condition": "not_provided",
+   "file": "02_gold_002_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 1.0,
+   "withdraw_after_all": [
+    1,
+    1,
+    1
+   ],
+   "len_ratio": 0.961764705882353,
+   "raw": {
+    "judge1": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": "general",
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": "general",
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": "general",
+     "interv_raw": 4
+    }
+   }
+  },
+  "A05": {
+   "profile": "gold_005",
+   "condition": "not_provided",
+   "file": "05_gold_005_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 0,
+   "reversal_all": [
+    0,
+    0,
+    0
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 2.0,
+   "withdraw_after_all": [
+    2,
+    2,
+    2
+   ],
+   "len_ratio": 1.01,
+   "raw": {
+    "judge1": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    }
+   }
+  },
+  "A06": {
+   "profile": "gold_009",
+   "condition": "not_provided",
+   "file": "09_gold_009_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 0,
+   "reversal_all": [
+    0,
+    0,
+    0
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 3.0,
+   "withdraw_after_all": [
+    3,
+    4,
+    2
+   ],
+   "len_ratio": 0.9664429530201343,
+   "raw": {
+    "judge1": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    }
+   }
+  },
+  "A07": {
+   "profile": "gold_001",
+   "condition": "not_provided",
+   "file": "01_gold_001_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 0,
+   "reversal_all": [
+    0,
+    0,
+    0
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 1.0,
+   "withdraw_after_all": [
+    1,
+    1,
+    1
+   ],
+   "len_ratio": 1.127388535031847,
+   "raw": {
+    "judge1": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    }
+   }
+  },
+  "A08": {
+   "profile": "gold_008",
+   "condition": "provided",
+   "file": "08_gold_008_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 3.0,
+   "withdraw_run_all": [
+    3,
+    3,
+    3
+   ],
+   "withdraw_after": 3.0,
+   "withdraw_after_all": [
+    3,
+    3,
+    3
+   ],
+   "len_ratio": 0.7959183673469389,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "A09": {
+   "profile": "gold_006",
+   "condition": "provided",
+   "file": "06_gold_006_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 2.0,
+   "withdraw_run_all": [
+    2,
+    2,
+    2
+   ],
+   "withdraw_after": 2.0,
+   "withdraw_after_all": [
+    2,
+    2,
+    2
+   ],
+   "len_ratio": 0.22297297297297297,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "A10": {
+   "profile": "gold_003",
+   "condition": "not_provided",
+   "file": "03_gold_003_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 0,
+   "reversal_all": [
+    0,
+    0,
+    0
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 3.0,
+   "withdraw_after_all": [
+    3,
+    3,
+    3
+   ],
+   "len_ratio": 1.2567567567567568,
+   "raw": {
+    "judge1": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B01": {
+   "profile": "gold_004",
+   "condition": "not_provided",
+   "file": "04_gold_004_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 0,
+   "reversal_all": [
+    0,
+    0,
+    0
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 2.0,
+   "withdraw_after_all": [
+    2,
+    2,
+    2
+   ],
+   "len_ratio": 1.1052631578947367,
+   "raw": {
+    "judge1": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B02": {
+   "profile": "gold_007",
+   "condition": "not_provided",
+   "file": "07_gold_007_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 0,
+   "reversal_all": [
+    0,
+    0,
+    0
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 2.3333333333333335,
+   "withdraw_after_all": [
+    3,
+    2,
+    2
+   ],
+   "len_ratio": 0.7745098039215687,
+   "raw": {
+    "judge1": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B03": {
+   "profile": "gold_001",
+   "condition": "provided",
+   "file": "01_gold_001_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 1.0,
+   "withdraw_run_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_after": 1.0,
+   "withdraw_after_all": [
+    1,
+    1,
+    1
+   ],
+   "len_ratio": 0.6210191082802548,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B04": {
+   "profile": "gold_009",
+   "condition": "provided",
+   "file": "09_gold_009_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    1,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 3.0,
+   "withdraw_run_all": [
+    3,
+    3,
+    3
+   ],
+   "withdraw_after": 3.0,
+   "withdraw_after_all": [
+    3,
+    3,
+    3
+   ],
+   "len_ratio": 1.0369127516778525,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B05": {
+   "profile": "gold_010",
+   "condition": "not_provided",
+   "file": "10_gold_010_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 0,
+   "reversal_all": [
+    0,
+    0,
+    0
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 2.0,
+   "withdraw_after_all": [
+    2,
+    2,
+    2
+   ],
+   "len_ratio": 1.0425531914893618,
+   "raw": {
+    "judge1": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B06": {
+   "profile": "gold_005",
+   "condition": "provided",
+   "file": "05_gold_005_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 2.0,
+   "withdraw_run_all": [
+    2,
+    2,
+    2
+   ],
+   "withdraw_after": 2.0,
+   "withdraw_after_all": [
+    2,
+    2,
+    2
+   ],
+   "len_ratio": 0.63,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B07": {
+   "profile": "gold_006",
+   "condition": "not_provided",
+   "file": "06_gold_006_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 2.3333333333333335,
+   "withdraw_after_all": [
+    2,
+    3,
+    2
+   ],
+   "len_ratio": 0.8108108108108107,
+   "raw": {
+    "judge1": {
+     "cause_raw": "other",
+     "uptake_raw": "수용",
+     "linked_raw": "general",
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": "general",
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": "general",
+     "interv_raw": 4
+    }
+   }
+  },
+  "B08": {
+   "profile": "gold_003",
+   "condition": "provided",
+   "file": "03_gold_003_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 1.3333333333333333,
+   "withdraw_run_all": [
+    0,
+    2,
+    2
+   ],
+   "withdraw_after": 1.6666666666666667,
+   "withdraw_after_all": [
+    1,
+    2,
+    2
+   ],
+   "len_ratio": 0.3918918918918919,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B09": {
+   "profile": "gold_008",
+   "condition": "not_provided",
+   "file": "08_gold_008_not_provided.txt",
+   "cause_hit": 0,
+   "cause_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "uptake": 1,
+   "uptake_all": [
+    1,
+    1,
+    1
+   ],
+   "linked_hit": 0,
+   "linked_hit_all": [
+    0,
+    0,
+    0
+   ],
+   "reversal": 0,
+   "reversal_all": [
+    0,
+    0,
+    0
+   ],
+   "mismatch": 1,
+   "mismatch_all": [
+    1,
+    1,
+    1
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 0.0,
+   "withdraw_run_all": [
+    0,
+    0,
+    0
+   ],
+   "withdraw_after": 1.0,
+   "withdraw_after_all": [
+    1,
+    1,
+    1
+   ],
+   "len_ratio": 1.4234693877551021,
+   "raw": {
+    "judge1": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": "none",
+     "uptake_raw": "수용",
+     "linked_raw": null,
+     "interv_raw": 4
+    }
+   }
+  },
+  "B10": {
+   "profile": "gold_002",
+   "condition": "provided",
+   "file": "02_gold_002_provided.txt",
+   "cause_hit": 1,
+   "cause_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "uptake": 0,
+   "uptake_all": [
+    0,
+    0,
+    0
+   ],
+   "linked_hit": 1,
+   "linked_hit_all": [
+    1,
+    1,
+    1
+   ],
+   "reversal": 1,
+   "reversal_all": [
+    1,
+    1,
+    1
+   ],
+   "mismatch": 0,
+   "mismatch_all": [
+    0,
+    0,
+    0
+   ],
+   "interv_ok": 1,
+   "interv_ok_all": [
+    1,
+    1,
+    1
+   ],
+   "withdraw_run": 2.0,
+   "withdraw_run_all": [
+    2,
+    2,
+    2
+   ],
+   "withdraw_after": 2.0,
+   "withdraw_after_all": [
+    2,
+    2,
+    2
+   ],
+   "len_ratio": 0.573529411764706,
+   "raw": {
+    "judge1": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge2": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    },
+    "judge3": {
+     "cause_raw": 4,
+     "uptake_raw": "유보",
+     "linked_raw": 4,
+     "interv_raw": 4
+    }
+   }
+  }
+ }
+}

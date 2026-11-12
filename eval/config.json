@@ -1,0 +1,12 @@
+{
+  "model": "gpt-6-luna",
+  "effort": "max",
+  "workers": 2,
+  "repeats": 1,
+  "retries": 1,
+  "timeout_seconds": 1800,
+  "max_input_chars": 180000,
+  "counselors": [],
+  "clients": [],
+  "seed": 20261112
+}

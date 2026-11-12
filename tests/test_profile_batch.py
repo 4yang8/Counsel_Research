@@ -12,7 +12,8 @@ from urllib.request import urlopen
 
 from test_lab import fixture, close, post
 from test_memory_access import sample, seed
-from client.memory_access.runtime import STAGE, load
+from client.memory_access.runtime import STAGE, INNER_STAGE, RUNTIMES, load
+from client.memory_access.validation import validate
 from runtime import profile_batch
 
 
@@ -50,9 +51,11 @@ class BatchModel(BaseHTTPRequestHandler):
                 finish = 'stop'
             elif data.get('tools'):
                 tool = data['tools'][0]['function']['name']
-                args = sample(STAGE['function']['parameters']) if tool == 'stage_client_update' else {'utterance': '지금은 더 생각해 보고 싶어요.'}
+                args = sample(data['tools'][0]['function']['parameters']) if tool == 'stage_client_update' else {'utterance': '지금은 더 생각해 보고 싶어요.'}
                 if tool == 'stage_client_update':
                     args['appraisal']['interpretation'] = 'SECRET_' + str(profile)
+                    if 'private_position' in args:
+                        args['private_position']['withheld_content'] = 'SECRET_' + str(profile) + '_WITHHELD'
                 delta = {'tool_calls': [{'index': 0, 'id': 'call_' + uuid.uuid4().hex, 'type': 'function',
                          'function': {'name': tool, 'arguments': json.dumps(args)}}]}
                 finish = 'tool_calls'
@@ -122,7 +125,8 @@ class ProfileBatchTests(unittest.TestCase):
         self.assertFalse(any(p['error'] for p in found['profiles']))
         options = self.get('/api/profile_batch/options')
         self.assertEqual([v['id'] for v in options['versions']], ['Q3inner_memory', 'inner_memory_no'])
-        job = self.job()
+        self.assertIn('Q3inner_counsel', [c['id'] for c in options['counselors']])
+        job = self.job(counselor_version='Q3inner_counsel')
         self.assertEqual(BatchModel.requests, [])
         self.post('start', {'id': job['id']})
         result = self.wait(job['id'])
@@ -141,6 +145,7 @@ class ProfileBatchTests(unittest.TestCase):
             self.assertEqual(first['memory_input'], [])
             self.assertEqual(len(second['memory_input']), 1 if row['version'] == 'Q3inner_memory' else 0)
             for record in state['records']:
+                self.assertIn('private_position', record['inner'])
                 router = record['model_requests'][0]['payload']
                 self.assertNotIn('SECRET_', json.dumps(router))
                 self.assertNotIn('private_turns', router['messages'][-1]['content'])
@@ -160,7 +165,30 @@ class ProfileBatchTests(unittest.TestCase):
         self.assertEqual(len(stored['profiles']), 2)
         self.assertIn('memory_router_prompt', stored['request'])
         self.assertIn('memory_selector_prompt', stored['request'])
+        self.assertEqual(stored['request']['counselor_version'], 'Q3inner_counsel')
+        for request in BatchModel.requests:
+            if not request.get('tools') and not request.get('structured_outputs'):
+                self.assertNotIn('SECRET_', json.dumps(request))
+                self.assertNotIn('private_position', json.dumps(request))
+        self.get('/api/prompts/source?role=counselor&version=Q3inner_counsel&kind=system')
+        self.get('/api/prompts/source?role=counselor&version=Q3inner_counsel&kind=user')
         self.assertEqual(self.server.storage_jobs, 0)
+
+    def test_private_position_is_required_only_for_inner_versions(self):
+        for version, runtime in RUNTIMES.items():
+            schema = runtime.TOOLS[0]['function']['parameters']
+            self.assertEqual('private_position' in schema['properties'], version in profile_batch.INNER_VERSIONS)
+        schema = INNER_STAGE['function']['parameters']
+        args = sample(schema)
+        args['private_position'].update(actual_wish='불확실', intended_message='생각할 시간이 필요함',
+                                        withheld_content='없음', withholding_reason='해당 없음')
+        validate(args, schema)
+        del args['private_position']
+        with self.assertRaises(ValueError):
+            validate(args, schema)
+        self.assertNotIn('private_position', STAGE['function']['parameters']['properties'])
+        self.assertEqual(RUNTIMES['Q3inner_memory'].specification()['system_prompt'],
+                         RUNTIMES['inner_memory_no'].specification()['system_prompt'])
 
     def test_inner_selection_reads_all_history_but_only_injects_chosen_originals(self):
         job = self.job(filenames=['gold_ccd_profile_001.json'], turns=5)
@@ -245,6 +273,19 @@ class ProfileBatchTests(unittest.TestCase):
         result = self.wait(retry['id'])
         self.assertEqual(result['status'], 'completed')
         self.assertEqual(result['rows'][0]['retry_count'], 1)
+
+    def test_two_jobs_run_at_the_same_time(self):
+        BatchModel.delay = .1
+        first, second = self.job(turns=2, concurrency=1), self.job(turns=2, concurrency=1)
+        self.post('start', {'id': first['id']})
+        self.post('start', {'id': second['id']})
+        self.assertEqual(self.get('/api/profile_batch/job?id=' + first['id'])['status'], 'running')
+        with self.assertRaises(Exception):
+            self.post('start', {'id': second['id']})
+        BatchModel.delay = .005
+        for job in (first, second):
+            result = self.wait(job['id'])
+            self.assertEqual((result['status'], result['completed_turns']), ('completed', 8))
 
     def test_validation_and_standalone_private_seed_is_not_visible_to_router(self):
         for changes in ({'concurrency': 0}, {'versions': ['Q3']}, {'filenames': ['missing.json']}, {'profile_directory': '/etc'}):

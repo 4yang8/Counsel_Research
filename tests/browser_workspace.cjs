@@ -10,7 +10,7 @@ const {spawn}=require('child_process'),path=require('path'),assert=require('node
   await page.goto(url);
   const frameAt=async i=>{const frames=await page.$$('#experiment-panes iframe');return frames[i].contentFrame();};
   const ready=async i=>{const frame=await frameAt(i);await frame.waitForFunction(()=>window.LabPane?.ready,{timeout:40000});return frame;};
-  const activate=async i=>{await page.$$eval('[role=tab]',(els,i)=>els[i].click(),i);return ready(i);};
+  const activate=async i=>{await page.$$eval('#experiment-tabs [role=tab]',(els,i)=>els[i].click(),i);return ready(i);};
   let first=await ready(0);
   assert(await page.$eval('#experiment-tabs-row',e=>e.hidden));
   assert((await page.$eval('#experiment-tabs-header',e=>e.offsetHeight))<40);
@@ -29,7 +29,7 @@ const {spawn}=require('child_process'),path=require('path'),assert=require('node
    await frame.select('#quick-client',expected[i][0]);await frame.select('#quick-profile',expected[i][1]);
    await frame.waitForFunction((version)=>currentVersion===version,{},expected[i][0]);
   }
-  assert.equal(await page.$$eval('[role=tab]',els=>els.length),6);
+  assert.equal(await page.$$eval('#experiment-tabs [role=tab]',els=>els.length),6);
   await page.screenshot({path:'/tmp/counseling_workspace_settings.png'});
   assert(!(await page.$eval('#experiment-tabs-row',e=>e.hidden)));
   for(let i=0;i<6;i++){

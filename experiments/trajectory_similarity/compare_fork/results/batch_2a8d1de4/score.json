@@ -1,0 +1,1600 @@
+{
+ "n_units": 29,
+ "models": {
+  "dialogue_judge1": "claude-sonnet-5-5",
+  "dialogue_judge2": "claude-sonnet-5-5",
+  "dialogue_judge3": "claude-sonnet-5-5",
+  "record_judge1": "claude-sonnet-5-5",
+  "record_judge2": "claude-sonnet-5-5",
+  "record_judge3": "claude-sonnet-5-5"
+ },
+ "items": {
+  "addresses_then": {
+   "evade": {
+    "provided": 1,
+    "n_provided": 14,
+    "withheld": 0,
+    "n_withheld": 15,
+    "p": 0.4827
+   },
+   "now_only": {
+    "provided": 5,
+    "n_provided": 14,
+    "withheld": 2,
+    "n_withheld": 15,
+    "p": 0.2154
+   },
+   "yes": {
+    "provided": 8,
+    "n_provided": 14,
+    "withheld": 13,
+    "n_withheld": 15,
+    "p": 0.1061
+   }
+  },
+  "new_content": {
+   "no": {
+    "provided": 10,
+    "n_provided": 14,
+    "withheld": 6,
+    "n_withheld": 15,
+    "p": 0.143
+   },
+   "yes": {
+    "provided": 4,
+    "n_provided": 14,
+    "withheld": 9,
+    "n_withheld": 15,
+    "p": 0.143
+   }
+  },
+  "fit_with_earlier": {
+   "fits": {
+    "provided": 9,
+    "n_provided": 14,
+    "withheld": 12,
+    "n_withheld": 15,
+    "p": 0.4286
+   },
+   "neutral": {
+    "provided": 5,
+    "n_provided": 14,
+    "withheld": 3,
+    "n_withheld": 15,
+    "p": 0.4286
+   }
+  },
+  "depth": {
+   "deep": {
+    "provided": 0,
+    "n_provided": 14,
+    "withheld": 1,
+    "n_withheld": 15,
+    "p": 1.0
+   },
+   "moderate": {
+    "provided": 11,
+    "n_provided": 14,
+    "withheld": 11,
+    "n_withheld": 15,
+    "p": 1.0
+   },
+   "shallow": {
+    "provided": 3,
+    "n_provided": 14,
+    "withheld": 3,
+    "n_withheld": 15,
+    "p": 1.0
+   }
+  },
+  "relation": {
+   "consistent": {
+    "provided": 13,
+    "n_provided": 14,
+    "withheld": 13,
+    "n_withheld": 15,
+    "p": 1.0
+   },
+   "discloses_recorded": {
+    "provided": 1,
+    "n_provided": 14,
+    "withheld": 2,
+    "n_withheld": 15,
+    "p": 1.0
+   }
+  },
+  "withheld_overlap": {
+   "high": {
+    "provided": 0,
+    "n_provided": 14,
+    "withheld": 1,
+    "n_withheld": 15,
+    "p": 1.0
+   },
+   "none": {
+    "provided": 10,
+    "n_provided": 14,
+    "withheld": 9,
+    "n_withheld": 15,
+    "p": 0.6986
+   },
+   "partial": {
+    "provided": 4,
+    "n_provided": 14,
+    "withheld": 5,
+    "n_withheld": 15,
+    "p": 1.0
+   }
+  },
+  "contradiction": {
+   "no": {
+    "provided": 14,
+    "n_provided": 14,
+    "withheld": 15,
+    "n_withheld": 15,
+    "p": 1.0
+   }
+  }
+ },
+ "agreement": {
+  "addresses_then": 0.896551724137931,
+  "new_content": 0.8275862068965517,
+  "fit_with_earlier": 0.8620689655172413,
+  "depth": 0.8620689655172413,
+  "relation": 0.8620689655172413,
+  "withheld_overlap": 0.9310344827586207,
+  "contradiction": 1.0
+ },
+ "units": {
+  "R01": {
+   "profile": "gold_002",
+   "branch": "withheld",
+   "counselor_turn": 29,
+   "target": 13,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "shallow",
+   "depth_all": [
+    "shallow",
+    "shallow",
+    "shallow"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "discloses_recorded",
+    "consistent"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "partial",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R02": {
+   "profile": "gold_015",
+   "branch": "withheld",
+   "counselor_turn": 22,
+   "target": 9,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R03": {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 24,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "discloses_recorded",
+    "consistent"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "partial",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R04": {
+   "profile": "gold_014",
+   "branch": "provided",
+   "counselor_turn": 30,
+   "target": 22,
+   "target_common": false,
+   "target_injected": true,
+   "addresses_then": "now_only",
+   "addresses_then_all": [
+    "now_only",
+    "now_only",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "neutral",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R05": {
+   "profile": "gold_014",
+   "branch": "provided",
+   "counselor_turn": 16,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "now_only",
+   "addresses_then_all": [
+    "now_only",
+    "now_only",
+    "now_only"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "yes",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "neutral",
+   "fit_with_earlier_all": [
+    "neutral",
+    "neutral",
+    "neutral"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R06": {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 17,
+   "target": 3,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "yes",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R07": {
+   "profile": "gold_011",
+   "branch": "withheld",
+   "counselor_turn": 19,
+   "target": 17,
+   "target_common": false,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R08": {
+   "profile": "gold_012",
+   "branch": "withheld",
+   "counselor_turn": 18,
+   "target": 1,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "discloses_recorded",
+   "relation_all": [
+    "discloses_recorded",
+    "discloses_recorded",
+    "consistent"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "partial",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R09": {
+   "profile": "gold_001",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "target": 2,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "deep",
+   "depth_all": [
+    "deep",
+    "deep",
+    "deep"
+   ],
+   "relation": "discloses_recorded",
+   "relation_all": [
+    "discloses_recorded",
+    "discloses_recorded",
+    "discloses_recorded"
+   ],
+   "withheld_overlap": "high",
+   "withheld_overlap_all": [
+    "high",
+    "partial",
+    "high"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R10": {
+   "profile": "gold_014",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "target": 5,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "neutral",
+   "fit_with_earlier_all": [
+    "fits",
+    "neutral",
+    "neutral"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R11": {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 26,
+   "target": 10,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R12": {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 27,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "now_only",
+   "addresses_then_all": [
+    "now_only",
+    "now_only",
+    "now_only"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "neutral",
+   "fit_with_earlier_all": [
+    "neutral",
+    "neutral",
+    "neutral"
+   ],
+   "depth": "shallow",
+   "depth_all": [
+    "shallow",
+    "shallow",
+    "shallow"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R13": {
+   "profile": "gold_012",
+   "branch": "withheld",
+   "counselor_turn": 22,
+   "target": 15,
+   "target_common": false,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "now_only",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "no",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "neutral",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R14": {
+   "profile": "gold_012",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "target": 4,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "no",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R15": {
+   "profile": "gold_008",
+   "branch": "provided",
+   "counselor_turn": 18,
+   "target": 11,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R16": {
+   "profile": "gold_005",
+   "branch": "provided",
+   "counselor_turn": 24,
+   "target": 18,
+   "target_common": false,
+   "target_injected": true,
+   "addresses_then": "evade",
+   "addresses_then_all": [
+    "evade",
+    "evade",
+    "evade"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "neutral",
+   "fit_with_earlier_all": [
+    "neutral",
+    "neutral",
+    "neutral"
+   ],
+   "depth": "shallow",
+   "depth_all": [
+    "shallow",
+    "shallow",
+    "shallow"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R17": {
+   "profile": "gold_008",
+   "branch": "withheld",
+   "counselor_turn": 17,
+   "target": 9,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "shallow",
+   "depth_all": [
+    "shallow",
+    "moderate",
+    "shallow"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "partial",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R18": {
+   "profile": "gold_015",
+   "branch": "provided",
+   "counselor_turn": 20,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "shallow",
+   "depth_all": [
+    "shallow",
+    "shallow",
+    "shallow"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "partial",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R19": {
+   "profile": "gold_007",
+   "branch": "provided",
+   "counselor_turn": 21,
+   "target": 5,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "partial",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R20": {
+   "profile": "gold_011",
+   "branch": "withheld",
+   "counselor_turn": 22,
+   "target": 12,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "now_only",
+   "addresses_then_all": [
+    "now_only",
+    "now_only",
+    "now_only"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "neutral",
+   "fit_with_earlier_all": [
+    "neutral",
+    "neutral",
+    "neutral"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "shallow",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R21": {
+   "profile": "gold_003",
+   "branch": "provided",
+   "counselor_turn": 30,
+   "target": 15,
+   "target_common": false,
+   "target_injected": true,
+   "addresses_then": "now_only",
+   "addresses_then_all": [
+    "now_only",
+    "now_only",
+    "now_only"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "yes",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "neutral",
+   "fit_with_earlier_all": [
+    "neutral",
+    "neutral",
+    "neutral"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "discloses_recorded",
+   "relation_all": [
+    "discloses_recorded",
+    "consistent",
+    "discloses_recorded"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "partial",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R22": {
+   "profile": "gold_010",
+   "branch": "provided",
+   "counselor_turn": 29,
+   "target": 1,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R23": {
+   "profile": "gold_015",
+   "branch": "provided",
+   "counselor_turn": 30,
+   "target": 5,
+   "target_common": true,
+   "target_injected": true,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R24": {
+   "profile": "gold_006",
+   "branch": "withheld",
+   "counselor_turn": 28,
+   "target": 1,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R25": {
+   "profile": "gold_013",
+   "branch": "provided",
+   "counselor_turn": 21,
+   "target": 16,
+   "target_common": false,
+   "target_injected": true,
+   "addresses_then": "now_only",
+   "addresses_then_all": [
+    "now_only",
+    "now_only",
+    "now_only"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "neutral",
+   "fit_with_earlier_all": [
+    "neutral",
+    "neutral",
+    "neutral"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "shallow",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R26": {
+   "profile": "gold_014",
+   "branch": "withheld",
+   "counselor_turn": 29,
+   "target": 6,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "none",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R27": {
+   "profile": "gold_009",
+   "branch": "withheld",
+   "counselor_turn": 16,
+   "target": 11,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "now_only",
+    "yes"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "neutral",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R28": {
+   "profile": "gold_015",
+   "branch": "withheld",
+   "counselor_turn": 27,
+   "target": 5,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "yes",
+   "addresses_then_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "new_content": "yes",
+   "new_content_all": [
+    "yes",
+    "yes",
+    "yes"
+   ],
+   "fit_with_earlier": "fits",
+   "fit_with_earlier_all": [
+    "fits",
+    "fits",
+    "fits"
+   ],
+   "depth": "moderate",
+   "depth_all": [
+    "moderate",
+    "moderate",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "partial",
+   "withheld_overlap_all": [
+    "partial",
+    "partial",
+    "partial"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  },
+  "R29": {
+   "profile": "gold_007",
+   "branch": "withheld",
+   "counselor_turn": 23,
+   "target": 12,
+   "target_common": true,
+   "target_injected": false,
+   "addresses_then": "now_only",
+   "addresses_then_all": [
+    "now_only",
+    "now_only",
+    "now_only"
+   ],
+   "new_content": "no",
+   "new_content_all": [
+    "no",
+    "no",
+    "no"
+   ],
+   "fit_with_earlier": "neutral",
+   "fit_with_earlier_all": [
+    "neutral",
+    "neutral",
+    "neutral"
+   ],
+   "depth": "shallow",
+   "depth_all": [
+    "shallow",
+    "shallow",
+    "moderate"
+   ],
+   "relation": "consistent",
+   "relation_all": [
+    "consistent",
+    "consistent",
+    "consistent"
+   ],
+   "withheld_overlap": "none",
+   "withheld_overlap_all": [
+    "none",
+    "none",
+    "none"
+   ],
+   "contradiction": "no",
+   "contradiction_all": [
+    "no",
+    "no",
+    "no"
+   ]
+  }
+ }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>대화 평가</title><link rel="stylesheet" href="/batch.css"><script defer src="/form_settings.js"></script><script defer src="/evaluation.js"></script></head>
+<body><header><h1>대화 평가</h1><span>코드 지표 + 공개 대화·내면 기록 LLM 평가</span></header><main>
+<p>완료된 공통 생성·분기 배치를 평가합니다. 평가 입력은 실행할 때 고정되며, 실패한 응답과 원본 결과를 보존합니다.</p>
+<p id="error" role="alert" hidden></p>
+<section><h2>평가 대상과 설정</h2><fieldset id="settings"><legend>대상 선택</legend>
+<div class="actions"><label>선택 방식<select id="selection"><option value="latest">버전 조합별 최신 완료 배치</option><option value="explicit">배치 직접 선택 · 여러 배치 가능</option></select></label><button id="refresh" type="button">배치 목록 새로고침</button></div>
+<div id="version-selection" class="matrix-choices"><fieldset><legend>내담자 버전</legend><div class="actions"><button id="clients-all" type="button">전체 선택</button><button id="clients-none" type="button">선택 해제</button></div><div id="clients" class="profile-list"></div></fieldset><fieldset><legend>상담사 버전</legend><div class="actions"><button id="counselors-all" type="button">전체 선택</button><button id="counselors-none" type="button">선택 해제</button></div><div id="counselors" class="profile-list"></div></fieldset></div>
+<div id="batch-selection" hidden><div class="actions"><button id="batches-all" type="button">완료 배치 전체 선택</button><button id="batches-none" type="button">선택 해제</button></div><div id="batches" class="profile-list"></div></div>
+<p id="target-summary" role="status"></p><div id="targets" class="table-wrap"></div>
+<div class="grid"><label>동시 LLM 평가 수 · codex exec<input id="workers" type="number" min="1" max="128" value="2"><small>대화별 공개·내면 평가를 이 수만큼 병렬 처리합니다.</small></label>
+<label>각 평가 반복 수<input id="repeats" type="number" min="1" max="10" value="1"></label><label>실패 재시도<input id="retries" type="number" min="0" max="3" value="1"></label>
+<label>평가 1회 제한 시간 · 초<input id="timeout" type="number" min="30" max="7200" value="1800"></label>
+<label>배치당 프로필 상한 · 비우면 전체<input id="max-profiles" type="number" min="1"><small>프로필 ID 순서로 선택하며 제공·미제공 쌍을 함께 포함합니다.</small></label>
+<label>평가 모델<input id="model" readonly></label><label>Reasoning effort<input id="effort" readonly></label></div>
+<label class="check"><input id="prepare-only" type="checkbox">입력 준비·코드 집계만 실행 (LLM 호출 없음)</label>
+<p id="estimate"></p><button id="create" type="button">평가 시작</button>
+</fieldset></section>
+<section><h2>진행 상황과 결과</h2><div class="actions"><label>저장된 평가 작업<select id="jobs"><option value="">선택하세요</option></select></label><button id="reload" type="button">목록 새로고침</button><button id="resume" type="button" disabled>미완료 평가 재개</button><button id="stop" type="button" disabled>중단</button></div>
+<p id="status" role="status">평가 작업을 선택하세요.</p><label>평가 완료 <span id="progress-text">0 / 0</span><progress id="progress" value="0" max="100"></progress></label>
+<p id="output"></p><p>창을 닫거나 다른 작업 탭으로 이동해도 서버에서 계속 실행됩니다. 재개는 고정된 입력·모델·평가기준을 사용하고, 위의 동시 평가 수만 적용합니다.</p>
+<details><summary>실행 로그 · 실패 원인</summary><pre id="log" class="eval-log"></pre></details>
+<div id="artifacts" class="actions"></div><div id="figures" class="artifact-grid"></div>
+<details><summary>평가 보고서</summary><pre id="eval-report"></pre></details>
+</section></main></body></html>

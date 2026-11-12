@@ -1,0 +1,272 @@
+{
+  "kind": "synthetic_measurement_positive_control",
+  "authorship": "assistant-authored text with deterministic packaging; no Q3 or generation-server calls",
+  "conditions": [
+    "인공_다양성유지",
+    "인공_반응수렴"
+  ],
+  "profiles": 20,
+  "client_turns": 20,
+  "common_prefix_turns": 5,
+  "partly_specific_turns": [
+    6,
+    7,
+    8
+  ],
+  "generic_turns": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "sessions": [
+    {
+      "profile_id": "syn_01",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_01/session.json",
+      "markdown": "sessions/maintained_syn_01/dialogue.md"
+    },
+    {
+      "profile_id": "syn_01",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_01/session.json",
+      "markdown": "sessions/convergent_syn_01/dialogue.md"
+    },
+    {
+      "profile_id": "syn_02",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_02/session.json",
+      "markdown": "sessions/maintained_syn_02/dialogue.md"
+    },
+    {
+      "profile_id": "syn_02",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_02/session.json",
+      "markdown": "sessions/convergent_syn_02/dialogue.md"
+    },
+    {
+      "profile_id": "syn_03",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_03/session.json",
+      "markdown": "sessions/maintained_syn_03/dialogue.md"
+    },
+    {
+      "profile_id": "syn_03",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_03/session.json",
+      "markdown": "sessions/convergent_syn_03/dialogue.md"
+    },
+    {
+      "profile_id": "syn_04",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_04/session.json",
+      "markdown": "sessions/maintained_syn_04/dialogue.md"
+    },
+    {
+      "profile_id": "syn_04",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_04/session.json",
+      "markdown": "sessions/convergent_syn_04/dialogue.md"
+    },
+    {
+      "profile_id": "syn_05",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_05/session.json",
+      "markdown": "sessions/maintained_syn_05/dialogue.md"
+    },
+    {
+      "profile_id": "syn_05",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_05/session.json",
+      "markdown": "sessions/convergent_syn_05/dialogue.md"
+    },
+    {
+      "profile_id": "syn_06",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_06/session.json",
+      "markdown": "sessions/maintained_syn_06/dialogue.md"
+    },
+    {
+      "profile_id": "syn_06",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_06/session.json",
+      "markdown": "sessions/convergent_syn_06/dialogue.md"
+    },
+    {
+      "profile_id": "syn_07",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_07/session.json",
+      "markdown": "sessions/maintained_syn_07/dialogue.md"
+    },
+    {
+      "profile_id": "syn_07",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_07/session.json",
+      "markdown": "sessions/convergent_syn_07/dialogue.md"
+    },
+    {
+      "profile_id": "syn_08",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_08/session.json",
+      "markdown": "sessions/maintained_syn_08/dialogue.md"
+    },
+    {
+      "profile_id": "syn_08",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_08/session.json",
+      "markdown": "sessions/convergent_syn_08/dialogue.md"
+    },
+    {
+      "profile_id": "syn_09",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_09/session.json",
+      "markdown": "sessions/maintained_syn_09/dialogue.md"
+    },
+    {
+      "profile_id": "syn_09",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_09/session.json",
+      "markdown": "sessions/convergent_syn_09/dialogue.md"
+    },
+    {
+      "profile_id": "syn_10",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_10/session.json",
+      "markdown": "sessions/maintained_syn_10/dialogue.md"
+    },
+    {
+      "profile_id": "syn_10",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_10/session.json",
+      "markdown": "sessions/convergent_syn_10/dialogue.md"
+    },
+    {
+      "profile_id": "syn_11",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_11/session.json",
+      "markdown": "sessions/maintained_syn_11/dialogue.md"
+    },
+    {
+      "profile_id": "syn_11",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_11/session.json",
+      "markdown": "sessions/convergent_syn_11/dialogue.md"
+    },
+    {
+      "profile_id": "syn_12",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_12/session.json",
+      "markdown": "sessions/maintained_syn_12/dialogue.md"
+    },
+    {
+      "profile_id": "syn_12",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_12/session.json",
+      "markdown": "sessions/convergent_syn_12/dialogue.md"
+    },
+    {
+      "profile_id": "syn_13",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_13/session.json",
+      "markdown": "sessions/maintained_syn_13/dialogue.md"
+    },
+    {
+      "profile_id": "syn_13",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_13/session.json",
+      "markdown": "sessions/convergent_syn_13/dialogue.md"
+    },
+    {
+      "profile_id": "syn_14",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_14/session.json",
+      "markdown": "sessions/maintained_syn_14/dialogue.md"
+    },
+    {
+      "profile_id": "syn_14",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_14/session.json",
+      "markdown": "sessions/convergent_syn_14/dialogue.md"
+    },
+    {
+      "profile_id": "syn_15",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_15/session.json",
+      "markdown": "sessions/maintained_syn_15/dialogue.md"
+    },
+    {
+      "profile_id": "syn_15",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_15/session.json",
+      "markdown": "sessions/convergent_syn_15/dialogue.md"
+    },
+    {
+      "profile_id": "syn_16",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_16/session.json",
+      "markdown": "sessions/maintained_syn_16/dialogue.md"
+    },
+    {
+      "profile_id": "syn_16",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_16/session.json",
+      "markdown": "sessions/convergent_syn_16/dialogue.md"
+    },
+    {
+      "profile_id": "syn_17",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_17/session.json",
+      "markdown": "sessions/maintained_syn_17/dialogue.md"
+    },
+    {
+      "profile_id": "syn_17",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_17/session.json",
+      "markdown": "sessions/convergent_syn_17/dialogue.md"
+    },
+    {
+      "profile_id": "syn_18",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_18/session.json",
+      "markdown": "sessions/maintained_syn_18/dialogue.md"
+    },
+    {
+      "profile_id": "syn_18",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_18/session.json",
+      "markdown": "sessions/convergent_syn_18/dialogue.md"
+    },
+    {
+      "profile_id": "syn_19",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_19/session.json",
+      "markdown": "sessions/maintained_syn_19/dialogue.md"
+    },
+    {
+      "profile_id": "syn_19",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_19/session.json",
+      "markdown": "sessions/convergent_syn_19/dialogue.md"
+    },
+    {
+      "profile_id": "syn_20",
+      "condition": "인공_다양성유지",
+      "json": "sessions/maintained_syn_20/session.json",
+      "markdown": "sessions/maintained_syn_20/dialogue.md"
+    },
+    {
+      "profile_id": "syn_20",
+      "condition": "인공_반응수렴",
+      "json": "sessions/convergent_syn_20/session.json",
+      "markdown": "sessions/convergent_syn_20/dialogue.md"
+    }
+  ]
+}

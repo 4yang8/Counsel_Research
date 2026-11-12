@@ -414,7 +414,7 @@ async function reload() {
     for(const input of document.querySelectorAll('[data-block]')){input.checked=true;input.closest('.setting-block').dataset.enabled='true';}
     enabledToolNames=null;
     versionCatalog=await api('/api/versions');await versionPreferencesReady;versionDrafts={};currentVersion=versionPreferences.get('client',versionCatalog.versions,versionCatalog.default);
-    $('experiment-version').replaceChildren(...versionCatalog.versions.map(v=>new Option(v.label,v.id)));
+    $('experiment-version').replaceChildren(...versionCatalog.versions.map(v=>Object.assign(new Option(v.label,v.id),{hidden:!!v.legacy})));
     $('experiment-version').value=currentVersion;
     const version=versionCatalog.versions.find(v=>v.id===currentVersion);
     if(version.default_reasoning_budgets)restoreClientBudgets(version.default_reasoning_budgets);

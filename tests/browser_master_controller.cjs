@@ -15,7 +15,9 @@ const {spawn}=require('child_process'),path=require('path'),assert=require('node
   await first.select('#quick-profile','011_guarded');await first.waitForFunction(()=>JSON.parse(document.querySelector('#edit-profile').value).profile_id==='gold_011');
   for(const [i,version] of [[1,'Q3n'],[2,'Q3sb']]){await page.click('#add-experiment');const f=await ready(i);await f.select('#quick-client',version);if(i===1)await f.select('#quick-profile','011_open');}
   await page.evaluate(()=>ExperimentWorkspace.activate(ExperimentWorkspace.tabs()[0].id));
-  await page.$eval('#master-controller',e=>e.open=true);await page.click('#master-load');
+  await page.$eval('#master-controller',e=>e.open=true);
+  await page.waitForFunction(()=>!document.querySelector('#master-load').disabled);
+  await page.click('#master-load');
   await set('master-temperature','0.35');await set('master-seed','123');await set('master-count','2');
   await page.waitForFunction(()=>document.querySelectorAll('.master-target').length===3 && !document.querySelector('#master-start').disabled);
   assert((await page.$eval('#master-targets',e=>e.textContent)).includes('조건 차이'));

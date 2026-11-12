@@ -8,7 +8,7 @@ PROJECT_ROOT="$(cd -- "$SCRIPT_DIR/../.." && pwd)"
 # 일반 대화의 session.json 파일 또는 session.json들을 포함한 폴더도 가능합니다.
 # 같은 버전·프로필의 대화를 중복 지정하면 오류로 안내합니다.
 INPUT_PATHS=(
-  "$PROJECT_ROOT/runs/profile_batches/batch_0d9d6d8d8c9a465a814f"
+  "$PROJECT_ROOT/runs/profile_batches/batch_08f865c61ebd4284a5ae"
 )
 MAX_TURNS=20                  # 생성된 내담자 발화의 1턴~N턴 분석. 초기 예시 대화 제외.
 VERSIONS=("Q3inner_memory" "inner_memory_no")

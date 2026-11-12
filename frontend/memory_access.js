@@ -1,13 +1,13 @@
 'use strict';
 (() => {
-  const versions=['Q3public','Q3oracle','Q3full','Q3select','Q3ragtool','Q3inner_memory','inner_memory_no'];
-  const active=()=>versions.includes(currentVersion);
+  const versions=['Q3public','Q3oracle','Q3full','Q3select','Q3ragtool','Q3inner_memory','inner_memory_no','Q3compare_memory','Q3compare_memory_private_position'];
+  const active=()=>versions.includes(currentVersion)||!!versionCatalog?.versions.find(v=>v.id===currentVersion)?.memory_access;
   const drafts={},frozen={};let locked=false,latest=null,requestSerial=0,lastSession='',pickerStamp='';
   const fields={embedding_backend:'memory-backend',embedding_path:'memory-path',embedding_device:'memory-device',
     embedding_url:'memory-url',embedding_model:'memory-model',embedding_timeout:'memory-timeout',input_char_limit:'memory-input-limit'};
   const box=document.createElement('section');box.id='memory-access-settings';box.className='setting-block';box.hidden=true;
   box.innerHTML=`<h3>과거 비공개 기억 실험</h3><p id="memory-condition-description" class="hint"></p>
-    <p class="hint">모든 조건은 이번 턴의 내면을 먼저 기록하고 공개 발화를 생성합니다. 과거 내면의 입력 방식만 다릅니다. 프로필·공개 대화는 공통이며 누적 내면 노트와 궤적 요약은 자동 주입하지 않습니다.</p>
+    <p class="hint">모든 조건은 현재 내면과 공개 발화를 구분합니다. 프로필·공개 대화는 공통이며, 과거 내면 및 파생 사건 상태의 접근은 선택한 버전과 제공/미제공 조건에 따릅니다.</p>
     <label>공통 대화·내면 기록 가져오기<input id="memory-import" type="file" accept=".json,application/json"></label>
     <label>공통 기록 JSON · 비워두면 위 초기 대화에서 시작<textarea id="memory-seed" rows="5" spellcheck="false" placeholder='{"public_dialogue": [...], "records": [...]}'></textarea></label>
     <p id="memory-seed-status" class="hint"></p>
@@ -84,7 +84,7 @@
     locked=isLocked;box.hidden=!active();tab.hidden=!active();if(!active())return;
     if(box.dataset.version!==currentVersion){box.dataset.version=currentVersion;fill(drafts[currentVersion] || versionCatalog?.versions.find(v=>v.id===currentVersion)?.memory_defaults || {});}
     $('memory-condition-description').textContent=versionCatalog?.versions.find(v=>v.id===currentVersion)?.description || '';
-    $('memory-oracle-controls').hidden=currentVersion!=='Q3oracle';$('memory-rag-controls').hidden=currentVersion!=='Q3ragtool';$('memory-select-hint').hidden=!['Q3select','Q3inner_memory'].includes(currentVersion);
+    $('memory-oracle-controls').hidden=currentVersion!=='Q3oracle';$('memory-rag-controls').hidden=currentVersion!=='Q3ragtool';$('memory-select-hint').hidden=!['Q3select','Q3inner_memory','Q3compare_memory','Q3compare_memory_private_position'].includes(currentVersion);
     for(const el of box.querySelectorAll('input,textarea,select,button'))el.disabled=locked;
     const stamp=JSON.stringify([$('memory-seed').value,$('memory-oracle-turns').value,locked]);
     if(stamp!==pickerStamp){pickerStamp=stamp;picker();}

@@ -19,6 +19,7 @@ import runtime.reasoning_budget as reasoning_budget
 import client.state_summary.runtime as state_summary
 from counselor import catalog as counselor_catalog
 from runtime.cancellation import Cancelled
+from storage import paired_state
 
 from project_paths import PROJECT_ROOT
 HERE = PROJECT_ROOT
@@ -75,6 +76,8 @@ def read_session(server, session):
     path = root(server, session) / 'session.json'
     if not path.is_file():
         raise ValueError('저장된 양방향 대화가 없습니다.')
+    if (path.parent / '.client_transaction.json').exists():
+        paired_state.recover(path.parent)
     data = json.loads(path.read_text(encoding='utf-8'))
     from project_paths import relocate_session
     data = relocate_session(data)
@@ -103,7 +106,10 @@ def retry_manual(server, session):
 
 
 def save_session(server, session):
-    state_summary.write_new(root(server, session['session_id']) / 'session.json', session)
+    if paired_state.immutable(session):
+        state_summary.write_new(root(server, session['session_id']) / 'session.json', session)
+    else:
+        paired_state.save(root(server, session['session_id']), session)
 
 
 def lock_for(server, session):
@@ -185,6 +191,8 @@ def create(server, config, body, runtime, base_build):
     if spec is None:
         raise ValueError('지원하지 않는 상담사 버전입니다.')
     request['counselor_version'] = counselor
+    from counselor.rs_variants.runtime import freeze as freeze_rs
+    freeze_rs(request)
     if spec.get('intervention_conditions'):
         condition = request.get('counselor_intervention_condition', spec['default_intervention_condition'])
         if not isinstance(condition, str) or condition not in [row['id'] for row in spec['intervention_conditions']]:
@@ -245,7 +253,7 @@ def create(server, config, body, runtime, base_build):
 def phase(label):
     if label == 'basic_counselor':
         return '기본 상담사 발화 생성'
-    if label in ('Q3p1_counsel', 'Q3p2_counsel', 'Q3p4_counsel'):
+    if label in ('Q3p1_counsel', 'Q3p2_counsel', 'Q3p4_counsel', 'Q3inner_counsel'):
         return label + ' 발화 생성'
     if 'information_observer' in label:
         return '관찰·정보 갱신'
@@ -326,6 +334,20 @@ def counselor_step(config, session, backend, base_build, emit, cancelled, direct
 
 
 def client_step(server, config, session, backend, runtime, base_build, emit, cancelled, attempt):
+    if paired_state.immutable(session):
+        return _client_step(server, config, session, backend, runtime, base_build,
+                            emit, cancelled, attempt)
+    directory = root(server, session['session_id'])
+    working = paired_state.prepare(directory, session, attempt)
+    try:
+        return _client_step(server, config, session, backend, runtime, base_build,
+                            emit, cancelled, attempt, working)
+    except BaseException:
+        paired_state.discard(directory, working)
+        raise
+
+
+def _client_step(server, config, session, backend, runtime, base_build, emit, cancelled, attempt, working=None):
     body = copy.deepcopy(session['settings'])
     body['session_id'] = session['session_id']
     current = session['public_dialogue'][-1]['content']
@@ -338,10 +360,11 @@ def client_step(server, config, session, backend, runtime, base_build, emit, can
         scenario['dialogue'] = copy.deepcopy(session['public_dialogue'][:-1])
     cfg = copy.deepcopy(config)
     # Private client records live under this pair, independent of stand-alone sessions.
-    working = root(server, session['session_id']) / 'client_attempts' / attempt
-    if session.get('client_storage_dir'):
-        shutil.copytree(session['client_storage_dir'], working)
-    working.mkdir(parents=True, exist_ok=True)
+    if working is None:
+        working = root(server, session['session_id']) / 'client_attempts' / attempt
+        if session.get('client_storage_dir'):
+            shutil.copytree(session['client_storage_dir'], working)
+        working.mkdir(parents=True, exist_ok=True)
     cfg['_storage_dir'] = str(working)
     cfg['_paired_public_dialogue'] = copy.deepcopy(session['public_dialogue'])
     cfg['_paired_initial_count'] = session.get('initial_public_count', len(session['public_dialogue']) - len(session['steps']))

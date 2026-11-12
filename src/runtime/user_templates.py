@@ -250,3 +250,12 @@ REGISTRY[('client','Q3sb','note_summarizer_user')]={
                  'previous_notes':'이전 턴까지의 현재 노트 원문'}}
 
 REGISTRY[('counselor','Q3p6_counsel','user')] = {'path':'src/counselor/Q3p6_counsel/user.md','variables':{'dialogue':'공개 대화'}}
+REGISTRY[('counselor','Q3inner_counsel','user')] = {'path':'src/counselor/Q3inner_counsel/user.md','variables':{'dialogue':'공개 대화'}}
+REGISTRY[('counselor','P3q','user')] = {'path':'src/counselor/P3q/user.md','variables':{'dialogue':'턴 번호를 붙인 공개 대화'}}
+REGISTRY[('counselor','P3rs','user')] = {'path':'src/counselor/P3rs/user.md','variables':{'dialogue':'턴 번호를 붙인 공개 대화','notes':'상담사 메모: 아직 탐색하지 않은 물러남 표지와 아직 되묻지 않은 내 제안·해석'}}
+REGISTRY[('counselor','P3rs_sub','user')] = {'path':'src/counselor/P3rs_sub/user.md','variables':{'dialogue':'턴 번호를 붙인 공개 대화','advice':'관찰 담당이 돌려준 권하는 행동·표지·조언'}}
+REGISTRY[('counselor','P3rs_sub','observer_user')] = {'path':'src/counselor/P3rs_sub/observer_user.md','variables':{'dialogue':'턴 번호를 붙인 공개 대화','notes':'상담사 메모: 아직 탐색하지 않은 물러남 표지와 아직 되묻지 않은 내 제안·해석','guide':'균열 가이드 원문 전체'}}
+from counselor.rs_variants import VERSIONS as RS_VARIANTS
+for _rs_version in RS_VARIANTS:
+    REGISTRY[('counselor',_rs_version,'user')] = {'path':f'src/counselor/{_rs_version}/user.md',
+                                               'variables':{'input':'공개 대화와 현재 단계에 허용된 관찰·메모 JSON'}}

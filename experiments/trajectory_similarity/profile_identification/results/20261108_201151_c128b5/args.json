@@ -1,0 +1,34 @@
+{
+  "batch": [
+    "runs/profile_batches/batch_28cf4899dde548a59f3f",
+    "runs/profile_batches/batch_0d9d6d8d8c9a465a814f",
+    "runs/profile_batches/batch_c9c8c4f98fef4f7781c6",
+    "runs/profile_batches/batch_08f865c61ebd4284a5ae"
+  ],
+  "turns": 20,
+  "permutations": 5000,
+  "seed": 0,
+  "embedding_url": "http://192.168.0.32:8002/v1",
+  "embedding_model": "Qwen/Qwen3-Embedding-4B",
+  "batch_size": 32,
+  "timeout": 180,
+  "jobs": [
+    "batch_28cf4899dde548a59f3f",
+    "batch_0d9d6d8d8c9a465a814f",
+    "batch_c9c8c4f98fef4f7781c6",
+    "batch_08f865c61ebd4284a5ae"
+  ],
+  "profiles": [
+    "gold_001",
+    "gold_002",
+    "gold_003",
+    "gold_004",
+    "gold_005",
+    "gold_006",
+    "gold_007",
+    "gold_008",
+    "gold_009",
+    "gold_010"
+  ],
+  "instruction": "Instruct: Given several utterances spoken by a counseling client, retrieve the client profile (background, core belief, coping strategies, typical situations) of the person who said them\nQuery:"
+}

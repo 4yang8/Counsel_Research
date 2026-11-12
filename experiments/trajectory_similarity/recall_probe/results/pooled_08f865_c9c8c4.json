@@ -1,0 +1,179 @@
+{
+ "runs": [
+  "results/20261109_002137_fb8aed",
+  "/home2/sjyang114/Counsel_Research_dynamic_client_new/experiments/trajectory_similarity/recall_probe/results/20261109_005630_78a8c4"
+ ],
+ "fields": {
+  "withheld_content": {
+   "mean": {
+    "regen": 0.6242071338591143,
+    "probe_k": 0.5912846907457039,
+    "probe_T_none": 0.5283859963335589,
+    "probe_T_sel": 0.572649622978666,
+    "probe_T_withk": 0.9931242328390507,
+    "floor_same_profile": 0.4757331700660366
+   },
+   "n": {
+    "regen": 80,
+    "probe_k": 80,
+    "probe_T_none": 80,
+    "probe_T_sel": 40,
+    "probe_T_withk": 80,
+    "floor_same_profile": 80
+   },
+   "comparisons": {
+    "probe_T_sel(k 미포함)-probe_T_none": {
+     "diff": 0.015665752769622936,
+     "p": 0.2655,
+     "n_units": 36,
+     "sel": 0.5251669523732763,
+     "none": 0.5095011996036534
+    },
+    "probe_T_none-regen": {
+     "diff": -0.09582113752555535,
+     "p": 0.0,
+     "n_units": 80,
+     "a_gt_b": 25
+    },
+    "probe_T_none-probe_k": {
+     "diff": -0.06289869441214499,
+     "p": 0.0,
+     "n_units": 80,
+     "a_gt_b": 21
+    },
+    "probe_k-regen": {
+     "diff": -0.03292244311341037,
+     "p": 0.046,
+     "n_units": 80,
+     "a_gt_b": 37
+    },
+    "probe_T_none-floor_same_profile": {
+     "diff": 0.052652826267522254,
+     "p": 0.0061,
+     "n_units": 80,
+     "a_gt_b": 54
+    },
+    "probe_k-floor_same_profile": {
+     "diff": 0.11555152067966726,
+     "p": 0.0,
+     "n_units": 80,
+     "a_gt_b": 63
+    }
+   }
+  },
+  "withholding_reason": {
+   "mean": {
+    "regen": 0.6046571309543467,
+    "probe_k": 0.5487017286815,
+    "probe_T_none": 0.5229061356325289,
+    "probe_T_sel": 0.6038295690635129,
+    "probe_T_withk": 0.9946467019009303,
+    "floor_same_profile": 0.4934418376070642
+   },
+   "n": {
+    "regen": 80,
+    "probe_k": 80,
+    "probe_T_none": 80,
+    "probe_T_sel": 40,
+    "probe_T_withk": 80,
+    "floor_same_profile": 80
+   },
+   "comparisons": {
+    "probe_T_sel(k 미포함)-probe_T_none": {
+     "diff": 0.05113992356726252,
+     "p": 0.0005,
+     "n_units": 36,
+     "sel": 0.5599580654711749,
+     "none": 0.5088181419039124
+    },
+    "probe_T_none-regen": {
+     "diff": -0.08175099532181782,
+     "p": 0.0,
+     "n_units": 80,
+     "a_gt_b": 17
+    },
+    "probe_T_none-probe_k": {
+     "diff": -0.025795593048971,
+     "p": 0.0032,
+     "n_units": 80,
+     "a_gt_b": 31
+    },
+    "probe_k-regen": {
+     "diff": -0.05595540227284682,
+     "p": 0.0,
+     "n_units": 80,
+     "a_gt_b": 26
+    },
+    "probe_T_none-floor_same_profile": {
+     "diff": 0.029464298025464786,
+     "p": 0.0197,
+     "n_units": 80,
+     "a_gt_b": 50
+    },
+    "probe_k-floor_same_profile": {
+     "diff": 0.05525989107443578,
+     "p": 0.0,
+     "n_units": 80,
+     "a_gt_b": 53
+    }
+   }
+  },
+  "actual_wish": {
+   "mean": {
+    "regen": 0.6036714577955725,
+    "probe_k": 0.57062333582403,
+    "probe_T_none": 0.5641314191082143,
+    "probe_T_sel": 0.6159596067963702,
+    "probe_T_withk": 0.9896401457690199,
+    "floor_same_profile": 0.49624028495865813
+   },
+   "n": {
+    "regen": 80,
+    "probe_k": 80,
+    "probe_T_none": 80,
+    "probe_T_sel": 40,
+    "probe_T_withk": 80,
+    "floor_same_profile": 80
+   },
+   "comparisons": {
+    "probe_T_sel(k 미포함)-probe_T_none": {
+     "diff": 0.005515468672136899,
+     "p": 0.6162,
+     "n_units": 36,
+     "sel": 0.5739101172607257,
+     "none": 0.5683946485885891
+    },
+    "probe_T_none-regen": {
+     "diff": -0.03954003868735826,
+     "p": 0.0029,
+     "n_units": 80,
+     "a_gt_b": 27
+    },
+    "probe_T_none-probe_k": {
+     "diff": -0.006491916715815706,
+     "p": 0.3157,
+     "n_units": 80,
+     "a_gt_b": 37
+    },
+    "probe_k-regen": {
+     "diff": -0.033048121971542554,
+     "p": 0.0078,
+     "n_units": 80,
+     "a_gt_b": 32
+    },
+    "probe_T_none-floor_same_profile": {
+     "diff": 0.06789113414955611,
+     "p": 0.0,
+     "n_units": 80,
+     "a_gt_b": 66
+    },
+    "probe_k-floor_same_profile": {
+     "diff": 0.07438305086537181,
+     "p": 0.0,
+     "n_units": 80,
+     "a_gt_b": 64
+    }
+   }
+  }
+ }
+}
